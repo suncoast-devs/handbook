@@ -1,3 +1,16 @@
-# Enrollment Agreement
+= Student Enrollment Agreement
+
+This agreement, together with the school catalog, constitutes a binding contract between the student and the school upon acceptance by the school.
+
+== Student Information
+
+[cols="1,8"]
+|===
+|Name 
+|
+
+|Address
+|
+|===
 
 include::refund-policy.adoc[]
