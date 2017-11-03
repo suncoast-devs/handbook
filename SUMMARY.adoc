@@ -1,4 +1,3 @@
 = Summary
 
-. link:catalog/README.adoc[Catalog]
 . link:enrollment/README.adoc[Enrollment Agreement]
