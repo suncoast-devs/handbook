@@ -11,16 +11,10 @@ NOTE: Figure out how to do a form here, or prepare _this_ document a different w
 - [ ] Full payment at time of signing enrollment agreement; OR
 - [ ] $1,000 Down payment at time of signing enrollment agreement with balance paid prior to program start date.
 
-[cols="2"]
 |===
-|Program Tuition Cost: +
-|
-
-|Scholarship Awards (if any): +
-|
-
+|Program Tuition Cost:
+|Scholarship Awards (if any):
 |Total tuition cost:
-|
 |===
 
 === Method of Payment
@@ -50,9 +44,23 @@ This Agreement and the Catalog constitute a binding contract between the institu
 
 == Credential Awarded
 
-Upon successful completion of the program, the student will receive a:
+Upon the successful completion of the program, the student will receive a:
 
 **Certification of Completion in Web Development**
 
 ---
+
+IMPORTANT: Before signing this contract; ensure you have read it, and it contains no blank spaces. By signing this contract you acknowledge you have read and received a copy of the binding document and catalog.
+
+
+|===
+|Signature of Applicant +
+|Date
+|===
+
+|===
+|Signature of School Official +
+|Date
+|===
+
 
