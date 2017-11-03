@@ -1,6 +1,6 @@
 = Student Enrollment Agreement
 
-This contract, together with the school catalog, it will constitute a binding agreement upon acceptance by the institution and the student.
+This contract, together with the school catalog, will constitute a binding agreement upon acceptance by the institution and the student.
 
 == Student Information
 
