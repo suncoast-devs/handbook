@@ -4,7 +4,25 @@ This contract, together with the school catalog, it will constitute a binding ag
 
 == Student Information
 
-NOTE: Figure out how to do a form here, or prepare _this_ document a different way.
+|===
+|Name
+|Address
+|Telephone
+|Date of Birth
+|SSN
+|Email
+|===
+
+== Program Information
+
+|===
+|Program Title
+|Clock Hours
+|Credit Hours
+|Hours per week
+|Start Date
+|Expected End Date
+|===
 
 == Tuition
 
