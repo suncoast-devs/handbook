@@ -1,11 +1,58 @@
 = Student Enrollment Agreement
 
-This agreement, together with the school catalog, constitutes a binding contract between the student and the school upon acceptance by the school.
+This contract, together with the school catalog, it will constitute a binding agreement upon acceptance by the institution and the student.
 
 == Student Information
 
-NOTE: Figure out how to do a form here.
+NOTE: Figure out how to do a form here, or prepare _this_ document a different way.
+
+== Tuition
+
+- [ ] Full payment at time of signing enrollment agreement; OR
+- [ ] $1,000 Down payment at time of signing enrollment agreement with balance paid prior to program start date.
+
+[cols="2"]
+|===
+|Program Tuition Cost: +
+|
+
+|Scholarship Awards (if any): +
+|
+
+|Total tuition cost:
+|
+|===
+
+=== Method of Payment
+   
+- [ ] Credit
+- [ ] Check
+- [ ] Money Order
+- [ ] Other:
+
+All prices for program are printed herein. Contracts are not sold to a third party at any time. There are no carryingcharges, interest charges, or service charges connected or charged with any of these programs unless stated.
 
 == Cancellation and Refund Policy
 
 {% include "./_refund-policy.adoc" %}
+
+== Grounds for Termination
+
+The student’s enrollment can be terminated at the discretion of the institution for lack of academic progress, non-payment of tuition or fees, or failing to comply with policies established in the Catalog and this agreement.
+
+== Employment Assistance
+
+Career support and placement assistance may be offered by the institution, but do not guarantee employment.
+
+== Acknowledgement
+
+This Agreement and the Catalog constitute a binding contract between the institution and the student and no further modification or representation except as herein expressed by both parties will be recognized.
+
+== Credential Awarded
+
+Upon successful completion of the program, the student will receive a:
+
+**Certification of Completion in Web Development**
+
+---
+
