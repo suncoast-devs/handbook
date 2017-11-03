@@ -1,6 +1,6 @@
 = Student Enrollment Agreement
 
-This contract, together with the school catalog, will constitute a binding agreement upon acceptance by the institution and the student.
+This contract, together with the school catalog, will constitute a binding agreement upon acceptance by Suncoast Developers Guild (the institution) and the student.
 
 == Student Information
 
@@ -77,7 +77,7 @@ IMPORTANT: Before signing this contract; ensure you have read it, and it contain
 |===
 
 |===
-|Signature of School Official +
+|Signature of Institution Official +
 |Date
 |===
 
