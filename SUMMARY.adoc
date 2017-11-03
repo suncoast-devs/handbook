@@ -1,3 +1,5 @@
 = Summary
 
-. link:unit-1/README.adoc[Unit 1]
+. link:catalog/README.adoc[Catalog]
+. link:enrollment/README.adoc[Enrollment Agreement]
+.. link:enrollment/refund-policy.adoc[Refund Policy]
