@@ -6,4 +6,6 @@ This agreement, together with the school catalog, constitutes a binding contract
 
 NOTE: Figure out how to do a form here.
 
-{% include "./refund-policy.adoc" %}
+== Cancellation and Refund Policy
+
+{% include "./_refund-policy.adoc" %}
