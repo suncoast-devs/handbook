@@ -2,6 +2,12 @@
 
 This contract, together with the school catalog, will constitute a binding agreement upon acceptance by Suncoast Developers Guild (the institution) and the student.
 
+== School Information
+Suncoast Developers Guild
+244 2nd Ave N, Suite 9
+St. Petersburg, FL 33701
+(727) 201-2012
+
 == Student Information
 
 |===
@@ -9,17 +15,14 @@ This contract, together with the school catalog, will constitute a binding agree
 |Address
 |Telephone
 |Date of Birth
-|SSN
 |Email
 |===
 
 == Program Information
 
 |===
-|Program Title
-|Clock Hours
-|Credit Hours
-|Hours per week
+|Program Title: Web Development
+|Clock Hours: 396 (3 months)
 |Start Date
 |Expected End Date
 |===
