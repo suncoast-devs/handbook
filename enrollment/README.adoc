@@ -25,6 +25,7 @@ St. Petersburg, FL 33701
 |Clock Hours: 396 (3 months)
 |Start Date
 |Expected End Date
+|Class Schedule: Class is from 9am to 5pm Monday through Thursday and 9am to 3pm Friday.
 |===
 
 == Tuition
@@ -49,10 +50,10 @@ St. Petersburg, FL 33701
 
 === Method of Payment
    
-- [ ] Credit
-- [ ] Check
+- [ ] Credit/Debit
+- [ ] Cashier Check
 - [ ] Money Order
-- [ ] Other:
+- [ ] Cash
 
 All prices for program are printed herein. Contracts are not sold to a third party at any time. There are no carryingcharges, interest charges, or service charges connected or charged with any of these programs unless stated.
 
