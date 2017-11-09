@@ -33,10 +33,19 @@ St. Petersburg, FL 33701
 - [ ] $1,000 Down payment at time of signing enrollment agreement with balance paid prior to program start date.
 
 |===
-|Program Tuition Cost:
-|Scholarship Awards (if any):
-|Total tuition cost:
+|Program Tuition Cost: $14,900
+|Scholarship Awards (if any, subtract from total cost): $0
+|Fees: $0
+|Books/Supplies: $0
+|Computer: $1000*
+|Total tuition cost:$14,900
 |===
+
+**Minimum computer requirements:*
+
+- 8GB of RAM
+- 500GB HDD
+- macOS High Sierra (10.13) or Windows 10, subject to approval (see catalog)
 
 === Method of Payment
    
