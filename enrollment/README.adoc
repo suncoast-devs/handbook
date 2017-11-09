@@ -49,7 +49,17 @@ All prices for program are printed herein. Contracts are not sold to a third par
 
 == Cancellation and Refund Policy
 
-{% include "./_refund-policy.adoc" %}
+The following refund policy will be followed if a student's enrollment in the program is terminated for any reason:
+
+. Cancellation or termination can be made in person, by email, or by certified mail.
+. Any collected funds will be returned if an applicant is not accepted to the program.
+. Students accepted to the program will be returned all funds if enrollment is cancelled within three (3) business days of signing the enrollment agreement.
+. In the event of cancellation after program attendance has begun, funds will be returned Pro Rata up to 40% of total program hours, based on the number of completed hours.
+. No funds will be returned after 40% completion of the program.
+. In calculating refunds, the last date of actual attendance is used to determine completed hours.
+. Any refunds due will be made within 30 days of
+.. receiving notice of cancellation from the student;
+.. or termination of the student by the school.
 
 == Grounds for Termination
 
