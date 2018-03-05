@@ -1,3 +1,0 @@
-= Summary
-
-. link:enrollment/README.adoc[Enrollment Agreement]
