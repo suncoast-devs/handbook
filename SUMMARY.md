@@ -16,4 +16,4 @@
   * [Preparing for Interviews](career/interviews.md)
   * [The Care and Feeding of Junior Developers](career/mentorship.md)
 * [Our Campus](campus/README.md)
-  * [St Petersburg](curriculum/st-pete.md)
+  * [St Petersburg](campus/st-pete.md)
