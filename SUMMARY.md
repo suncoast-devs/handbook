@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [The Curriculum](curriculum/README.md)
   * [Fundamentals](curriculum/fundamentals.md)
   * [Front-end Frameworks](curriculum/front-end.md)
@@ -12,8 +13,10 @@
   * [Development Environment](tools/environment.md)
   * [Text Editors](tools/editors.md)
   * [Programming Languages](tools/languages.md)
+  * [Asking Questions](tools/asking-questions.md)
 * [Your Career](career/README.md)
   * [Preparing for Interviews](career/interviews.md)
   * [The Care and Feeding of Junior Developers](career/mentorship.md)
 * [Our Campus](campus/README.md)
   * [St Petersburg](curriculum/st-pete.md)
+
