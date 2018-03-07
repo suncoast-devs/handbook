@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [The Curriculum](curriculum/README.md)
   * [Fundamentals](curriculum/fundamentals.md)
   * [Front-end Frameworks](curriculum/front-end.md)
@@ -8,6 +9,7 @@
   * [Problem Solving](skills/problem-solving.md)
   * [Stress Management](skills/stress.md)
   * [Your Health](skills/health.md)
+  * [Asking Questions](tools/asking-questions.md)
 * [Tools](tools/README.md)
   * [Development Environment](tools/environment.md)
   * [Text Editors](tools/editors.md)
