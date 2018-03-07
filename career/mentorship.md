@@ -8,6 +8,10 @@ Studies have shown time and again that employees that take ownership of their wo
 
 Do everything you need to do to put them in a position to succeed.  There is no worse feeling for a junior then to be highly motivated and yet totally incapable at the same time. Give them the tools and knowledge throughout the development process lifecycle. This means answering any and all questions, even simple ones, and providing tools and training to help them increase their knowledge base.
 
+## Let them Fail
+
+\[TODO\]
+
 ## Code Reviews
 
 Code reviews are a great way for developers to grow and learn to make their code more performant and readable. These types of reviews should not emphasize cleverness but rather help juniors to refine their skill set through learning about techniques, patterns, and terminology they were previously unaware of.
