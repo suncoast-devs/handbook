@@ -10,7 +10,7 @@ Do everything you need to do to put them in a position to succeed.  There is no 
 
 ## Let them Fail
 
-Even though they should always have a safety net, a junior developer should be allowed to fail. They won't, and to a point can't, always have a safety net to fall back on. Failing allows for the junior to learn from their mistakes. These failures should not be with mission critical features, but should still be important. After a failure occurs, the junior developer and their mentor should have a post mortem to figure out what went wrong, and help them fix their failure.  An important distinction to make it is that their tasking should never be designed to fail, but they are allowed to fail. Failing builds the so called "battle scars" of a season developer.  
+Even though they should always have a safety net, a junior developer should be allowed to fail. They won't, and to a point can't, always have some one to fall back on. Failing allows for the junior to learn and grow from their mistakes. These failures should not be with mission critical features, but should still be important. After a failure occurs, the junior developer and their mentor should have a post mortem to figure out what went wrong, and help them minimize the chance of them making the same failure again.  An important distinction to make it is that their tasking should never be designed to fail, but they are only allowed to fail. Failing builds the so called "battle scars" of a season developer.  
 
 ## Code Reviews
 
