@@ -19,3 +19,7 @@
   * [The Care and Feeding of Junior Developers](career/mentorship.md)
 * [Our Campus](campus/README.md)
   * [St Petersburg](campus/st-pete.md)
+* [Glossary](/GLOSSARY.md)
+
+
+
