@@ -1,6 +1,6 @@
 # Front-end Frameworks
 
-A survey of the front-end section of our program.
+TODO: A survey of the front-end section of our program.
 
 ## React
 

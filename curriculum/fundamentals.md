@@ -1,6 +1,6 @@
 # Fundamentals
 
-A survey of the fundaments section of our program.
+TODO: A survey of the fundaments section of our program.
 
 ## HTML
 

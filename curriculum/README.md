@@ -1,3 +1,3 @@
 # Our Curriculum
 
-A high level overview of our Web Development curriculum.
+TODO: A high level overview of our Web Development curriculum.

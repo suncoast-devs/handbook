@@ -1,6 +1,6 @@
 # Back-end Frameworks
 
-A survey of the back-end section of our program.
+TODO: A survey of the full-stack section of our program.
 
 ## .NET
 
