@@ -1,7 +1,7 @@
 
 ## What is Prework?
 
-Prework is a series of base information designed to bring you up to speed before the program. There is a series of Books (for reference), Courses, Tools, and Advanced materials.
+Prework is a series of base information designed to introduce you and help set context to what you will be learning. This will help start your journey on the right path and help frame what and how you will be learning. 
 
 ## Why does Prework Help?
 
@@ -11,7 +11,7 @@ Starting learning before the program is like training for a marathon. You don't 
 
 ## What won't the Prework do for you
 
-Prework only covers the basics of a language; What we teach goes much deeper than tutorials can cover. Prework is not designed to try to teach everything about web development. We use it to establish context and shared language to jump start the learning process.  
+Prework only covers the basics; What we teach goes much deeper than tutorials can cover. Prework is not designed to try to teach everything about web development. We use it to establish context and shared language to jump start the learning process.  
 
 Prework, and also the curriculum, is not the single source of truth to get started. The knowledge for all of our technologies is out there, available to all. We love this, embrace it, and encourage you to learn both inside and outside the class.
 
