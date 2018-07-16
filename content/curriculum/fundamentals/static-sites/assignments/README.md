@@ -7,7 +7,7 @@ would like to learn.
 
 This could be a showcase, or a tutorial, etc.
 
-## Phase 1
+## Phase 1 - Hello, World.
 
 * Create a single-page website with valid, well-formed, markup
 * Push the source code to GitHub
