@@ -24,6 +24,7 @@ In this assignment you will end up with a simple styled web page, published on t
 ### Adventure Mode
 
 * [ ] use pseudo-classes to style elements when you hover the mouse over them 
+* [ ] Add a third page, that has a table. Create this table to have alternating colored rows, and a hover over color. 
 * [ ] Make a nav bar that sticks to the top of the page (see the nav bar here for example: https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)
 * [ ] Make a footer that always sticks to the bottom of the page
 
