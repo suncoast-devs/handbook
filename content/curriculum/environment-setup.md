@@ -8,7 +8,7 @@ Over the course the training you will be using a variety of tools. To get starte
 ### Slack 
 
 #### What
-Slack will be our main form of communication. Download it to you computer and, if you have a smart phone, I highly recommend installing the app
+Slack will be our main form of communication. Download it to you computer; if you have a smart phone, I highly recommend installing the app.
 
 #### How: 
 For your computer, go here: (https://slack.com/downloads)[https://slack.com/downloads]
