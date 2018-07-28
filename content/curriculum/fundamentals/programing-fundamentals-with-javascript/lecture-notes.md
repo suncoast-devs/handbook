@@ -78,6 +78,7 @@ element.classList.remove("otherclass");
 
 ### Arrays
 
+
 ### Objects
 
 ### JSON
@@ -92,11 +93,12 @@ element.classList.remove("otherclass");
 
 ### Breaking down a problem
 
+### Abtraction & Re-use
+
 ### Big O
 
 ### Event Loop
 
-## Abtraction & Re-use
 
 ## Demo, refactor  
 
