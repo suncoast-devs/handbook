@@ -3,6 +3,11 @@ title: Making Web Pages Come Alive
 ---
 
 
+
+# Day 1
+---
+
+
 ## Introduction to JS
 
 ### What is JS
@@ -49,6 +54,14 @@ title: Making Web Pages Come Alive
 - Updating
 
 
+## DEMO: a simple "how many times have your clicked this button"
+
+
+# Day 2
+---
+
+
+
 ### Control Structures
 - if/else
 - boolean Logic
@@ -69,24 +82,30 @@ remove
 element.classList.remove("otherclass");
 ```
 
+## DEMO: Action Plates
+
+# Day 3
+
+## Loops
+### Arrays
+
+## Objects
 
 
 ## Demo - 50/50 System
 
-
-## Data Structures
-
-### Arrays
+# Day 4
+### Practice and problem solving, padding for anythign we didnt cover for blackjack
 
 
-### Objects
 
-### JSON
+# Day 5
 
 ### AJAX
 
 ### Local Storage
 
+# Day 6
 ### Map, Reduce, Filter
 
 ### Git
@@ -95,11 +114,11 @@ element.classList.remove("otherclass");
 
 ### Abtraction & Re-use
 
+
 ### Big O
 
+# Day 7
 ### Event Loop
 
-
-## Demo, refactor  
 
 
