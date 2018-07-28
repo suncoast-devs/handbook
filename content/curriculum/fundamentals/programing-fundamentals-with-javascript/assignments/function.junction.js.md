@@ -1,5 +1,3 @@
-# Title
-
 # Function Junction
 
 ## Objectives

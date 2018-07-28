@@ -60,14 +60,6 @@ title: Making Web Pages Come Alive
 # Day 2
 ---
 
-
-
-### Control Structures
-- if/else
-- boolean Logic
-- switch
-
-
 ### Adding elements to the DOM
 
 ### Modifying CSS
@@ -81,16 +73,20 @@ remove
 ```
 element.classList.remove("otherclass");
 ```
+### Control Structures
+- if/else
+- boolean Logic
+- switch
+### Arrays
+## Loops
 
 ## DEMO: Action Plates
 
 # Day 3
 
-## Loops
-### Arrays
 
 ## Objects
-
+## PEDAC
 
 ## Demo - 50/50 System
 
@@ -99,7 +95,7 @@ element.classList.remove("otherclass");
 
 
 
-# Day 5
+# Day 5 (Monday)
 
 ### AJAX
 
