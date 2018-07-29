@@ -4,20 +4,20 @@
 
 After completing this assignment, you should be able to:
 
-* Demonstrate understanding of types, functions, argument-handling, loops, and conditional statements
+- Demonstrate understanding of types, functions, argument-handling, loops, and conditional statements
 
 ## Instructions
 
-1. Fork [this repository](https://github.com/mdewey/function-junction) to your own account.
-2. Change into your training directory
-3. Clone your repository: `hub clone function-junction`
-4. Change into your project's directory: `cd function-junction`
-5. Install the dependencies: `yarn install` (or just `yarn` for short)
-6. Open in Code: `code .`
-7. Start the test runner: `yarn test`
-7. Open `src/functions.test.js` and work on functions until tests pass.
-8. Commit and push your work to GitHub.
-9. Turn in the URL to your GitHub repo.
+1.  Fork [this repository](https://github.com/mdewey/function-junction) to your own account.
+2.  Change into your training directory
+3.  Clone your repository: `hub clone function-junction`
+4.  Change into your project's directory: `cd function-junction`
+5.  Install the dependencies: `yarn install` (or just `yarn` for short)
+6.  Open in Code: `code .`
+7.  Start the test runner: `yarn test`
+8.  Open `src/functions.test.js` and work on functions until tests pass.
+9.  Commit and push your work to GitHub.
+10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 
@@ -72,7 +72,4 @@ These steps will be followed for almost every assignment going forward. Once you
   yarn deploy
   ```
 
-Once you are completely, go to the issue on our `assignments` repository, leave the link the repo of your work, and close the issue. I will not know you are down until you close the issue. 
-
-
-
+Once you are completely, go to the issue on our `assignments` repository, leave the link the repo of your work, and close the issue. I will not know you are down until you close the issue.
