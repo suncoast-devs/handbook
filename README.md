@@ -4,14 +4,4 @@
 
 A guide for students of the Suncoast Developers Guild.
 
-## Setup
-
-This is a [Gatsby](https://www.gatsbyjs.org/)-based project.
-
-```
-cd handbook/site
-npm install
-npm start
-```
-
-Then start hacking on markdown files in the `content` directory.
+See [handbook-dev](https://github.com/suncoast-devs/handbook-dev) for instructions on hacking on content here.
