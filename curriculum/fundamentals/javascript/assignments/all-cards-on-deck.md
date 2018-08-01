@@ -28,8 +28,8 @@ Read about, and implement the [Fisher–Yates shuffle](https://en.wikipedia.org/
 For our purposes, `n` is `52`:
 
 ```
-for i from 0 up to n - 1 do:
-  j = random integer less than i
+for i from n - 1 down to 1 do:
+  j = random integer (where 0 <= j <= i)
   swap items[i] with items[j]
 ```
 

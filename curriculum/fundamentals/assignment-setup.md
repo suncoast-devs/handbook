@@ -4,8 +4,7 @@ title: Setup for Assignments
 
 This section describes the process for setting up assignments in Unit I.
 
-First, ensure you have the [`app-app` generator](https://github.com/suncoast-devs/app-app) installed. We may have done
-this in class, and you will only need to do it once:
+First, ensure you have the [`app-app` generator](https://github.com/suncoast-devs/app-app) installed. We may have done this in class, and you will only need to do it once:
 
 ```sh
 npm install -g app-app
