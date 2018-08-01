@@ -8,7 +8,7 @@ In this project you will create a playable game of [Blackjack](https://en.wikipe
 
 - Create an event-driven user interface
 - Effectively use loops, conditionals and other control structures to implement [control flows](https://en.wikipedia.org/wiki/Control_flow)
-- Demonstrate usage of JavaScript object and arrays to model resources
+- Demonstrate usage of JavaScript objects and arrays to model resources
 
 ## Requirements
 
