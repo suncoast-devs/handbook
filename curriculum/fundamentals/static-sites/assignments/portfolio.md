@@ -1,6 +1,8 @@
-# A Portfolio
+---
+title: A Portfolio
+---
 
-For your first weekend project, we're going to be starting work on a portfolio website that you can improve over the rest of your career. 
+For your first weekend project, we're going to be starting work on a portfolio website that you can improve over the rest of your career.
 
 ![Mockup](https://raw.githubusercontent.com/tiy-tpa-fee/assignments/master/portfolio/mockup.png)
 
@@ -30,4 +32,3 @@ The font used is [Roboto](https://fonts.google.com/specimen/Roboto).
 
 - [ ] Take the time to personalize the site.
 - [ ] Keep it professional, but make it your own.
-

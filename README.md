@@ -4,4 +4,4 @@
 
 A guide for students of the Suncoast Developers Guild.
 
-See [handbook-dev](https://github.com/suncoast-devs/handbook-dev) for instructions on hacking on content here.
+See [handbook-dev](https://github.com/suncoast-devs/handbook-dev) for instructions on contributing to this project.

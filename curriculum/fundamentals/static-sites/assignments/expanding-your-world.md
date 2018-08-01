@@ -1,4 +1,6 @@
-# Expanding Your World.
+---
+title: Expanding Your World
+---
 
 In this assignment you will end up with a simple styled web page, published on the web.
 
@@ -15,7 +17,8 @@ In this assignment you will end up with a simple styled web page, published on t
 ### Explorer Mode
 
 - [ ] Follow all of the setup instructions (See "Assignment Setup").
-- [ ] Using CSS, style your page to imitate some of the classic designs of the web. Feel free to make this look at "bad" as you want. Here are some sites to gain inspiration. [https://www.justinmind.com/blog/10-90s-websites-designs-you-wont-believe-existed/](https://www.justinmind.com/blog/10-90s-websites-designs-you-wont-believe-existed/)
+- [ ] Using CSS, style your page to imitate some of the classic designs of the web. Feel free to make this look as "bad" as you want. Here are some sites to gain inspiration:
+  - [10 90s websites designs you won’t believe existed](https://www.justinmind.com/blog/10-90s-websites-designs-you-wont-believe-existed/)
 - [ ] Add a second page about your hobby with (at least) 2 pictures and with other facts about your hobby.
 - [ ] Add a menu to the your site so a user can go back and forth between the new pages.
 - [ ] Between the 2 pages, use at least 5 tag selectors, 5 id selectors, and 5 class selectors to style content on your page.
@@ -34,11 +37,11 @@ In this assignment you will end up with a simple styled web page, published on t
 
 ## Additional Resources
 
-CSS
+### CSS
 
 - https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS
 
-HTML
+### HTML
 
 - https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags
 - http://atozcss.com/start-here/

@@ -17,17 +17,18 @@ Also, set up hub to use `HTTPS` rather than `SSH` for repositories:
 git config --global hub.protocol https
 ```
 
-Open your terminal, then create and change into the project's directory:
+Open your terminal, then create and change into your project directory:
 
 ```sh
-mkdir -p ~/sdg/unit-1/hello-world
-cd ~/sdg/unit-1/hello-world
+mkdir -p ~/sdg/unit-1
+cd ~/sdg/unit-1
 ```
 
-Run the generator to create a boilerplate project:
+Run the generator to create a boilerplate project, and change into that directory:
 
 ```sh
-app-app --alpha
+app-app --alpha hello-world
+cd hello-world
 ```
 
 Open the project folder in your editor (remember, `.` is an alias for the current directory):
