@@ -1,4 +1,6 @@
-# Catch your Breathe
+---
+title:  Catch your Breathe
+---
 
 We have been going a fast pace for the past couple of weeks. Every so often, you need to reflect on how far you have come.
 
@@ -6,12 +8,19 @@ For tonight, we are going to take a little code break and create a blog post. Bl
 
 ## Objectives
 
+- Practice talking about technology.
+- Re-enforcing a topic we have covered in class
+
+## Requirements
+
+- Create a blog on [medium.com](https://medium.com/)
+
 ### Explorer Mode
 
-- [ ] On [medium.com](https://medium.com/), create a blog post that talks about a concept we have went over in class. This could anything topic from HTML, CSS or JavaScript. Or it could be a lesson that learn from the past couple of weeks. All I am looking for a developer focused blog post.
+- [ ] On [medium.com](https://medium.com/), create a blog post that talks about a concept we have went over in class. This could anything topic from HTML, CSS or JavaScript. Or it could be a lesson that learn from the past couple of weeks. All I am looking for a developer focused blog post. A good challenge will be to pick a topic you think you are weak on
 - [ ] to turn this in, submit to me, via the github issue, the link to the blog post
 
-### Adventure Mode
+## Adventure Mode
 
 - [ ] As we progress, we will be using different tools to work our brain. Today, head over to hackerrank.com (https://www.hackerrank.com/). This is another tool, like codewars to practice our developer skills. As a start, head into the algorithms section, and try this one: https://www.hackerrank.com/challenges/grading/problem.
 - [ ] To turn this, create a gist (gist.github.com) of your code and put it on this issue
@@ -19,5 +28,9 @@ For tonight, we are going to take a little code break and create a blog post. Bl
 ### Epic Mode
 
 - [ ] Go back and finish up any outstanding work.
-- [ ] Go back to an old assignment and work on it some more. This could trying to tackle a harder level. Or going back and working on the UI/UX of an assignment, refactor the code to a new idea that we covered (EX: functions and abstractions) or adding unit tests to a something
+- [ ] Go back to an old assignment and work on it some more. This could trying to tackle a harder level. Or going back and working on the UI/UX of an assignment, refactor the code to a new idea that we covered (EX: functions and abstractions) or adding unit tests
 - [ ] to turn this, put the github repo here, and tell me about what you did.
+
+## Reading Material
+
+To prepare for upcoming lessons, students might want to read links shared here.

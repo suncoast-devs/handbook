@@ -104,25 +104,34 @@ element.classList.remove("otherclass");
 # Day 4
 
 ### Practice and problem solving, padding for anythign we didnt cover for blackjack
+### Breaking down a problem
 
 # Day 5 (Monday)
 
+### Black Jack Questions
+### Map, Reduce, Filter
+
+#### HW: Blog
+
+# Day 6
 ### AJAX
 
 ### Local Storage
 
-# Day 6
-
-### Map, Reduce, Filter
-
 ### Git
 
-### Breaking down a problem
-
-### Abtraction & Re-use
-
-### Big O
+#### HW: Weather Site
 
 # Day 7
 
+### Abstraction & Re-use
+### Objects
+
+#### HW: Abtract the Weather Site
+
+
+# Day 8
+
 ### Event Loop
+
+#### HW: Go back and attempt a mode you didnt get to
