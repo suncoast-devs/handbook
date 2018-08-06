@@ -8,7 +8,7 @@ The general theme of these assignments is logic and problem solving.
 
 For this assignment, you will creating a simple interactive score board for your favorite sport.
 
-## Roshambo
+## [Roshambo](./roshambo)
 
 You will create a little game of Rock, Paper, Scissors.
 
