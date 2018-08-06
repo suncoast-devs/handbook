@@ -1,5 +1,6 @@
 ---
 title: Designing Tic-Tac-Toe
+draft: true
 ---
 
 With a partner, create a design for a tic-tac-toe game. Do _not_ worry about writing code; rather, practice your technical design skills (i.e. thinking about _how_ you would code this).

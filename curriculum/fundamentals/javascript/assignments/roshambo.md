@@ -1,5 +1,6 @@
 ---
 title: Roshambo!
+draft: true
 ---
 
 Create a simple Rock-Paper-Scissors game.

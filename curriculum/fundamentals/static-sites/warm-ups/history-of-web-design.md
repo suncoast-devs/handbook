@@ -1,5 +1,6 @@
 ---
 title: "Discussion: History of Web Design"
+draft: true
 ---
 
 Read [A brief history of web design for designers](http://blog.froont.com/brief-history-of-web-design-for-designers).

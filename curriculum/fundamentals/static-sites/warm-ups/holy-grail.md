@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Quest for the Holy Grail"
+draft: false
 ---
 
 From Wikipedia:
@@ -10,4 +11,4 @@ Using flexbox, Replicate this layout:
 
 ![](./assets/holy-grail.png)
 
-Image by [David Lark - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=42413988)
+The above image is by [David Lark - Own work, CC BY-SA 4.0](https://commons.wikimedia.org/w/index.php?curid=42413988).

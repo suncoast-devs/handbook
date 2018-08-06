@@ -1,5 +1,6 @@
 ---
 title: Building Simple Web Pages
+draft: true
 ---
 
 ## Introduction

@@ -1,5 +1,6 @@
 ---
 title: JavaScript Warm-ups
+draft: true
 ---
 
 1.  [Challenge: Random Color Changer](./color-changer)

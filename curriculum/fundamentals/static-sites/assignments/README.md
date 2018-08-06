@@ -1,5 +1,6 @@
 ---
 title: What's in a Hobby?
+draft: true
 ---
 
 This multi-day project will have you building a personal web-site about a hobby you enjoy, or maybe, one that you

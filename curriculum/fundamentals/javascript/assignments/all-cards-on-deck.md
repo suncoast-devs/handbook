@@ -1,5 +1,6 @@
 ---
 title: All Cards on Deck!
+draft: true
 ---
 
 In this project, you will use JavaScript to model [a deck of playing cards](https://en.wikipedia.org/wiki/standard_52-card_deck). You'll also add functionality to it such as shuffling and dealing.

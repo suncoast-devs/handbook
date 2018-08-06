@@ -1,5 +1,6 @@
 ---
 title: Clever Title
+draft: true
 ---
 
 This is a narrative description of the assignment, as prose.

@@ -1,5 +1,6 @@
 ---
 title: HTML/CSS Warm-ups
+draft: true
 ---
 
 1.  [Discussion: History of Web Design](./history-of-web-design)

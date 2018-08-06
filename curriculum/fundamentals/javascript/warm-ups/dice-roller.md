@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Dice Roller"
+draft: true
 ---
 
 I have seem to have forgotten my dice set at home. Being the developers we are, lets make simple dice roller.

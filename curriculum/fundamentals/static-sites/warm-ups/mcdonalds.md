@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Click on the Golden Arches"
+draft: true
 ---
 
 Recreate this amazing layout:

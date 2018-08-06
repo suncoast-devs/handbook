@@ -1,5 +1,6 @@
 ---
 title: An Introduction to JavaScript
+draft: true
 ---
 
 - [Assignments](./assignments)

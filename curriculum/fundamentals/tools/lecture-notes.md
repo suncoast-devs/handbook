@@ -1,5 +1,6 @@
 ---
 title: The Tools of the Trade
+draft: true
 ---
 
 TODO: Walk through the following:

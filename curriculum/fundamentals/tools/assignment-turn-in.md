@@ -1,5 +1,6 @@
 ---
 title: Turning In Assignments
+draft: true
 ---
 
 **Note**: You should complete at least the tasks given for _explorer_ mode as listed in the assignment before turning

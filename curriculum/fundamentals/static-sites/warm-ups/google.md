@@ -1,5 +1,6 @@
 ---
 title: "Challenge: Google it!"
+draft: true
 ---
 
 Take time this morning to replicate the [Google homepage](https://www.google.com/) as best you can.

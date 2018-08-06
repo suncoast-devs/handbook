@@ -1,5 +1,6 @@
 ---
 title: Logic & Problem Solving
+draft: true
 ---
 
 The general theme of these assignments is logic and problem solving.

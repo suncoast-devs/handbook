@@ -1,5 +1,6 @@
 ---
 title: Cloudy with a chance of Syntax Error
+draft: true
 ---
 
 Using a popular weather API, Create a web site that allows a user to search for a location and gets that places weather.
@@ -19,7 +20,7 @@ Using a popular weather API, Create a web site that allows a user to search for 
 - [ ] Create a simple HTML page that has a text box and a search `button`
 - [ ] Allow the user to type in a place, click the search button, and , using `openweathermap.org`, get the current weather for that location
 - [ ] Display the weather to user by adding elements to the DOM.
-- [ ] Allow the user to search by zip or city name. 
+- [ ] Allow the user to search by zip or city name.
 
 ## Adventure Mode
 
@@ -31,4 +32,3 @@ Using a popular weather API, Create a web site that allows a user to search for 
 
 - [ ] Add a type a head using Google Places API
 - [ ] Head back to blackjack and use [https://deckofcardsapi.com/](https://deckofcardsapi.com/) as your API
-

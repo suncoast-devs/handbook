@@ -1,5 +1,6 @@
 ---
 title: Making Web Pages Come Alive
+draft: true
 ---
 
 # Day 1
@@ -104,16 +105,19 @@ element.classList.remove("otherclass");
 # Day 4
 
 ### Practice and problem solving, padding for anythign we didnt cover for blackjack
+
 ### Breaking down a problem
 
 # Day 5 (Monday)
 
 ### Black Jack Questions
+
 ### Map, Reduce, Filter
 
 #### HW: Blog
 
 # Day 6
+
 ### AJAX
 
 ### Local Storage
@@ -125,10 +129,10 @@ element.classList.remove("otherclass");
 # Day 7
 
 ### Abstraction & Re-use
+
 ### Objects
 
 #### HW: Abtract the Weather Site
-
 
 # Day 8
 

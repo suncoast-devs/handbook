@@ -1,5 +1,6 @@
 ---
 title: Come Visit Mars
+draft: true
 ---
 
 ## Introduction
@@ -28,8 +29,8 @@ Basic CSS
 
 ## Linking to External Media
 
-* External Stylesheets `<link>`
-* Adding Images `<img>`
+- External Stylesheets `<link>`
+- Adding Images `<img>`
 
 ---
 
@@ -37,19 +38,19 @@ Basic CSS
 
 Begin laying out the page with some basic layout CSS:
 
-* A single centered column
-* Centered images with captions
-* An aside, inset in the text.
-* Start laying the foundations of mobile-first responsive design.
+- A single centered column
+- Centered images with captions
+- An aside, inset in the text.
+- Start laying the foundations of mobile-first responsive design.
 
 ## Navigation
 
-* Add additional pages to the website
-* Navigation styling, `<nav>`, `<ul>`, etc.
+- Add additional pages to the website
+- Navigation styling, `<nav>`, `<ul>`, etc.
 
 ## Forms
 
-* A simple contact `<form>` and related CSS
+- A simple contact `<form>` and related CSS
 
 ---
 
@@ -57,9 +58,9 @@ Begin laying out the page with some basic layout CSS:
 
 ### Flexbox
 
-* Switch to a two-column layout for the page.
+- Switch to a two-column layout for the page.
 
 ### Media Queries
 
-* Keep a single column on small screens
-* Two columns where available.
+- Keep a single column on small screens
+- Two columns where available.

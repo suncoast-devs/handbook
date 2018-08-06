@@ -1,5 +1,6 @@
 ---
 title: Blackjack
+draft: true
 ---
 
 In this project you will create a playable game of [Blackjack](https://en.wikipedia.org/wiki/Blackjack).
