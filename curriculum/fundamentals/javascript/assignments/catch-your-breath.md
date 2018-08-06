@@ -8,8 +8,8 @@ In this assignment, we are going to take a little _code_ break and create a blog
 
 ## Objectives
 
-- Practice talking about technology.
-- Reinforce a topic we have covered in class.
+- Practice talking about technology
+- Reinforce a topic we have covered in class
 
 ## Requirements
 
@@ -22,7 +22,7 @@ In this assignment, we are going to take a little _code_ break and create a blog
 
 ## Adventure Mode
 
-- [ ] As we progress, we will be using different tools to work our brain. Today, head over to [HackerRank](https://www.hackerrank.com/). This is another tool, like [Codewars](https://www.codewars.com/) to practice our developer skills. As a start, head into the algorithms section, and try this one: https://www.hackerrank.com/challenges/grading/problem.
+- [ ] As we progress, we will be using different tools to work our brain. Today, head over to [HackerRank](https://www.hackerrank.com/). This is another tool, like [Codewars](https://www.codewars.com/) to practice our developer skills. As a start, head into the algorithms section, and try [Grading Students](https://www.hackerrank.com/challenges/grading/problem).
 - [ ] To turn this in, create a [gist](https://gist.github.com) of your code and submit link to it.
 
 ### Epic Mode
