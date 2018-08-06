@@ -1,22 +1,6 @@
 ---
-title: Tools of the Trade
-draft: true
+title: Version Control
 ---
-
-- Assignments: There are no specific assignments for this topic, however our tools are used in _everything_ we will do going forward.
-- Warm-ups
-- [Lecture Notes](./lecture-notes)
-
-Setting up your computer for class:
-
-- [Setting up your Development Environment](./environment-setup)
-
-Also, this section has some info about how to manage your homework:
-
-- [Setup for Assignments](./assignment-setup)
-- [Turning In Assignments](./assignment-turn-in)
-
-## Version Control
 
 <!-- I guess I can't really explain it very well except by analogy and example -->
 
