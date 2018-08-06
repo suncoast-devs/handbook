@@ -2,7 +2,7 @@
 title: Web Development Fundamentals
 ---
 
-TODO: A survey of the fundaments section of our program.
+TODO: A survey of the fundamentals section of our program.
 
 ## HTML
 

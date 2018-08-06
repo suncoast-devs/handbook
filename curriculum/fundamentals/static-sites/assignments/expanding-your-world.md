@@ -6,9 +6,9 @@ In this assignment you will end up with a simple styled web page, published on t
 
 ## Objectives
 
-- Practice using your tools text editor.
+- Practice using your tools text editor
 - Explore new CSS properties
-- Publish a web page.
+- Publish a web page
 
 ## Requirements
 
