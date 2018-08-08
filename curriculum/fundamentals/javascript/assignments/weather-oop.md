@@ -27,12 +27,12 @@ git checkout oop-refactor
 - [ ] Create a class that holds all the logic for interacting with the DOM. This should have methods such as `addForecastToDOM` and `getUserInput`
 - [ ] submit this by pushing the the branch to github but using `git push origin oop-refactor`
 
-## Adventure Mode
+### Adventure Mode
 
 - [ ] Create a class that represents the whole page. This hold all the data for page. this should have 1 method that is called when the `DOMContentLoaded`. That method should be called `render`
 - [ ] Add a forecast feature. Using the API, add a 5 day forecast for the users
 - [ ] Pick 2 other API routes that look intrestings to implement on your site. Remember to try to impement these in Object Oriented method
 
-## Epic Mode
+### Epic Mode
 
 - [ ] using [https://leafletjs.com/](https://leafletjs.com/) add a map that allows using see weather where ever they click

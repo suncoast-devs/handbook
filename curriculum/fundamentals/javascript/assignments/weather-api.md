@@ -21,13 +21,13 @@ Using a popular weather API, Create a web site that allows a user to search for 
 - [ ] Display the weather to user by adding elements to the DOM.
 - [ ] Allow the user to search by zip or city name.
 
-## Adventure Mode
+### Adventure Mode
 
 - [ ] Using the HTML5 Geolocation API, search for the users current location when page loads.
 - [ ] Store the Users last search and pull it and search for the value on page load.
 - [ ] remove the need for the search button and search when the user stops typing. HINT: use setTimeout and the change event. to track when the user stops typing.
 
-## Epic Mode
+### Epic Mode
 
 - [ ] Add a type a head using Google Places API
 - [ ] Head back to blackjack and use [https://deckofcardsapi.com/](https://deckofcardsapi.com/) as your API

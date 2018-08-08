@@ -19,11 +19,11 @@ This is a narrative description of the assignment, as prose.
 
 - [ ] A list of _specific_ minimum requirements the student must check-off before completing the project.
 
-## Adventure Mode
+### Adventure Mode
 
 - [ ] If you're feeling adventurous, a more advanced set of objectives.
 
-## Epic Mode
+### Epic Mode
 
 - [ ] Any suggestions for taking the assignment all the way home. Often these are far outside any realm of expectation,
       they serve as challenges for the most daring students.
