@@ -19,7 +19,7 @@ git branch oop-refactor
 git checkout oop-refactor
 ```
 
-- On this new branch, refactor your code to use atleast a 2 classes
+- On this new branch, refactor your code to use at least 2 classes
 
 ### Explorer Mode
 

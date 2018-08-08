@@ -9,7 +9,6 @@ Using a popular weather API, Create a web site that allows a user to search for 
 
 - Practice working with an API
 - Practice working with data that was structure by a third party
-- Practice working with a API
 
 ## Requirements
 
