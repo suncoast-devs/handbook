@@ -1,0 +1,27 @@
+faces = [🤖, 🐢, 🐼, 🐙, 👾, 👹, 🐢, 👾, 😱, 🤖, 🐲, 🐙, 😱, 👹, 🐼, 🐲]
+matched = []
+picks = []
+
+choose(positionOfCard) function:
+  If the number of picks is 2:
+    Do nothing (stop the player from choosing 3 cards).
+  Add positionOfCard to picks.
+  If the number of picks is now 2:
+    check()
+
+check() function: 
+  If faces[picks[0]] is equal to faces[picks[1]]:
+    Add positionOfCard to matched.
+    If all matches found (i.e. matched is the same length as faces):
+      Game over.
+  Empty picks after a short delay.
+
+render() function:
+  For each card in faces:
+    When the card is clicked: choose(positionOfCard)
+    If picks inclues positionOfCard:
+      Show card face (faces[positionOfCard]).
+    Else:
+      Show card back.
+    If matched includes card:
+      Your Choice: Show Card face or do not show card (i.e. It has been removed from the board).
