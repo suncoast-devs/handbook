@@ -2,46 +2,11 @@
 
 ## React
 
-### Dynamic Pages
-
-#### Day One
-
-* JS Modules
-* Bundlers, e.g. webpack
-* create-react-app
-* Components
-* Props
-* Rendering multiple components (i.e. map)
-
-Demo: Adventure Time
-Assignment: Hello, React
-
-#### Day Two
-
-* State
-
-Demo: Convert Weather API to React
-Assignment: Crypto Ticker
-
-#### Day Three
-
-* User Events, react lifecycle
-
-Demo: Convert Score Board
-Assignment: Color Picker
-
-#### Day Four
-
-* Model more complex ideas, really embracing component architecture
-
-Group Demo: Minesweeper
-Assignment: Memory Game
-
 ### SPAs
 
 #### Day One
 
-* React Router
+- React Router
 
 Demo: Blog
 Assignment: Photo Gallery
@@ -65,7 +30,7 @@ Assignment: Choose your own Adventure!
 
 #### Day One
 
-* Redux
+- Redux
 
 #### Day Two
 
@@ -73,7 +38,7 @@ Assignment: Choose your own Adventure!
 
 #### Day Four
 
-* Mobx
+- Mobx
 
 ## Beyond the Comfort Zone
 
