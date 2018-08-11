@@ -1,8 +1,8 @@
 ---
-title: React: Part I
+title: "React: Part I"
 draft: true
 ---
 
-- [Assignments](./assignments/)
-- [Warm-ups](./warm-ups/)
-- [Lecture Notes](./lecture-notes)
+* [Assignments](./assignments/)
+* [Warm-ups](./warm-ups/)
+* [Lecture Notes](./lecture-notes)
