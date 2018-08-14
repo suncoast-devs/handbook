@@ -51,7 +51,7 @@ https://image.tmdb.org/t/p/w185_and_h278_bestv2/4p1N2Qrt8j0H8xMHMHvtRxv9weZ.jpg
 
 ## Requirements
 
-You do _not_ need to use the tmdb.org API for this assignment. You should use the supplied JSON file (see above).
+You do _not_ need to use the tmdb.org API for this assignment; you should use the supplied JSON file (see above).
 
 ### Explorer Mode
 

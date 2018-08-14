@@ -8,6 +8,16 @@ draft: true
 - JS Modules
 - Bundlers, e.g. webpack
 
+### Resources
+
+- [webpack](https://webpack.js.org/)
+- https://caniuse.com/#feat=es6-module
+
+### Further Reading
+
+- https://eloquentjavascript.net/10_modules.html
+- https://developers.google.com/web/fundamentals/primers/modules
+
 ## Hello, react
 
 - create-react-app
