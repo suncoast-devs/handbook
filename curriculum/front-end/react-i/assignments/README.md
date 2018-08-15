@@ -12,3 +12,7 @@ In this assignment you're going to build a small webpage that showcases some of 
 ## [Crypto Ticker](./crypto-ticker)
 
 In this project you'll use React and a 3rd-party API as a data to create a real-time price tracker for some popular cryptocurrencies.
+
+## [Pick a Color, any Color](./color-picker)
+
+Create an HSL(a) color picker with React.
