@@ -1,5 +1,5 @@
 ---
-title: "Triplet!"
+title: Intro to HackerRank - Compare the Triple
 draft: true
 ---
 

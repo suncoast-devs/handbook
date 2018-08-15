@@ -1,5 +1,5 @@
 ---
-title: "Map and reduce"
+title: Map and Reduce
 draft: true
 --- 
 
