@@ -14,6 +14,7 @@ With a partner, create a design for a tic-tac-toe game. Do _not_ worry about wri
 
 Features to consider:
 
+- [ ] Game should be played on the same computer.
 - [ ] As a user, I should be able to see a tic-tac-toe board.
 - [ ] As a user, the game should alternate turns, between `X` and `O`.
 - [ ] As a user, I should be able to click in a square and play either `X` or `O`, respective of the turn.

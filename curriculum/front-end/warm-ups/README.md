@@ -7,3 +7,7 @@ draft: true
 2.  [Challenge: Explode](./explode)
 3.  [Challenge: mod-work](./mod-work)
 4.  [Challenge: Intro to HackerRank: Compare the Triple](./triplet)
+5.  [Challenge: Binary Zoo](./binary-zoo)
+6.  [Challenge: Plus Minus %](./plus-minus)
+7.  [Challenge: Pangram-demonium](./pangrams)
+8.  [Challenge: All about that case](./all-about-that-case)
