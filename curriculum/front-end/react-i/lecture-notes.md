@@ -49,3 +49,35 @@ Assignment: Color Picker
 
 Group Demo: Minesweeper
 Assignment: Memory Game
+
+
+
+#### Day Five
+
+- Practice, Practice, Practice
+
+Group Demo: Memory Game continued
+Assignment: Write a Blog
+
+#### Day Six
+
+- Koans in class together in gropus
+
+Group Demo: Koans
+Assignment: Function-Junction
+
+#### Day Seven
+
+
+- React Router
+
+Group Demo: Hotel explorer site
+Assignment: Employee Director
+
+
+#### Day Eight
+
+- Practice, Practice, Practice
+
+Assignment: Shopping Front End
+
