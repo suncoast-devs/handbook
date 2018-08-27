@@ -18,7 +18,7 @@ We're going to build a sort of _reverse_ hangman. The player can't lose; they ju
 
 You will need to download these files and add them to your project:
 
-1.  [Word List](./assets/words.txt)
+1.  [Word List](./assets/words.json)
 2.  [Snowman Images](./assets/snowman.zip) (Unzip these before adding to your project)
 
 ### Explorer Mode
