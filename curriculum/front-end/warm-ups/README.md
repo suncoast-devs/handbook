@@ -11,3 +11,5 @@ draft: true
 6.  [Challenge: Plus Minus %](./plus-minus)
 7.  [Challenge: Pangram-demonium](./pangrams)
 8.  [Challenge: All about that case](./all-about-that-case)
+9.  [Challenge: Feast and Remove!](./feast-remove)
+10. [Flash Project: Grab Bag](./grab-bag.md)

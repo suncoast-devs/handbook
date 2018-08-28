@@ -11,7 +11,7 @@ After completing this assignment, you should be able to:
 
 ## Requirements
 
-1.  Fork [this repository](https://github.com/mdewey/function-junction) to your own account.
+1.  Fork [this repository](https://github.com/suncoast/function-junction) to your own account.
 2.  Change into your training directory
 3.  Clone your repository: `hub clone function-junction`
 4.  Change into your project's directory: `cd function-junction`
