@@ -12,15 +12,6 @@ In this assignment, you'll build a _less grim_ variation of a popular game:
 * Reinforce component architecture in React
 * Effective use props and state in React
 
-## Requirements
-
-We're going to build a sort of _reverse_ hangman. The player can't lose; they just get to build a snowman by adding parts each time they guess a letter **correctly**.
-
-You will need to download these files and add them to your project:
-
-1.  [Word List](./assets/words.json)
-2.  [Snowman Images](./assets/snowman.zip) (Unzip these before adding to your project)
-
 ### Explorer Mode
 
 * [ ] Selects a random word from the list and display a number of blank spaces (or underscores) equal to the word length.
