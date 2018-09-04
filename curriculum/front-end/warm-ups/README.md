@@ -13,3 +13,4 @@ draft: true
 8.  [Challenge: All about that case](./all-about-that-case)
 9.  [Challenge: Feast and Remove!](./feast-remove)
 10. [Flash Project: Grab Bag](./grab-bag.md)
+12. [CSS Layout: Replicate this site](./css-layout.md)

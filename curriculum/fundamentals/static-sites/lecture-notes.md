@@ -3,6 +3,8 @@ title: Building Simple Web Pages
 draft: true
 ---
 
+# Day 1
+
 ## Introduction
 
 ## How the Internet Works
@@ -13,11 +15,13 @@ draft: true
 
 ### Tags
 
-## Demo: Goonies Fan Page
+## Demo: Goonies(or other idea) Fan Page
 
-Markup.
+ - Basic HTML content
 
 ---
+
+# Day 2
 
 ## Styling Basics
 
@@ -31,27 +35,7 @@ Markup.
 
 ### Images
 
-## Demo: Goonies Fan Page
-
-Add images and basic styling of text and colors.
-
----
-
-## Basic Layout
-
-## Navigation
-
-### Linking pages
-
-## Forms
-
-## Demo: Goonies Fan Page
-
-Simple layout, navigation, a mock guest book
-
----
-
-## Intermediate Layout
+## Layout
 
 ### Flexbox
 
@@ -62,6 +46,27 @@ Just a mention here, don't get into actual code.
 Explain flexbox vs grids:
 
 Grids do not replace flexbox, they compliment it. Flexbox = 1D, Grids = 2D
+
+
+
+## Demo: Goonies(or other idea) Fan Page
+
+ - Add images and basic styling of text and colors.
+
+---
+
+# Day 3
+
+## Navigation
+
+### Linking pages
+
+### Group Activity: Flexbox Froggy
+
+
+---
+
+# Day 4
 
 ## Responsive Design
 
