@@ -40,13 +40,15 @@ In this assignment you will end up with a simple styled web page, published on t
 
 ### CSS
 
-- https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS
+- [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
+- [Getting Started with CSS Rules](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#Anatomy_of_a_CSS_ruleset)
+- [All the CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index)
+- [pseudo-classes and pseudo-elements](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements)
 
 ### HTML
 
-- https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags
-- http://atozcss.com/start-here/
-- http://www.evolutionoftheweb.com
+- [HTML Tags](https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags)
+- [Evolution of the Web](http://www.evolutionoftheweb.com)
 
 ## Reading Material
 
