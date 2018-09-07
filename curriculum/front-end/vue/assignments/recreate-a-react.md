@@ -3,24 +3,21 @@ title: Double Back
 draft: true
 ---
 
-Over the past could weeks we have been learning React and did a variety of projects; and over the last week we have learned a new framework, Vue.js. This weekend, go back to a selected project that we did in React and recreate it using Vue.js.
+Over the past couple of weeks we have been learning React and did a variety of projects; and over the last week we have learned a new framework, Vue.js. For this project, go back to a selected project that we did in React and recreate it using Vue.js.
 
 ## Requirements
 
-* Recreate either, `Minesweeper`, `Snowman` or `Color Picker` in Vue.js
-
+* Recreate a React App in Vue
 
 ### Explorer Mode
 
-- [ ] Complete the Explorer of the selected project. 
+- [ ] Recreate `Color Picker`. 
 
 ### Adventure Mode
-- [ ] Completed the Adventure Mode of the selected project
-- [ ] Choose another project and complete the Explorer mode
-
+- [ ] Recreate `Snowman` 
 
 ### Epic Mode
-- [ ] Complete the Epic mode the selected project
+- [ ] Recreate `Minesweeper`
  
 
  *NOTE* Remember that you should also be working on your capstone project this weekend as well. 
