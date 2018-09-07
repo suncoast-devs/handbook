@@ -20,20 +20,20 @@ There are a set of plugins we recommend for students at the start of their cours
 _Plugins we recommend to start with (some of these are installed by default)_
 
 - Makes Atom look more pretty
-  - file-icons
-  - pigments
+  - `file-icons` _adds fancy icons to the project file view_
+  - `pigments` _improves color handling in files such as CSS_
 - Makes your code look pretty
-  - prettier-atom
-  - formatter
-  - formatter-tidy
+  - `prettier-atom` _formats your CSS and JS files to a nice standard. NOTE: Turn on 'format on save' in settings_
+  - `formatter` _formats other files such as HTML_
+  - `formatter-tidy` _handles HTML files better, including all HTML5 tags_
   - _NOTE_ If you install these, please run `brew install tidy-html5` in your terminal once.
 - Points out typos/mistakes in your code
-  - linter
-  - linter-stylelint
+  - `linter` _shows typos/mistakes in code_
+  - `linter-stylelint` _shows typos/mistakes in code_
 - Generally helpful tools
 
-  - autocomplete-paths
-  - color-picker
+  - `autocomplete-paths` _will show autocomplete suggestions of files in your project_
+  - `color-picker` _nice color picker for defining color codes in files_
 
 _How to [install plugins](https://flight-manual.atom.io/using-atom/sections/atom-packages/)_
 
