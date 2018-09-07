@@ -41,6 +41,11 @@ In your first assignment you will end up with a web page, no matter how simple, 
 - https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags
 - http://atozcss.com/start-here/
 - http://www.evolutionoftheweb.com
+- [Atom Flight Manual](https://flight-manual.atom.io)
+  - [Moving in Atom](https://flight-manual.atom.io/using-atom/sections/moving-in-atom/)
+  - [Selecting Text](https://flight-manual.atom.io/using-atom/sections/atom-selections/)
+  - [Find and Replace](https://flight-manual.atom.io/using-atom/sections/find-and-replace/)
+- [Getting Started with Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)
 
 ## Reading Material
 

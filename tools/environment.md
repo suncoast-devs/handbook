@@ -17,7 +17,9 @@ Slack will be our main form of communication. Download it to you computer; if yo
 
 #### How:
 
-For your computer, go here: (https://slack.com/downloads)[https://slack.com/downloads]
+Open your browser and navigate to: [https://slack.com/downloads](https://slack.com/downloads)
+
+Open your phone's application store and install the mobile application and sign in at least once.
 
 ### HomeBrew (Mac Only)
 
@@ -31,7 +33,7 @@ This will make life a bit easier to install some of the other tools
 
 #### How
 
-Head [here](https://brew.sh/) and follow the directions
+Head [here](https://brew.sh/) and follow the first direction under `Install Homebrew`
 
 ### Node.js
 

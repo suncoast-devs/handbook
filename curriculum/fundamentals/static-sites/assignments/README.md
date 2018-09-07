@@ -18,6 +18,10 @@ would like to learn. This could be a showcase, or a tutorial, etc.
   images.
 - Add 1-2 more pages, linking to them with navigation that is continuous across each page.
 
+## [Flexbox](./flexbox)
+
+- Create flexbox based designs
+
 ## [Octodex](./octodex)
 
 Create a responsive layout for your page and add considerable polish.
