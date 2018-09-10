@@ -40,16 +40,5 @@ Unfortunately, the Octodex is not responsive\*! Today, your task is to recreate 
 - [ ] Go back to your hobby website and update site to be mobile friendly and responsive.
 
 ## Additional Resources
+- https://www.youtube.com/watch?v=2KL-z9A56SQ
 
-- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-- http://atozcss.com/start-here/
-- http://www.evolutionoftheweb.com
-
-## Recommended Practice:
-
-- https://flexboxfroggy.com/
-- https://mastery.games/p/flexbox-zombies
-
-## Reading Material
-
-To prep for tomorrow's lesson, you can [read about CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS).
