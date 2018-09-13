@@ -29,3 +29,7 @@ A survey of text editors and IDEs.
 ## [Programming Languages](./languages)
 
 A survey of modern programming languages, currently in mainstream use.
+
+## [Command Line](./command-line)
+
+Tips and tricks for the unix-style command line
