@@ -3,6 +3,12 @@ title: Career Support
 draft: true
 ---
 
+## [Branding yourself](./branding-yourself)
+
+## [Blogging](./blogging)
+
+## [Trello](/.trello)
+
 ## [Preparing for Interviews](./interviews)
 
 Notes for junior developers on how to prepare for job interviews.
