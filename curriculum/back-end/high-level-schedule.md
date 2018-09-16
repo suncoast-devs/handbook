@@ -25,16 +25,17 @@ Homework:
     - create a non trivial console program that will converted to an API in the near future
 ### Day 3
 Lecture: 
-    - Intro to APIs
-    - Expanding on REST
+    - Intro to Databases
+    - Set up Dev ENV
 Homework:
-    - Build API around the project from last night
+    - Create a database, and write SQL queries against it
 ### Day 4
 Lecture: 
-    - Practice on creating RESTful APIs  that CRUD data
+    - Data Modeling, Joins, FK
 Homework:
-    - Create an Crud API
-        - adventure, hook up a front end 
+    - Create a complex database
+    - Work on HTML & database schema for final project
+
 
 
 # Week 9
@@ -46,26 +47,27 @@ Week Goal: Build a RESTful API that is backed by an ORM and a database
 
 ### Day 1
 Lecture: 
-    - Intro to Databases
-    - Set up Dev ENV
-Homework:
-    - Create a database, and write SQL queries against it
-### Day 2
-Lecture: 
-    - Data Modeling, Joins, FK
-Homework:
-    - Create a complex database
-### Day 3
-Lecture: 
     - What is an ORM
     - How to use an ORM to query a database 
 Homework:
     - Create a API that queries the simple database they made Day 1
-### Day 4
+### Day 2
 Lecture: 
     - Full fledge API, ORM and Database
 Homework:
     - Create a fully RESTful API. 
+### Day 3
+Lecture: 
+    - Intro to APIs
+    - Expanding on REST
+Homework:
+    - Build API around the project from last night
+### Day 4
+Lecture: 
+    - Practice on creating RESTful APIs  that CRUD data
+Homework:
+    - Create an Crud API
+        - adventure, hook up a front end 
 
 
 # Week 10
