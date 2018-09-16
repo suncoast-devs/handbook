@@ -5,7 +5,7 @@ draft: true
 
 # Week 8
 
-Week Goal: Build an API in a language that has no database, but does stuff in memory
+Week Goal: Learn your new
 
 ## Daily breakdown
 
@@ -15,14 +15,15 @@ Lecture:
     - Intro to Back end language, 
     - Dev env setup, 
 Homework:
-    - Explain technical idea to some one non-technical
+    - Explain technical idea to some one non-technical (blog)
     - Create a simple Console program to prove env is set up
 ### Day 2
 Lecture: 
-    - Practice back-end language
+    - Practice back-end language 
     - Deeper dive into the language
+    - OOP
 Homework:
-    - create a non trivial console program that will converted to an API in the near future
+    - Koans
 ### Day 3
 Lecture: 
     - Intro to Databases
