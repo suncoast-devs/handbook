@@ -18,66 +18,107 @@ draft: true
 - https://eloquentjavascript.net/10_modules.html
 - https://developers.google.com/web/fundamentals/primers/modules
 
-## Hello, react
+---
+
+#### Day One - Hello, react
 
 - create-react-app
 - Components
 - Props
 - Rendering multiple components (i.e. map)
 
-Class Demo: Adventure Time (Basic)
-Suggested Assignment: Party Like it's 1989!
+##### Today's work
+
+- Class Demo: Adventure Time (Basic)
+- Suggested Assignment: [Party Like it's 1989!](../assignments/party-like-its-1989)
+
+
+---
+
 
 #### Day Two
 
 - Images and other assets (import)
 - State
 
-Demo: Convert Weather API to React
-Assignment: Crypto Ticker
+##### Today's work
+- Demo: Convert Weather API to React
+- Assignment: [Crypto Ticker](../assignments/crypto-ticker)
+
+
+---
+
 
 #### Day Three
 
 - User Events, react lifecycle
 
-Demo: Convert Score Board
-Assignment: Color Picker
+##### Today's work
+
+- Demo: Convert Score Board
+- Assignment: [Color Picker](../assignments/color-picker)
+
+
+---
+
 
 #### Day Four
 
 - Model more complex ideas, really embracing component architecture
 
-Group Demo: Minesweeper
-Assignment: Memory Game
+##### Today's work
 
+- Group Demo: Minesweeper
+- Assignment: Memory Game
+- Assignment: [Minesweeper](../react-ii/react-ii/assignments/minesweeper)
+
+
+---
 
 
 #### Day Five
 
 - Practice, Practice, Practice
 
-Group Demo: Memory Game continued
-Assignment: Write a Blog
+##### Today's work
+
+- Group Demo: Memory Game continued
+- Assignment: [Write a Blog](../assignments/recovery-blog)
+
+
+---
+
 
 #### Day Six
 
 - Koans in class together in gropus
 
-Group Demo: Koans
-Assignment: Function-Junction
+##### Today's work
+
+- Group Demo: Koans
+- Assignment: [Function-Junction](../../../fundamentals/javascript/assignments/function-junction)
+
+
+---
+
 
 #### Day Seven
 
-
 - React Router
 
-Group Demo: Hotel explorer site
-Assignment: Employee Director
+##### Today's work
+- Group Demo: Hotel explorer site
+- Assignment: Employee Directory
+
+
+---
 
 
 #### Day Eight
 
 - Practice, Practice, Practice
 
-Assignment: Shopping Front End
+##### Today's work
+
+- Assignment: [Shopping Front End](../react-ii/react-ii/assignments/store-front)
 
