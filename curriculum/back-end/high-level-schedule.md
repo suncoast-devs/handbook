@@ -5,7 +5,7 @@ draft: true
 
 # Week 8
 
-Week Goal: Build an API in a language that has no database, but does stuff in memory
+Week Goal: Learn your new
 
 ## Daily breakdown
 
@@ -15,14 +15,48 @@ Lecture:
     - Intro to Back end language, 
     - Dev env setup, 
 Homework:
-    - Explain technical idea to some one non-technical
+    - Explain technical idea to some one non-technical (blog)
     - Create a simple Console program to prove env is set up
 ### Day 2
 Lecture: 
-    - Practice back-end language
+    - Practice back-end language 
     - Deeper dive into the language
+    - OOP
 Homework:
-    - create a non trivial console program that will converted to an API in the near future
+    - Koans
+### Day 3
+Lecture: 
+    - Intro to Databases
+    - Set up Dev ENV
+Homework:
+    - Create a database, and write SQL queries against it
+### Day 4
+Lecture: 
+    - Data Modeling, Joins, FK
+Homework:
+    - Create a complex database
+    - Work on HTML & database schema for final project
+
+
+
+# Week 9
+
+Week Goal: Build a RESTful API that is backed by an ORM and a database
+
+
+## Daily breakdown
+
+### Day 1
+Lecture: 
+    - What is an ORM
+    - How to use an ORM to query a database 
+Homework:
+    - Create a API that queries the simple database they made Day 1
+### Day 2
+Lecture: 
+    - Full fledge API, ORM and Database
+Homework:
+    - Create a fully RESTful API. 
 ### Day 3
 Lecture: 
     - Intro to APIs
@@ -35,37 +69,6 @@ Lecture:
 Homework:
     - Create an Crud API
         - adventure, hook up a front end 
-
-
-# Week 9
-
-Week Goal: Build a RESTful API that is backed by an ORM and a database
-
-
-## Daily breakdown
-
-### Day 1
-Lecture: 
-    - Intro to Databases
-    - Set up Dev ENV
-Homework:
-    - Create a database, and write SQL queries against it
-### Day 2
-Lecture: 
-    - Data Modeling, Joins, FK
-Homework:
-    - Create a complex database
-### Day 3
-Lecture: 
-    - What is an ORM
-    - How to use an ORM to query a database 
-Homework:
-    - Create a API that queries the simple database they made Day 1
-### Day 4
-Lecture: 
-    - Full fledge API, ORM and Database
-Homework:
-    - Create a fully RESTful API. 
 
 
 # Week 10
