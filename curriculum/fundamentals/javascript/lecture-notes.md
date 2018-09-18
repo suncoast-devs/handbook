@@ -3,139 +3,18 @@ title: Making Web Pages Come Alive
 draft: true
 ---
 
-# Day 1
+# [Day 1 - Introduction to JS](../lectures/day-01)
 
----
+# [Day 2 - Adding/modifying the DOM](../lectures/day-02)
 
-## Introduction to JS
+# [Day 3 - Objects](../lectures/day-03)
 
-### What is JS
+# [Day 4 - Breaking down problems](../lectures/day-04)
 
-### How does this compare to what we know
+# [Day 5 - Blackjack Review + Array Enumeration](../lectures/day-05)
 
-- Discuss how a program gets run
+# [Day 6 - Fetching Data From Remote Servers](../lectures/day-06)
 
-### How to run JS in Browser
+# [Day 7 - Abstraction and Reuse](../lectures/day-07)
 
-- script tag
-- file
-
-## Basic JS topics
-
-### Console
-
-- .log
-
-### Varibles
-
-- let & const
-- warn about var
-- basic scoping
-
-### "types"
-
-- numbers
-
-  - basic math
-
-- strings
-  - interpolation
-  - concat
-
-## functions
-
-- named
-- anonymous
-
-### Events
-
-- what is an event
-- listening for events
-- attaching code to events
-
-### What is the DOM
-
-- selectors
-  - querying selectors
-- Updating
-
-## DEMO: a simple "how many times have your clicked this button"
-
-# Day 2
-
----
-
-### Adding elements to the DOM
-
-### Modifying CSS
-
-- add class/style
-
-```
-var element = document.getElementById("div1");
-element.classList.add("otherclass");
-```
-
-remove
-
-```
-element.classList.remove("otherclass");
-```
-
-### Control Structures
-
-- if/else
-- boolean Logic
-- switch
-
-### Arrays
-
-## Loops
-
-## DEMO: Action Plates
-
-# Day 3
-
-## Objects
-
-## PEDAC
-
-## Demo - 50/50 System
-
-# Day 4
-
-### Practice and problem solving, padding for anythign we didnt cover for blackjack
-
-### Breaking down a problem
-
-# Day 5 (Monday)
-
-### Black Jack Questions
-
-### Map, Reduce, Filter
-
-#### HW: Blog
-
-# Day 6
-
-### AJAX
-
-### Local Storage
-
-### Git
-
-#### HW: Weather Site
-
-# Day 7
-
-### Abstraction & Re-use
-
-### Objects
-
-#### HW: Abtract the Weather Site
-
-# Day 8
-
-### Event Loop
-
-#### HW: Go back and attempt a mode you didnt get to
+# [Day 8 - Event Loop](../lectures/day-08)
