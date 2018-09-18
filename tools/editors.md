@@ -50,6 +50,17 @@ Redefined._
 
 If you sure you are going to be choosing the `C#/.net` path in the backend frameworks section _OR_ you are a _Windows_ user, we recommend choosing _Visual Studio Code_
 
+_Plugins we recommend to start with (some of these are installed by default)_
+
+- Code Spell Checker
+- ESLint
+- Gitignore Template
+- HTML CSS Support
+- JS JSX Snippets
+- Markdown Preview Github
+- open-in-browser
+- Rainbow Brackets
+
 ### Sublime Text
 
 ### vim
