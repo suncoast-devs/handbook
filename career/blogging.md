@@ -26,4 +26,6 @@ draft: true
 
 ## Share it far and wide
 
+[Blogging is the New Resume](./assets/blogging-is-the-new-resume.pdf)
+
 [Access the slide presentation](./assets/blogging.pdf)
