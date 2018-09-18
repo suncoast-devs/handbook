@@ -3,7 +3,7 @@ title: Career Support
 draft: true
 ---
 
-## [1. Branding yourself](.career/branding-yourself)
+## [1. Branding yourself](./branding-yourself)
 
 ## [2. Blogging](./blogging)
 
