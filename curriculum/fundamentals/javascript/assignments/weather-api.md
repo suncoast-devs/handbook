@@ -14,6 +14,15 @@ Using a popular weather API, Create a web site that allows a user to search for 
 
 - Using `openweathermap.org`, create a simple UI that allows a user to search for the current weather by zip code or city.
 
+### SIGN UP!
+
+- [ ] Visit `openweathermap.org` and signup for an account
+- [ ] Visit `API Keys` in your dashboard
+- [ ] Copy your API key
+- [ ] You can use the API key in any of the URLs by appending `appid=KEY`
+  - Example: from the docs `https://api.openweathermap.org/data/2.5/weather?q=Tampa` becomes `https://api.openweathermap.org/data/2.5/weather?q=Tampa&cbb5b6537cd4a6eccd9aee04ffffffff`
+  - NOTE: It will take about 10 to 30 minutes for your API key to be active
+
 ### Explorer Mode
 
 - [ ] Create a simple HTML page that has a text box and a search `button`
