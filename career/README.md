@@ -3,15 +3,23 @@ title: Career Support
 draft: true
 ---
 
-## [Branding yourself](./branding-yourself)
+## [1. Branding yourself](.career/branding-yourself)
 
-## [Blogging](./blogging)
+## [2. Blogging](./blogging)
 
-## [Trello](/.trello)
+## [3. Trello](./trello)
 
-## [Preparing for Interviews](./interviews)
+## [4. Decoding Job Descriptions](./decoding-job-descriptions)
 
-Notes for junior developers on how to prepare for job interviews.
+## [5. Cover Letters](./cover-letters)
+
+## [6. Diversity & Inclusion](./diversity-inclusion)
+
+## [7. Portfolios](./portfolios)
+
+## [8. Preparing for Interviews](./interviews)
+
+--
 
 ## [The Care and Feeding of Junior Developers](./mentorship)
 
