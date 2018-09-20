@@ -115,6 +115,8 @@ With this we will have styled all the `<em>` tags on the page.
 
 ## Linking to External Resources
 
+- Cool game to learn CSS selectors: https://flukeout.github.io/
+
 ### Stylesheets
 
 ### Images
