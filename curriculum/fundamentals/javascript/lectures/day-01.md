@@ -39,12 +39,13 @@ draft: true
 - [let](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let) & [const](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const)
 - warn about var
 - basic scoping
-- [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) 
+- [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
   - ordered list of collection of data
   - index starts at `0`
   - values are separated by commas
   - different types of values can be mixed in an array
-  - use push to add to an array pop will remove the last index of an array
+  - use `push` to add a value to an array 
+  - use `pop` to remove the last index of an array
 
 
 ### "types"
