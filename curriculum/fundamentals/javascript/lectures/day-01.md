@@ -5,38 +5,83 @@ draft: true
 
 ## Introduction to JS
 
-### What is JS
+### [What is JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
+- Designed by Brendan Eich
 
 ### How does this compare to what we know
 
-- Discuss how a program gets run
+- There are 3 ways to run JS
+  - Browser based JS: Loaded into a browser (Primarily what we are referring to)
+  - Backend JS: JS that runs on Backend such as Node
+  - JS that runs on the computer such as code that is powering app-app
 
 ### How to run JS in Browser
 
-- script tag
-- file
+- HTML script tag
+- file: Link to separate JS file
 
 ## Basic JS topics
+
+- Google Chrome Tool -- `inspect`
+  - console tab: You can type live JS code into a browser and the browser executes
+  - source tab
 
 ### Console
 
 - .log
+  ```
+  console.log('Hello World')
 
-### Varibles
+  ```
 
-- let & const
+### Variables
+
+- let & const: `let` allows to change variables and `const` does not
 - warn about var
 - basic scoping
 
-### "types"
+### Variable types
 
 - numbers
-
   - basic math
 
 - strings
-  - interpolation
-  - concat
+  - use either single or double quote: `'string of characters'` or `"string of characters"`
+  - concat: strings and numbers can be concatenated together in JS
+    ```
+    let name = "Gavin"
+    let favoriteNumber = 42
+    let sentence = name + ' favorite number is ' + favoriteNumber
+    sentence
+    -> "Gavin favorite number is 42"
+    ```
+  - use escape character - backslash `\` to use a single quote inside of singe quotes `''` or use double quotes
+
+      ```
+      let sentence = name + '\'s favorite number is ' + favoriteNumber
+      newSentence
+      -> "Gavin's favoriteNumber is 42"
+      ```
+      or
+      ```
+      let sentence = name + "'s favorite number is " + favoriteNumber
+      newSentence
+      -> "Gavin's favoriteNumber is 42"
+      ```
+
+- interpolation
+    - use of backquote ` `` `: What is inside of `${}` within backquote gets evaluated
+
+      ```
+      let newSentence = `${name} favoriteNumber is ${favoriteNumber}`
+      newSentence
+      -> "Gavin favoriteNumber is 42"
+      ```
+      ```
+      let newSentence = `${name} favoriteNumber is ${favoriteNumber * 2} or ${favoriteNumber * 3}`
+      newSentence
+      -> "Gavin favoriteNumber is 84 or 14"
+      ```
 
 ## functions
 
@@ -56,4 +101,3 @@ draft: true
 - Updating
 
 ## DEMO: a simple "how many times have your clicked this button"
-
