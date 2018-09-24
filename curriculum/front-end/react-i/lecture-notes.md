@@ -20,7 +20,7 @@ draft: true
 
 ---
 
-# [Day 1 - Hello, react](./lectures/day-01)
+# [Day 1 - Hello, react](../lectures/day-01)
 
 ---
 
