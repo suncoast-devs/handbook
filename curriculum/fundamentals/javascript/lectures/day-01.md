@@ -3,7 +3,7 @@ title: Introduction to JS
 draft: true
 ---
 
-## Introduction to JS
+## [Introduction to JS](https://www.youtube.com/watch?v=Z-Q_c2wg2w8&t=2651s&list=PLWwthP6_aKmdxLKyXwDh0XXEgsWarTEpI&index=7)
 
 ### [What is JS](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
 - Designed by Brendan Eich
@@ -40,13 +40,30 @@ draft: true
 - warn about var
 - basic scoping
 - [array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)
+  (approx 00:35:20)
   - ordered list of collection of data
   - index starts at `0`
   - values are separated by commas
   - different types of values can be mixed in an array
-  - use `push` to add a value to an array 
+  - use `push` to add a value to an array
   - use `pop` to remove the last index of an array
+  - use `shift` to remove the first index of an array
 
+  ```
+  let instructors = ["Jason", "Toni", "Gavin", "Mark"]
+  instructors.push("Joebob")
+  instructors
+  ["Jason", "Toni", "Gavin", "Mark", "Joebob"]
+
+  instructors.pop()
+  instructors
+  ["Jason", "Toni", "Gavin", "Mark"]
+
+  instructors.shift()
+  instructors
+  ["Toni", "Gavin", "Mark"]
+
+  ```
 
 ### "types"
 
@@ -102,10 +119,36 @@ draft: true
 - listening for events
 - attaching code to events
 
-### What is the DOM
-
+### What is the DOM (Document Object Model)
+(approx 00:45:00)
+- DOM: Browser's representation of your webpage in memory
+- document - variable that is given by web page browser's JavaScript environment
 - selectors
   - querying selectors
-- Updating
+
+        ```
+        document.querySelector('hi')
+        -> <h1>Hello World</h1>
+        ```
+      - selects the very first `h1` element from document and returns it
+
+        ```
+        let header = document.querySelector('h1')
+        header
+        -> <h1>Hello World</h1>
+        ```
+        - given that there are 3 `hi` elements in the example document, to select all the `h1` elements from document
+
+        ```
+        let allOurFirstDOM = document.querySelectorAll('hi')
+        allOurFirstDOM
+        -> NodeList(3) [h1,h1,h1]
+        ```
+      [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) is an array like list that browser gives us to represent collection of nodes.
+
+        - querySelector only select elements what are above script tag -`<script></script>`
+
+- Updating (approx 00:53:00)
+
 
 ## DEMO: a simple "how many times have your clicked this button"
