@@ -184,6 +184,7 @@ draft: true
     -> Howdy, Gavin
     ```
   - anonymous
+    -  functions that are dynamically declared at runtime. They're called anonymous functions because they aren't given a name in the same way as normal functions
 
 
 ### Events

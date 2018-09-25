@@ -15,60 +15,60 @@ draft: true
 
 - if/else
 
-    ```
-    let isMyFavorite = (number) => {
-      if (number === 42) {
-        console.log('It is my favorite number')
-      } else {
-        console.log('This is not my favorite number')
-      }
-    }
+```
+let isMyFavorite = (number) => {
+  if (number === 42) {
+    console.log('It is my favorite number')
+  } else {
+    console.log('This is not my favorite number')
+  }
+}
 
-    isMyFavorite(1)
-     -> This is not my favorite number
+isMyFavorite(1)
+ -> This is not my favorite number
 
-    isMyFavorite(42)
-    -> It is my favorite number
+isMyFavorite(42)
+-> It is my favorite number
 
-    ```
+```
 
 - use of double pipe operator `||` (or)
 
-    ```
-    let isAnInstructorLong = (nameOfPerson) => {
-      if (nameOfPerson === 'Gavin') {
-        console.log('Yup!')
-      }
-      if (nameOfPerson === 'Jason') {
-        console.log('Yup!')
-      }
-      if (nameOfPerson === 'Mark') {
-        console.log('Yup!')
-      }
+```
+let isAnInstructorLong = (nameOfPerson) => {
+  if (nameOfPerson === 'Gavin') {
+    console.log('Yup!')
+  }
+  if (nameOfPerson === 'Jason') {
+    console.log('Yup!')
+  }
+  if (nameOfPerson === 'Mark') {
+    console.log('Yup!')
+  }
+}
+
+// Shorter way to write using `||`
+// if nameOfPerson is Gavin or Jason or Mark return 'Yup!'
+
+let isAnInstructorLong = (nameOfPerson) => {
+    if (nameOfPerson === 'Gavin' || nameOfPerson === 'Jason' || nameOfPerson === 'Mark') {
+      console.log('Yup!')
     }
+}    
 
-    // Shorter way to write using `||`
-    // if nameOfPerson is Gavin or Jason or Mark return 'Yup!'
+isAnInstructor('Mark')
+-> Yup
 
-    let isAnInstructorLong = (nameOfPerson) => {
-        if (nameOfPerson === 'Gavin' || nameOfPerson === 'Jason' || nameOfPerson === 'Mark') {
-          console.log('Yup!')
-        }
-    }    
+isAnInstructor('Joe')
+-> undefined
 
-    isAnInstructor('Mark')
-    -> Yup
+isAnInstructor('Gavin', 'Jason')
+-> Yup
 
-    isAnInstructor('Joe')
-    -> undefined
+isAnInstructor('Bob', 'Jason')
+-> undefined
 
-    isAnInstructor('Gavin', 'Jason')
-    -> Yup
-
-    isAnInstructor('Bob', 'Jason')
-    -> undefined
-
-    ```
+```
 
 - boolean Logic
 - switch
@@ -89,10 +89,39 @@ element.classList.remove("otherclass");
 ```
 
 
-
 ### Arrays
 (approx 00:45:40)
 
-## Loops
+### functions
+- anonymous function (approx 00:52:00)
+  -  functions that are dynamically declared at runtime. They're called anonymous functions because they aren't given a name in the same way as normal functions
+
+```
+let scores = [42, 100, 90]
+// named function
+const printScore = (scoreNumber) => {
+  console.log(`The score is ${scoreNumber}`
+}
+
+  scores.forEach(printScore)
+->  The score is 42
+->  The score is 100
+->  The score is 98
+
+// no name function - anonymous function
+// when function does not need to be stored and reused
+scores.forEach( (scoreNumber) => {
+  console.log(`The score is here: ${scoreNumber}`)
+  })
+
+  The score is here: 42
+  The score is here: 100
+  The score is here: 98
+
+```
+
+## [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
+(approx 1:00:00 && continued from above)
+
 
 ## DEMO: Action Plates
