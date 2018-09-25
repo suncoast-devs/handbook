@@ -158,9 +158,7 @@ VS Code is a extendable lightweight editor that allows us to see what is going o
 
 #### How
 
-Download here:
-
-(https://code.visualstudio.com/)[https://code.visualstudio.com/]
+Download here: [https://code.visualstudio.com](https://code.visualstudio.com)
 
 ### Atom
 
