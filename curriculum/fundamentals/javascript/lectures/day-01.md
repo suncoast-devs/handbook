@@ -108,12 +108,6 @@ draft: true
       -> "Gavin favoriteNumber is 84 or 14"
       ```
 
-### Events
-
-- what is an event
-- listening for events
-- attaching code to events
-
 ### What is the DOM (Document Object Model)
 (approx 00:45:00)
 - DOM: Browser's representation of your webpage in memory
@@ -143,7 +137,7 @@ draft: true
 
         - querySelector only select elements what are above script tag -`<script></script>`
         - JS script tag is normally placed at the bottom of a page
-        - When page loads, it will stop once it reaches JS
+        - When page loads, it will stop once it reaches JS (unless DOMContentLoaded is added in JS event listener)
 
 - Updating (approx 00:53:00)
 
@@ -189,8 +183,26 @@ draft: true
     greetFunction('Gavin', 'Howdy')
     -> Howdy, Gavin
     ```
-
-
   - anonymous
 
+
+### Events
+(approx 1:10:40)
+  - JS and DOM are event based world where we are waiting for events to happen and we react to them
+  - [what is an event](https://developer.mozilla.org/en-US/docs/web/events)
+  - In JS we can pass around functions to other functions
+  - listening for events
+  - attaching code to events
+
+  ```
+    const main = () => {
+      document.querySelector('h1').textContent += '?'
+    }
+
+    // when DOMContentLoaded happens, call main
+    document.addEventListener('DOMContentLoaded' , main)
+
+  ```
+
 ## DEMO: a simple "how many times have your clicked this button"
+(approx 1:35:00)
