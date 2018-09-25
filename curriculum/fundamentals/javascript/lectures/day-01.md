@@ -108,11 +108,6 @@ draft: true
       -> "Gavin favoriteNumber is 84 or 14"
       ```
 
-## functions
-
-- named
-- anonymous
-
 ### Events
 
 - what is an event
@@ -147,8 +142,55 @@ draft: true
       [`NodeList`](https://developer.mozilla.org/en-US/docs/Web/API/NodeList) is an array like list that browser gives us to represent collection of nodes.
 
         - querySelector only select elements what are above script tag -`<script></script>`
+        - JS script tag is normally placed at the bottom of a page
+        - When page loads, it will stop once it reaches JS
 
 - Updating (approx 00:53:00)
 
+
+## functions
+(approx 1:00:00)
+  - data + behavior(actions taken on data) = programming
+  - functions are just variables whose value is the code to execute when you call that function
+  - named
+
+    ```
+    function greet(nameOfPerson) {
+      console.log('Hello ${nameOfPerson}')
+    }
+
+    greet()
+    -> Hello undefined
+
+    greet('Gavin')
+    -> Hello Gavin
+
+    name = 'Gavin'
+    greet(name)
+    -> Hello Gavin
+
+    name = 'Gavin'
+    greet(name + !!!!)
+    -> Hello Gavin!!!!
+
+    function greet(nameOfPerson, greeting) {
+      console.log(`${greeting}, ${nameOfPerson}`)
+    }
+    greetFunction('Gavin', 'Howdy')
+    -> Howdy, Gavin
+    ```
+    Another way to write function using `arrow function` (newer way in ES6)
+
+    ```
+    let greetFunction = (nameOfPerson, greeting) => {
+      console.log(`${greeting}, ${nameOfPerson}`)
+    }
+
+    greetFunction('Gavin', 'Howdy')
+    -> Howdy, Gavin
+    ```
+
+
+  - anonymous
 
 ## DEMO: a simple "how many times have your clicked this button"
