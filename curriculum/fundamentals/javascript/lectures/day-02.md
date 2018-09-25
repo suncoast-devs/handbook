@@ -5,6 +5,10 @@ draft: true
 
 ### Adding elements to the DOM
 
+### Questions
+- console.log
+  - They are useful for checking things. The quicker you check your assumptions, the easier it is to fix your mistakes.
+  - They can be taken out before you deploy/submit code
 ### Modifying CSS
 
 - add class/style
@@ -31,4 +35,3 @@ element.classList.remove("otherclass");
 ## Loops
 
 ## DEMO: Action Plates
-
