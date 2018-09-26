@@ -24,16 +24,7 @@ draft: true
 
 ---
 
-
-#### Day Two
-
-- Images and other assets (import)
-- State
-
-##### Today's work
-- Demo: Convert Weather API to React
-- Assignment: [Crypto Ticker](../assignments/crypto-ticker)
-
+# [Day 2 - Images/Assets and State](../lectures/day-02)
 
 ---
 
