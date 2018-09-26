@@ -43,7 +43,6 @@ We are taking a surprise trip to the Savannah for a safari to see all sorts of e
 
 ## Additional Resources
 
-
 ### .NET 
 
 Here are the interesting commands you will need for tonights assignment
