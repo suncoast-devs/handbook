@@ -28,15 +28,7 @@ draft: true
 
 ---
 
-
-#### Day Three
-
-- User Events, react lifecycle
-
-##### Today's work
-
-- Demo: Convert Score Board
-- Assignment: [Color Picker](../assignments/color-picker)
+# [Day 3 - React User Events and Lifecycle](../lectures/day-03)
 
 
 ---
