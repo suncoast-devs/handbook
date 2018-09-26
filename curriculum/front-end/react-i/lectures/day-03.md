@@ -13,7 +13,7 @@ draft: true
 
 HTML:
 ```html
-<button onClick={this.handleButtonClick} >Click me!</button>
+<button class='my-rad-button'>Click me!</button>
 ```
 
 JS:
