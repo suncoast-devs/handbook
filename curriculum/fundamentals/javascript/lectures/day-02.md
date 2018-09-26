@@ -123,5 +123,150 @@ scores.forEach( (scoreNumber) => {
 ## [Loops](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
 (approx 1:00:00 && continued from above)
 
+- for statement
+
+```
+//  for (initializer; when should loop stop; what should be done in each step of 'for' loop)
+    for (let number = 1; number <= 52; number += 1) {
+      console.log(`The number is ${number}`)
+    }
+
+-> The number is 1
+-> The number is 2
+-> The number is 3
+.
+.
+.
+-> The number is 52
+// once number reaches number <= 52, loop ends and exits
+
+```
+
+- [cohort-xi/week-02/day-3/for-loops/public/main.js](https://github.com/suncoast-devs/cohort-xi/tree/master/week-02/day-3/for-loops/public)
+  (apptox 1:07:26)
+    ```
+    const outputAnInstructor = instructorListItem => {
+    console.log('It works using forEach and a named function', instructorListItem)
+    instructorListItem.textContent += '!'
+    }
+
+    const main = () => {
+      const instructors = document.querySelectorAll('li')
+
+    // looping through all the elements we got back from querySelectorAll    
+       for (let index = 0; index < instructors.length; index += 1) {
+          console.log('It works using a for loop', instructors[index])
+          instructors[index].textContent += '?'
+       }
+
+        instructors.forEach(
+        /*
+        The next thing here is an anonymous function.
+        It works the same way as outputAnInstructor except
+        we don't have to make a variable to store the function
+        */
+        instructorListItem => {
+          console.log(
+            'It works using forEach and an anonymous function',
+            instructorListItem
+          )
+          instructorListItem.textContent += '~'
+        }
+        /*
+          The function is above
+        */
+      )
+
+      instructors.forEach(outputAnInstructor)
+
+      // What Javascript is doing for us (longhand)
+      // let index = 0
+      //
+      // if (index < instructors.length) {
+      //   console.log('It works!', instructors[index])
+      // }
+      //
+      // index += 1
+      //
+      // if (index < instructors.length) {
+      //   console.log('It works!', instructors[index])
+      // }
+      //
+      // index += 1
+      //
+      // if (index < instructors.length) {
+      //   console.log('It works!', instructors[index])
+      // }
+      //
+      // index += 1
+      //
+      // if (index < instructors.length) {
+      //   console.log('It works!', instructors[index])
+      // }
+    }
+
+    document.addEventListener('DOMContentLoaded', main)
+    ```
+### modifying the DOM
+  - [code reference](https://github.com/suncoast-devs/cohort-xi/tree/master/week-02/day-3/modify-the-dom)
+    (approx 1:32:20)
+    - [classList](http://devdocs.io/dom/element/classlist)
+    - Make a button to hide/show the list
+      - Chrome Dev tool saves the most recent selection in $0 and Your second-most-recent is $1, and so on, up through $4.
+
+    - index.html
+
+    ```
+    <!DOCTYPE html>
+    <html>
+      <head lang="en">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Modify The Dom</title>
+        <link rel="stylesheet" href="/screen.css">
+      </head>
+      <body>
+        <h1>Hello, World!</h1>
+        <button>Toggle</button>
+        <ul>
+          <li>Gavin</li>
+          <li>Jason</li>
+          <li>Toni</li>
+        </ul>
+        <script src="/main.js" charset="utf-8"></script>
+      </body>
+    </html>
+
+    ```
+
+  - main.js
+
+    ```
+    const main = () => {
+    // find the first button and save as button
+      let button = document.querySelector('button')
+
+    // Once the button is clicked
+      button.addEventListener('click', event => {
+
+    // find the 'ul' and store the variable in unorderdList
+        let unorderdList = document.querySelector('ul')
+        
+    // toggle(classList method) the classList'hidden', to unorderdList
+        unorderdList.classList.toggle('hidden')
+
+        })
+    }
+
+    // Same thing as a one-liner
+    const mainAsOneLiner = () => {
+      document.querySelector('button').addEventListener('click', event => {
+        document.querySelector('ul').classList.toggle('hidden')
+      })
+    }
+
+    document.addEventListener('DOMContentLoaded', main)
+
+    ```
 
 ## DEMO: Action Plates
