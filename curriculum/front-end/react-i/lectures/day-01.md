@@ -26,7 +26,8 @@ draft: true
   - DOM element can have as many children as it wants
 - `import React, { Component } from "react";` this boilerplate almost always goes on top of every react component
 
-- [react-article](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
+- [react-article-demo](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
+  (approx 00:39:35)
 
   ```
   // all the files needed need to be imported
@@ -58,10 +59,11 @@ draft: true
   export default App;
 
   ```
-- to add class, use `className`  
+- to add class, use `className` (approx 01:05:20)  
   - `<div className="all-main-content"> ... </div>`  
 
-- using Props
+- [Props](https://reactjs.org/docs/components-and-props.html)
+  (approx 01:12:10)
 
   ```
   import React, { Component } from "react";
@@ -101,28 +103,31 @@ draft: true
     - `this.props.content` will render out each content property in Articles component as `this.props.title` did with title property
     - You can create unlimited different articles using Article component
 
-  ```
-  import React, { Component } from "react";
+    ```
+    import React, { Component } from "react";
 
-  class Article extends Component {
-    render() {
-      console.log(this.props);
+    class Article extends Component {
+      render() {
+        console.log(this.props);
 
-      return (
-        <article className="intro-article">
-          <h2 className="article-title">{this.props.title}</h2>
-          <p>{this.props.content}</p>
-          <a className="read-more" href="#">
-            read more about {this.props.title}
-          </a>
-          <div className="read-more-underline" />
-        </article>
-      );
+        return (
+          <article className="intro-article">
+            <h2 className="article-title">{this.props.title}</h2>
+            <p>{this.props.content}</p>
+            <a className="read-more" href="#">
+              read more about {this.props.title}
+            </a>
+            <div className="read-more-underline" />
+          </article>
+        );
+      }
     }
-  }
 
-  export default Article;
-  ```
+    export default Article;
+    ```
+- importing Props data from somewhere else
+  (approx 01:24:00)
+
 
 ##### Today's work
 
