@@ -128,7 +128,116 @@ draft: true
 - importing Props data from somewhere else
   (approx 01:24:00)
 
+  ```
+  import React, { Component } from "react";
+  import Article from "./Article";
 
+  class Articles extends Component {
+    render() {
+      const data = [
+        {
+          title: "Gavin can't spell Article",
+          content:
+             "Gavin can't type on a Monday . That's why. He went to a party last night"
+        },
+        {
+          title: "What is wrong with Gavin",
+          content: "Gavin cis tired this morning"
+        }
+      ];
+
+      // use map to iterate through each data
+      return (
+        <div className="all-main-content">
+          <main>
+            {data.map(element => {
+              return <Article title={element.title} content={content.title} />}
+              })}
+          </main>
+        </div>
+      );
+    }
+  }
+
+  export default Articles;
+  ```
+
+- [Array.map] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview) review (approx 1:32:25)
+  - The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+
+  ```
+    data = [
+      {
+        title: "Gavin can't spell Article",
+        content:
+           "Gavin can't type on a Monday . That's why."
+      },
+      {
+        title: "What is wrong with Gavin",
+        content: "Gavin is tired this morning"
+      }
+    ]
+
+    // element can be replaced with any string
+
+    data.map(element => {
+      return `Hello ${element.title} your content is ${element.content}`
+      })
+
+    // element -> tacoTuesday
+    data.map(tacoTuesday => {
+      return `Hello ${tacoTuesday.title} your content is ${tacoTuesday.content}`
+      })  
+
+    // Both will return the same thing  
+
+  -> ['Hello Gavin can\'t spell Article your content is Gavin can\'t type on a Monday. That's why',
+      'Hello What is wrong with Gavin your content is Gavin is tired this morning']
+  ```
+
+- eventually `Articles.js` code will look like this
+
+  ```
+  import React, { Component } from "react";
+  import Article from "./Article";
+
+  class Articles extends Component {
+    render() {
+      const data = [
+        {
+          title: "Gavin can't spell Article",
+          content:
+             "Gavin can't type on a Monday . That's why. He went to a party last night"
+        },
+        {
+          title: "What is wrong with Gavin",
+          content: "Gavin cis tired this morning"
+        }
+      ];
+
+      // save new array in a variable and just refer to it in a DOM
+      // (approx 1:39:10)
+      const articles = data.map(element => {
+        return <Article title={element.title} content={content.title} />;
+      });
+
+      return (
+        <div className="all-main-content">
+          <main>
+            {articles}
+          </main>
+        </div>
+      );
+    }
+  }
+
+  export default Articles;
+  ```
+#### React is declarative  
+  (approx 1:42:00)
+  - React is declarative  functional reactive style programming
+      - Page will `react` to the data
+      
 ##### Today's work
 
 - Class Demo: Adventure Time (Basic)
