@@ -6,7 +6,7 @@ draft: true
 #### Day One - Hello, react
 
 - react name origin: reacts to its environment
-- create-react-app
+- create-react-app (ADD TIME)
   - tool built by developers at Facebook to help you build React applications.
   - It saves you from time-consuming setup and configuration. Simply run create-react-app command to create and start a new react project.
   - `create-react=app name-of-your-app`
@@ -22,6 +22,107 @@ draft: true
   - attribute of a component
   - Most components can be customized when they are created, with different parameters. These creation parameters are called props.
 - Rendering multiple components (i.e. map)
+  - render method renders only one DOM element
+  - DOM element can have as many children as it wants
+- `import React, { Component } from "react";` this boilerplate almost always goes on top of every react component
+
+- [react-article](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
+
+  ```
+  // all the files needed need to be imported
+  import React, { Component } from "react";
+  import "./App.css";
+  // import Header component from Header.js in current directory ("./" => current directory)
+  import Header from "./Header"
+  // import Header component from Articles.js in current directory
+  import Header from "./Articles"
+  // import Header component from Footer.js in current directory
+  import Header from "./Footer"
+
+  class App extends Component {
+    render() {
+      return (
+        // DOM element
+        <div>
+         // children components of DOM element
+         // these components need to exist, either within the same page or as separate files and imported to the page
+          <Header />
+          <Articles />
+          <Footer/>  
+        </div>
+        )
+    }
+  }
+
+  // component needs to be exported so it can be available for other components to import
+  export default App;
+
+  ```
+- to add class, use `className`  
+  - `<div className="all-main-content"> ... </div>`  
+
+- using Props
+
+  ```
+  import React, { Component } from "react";
+  // import Article component from Article in current directory
+  import Article from "./Article";
+
+  class Articles extends Component {
+    render() {
+      return (
+        <div className="all-main-content">
+          <main>
+            <Article
+              title="Gavin can't spell Artclie"
+              content="Gavin can't type on a monday. Thats why. He also went to a party last night"
+            />
+            <Article
+              title="What is wrong with Gavin"
+              content="Gavin is tired this morning"
+            />
+            <Article
+              title="Sending Gavin back to school"
+              content="If you pay, he will go"
+            />
+            <Article title="React is cool" content="Hell yeah it is" />
+          </main>
+        </div>
+      );
+    }
+  }
+
+  export default Articles;
+
+  ```
+  - Article.js
+
+    - `this.props.title` will render out each title property in Articles component  ("Gavin can't spell Article", "What is wrong with Gavin", "Sending Gavin back to school", "React is cool" )
+    - `this.props.content` will render out each content property in Articles component as `this.props.title` did with title property
+    - You can create unlimited different articles using Article component
+
+  ```
+  import React, { Component } from "react";
+
+  class Article extends Component {
+    render() {
+      console.log(this.props);
+
+      return (
+        <article className="intro-article">
+          <h2 className="article-title">{this.props.title}</h2>
+          <p>{this.props.content}</p>
+          <a className="read-more" href="#">
+            read more about {this.props.title}
+          </a>
+          <div className="read-more-underline" />
+        </article>
+      );
+    }
+  }
+
+  export default Article;
+  ```
 
 ##### Today's work
 
