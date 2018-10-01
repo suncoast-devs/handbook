@@ -67,6 +67,8 @@ class Deck extends React.Component
 
 ## Using state within a component
 
+- where there is `constructor(props)` there will be `super(props)`
+
 ```js
 class Person extends React.Component {
   constructor(props) {
@@ -123,6 +125,9 @@ class Person extends React.Component {
 
 # Basic Example
 
+- `setState()` update state after the initial state setup
+  - setState function in React works asynchronously
+
 ```js
 class Person extends Component{
   constructor(props){
@@ -145,6 +150,7 @@ class Person extends Component{
   }
 }
 ```
+
 
 ---
 

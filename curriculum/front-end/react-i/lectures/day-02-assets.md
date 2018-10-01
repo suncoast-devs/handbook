@@ -17,7 +17,9 @@ theme: Titillium, 8
 # Webpack is a tool for packaging assets
 
 - JavaScript
-- JSON
+- JSON (JavaScript Object Notation)
+  -  a lightweight data-interchange format, representing javascript object in text
+  -  It is easy for humans to read and write. It is easy for machines to parse and generate
 - Images
 - Fonts
 - CSS
