@@ -45,8 +45,7 @@ _How to [install plugins](https://flight-manual.atom.io/using-atom/sections/atom
 
 ### Visual Studio Code
 
-_Code editing.
-Redefined._
+_Code editing. Redefined._
 
 If you sure you are going to be choosing the `C#/.net` path in the backend frameworks section _OR_ you are a _Windows_ user, we recommend choosing _Visual Studio Code_
 
@@ -54,12 +53,27 @@ _Plugins we recommend to start with (some of these are installed by default)_
 
 - Code Spell Checker
 - ESLint
+- Prettier
 - Gitignore Template
 - HTML CSS Support
 - JS JSX Snippets
 - Markdown Preview Github
 - open-in-browser
 - Rainbow Brackets
+- Simple React Snippets
+
+_Settings we recommend to start with_
+
+Go to `Code` menu, then `Preferences`, then `Settings`
+- In the search bar enter `tab size`
+- Find the setting `Editor: Tab Size` and change this to `2`
+- In the search bar enter `formatOn`
+- Find the setting `Editor: Format on Save` and turn this *ON*
+- In the search bar enter `Prettier`
+- Find the setting `Prettier: Semi` and turn this *OFF*
+- Find the setting `Prettier: Single Quote` and turn this *ON*
+- Find the setting `Prettier: Use Tabs` and turn this *OFF*
+
 
 ### Sublime Text
 
