@@ -30,61 +30,23 @@ draft: true
 
 # [Day 3 - React User Events and Lifecycle](../lectures/day-03)
 
+---
+
+# [Day 4 - Model more complex ideas, really embracing component architecture](../lectures/day-04)
 
 ---
 
-
-#### Day Four
-
-- Model more complex ideas, really embracing component architecture
-
-##### Today's work
-
-- Group Demo: Minesweeper
-- Assignment: Memory Game
-- Assignment: [Minesweeper](../react-ii/react-ii/assignments/minesweeper)
-
+# [Day 5 - Practice, practice, practice](../lectures/day-05)
 
 ---
 
-
-#### Day Five
-
-- Practice, Practice, Practice
-
-##### Today's work
-
-- Group Demo: Memory Game continued
-- Assignment: [Write a Blog](../assignments/recovery-blog)
-
+# [Day 6 - Build One List User Interface](../lectures/day-06)
 
 ---
 
-
-#### Day Six
-
-- Koans in class together in gropus
-
-##### Today's work
-
-- Group Demo: Koans
-- Assignment: [Function-Junction](../../../fundamentals/javascript/assignments/function-junction)
-
+# [Day 7 - React Router](../lectures/day-07)
 
 ---
-
-
-#### Day Seven
-
-- React Router
-
-##### Today's work
-- Group Demo: Hotel explorer site
-- Assignment: Employee Directory
-
-
----
-
 
 #### Day Eight
 
