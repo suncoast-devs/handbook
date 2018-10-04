@@ -27,6 +27,7 @@ After completing this assignment, you should be able to:
 - [ ] All tests passing
 - [ ] No linter warnings
 - [ ] Turn in the homework using the URL to your repository on Github.
+- [ ] *CAUTION* One the test is broken. Your job is to update the test to pass.
 
 ### Adventure Mode
 
