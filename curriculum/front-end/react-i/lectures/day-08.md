@@ -9,5 +9,5 @@ draft: true
 
 ##### Today's work
 
-- Assignment: [Shopping Front End](../../react-ii/assignments/store-front)
+- Assignment: [Shopping Front End](../../../react-ii/assignments/store-front)
 
