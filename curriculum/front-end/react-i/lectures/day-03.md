@@ -27,7 +27,7 @@ document
     .addEventListener('click', handleButtonClick)
 ```
 
-- React way:
+React way:
 ```js
   handleButtonClick = (event) => {
     console.log("button was clicked")
@@ -61,4 +61,3 @@ document
 
 - Demo: Convert Score Board
 - Assignment: [Color Picker](../assignments/color-picker)
-
