@@ -48,11 +48,5 @@ draft: true
 
 ---
 
-#### Day Eight
-
-- Practice, Practice, Practice
-
-##### Today's work
-
-- Assignment: [Shopping Front End](../react-ii/react-ii/assignments/store-front)
+# [Day 8 - Practice, Practice, Practice](../lectures/day-08)
 
