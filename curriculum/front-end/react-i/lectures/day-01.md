@@ -142,7 +142,7 @@ draft: true
         },
         {
           title: "What is wrong with Gavin",
-          content: "Gavin cis tired this morning"
+          content: "Gavin is tired this morning"
         }
       ];
 
@@ -151,7 +151,7 @@ draft: true
         <div className="all-main-content">
           <main>
             {data.map(element => {
-              return <Article title={element.title} content={content.title} />}
+              return <Article title={element.title} content={element.content} />}
               })}
           </main>
         </div>
@@ -211,14 +211,14 @@ draft: true
         },
         {
           title: "What is wrong with Gavin",
-          content: "Gavin cis tired this morning"
+          content: "Gavin is tired this morning"
         }
       ];
 
       // save new array in a variable and just refer to it in a DOM
       // (approx 1:39:10)
       const articles = data.map(element => {
-        return <Article title={element.title} content={content.title} />;
+        return <Article title={element.title} content={element.content} />;
       });
 
       return (
