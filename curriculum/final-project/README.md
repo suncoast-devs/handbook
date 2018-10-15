@@ -1,5 +1,6 @@
 ---
-title: Capstone Projects
+title: Capstone Projects Rundown
+draft: true
 ---
 
 The goal of the capstone project is to show off what skills the students learned during their tenure at SDG.  The core idea should be a bigger than a weekend project, but the initial scope should be limited. 
