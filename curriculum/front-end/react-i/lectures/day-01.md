@@ -9,13 +9,13 @@ draft: true
 - create-react-app (ADD TIME)
   - tool built by developers at Facebook to help you build React applications.
   - It saves you from time-consuming setup and configuration. Simply run create-react-app command to create and start a new react project.
-  - `create-react=app name-of-your-app`
+  - `create-react-app name-of-your-app`
   - `yarn install` then `yarn start` since we are using `yarn` not `npm`
   - `localhost:3000` (browser)
 
 - [npm](https://www.npmjs.com/) vs [yarn](https://yarnpkg.com/en/)
   - both are package managers
-  - yarn is slightly better
+  - yarn is slightly better (for the moment)
 - [Components](https://reactjs.org/docs/glossary.html#components)
   - React components are small, reusable pieces of code that return a React element to be rendered to the page
 - Props
@@ -142,7 +142,7 @@ draft: true
         },
         {
           title: "What is wrong with Gavin",
-          content: "Gavin cis tired this morning"
+          content: "Gavin is tired this morning"
         }
       ];
 
@@ -151,7 +151,7 @@ draft: true
         <div className="all-main-content">
           <main>
             {data.map(element => {
-              return <Article title={element.title} content={content.title} />}
+              return <Article title={element.title} content={element.content} />}
               })}
           </main>
         </div>
@@ -211,14 +211,14 @@ draft: true
         },
         {
           title: "What is wrong with Gavin",
-          content: "Gavin cis tired this morning"
+          content: "Gavin is tired this morning"
         }
       ];
 
       // save new array in a variable and just refer to it in a DOM
       // (approx 1:39:10)
       const articles = data.map(element => {
-        return <Article title={element.title} content={content.title} />;
+        return <Article title={element.title} content={element.content} />;
       });
 
       return (
@@ -237,7 +237,7 @@ draft: true
   (approx 1:42:00)
   - React is declarative  functional reactive style programming
       - Page will `react` to the data
-      
+
 ##### Today's work
 
 - Class Demo: Adventure Time (Basic)
