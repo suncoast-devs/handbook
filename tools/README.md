@@ -3,33 +3,22 @@ title: Tools of the Trade
 draft: true
 ---
 
-- Assignments: There are no specific assignments for this topic, however our tools are used in _everything_ we will do going forward.
-- Warm-ups
-- [Lecture Notes](./lecture-notes)
+# Setting up the tools of our trade
 
-Also, this section has some info about how to manage your homework:
-
-- [Setup for Assignments](./assignment-setup)
-- [Turning In Assignments](./assignment-turn-in)
-
-## [How to Ask Questions](./asking-questions)
-
-Tips on asking questions, to your instructor, mentors, peers, the community, etc.
+There are a number of tools we will be using during your time at SDG. This guide covers setting these up, configuring them, and provides some links to help you learn to use them.
 
 ## [Setting up your Development Environment](./environment)
 
-Information about development environments that might not be specific to our curriculum.
+## [Setup for Working on Assignments](./assignment-setup)
 
-## [Your New Best Friend](./editors)
+## [Turning In Assignments](./assignment-turn-in)
 
-A survey of text editors and IDEs.
+# A survey of [text editors and IDEs](./editors)
 
-## [Version Control](./version-control)
+# Tips and tricks for the unix-style [command line](./command-line)
 
-## [Programming Languages](./languages)
+# Using [version control](./version-control) to keep track of our code
 
-A survey of modern programming languages, currently in mainstream use.
+# A survey of modern [programming languages](./languages), currently in mainstream use.
 
-## [Command Line](./command-line)
-
-Tips and tricks for the unix-style command line
+# Tips on [how to ask questions](./asking-questions), to your instructor, mentors, peers, the community, etc.

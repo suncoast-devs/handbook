@@ -11,12 +11,6 @@ First, ensure you have the [`app-app` generator](https://github.com/suncoast-dev
 npm install -g app-app
 ```
 
-Also, set up hub to use `HTTPS` rather than `SSH` for repositories:
-
-```sh
-git config --global hub.protocol https
-```
-
 Open your terminal, then create and change into your project directory:
 
 ```sh

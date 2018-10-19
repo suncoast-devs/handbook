@@ -10,13 +10,8 @@ Your homework will be assigned to you via `issues` on your `assignments` reposit
 almost every assignment going forward. Once you've completed at least _explorer_ mode and you're satisfied with your
 work, let's get it published. First let's get it up on GitHub.
 
-If you haven't already, create a local git repository for your project (**note**: the `app-app` generator will have done
-this for you):
-
-```sh
-cd ~/sdg/my-cool-project
-git init .
-```
+**NOTE** All the following commands are run from your terminal and _inside_ the project directory. You will need
+to `cd` into the directory where your project exists.
 
 Add all our work to git, and commit it:
 
@@ -25,7 +20,7 @@ git add .
 git commit -m "Hello, world."
 ```
 
-Feel free to replace _"Hello, world."_ with a more meaningful message, if you'd like.
+Please replace _"Hello, world."_ with a more meaningful message. It should try to capture what work you did.
 
 Push our local commits to GitHub:
 

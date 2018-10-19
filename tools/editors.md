@@ -49,6 +49,12 @@ _Code editing. Redefined._
 
 If you sure you are going to be choosing the `C#/.net` path in the backend frameworks section _OR_ you are a _Windows_ user, we recommend choosing _Visual Studio Code_
 
+_First time setup instructions_
+
+- Launch VS Code
+- Use `Command Shift P` (or `Control Shift P`) to launch the command palette
+- Type `command` to search for the entry `Shell Command: Install 'code' command in PATH` and press `ENTER`
+
 _Plugins we recommend to start with (some of these are installed by default)_
 
 - Code Spell Checker
