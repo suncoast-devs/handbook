@@ -3,18 +3,18 @@ title: Making Web Pages Come Alive
 draft: true
 ---
 
-# [Day 1 - Introduction to JS](../lectures/day-01)
+# [Introduction to JS](../lectures/introduction-to-js)
 
-# [Day 2 - Adding/modifying the DOM](../lectures/day-02)
+# [Adding/modifying the DOM](../lectures/modify-the-dom)
 
-# [Day 3 - Objects](../lectures/day-03)
+# [Objects](../lectures/objects)
 
-# [Day 4 - Breaking down problems](../lectures/day-04)
+# [Breaking down problems](../lectures/breaking-down-problems)
 
-# [Day 5 - Blackjack Review + Array Enumeration](../lectures/day-05)
+# [Blackjack Review + Array Enumeration](../lectures/enumeration)
 
-# [Day 6 - Fetching Data From Remote Servers](../lectures/day-06)
+# [Fetching Data From Remote Servers](../lectures/fetching-data)
 
-# [Day 7 - Abstraction and Reuse](../lectures/day-07)
+# [Abstraction and Reuse](../lectures/abstraction-and-reuse)
 
-# [Day 8 - Event Loop](../lectures/day-08)
+# [Event Loop](../lectures/event-loop)
