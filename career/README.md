@@ -19,6 +19,8 @@ draft: true
 
 ## [8. Preparing for Interviews](./interviews)
 
+## [9. Freelancing and How to get hired](./freelance)
+
 --
 
 ## [The Care and Feeding of Junior Developers](./mentorship)
