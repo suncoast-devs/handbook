@@ -1,7 +1,7 @@
---- 
+---
 title: Expanding Front End Frameworks - Vue
 draft: true
---- 
+---
 
 NOTE: This was a short week the first time around
 
@@ -10,7 +10,7 @@ Tuesday:
 Intro to Vue
 Vue-cli
 
-Hw:
+Homework:
 Scoreboard
 Start WireFrames (due end of week)
 
@@ -20,7 +20,7 @@ Vue & API
 Homework:
 an API project
 
-Thursday: 
+Thursday:
 ruby & .net
 
 Homework:
