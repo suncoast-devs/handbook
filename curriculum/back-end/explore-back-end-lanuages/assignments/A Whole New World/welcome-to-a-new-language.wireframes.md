@@ -31,24 +31,18 @@ You should already have Ruby installed.
 
 #### Simple Console Application 
 * [ ] Create a console application that guesses a number that a user has thought of ,between 1 and 100. This will use a [`binary search`](https://www.programmerinterview.com/index.php/puzzles/minimum-guesses-1-100/) to guess the correct number 
+
 * [ ] Here is the JavaScript, in browser, algorithm to follow. Make sure to understand this first before writing new code: [`https://codepen.io/ambethia/pen/KNewBb`](https://codepen.io/ambethia/pen/KNewBb). 
 **NOTE** You will be translating this from the event driven paradigm of HTML to the more procedural paradigm of a console application. 
 * [ ] For Explorer Mode, you do not have to put in menu or other user experience "nice to haves", focus on the just the core algorithm.
 
-#### Blog 
-* [ ] We have tackled front end development and are about to tackle a new language. You have grown as a developer and a person in the last 7 weeks. Create for me a blog post on medium on 1 of the following prompts
-
-- Pick 1 topic technically that we have learned and create a blog post explaining it to a non-technical person.
-
-- Blog about a struggle that you have encountered and overcome during your tenure here so far.
-
-- Pick a new technology that we haven't hit yet (or won't) and create a intro blog for that.
-
+#### Wireframes
+* [ ] Finish working on your wireframes and ironing out your idea. Work with your instructors and peers to work out the kinks. 
 
 
 ### Adventure Mode
 
-* [ ] Create a nice user experience. Include features such as 
+* [ ] Create a nice user experience for the number guesser. Include features such as 
 `Try again` and `Welcome, press enter to start`
 
 
