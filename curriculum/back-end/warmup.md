@@ -18,3 +18,9 @@ https://www.codewars.com/kata/exclamation-marks-series-number-3-remove-all-excla
 
 Day 3:
 Work through the Koans of your language
+
+Day 4: 
+Good Morning! Today’s warm up!
+ 
+```Do as many as you can 
+https://www.hackerrank.com/domains/sql```
