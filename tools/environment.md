@@ -63,6 +63,25 @@ Here [here](https://atom.io/) and follow the instructions.
 
 See setup instructions here under `Atom`: [Editors](./editors)
 
+## Editor Fonts
+
+### [Hack](https://sourcefoundry.org/hack/)
+
+> A typeface designed for source code
+
+#### Mac Setup
+- `brew cask install caskroom/fonts/font-hack`
+
+#### Windows Setup
+- See the [setup instructions](https://github.com/source-foundry/Hack#windows)
+
+#### Editor Setup
+
+- Atom:
+  - Atom Menu > Preferences > Editor > `Font Family` > Type `Hack` in the input box
+- Visual Studio Code:
+  - Code Menu > Preferences > Settings > Editor Font Family > Type 'Hack' in the input box
+
 ### Mac and Windows Specific Setup
 
 Mac OS users continue [here](./environment-mac)
