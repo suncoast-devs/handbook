@@ -73,6 +73,7 @@ NOTES: - It will ask you about your path variable, I recommend selecting the thi
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
 `git config --global user.name "Replace This With Your Full Name"`
+
 `git config --global user.email email-address-you-used-at-github@example.com`
 
 Instead of `"Replace This With Your Full Name"` use your fill name.
