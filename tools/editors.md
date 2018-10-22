@@ -43,7 +43,7 @@ _How to [install plugins](https://flight-manual.atom.io/using-atom/sections/atom
 - Find the plugin and click `Install`
 - Restart Atom if necessary
 
-### Visual Studio Code
+### [Visual Studio Code](https://code.visualstudio.com)
 
 _Code editing. Redefined._
 
