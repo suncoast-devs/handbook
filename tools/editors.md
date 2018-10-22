@@ -23,15 +23,15 @@ _Plugins we recommend to start with (some of these are installed by default)_
   - `file-icons` _adds fancy icons to the project file view_
   - `pigments` _improves color handling in files such as CSS_
 - Makes your code look pretty
-  - `prettier-atom` _formats your CSS and JS files to a nice standard. NOTE: Turn on 'format on save' in settings_
+  - In your terminal: `brew install tidy-html5`
+  - `prettier-atom` _formats your CSS and JavaScript files to a nice standard._
+    - **NOTE:** Turn on _'format on save'_ in settings
   - `formatter` _formats other files such as HTML_
   - `formatter-tidy` _handles HTML files better, including all HTML5 tags_
-  - _NOTE_ If you install these, please run `brew install tidy-html5` in your terminal once.
 - Points out typos/mistakes in your code
   - `linter` _shows typos/mistakes in code_
   - `linter-stylelint` _shows typos/mistakes in code_
 - Generally helpful tools
-
   - `autocomplete-paths` _will show autocomplete suggestions of files in your project_
   - `color-picker` _nice color picker for defining color codes in files_
 
