@@ -56,11 +56,14 @@ You should already have Ruby installed.
 
 * [ ] Eventually we will be using a MVC application structure. To prepare for this, refactor your code to have all your business logic in separate class and all your console interaction in the main class. 
 
-
 ## Additional Resources
 
 * Ruby Resouces: 
-    - [https://learnrubythehardway.org/book/ex33.html](https://learnrubythehardway.org/book/ex33.html)
+    - [While loops](https://learnrubythehardway.org/book/ex33.html)
 
 * .NET
     - [https://docs.microsoft.com/en-us/dotnet/](https://docs.microsoft.com/en-us/dotnet/)
+
+## Reading Material
+
+**Ruby**: Read and work through excercise 14 of [Learn Ruby the Hard Way](https://learnrubythehardway.org/book)
