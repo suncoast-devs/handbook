@@ -39,7 +39,7 @@ In this assignment you will end up with a simple styled web page, published on t
 ## Additional Resources
 
 ### CSS
-
+- [Cool game to learn CSS selectors](https://flukeout.github.io/)
 - [Introduction to CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS)
 - [Getting Started with CSS Rules](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/CSS_basics#Anatomy_of_a_CSS_ruleset)
 - [All the CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index)
