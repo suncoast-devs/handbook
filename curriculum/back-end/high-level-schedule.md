@@ -5,7 +5,7 @@ draft: true
 
 # Week 8
 
-Week Goal: Learn your new
+Week Goal: Learn the new Languages
 
 ## Daily breakdown
 
@@ -17,6 +17,7 @@ Lecture:
 Homework:
     - Explain technical idea to some one non-technical (blog)
     - Create a simple Console program to prove env is set up
+
 ### Day 2
 Lecture: 
     - Practice back-end language 
@@ -24,12 +25,14 @@ Lecture:
     - OOP
 Homework:
     - Koans
+
 ### Day 3
 Lecture: 
     - Intro to Databases
     - Set up Dev ENV
 Homework:
     - Create a database, and write SQL queries against it
+    
 ### Day 4
 Lecture: 
     - Data Modeling, Joins, FK
