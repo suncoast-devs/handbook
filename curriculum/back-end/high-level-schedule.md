@@ -5,7 +5,7 @@ draft: true
 
 # Week 8
 
-Week Goal: Learn your new
+Week Goal: Learn the new Languages
 
 ## Daily breakdown
 
