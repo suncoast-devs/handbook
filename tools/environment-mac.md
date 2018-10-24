@@ -125,6 +125,26 @@ Finally we will tell Git and GitHub to use the `https` protocol we will enter th
 git config --global hub.protocol https
 ```
 
+### Trash
+
+#### What
+
+A command line tool to safely delete files by placing them in the _trash folder_ instead of immediately deleting them.
+
+#### How
+
+In your terminal run:
+```sh
+brew install trash
+```
+
+Then when you need to delete a file or folder from within terminal:
+
+```sh
+trash file
+trash directory
+```
+
 ### Hub
 
 #### What
