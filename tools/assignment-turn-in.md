@@ -17,7 +17,7 @@ Add all our work to git, and commit it:
 
 ```sh
 git add .
-git commit -m "Hello, world."
+git commit -m "Done with explorer mode"
 ```
 
 Please replace _"Hello, world."_ with a more meaningful message. It should try to capture what work you did.

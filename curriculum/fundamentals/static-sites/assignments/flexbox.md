@@ -21,7 +21,7 @@ Now that we have learned the power of flexbox we will apply it to the sites we a
 
 ### Explorer Mode
 
-- [ ] Revisit your `exploring your world` assignment and redo your CSS using flexbox where appropriate.
+- [ ] Revisit your `Expanding Your World` assignment and redo your CSS using flexbox where appropriate. Add, commit, and push those changes to your existing repository.
 - [ ] Recreate the page 'The Daily Kitteh' using flexbox as closely as you possibly can. Use the same fonts, sizes, and colors. Download some of your favorite
   - ![image](./assets/daily-kitteh.png)
 

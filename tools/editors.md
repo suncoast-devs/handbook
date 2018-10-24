@@ -80,6 +80,8 @@ Go to `Code` menu, then `Preferences`, then `Settings`
 - Find the setting `Prettier: Single Quote` and turn this *ON*
 - Find the setting `Prettier: Use Tabs` and turn this *OFF*
 
+_Tips and Tricks_
+- [VS Code can do that?!](https://vscodecandothat.com)
 
 ### Sublime Text
 
