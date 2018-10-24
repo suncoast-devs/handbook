@@ -18,10 +18,11 @@ In your first assignment you will end up with a web page, no matter how simple, 
 
 ### Explorer Mode
 
+- [ ] If you have experience with existing HTML/CSS frameworks (bootstrap, bulma, etc) you may *not* use them for these assignments.
 - [ ] Follow all of the setup instructions (See "Assignment Setup").
 - [ ] Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy, or would like to learn
       about. We will be expanding on this page in future assignments, so pick something fun!
-- [ ] Put your short essay into an HTML page, using appropriate semantic HTML tags. Give your webpage a simple header
+- [ ] Put your short essay into an HTML page, using appropriate semantic HTML tags. (See the link `HTML Tag Reference` below). Give your webpage a simple header
       and footer as well.
 - [ ] Deploy your site.
 
@@ -38,9 +39,9 @@ In your first assignment you will end up with a web page, no matter how simple, 
 
 ## Additional Resources
 
-- https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags
-- http://atozcss.com/start-here/
-- http://www.evolutionoftheweb.com
+- [HTML Tag Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+- [How do HTML Tags work](https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags)
+- [Evolution of the Web](http://www.evolutionoftheweb.com)
 - [Atom Flight Manual](https://flight-manual.atom.io)
   - [Moving in Atom](https://flight-manual.atom.io/using-atom/sections/moving-in-atom/)
   - [Selecting Text](https://flight-manual.atom.io/using-atom/sections/atom-selections/)
