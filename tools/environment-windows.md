@@ -49,7 +49,7 @@ We will use this to host some projects to see how the deploy process works
 
 Once you have node installed, run the following command in terminal.
 
-```
+```sh
 npm install --global surge
 ```
 
@@ -72,8 +72,13 @@ NOTES: - It will ask you about your path variable, I recommend selecting the thi
 
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
-`git config --global user.name "Replace This With Your Full Name"`
-`git config --global user.email email-address-you-used-at-github@example.com`
+```sh
+git config --global user.name "Replace This With Your Full Name"
+```
+
+```sh
+git config --global user.email email-address-you-used-at-github@example.com
+```
 
 Instead of `"Replace This With Your Full Name"` use your fill name.
 
@@ -81,7 +86,9 @@ Instead of `email-address-you-used-at-github@example.com` use the same email add
 
 Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
 
-`git config --global hub.protocol https`
+```sh
+git config --global hub.protocol https
+```
 
 
 ### Hub

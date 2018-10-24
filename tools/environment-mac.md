@@ -31,7 +31,9 @@ For the first part of the training, we are concentrating on the HTML/CSS and Jav
 
 Run the command :
 
-`brew install node`
+```sh
+brew install node
+```
 
 ### Yarn
 
@@ -46,7 +48,9 @@ We will be using this to run our scripts and as well as installing packages. Thi
 #### How
 
 In your terminal Run :
-`brew install yarn`
+```sh
+brew install yarn
+```
 
 ### App App
 
@@ -80,7 +84,7 @@ We will use this to host some projects to see how the deploy process works
 
 Once you have node installed, run the following command in the terminal.
 
-```
+```sh
 npm install --global surge
 ```
 
@@ -97,12 +101,19 @@ Git is how we will be managing our files and sharing code between each other. It
 #### How
 
 In your terminal Run :
-`brew install git`
+```sh
+brew install git
+```
 
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
-`git config --global user.name "Replace This With Your Full Name"`
-`git config --global user.email email-address-you-used-at-github@example.com`
+```sh
+git config --global user.name "Replace This With Your Full Name"
+```
+
+```
+git config --global user.email email-address-you-used-at-github@example.com
+```
 
 Instead of `"Replace This With Your Full Name"` use your fill name.
 
@@ -110,7 +121,9 @@ Instead of `email-address-you-used-at-github@example.com` use the same email add
 
 Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
 
-`git config --global hub.protocol https`
+```
+git config --global hub.protocol https
+```
 
 ### Hub
 
@@ -121,7 +134,9 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 #### How
 
 In your terminal run:
-`brew install hub`
+```sh
+brew install hub
+```
 
 ---
 

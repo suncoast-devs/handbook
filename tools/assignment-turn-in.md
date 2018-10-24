@@ -43,5 +43,5 @@ follow the prompts to set up your account.
 ---
 
 Once you are done, go to the issue on our `assignments` repository in your web browser. As a comment, leave a link
-to the repository of your project, and close the issue. Your instructors will not know you are done until you've closed
-the issue.
+to the repository of your project, and close the issue. To get the link to your repository, `hub browse` will open github.com
+with your repository URL loaded. Your instructors will not know you are done until you've closed the issue.
