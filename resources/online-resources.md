@@ -23,6 +23,14 @@ draft: true
 - [COLOR SAFE](http://colorsafe.co/)
 - [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/)
 
+## Responsive Design
+
+- [Acquia Engage Ethan Marcotte: Focus Responsive Design with Mobile-First Approach](https://www.youtube.com/watch?v=UdP6R1esjds)
+
+## The Most Important Non-Programming Skills for Programmers
+
+- [The Practical Dev](https://dev.to/aspittel/the-most-important-non-programming-skills-for-programmers-iii?utm_source=digest_mailer&utm_medium=email&utm_campaign=digest_email)
+
 ## Online Learning Resources for After Graduation
 
 - [Frontend Masters](https://frontendmasters.com/courses/#all)
