@@ -23,6 +23,19 @@ draft: true
 - [COLOR SAFE](http://colorsafe.co/)
 - [Accessible color palette builder](https://toolness.github.io/accessible-color-matrix/)
 
+## REM vs EM vs PX
+
+- [Confused About REM and EM?](Confused About REM and EM?)
+- [Comprehensive Guide: When to Use Em vs. Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
+- [REM Calculator](https://offroadcode.com/rem-calculator)
+
+## Flexbox
+
+- [Flexbox Froggy - A game for learning CSS flexbox](https://flexboxfroggy.com/)
+- [Flexbox Defense](http://www.flexboxdefense.com/)
+- [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [Flexbox playground and code generator](http://the-echoplex.net/flexyboxes)
+
 ## Responsive Design
 
 - [Acquia Engage Ethan Marcotte: Focus Responsive Design with Mobile-First Approach](https://www.youtube.com/watch?v=UdP6R1esjds)
