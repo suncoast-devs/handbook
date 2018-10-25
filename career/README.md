@@ -3,23 +3,25 @@ title: Career Support
 draft: true
 ---
 
-## [1. Branding yourself](./branding-yourself)
+## [1. Week One Talks](./week1talks)
 
-## [2. Blogging](./blogging)
+## [2. Branding yourself](./branding-yourself)
 
-## [3. Trello](./trello)
+## [3. Blogging](./blogging)
 
-## [4. Decoding Job Descriptions](./decoding-job-descriptions)
+## [4. Trello](./trello)
 
-## [5. Cover Letters](./cover-letters)
+## [5. Decoding Job Descriptions](./decoding-job-descriptions)
 
-## [6. Diversity & Inclusion](./diversity-inclusion)
+## [6. Resumes & Cover Letters](./cover-letters)
 
-## [7. Portfolios](./portfolios)
+## [7. Diversity & Inclusion](./diversity-inclusion)
 
-## [8. Preparing for Interviews](./interviews)
+## [8. Portfolios](./portfolios)
 
-## [9. Freelancing and How to get hired](./freelance)
+## [9. Preparing for Interviews](./interviews)
+
+## [10. Freelancing and How to get hired](./freelance)
 
 --
 
