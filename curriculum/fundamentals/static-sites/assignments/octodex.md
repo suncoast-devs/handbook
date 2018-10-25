@@ -40,5 +40,7 @@ Unfortunately, the Octodex is not responsive\*! Today, your task is to recreate 
 - [ ] Go back to your hobby website and update site to be mobile friendly and responsive.
 
 ## Additional Resources
+- Install the [JSON Viewer Chrome Extension](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh) to make the List of Octocats nicer to read
+- [List of Octocats](https://sdg-octodex.herokuapp.com/)
 - https://www.youtube.com/watch?v=2KL-z9A56SQ
 
