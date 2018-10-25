@@ -17,9 +17,10 @@ This policy will become effective on July, 23, 2018.
 
 The Smoke-Free policy applies to:
 
-All areas of buildings occupied by company students and employees.
+All areas of buildings occupied by students and employees.
 All school-sponsored off-site conferences and meetings.
 All vehicles owned or leased by the company.
+All students and employees.
 All visitors (customers and vendors) to company premises.
 All contractors and consultants and/or their employees working on company premises.
 All temporary employees.
