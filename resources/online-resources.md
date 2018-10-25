@@ -25,7 +25,7 @@ draft: true
 
 ## REM vs EM vs PX
 
-- [Confused About REM and EM?](Confused About REM and EM?)
+- [Confused About REM and EM?](https://css-tricks.com/confused-rem-em/)
 - [Comprehensive Guide: When to Use Em vs. Rem](https://webdesign.tutsplus.com/tutorials/comprehensive-guide-when-to-use-em-vs-rem--cms-23984)
 - [REM Calculator](https://offroadcode.com/rem-calculator)
 
