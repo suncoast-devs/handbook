@@ -55,6 +55,10 @@ VALUES ('The Lost World', 'Michael Crichton', 1995, 'sci-fi');
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('Harry Potter and Goblet of Fire', 'J.K. Rowling', 2000, 'fantasy');
 
+
+INSERT INTO books (title,  primary_author, year_published, genre) 
+VALUES ('The Hobbit', 'J.R.R. Tolkien', 1937, 'fantasy');
+
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('The Lord of the Rings: The Return of the King', 'J.R.R. Tolkien', 1955, 'fantasy');
 
@@ -64,7 +68,6 @@ VALUES ('The Lord of the Rings: The Fellowship of the Ring', 'J.R.R. Tolkien', 1
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('The Lord of the Rings: The Two Towers', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('Hitchhikers Guide to the Galaxy', 'Douglas Adams', 1979, 'sci-Fi');
 
@@ -73,7 +76,6 @@ VALUES ('Cujo', 'Stephen King', 1981, 'horror');
 
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('It', 'Stephen King', 1986, 'horror');
-
 
 INSERT INTO books (title,  primary_author, year_published, genre) 
 VALUES ('Howls Moving Castle', 'Diana Wynne Jones', 1986, 'fantasy');
