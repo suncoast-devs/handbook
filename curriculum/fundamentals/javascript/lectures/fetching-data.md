@@ -36,14 +36,16 @@ draft: true
     - options to describe what we are fetching, how it is to be fetched, etc.
     - returns a `promise`
   - Example:
-    ```
+
+    ```javascript
     fetch('https://swapi.co/api/people')
     ```
 
   - This will access the _Star Wars API_ and fetch a list of people in the _Star Wars_ universe
 
   - But if we just log this response we will see something that we cannot directly use
-    ```
+
+    ```javascript
     let response = fetch('https://swapi.co/api/people')
     console.log(response)
     >
@@ -57,25 +59,34 @@ draft: true
   - Think of a `promise` as an _IOU_
   - A `promise` is an *asynchronous* _IOU_ that will a supplied function when the _IOU_ is ready to redeem.
   - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
+
     ```javascript
     fetch('https://swapi.co/api/people').then(
       (response) => {
-        console.log(respone)
+        console.log(response)
       }
     )
     ```
 
-  - The response here is *still* a `promise`
-    ```
-    Promise {<pending>}
-      __proto__: Promise
-      [[PromiseStatus]]: "pending"
-      [[PromiseValue]]: undefined
+  - The response here is *still* not quite usable:
+
+    ```javascript
+      Response {type: "cors", url: "https://swapi.co/api/people/", redirected: true, status: 200, ok: true, …}
+      body: (...)
+      bodyUsed: false
+      headers: Headers {}
+      ok: true
+      redirected: true
+      status: 200
+      statusText: ""
+      type: "cors"
+      url: "https://swapi.co/api/people/"
     ```
 
-  - This is because the response itself must be _converted_ into a form we can use.  The response from `SWAPI` is a `JSON` response
-  - Getting access to the JSON:
-    ```
+  - This is because the response *body* itself must be _converted_ into a form we can use.  The response from `SWAPI` is a `JSON` response
+  - Fortunately, the `response` object gives us a method to gain access to the JSON:
+
+    ```javascript
     fetch('https://swapi.co/api/people').then(
       (response) => {
         return response.json()
@@ -88,7 +99,8 @@ draft: true
     ```
 
   - This returns usable information!
-    ```
+
+    ```javascript
     {
       count: 87,
       next: "https://swapi.co/api/people/?page=2",
@@ -107,6 +119,7 @@ draft: true
         length: 10
     }
     ```
+
   - So our `json` object represents the response we could see in the `SWAPI` documentation here: [https://swapi.co/documentation#people](https://swapi.co/documentation#people)
 
 ### Local Storage
