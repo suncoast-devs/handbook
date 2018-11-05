@@ -22,3 +22,6 @@ draft: true
 - lecture
 - [assignment](./assignments/blackjack)
 
+# Fetching data
+- [lecture](./lectures/fetching-data)
+
