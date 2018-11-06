@@ -5,8 +5,7 @@ draft: true
 
 # Let's Continue our safari adventure
 
-You are tasked with taking the Safari DB you created and putting that into an API. This API should use the simple Safari Database that we created. 
-
+We are taking a surprise trip to the Savannah for a safari to see all sorts of exotic animals. During our time their we want to keep track of all the animals we have seen. For this, we need to create an API to help record what we see. 
 
 
 ## Objectives
@@ -20,7 +19,15 @@ You are tasked with taking the Safari DB you created and putting that into an AP
 
 ### Explorer Mode
 
-* [ ] Create the following endpoints: 
+* [ ] Your database will be named called `SafariVacation` / `safari_vacation`
+    * [ ] This will have 1 table called `SeenAnimals` / `seen_animals` that has the following columns
+        - `Id` / `id` (int)
+        - `Species` /  `species` (string)
+        - `CountOfTimesSeen` / `count_of_times_seen` (int)
+        - `LocationOfLastSeen` / `location_of_last_seen` (string)
+    - NOTE: This should be made all in the code (C#/Ruby), and **not** created in the `pgcli`.
+
+* [ ] Your API should have the following endpoints:
     - [ ] Create `GET /Animals` Endpoint that returns all animals you have seen
     - [ ] Create `GET /Search?species=lion` that returns all animals where the species name contains the title parameter
     - [ ] Create a `POST /Animal` endpoints that adds a movie to the database. THis should take a JSON body
@@ -36,6 +43,7 @@ You are tasked with taking the Safari DB you created and putting that into an AP
 
 ### Epic Mode
 - [ ] Create a React or Vue app that talks to your API and Interacts with all the endpoints
+- [ ] Work on your capstone
 
 
 ## Additional Resources

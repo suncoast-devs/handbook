@@ -1,12 +1,14 @@
 ---
-title: Finish Suncoast Overflow
+title: Suncoast Overflow
 draft: true
 ---
 
 As we explore the concepts of a full stack web app, a good way to practice is to duplicate an existing site. For this project you will be creating a copy of a site that you know very well, StackOverflow.
 
 
-The finished product will be due Monday, so this will be a little bigger. This is the final push to complete this app. Do not let perfect be the enemy of done.
+The finished product will be due Monday, so this will be a little bigger. Since you have a long to time to work on this, this project is a great portfolio piece that can a clean and responsive UI, as well as clean code in the API. 
+
+It is recommend to start with wire frames, then go from there. 
 
 ## Objectives
 
@@ -15,7 +17,7 @@ The finished product will be due Monday, so this will be a little bigger. This i
 
 ## Requirements
 
-In groups of 2, create an anonymous question and answer site, that allows users to up-vote and down-vote questions and answers. 
+In groups of 2 or 3, create an anonymous question and answer site, that allows users to up-vote and down-vote questions and answers. 
 
 The core functionality is: 
 - [ ] as a user I should be able to view and search questions asked
@@ -33,6 +35,7 @@ The core functionality is:
 ### Adventure Mode
 
 * [ ] Add user accounts
+* [ ] Go to StackOverflow, pick a feature, and implement it. 
 
 ### Epic Mode
 

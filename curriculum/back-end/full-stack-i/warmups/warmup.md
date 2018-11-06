@@ -26,3 +26,26 @@ Good Morning! Today’s warm up!
 Do as many as you can 
 https://www.hackerrank.com/domains/sql
 ```
+
+
+Day 5:
+Head over to https://news.ycombinator.com/ and check it out. 
+
+In groups of 2 or 3, create an ERD for a database to support this website. 
+
+Day 6: 
+@channel Today’s Warm up!
+ ```https://www.hackerrank.com/challenges/staircase/problem```
+_tip_ Make sure you are working in C#
+
+
+Day 7:
+Advanced OOP work 
+
+
+Day 8:
+@channel Good Morning! For your warm up, we will play "okay, stop" during it
+```
+https://www.youtube.com/watch?v=XKu_SEDAykw
+```
+
