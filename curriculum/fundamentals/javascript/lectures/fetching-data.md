@@ -121,10 +121,3 @@ draft: true
     ```
 
   - So our `json` object represents the response we could see in the `SWAPI` documentation here: [https://swapi.co/documentation#people](https://swapi.co/documentation#people)
-
-### Local Storage
-
-### Git
-
-#### HW: Weather Site
-

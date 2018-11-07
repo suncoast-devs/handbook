@@ -6,22 +6,22 @@ draft: true
 # Warm-ups
 - [Warm-ups](./warm-ups/)
 
-# Introduction to JS
-- [lecture](./lectures/introduction-to-js)
+# [Introduction to JS](../lectures/introduction-to-js)
 - [assignment](./assignments/scoreboard)
 
-# Adding / Modifying the DOM / Events
-- [lecture](./lectures/modify-the-dom)
+# [Adding/modifying the DOM](../lectures/modify-the-dom)
 - [assignment](./assignments/roshambo)
 
-# Objects
-- [lecture](./lectures/objects.md)
-- [assignment](./assignments/tic-tac-toe)
-
-# More about Objects / Array Enumeration
-- lecture
+# [More about Objects / Array Enumeration](../lectures/enumeration)
 - [assignment](./assignments/blackjack)
 
-# Fetching data
-- [lecture](./lectures/fetching-data)
+# [Fetching Data From Remote Servers](../lectures/fetching-data)
+- [assignment](./assignments/weather-api)
+
+# [Classes - Abstraction and Reuse](../lectures/abstraction-and-reuse)
+- [assignment](./assignments/weather-oop)
+
+# [Event Loop](../lectures/event-loop)
+- [assignment](./assignments/tic-tac-toe)
+
 
