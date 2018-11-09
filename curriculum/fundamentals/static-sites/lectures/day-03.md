@@ -7,5 +7,7 @@ draft: true
 
 ### Linking pages
 
+### Flexbox
+
 ### Group Activity: Flexbox Froggy
 
