@@ -1,0 +1,17 @@
+- https://www.codewars.com/kata/beginner-lost-without-a-map
+  - arrays
+  - map
+  - forEach
+- https://www.codewars.com/kata/square-n-sum
+  - arrays
+  - map
+  - forEach
+  - reduce
+- https://www.codewars.com/kata/sum-of-positive
+  - arrays
+  - map
+  - forEach
+- https://www.codewars.com/kata/count-of-positives-slash-sum-of-negatives
+  - arrays
+  - map
+  - forEach
