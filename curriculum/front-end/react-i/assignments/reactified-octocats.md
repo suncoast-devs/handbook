@@ -35,11 +35,13 @@ You'll identify the main `Component`s on the page and create React components fo
 
 ### Adventure Mode
 
-- [ ] Place the definition of each Octocat in an `array` and use `map` to generate the octocat components
+- [ ] Place the definition of each Octocat in an `array` and use `map` to generate the Octocat components
 
 ### Epic Mode
 
-- [ ] Research how to put the `array` of octocats in a `octocats.json` file and `import` that into your app.
+- [ ] Put the `array` of Octocats in a `octocats.json` file and `import` that into your app.
+- *OR*
+- [ ] Use the `fetch` api to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
 
 ## Additional Resources
 
