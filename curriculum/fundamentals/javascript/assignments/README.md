@@ -29,6 +29,10 @@ Your first blog assignment.
 
 Gain a deeper understanding of functions and other basic JavaScript constructs.
 
+## [JavaScript Iteration](./js-iteration)
+
+Gain a deeper understanding of JavaScript iteration.
+
 ## [Cloudy with a chance of Syntax Error](./weather-api)
 
 An introduction to APIs and Ajax: using a popular weather API, create a website that allows a user to get the weather in a location they search for.
