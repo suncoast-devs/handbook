@@ -13,7 +13,7 @@ For this project, you will forking an existing repo and adding ore functionality
 
 ## Requirements
 
-First you need ot fork this repo [https://github.com/mdewey/puppy-adoption](https://github.com/mdewey/puppy-adoption). 
+First you need to fork this repo [https://github.com/mdewey/puppy-adoption](https://github.com/mdewey/puppy-adoption). 
 
 Then you will need to clone your fork to your local machine. You will be doing all of your development on that fork. 
 
