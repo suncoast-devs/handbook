@@ -5,6 +5,8 @@ draft: true
 
 Information about downtown St Pete for folks from out of town. Parking garages, dining, entertainment, etc.
 
+The mayor of St Petersburg is Rick Kriseman.
+
 ## Campus Location
 
 Our campus is located at:

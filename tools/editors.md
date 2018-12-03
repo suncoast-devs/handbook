@@ -66,7 +66,7 @@ _Plugins we recommend to start with (some of these are installed by default)_
 - Markdown Preview Github
 - open-in-browser
 - Rainbow Brackets
-- Simple React Snippets
+- [Reactjs code snippets](https://marketplace.visualstudio.com/items?itemName=xabikos.ReactSnippets)
 
 _Settings we recommend to start with_
 

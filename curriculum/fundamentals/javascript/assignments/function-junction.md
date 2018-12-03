@@ -18,9 +18,11 @@ After completing this assignment, you should be able to:
 5.  Install the dependencies: `yarn install` (or just `yarn` for short)
 6.  Open in Code: `code .`
 7.  Start the test runner: `yarn test`
-8.  Open `src/functions.test.js` and work on functions until tests pass.
-9.  Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
+8.  Feel free to split screen your work, except now you should split-screen your editor and your TERMINAL
+9.  In your editor, open `src/functions.test.js` and work on each function until the test pass.
+10. Each time you save your code, the tests run and tell you if your code is correct.
+11. Commit and push your work to GitHub.
+12. Turn in the URL to your GitHub repo.
 
 ### Explorer Mode
 

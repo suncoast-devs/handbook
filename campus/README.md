@@ -3,7 +3,7 @@ title: Our Campus
 draft: true
 ---
 
-Information about our campus. Location, hours of operation, rules, etc.
+Information about our campus. Location, hours of operation, rules, and more.
 
 ## [Welcome to St Petersburg](./st-pete)
 

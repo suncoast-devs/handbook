@@ -22,7 +22,7 @@ video: https://www.youtube.com/watch?v=Z-Q_c2wg2w8&t=2651s&list=PLWwthP6_aKmdxLK
 
 - HTML script tag
 
-```
+```html
 <script>
   // JavaScript code would be here
 </script>
@@ -30,7 +30,7 @@ video: https://www.youtube.com/watch?v=Z-Q_c2wg2w8&t=2651s&list=PLWwthP6_aKmdxLK
 
 - Link to separate JavaScript file
 
-```
+```html
   <script src="main.js">
 ```
 
@@ -50,7 +50,7 @@ The JavaScript console is where we can output messages to ourselves (the develop
 
 - `console.log`
 
-  ```
+  ```javascript
   console.log('Hello World')
 
   ```
@@ -71,7 +71,7 @@ Variables in programming languages allow us to store information and give that i
   - use `shift` to remove the first index of an array
   - use `unshift` to insert a value at the beginning of an array
 
-  ```
+  ```javascript
   let instructors = ["Jason", "Toni", "Gavin", "Mark"]
   instructors.push("Joebob")
   instructors
@@ -95,7 +95,7 @@ Variables in programming languages allow us to store information and give that i
 - strings
   - use either single or double quote: `'string of characters'` or `"string of characters"`
   - concat: strings and numbers can be concatenated together in JS
-    ```
+    ```javascript
     let name = "Gavin"
     let favoriteNumber = 42
     let sentence = name + ' favorite number is ' + favoriteNumber
@@ -104,13 +104,13 @@ Variables in programming languages allow us to store information and give that i
     ```
   - use escape character - backslash `\` to use a single quote inside of singe quotes `''` or use double quotes
 
-      ```
+      ```javascript
       let sentence = name + '\'s favorite number is ' + favoriteNumber
       newSentence
       -> "Gavin's favoriteNumber is 42"
       ```
       or
-      ```
+      ```javascript
       let sentence = name + "'s favorite number is " + favoriteNumber
       newSentence
       -> "Gavin's favoriteNumber is 42"
@@ -119,13 +119,13 @@ Variables in programming languages allow us to store information and give that i
 - interpolation
     - use of backquote ` `` `: What is inside of `${}` within backquote gets evaluated
 
-      ```
+      ```javascript
       let newSentence = `${name} favoriteNumber is ${favoriteNumber}`
       newSentence
       -> "Gavin favoriteNumber is 42"
       ```
 
-      ```
+      ```javascript
       let newSentence = `${name} favoriteNumber is ${favoriteNumber * 2} or ${favoriteNumber * 3}`
       newSentence
       -> "Gavin favoriteNumber is 84 or 14"
@@ -142,12 +142,12 @@ Variables in programming languages allow us to store information and give that i
   - `querySelector`
         > `querySelector` selects the very first `h1` element from document and returns it
 
-        ```
+        ```javascript
         document.querySelector('hi')
         -> <h1>Hello World</h1>
         ```
 
-        ```
+        ```javascript
         let header = document.querySelector('h1')
         header
         -> <h1>Hello World</h1>
@@ -156,7 +156,7 @@ Variables in programming languages allow us to store information and give that i
   - `querySelectorAll`
         > given that there are 3 `h1` elements in the example document, to select all the `h1` elements from document
 
-        ```
+        ```javascript
         let allOurFirstDOM = document.querySelectorAll('h1')
         allOurFirstDOM
         -> NodeList(3) [h1,h1,h1]
@@ -176,7 +176,7 @@ Variables in programming languages allow us to store information and give that i
   - functions are just variables whose value is the code to execute when you call that function
   - named
 
-    ```
+    ```javascript
     function greet(nameOfPerson) {
       console.log('Hello ${nameOfPerson}')
     }
@@ -203,7 +203,7 @@ Variables in programming languages allow us to store information and give that i
     ```
     Another way to write function using `arrow function` (newer way in ES6)
 
-    ```
+    ```javascript
     let greetFunction = (nameOfPerson, greeting) => {
       console.log(`${greeting}, ${nameOfPerson}`)
     }
@@ -223,7 +223,7 @@ Variables in programming languages allow us to store information and give that i
   - listening for events
   - attaching code to events
 
-  ```
+  ```javascript
     const main = () => {
       document.querySelector('h1').textContent += '?'
     }
