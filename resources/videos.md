@@ -12,6 +12,8 @@ draft: true
 
 ## Other
 
+- [Computerphile](https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA)
+- [Wes Bos](https://www.youtube.com/user/wesbos)
 - [Artisans and Apprentices](https://confreaks.tv/videos/railsconf2014-artisans-and-apprentices)
 - [How to be a Better Junior Developer](https://confreaks.tv/videos/railsconf2014-how-to-be-a-better-junior-developer)
 - [Keynote - Humor In The Code: The Future Of Everything, Humbly Stated](https://confreaks.tv/videos/railsconf2014-keynote-humor-in-the-code-the-future-of-everything-humbly-stated)

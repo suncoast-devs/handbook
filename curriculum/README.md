@@ -10,5 +10,3 @@ TODO: A high level overview of our Web Development curriculum.
 ## [Front-end Frameworks](./front-end/)
 
 ## [Back-end Frameworks](./back-end/)
-
-## [Supplemental Resources](./resources)
