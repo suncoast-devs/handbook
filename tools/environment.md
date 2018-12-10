@@ -87,3 +87,5 @@ See setup instructions here under `Atom`: [Editors](./editors)
 Mac OS users continue [here](./environment-mac)
 
 Windows users continue [here](./environment-windows)
+
+Windows Subsystem For Linux users continue [here](./environment-linux-subsystem-windows)
