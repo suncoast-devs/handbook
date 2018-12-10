@@ -2,9 +2,17 @@
 
 Watch these videos on "The Long Game":
 
-- https://vimeo.com/84022735
-- https://vimeo.com/87448006
-- https://vimeo.com/151128399
+- [The Long Game Part 1: Why Leonardo DaVinci was once a loser](https://vimeo.com/84022735)
+- [The Long Game Part 2: the missing chapter](https://vimeo.com/87448006)
+- [The Long Game Part 3: Painting in the Dark](https://vimeo.com/151128399)
+
+
+
+# Fixed versus Growth Mindset
+
+You are about to enter a time of intense mindset growth. Being aware of fixed mindsets and growth mindsets will help prepare you to focus on growth.
 
 Read [Fixed vs. Growth: The Two Basic Mindsets That Shape Our Lives](http://www.brainpickings.org/2014/01/29/carol-dweck-mindset/)
 
+
+[Next](./07-accounts)
