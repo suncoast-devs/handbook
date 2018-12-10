@@ -42,8 +42,9 @@ You should already have Ruby installed.
 
 ### Adventure Mode
 
-* [ ] Create a nice user experience for the number guesser. Include features such as 
+* [ ] Add a nice user experience to the console app. Include features such as 
 `Try again` and `Welcome, press enter to start`
+
 
 
 ### Epic Mode

@@ -37,7 +37,7 @@ You should already have Ruby installed.
 * [ ] For Explorer Mode, you do not have to put in menu or other user experience "nice to haves", focus on the just the core algorithm.
 
 #### Blog 
-* [ ] We have tackled front end development and are about to tackle a new language. You have grown as a developer and a person in the last 7 weeks. Create for me a blog post on medium on 1 of the following prompts
+* [ ] We have tackled front end development and are about to tackle a new language. You have grown as a developer and a person in the last 7 weeks. **Pick one topic** and create a blog post about it on Medium.com
 
 - Pick 1 topic technically that we have learned and create a blog post explaining it to a non-technical person.
 
@@ -49,7 +49,7 @@ You should already have Ruby installed.
 
 ### Adventure Mode
 
-* [ ] Create a nice user experience. Include features such as 
+* [ ] Add a nice user experience to the console app. Include features such as 
 `Try again` and `Welcome, press enter to start`
 
 
