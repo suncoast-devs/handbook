@@ -3,7 +3,7 @@ title: A Whole New World
 draft: true
 ---
 
-Today you learned a new language and will be starting to explore it more in depth in the coming weeks. Like any good craftsman, the first thing you need is to learn your tools. Tonight, you will be setting up your developer environment, creating a simple console application, and writing a short blog. 
+Today you learned a new language and will be starting to explore it more in depth in the coming weeks. Like any good craftsman, the first thing you need is to learn your tools. Tonight, you will be setting up your developer environment, creating a simple console application, and starting your final project. 
 
 
 ## Objectives
