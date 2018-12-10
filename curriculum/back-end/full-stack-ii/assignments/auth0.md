@@ -3,13 +3,13 @@ title: Welcome to Auth0
 draft: true
 ---
 
-We have been chatting about the idea of `authentication` and `authorization` for the past couple of days. This is a deep and complex topic, and you, being a good developer, should want to stand on the shoulders of giants to tackle this seemingly simple, yet complex problem. 
+We have been chatting about the idea of `authentication` and `authorization`. This is a deep and complex topic, and you, being a good developer, should want to stand on the shoulders of giants to tackle this seemingly simple, yet complex problem. 
 
 
 
 ## Objectives
 
-* Intergrate Auth0 with your favorite frontend framework
+* Integrate Auth0 with your favorite frontend framework
 
 ## Requirements
 
@@ -19,14 +19,13 @@ We have been chatting about the idea of `authentication` and `authorization` for
 
 ### Explorer Mode
 
-* [ ] Using either React or Vue, create a new front-end application that uses Auth0 as the user provider. No backend is needed for this. 
+* [ ] Using either React, create a new front-end application that uses Auth0 as the user provider. No back-end is needed for this. 
 * [ ] Display the name, or email, and the user Id to the user after they log in.
 
 #### Tips:
 
-- Here is the sample implitation we used in class [https://github.com/mdewey/PlacesIHaveBeen](https://github.com/mdewey/PlacesIHaveBeen)
+- Here is the sample implication: [https://github.com/mdewey/PlacesIHaveBeen](https://github.com/mdewey/PlacesIHaveBeen)
 - For React go [here](https://auth0.com/docs/quickstart/spa/react)
-- For Vue go [here](https://auth0.com/docs/quickstart/spa/vuejs)
 - The implementations in the different frameworks are about 90% the same. 
 - Be sure to include the router libraries for the project you create. I would suggest starting here and creating threes pages/components: `home`, `callback`, and `dashboard`
 
@@ -37,7 +36,4 @@ We have been chatting about the idea of `authentication` and `authorization` for
 ### Epic Mode
 
 * [ ] Work on your capstone
-
-
-## Additional Resources
 
