@@ -1,14 +1,16 @@
 ## This Journey
 
-This will be an amazing journey, full of highs and lows. Here's some topics/articles to read through as you mentally prep yourself to begin class:
+This will be an amazing journey, full of highs and lows. Here are some topics/articles to read through as you mentally prep yourself to begin class:
 
 ### Read how to ask good questions:
 
-This is very important on your growth here with SDG and beyond. Asking questions is something that will happen on a regular basis. Learn how to ask the right questions.
+This is very important on your growth here with SDG and beyond. Asking questions is something that will happen on a regular basis. Perhaps it has been a while since you've been in an active learning environment. Being comfortable, and effective, with asking questions will be an important skill for making the most of your time with us. Read this article below to learn how to ask the right questions.
 
 [https://stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
 
 ### Learn how to adapt to the fast pace
+
+This course moves _quickly_ as we cover a lot of material in a short time frame. Managing your time as well as learning to cope with the pacing of the course will help ensure you are able to sustain yourself.
 
 Read: [https://www.topuniversities.com/blog/7-time-management-tips-students](https://www.topuniversities.com/blog/7-time-management-tips-students)
 
@@ -34,4 +36,6 @@ Adopt the same priorities: as soon as lunch begins, take a mental break, go for 
 
 You will be asked to regularly blog, reflecting on your voyage and trials here at the academy. You will also be asked to, on occasion, reflect on a reading, on an assignment, or on a video as a homework assignment itself.
 
-Writing about code, about being a developer, about a tool, and so forth gives you leverage. You learn to put into words how you emotionally feel, you understand and reflect, you meditate. Those thoughts, ideas, and takeaways are in essence "pre-meditated" and prepared so that when you rub shoulders with and interview with employers, clients, and customers, you have something eloquent enough to deliver, and memorable enough to recall
+Writing about code, about being a developer, about a tool, and so forth gives you leverage. You learn to put into words how you emotionally feel, you understand and reflect, you meditate. Those thoughts, ideas, and takeaways are in essence "pre-meditated" and prepared so that when you rub shoulders with, and interview with, employers, clients, and customers, you have something eloquent enough to deliver, and memorable enough to recall
+
+[Next](./05-career-paths)

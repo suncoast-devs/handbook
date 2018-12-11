@@ -14,17 +14,17 @@ Now that you have completed the pre-work, take any time you have left to rest, a
   * [Hackerrank](https://www.hackerrank.com)
   * [Codewars](https://www.codewars.com)
 * Podcasts
-  * .Net Rocks
-  * Lambdacast
-  * Javascript Jabber
+  * [.Net Rocks](https://dotnetrocks.com/)
+  * [Lambdacast](https://soundcloud.com/lambda-cast)
+  * [Javascript Jabber](https://devchat.tv/js-jabber/)
   * Learn to Code
-  * HanselMinutest
+  * [HanselMinutes](https://www.hanselminutes.com/)
 * Youtube Channels
   * Ted Talks
-  * Computerphile
+  * [Computerphile](https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA)
 * News Sites
-  * hacker news
+  * [hacker news](https://news.ycombinator.com/)
   * medium
-  * product hunt
-  * github
-  * reddit.com/r/programming/
+  * [product hunt](https://www.producthunt.com/)
+  * [github](https://github.com)
+  * [Programming Subreddit](https://reddit.com/r/programming/)
