@@ -7,4 +7,4 @@ draft: true
 
 ## Ruby on Rails
 
-## [Lecture Schedule](./high-level-schedule.md)
+## [Lecture Schedule](./high-level-schedule)

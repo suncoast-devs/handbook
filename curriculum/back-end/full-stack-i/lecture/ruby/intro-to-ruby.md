@@ -3,12 +3,18 @@ title: Intro to Ruby
 draft: true
 ---
 
+# Ruby files
+
+- Store our code in files that end in `.rb`
+- Run our code from the terminal via `ruby filenamehere.rb`
+- We can access an interactive console with the program `irb`
 
 # Variables
 - Strings
  - `name = "Gavin"`
  - `name.length`
- - `"My score is #{41 + 1}"`
+- String interpolation
+ - `new_string = "My score is #{41 + 1}"`
 - Numbers
  - `score = 42`
 - Arrays
@@ -36,6 +42,37 @@ draft: true
    - `person["scores"]` is `[100, 98, 42, 64]`
    - `person["scores"][2]` is `42` since `person["scores"]` is an array, and then we index the array at `2` to get the _third_ element
 
+# Interacting with users
+- `puts` outputs information without any formatting. Good for user output
+- `p` outputs information formatted for programmer friendliness. Good for debugging.
+
+```ruby
+name = "Gavin"
+puts name       # Would output:      Gavin
+p name          # Would output:      "Gavin"
+
+empty_string = ""
+puts empty_string    # Would output:
+p empty_string       # Would output:   ""
+```
+
+- `gets` retrieves information from input (usually the terminal from the user typing)
+- However, it includes a `newline` character (the _return key_ that ends a line)
+- We use `chomp` to remove it.
+
+```ruby
+puts "What is your name?"
+name_with_newline = gets
+name = name_with_newline.chomp
+
+# or
+puts "What is your name?"
+name = gets.chomp
+
+# or
+puts "What is your name?"
+name = gets(chomp: true)
+```
 
 # Control Flow
 - if statements
@@ -47,10 +84,6 @@ else
   puts "The name isn't Gavin"
 end
 ```
-
-# Interacting with users
-- puts (print out)
-- gets (read from, remember to chomp)
 
 # Looping
 - loop / break
@@ -70,28 +103,37 @@ end
 - Comments start with a `#` mark. With a bare `#`, anything that follows will be ignored by Ruby.
 
 # Methods
- - Organizing code
- - Placing a name on a set of steps or a way of doing something
- - Methods have a name, and optionally a set of inputs (arguments) and a return
- - Example:
+- Organizing code
+- Placing a name on a set of steps or a way of doing something
+- Methods have a name, and optionally a set of inputs (arguments) and a return
+- Example:
 
-   ```ruby
+ ```ruby
 
-   # This method has no inputs or return
-   def say_hello
-     puts "Hello there!"
-   end
+ # This method has no inputs or return
+ def say_hello
+   puts "Hello there!"
+ end
 
-   # This method has an input but no returns
-   def say_hello(name)
-     puts "Hello there #{name}!"
-   end
+ # This method has an input but no returns
+ def say_hello(name)
+   puts "Hello there #{name}!"
+ end
 
-   # This method has inputs and a return
-   def make_sentence(name, score)
-     return "The score for #{name} is #{score}"
-   end
-   ```
+ # This method has inputs and a return
+ def make_sentence(name, score)
+   return "The score for #{name} is #{score}"
+ end
+ ```
+
+- Without a `return` keyword, a method _returns_ the value of the last statement of the function.
+
+ ```ruby
+ # This method has inputs and a return
+ def make_sentence(name, score)
+   "The score for #{name} is #{score}"
+ end
+ ```
 
 # More control flow
 - Conditionals
