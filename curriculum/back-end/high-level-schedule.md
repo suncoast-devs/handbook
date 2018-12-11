@@ -12,7 +12,7 @@ Week Goal: Learn the new Languages
 ### Lecture 1
 - Lecture:
   - Intro to back-end engineering,
-  - Intro to Back end language,
+  - Intro to back-end language,
   - Dev env setup,
 - Ruby Lecture
   - `.rb` files
