@@ -15,18 +15,35 @@ When creating programs, not only is the business logic important but arguably, t
 Using a database is one of the best ways to store, persist and query data that need for our applications. This is not the only way to store our data, but it does offer the best tools and practices to create rich data-driven apps. 
 
 ### SQL vs NoSQL
-
-As far as databases are concern, there are two over arching types of databases design: SQL and NoSQL. 
+As far as databases are concern, there are two over arching types of databases: SQL and NoSQL. 
 
 SQL is a table-based storage paradigm, that stores data  arranged in an Excel-like format, that focuses on normalizing our data by focusing on relationships and structure.
 
 NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database stores data in form other the tablular structure in SQL. This looseness of data structure allows developers to more freely control what and how the data is store. NoSQL databases, though have existed for while, have become popular in modern day data science and big data. 
 
-<!-- #### Welcome to Postgres
 
+Since the majority of apps use a SQL database, let's explore what a SQL database is and what it can do.
+
+## SQL Basics
+
+In SQL our data is arranged into tables, thats have columns and rows.
 ### Tables
+
+Tables are the containers for our data. Usually a database has multiple tables, one for each "thing" we are storing. 
+
+For instance, if you want to store books for a library, there would have a database called `book_collection` and in that database, there would be one table, called `books`. 
+
 ### Columns
-### Rows -->
+
+Columns are the part of the table that define the schema (structure) of the data we are storing. This where we define was parts of the "thing" we are storing. Every column has a datatype that restricts what type of data we can insert into each column. 
+
+In our `books` table, we will want to store details, such as `title`, `primary_author` and `genre`. Each of these columns have a type of `TEXT`.  Checkout the [Postgres docs on types](https://www.postgresql.org/docs/current/datatype.html) to see all the available types. Note that some of these are not part of the SQL specification and are just a part of Postgres.
+
+### Rows
+
+Rows are where our data is actually store. Each row represents one point of data. This can be thought of being similar to a row of data in an Excel spreadsheet. 
+
+To continue the `book_collection` database, in the `books` table, a row of data would contain 'The Cat in the Hat', 'Dr. Suess', and 'kids'.
 
 ### Getting started with Postgres
 
