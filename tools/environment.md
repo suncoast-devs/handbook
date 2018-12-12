@@ -82,6 +82,10 @@ See setup instructions here under `Atom`: [Editors](./editors)
 - Visual Studio Code:
   - Code Menu > Preferences > Settings > Editor Font Family > Type 'Hack' in the input box
 
+#### Database Setup
+
+See [here](./postgresql)
+
 ### Mac and Windows Specific Setup
 
 Mac OS users continue [here](./environment-mac)
