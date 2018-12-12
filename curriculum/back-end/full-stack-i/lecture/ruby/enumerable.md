@@ -1,0 +1,29 @@
+# TODO
+
+- Enumerable
+  - `each`
+  - `select`
+  - `map`
+  - `reduce`
+  - `each_cons`
+  - `each_slice`
+  - `all?`
+  - `any?`
+  - `count`
+  - `each`
+  - `find`
+  - `map`
+  - `max`
+  - `max_by`
+  - `min`
+  - `min_by`
+  - `minmax`
+  - `minmax_by`
+  - `none?`
+  - `one?`
+  - `reverse_each`
+  - `select`
+  - `sort`
+  - `sort_by`
+  - `take`
+  - Chaining enumerable methods
