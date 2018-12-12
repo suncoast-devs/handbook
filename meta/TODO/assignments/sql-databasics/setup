@@ -1,0 +1,5 @@
+#!/bin/bash
+
+dropdb databasics
+createdb databasics
+(psql databasics < create.sql ; uudecode -o /dev/stdout < data.sql.uu | psql databasics) | grep -i error
