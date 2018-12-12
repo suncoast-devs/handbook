@@ -22,13 +22,13 @@ SQL is a table-based storage paradigm, that stores data  arranged in an Excel-li
 
 NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database stores data in form other the tablular structure in SQL. This looseness of data structure allows developers to more freely control what and how the data is store. NoSQL databases, though have existed for while, have become popular in modern day data science and big data. 
 
-#### Welcome to Postgres
+<!-- #### Welcome to Postgres
 
 ### Tables
 ### Columns
-### Rows
+### Rows -->
 
-### DEMO: create a database and ERD for Library
+### Getting started with Postgres
 
 First we need to create a database. After you have installed Postgres, use the command:
 
@@ -56,6 +56,9 @@ Here are some sample queries to help get you started.
 
 #### CREATE TABLE
 
+
+After connected to a new database, we need to create a table to store our information. This table will have rows(data) and columns (structure). 
+
 ```sql
 
 CREATE TABLE books (
@@ -69,11 +72,22 @@ CREATE TABLE books (
 
 #### ALTER TABLE
 
+These tables are a not set in stone, they can added at a later date use the `ALTER TABLE` command. 
+
 ```sql
 ALTER TABLE books ADD COLUMN genre TEXT
 ```
 
 #### INSERT
+
+To create a new row in our database, we need to use the `INSERT` statement. A `INSERT` statement looks like this: 
+
+```sql
+INSERT INTO table_name (columnA, columnB, columnC)
+VALUES ('columnAValue', 'columnBValue', 'columnCValue')
+```
+
+Example `INSERT` Statements: 
 
 ```sql
 INSERT INTO books (title,  author, published_year, genre)
@@ -117,6 +131,17 @@ VALUES ('Howls Moving Castle', 'Diana Wynne Jones', 1986, 'fantasy');
 
 #### SELECT
 
+`SELECT` statements allow us to query our data and return a new view of the data. We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied. For example: 
+
+``` sql
+SELECT title, primary_author from books where genre = 'horror';
+```
+
+Only returns the `title` and `primary_author` of `horror` books;
+
+
+More examples: 
+
 ```sql
 SELECT * FROM books;
 
@@ -134,6 +159,20 @@ SELECT title, primary_author from books where title LIKE 'The Lord of the Rings%
 
 #### UPDATE
 
+To change data in our database, we use an `UPDATE` statement. The general structure of an `UPDATE` is: 
+
+``` sql
+UPDATE table_name
+SET columnA = 'new value'
+WHERE columnB = 'some value'
+```
+
+The above update statement will update all rows that have `columnB = 'some value` with the new value. 
+
+Word of warning, if the `WHERE` clause is left off, then **all** rows will updated. 
+
+
+Example: 
 ```sql
 UPDATE books set genre='children horror' where primary_author='R. L. Stine';
 
@@ -142,6 +181,9 @@ UPDATE books set genre='children horror' where primary_author='R. L. Stine';
 
 #### DELETE
 
+To remove one or many rows, we can use the `DELETE` statement.
+
+Example:
 ```sql
 
 DELETE FROM books WHERE year_published=1995
