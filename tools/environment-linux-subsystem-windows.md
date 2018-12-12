@@ -110,7 +110,7 @@ ruby-install ruby-2.5.3
 ```sh
 cd
 echo 'ruby-2.5.3' > ~/.ruby-version
-echo 'ruby-2.5.3' | tee -a ~/.profile
+echo 'chruby ruby-2.5.3' | tee -a ~/.profile
 ```
 
 ## Step 9 - Validate Ruby install
