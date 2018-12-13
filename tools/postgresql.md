@@ -23,12 +23,16 @@ brew services start postgresql
 - If using another flavor of Linux the `apt` and `service` instructions may be different. For instance with OpenSUSE the instruction is `sudo systemctrl postgresql start` instead.
 
 ```sh
-sudo apt install postgresql pgcli
+sudo apt install postgresql
 
 sudo service postgresql start
 
 sudo su postgres -c "createuser --superuser ${USER}"
+
+sudo pip install pgcli
 ```
+
+If the `sudo pip install pgcli` fails you may need to install Python's `pip` tool first.
 
 ## Linux Subsystem Starting PostgreSQL after a reboot
 
