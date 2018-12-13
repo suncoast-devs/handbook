@@ -26,29 +26,29 @@ We are taking a surprise trip to the Savannah for a safari to see all sorts of e
     * [ ] Display all animals the user has seen
     * [ ] Update the `CountOfTimesSeen`  and `LocationOfLastSeen` for an animal
     * [ ] Display all animals seen in the `Jungle`
-    * [ ] Remove all animals that I have seen in the `Desert`. 
+    * [ ] Remove all animals that I have seen in the `Desert`.
     * [ ] Add all the `CountOfTimesSeen` and get a total number of animals seen
     * [ ] Get the `CountOfTimesSeen` of `lions`, `tigers` and `bears`
-    
+
 
 
 ### Adventure Mode
 
-* [ ] Add a new column called `LastSeenTime`, with a type of DateTime. This will require a new migration to added and ran.
+* [ ] Add a new column called `LastSeenTime` (Ruby: `last_seen_at`), with a type of DateTime. This will require you to add and run a new migration.
 
 
 ### Epic Mode
 
-* [ ] Continue to make progress on your capstone project. 
+* [ ] Continue to make progress on your capstone project.
 
 ## Additional Resources
 
-### .NET 
+### .NET
 
-Here are the interesting commands you will need for tonights assignment
+Here are the interesting commands you will need for tonight's assignment
 
-- To add Entity Framework to your project: 
-``` 
+- To add Entity Framework to your project:
+```
  dotnet add package Microsoft.EntityFrameworkCore.Design --version 2.1.3
 
  dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 2.1.2
@@ -72,7 +72,7 @@ Here are the interesting commands you will need for tonights assignment
 
 - Update your database
 ```
-dotnet ef database update  
+dotnet ef database update
 ```
 
  - Documentation: [Dotnet EF CLI Docs](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
