@@ -1,69 +1,105 @@
-html:     <!-- LO: using emoji -->,
-html:   <!-- LO: added classes to tag -->,
-html:   <!-- LO: header stuff, like title, favicon, meta tags -->,
-html:   <!-- LO: semantic HTML -->,
-html:   <!-- LO: tag: nav -->,
-html:   <!-- LO: using a cdn -->,
-html:   <!-- LO: using font awesome -->,
-html: <!-- LO: head vs body -->,
-css: /* LO: Box model */,
-css: /* LO: background images */,
-css: /* LO: class only selector */,
-css: /* LO: css variables */,
-css: /* LO: flexbox && space between */,
-css: /* LO: mobile first implementation */,
-css: /* LO: multiple selectors having the same CSS */,
-css: /* LO: px vs em vs rem */,
-css: /* LO: scoping css using parent classes in selectors */,
-css: /* LO: selector based on class & location */,
-css: /* LO: selector based on tag locaiton */,
-css: /* LO: shorthand css properties (margin, padding, etc) */,
-css: /* LO: using css varibles */,
-css: /* LO: using media queries to build responsive UIs */,
-css: /* LO: vertical centering with Flexbox */,
-css: /*LO: using multiple CSS classes*/,
-javascript:       // LO: Anonymous Functions,
-javascript:       // LO: Objects,
-javascript:       // LO: debugging in JS,
-javascript:       // LO: map/filter/reduce,
-javascript:       // LO: one function => one task,
-javascript:       // LO: querySelector,
-javascript:       // LO: using an constructor,
-javascript:       // LO: using data structures to store the data,
-javascript:     // LO: Boolean logic of <, >, ===,
-javascript:     // LO: Boolean logic of <, >, ===,
-javascript:     // LO: Keeping all changing stuff into state,
-javascript:     // LO: Promises,
-javascript:     // LO: add text with a tag,
-javascript:     // LO: adding an element,
-javascript:     // LO: adding element to place on the page,
-javascript:     // LO: change CSS via js,
-javascript:     // LO: comment your code,
-javascript:     // LO: creating an element,
-javascript:     // LO: defensive programing,
-javascript:     // LO: event loop,
-javascript:     // LO: expressions vs functions,
-javascript:     // LO: fetch and using apis,
-javascript:     // LO: learning from an example online,
-javascript:     // LO: math,
-javascript:     // LO: math,
-javascript:     // LO: scoping around closures ?,
-javascript:     // LO: spread operator,
-javascript:     // LO: textContext vs innerHTML,
-javascript:     // LO: working with dates,
-javascript:   // LO: Page class has a render function,
-javascript:   // LO: encapsulating logic for one action,
-javascript:   // LO: functions,
-javascript:   // LO: helper methods on class,
-javascript: // LO: "something is loaded event",
-javascript: // LO: Abstraction,
-javascript: // LO: Encapsulation,
-javascript: // LO: Events : Browser fired events,
-javascript: // LO: Events: User Fired Events,
-javascript: // LO: OOP,
-javascript: // LO: formating code,
-javascript: // LO: linting,
-javascript: // LO: scoping of variables in JS,
-javascript: // LO: strings,
-javascript: // LO: using a Page class with render function,
-javascript: // LO: variables,
+
+# Week 1
+
+## Day 1: 
+
+general: file management
+general: using terminal
+general: opening text editor
+general: deploy to surge 
+general: how to use slack
+html: added classes to tag
+html: header stuff, like title, favicon, meta tags
+html: semantic HTML
+html: tag: nav
+html: head vs body
+html: using emoji
+
+## Day 2: 
+## Day 3: 
+## Day 4:
+
+
+# Week 2
+
+## Day 1: 
+## Day 2: 
+## Day 3: 
+## Day 4:
+
+
+# Week 2
+
+## Day 1: 
+## Day 2: 
+## Day 3: 
+## Day 4:
+
+html: using a cdn
+html: using font awesome
+
+css: css variables
+css: multiple selectors having the same CSS
+css: scoping css using parent classes in selectors
+css: px vs em vs rem
+css: Box model
+css: flexbox && space between
+
+css: background images
+css: class only selector
+css: mobile first implementation
+css: selector based on class & location
+css: selector based on tag locaiton
+css: shorthand css properties (margin, padding, etc)
+css: using css varibles
+css: using media queries to build responsive UIs
+css: vertical centering with Flexbox
+css: using multiple CSS classes
+
+javascript: using npm
+javascript: node REPL
+javascript:  Anonymous Functions,
+javascript:  Objects,
+javascript:  debugging in JS,
+javascript:  map/filter/reduce,
+javascript:  one function => one task,
+javascript:  querySelector,
+javascript:  using an constructor,
+javascript:  using data structures to store the data,
+javascript:  Boolean logic of <, >, ===,
+javascript:  Boolean logic of <, >, ===,
+javascript:  Keeping all changing stuff into state,
+javascript:  Promises,
+javascript:  add text with a tag,
+javascript:  adding an element,
+javascript:  adding element to place on the page,
+javascript:  change CSS via js,
+javascript:  comment your code,
+javascript:  creating an element,
+javascript:  defensive programing,
+javascript:  event loop,
+javascript:  expressions vs functions,
+javascript:  fetch and using apis,
+javascript:  learning from an example online,
+javascript:  math,
+javascript:  math,
+javascript:  scoping around closures ?,
+javascript:  spread operator,
+javascript:  textContext vs innerHTML,
+javascript:  working with dates,
+javascript:  Page class has a render function,
+javascript:  encapsulating logic for one action,
+javascript:  functions,
+javascript:  helper methods on class,
+javascript:  "something is loaded event",
+javascript:  Abstraction,
+javascript:  Encapsulation,
+javascript:  Events : Browser fired events,
+javascript:  Events: User Fired Events,
+javascript:  OOP,
+javascript:  formating code,
+javascript:  linting,
+javascript:  scoping of variables in JS,
+javascript:  strings,
+javascript:  using a Page class with render function,
+javascript:  variables,

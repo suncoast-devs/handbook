@@ -23,8 +23,11 @@ Day 4:
 Good Morning! Today’s warm up!
 
 ```
-Do as many as you can
-https://www.hackerrank.com/domains/sql
+https://www.codewars.com/kata/adults-only-sql-for-beginners-number-1/train/sql
+
+https://www.codewars.com/kata/easy-sql-ordering
+
+https://www.codewars.com/kata/register-for-the-party-sql-for-beginners-number-3
 ```
 
 
