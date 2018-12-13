@@ -42,14 +42,14 @@ Week Goal: Learn the new Languages
 - Lecture:
   - Intro to Databases
   - Set up development environment
-  - See [lecture](./full-stack-i/lecture/sql/intro-to-sql.md)
+  - See [lecture](./full-stack-i/lecture/sql/intro-to-sql)
 - Homework:
   - Create a database, and write SQL queries against it
 
 ### Lecture 4
 - Lecture:
   - Data Modeling, Joins, Foreign Keys
-  - See [lecture](./full-stack-i/lecture/sql/intro-to-joins.md)
+  - See [lecture](./full-stack-i/lecture/sql/intro-to-joins)
 - Homework:
   - Create a complex database
   - Work on HTML & database schema for final project
