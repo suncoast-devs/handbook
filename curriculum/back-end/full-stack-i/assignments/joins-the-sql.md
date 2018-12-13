@@ -2,10 +2,9 @@
 title: Foreign Keys - The SQL
 draft: true
 ---
-
 As we continue to explore databases and ideas, this project will help you practice model databases and relationships, as well as help you get started on your capstone project. 
 
-First you will expand you CompanyDatabase to have `Departments`, `Products` and `Orders`. You will be crafting a queries for these new tables.
+First, you will expand you CompanyDatabase to have `Departments`, `Products` and `Orders`. You will be crafting queries for these new tables.
 
 After that, this weekend is the next big push your final project, work on the HTML and CSS; As well as the database schema.
 
@@ -31,15 +30,15 @@ Install [pgcli](https://www.pgcli.com/install)
 ### Explorer Mode
 
 * [ ] In your Company Database, add a table named:
-  - C#: `Departments`. Give this a few columns
-  - Ruby: `departments`. Give this a few columns
+  - C#: `Departments`. Give this table a few columns
+  - Ruby: `departments`. Give this table a few columns
 * [ ] Add a Foreign key named:
   - C# `DepartmentId` to your `Employee` Table
   - Ruby: `department_id` to your `employees` table
 * [ ] Add tables named:
   - C#: `Products` and `Orders`. Give each table a few columns
   - Ruby: `products` and a 'orders`. Give each table a few columns
-* [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many to Many relationship. Create the tables and foreign keys needed for this to happen
+* [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the tables and foreign keys needed for this to happen
 
 
 * [ ] Create queries that can do the following:

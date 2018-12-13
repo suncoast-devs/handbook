@@ -25,35 +25,7 @@ Week Goal: Learn the new Languages
   - Deeper dive into the language
   - OOP
 - Ruby Lecture
-  - Hashes
-  - Blocks
-  - Enumerable
-    - `each`
-    - `select`
-    - `map`
-    - `reduce`
-    - `each_cons`
-    - `each_slice`
-    - `all?`
-    - `any?`
-    - `count`
-    - `each`
-    - `find`
-    - `map`
-    - `max`
-    - `max_by`
-    - `min`
-    - `min_by`
-    - `minmax`
-    - `minmax_by`
-    - `none?`
-    - `one?`
-    - `reverse_each`
-    - `select`
-    - `sort`
-    - `sort_by`
-    - `take`
-    - Chaining enumerable methods
+  - See [Enumerable](./full-stack-i/lecture/ruby/enumerable)
   - See [notes](./full-stack-i/lecture/ruby/classes)
     - Classes
       - Initializer
@@ -69,14 +41,14 @@ Week Goal: Learn the new Languages
 ### Lecture 3
 - Lecture:
   - Intro to Databases
-  - Set up Dev ENV
+  - Set up development environment
   - See [lecture](./full-stack-i/lecture/sql/intro-to-sql.md)
 - Homework:
   - Create a database, and write SQL queries against it
 
 ### Lecture 4
 - Lecture:
-  - Data Modeling, Joins, FK
+  - Data Modeling, Joins, Foreign Keys
   - See [lecture](./full-stack-i/lecture/sql/intro-to-joins.md)
 - Homework:
   - Create a complex database
@@ -84,7 +56,7 @@ Week Goal: Learn the new Languages
 
 
 
-# Week
+# Week 2
 
 Week Goal: Build a RESTful API that is backed by an ORM and a database
 
@@ -99,6 +71,7 @@ Week Goal: Build a RESTful API that is backed by an ORM and a database
   - `active_record` gem
   - See [notes](./full-stack-i/lecture/ruby/active_record)
 - Homework:
+  - See [Safari](./full-stack-ii/assignments/safari)
   - Create a API that queries the simple database they made Day 1
 
 ### Lecture 2
@@ -107,6 +80,7 @@ Week Goal: Build a RESTful API that is backed by an ORM and a database
 - Ruby Lecture:
   - See [notes](./full-stack-i/lecture/ruby/internet-and-sinatra)
 - Homework:
+  - See [Safari Online](./full-stack-ii/assignments/safari-online)
   - Create a fully RESTful API.
 
 ### Lecture 3
