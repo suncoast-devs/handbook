@@ -89,3 +89,18 @@ Know what you want to do and craft your portfolio for that.
 - _Source: Samantha Warren_: http://samanthatoy.com/
 
 [Access the slide presentation](./assets/portfolios.pdf)
+
+## Notes from Friday Conversations:
+
+### Minimum Viable Product:
+
+- Start with the most important information you need such as your name, how to reach you, and project information
+- Work on styling, start mobile first then check how it looks on tablet and desktop
+- Work on basic styling, ex: colors & fonts
+- Once all that is done you can see if you can add hovers, animations and more
+
+### How to get your portfolio live:
+
+- GitHub pages: https://pages.github.com/
+- Surge: https://surge.sh/
+  <br> FYI: you cannot use PDFs with Surge so be sure to link out to Drive, Dropbox or some other way of sharing a link to a file
