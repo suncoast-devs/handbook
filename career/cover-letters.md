@@ -63,8 +63,8 @@ Bonus:
 
 ### Alumni Resume Examples
 
-- [Example Resume 1](./assets/example-resumes/ResumeExample1.pdf)
+<!-- - [Example Resume 1](./assets/example-resumes/ResumeExample1.pdf)
 - [Example Resume 2](./assets/example-resumes/ResumeExample2.pdf)
 - [Example Resume 3](./assets/example-resumes/ResumeExample3.pdf)
 - [Example Resume 4](./assets/example-resumes/ResumeExample4.pdf)
-- [Example Resume 5](./assets/example-resumes/ResumeExample5.pdf)
+- [Example Resume 5](./assets/example-resumes/ResumeExample5.pdf) -->
