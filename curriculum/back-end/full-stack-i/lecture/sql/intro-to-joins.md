@@ -126,7 +126,20 @@ So now we have a way to identify each movie, rating, and actor. Next we will tal
 
 When we have a relationship such as the ratings for a movie, we say that this is a "One to Many" relationship. That is, a movie has one rating (e.g. the movie _Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many movies with a _G_ rating)
 
-The ERD of this looks like: [TODO, MAKE AN ERD FOR THIS]
+The ERD of this looks like:
+
+```
+                                                             +-----------------------+
+             +----------------------------+                  |        RATINGS        |
+             |         MOVIES             |                  |                       |
+             |                            |                  |   id        SERIAL    |
+             | id                  SERIAL +------------------+   rating    TEXT      |
+             | title               TEXT   |  many        one |                       |
+             | primary_director    TEXT   |                  +-----------------------+
+             | year_released       INT    |
+             | genre               TEXT   |
+             +----------------------------+
+```
 
 Lets add a new column to our `movies` to indicate *WHICH* rating is associated to each row representing a movie.
 
@@ -149,7 +162,7 @@ So now that we have these two tables, how do we _join_ them together so that we 
 #### Query movies and also get their rating
 
 ```sql
-SELECT * 
+SELECT *
 FROM movies
 JOIN ratings ON movies.rating_id = ratings.id;
 ```
@@ -178,7 +191,7 @@ If we want to see *ALL* the `movies` and include the `ratings` table information
 #### Query all the movies and include ratings when possible
 
 ```sql
-SELECT * 
+SELECT *
 FROM movies
 LEFT JOIN ratings ON movies.rating_id = ratings.id;
 ```
@@ -210,7 +223,32 @@ The _left join_ indicates that we want everything from the left table, in this c
 
 For the list of actors in the cast we might say "A movie has many cast members" but also "A cast member has appeared in many movies." In this case we need to relate these two tables in a different way.
 
-The ERD of this looks like: [TODO, MAKE AN ERD FOR THIS]
+The ERD of this looks like:
+
+```
+      +--------------------------------+           +---------------------------+
+      |            MOVIES              |           |         RATINGS           |
+      |                                |           |                           |
+      |    id                  SERIAL  |           |     id        SERIAL      |
+      |    title               TEXT    |many    one|     rating    TEXT        |
+      |    primary_director    TEXT    +-----------+                           |
+      |    year_released       INT     |           +---------------------------+
+      |    genre               TEXT    |
+      |                                |
+      +------------+-------------------+
+                   |
+                   | many
+                   |
+                   |
+                   |                   +-------------------------+
+                   |                   |        ACTORS           |
+                   |                   |                         |
+                   |              many |    id          SERIAL   |
+                   +-------------------+    full_name   TEXT     |
+                                       |    birthday    DATE     |
+                                       |                         |
+                                       +-------------------------+
+ ```
 
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables. In this case we need a third table, commonly referred to as a _join table_ to store the relationships. In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.) We attempt to name this table based on the relationship between the two tables.
 
@@ -219,14 +257,49 @@ In this case we are trying to represent the relationship between a movie and the
 ```sql
 CREATE TABLE cast_members (
   id       SERIAL PRIMARY KEY,
-  movie_id  INTEGER REFERENCES movies (id) ,
+  movie_id  INTEGER REFERENCES movies (id),
   actor_id  INTEGER REFERENCES actors (id)
 );
 ```
 
-#### Update Orlando Bloom for Pirates & LOTR. The two LOTR movies are `id` 8 and 9. Orlando Bloom's id is 1
+
+```
+      +--------------------------------+           +---------------------------+
+      |            MOVIES              |           |         RATINGS           |
+      |                                |           |                           |
+      |    id                  SERIAL  |           |     id        SERIAL      |
+      |    title               TEXT    | many   one|     rating    TEXT        |
+      |    primary_director    TEXT    +-----------+                           |
+      |    year_released       INT     |           +---------------------------+
+      |    genre               TEXT    |
+      |                                |
+      +-------------+------------------+
+                    | one
+                    |
+                    |
+                    |
+                    |
+                    | many
+            +-------+---------------+               +-------------------------+
+            |     CAST MEMBERS      |               |          ACTORS         |
+            |                       | many      one |                         |
+            |   id       SERIAL     +---------------+    id          SERIAL   |
+            |                       |               |    full_name   TEXT     |
+            |                       |               |    birthday    DATE     |
+            |                       |               |                         |
+            +-----------------------+               +-------------------------+
+
+
+```
+
+
+
+
+#### Update Orlando Bloom for Pirates & LOTR. The three LOTR movies are `id` 7, 8 and 9. The Pirates movie is `id` 2. Orlando Bloom's id is 1
 
 ```sql
+INSERT INTO cast_members (movie_id, actor_id) VALUES (2,1);
+INSERT INTO cast_members (movie_id, actor_id) VALUES (7,1);
 INSERT INTO cast_members (movie_id, actor_id) VALUES (8,1);
 INSERT INTO cast_members (movie_id, actor_id) VALUES (9,1);
 ```
@@ -237,10 +310,13 @@ INSERT INTO cast_members (movie_id, actor_id) VALUES (9,1);
 INSERT INTO cast_members (movie_id, actor_id) VALUES (3,2);
 ```
 
-#### Update Martin Freeman for the Hobbit & Hitchhikers
+#### Update Martin Freeman (`actor` `id` is 3) for the Hobbit (`movie` `ids` are 4, 5, and 6) & Hitchhikers (`movie` `id` 10)
 
 ```sql
-INSERT INTO cast_members (movie_id, actor_id) VALUES (1,1);
+INSERT INTO cast_members (movie_id, actor_id) VALUES (4,3);
+INSERT INTO cast_members (movie_id, actor_id) VALUES (5,3);
+INSERT INTO cast_members (movie_id, actor_id) VALUES (6,3);
+INSERT INTO cast_members (movie_id, actor_id) VALUES (10,3);
 ```
 
 ### Query for the casts and actors
@@ -250,31 +326,35 @@ In order to tie `movies` to `actors` we need to join the movies first to the `ca
 Notice for the `actors` entry Orlando Bloom there are *TWO* entries in `cast_members` since he has appeared in two of our `movies`
 
 ```sql
-select movies.title, actors.full_name
+SELECT movies.title, actors.full_name
 FROM movies
 LEFT JOIN cast_members ON cast_members.movie_id = movies.id
 LEFT JOIN actors on actors.id = cast_members.actor_id;
 ```
 
 ```
-+--------------------------------------------------------+---------------+
-| title                                                  | full_name     |
-|--------------------------------------------------------+---------------|
-| The Lord of the Rings: The Fellowship of the Ring      | Orlando Bloom |
-| The Lord of the Rings: The Two Towers                  | Orlando Bloom |
-| Harry Potter and Goblet of Fire                        | Warwick Davis |
-| The Lost World                                         | Orlando Bloom |
-| Cujo                                                   | <null>        |
-| It                                                     | <null>        |
-| Hitchhikers Guide to the Galaxy                        | <null>        |
-| Pirates of the Caribbean: The Curse of the Black Pearl | <null>        |
-| It                                                     | <null>        |
-| The Hobbit: The Desolation of Smaug                    | <null>        |
-| The Hobbit: The Battle of the Five Armies              | <null>        |
-| The Hobbit: An Unexpected Journey                      | <null>        |
-| Howls Moving Castle                                    | <null>        |
-| The Lord of the Rings: The Return of the King          | <null>        |
-+--------------------------------------------------------+---------------+
++--------------------------------------------------------+----------------+
+| title                                                  | full_name      |
+|--------------------------------------------------------+----------------|
+| Pirates of the Caribbean: The Curse of the Black Pearl | Orlando Bloom  |
+| The Lord of the Rings: The Return of the King          | Orlando Bloom  |
+| The Lord of the Rings: The Fellowship of the Ring      | Orlando Bloom  |
+| The Lord of the Rings: The Two Towers                  | Orlando Bloom  |
+| Harry Potter and Goblet of Fire                        | Warwick Davis  |
+| The Hobbit: An Unexpected Journey                      | Martin Freeman |
+| The Hobbit: The Desolation of Smaug                    | Martin Freeman |
+| The Hobbit: The Battle of the Five Armies              | Martin Freeman |
+| Hitchhikers Guide to the Galaxy                        | Martin Freeman |
+| The Hobbit: An Unexpected Journey                      | Martin Freeman |
+| The Hobbit: The Desolation of Smaug                    | Martin Freeman |
+| The Hobbit: The Battle of the Five Armies              | Martin Freeman |
+| Hitchhikers Guide to the Galaxy                        | Martin Freeman |
+| Cujo                                                   | <null>         |
+| It                                                     | <null>         |
+| It                                                     | <null>         |
+| The Lost World                                         | <null>         |
+| Howls Moving Castle                                    | <null>         |
++--------------------------------------------------------+----------------+
 ```
 
 ### Resources

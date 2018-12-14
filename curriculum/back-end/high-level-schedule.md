@@ -48,10 +48,9 @@ Week Goal: Learn the new Languages
 
 ### Lecture 4
 - Lecture:
-  - Data Modeling, Joins, Foreign Keys
-  - See [lecture](./full-stack-i/lecture/sql/intro-to-joins)
+  - [Data Modeling, Joins, Foreign Keys](./full-stack-i/lecture/sql/intro-to-joins)
 - Homework:
-  - Create a complex database
+  - [Create a complex database](./full-stack-i/assignments/joins-the-sql)
   - Work on HTML & database schema for final project
 
 
