@@ -131,4 +131,8 @@ where it could lead you
 
 We believe in you. Believe in yourself. Go do great things.
 
-[Access the slide presentation](./assets/freelance-gethired.pdf)
+## Resources
+
+- [Access the slide presentation](./assets/freelance-gethired.pdf)
+- [Toni presenting video 1](https://youtu.be/Op-XvK97iYE)
+- [Toni presenting video 2](https://youtu.be/atPMJK5ru-o)

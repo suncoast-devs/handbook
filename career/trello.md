@@ -48,4 +48,8 @@ draft: true
 - Add me to the card in the description
   @toniwarren / @ktrammellsdg
 
-[Access the slide presentation](./assets/trello.pdf)
+## Resources
+
+- [Access the slide presentation](./assets/trello.pdf)
+- [Recorded screen share](https://youtu.be/tiHP3riVm40)
+- [Time Management with Charles Burgess](https://youtu.be/zxcwyWl_TZ8)
