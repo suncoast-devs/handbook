@@ -75,6 +75,10 @@ Know what you want to do and craft your portfolio for that.
 - http://venelrene.github.io/
 - http://tayloracox.com/
 - http://kjswartz.github.io/
+- http://sarrahvesselov.com/
+- https://smoline.github.io/
+- http://calebsanderson.com
+- http://marianneKelly.com
 - https://gstark.com/
 - http://www.staceyatkinson.com/
 - https://www.madebyeno.com/

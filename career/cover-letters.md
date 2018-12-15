@@ -68,3 +68,6 @@ Bonus:
 - [Example Resume 3](./assets/example-resumes/ResumeExample3.pdf)
 - [Example Resume 4](./assets/example-resumes/ResumeExample4.pdf)
 - [Example Resume 5](./assets/example-resumes/ResumeExample5.pdf)
+- [Example Resume 6](./assets/example-resumes/ResumeExample6.pdf)
+- [Example Resume 7](./assets/example-resumes/ResumeExample7.pdf)
+- [Example Resume 8](./assets/example-resumes/ResumeExample8.pdf)
