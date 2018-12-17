@@ -45,4 +45,7 @@ So how do you "brand yourself"?
 - @
 - Sharing - make it your own
 
-[Access the slide presentation](./assets/branding-yourself.pdf)
+## Resources
+
+- [Access the slide presentation](./assets/branding-yourself.pdf)
+- [Recorded screen share](https://youtu.be/mGjYWEfAm8s)
