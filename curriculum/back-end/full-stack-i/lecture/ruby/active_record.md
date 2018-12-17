@@ -119,6 +119,12 @@ CREATE TABLE cast_members (
 
 - Step 2: See [this lesson](../sql/intro-to-joins) for `INSERT INTO` statements to populate the database
 
+# Install the Active Record gem
+
+```sh
+gem install active_record
+```
+
 # Basic Active Record Setup
 
 - NOTE: In the code below replace `"movies"` with the name of your database where the `movies`, `actors`, and `cast_members` tables were created.
@@ -244,6 +250,24 @@ p movie.actors
 
 actor = Actor.find_by(full_name: "Martin Freeman")
 p actor.movies
+```
+
+# Sneak peek at using this for APIs
+
+Lets get all the `Movie` objects and print the resulting array of these movies as JSON.
+
+```ruby
+movies = Movie.all
+movies_as_a_hash = movies.as_json
+puts JSON.pretty_generate(movies_as_a_hash)
+```
+
+The `movies.as_json` turns the collection of ActiveRecord objects into a Ruby `hash` and then `JSON.pretty_generate` formats a nice, human readable, JSON string. Finally `puts` prints the results.
+
+If we were doing this all at once this could look like:
+
+```ruby
+puts JSON.pretty_generate(Movie.all.as_json)
 ```
 
 # Additional `ActiveRecord` resources
