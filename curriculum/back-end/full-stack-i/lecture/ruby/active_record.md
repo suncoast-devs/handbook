@@ -122,7 +122,8 @@ CREATE TABLE cast_members (
 # Install the Active Record gem
 
 ```sh
-gem install active_record
+gem install pg
+gem install activerecord
 ```
 
 # Basic Active Record Setup
@@ -170,13 +171,16 @@ end
   - `Movie.where("title like ?", "%aliens%")
 
 # Insert
+
 - `Movie.create(title: "SDG: The Adventure", primary_director: "Suncoast", year_released: 2018, genre: "code")`
 
 # Delete
+
 - `Movie.where("year_released > ?", 1984).delete_all`
 - `movie = Movie.find(42)` then `movie.delete`
 
 # Update
+
 - `movie = Movie.find(4)`
 - `movie.title = "New Title"`
 - `movie.save`
@@ -278,4 +282,3 @@ puts JSON.pretty_generate(Movie.all.as_json)
   - Sections 1, 2, 3, 4, 5
 - [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
   - Sections 1, 2
-
