@@ -1,7 +1,7 @@
 # How does the web work
 
 ## Domains and Hosts
-- How does the browser know where to go when "suncoast.io" go?
+- How does the browser know where to go when "suncoast.io" is requested?
   - Domain names, host names, TLDs
     - _Top Level Domains_ (TLDs) allocated by ICANN
     - Domains registered with a domain registrar
@@ -30,8 +30,10 @@
     - `localhost` resolves to `127.0.0.1`
 
 ## Making Connections
-- What happens after resolving the address of a server?
+- What happens after our computer resolves the address of a server?
   - Connect to a `service` over a `socket`
+    - A service is something like 'http' or 'https', or email via 'pop3' or 'smtp', or our `postgres` database
+    - The socket determines which `port number` to connect to. Each service dedicates a specific port number to listen on. Think of the `ip` as the address of a building and the `port number` as the apartment number or the office number. Port numbers for services can be between 1 and 65535, but are typically less than 1024. For instance `http` is `80` while `https` is `443`.
   - What service are we talking about (web, email, etc)
   - How does the server know? PORTS
   - Unencrypted web is port 80
@@ -40,6 +42,8 @@
 - How do we connect to one of these ports?
   - Try it like the browser does!
   - Use the tool: `telnet`
+    - Mac OS: `brew install telnet`
+    - Linux: likely already installed
   - Now that we are connected, how do we talk?
   - http protocol
     - [documented](https://tools.ietf.org/html/rfc2616)
