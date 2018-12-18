@@ -86,6 +86,8 @@ Week Goal: Build a RESTful API that is backed by an ORM and a database
 - Lecture:
   - Intro to APIs
   - Expanding on REST
+  - Ruby lecture on [introduction to rails](./full-stack-i/lecture/ruby/intro-to-rails)
+  - [Rails cheatsheet](./full-stack-i/lecture/ruby/rails-cheatsheet)
 - Homework:
   - Build API around the project from last night
 
