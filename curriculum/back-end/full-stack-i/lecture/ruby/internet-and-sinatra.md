@@ -152,7 +152,7 @@
 
 - Combining `SQL` + `activerecord` + `sinatra`
 - Lets add the 'activerecord' gem to our sinatra app
-- `require 'activerecord'`
+- `require 'active_record'`
 - Lets create a database:
 
   ```sh
@@ -168,6 +168,9 @@
 - Lets update our app to show us the jokes in our database
 
   ```ruby
+  require 'active_record'
+  require 'sinatra'
+  require 'sinatra/json'
 
   ActiveRecord::Base.establish_connection(
     adapter: "postgresql",
