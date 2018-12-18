@@ -88,7 +88,7 @@
 ## Sinatra
 
 - Gem for producing web applications
-- Install with `gem install sintra sinatra-contrib`
+- Install with `gem install sinatra sinatra-contrib`
 
 - Initial sinatra (hello world) app
 
