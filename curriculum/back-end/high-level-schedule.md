@@ -16,8 +16,8 @@ Week Goal: Learn the new Languages
   - Dev env setup,
   - See [Ruby Lecture Notes](./full-stack-i/lecture/ruby/intro-to-ruby)
 - Homework:
-  - Explain technical idea to some one non-technical (blog)
-  - Create a simple console program to prove env is set up
+  - [Assignment](./full-stack-i/assignments/a-whole-new-world/welcome-to-a-new-language.origin)
+  - [Assignment with capstone wireframes](./full-stack-i/assignments/a-whole-new-world/welcome-to-a-new-language.wireframes)
 
 ### Lecture 2
 - Lecture:
@@ -27,16 +27,8 @@ Week Goal: Learn the new Languages
 - Ruby Lecture
   - See [Enumerable](./full-stack-i/lecture/ruby/enumerable)
   - See [notes](./full-stack-i/lecture/ruby/classes)
-    - Classes
-      - Initializer
-      - Instance variables
-      - Instance methods
-      - Creating object instances
-      - Calling methods
-      - Idea of `self`
-      - Class methods
 - Homework:
-  - Koans
+  - [Koans](./full-stack-i/assignments/koans)
 
 ### Lecture 3
 - Lecture:
@@ -44,7 +36,7 @@ Week Goal: Learn the new Languages
   - Set up development environment
   - See [lecture](./full-stack-i/lecture/sql/intro-to-sql)
 - Homework:
-  - Create a database, and write SQL queries against it
+  - [Create a database, write SQL queries](./full-stack-i/assignments/welcome-to-sql)
 
 ### Lecture 4
 - Lecture:
