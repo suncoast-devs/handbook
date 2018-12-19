@@ -1,20 +1,20 @@
 
-## What is Prework?
+## What is Pre-work?
 
-Prework is a series of articles, videos, blogs and other useful information designed to set you up for success at Suncoast Developers Guild. In addition to setting context, this will help start your journey on the right path and help frame what and how you will be learning.
+Pre-work is a series of articles, videos, blogs and other useful information designed to set you up for success at Suncoast Developers Guild. In addition to setting context, this will help start your journey on the right path and help frame what and how you will be learning.
 
-## Why does Prework Help?
+## Why does Pre-work Help?
 
-Starting learning before the program is like training for a marathon. You don't show up the day of the race and start; you need to train beforehand. In our program, your brain is the muscle that needs to prepare. This prework is training for your mind.
+Starting learning before the program is like training for a marathon. You don't show up the day of the race and start; you need to train beforehand. In our program, your brain is the muscle that needs to prepare. This pre-work is training for your mind.
 
 Ideally, when the program begins, you'll hear concepts for a second time. The plan is, the 2nd time you learn it, it sticks. And by the third time you learn it, you're able to teach it.  That means you should be reviewing, learning and playing with the material before day 1. 
 
 
-## What won't the Prework do for you
+## What won't the Pre-work do for you
 
-Prework only covers the basics; What we teach goes much more in-depth than tutorials can cover. Prework is not designed to try to explain everything about web development. We use it to establish context and a shared language to jump-start the learning process.
+Pre-work only covers the basics; What we teach goes much more in-depth than tutorials can cover. Pre-work is not designed to try to explain everything about web development. We use it to establish context and a shared language to jump-start the learning process.
 
-Prework, and also the curriculum, is not the single source of truth to get started. The information for all of our technologies is out there, available to all. We love this, embrace it, and encourage you to learn both inside and outside the class.
+Pre-work, and also the curriculum, is not the single source of truth to get started. The information for all of our technologies is out there, available to all. We love this, embrace it, and encourage you to learn both inside and outside the class.
 
 ## This Curriculum
 
