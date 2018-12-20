@@ -1,15 +1,5 @@
 # Introduction to Rails
 
-- Rails is [Omakase](http://david.heinemeierhansson.com/2012/rails-is-omakase.html)
-- Dramatic Reading of [Rails is Omakase](https://www.youtube.com/watch?v=E99FnoYqoII)
-- Rails blog in [15-ish minutes](https://www.youtube.com/watch?v=Gzj723LkRJY)
-- Rails Guide [sections 1,2,3,4,5](http://guides.rubyonrails.org/getting_started.html)
-- Rails [application structure](https://gorails.com/episodes/rails-application-structure)
-- Rails param hash [explained](https://gorails.com/episodes/the-params-hash)
-- MVC [explained](https://www.youtube.com/watch?v=3mQjtk2YDkM)
-- Sending data between [controller and views](https://gorails.com/episodes/sending-data-between-controllers-and-views)
-- Ruby symbols [explained](https://www.youtube.com/watch?v=mBXGBbEbXZY)
-
 
 Core concepts:
 - Routes
@@ -51,15 +41,17 @@ Core concepts:
 - Authentication
   - see authentication.md
 
-# How to start a new rails app
+# API mode apps
+
+## How to start a new rails app
 
 - When we run `rails new` it will create a folder for our project, so before running it, `cd` to a directory you want to be the _PARENT_ directory.
-  - e.g. `cd ~/tiy/week-9/day-1`
+  - e.g. `cd ~/sdg/week-9/day-1`
 - Then create your rails app
-  - `rails new amazingapp`
-  - Answer any questions the rails template asks
-  - e.g. my template will ask if you prefer `HAML` and if you automatically want a github project setup (it does `git init`, creates a first commit, and pushes it to github for you!!!)
-- Rails always creates a *NEW DIRECTROY* to store our application in.
+  - `rails new --skip-spring --database postgresql --api amazingapp`
+    - `--skip-spring` turns off a feature that attempts to make the app start faster, but often causes us problems, so we'll skip it in the beginning
+    - `--database postgresql` says to use our postgress database as the default (normally `sqlite`)
+    - `--api` says we are making an API only app (no HTML views)
 - `rails new` created a directory `amazingapp` so we have to change directory to it
   - `cd amazingapp`
 - First thing we do when creating a rails app, cloning it, or pulling down code (maybe from a coworker or co-student) is update our gems:
@@ -68,8 +60,7 @@ Core concepts:
   - `rails db:create`
 - Now we can start coding!
 
-
-# Creating `scaffold`s
+## Creating `scaffold`s
 - Identify the `model` you want to create
   - What is the real-world or abstract thing you are trying to manage the data for?
   - e.g. is it sports `teams`, or `employees`, or if it was an app for managing a theater, it is `shows`
@@ -88,9 +79,9 @@ Core concepts:
       - title
       - genre
       - performance_date
-- When you have all the attributes you can use a `rails generator` to create the model, the migration, the controller, and the view
+- When you have all the attributes you can use a `rails generator` to create the model, the migration, the controller. If this wasn't an API mode app, it would also create the views
   - `scaffold` generate a generic template for each of these.
-  - Usually these need to be modifed (specifically the `views`) to fit your needs.
+  - Usually these need to be modified (specifically the `views`) to fit your needs.
   - Each of these could be created manually, or with other generators.
 - Command examples:
   - `rails generate scaffold team name:string description:string sport:string mascot:string`
@@ -117,7 +108,13 @@ Core concepts:
   - This will create the new table representing the new model
 - Run the application
 
-# Creating _static_ pages
+# Non-API mode
+
+## Creating an app with HTML, CSS, and JS views
+
+- TODO
+
+## Creating _static_ pages
 - What if you just want a static page, perhaps a landing page, or an _about_ page?
 - We need at least the `controller` and `view` parts (and maybe a model if we have some data to show)
 - We can generate a controller with some actions (and views) with another generator command:
@@ -143,3 +140,5 @@ Core concepts:
 - This still needs to be customized based on the application you are creating.
 - Bootstrap does not remove the need to apply styling to your application!
 
+# Additional Ruby / Rails Resources
+- See the [Resources](../../../../../resources/) section

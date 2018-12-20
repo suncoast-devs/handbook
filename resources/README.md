@@ -9,6 +9,8 @@ draft: true
 
 ## [Basic Git Merge Instructions](./basic-git-merge)
 
+## [Additional Ruby / Rails Resources](./additional-rails-resources)
+
 ## [Books to read](./books-to-read)
 
 ## [How the Internet Works](./security-now-must-watch)
