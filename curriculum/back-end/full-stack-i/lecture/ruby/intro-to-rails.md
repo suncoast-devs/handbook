@@ -108,6 +108,21 @@ Core concepts:
   - This will create the new table representing the new model
 - Run the application
 
+## Rails and CORS
+
+- Add `rack-cors` to the `Gemfile` and run `bundle install`
+
+- Edit `application.rb` and add the following
+
+```ruby
+config.middleware.insert_before 0, Rack::Cors do
+  allow do
+     origins '*'
+     resource '*', headers: :any, methods: [:get, :post, :put, :delete, :options]
+   end
+end
+```
+
 # Non-API mode
 
 ## Creating an app with HTML, CSS, and JS views
