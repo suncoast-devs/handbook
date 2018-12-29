@@ -1,5 +1,5 @@
 # "React: Part I"
 
-- [Assignments](./assignments/)
-- [Warm-ups](./warm-ups/)
-- [Lecture Notes](./lecture-notes/)
+- [Assignments](/handbook/curriculum/front-end/react-i/assignments)
+- Warm-ups
+- [Lecture Notes](/handbook/curriculum/front-end/react-i/lecture-notes)

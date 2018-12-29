@@ -8,7 +8,7 @@ Terminal.app is the application that allows us to run our `shell` -- the default
 
 #### Why
 
-A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](../skills/command-line)
+A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](/handbook/skills/command-line)
 
 ### How
 
@@ -139,12 +139,7 @@ Git is how we will be managing our files and sharing code between each other. It
 
 #### How
 
-<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
-=======
-In your terminal Run :
-
-> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install git
@@ -199,12 +194,7 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 
 #### How
 
-<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
-=======
-In your terminal run:
-
-> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install hub

@@ -17,4 +17,4 @@ Go [here](https://join.slack.com/t/sdg-sa/shared_invite/enQtMjU3MzIwNTQ0MDA3LTJk
 
 We also recommend downloading the app for your smartphone (if you have one)
 
-[Next](./08-first-check-in)
+[Next](/handbook/prework/08-first-check-in)

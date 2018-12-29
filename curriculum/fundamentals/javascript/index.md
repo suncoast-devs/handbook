@@ -1,27 +1,27 @@
 # An Introduction to JavaScript
 
-## [Warm-ups](./warm-ups/)
+## [Warm-ups](/handbook/curriculum/fundamentals/javascript/warm-ups)
 
-## [Introduction to JS](./lectures/introduction-to-js)
+## [Introduction to JS](/handbook/curriculum/fundamentals/javascript/lectures/introduction-to-js)
 
-### [assignment](./assignments/scoreboard)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/scoreboard)
 
-## [Adding/modifying the DOM](./lectures/modify-the-dom)
+## [Adding/modifying the DOM](/handbook/curriculum/fundamentals/javascript/lectures/modify-the-dom)
 
-### [assignment](./assignments/roshambo)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/roshambo)
 
-## [More about Objects / Array Enumeration](./lectures/enumeration)
+## [More about Objects / Array Enumeration](/handbook/curriculum/fundamentals/javascript/lectures/enumeration)
 
-### [assignment](./assignments/blackjack)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/blackjack)
 
-## [Fetching Data From Remote Servers](./lectures/fetching-data)
+## [Fetching Data From Remote Servers](/handbook/curriculum/fundamentals/javascript/lectures/fetching-data)
 
-### [assignment](./assignments/weather-api)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/weather-api)
 
-## [Classes - Abstraction and Reuse](./lectures/abstraction-and-reuse)
+## [Classes - Abstraction and Reuse](/handbook/curriculum/fundamentals/javascript/lectures/abstraction-and-reuse)
 
-### [assignment](./assignments/weather-oop)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/weather-oop)
 
-## [Event Loop](../lectures/event-loop)
+## [Event Loop](/handbook/curriculum/fundamentals/javascript/lectures/event-loop)
 
-### [assignment](./assignments/tic-tac-toe)
+### [assignment](/handbook/curriculum/fundamentals/javascript/assignments/tic-tac-toe)

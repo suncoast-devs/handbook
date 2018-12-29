@@ -1,15 +1,15 @@
 # Building Simple Web Pages
 
-## [Basic HTML](../lectures/day-01)
+## [Basic HTML](/handbook/curriculum/fundamentals/static-sites/lectures/day-01)
 
 ---
 
-## [Styling Basics](../lectures/day-02)
+## [Styling Basics](/handbook/curriculum/fundamentals/static-sites/lectures/day-02)
 
 ---
 
-## [Layout and Navigation](../lectures/day-03)
+## [Layout and Navigation](/handbook/curriculum/fundamentals/static-sites/lectures/day-03)
 
 ---
 
-## [Responsive Design](../lectures/day-04)
+## [Responsive Design](/handbook/curriculum/fundamentals/static-sites/lectures/day-04)

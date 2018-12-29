@@ -1,3 +1,3 @@
 # "React: Part II"
 
-- [Assignments](./assignments/)
+- [Assignments](/handbook/curriculum/front-end/react-ii/assignments)

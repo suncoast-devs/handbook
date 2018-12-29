@@ -162,4 +162,4 @@ end
 
 ## Additional Ruby / Rails Resources
 
-- See the [Resources](../../../../../resources/) section
+- See the [Resources](/handbook/resources) section

@@ -60,4 +60,4 @@ React way:
 ##### Today's work
 
 - Demo: Convert Score Board
-- Assignment: [Color Picker](../assignments/color-picker)
+- Assignment: [Color Picker](/handbook/curriculum/front-end/react-i/assignments/color-picker)

@@ -1,19 +1,19 @@
 # Additional Resources
 
-## [Online Resources](./online-resources)
+## [Online Resources](/handbook/resources/online-resources)
 
-## [Podcasts](./podcasts)
+## [Podcasts](/handbook/resources/podcasts)
 
-## [Basic Git Merge Instructions](./basic-git-merge)
+## [Basic Git Merge Instructions](/handbook/resources/basic-git-merge)
 
-## [Additional Ruby / Rails Resources](./additional-rails-resources)
+## [Additional Ruby / Rails Resources](/handbook/resources/additional-rails-resources)
 
-## [Books to read](./books-to-read)
+## [Books to read](/handbook/resources/books-to-read)
 
-## [How the Internet Works](./security-now-must-watch)
+## [How the Internet Works](/handbook/resources/security-now-must-watch)
 
-## [Super amazing animated gif prompt](./super-amazing-animated-shell-prompt)
+## [Super amazing animated gif prompt](/handbook/resources/super-amazing-animated-shell-prompt)
 
-## [Videos](./videos)
+## [Videos](/handbook/resources/videos)
 
-## [What happens when you enter a URL in the browser](./what-happens-when-enter-url-in-browser)
+## [What happens when you enter a URL in the browser](/handbook/resources/what-happens-when-enter-url-in-browser)

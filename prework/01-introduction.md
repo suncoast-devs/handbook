@@ -35,4 +35,4 @@ Don't forget that the cadence at a micro-level – not just the macro – is als
 
 Following these paradigms, we will work through lots of exercises and challenges throughout most lectures, and follow an objective-based path that keeps us focused and productive.
 
-[Next](./02-housekeeping)
+[Next](/handbook/prework/02-housekeeping)

@@ -4,4 +4,4 @@ Please take time to read through and understand the [program catalog](https://su
 
 Once you have read it, you _must_ fill out [this short survey](https://goo.gl/forms/eX4dqLnwYMJCNhtw1).
 
-[Next](./04-journey)
+[Next](/handbook/prework/04-journey)

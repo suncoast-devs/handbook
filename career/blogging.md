@@ -23,6 +23,6 @@
 
 ## Share it far and wide
 
-[Blogging is the New Resume](./assets/blogging-is-the-new-resume.pdf)
+[Blogging is the New Resume](/handbook/career/assets/blogging-is-the-new-resume.pdf)
 
-[Access the slide presentation](./assets/blogging.pdf)
+[Access the slide presentation](/handbook/career/assets/blogging.pdf)

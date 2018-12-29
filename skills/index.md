@@ -4,12 +4,12 @@
 
 ## Soft Skills
 
-### [Your Health](./health)
+### [Your Health](/handbook/skills/health)
 
-### [Stress Management](./stress)
+### [Stress Management](/handbook/skills/stress)
 
 ## Hard Skills
 
-### [Algorithms](./algorithms)
+### [Algorithms](/handbook/skills/algorithms)
 
-### [Problem Solving](./problem-solving)
+### [Problem Solving](/handbook/skills/problem-solving)

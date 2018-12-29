@@ -4,4 +4,4 @@ Take a minute to answer [some preliminary questions](https://goo.gl/forms/Moic42
 
 This helps us to see how you are progressing through the pre-work.
 
-[Next](./09-prework)
+[Next](/handbook/prework/09-prework)

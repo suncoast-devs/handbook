@@ -12,4 +12,4 @@ You are about to enter a time of intense mindset growth. Being aware of fixed mi
 
 Read [Fixed vs. Growth: The Two Basic Mindsets That Shape Our Lives](http://www.brainpickings.org/2014/01/29/carol-dweck-mindset/)
 
-[Next](./07-accounts)
+[Next](/handbook/prework/07-accounts)

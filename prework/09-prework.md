@@ -36,4 +36,4 @@ Ruby is a dynamic and flexible language that excels at creating robust websites 
 
 - [LearnRubyOnline.org](https://www.learnrubyonline.org/)
 
-[Next](./10-wrap-up)
+[Next](/handbook/prework/10-wrap-up)

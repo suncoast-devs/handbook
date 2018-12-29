@@ -1,6 +1,6 @@
 # Web Development Fundamentals
 
-## [Building Static Sites](./static-sites/)
+## [Building Static Sites](/handbook/curriculum/fundamentals/static-sites)
 
 ### HTML
 
@@ -18,7 +18,7 @@ By linking your HTML page up with a set of CSS rules, you can make your website 
 
 Often we will use a hybrid approach, telling this section to look like this and this other section over here to have brighter text and a shadowy backdrop.
 
-## [An Introduction to JavaScript](./javascript/)
+## [An Introduction to JavaScript](/handbook/curriculum/fundamentals/javascript)
 
 Javascript is what allows us to make a webpage move and think. If HTML is the bones, and CSS is the skin and hair, then JavaScript is the muscles, the heart, and the brain.
 

@@ -40,4 +40,4 @@ During your time here, you will be asked to communicate technical ideas in vario
 
 Writing, speaking and talking about code, being a developer, a tool you are using, and so forth gives you leverage and knowledge. You learn to put into words what you know, what you don't know, how you emotionally feel and how you can brand yourself. Those thoughts, ideas, and takeaways are in essence "pre-meditated" and prepared so that when you rub shoulders with and interview with, employers, clients, and customers, you have something eloquent enough to deliver, and memorable enough to recall
 
-[Next](./05-career-paths)
+[Next](/handbook/prework/05-career-paths)

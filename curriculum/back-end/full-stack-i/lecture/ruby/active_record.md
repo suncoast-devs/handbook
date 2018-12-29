@@ -83,7 +83,7 @@ end
 
 ## Database setup
 
-- Step 1: Make sure you have these tables created. You likely have these created if you have previously followed [this lesson](../sql/intro-to-joins)
+- Step 1: Make sure you have these tables created. You likely have these created if you have previously followed [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
 
 ```sql
 CREATE TABLE movies (
@@ -114,7 +114,7 @@ CREATE TABLE cast_members (
 );
 ```
 
-- Step 2: See [this lesson](../sql/intro-to-joins) for `INSERT INTO` statements to populate the database
+- Step 2: See [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins) for `INSERT INTO` statements to populate the database
 
 ## Install the Active Record gem
 

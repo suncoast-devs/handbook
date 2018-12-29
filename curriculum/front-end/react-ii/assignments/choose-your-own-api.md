@@ -2,7 +2,7 @@
 
 In this assignment, you'll build a front end for an API of your choice
 
-![Snowman](./assets/snowman.gif)
+![Snowman](/handbook/curriculum/front-end/react-ii/assignments/assets/snowman.gif)
 
 ## Objectives
 

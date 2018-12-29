@@ -23,7 +23,7 @@ General Rules:
 
 ### Assets
 
-- Find a set of card images [here](./assets/cards.zip)
+- Find a set of card images [here](/handbook/curriculum/fundamentals/javascript/assignments/assets/cards.zip)
 - Make an `images` folder in your project
 - Extract that `cards.zip` file and then copy/move the extracted images into your project's `images` folder
 - Note that the names of the images are of the form _face_ of _suit_.svg (without the spaces)

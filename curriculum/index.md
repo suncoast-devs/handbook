@@ -2,8 +2,8 @@
 
 TODO: A high level overview of our Web Development curriculum.
 
-## [Web Development Fundamentals](./fundamentals/)
+## [Web Development Fundamentals](/handbook/curriculum/fundamentals)
 
-## [Front-end Frameworks](./front-end/)
+## [Front-end Frameworks](/handbook/curriculum/front-end)
 
-## [Back-end Frameworks](./back-end/)
+## [Back-end Frameworks](/handbook/curriculum/back-end)

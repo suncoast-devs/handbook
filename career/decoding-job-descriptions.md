@@ -53,4 +53,4 @@
 
 ![](./assets/indeed.png)
 
-[Access the slide presentation](./assets/decoding-job-descriptions.pdf)
+[Access the slide presentation](/handbook/career/assets/decoding-job-descriptions.pdf)

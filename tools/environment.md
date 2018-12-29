@@ -40,7 +40,7 @@ VS Code is a extendable lightweight editor that allows us to see what is going o
 
 After [downloading VS Code](https://code.visualstudio.com), double-click the ZIP file to extract the application. Then drag the VS Code icon to our Applications folder.
 
-See setup instructions here under `VS Code`: [Editors](./editors)
+See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 
 ### Atom
 
@@ -56,7 +56,7 @@ Atom is a extendable, customizable editor that allows developers to grow with th
 
 Download [Atom](https://atom.io/) and follow the instructions.
 
-See setup instructions here under `Atom`: [Editors](./editors)
+See setup instructions here under `Atom`: [Editors](/handbook/tools/editors)
 
 ## Editor Fonts
 
@@ -81,12 +81,12 @@ See setup instructions here under `Atom`: [Editors](./editors)
 
 #### Database Setup
 
-See [here](./postgresql)
+See [here](/handbook/tools/postgresql)
 
 ### Mac and Windows Specific Setup
 
-Mac OS users continue [here](./environment-mac)
+Mac OS users continue [here](/handbook/tools/environment-mac)
 
-Windows users continue [here](./environment-windows)
+Windows users continue [here](/handbook/tools/environment-windows)
 
-Windows Subsystem For Linux users continue [here](./environment-linux-subsystem-windows)
+Windows Subsystem For Linux users continue [here](/handbook/tools/environment-linux-subsystem-windows)
