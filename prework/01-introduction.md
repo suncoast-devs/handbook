@@ -21,7 +21,7 @@ Pre-work, and also the curriculum, is not the single source of truth to get star
 We aim to create "T" based developers -- people with both breadth of knowledge, as well as a depth of knowledge in a particular area.
 This curriculum is organized at a high-level by the Bipolar Learning Graph:
 
-<div style="text-align:center"><img src ="./assets/Screen_Shot_2016-02-06_at_11.57.49_AM.png" style="width:75%" /></div>
+<div style="text-align:center"><img src ="./assets/bipolar-learning-graph.png" style="width:75%" /></div>
 
 There are roughly eight-time units on the graph. So if your timeline is 12 weeks, each milestone is approximately 1.5 weeks. So the process of learning to code might look like: 
 
