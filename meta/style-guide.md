@@ -1,5 +1,5 @@
----
-title: Style Guide
+# Style Guide
+
 ---
 
 This is a work-in-progress style guide for authoring content in this handbook.

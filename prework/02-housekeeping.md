@@ -1,4 +1,4 @@
-### Housekeeping
+# Housekeeping
 
 Please fill out this short form with your emergency contact, food allergies, medical conditions, and other vital items.
 

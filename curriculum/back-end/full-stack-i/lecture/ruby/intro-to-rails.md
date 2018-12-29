@@ -1,7 +1,7 @@
 # Introduction to Rails
 
-
 Core concepts:
+
 - Routes
 - Controller actions
 - Rails uses the `REST` architecture style for organizing our controllers
@@ -12,38 +12,40 @@ Core concepts:
   - Rails will generate, if we specify `resources :teams` in our `routes.rb` a set of routes for us to perform all the `CRUD` actions.
   - Those routes are:
 
-| Purpose                                    | Verb     | URL               | Action     | Path helper                                      | Template name           |
-|--------------------------------------------|----------|-------------------|------------|--------------------------------------------------|-------------------------|
-| Showing list of teams                      | `GET`    | `/teams`          | `index`    | `teams_path` or `teams_url`                      | `views/teams/index.erb` |
-| Showing HTML form for creating a new team  | `GET`    | `/teams/new`      | `new`      | `new_team_path` or `new_team_url`                | `views/teams/new.erb`   |
-| Creating a new team                        | `POST`   | `/teams`          | `create`   | `team_path` or `team_url`                        | `none, code redirects`  |
-| Show a specific team                       | `GET`    | `/teams/:id`      | `show`     | `team_path(team)` or `teams_url(team)`           | `views/teams/show.erb`  |
-| Show an edit page for a team               | `GET`    | `/teams/:id/edit` | `edit`     | `edit_team_path(team)` or `edit_team_path(team)` | `views/teams/edit.erb`  |
-| Update a specific team                     | `PUT`    | `/teams/:id`      | `update`   | `team_path(team)` or `teams_url(team)`           | `none, code redirects`  |
-| Delete a specific team                     | `DELETE` | `/teams/:id`      | `destroy`  | `team_path(team)` or `teams_url(team)`           | `none, code redirects`  |
+| Purpose                                   | Verb     | URL               | Action    | Path helper                                      | Template name           |
+| ----------------------------------------- | -------- | ----------------- | --------- | ------------------------------------------------ | ----------------------- |
+| Showing list of teams                     | `GET`    | `/teams`          | `index`   | `teams_path` or `teams_url`                      | `views/teams/index.erb` |
+| Showing HTML form for creating a new team | `GET`    | `/teams/new`      | `new`     | `new_team_path` or `new_team_url`                | `views/teams/new.erb`   |
+| Creating a new team                       | `POST`   | `/teams`          | `create`  | `team_path` or `team_url`                        | `none, code redirects`  |
+| Show a specific team                      | `GET`    | `/teams/:id`      | `show`    | `team_path(team)` or `teams_url(team)`           | `views/teams/show.erb`  |
+| Show an edit page for a team              | `GET`    | `/teams/:id/edit` | `edit`    | `edit_team_path(team)` or `edit_team_path(team)` | `views/teams/edit.erb`  |
+| Update a specific team                    | `PUT`    | `/teams/:id`      | `update`  | `team_path(team)` or `teams_url(team)`           | `none, code redirects`  |
+| Delete a specific team                    | `DELETE` | `/teams/:id`      | `destroy` | `team_path(team)` or `teams_url(team)`           | `none, code redirects`  |
 
 - Forms
+
   - Leverage many rails helpers.
   - `form_for(@team)` knows if this is creating a team, or updating a team.
     - How does it know? There is a `persisted?` method that tells us if this is saved or not
 
 - `HAML`
+
   - Alternative to ERB, achieves the same goal (generating HTML) but reduces syntax overhead
   - [Core Principles](http://haml.info/about.html)
     - Markup Should be Beautiful
     - Markup Should be DRY
     - Markup Should be Well-Indented
     - HTML Structure Should be Clear
-  - *HIGHLY* indentation dependent, indentation is _everything_ in HAML as it determines when tags end.
+  - _HIGHLY_ indentation dependent, indentation is _everything_ in HAML as it determines when tags end.
   - Also see `slim` if `haml` is _too much syntax_ for you. :grin:
   - [Documentation](http://haml.info)
 
 - Authentication
   - see authentication.md
 
-# API mode apps
+## API mode apps
 
-## How to start a new rails app
+### How to start a new rails app
 
 - When we run `rails new` it will create a folder for our project, so before running it, `cd` to a directory you want to be the _PARENT_ directory.
   - e.g. `cd ~/sdg/week-9/day-1`
@@ -56,11 +58,12 @@ Core concepts:
   - `cd amazingapp`
 - First thing we do when creating a rails app, cloning it, or pulling down code (maybe from a coworker or co-student) is update our gems:
   - `bundle`
-- Since this a *new* app we will create the databases
+- Since this a _new_ app we will create the databases
   - `rails db:create`
 - Now we can start coding!
 
-## Creating `scaffold`s
+### Creating `scaffold`s
+
 - Identify the `model` you want to create
   - What is the real-world or abstract thing you are trying to manage the data for?
   - e.g. is it sports `teams`, or `employees`, or if it was an app for managing a theater, it is `shows`
@@ -108,7 +111,7 @@ Core concepts:
   - This will create the new table representing the new model
 - Run the application
 
-## Rails and CORS
+### Rails and CORS
 
 - Add `rack-cors` to the `Gemfile` and run `bundle install`
 
@@ -123,18 +126,19 @@ config.middleware.insert_before 0, Rack::Cors do
 end
 ```
 
-# Non-API mode
+## Non-API mode
 
-## Creating an app with HTML, CSS, and JS views
+### Creating an app with HTML, CSS, and JS views
 
 - TODO
 
-## Creating _static_ pages
+### Creating _static_ pages
+
 - What if you just want a static page, perhaps a landing page, or an _about_ page?
 - We need at least the `controller` and `view` parts (and maybe a model if we have some data to show)
 - We can generate a controller with some actions (and views) with another generator command:
   - `rails generate controller Pages home about contact faq support`
-  - This will create a `PagesController with actions for `home`, `about`, `contact`, `faq`, and `support`
+  - This will create a `PagesController with actions for`home`,`about`,`contact`,`faq`, and`support`
   - It will also create the view files for these as well
   - It will also create entries in `routes.rb` to provide us paths to these actions and corresponding path/url helpers
 - How do we use these?
@@ -149,11 +153,13 @@ end
     - Now when we visit our app's root URI, we will be shown the `home` page of our app.
     - Typically you will style this as a landing page, or perhaps, in the case of a site like `reddit` or `hacker news` you just show a content page
 
-# Customizing views
+## Customizing views
+
 - The views the default Rails generators create are not very user friendly
 - I have setup your environments to use a bootstrap style set of generators to give a nicer default template
 - This still needs to be customized based on the application you are creating.
 - Bootstrap does not remove the need to apply styling to your application!
 
-# Additional Ruby / Rails Resources
+## Additional Ruby / Rails Resources
+
 - See the [Resources](../../../../../resources/) section

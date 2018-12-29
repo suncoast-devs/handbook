@@ -1,7 +1,4 @@
----
-title: Freelancing Resources & Pro Tips to Get Hired
-draft: true
----
+# Freelancing Resources & Pro Tips to Get Hired
 
 ## What is freelance?
 

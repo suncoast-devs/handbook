@@ -1,7 +1,4 @@
----
-title: Mac OS X - Setting up your Development Environment
-draft: true
----
+# Mac OS X - Setting up your Development Environment
 
 ### Terminal
 
@@ -142,7 +139,12 @@ Git is how we will be managing our files and sharing code between each other. It
 
 #### How
 
+<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
+=======
+In your terminal Run :
+
+> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install git
@@ -176,7 +178,12 @@ A command line tool to safely delete files by placing them in the _trash folder_
 
 #### How
 
+<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
+=======
+In your terminal run:
+
+> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install trash
@@ -197,11 +204,15 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 
 #### How
 
+<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
+=======
+In your terminal run:
+
+> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install hub
 ```
 
 ---
-

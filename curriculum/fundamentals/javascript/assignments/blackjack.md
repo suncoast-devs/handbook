@@ -1,7 +1,4 @@
----
-title: Blackjack
-draft: true
----
+# Blackjack
 
 In this project you will create a playable game of [Blackjack](https://en.wikipedia.org/wiki/Blackjack).
 
@@ -25,10 +22,11 @@ General Rules:
 - If either the house or the player bust, they lose.
 
 ### Assets
+
 - Find a set of card images [here](./assets/cards.zip)
 - Make an `images` folder in your project
 - Extract that `cards.zip` file and then copy/move the extracted images into your project's `images` folder
-- Note that the names of the images are of the form  _face_ of _suit_.svg (without the spaces)
+- Note that the names of the images are of the form _face_ of _suit_.svg (without the spaces)
 
 ### Explorer Mode
 

@@ -1,7 +1,4 @@
----
-title: Programming Languages
-draft: true
----
+# Programming Languages
 
 ## Mainstream (better title?)
 

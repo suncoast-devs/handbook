@@ -1,7 +1,4 @@
----
-title: "Explode"
-draft: true
----
+# "Explode"
 
 https://www.codewars.com/kata/digits-explosion
 

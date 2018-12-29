@@ -1,7 +1,4 @@
----
-title: Navigation
-draft: true
----
+# Navigation
 
 ## Navigation
 
@@ -10,4 +7,3 @@ draft: true
 ### Flexbox
 
 ### Group Activity: Flexbox Froggy
-

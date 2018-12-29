@@ -1,9 +1,6 @@
----
-title: Intro to Ruby Classes
-draft: true
----
+# Intro to Ruby Classes
 
-# Classes
+## Classes
 
 - Classes combine data (values) and behavior (methods) into one concept
 - `Class`es are the template that describes what data, and what behavior we have
@@ -62,7 +59,7 @@ end
 - New type of variable, the _instance_ variable, noted by
   the fact that it starts with an `@`
 - Every _isntance_ of a `Dog` has it's _own_ instance variables.
-- Now that we have an initialize method we *must* supply the age
+- Now that we have an initialize method we _must_ supply the age
   when creating each _instance_ of a Dog.
 
 ```
@@ -71,11 +68,11 @@ roscoe = Dog.new(7)
 ```
 
 - We also added a _behavior_ (method) to ask for the age of a `Dog`
-- `age` simply returns *this* `Dog` instances `@age` _instance_ variable.
+- `age` simply returns _this_ `Dog` instances `@age` _instance_ variable.
 - Thus the same behavior (knowing a `Dog`'s age) but different data (the
   actual age of the dog) results in different action.
 - `attr_accessor` allows us to shortcut the defining of methods to return
-  the value of the data (attribute) as well as *set* the value.
+  the value of the data (attribute) as well as _set_ the value.
 
 ```
 class Dog
@@ -96,7 +93,7 @@ riley.age = 2
 puts "Riley is now #{riley.age} years old, sounds like #{riley.sound} and is #{riley.red} in color"
 ```
 
-# Inheritance
+## Inheritance
 
 - Classes can have a `parent` class from which they gain all the data and behavior from but can extend with new data and behavior.
 

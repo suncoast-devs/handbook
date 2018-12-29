@@ -1,7 +1,4 @@
----
-title: "Challenge: Binary!"
-draft: true
----
+# "Challenge: Binary!"
 
 https://www.codewars.com/kata/ones-and-zeros
 

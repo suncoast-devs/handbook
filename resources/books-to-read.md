@@ -1,7 +1,4 @@
----
-title: Books to Read
-draft: true
----
+# Books to Read
 
 ## This is a great "career" book. It talks about the habits good developers have
 

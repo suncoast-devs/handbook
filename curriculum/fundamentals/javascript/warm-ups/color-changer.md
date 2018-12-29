@@ -1,7 +1,4 @@
----
-title: "Challenge: Random Color Changer"
-draft: true
----
+# "Challenge: Random Color Changer"
 
 ## Explorer
 

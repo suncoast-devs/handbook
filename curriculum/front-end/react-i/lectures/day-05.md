@@ -1,7 +1,4 @@
----
-title: Practice, practice, practice
-draft: true
----
+# Practice, practice, practice
 
 #### Day Five
 
@@ -11,4 +8,3 @@ draft: true
 
 - Group Demo: Team implement weekend assignment (Minesweeper)
 - Assignment: [Write a Blog](../assignments/recovery-blog)
-

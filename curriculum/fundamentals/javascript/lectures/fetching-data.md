@@ -1,7 +1,4 @@
----
-title: Fetching Data From Remote Servers
-draft: true
----
+# Fetching Data From Remote Servers
 
 - Promises, APIs, Fetch, JSON
   - [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
@@ -30,6 +27,7 @@ draft: true
     - pictures of cards
   - Let's get data from the outside world
 - `fetch` function
+
   - [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
   - Fetch takes as input
     - `URL` to access
@@ -38,7 +36,7 @@ draft: true
   - Example:
 
     ```javascript
-    fetch('https://swapi.co/api/people')
+    fetch("https://swapi.co/api/people");
     ```
 
   - This will access the _Star Wars API_ and fetch a list of people in the _Star Wars_ universe
@@ -57,18 +55,16 @@ draft: true
 
   - We cannot use this `promise` directly, we must "resolve" the promise
   - Think of a `promise` as an _IOU_
-  - A `promise` is an *asynchronous* _IOU_ that will a supplied function when the _IOU_ is ready to redeem.
+  - A `promise` is an _asynchronous_ _IOU_ that will a supplied function when the _IOU_ is ready to redeem.
   - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
     ```javascript
-    fetch('https://swapi.co/api/people').then(
-      (response) => {
-        console.log(response)
-      }
-    )
+    fetch("https://swapi.co/api/people").then(response => {
+      console.log(response);
+    });
     ```
 
-  - The response here is *still* not quite usable:
+  - The response here is _still_ not quite usable:
 
     ```javascript
       Response {type: "cors", url: "https://swapi.co/api/people/", redirected: true, status: 200, ok: true, …}
@@ -83,19 +79,17 @@ draft: true
       url: "https://swapi.co/api/people/"
     ```
 
-  - This is because the response *body* itself must be _converted_ into a form we can use.  The response from `SWAPI` is a `JSON` response
+  - This is because the response _body_ itself must be _converted_ into a form we can use. The response from `SWAPI` is a `JSON` response
   - Fortunately, the `response` object gives us a method to gain access to the JSON:
 
     ```javascript
-    fetch('https://swapi.co/api/people').then(
-      (response) => {
-        return response.json()
-      }
-    ).then(
-      (json) => {
-         console.log(json)
-      }
-    )
+    fetch("https://swapi.co/api/people")
+      .then(response => {
+        return response.json();
+      })
+      .then(json => {
+        console.log(json);
+      });
     ```
 
   - This returns usable information!

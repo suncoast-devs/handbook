@@ -1,6 +1,3 @@
----
-title: "Challenge: Intro to Code Wars"
-draft: true
----
+# "Challenge: Intro to Code Wars"
 
 https://www.codewars.com/kata/opposites-attract

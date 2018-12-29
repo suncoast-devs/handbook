@@ -1,12 +1,10 @@
----
-title: Hello, react
-draft: true
----
+# Hello, react
 
-#### Day One - Hello, react
+## Day One - Hello, react
 
 - react name origin: reacts to its environment
 - create-react-app (ADD TIME)
+
   - tool built by developers at Facebook to help you build React applications.
   - It saves you from time-consuming setup and configuration. Simply run create-react-app command to create and start a new react project.
   - `create-react-app name-of-your-app`
@@ -49,7 +47,7 @@ draft: true
          // these components need to exist, either within the same page or as separate files and imported to the page
           <Header />
           <Articles />
-          <Footer/>  
+          <Footer/>
         </div>
         )
     }
@@ -59,8 +57,10 @@ draft: true
   export default App;
 
   ```
-- to add class, use `className` (approx 01:05:20)  
-  - `<div className="all-main-content"> ... </div>`  
+
+- to add class, use `className` (approx 01:05:20)
+
+  - `<div className="all-main-content"> ... </div>`
 
 - [Props](https://reactjs.org/docs/components-and-props.html)
   (approx 01:12:10)
@@ -97,9 +97,10 @@ draft: true
   export default Articles;
 
   ```
+
   - Article.js
 
-    - `this.props.title` will render out each title property in Articles component  ("Gavin can't spell Article", "What is wrong with Gavin", "Sending Gavin back to school", "React is cool" )
+    - `this.props.title` will render out each title property in Articles component ("Gavin can't spell Article", "What is wrong with Gavin", "Sending Gavin back to school", "React is cool" )
     - `this.props.content` will render out each content property in Articles component as `this.props.title` did with title property
     - You can create unlimited different articles using Article component
 
@@ -125,6 +126,7 @@ draft: true
 
     export default Article;
     ```
+
 - importing Props data from somewhere else
   (approx 01:24:00)
 
@@ -162,7 +164,8 @@ draft: true
   export default Articles;
   ```
 
-- [Array.map] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview) review (approx 1:32:25)
+- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview) review (approx 1:32:25)
+
   - The map() method creates a new array with the results of calling a provided function on every element in the calling array.
 
   ```
@@ -187,9 +190,9 @@ draft: true
     // element -> tacoTuesday
     data.map(tacoTuesday => {
       return `Hello ${tacoTuesday.title} your content is ${tacoTuesday.content}`
-      })  
+      })
 
-    // Both will return the same thing  
+    // Both will return the same thing
 
   -> ['Hello Gavin can\'t spell Article your content is Gavin can\'t type on a Monday. That's why',
       'Hello What is wrong with Gavin your content is Gavin is tired this morning']
@@ -233,12 +236,15 @@ draft: true
 
   export default Articles;
   ```
-#### React is declarative  
-  (approx 1:42:00)
-  - React is declarative  functional reactive style programming
-      - Page will `react` to the data
 
-##### Today's work
+## React is declarative
+
+(approx 1:42:00)
+
+- React is declarative functional reactive style programming
+  - Page will `react` to the data
+
+## Today's work
 
 - Class Demo: Adventure Time (Basic)
 - Suggested Assignment Focusing on Components: [Reactified Octocats](../assignments/reactified-octocats)

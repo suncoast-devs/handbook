@@ -1,7 +1,4 @@
----
-title: Setting up your Development Environment
-draft: true
----
+# Setting up your Development Environment
 
 ## Required Dev tools
 
@@ -15,7 +12,7 @@ Over the course the training you will be using a variety of tools. To get starte
 
 Slack will be our main form of communication. You will communicate with your instructors and SDG staff via Slack. You will get notifications of homework, links to resources, and be able to ask for help via Slack.
 
-Download it to you computer; if you have a smart phone, I *highly* recommend installing the app.
+Download it to you computer; if you have a smart phone, I _highly_ recommend installing the app.
 
 #### How:
 
@@ -23,7 +20,7 @@ Open your browser and navigate to: [https://slack.com/downloads](https://slack.c
 
 Open your phone's application store and install the mobile application and sign in at least once.
 
-You should have received an invitation to several Slack _Teams_ -- SDG maintains two main Slack Teams, one is for students and alumni *only* and the other is a general Tampa Bay community team that includes over 1,300 members.
+You should have received an invitation to several Slack _Teams_ -- SDG maintains two main Slack Teams, one is for students and alumni _only_ and the other is a general Tampa Bay community team that includes over 1,300 members.
 
 ### Editors / IDEs
 
@@ -70,9 +67,11 @@ See setup instructions here under `Atom`: [Editors](./editors)
 > A typeface designed for source code
 
 #### Mac Setup
+
 - `brew cask install caskroom/fonts/font-hack`
 
 #### Windows Setup
+
 - See the [setup instructions](https://github.com/source-foundry/Hack#windows)
 
 #### Editor Setup

@@ -1,7 +1,3 @@
----
-title: FizzBuzz, Again
-draft: true
---- 
-
+# FizzBuzz, Again
 
 Complete this take on a very common interview question https://www.codewars.com/kata/5889177bf148eddd150002cc

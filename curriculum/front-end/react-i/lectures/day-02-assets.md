@@ -1,25 +1,21 @@
-footer: © Suncoast Developers Guild
-slidenumbers: true
-theme: Titillium, 8
-
 # React Assets
 
 ---
 
-# Using `import` to load assets
+## Using `import` to load assets
 
 ---
 
-# React apps use Webpack
+## React apps use Webpack
 
 ---
 
-# Webpack is a tool for packaging assets
+## Webpack is a tool for packaging assets
 
 - JavaScript
 - JSON (JavaScript Object Notation)
-  -  a lightweight data-interchange format, representing javascript object in text
-  -  It is easy for humans to read and write. It is easy for machines to parse and generate
+  - a lightweight data-interchange format, representing javascript object in text
+  - It is easy for humans to read and write. It is easy for machines to parse and generate
 - Images
 - Fonts
 - CSS
@@ -37,7 +33,7 @@ theme: Titillium, 8
 ## When we import an image
 
 ```js
-import photo from './skywalker.png'
+import photo from "./skywalker.png";
 ```
 
 ##### We get a string representing the path to the image to use in code
@@ -77,4 +73,5 @@ render() {
   )
 }
 ```
+
 ---

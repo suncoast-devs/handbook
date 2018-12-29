@@ -1,18 +1,15 @@
----
-title: Setting up your Windows Development Environment
-draft: true
----
+# Setting up your Windows Development Environment
 
-# Installing the Linux Subsystem for Windows
+## Installing the Linux Subsystem for Windows
 
 The `Linux Subsystem for Windows` allows us to run all of the open source tools we would normally run on an OS X or Linux environment directly on your Windows 10 machine.
 
 The requirements are:
+
 - Windows 10
 - 64-Bit version of Windows 10
 
-
-## Step 0 - Install/Enable Windows Subsystem for Linux
+### Step 0 - Install/Enable Windows Subsystem for Linux
 
 - If you are comfortable in PowerShell, run this command
 
@@ -23,7 +20,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - If this succeeds, proceed to step 3
 - Otherwise, continue to step 1
 
-## Step 1 - Enable Developer Options
+### Step 1 - Enable Developer Options
 
 - Run `Settings` from the `Type here to search` bar
 - Then select `Update & Security`
@@ -38,7 +35,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 - Close the window
 
-## Step 2 - Install the Linux Subsystem
+### Step 2 - Install the Linux Subsystem
 
 - Run `Control Panel` from the `Type here to search` bar
 - Then select `Programs`
@@ -56,7 +53,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - Click OK
 - Close the window
 
-## Step 3 - Install Ubuntu
+### Step 3 - Install Ubuntu
 
 - Open a browser and navigate to `https://aka.ms/wslstore`
 
@@ -70,13 +67,13 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ![](./assets/ubuntu.png)
 
-## Step 4 - Run a bash shell
+### Step 4 - Run a bash shell
 
 ![](./assets/bash.png)
 
 - If it asks you to create a username and a password, choose a short username with no spaces and a new password
 
-## Step 5 - Install `chruby`
+### Step 5 - Install `chruby`
 
 ```sh
 cd
@@ -88,7 +85,7 @@ sudo make install
 sudo ./scripts/setup.sh
 ```
 
-## Step 6 - Install `ruby-install`
+### Step 6 - Install `ruby-install`
 
 ```sh
 cd
@@ -98,14 +95,14 @@ cd ruby-install-0.7.0/
 sudo make install
 ```
 
-## Step 7 - Install Ruby 2.5.3
+### Step 7 - Install Ruby 2.5.3
 
 ```sh
 cd
 ruby-install ruby-2.5.3
 ```
 
-## Step 8 - Make Ruby 2.5.3 your default
+### Step 8 - Make Ruby 2.5.3 your default
 
 ```sh
 cd
@@ -113,10 +110,9 @@ echo 'ruby-2.5.3' > ~/.ruby-version
 echo 'chruby ruby-2.5.3' | tee -a ~/.profile
 ```
 
-## Step 9 - Validate Ruby install
+### Step 9 - Validate Ruby install
 
 - Close your `bash` window
 - Start a new `bash` window
 - Type `ruby -v`
 - The output should include `2.5.3`
-

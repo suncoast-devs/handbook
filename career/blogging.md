@@ -1,7 +1,4 @@
----
-title: Blogging Tips & Tricks
-draft: true
----
+# Blogging Tips & Tricks
 
 ## Benefits of Blogging
 

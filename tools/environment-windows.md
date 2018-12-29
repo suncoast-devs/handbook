@@ -1,7 +1,4 @@
----
-title: Setting up your Development Environment
-draft: true
----
+# Setting up your Development Environment
 
 ### Node.js
 
@@ -89,7 +86,6 @@ Finally we will tell Git and GitHub to use the `https` protocol we will enter th
 ```sh
 git config --global hub.protocol https
 ```
-
 
 ### Hub
 

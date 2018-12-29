@@ -1,7 +1,4 @@
----
-title: Resumes & Cover Letters - Making the Connection
-draft: true
----
+# Resumes & Cover Letters - Making the Connection
 
 ## Resumes
 

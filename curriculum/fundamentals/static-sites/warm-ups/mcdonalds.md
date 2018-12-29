@@ -1,7 +1,4 @@
----
-title: "Challenge: Click on the Golden Arches"
-draft: true
----
+# "Challenge: Click on the Golden Arches"
 
 Recreate this amazing layout:
 

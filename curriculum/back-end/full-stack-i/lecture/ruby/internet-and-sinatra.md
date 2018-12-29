@@ -1,7 +1,9 @@
 # How does the web work
 
 ## Domains and Hosts
+
 - How does the browser know where to go when "suncoast.io" is requested?
+
   - Domain names, host names, TLDs
     - _Top Level Domains_ (TLDs) allocated by ICANN
     - Domains registered with a domain registrar
@@ -30,6 +32,7 @@
     - `localhost` resolves to `127.0.0.1`
 
 ## Making Connections
+
 - What happens after our computer resolves the address of a server?
   - Connect to a `service` over a `socket`
     - A service is something like 'http' or 'https', or email via 'pop3' or 'smtp', or our `postgres` database
@@ -49,6 +52,7 @@
     - [documented](https://tools.ietf.org/html/rfc2616)
 
 ### HTTP
+
 - GET a page
 
   ```
@@ -64,6 +68,7 @@
   - status codes (404 not found, 500 errors, ...)
   - https://http.cat
 - What are other HTTP headers?
+
   - `Date`
     _Timestamp on Server_
   - `Content-Type`
@@ -83,9 +88,9 @@
   - redirects to `https://amazon.com`
   - which redirects to `https://www.amazon.com`
 
-# Making our first web app
+## Making our first web app
 
-## Sinatra
+### Sinatra
 
 - Gem for producing web applications
 - Install with `gem install sinatra sinatra-contrib`
@@ -116,9 +121,7 @@
   end
   ```
 
-
-### Parsing parameters
-
+#### Parsing parameters
 
 - How can we send information to our application
 - Simplest way is via _query parameters_
@@ -152,7 +155,7 @@
   end
   ```
 
-### Lets put or jokes into a database
+#### Lets put or jokes into a database
 
 - Combining `SQL` + `activerecord` + `sinatra`
 - Lets add the 'activerecord' gem to our sinatra app
@@ -249,7 +252,8 @@
 
 - This is the beginning of our introduction to the concepts of REST (REpresentational State Transfer)
 
-### Tired of stopping and starting Sinatra after each code change?
+#### Tired of stopping and starting Sinatra after each code change?
+
 - Install the `sinatra-contrib` gem and use the `reloader` it provides
   - `gem install sinatra-contrib`
   - `require 'sinatra/reloader' if development?`

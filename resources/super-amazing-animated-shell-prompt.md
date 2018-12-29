@@ -1,7 +1,4 @@
----
-title: Super amazing animated gif prompt
-draft: true
----
+# Super amazing animated gif prompt
 
 We all like funny animated gifs, right?
 
@@ -13,7 +10,7 @@ So lets do both!
 
 ![demo](https://gstark-monosnap.s3.amazonaws.com/screencast_2015-08-13_09-27-10.gif "Demo")
 
-# Requirements
+## Requirements
 
 - iTerm2 version 2.9 or later [https://iterm2.com/downloads.html](download) -- currently requires a test version
 - zsh (because setting an animated gif in the prompt in bash works, but is unreasonably slow)
@@ -21,7 +18,7 @@ So lets do both!
 - An animated gif of your own
 - Awesomeness
 
-# Process
+## Process
 
 To speed up our prompt we will pre-process our animated gif (using the imgcat utility) into the format iTerm requires and save the output somwehere. I choose `~/.zsh/images/prompt.base64` or something similar.
 

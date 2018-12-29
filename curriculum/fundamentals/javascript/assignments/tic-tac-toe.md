@@ -1,7 +1,4 @@
----
-title: Implementing Tic-Tac-Toe
-draft: true
----
+# Implementing Tic-Tac-Toe
 
 With a partner, create a design for a tic-tac-toe game. Practice your technical design skills (i.e. thinking about _how_ you would code this).
 
@@ -36,6 +33,7 @@ WITH your partner: submit a full design of how to approach this problem. This sh
 - [ ] _psuedo-code_ describing your program (e.g. event-handling, game logic)
 
 Finally, also with your partner:
+
 - [ ] Create your tic-tac-toe game!
 
 ### Adventure Mode
@@ -56,4 +54,3 @@ _or_
 - [Adobe XD](https://www.adobe.com/products/xd.html), _free_ software from Adobe for designing and prototyping website and mobile apps.
 - [Moqups](https://moqups.com/), a web-based tool for collaborating on wireframes, mockups and prototypes.
 - Read about [Pseudocode](https://en.wikipedia.org/wiki/Pseudocode)
-

@@ -1,7 +1,3 @@
----
-title: "Pangram-demonium"
-draft: true
----
-
+# "Pangram-demonium"
 
 https://www.hackerrank.com/challenges/pangrams/problem

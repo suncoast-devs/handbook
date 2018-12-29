@@ -1,7 +1,4 @@
----
-title: One List
-draft: true
----
+# One List
 
 In this assignment, you'll build a classic todo manager.
 
@@ -15,6 +12,7 @@ Something like: [One List](https://one-list.ambetha.surge.sh)
 ## Requirements
 
 We're going to build todo manager. The user should be able to:
+
 - Add new todo items
 - Mark todo items as complete
 - Delete todo items

@@ -1,9 +1,6 @@
----
-title: student-details
-draft: true
----
+# student-details
 
-With Demo Day approaching we are looking to collect your information. 
+With Demo Day approaching we are looking to collect your information.
 
 ## Explorer Mode
 

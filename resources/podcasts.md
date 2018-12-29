@@ -1,9 +1,6 @@
----
-title: Podcasts
-draft: true
----
+# Podcasts
 
-# General
+## General
 
 - Software Engineering Daily
 - Learn to Code
@@ -11,13 +8,13 @@ draft: true
 - CS Book Club
 - Scale Your Code
 
-### JavaScript Focused
+## JavaScript Focused
 
 - JavaScript Jabber
 - JavaScript Rants
 - Anything by Devchat.tv
 
-### .NET Specific Focused
+## .NET Focused
 
 - Hanselminutes
 - .NET Rocks

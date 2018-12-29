@@ -1,7 +1,3 @@
----
-title: "Binary Zoo"
-draft: true
----
-
+# "Binary Zoo"
 
 https://www.codewars.com/kata/binary-zoo

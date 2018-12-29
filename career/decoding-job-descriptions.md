@@ -1,7 +1,4 @@
----
-title: Decoding Job Descriptions
-draft: true
----
+# Decoding Job Descriptions
 
 ## Why are we here?
 

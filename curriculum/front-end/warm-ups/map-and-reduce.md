@@ -1,7 +1,4 @@
----
-title: Map and Reduce
-draft: true
---- 
+# Map and Reduce
 
 https://www.codewars.com/kata/beginner-lost-without-a-map
 

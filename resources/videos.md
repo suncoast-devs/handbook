@@ -1,7 +1,4 @@
----
-title: Videos
-draft: true
----
+# Videos
 
 ## From RailsConf's _junior developer_ track
 

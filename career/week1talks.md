@@ -1,7 +1,4 @@
----
-title: Week One Talks
-draft: true
----
+# Week One Talks
 
 ## Day 1 Talk
 

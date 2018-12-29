@@ -1,16 +1,13 @@
-
 # What is REST?
 
-# Separation of Client and Server
+## Separation of Client and Server
 
-# Stateless
+## Stateless
 
-# Making Requests
+## Making Requests
 
-# CRUD
+## CRUD
 
-# URLs
+## URLs
 
-# Responding
-
-# 
+## Responding

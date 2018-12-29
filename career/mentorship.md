@@ -1,7 +1,4 @@
----
-title: The Care and Feeding of Junior Developers
-draft: true
----
+# The Care and Feeding of Junior Developers
 
 ## Give Ownership
 

@@ -1,6 +1,3 @@
----
-title: Intro to HackerRank - Compare the Triple
-draft: true
----
+# Intro to HackerRank - Compare the Triple
 
 https://www.hackerrank.com/challenges/compare-the-triplets/problem

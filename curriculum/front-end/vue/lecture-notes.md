@@ -1,10 +1,6 @@
----
-title: Expanding Front End Frameworks - Vue
-draft: true
----
+# Expanding Front End Frameworks - Vue
 
 NOTE: This was a short week the first time around
-
 
 Tuesday:
 Intro to Vue

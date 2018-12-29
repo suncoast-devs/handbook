@@ -1,7 +1,4 @@
----
-title: Setup for Assignments
-draft: true
----
+# Setup for Assignments
 
 This section describes the process for setting up assignments in Unit I.
 

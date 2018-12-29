@@ -1,7 +1,4 @@
----
-title: Campus Policies
-draft: true
----
+# Campus Policies
 
 Suncoast Developers Guild is committed to providing a safe and healthy workplace and to promoting the health and wellbeing of its students and employees. As required by the state of Florida and also motivated by our desire to provide a healthy work environment for our students and employees, the following smoking policy has been adopted and shall apply to all students and employees of Suncoast Developers Guild.
 

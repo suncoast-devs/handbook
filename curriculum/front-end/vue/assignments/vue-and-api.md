@@ -1,7 +1,4 @@
----
-title: Let's go to the Vue-vies
-draft: true
----
+# Let's go to the Vue-vies
 
 Using a few different APIs, you will be creating a few sample projects to continue working with Vue.js
 
@@ -13,10 +10,9 @@ Using a few different APIs, you will be creating a few sample projects to contin
 ## Requirements
 
 - Use this API [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
-    - You will have to create an account to get a key, Feel free to use the address and phone number of campus to sign up with
+  - You will have to create an account to get a key, Feel free to use the address and phone number of campus to sign up with
 - Create a simple UI that allows for Users to search for a movie
 - You will be using this endpoint = [https://developers.themoviedb.org/3/search/search-movies](https://developers.themoviedb.org/3/search/search-movies)
-
 
 ### Explorer Mode
 

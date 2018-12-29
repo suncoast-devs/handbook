@@ -1,7 +1,4 @@
----
-title: Practice, Practice, Practice
-draft: true
----
+# Practice, Practice, Practice
 
 #### Day Eight
 
@@ -10,4 +7,3 @@ draft: true
 ##### Today's work
 
 - Assignment: [Shopping Front End](../../../react-ii/assignments/store-front)
-

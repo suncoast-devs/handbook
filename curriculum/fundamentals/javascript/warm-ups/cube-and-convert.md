@@ -1,7 +1,4 @@
----
-title: "Challenge: Cube and Convert"
-draft: true
----
+# "Challenge: Cube and Convert"
 
 https://www.codewars.com/kata/volume-of-a-cuboid
 

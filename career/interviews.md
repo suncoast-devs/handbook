@@ -1,7 +1,4 @@
----
-title: Preparing for Interviews
-draft: true
----
+# Preparing for Interviews
 
 Tips and what to expect when preparing for job interviews.
 

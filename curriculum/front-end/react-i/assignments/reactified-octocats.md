@@ -1,7 +1,4 @@
----
-title: React-ified Octocats
-draft: true
----
+# React-ified Octocats
 
 Your Octodex is amazing. It has revolutionized the Github Octodex experience and more people are viewing Octocats on their mobile devices than ever.
 
@@ -40,7 +37,7 @@ You'll identify the main `Component`s on the page and create React components fo
 ### Epic Mode
 
 - [ ] Put the `array` of Octocats in a `octocats.json` file and `import` that into your app.
-- *OR*
+- _OR_
 - [ ] Use the `fetch` api to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
 
 ## Additional Resources
