@@ -6,15 +6,15 @@ Going through this course is a fantastic journey, full of highs and lows. To get
 
 Ask good questions is very important on your growth here with SDG and beyond. Asking questions is something happens on a regular basis. Perhaps it has been a while since you've been in an active learning environment. Being comfortable, and effective, with asking questions is an essential skill for making the most of your time with us. Read this article below to learn how to ask the right questions.
 
-[https://stackoverflow.com/help/how-to-ask](https://stackoverflow.com/help/how-to-ask)
+[How do I ask a good question?](https://stackoverflow.com/help/how-to-ask)
 
 ## Learn how to adapt to the fast pace
 
 This course moves _quickly_ as we cover a high amount of material in a short time frame. Managing your time as well as learning to cope with the pacing of the course helps ensure you can sustain yourself.
 
-Read: [https://www.topuniversities.com/blog/7-time-management-tips-students](https://www.topuniversities.com/blog/7-time-management-tips-students)
+Read: [7 Time Management Tips for Students](https://www.topuniversities.com/blog/7-time-management-tips-students)
 
-Read: [https://www.forbes.com/sites/johnrampton/2018/05/01/manipulate-time-with-these-powerful-20-time-management-tips/#6b87c67457ab](https://www.forbes.com/sites/johnrampton/2018/05/01/manipulate-time-with-these-powerful-20-time-management-tips/#6b87c67457ab)
+Read: [Manipulate Time With These Powerful 20 Time Management Tips](https://www.forbes.com/sites/johnrampton/2018/05/01/manipulate-time-with-these-powerful-20-time-management-tips)
 
 ## Everyone has something to teach...
 

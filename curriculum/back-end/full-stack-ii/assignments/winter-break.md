@@ -16,9 +16,7 @@ For this break, we not only want you to enjoy the season but also stay engaged w
 
 - [ ] Pick a lecture to go back and create details notes about the lectures. They should be more detailed than a high-level summary but do not need to be a dictation of the lecture. These notes should be focused on the core concepts of the lecture. Tell your instructor which video before you leave on Thursday.
 
-These are the notes that were created from the Intro to Joins lectures
-
-[https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/)
+These are the notes that were created from the [Intro to Joins lectures](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/)
 
 This is a _really good_ example, yours don't have this detail, but this a good target to hit
 
@@ -26,7 +24,7 @@ This is a _really good_ example, yours don't have this detail, but this a good t
 
 ### Adventure Mode
 
-- [ ] Watch any of the videos from [https://suncoast.io/handbook/resources/videos/](https://suncoast.io/handbook/resources/videos/)
+- [ ] Watch any of [these videos](https://suncoast.io/handbook/resources/videos/).
 
 ### Epic Mode
 

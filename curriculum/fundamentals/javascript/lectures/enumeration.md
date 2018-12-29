@@ -4,6 +4,6 @@
 
 ## Map, Reduce, Filter
 
-- Good video explaining `map, filter, and reduce` [https://www.youtube.com/watch?v=UXiYii0Y7Nw](https://www.youtube.com/watch?v=UXiYii0Y7Nw)
+- A [Good video](https://www.youtube.com/watch?v=UXiYii0Y7Nw) explaining `map, filter, and reduce`.
 
 ## HW: Blog

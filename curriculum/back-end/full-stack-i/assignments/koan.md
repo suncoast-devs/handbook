@@ -12,11 +12,11 @@ As we learn a new language, we need to practice the new ideas, syntax, and parad
 
 ### .NET Students
 
-- Head here: [https://github.com/suncoast-devs/DotNetCoreKoans](https://github.com/suncoast-devs/DotNetCoreKoans) and follow the directions in the README.md. This will have you fork this repository, clone it and practice the
+- Head to [DotNetCoreKoans](https://github.com/suncoast-devs/DotNetCoreKoans) and follow the directions in the README.md. This will have you fork this repository, clone it and practice the
 
 ### Ruby Students
 
-- Head here: [http://rubykoans.com/](http://rubykoans.com/) and follow the directions
+- Head to [Ruby Koans](http://rubykoans.com/) and follow the directions
 
 ### Explorer Mode
 
@@ -31,6 +31,6 @@ As we learn a new language, we need to practice the new ideas, syntax, and parad
 ### .NET Students
 
 - Here are some videos about inheritance and interfaces to help gain some more exposure.
-  - Interfaces: https://www.youtube.com/watch?v=neTerkT7LhE
-  - Inheritance: https://www.youtube.com/watch?v=m0DJIhmUtP8
-  - Getters & Setters: https://www.youtube.com/watch?v=M0IY3712QCE
+  - [Interfaces](https://www.youtube.com/watch?v=neTerkT7LhE)
+  - [Inheritance](https://www.youtube.com/watch?v=m0DJIhmUtP8)
+  - [Getters & Setters](https://www.youtube.com/watch?v=M0IY3712QCE)

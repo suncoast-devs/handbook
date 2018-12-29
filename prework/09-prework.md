@@ -4,9 +4,7 @@ Pre-work is material that ensures you have the necessary foundation required for
 
 ## Start Here
 
-Watch "Your Brain's API"
-
-[https://www.youtube.com/watch?v=hY14Er6JX2s](https://www.youtube.com/watch?v=hY14Er6JX2s)
+Watch ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s).
 
 ## Fundamentals and Front End Development
 
@@ -14,7 +12,7 @@ Watch "Your Brain's API"
 
 Start with some HTML and CSS. HTML and CSS are the essentially what the web is all about. HTML and CSS are what the user sees and interacts with the most. Since these two languages are fundamental, this is the best place to get your feet wet.
 
-- [https://learn.freecodecamp.org/](https://learn.freecodecamp.org/)
+- [freeCodeCamp](https://learn.freecodecamp.org/)
   - These are the minimum sections that are _REQUIRED_
     - Basic HTML and HTML5
     - Basic CSS
@@ -28,14 +26,14 @@ Next, let us continue our journey with the rest of what creates a website, the s
 
 .NET is a robust framework built by Microsoft. .NET and C# is a common, flexible and ubiquitous language.
 
-- [http://www.learncs.org/](http://www.learncs.org/)
-- [https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169?l=Lvld4EQIC_2706218949](https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169?l=Lvld4EQIC_2706218949)
-- [https://www.sololearn.com/Course/CSharp/](https://www.sololearn.com/Course/CSharp/)
+- [LearnCS.org](http://www.learncs.org/)
+- [C# Fundamentals for Absolute Beginners](https://mva.microsoft.com/en-us/training-courses/c-fundamentals-for-absolute-beginners-16169)
+- [SoloLearn C# course](https://www.sololearn.com/Course/CSharp/)
 
 ### Explore Ruby & Ruby on Rails
 
 Ruby is a dynamic and flexible language that excels at creating robust websites quickly and easily.
 
-- [https://www.learnrubyonline.org/](https://www.learnrubyonline.org/)
+- [LearnRubyOnline.org](https://www.learnrubyonline.org/)
 
 [Next](./10-wrap-up)

@@ -16,7 +16,7 @@ Download it to you computer; if you have a smart phone, I _highly_ recommend ins
 
 #### How:
 
-Open your browser and navigate to: [https://slack.com/downloads](https://slack.com/downloads)
+Open your browser and [download the desktop client](https://slack.com/downloads) for your platform.
 
 Open your phone's application store and install the mobile application and sign in at least once.
 
@@ -38,9 +38,7 @@ VS Code is a extendable lightweight editor that allows us to see what is going o
 
 #### How
 
-Download here: [https://code.visualstudio.com](https://code.visualstudio.com)
-
-After downloading VS Code, double-click the ZIP file to extract the application. Then drag the VS Code icon to our Applications folder.
+After [downloading VS Code](https://code.visualstudio.com), double-click the ZIP file to extract the application. Then drag the VS Code icon to our Applications folder.
 
 See setup instructions here under `VS Code`: [Editors](./editors)
 
@@ -56,7 +54,7 @@ Atom is a extendable, customizable editor that allows developers to grow with th
 
 #### How
 
-Here [here](https://atom.io/) and follow the instructions.
+Download [Atom](https://atom.io/) and follow the instructions.
 
 See setup instructions here under `Atom`: [Editors](./editors)
 

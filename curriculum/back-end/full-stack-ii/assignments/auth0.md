@@ -8,7 +8,7 @@ We have been chatting about the idea of `authentication` and `authorization`. Th
 
 ## Requirements
 
-- Create an account [here](https://auth0.com).
+- Create an [Auth0 account](https://auth0.com).
 - follow along with a tutorial to create a simple front end application.
 
 ### Explorer Mode
@@ -18,8 +18,8 @@ We have been chatting about the idea of `authentication` and `authorization`. Th
 
 #### Tips:
 
-- Here is the sample implication: [https://github.com/mdewey/PlacesIHaveBeen](https://github.com/mdewey/PlacesIHaveBeen)
-- For React go [here](https://auth0.com/docs/quickstart/spa/react)
+- Here is the [sample implementation](https://github.com/mdewey/PlacesIHaveBeen)
+- Read th [React QuickStart](https://auth0.com/docs/quickstart/spa/react)
 - The implementations in the different frameworks are about 90% the same.
 - Be sure to include the router libraries for the project you create. I would suggest starting here and creating threes pages/components: `home`, `callback`, and `dashboard`
 

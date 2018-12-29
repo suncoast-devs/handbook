@@ -352,4 +352,4 @@ LEFT JOIN actors on actors.id = cast_members.actor_id;
 
 ### Resources
 
-- [http://www.sql-join.com](http://www.sql-join.com)
+- [SQL Joins Explained](http://www.sql-join.com)

@@ -11,7 +11,7 @@ Get to know React Router by building yourself a small photo gallery site.
 
 ## Requirements
 
-Using the JSON data below as a starter, build a photo gallery app. Here's an example: [http://things-i-like.surge.sh/](http://things-i-like.surge.sh/)
+Using the JSON data below as a starter, build a photo gallery app. Here's [an example](http://things-i-like.surge.sh/).
 
 ```JSON
 {

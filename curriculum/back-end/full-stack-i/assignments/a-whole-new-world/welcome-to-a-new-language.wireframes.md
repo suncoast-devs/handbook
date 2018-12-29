@@ -12,7 +12,7 @@ Today you learned a new language and will be starting to explore it more in dept
 
 ### .NET Students
 
-- Install the .NET Core SDK here: [https://www.microsoft.com/net/download](https://www.microsoft.com/net/download)
+- Install the [.NET Core SDK](https://www.microsoft.com/net/download).
 - Install the `C#` plugin in VS Code.
 
 - To verify everything was installed correctly, run `dotnet -v` in your terminal.
@@ -48,7 +48,8 @@ You should already have Ruby installed.
 
 - Ruby Resouces:
 
-  - [https://learnrubythehardway.org/book/ex33.html](https://learnrubythehardway.org/book/ex33.html)
+  - [While Loops](https://learnrubythehardway.org/book/ex33.html)
 
 - .NET
-  - [https://docs.microsoft.com/en-us/dotnet/](https://docs.microsoft.com/en-us/dotnet/)
+
+  - [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)

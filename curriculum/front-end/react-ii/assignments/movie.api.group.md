@@ -10,7 +10,7 @@ This weekend, you will pair up in groups of 2 to create a "Now Playing in Theatr
 
 ## Requirements
 
-- Use this API [https://developers.themoviedb.org/3/getting-started/introduction](https://developers.themoviedb.org/3/getting-started/introduction)
+- Use [this API](https://developers.themoviedb.org/3/getting-started/introduction)
   - You will have to create an account to get a key, Feel free to use the address and phone number of campus to sign up with
 - Work in groups of 2, these must be decided by end of "Review at Two"
 - Each group will be working on one repository, decide in each group who's account it goes under

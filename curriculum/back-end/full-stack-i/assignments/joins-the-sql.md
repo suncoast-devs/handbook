@@ -56,8 +56,8 @@ Install [pgcli](https://www.pgcli.com/install)
 
 ### Adventure Mode
 
-- [ ] Work on the Koans
-- [ ] Give these a try : [https://sqlkoans.com/](https://sqlkoans.com/)
+- [ ] Work on the Koans.
+- [ ] Give these [SQL Koans](https://sqlkoans.com/) a try.
 
 ### Epic Mode
 
@@ -65,7 +65,7 @@ Install [pgcli](https://www.pgcli.com/install)
 
 ## Additional Resources
 
-- [https://www.postgresql.org/docs/10/static/index.html](https://www.postgresql.org/docs/10/static/index.html)
+- [PostgreSQL 10 Documentation](https://www.postgresql.org/docs/10/static/index.html)
 
 ## Recommended Practice:
 

@@ -12,7 +12,7 @@ For this assignment you will be doing 3 code katas, as well reproducing a websit
 
 ## Requirements
 
-- Reproduce this[LINK NEEDED] website. The data is live at [https://sdg-astro-api.herokuapp.com/swagger](https://sdg-astro-api.herokuapp.com/swagger).
+- Reproduce this[LINK NEEDED] website. The data is live at https://sdg-astro-api.herokuapp.com/swagger.
 
 ### Explorer Mode
 
@@ -22,7 +22,7 @@ For this assignment you will be doing 3 code katas, as well reproducing a websit
 
 - [ ] Reproduce [this site](LINKE NEEDED) exactly
       _ [ ] Should be 100% responsive
-      _ [ ] Should pull from [https://sdg-astro-api.herokuapp.com/swagger](https://sdg-astro-api.herokuapp.com/swagger).
+      _ [ ] Should pull from https://sdg-astro-api.herokuapp.com/swagger
       API using JavaScript
       _ [ ] Should display a countdown timer to next astronomical event. This timer should countdown until hitting zero
       _ [ ] The carousel should change automatically every 10 seconds
@@ -36,5 +36,5 @@ For this assignment you will be doing 3 code katas, as well reproducing a websit
 ## Additional Resources
 
 - [MDN](https://developer.mozilla.org/en-US/)
-- [this site](LINKE NEEDED)
-- API is here: [https://sdg-astro-api.herokuapp.com/swagger](https://sdg-astro-api.herokuapp.com/swagger).
+- [this site](LINK NEEDED)
+- API is here: https://sdg-astro-api.herokuapp.com/swagger.

@@ -4,13 +4,11 @@
 
 The world of development is a vast world with a unique past. To give you a better perspective on software engineer, read this blog post about what software engineering is all about. It's going to be a bit technical at times, but that is nothing to be scared of.
 
-[https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
+[What is Code?](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
 
 ## Hacking Spacetime for a Successful Career
 
-In the technical space, there are many other jobs that just "developer". Watch this talk about what is possible.
-
-[https://www.youtube.com/watch?v=TrLDU6u\_-rY](https://www.youtube.com/watch?v=TrLDU6u_-rY)
+In the technical space, there are many other jobs that just "developer". Watch this talk about [what is possible](https://www.youtube.com/watch?v=TrLDU6u_-rY).
 
 _(Feel free to skip past the song in the beginning if you'd like. Song ends around `[4:05](https://youtu.be/TrLDU6u_-rY?t=248)`)\_
 

@@ -28,7 +28,7 @@
   - Let's get data from the outside world
 - `fetch` function
 
-  - [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+  - [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
   - Fetch takes as input
     - `URL` to access
     - options to describe what we are fetching, how it is to be fetched, etc.
@@ -36,7 +36,7 @@
   - Example:
 
     ```javascript
-    fetch("https://swapi.co/api/people");
+    fetch('https://swapi.co/api/people')
     ```
 
   - This will access the _Star Wars API_ and fetch a list of people in the _Star Wars_ universe
@@ -59,9 +59,9 @@
   - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
     ```javascript
-    fetch("https://swapi.co/api/people").then(response => {
-      console.log(response);
-    });
+    fetch('https://swapi.co/api/people').then(response => {
+      console.log(response)
+    })
     ```
 
   - The response here is _still_ not quite usable:
@@ -83,13 +83,13 @@
   - Fortunately, the `response` object gives us a method to gain access to the JSON:
 
     ```javascript
-    fetch("https://swapi.co/api/people")
+    fetch('https://swapi.co/api/people')
       .then(response => {
-        return response.json();
+        return response.json()
       })
       .then(json => {
-        console.log(json);
-      });
+        console.log(json)
+      })
     ```
 
   - This returns usable information!
@@ -114,4 +114,4 @@
     }
     ```
 
-  - So our `json` object represents the response we could see in the `SWAPI` documentation here: [https://swapi.co/documentation#people](https://swapi.co/documentation#people)
+  - So our `json` object represents the response we could see in the [`SWAPI` documentation](https://swapi.co/documentation#people).

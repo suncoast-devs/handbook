@@ -2,9 +2,7 @@
 
 You have completed the first step to the next part of your career path. I know it can be a little daunting, but that is normal.
 
-Now that you have you have completed the pre-work, complete this short quiz to ready yourself for the course.
-
-[https://goo.gl/forms/4BHYQDOUSGaY7jrj1](https://goo.gl/forms/4BHYQDOUSGaY7jrj1)
+Now that you have you have completed the pre-work, complete [this short quiz](https://goo.gl/forms/4BHYQDOUSGaY7jrj1) to ready yourself for the course.
 
 ## So here we are.
 

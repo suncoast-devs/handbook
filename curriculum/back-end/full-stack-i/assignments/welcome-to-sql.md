@@ -21,7 +21,7 @@ brew services start postgresql
 
 ### Windows:
 
-- head here and download the install https://www.enterprisedb.com/downloads/postgres-postgresql-downloads and follow the prompts
+- [Download the installer](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and follow the prompts.
 
 ### Explorer Mode
 
@@ -72,7 +72,7 @@ brew services start postgresql
 
 ## Additional Resources
 
-- [https://www.postgresql.org/docs/10/static/index.html](https://www.postgresql.org/docs/10/static/index.html)
+- [PostgreSQL 10 Documentation](https://www.postgresql.org/docs/10/static/index.html)
 
 ## Recommended Practice:
 

@@ -32,4 +32,4 @@ git checkout oop-refactor
 
 ### Epic Mode
 
-- [ ] using [https://leafletjs.com/](https://leafletjs.com/) add a map that allows using see weather where ever they click
+- [ ] using [Leaflet](https://leafletjs.com/) add a map that allows using see weather where ever they click

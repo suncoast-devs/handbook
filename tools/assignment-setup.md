@@ -34,7 +34,7 @@ Tab back to your Terminal and start the development server:
 npm start
 ```
 
-This should automatically happen, but if it doesn't; navigate to [http://localhost:3000](http://localhost:3000) in your browser. As you make changes to your code, the development server will automatically refresh this page in real-time.
+This should automatically happen, but if it doesn't; navigate to http://localhost:3000 in your browser. As you make changes to your code, the development server will automatically refresh this page in real-time.
 
 **Note**: Remember to check the appearance in your browser often! Fast, continuous feedback of your code will help
 you create sites more efficiently.

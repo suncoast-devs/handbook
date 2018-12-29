@@ -8,13 +8,13 @@ So lets do both!
 
 ## Demo
 
-![demo](https://gstark-monosnap.s3.amazonaws.com/screencast_2015-08-13_09-27-10.gif "Demo")
+![demo](https://gstark-monosnap.s3.amazonaws.com/screencast_2015-08-13_09-27-10.gif 'Demo')
 
 ## Requirements
 
-- iTerm2 version 2.9 or later [https://iterm2.com/downloads.html](download) -- currently requires a test version
+- [iTerm2 version 2.9 or later](https://iterm2.com/downloads.html) -- currently requires a test version
 - zsh (because setting an animated gif in the prompt in bash works, but is unreasonably slow)
-- imgcat (iTerm2 script for displaying images) -- [https://iterm2.com/images.html](download)
+- [imgcat](https://iterm2.com/images.html) (iTerm2 script for displaying images)
 - An animated gif of your own
 - Awesomeness
 
