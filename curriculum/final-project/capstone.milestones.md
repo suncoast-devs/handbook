@@ -3,6 +3,8 @@ title: Milestones for Capstone
 draft: true
 ---
 
+For a students capstone, these are the guidelines  to help students stay on track. 
+
 1. Elevator pitch,
     - assigned: end of week 6  
     - due: end of week 7

@@ -1,7 +1,3 @@
----
-title: finish-the-safari
-draft: true
----
 
 For this assignment, you should take your safari API that was already created, and create a simple react app that consumes that API. 
 
@@ -30,14 +26,13 @@ For this assignment, you should take your safari API that was already created, a
 
 ### Adventure Mode
 
-* [ ] Work on your capstone app. This weekend, I recommend to focus on your API and Database Schema. 
 * [ ] Work on your capstone's HTML, CSS and JS
 
 ## Additional Resources
 
 ### .NET 
 
-Here are the interesting commands you will need for tonights assignment
+Here are the interesting commands you will need for tonight's assignment
 
 - To add Entity Framework to your project: 
 ``` 
@@ -68,11 +63,3 @@ dotnet ef database update
 ```
 
  - Documentation: [Dotnet EF CLI Docs](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
-
-
-
-
-
-## Reading Material
-
-To prepare for upcoming lessons, students might want to read links shared here.

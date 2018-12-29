@@ -6,7 +6,7 @@ draft: true
 
 # Hello, World!
 
-As a developer, learning is a life long skill that you wil continue to hone. During the last 11 weeks, you have learned many topics, but that is just the tip of the iceberg. For this project, select a topic in technology and give a short presentation about it. 
+As a developer, learning is a lifelong skill that you will continue to hone. During the last 11 weeks, you have learned many topics, but that is just the tip of the iceberg. For this project, select a topic in technology and give a short presentation about it. 
 
 
 ## Explorer Mode
@@ -21,7 +21,10 @@ As a developer, learning is a life long skill that you wil continue to hone. Dur
 
 
 *DELIVERABLES:*
-- a "Hello World App" demonstrating the technology in a git repo
+- *at least one* of the following:
+    - A slide deck with speaker notes
+    - Code for the app that was shown
+    - A short essay, summarizing what you talked about.
 
 *NOTES*
 - A power point is not needed. As long as you can demo the code and get across the idea of the technology

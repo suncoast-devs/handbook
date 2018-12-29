@@ -10,7 +10,7 @@ Watch these videos on "The Long Game":
 
 # Fixed versus Growth Mindset
 
-You are about to enter a time of intense mindset growth. Being aware of fixed mindsets and growth mindsets will help prepare you to focus on growth.
+You are about to enter a time of intense mindset growth. Being aware of fixed mindsets and growth mindsets helps prepare you to focus on growth.
 
 Read [Fixed vs. Growth: The Two Basic Mindsets That Shape Our Lives](http://www.brainpickings.org/2014/01/29/carol-dweck-mindset/)
 

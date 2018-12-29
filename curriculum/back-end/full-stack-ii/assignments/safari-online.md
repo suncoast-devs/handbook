@@ -30,8 +30,8 @@ We are taking a surprise trip to the Savannah for a safari to see all sorts of e
 
 * [ ] Your API should have the following endpoints:
     - [ ] Create `GET /Animals` Endpoint that returns all animals you have seen
-    - [ ] Create `GET /Search?species=lion`  that returns all animals where the species name contains the species parameter
-    - [ ] Create a `POST /Animal` endpoints that adds a animal to the database. This should take a JSON body
+    - [ ] Create `GET /Search?species=lion` that returns all animals where the species name contains the species parameter
+    - [ ] Create a `POST /Animal` endpoints that adds an animal to the database. THis should take a JSON body
     - [ ] Create a `GET /Animal/{location}` that returns animals of only that location
     - [ ] Create a `PUT /Animal/{id}` endpoint that adds 1 to the count of times seen for that animal (given by id)
     - [ ] Create a `DELETE /Animal/{id}` endpoint that deletes that animal id from the database
