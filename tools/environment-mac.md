@@ -178,12 +178,7 @@ A command line tool to safely delete files by placing them in the _trash folder_
 
 #### How
 
-<<<<<<< HEAD
 From your terminal, run the following commands (current directory does not matter):
-=======
-In your terminal run:
-
-> > > > > > > Clean up, rename, and organize headings for new handbook deployment
 
 ```sh
 brew install trash
