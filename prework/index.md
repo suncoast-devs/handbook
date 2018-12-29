@@ -6,13 +6,13 @@ If you have never worked with HTML, CSS, or JavaScript, or have minimal experien
 
 _NOTE_ There are a number of required tasks found within these sections, including several forms to fill out. Please take care to complete all of these at your earliest convenience.
 
-- [Introduction](01-introduction)
-- [Housekeeping](02-housekeeping)
-- [Catalog](03-catalog)
-- [Start Your Journey](04-journey)
-- [Career Paths](05-career-paths)
-- [Mindset](06-mindset)
-- [Accounts](07-accounts)
-- [Checking In](08-first-check-in)
-- [Pre-work](09-prework)
-- [Wrap Up](10-wrap-up)
+- [Introduction](/handbook/prework/01-introduction)
+- [Housekeeping](/handbook/prework/02-housekeeping)
+- [Catalog](/handbook/prework/03-catalog)
+- [Start Your Journey](/handbook/prework/04-journey)
+- [Career Paths](/handbook/prework/05-career-paths)
+- [Mindset](/handbook/prework/06-mindset)
+- [Accounts](/handbook/prework/07-accounts)
+- [Checking In](/handbook/prework/08-first-check-in)
+- [Pre-work](/handbook/prework/09-prework)
+- [Wrap Up](/handbook/prework/10-wrap-up)
