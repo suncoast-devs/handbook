@@ -1,9 +1,41 @@
----
-title: Mac OS X - Setting up your Development Environment
-draft: true
----
+# Mac OS X - Setting up your Development Environment
 
-### HomeBrew (Mac Only)
+### Terminal
+
+#### What
+
+Terminal.app is the application that allows us to run our `shell` -- the default shell we will use is called `bash`
+
+#### Why
+
+A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](/handbook/skills/command-line)
+
+### How
+
+Using either Finder or Spotlight, start the `Terminal` application.
+
+Lets do some configuration to give us a nice user interface.
+
+- Open preferences by selecting "Preferences" from the "Terminal" menu
+- Click the `Profiles` icon
+- Click on "Pro" entry in the list that appears on the left
+- Click the "default" button which is found underneath the list
+- Ensure `Antialias text` is selected
+- Click the area to the left "Color & Effects" found within the "Background" section
+- Change `Opacity` to 100%
+- Close the popup window
+- Close Preferences
+- Exit Terminal application
+
+Now restart Terminal application. The background should be a solid black color.
+
+Copy the following line and paste it into your terminal window
+
+```sh
+echo UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxbXGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVsbCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxbXGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVieSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1kaXIpL2JpbjokUEFUSCIK | base64 -D >> ~/.bash_profile
+```
+
+### Homebrew
 
 #### What
 
@@ -15,7 +47,13 @@ This will be how will install many of the other tools.
 
 #### How
 
-Head [here](https://brew.sh/) and follow the first direction under `Install Homebrew`
+Start Terminal application and copy the following line and paste it into your terminal window
+
+```sh
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+```
+
+The installation may prompt you for your password several times (your password won't show on screen when you type it) and it may take a while to complete the installation
 
 ### Node.js
 
@@ -29,7 +67,7 @@ For the first part of the training, we are concentrating on the HTML/CSS and Jav
 
 #### How
 
-Run the command :
+From your terminal, run the following command (current directory does not matter):
 
 ```sh
 brew install node
@@ -47,7 +85,8 @@ We will be using this to run our scripts and as well as installing packages. Thi
 
 #### How
 
-In your terminal Run :
+From your terminal, run the following command (current directory does not matter):
+
 ```sh
 brew install yarn
 ```
@@ -64,7 +103,7 @@ App App ensures a good project folder setup and includes all the needed tools
 
 #### How
 
-Ensure you have the [`app-app` generator](https://github.com/suncoast-devs/app-app)
+From your terminal, run the following command (current directory does not matter):
 
 ```sh
 npm install -g app-app
@@ -100,28 +139,29 @@ Git is how we will be managing our files and sharing code between each other. It
 
 #### How
 
-In your terminal Run :
+From your terminal, run the following commands (current directory does not matter):
+
 ```sh
 brew install git
 ```
 
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
+From your terminal, run the following commands (current directory does not matter):
+
 ```sh
-git config --global user.name "Replace This With Your Full Name"
-```
+echo -n "Type in your name: " && read name
+echo -n "Type in the email address you used at GitHub: " && read email
 
+git config --global user.name "${name}"
+git config --global user.email "${email}"
 ```
-git config --global user.email email-address-you-used-at-github@example.com
-```
-
-Instead of `"Replace This With Your Full Name"` use your fill name.
-
-Instead of `email-address-you-used-at-github@example.com` use the same email address you gave to GitHub
 
 Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
 
-```
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
 git config --global hub.protocol https
 ```
 
@@ -133,7 +173,8 @@ A command line tool to safely delete files by placing them in the _trash folder_
 
 #### How
 
-In your terminal run:
+From your terminal, run the following commands (current directory does not matter):
+
 ```sh
 brew install trash
 ```
@@ -153,10 +194,10 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 
 #### How
 
-In your terminal run:
+From your terminal, run the following commands (current directory does not matter):
+
 ```sh
 brew install hub
 ```
 
 ---
-

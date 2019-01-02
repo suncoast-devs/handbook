@@ -1,7 +1,4 @@
----
-title: Preparing for Interviews
-draft: true
----
+# Preparing for Interviews
 
 Tips and what to expect when preparing for job interviews.
 
@@ -17,4 +14,4 @@ Info about the mock interviews SDG does with students.
 
 Tips for preparing for technical interviews.
 
-[Behavioral Interview Questions](./assets/behavioral-interview-questions.pdf)
+[Behavioral Interview Questions](/handbook/career/assets/behavioral-interview-questions.pdf)

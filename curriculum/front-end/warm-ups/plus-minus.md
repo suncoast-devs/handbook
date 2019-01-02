@@ -1,6 +1,3 @@
----
-title: "Plus Minus %"
-draft: true
----
+# "Plus Minus %"
 
 https://www.hackerrank.com/challenges/plus-minus/problem

@@ -1,7 +1,4 @@
----
-title: A Portfolio
-draft: true
----
+# A Portfolio
 
 For your first weekend project, we're going to be starting work on a portfolio website that you can improve over the rest of your career.
 

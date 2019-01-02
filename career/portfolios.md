@@ -1,7 +1,4 @@
----
-title: Your Portfolio, Your North Star
-draft: true
----
+# Your Portfolio, Your North Star
 
 Your brand and the visual representation of your work.
 
@@ -92,7 +89,7 @@ Know what you want to do and craft your portfolio for that.
 - Online community for user-made artwork: https://dribbble.com/
 - _Source: Samantha Warren_: http://samanthatoy.com/
 
-[Access the slide presentation](./assets/portfolios.pdf)
+[Access the slide presentation](/handbook/career/assets/portfolios.pdf)
 
 ## Notes from Friday Conversations:
 
@@ -107,4 +104,4 @@ Know what you want to do and craft your portfolio for that.
 
 - GitHub pages: https://pages.github.com/
 - Surge: https://surge.sh/
-  <br> FYI: you cannot use PDFs with Surge so be sure to link out to Drive, Dropbox or some other way of sharing a link to a file
+  FYI: you cannot use PDFs with Surge so be sure to link out to Drive, Dropbox or some other way of sharing a link to a file

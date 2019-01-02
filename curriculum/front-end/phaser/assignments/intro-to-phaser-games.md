@@ -1,7 +1,4 @@
----
-title: Intro to Phaser Games
-draft: true
----
+# Intro to Phaser Games
 
 ## Using a Front End Gaming Library
 

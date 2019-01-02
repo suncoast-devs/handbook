@@ -1,7 +1,4 @@
----
-title: Turning In Assignments
-draft: true
----
+# Turning In Assignments
 
 **Note**: You should complete at least the tasks given for _explorer_ mode as listed in the assignment before turning
 it in, as well as before attempting _adventure_ or _epic_ modes.

@@ -1,7 +1,4 @@
----
-title: It doesn't have to be a snowman?
-draft: true
----
+# It doesn't have to be a snowman?
 
 Yesterday, you started to built the game _Snowman_
 

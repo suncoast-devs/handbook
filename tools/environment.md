@@ -1,7 +1,4 @@
----
-title: Setting up your Development Environment
-draft: true
----
+# Setting up your Development Environment
 
 ## Required Dev tools
 
@@ -15,15 +12,15 @@ Over the course the training you will be using a variety of tools. To get starte
 
 Slack will be our main form of communication. You will communicate with your instructors and SDG staff via Slack. You will get notifications of homework, links to resources, and be able to ask for help via Slack.
 
-Download it to you computer; if you have a smart phone, I *highly* recommend installing the app.
+Download it to you computer; if you have a smart phone, I _highly_ recommend installing the app.
 
 #### How:
 
-Open your browser and navigate to: [https://slack.com/downloads](https://slack.com/downloads)
+Open your browser and [download the desktop client](https://slack.com/downloads) for your platform.
 
 Open your phone's application store and install the mobile application and sign in at least once.
 
-You should have received an invitation to several Slack _Teams_ -- SDG maintains two main Slack Teams, one is for students and alumni *only* and the other is a general Tampa Bay community team that includes over 1,300 members.
+You should have received an invitation to several Slack _Teams_ -- SDG maintains two main Slack Teams, one is for students and alumni _only_ and the other is a general Tampa Bay community team that includes over 1,300 members.
 
 ### Editors / IDEs
 
@@ -41,11 +38,9 @@ VS Code is a extendable lightweight editor that allows us to see what is going o
 
 #### How
 
-Download here: [https://code.visualstudio.com](https://code.visualstudio.com)
+After [downloading VS Code](https://code.visualstudio.com), double-click the ZIP file to extract the application. Then drag the VS Code icon to our Applications folder.
 
-After downloading VS Code, double-click the ZIP file to extract the application. Then drag the VS Code icon to our Applications folder.
-
-See setup instructions here under `VS Code`: [Editors](./editors)
+See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 
 ### Atom
 
@@ -59,9 +54,9 @@ Atom is a extendable, customizable editor that allows developers to grow with th
 
 #### How
 
-Here [here](https://atom.io/) and follow the instructions.
+Download [Atom](https://atom.io/) and follow the instructions.
 
-See setup instructions here under `Atom`: [Editors](./editors)
+See setup instructions here under `Atom`: [Editors](/handbook/tools/editors)
 
 ## Editor Fonts
 
@@ -70,9 +65,11 @@ See setup instructions here under `Atom`: [Editors](./editors)
 > A typeface designed for source code
 
 #### Mac Setup
+
 - `brew cask install caskroom/fonts/font-hack`
 
 #### Windows Setup
+
 - See the [setup instructions](https://github.com/source-foundry/Hack#windows)
 
 #### Editor Setup
@@ -84,12 +81,12 @@ See setup instructions here under `Atom`: [Editors](./editors)
 
 #### Database Setup
 
-See [here](./postgresql)
+See [here](/handbook/tools/postgresql)
 
 ### Mac and Windows Specific Setup
 
-Mac OS users continue [here](./environment-mac)
+Mac OS users continue [here](/handbook/tools/environment-mac)
 
-Windows users continue [here](./environment-windows)
+Windows users continue [here](/handbook/tools/environment-windows)
 
-Windows Subsystem For Linux users continue [here](./environment-linux-subsystem-windows)
+Windows Subsystem For Linux users continue [here](/handbook/tools/environment-linux-subsystem-windows)

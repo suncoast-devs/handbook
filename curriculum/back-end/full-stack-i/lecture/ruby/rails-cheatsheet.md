@@ -31,7 +31,7 @@ The template also includes `Bootstrap` and nicer, bootstrap-capable templates wh
 
 - After creating your new rails app you must `cd NAME` to `change directory` into the rails application folder.
 - From here you can `atom .` to open the project in your editor
-- You will want a minimum of *TWO* terminal tabs running in this directory
+- You will want a minimum of _TWO_ terminal tabs running in this directory
   - One will be to run `rails server`
   - The other will be to run various `rails` task commands, or other tools such as `git`
 - The first task to do in the directory is:
@@ -81,10 +81,3 @@ The template also includes `Bootstrap` and nicer, bootstrap-capable templates wh
   - Create the database
   - Load the schema (table structure)
   - Initialize the seeds
-
-
-
-
-
-
-

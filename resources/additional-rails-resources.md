@@ -1,10 +1,7 @@
----
-title: Additional Rails Resources
-draft: true
----
+# Additional Rails Resources
 
+## Additional Reading
 
-# Additional Reading
 - Rails is [Omakase](http://david.heinemeierhansson.com/2012/rails-is-omakase.html)
 - Dramatic Reading of [Rails is Omakase](https://www.youtube.com/watch?v=E99FnoYqoII)
 - Rails blog in [15-ish minutes](https://www.youtube.com/watch?v=Gzj723LkRJY)
@@ -14,4 +11,3 @@ draft: true
 - MVC [explained](https://www.youtube.com/watch?v=3mQjtk2YDkM)
 - Sending data between [controller and views](https://gorails.com/episodes/sending-data-between-controllers-and-views)
 - Ruby symbols [explained](https://www.youtube.com/watch?v=mBXGBbEbXZY)
-

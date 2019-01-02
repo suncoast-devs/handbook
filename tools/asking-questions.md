@@ -1,7 +1,4 @@
----
-title: How to Ask Questions
-draft: true
----
+# How to Ask Questions
 
 First, it should be stated that there are no _bad_ questions, only gaps in knowledge you're looking to fill.
 

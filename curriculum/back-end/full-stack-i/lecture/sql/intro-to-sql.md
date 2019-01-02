@@ -1,11 +1,9 @@
----
-title: Intro to SQL
-draft: true
----
+# Intro to SQL
 
 ## Introduction to what is SQL
 
 > SQL (Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.
+>
 > - Mozilla Developer Network
 
 ### Why a Database
@@ -22,13 +20,13 @@ You might first consider just storing information in memory. When our users add 
 
 Next, we might consider storing data in local `.json` files, or `.csv`, or any other _linear_ file storage format. This is a natural extension of storing the data in memory and is often called a _serialization_ format. The concept of serialization is to take the information we have stored in memory and represent it as a series of characters/bytes that can be stored in a file. Additionally, we have a way of _reading back_ those same characters/bytes from the file to recreate the objects.
 
-This approach works well but has several flaws that might make it a poor choice for a way to store data. First, these types of files are very easy to _append to_ but are difficult to _delete from_ or _modify within_.  This is because they are meant to be a _stream_ of information and do not easily support internal modification without often rewriting the entire file. While this might be acceptable for small applications where the time to rewrite the entire file is low, for large applications this will not work well. Second, if multiple users, or servers, are attempting to write to the file at the same time we will encounter conflicts. As such this approach does not work well for multi-user systems.
+This approach works well but has several flaws that might make it a poor choice for a way to store data. First, these types of files are very easy to _append to_ but are difficult to _delete from_ or _modify within_. This is because they are meant to be a _stream_ of information and do not easily support internal modification without often rewriting the entire file. While this might be acceptable for small applications where the time to rewrite the entire file is low, for large applications this will not work well. Second, if multiple users, or servers, are attempting to write to the file at the same time we will encounter conflicts. As such this approach does not work well for multi-user systems.
 
 #### Database
 
 Using a database is one of the best ways to store, persist and query data that we need for our applications. Databases achieve this due to following the concept of `ACID` (which stands for `Atomicity, Consistency, Isolation, Durability`)
 
-- Atomicity - Updates to the database allow for multiple changes to be requested at once and either all of them fail, or all of them succeed. For instance, if our application is a banking application and we want to withdraw $10 from Andy's account and add it to Barbara's account, we might first write a statement to decrease Andy's balance by 10. Then a second statement would increase Barbara's balance by 10. If these two statements aren't guaranteed to succeed in pairs we have the possibility that we would decrease Andy's balance without correspondingly increase Barabara's. In an `atomic` system, either we would both decrease Andy's balance and increase Barbara's balance - *or* - if an error occurs, their balances are as they were at the start.
+- Atomicity - Updates to the database allow for multiple changes to be requested at once and either all of them fail, or all of them succeed. For instance, if our application is a banking application and we want to withdraw \$10 from Andy's account and add it to Barbara's account, we might first write a statement to decrease Andy's balance by 10. Then a second statement would increase Barbara's balance by 10. If these two statements aren't guaranteed to succeed in pairs we have the possibility that we would decrease Andy's balance without correspondingly increase Barabara's. In an `atomic` system, either we would both decrease Andy's balance and increase Barbara's balance - _or_ - if an error occurs, their balances are as they were at the start.
 
 - Consistency - The data we store is consistent. That is any rules the database enforces are applied when asking for changes. An example is when creating a user to a system we _require_ the user to have an email address and a password. If we attempt to create a row in the `users` table but the `email` field is blank, we do not allow the row. This ensures that our expectations of the contents of the database are always upheld.
 
@@ -63,8 +61,9 @@ Into this `books` table, we would design columns that represent the specific dat
 Columns are the part of the table that defines the structure (what we often call the `schema`) of the data we are storing. This is where we define the attributes of the "thing" represented by the table. Every column has a data type that defines and restricts what type of data we can place into each column.
 
 In our `books` table, we will want to store specific details, such as the title, the primary author, and the genre of the book. We will name these columns `title`, `primary_author` and `genre`. In a language such as JavaScript, Ruby, or C# we would naturally define each of these as a `string` -- In a database, we have a few choices for the data type:
-- `char(N)` - The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is *always* `N` characters long
-- `varchar(N)` - Again the `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is *not* filled with spaces.
+
+- `char(N)` - The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is _always_ `N` characters long
+- `varchar(N)` - Again the `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is _not_ filled with spaces.
 - `text` - Allows for a variable number of characters, but has a much larger limit than what a `char` or `varchar` can support. In some cases many megabytes, or gigabytes of text.
 
 In our case, `varchar` or `text` make the most sense for our columns.
@@ -79,7 +78,7 @@ Rows are where our data is actually stored. Each row represents one "thing", in 
 
 First, we need to create a database. After you have installed Postgres, use the command:
 
-``` bash
+```bash
 createdb book_collection
 ```
 
@@ -87,9 +86,10 @@ to create a new, empty database.
 
 To connect to that database and start running queries against it, use the command:
 
-``` bash
+```bash
 psql book_collection
 ```
+
 As with most things in programming, there are tools to help make developers lives easier; `pgcli` is one of those tools. This tool offers intellisense and a few other handy tools to make things a bit easier when working with Postgres.
 
 ### Queries
@@ -120,7 +120,7 @@ Let's add the `genre` column to our table
 ALTER TABLE books ADD COLUMN genre TEXT;
 ```
 
-Now our table has four columns. You might be wondering what value the `genre` column will have for any existing rows. Each database engine (Postgres, MySQL, Oracle, Microsoft SQL Server for instance) may have different rules. In our case, with Postgres, it will use a `null` value for `genre` for existing rows. That is, the database considers that those rows have *NO* value for that column. This is different from having a value for that column, but being blank. In SQL, `null` is different than empty (`""`)
+Now our table has four columns. You might be wondering what value the `genre` column will have for any existing rows. Each database engine (Postgres, MySQL, Oracle, Microsoft SQL Server for instance) may have different rules. In our case, with Postgres, it will use a `null` value for `genre` for existing rows. That is, the database considers that those rows have _NO_ value for that column. This is different from having a value for that column, but being blank. In SQL, `null` is different than empty (`""`)
 
 #### INSERT
 
@@ -185,7 +185,7 @@ SELECT * FROM books
 
 This query will give us back all the columns (`*`) from all the rows in the `books` table. Regardless if there are ten rows or ten million rows, this statement will return them all.
 
-Often we do not want *all* the columns from the table so we can specify specific columns.
+Often we do not want _all_ the columns from the table so we can specify specific columns.
 
 ```sql
 SELECT title FROM books
@@ -193,10 +193,9 @@ SELECT title FROM books
 
 While this will still return all the rows, we will only see the `title` column for all those rows.
 
-
 We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied. For example:
 
-``` sql
+```sql
 SELECT title, primary_author FROM books WHERE genre = 'horror';
 ```
 
@@ -222,7 +221,7 @@ SELECT title, primary_author from books where title LIKE 'The Lord of the Rings%
 
 To change data in our database, we use an `UPDATE` statement. The general structure of an `UPDATE` is:
 
-``` sql
+```sql
 UPDATE table_name
 SET columnA = 'new value'
 WHERE columnB = 'some value'
@@ -235,16 +234,17 @@ NOTE: The same syntax for `WHERE` clauses from `SELECT` apply here. We can use m
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be updated.
 
 Example:
+
 ```sql
 UPDATE books SET genre = 'children horror' WHERE primary_author = 'R. L. Stine';
 ```
-
 
 #### DELETE
 
 To remove one or many rows, we can use the `DELETE` statement.
 
 Example:
+
 ```sql
 DELETE FROM books WHERE year_published = 1995
 ```

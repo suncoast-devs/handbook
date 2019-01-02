@@ -1,7 +1,4 @@
----
-title: Trello
-draft: true
----
+# Trello
 
 ## [What is Trello?](https://www.youtube.com/watch?v=tVooja0Ta5I)
 
@@ -50,6 +47,6 @@ draft: true
 
 ## Resources
 
-- [Access the slide presentation](./assets/trello.pdf)
+- [Access the slide presentation](/handbook/career/assets/trello.pdf)
 - [Recorded screen share](https://youtu.be/tiHP3riVm40)
 - [Time Management with Charles Burgess](https://youtu.be/zxcwyWl_TZ8)

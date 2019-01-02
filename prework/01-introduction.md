@@ -1,3 +1,4 @@
+# Introduction
 
 ## What is Pre-work?
 
@@ -7,8 +8,7 @@ Pre-work is a series of articles, videos, blogs and other useful information des
 
 Starting learning before the program is like training for a marathon. You don't show up the day of the race and start; you need to train beforehand. In our program, your brain is the muscle that needs to prepare. This pre-work is training for your mind.
 
-Ideally, when the program begins, you'll hear concepts for a second time. The plan is, the 2nd time you learn it, it sticks. And by the third time you learn it, you're able to teach it.  That means you should be reviewing, learning and playing with the material before day 1. 
-
+Ideally, when the program begins, you'll hear concepts for a second time. The plan is, the 2nd time you learn it, it sticks. And by the third time you learn it, you're able to teach it. That means you should be reviewing, learning and playing with the material before day 1.
 
 ## What won't the Pre-work do for you
 
@@ -21,9 +21,9 @@ Pre-work, and also the curriculum, is not the single source of truth to get star
 We aim to create "T" based developers -- people with both breadth of knowledge, as well as a depth of knowledge in a particular area.
 This curriculum is organized at a high-level by the Bipolar Learning Graph:
 
-<div style="text-align:center"><img src ="./assets/Screen_Shot_2016-02-06_at_11.57.49_AM.png" style="width:75%" /></div>
+<div style="text-align:center"><img src ="./assets/bipolar-learning-graph.png" style="width:75%" /></div>
 
-There are roughly eight-time units on the graph. So if your timeline is 12 weeks, each milestone is approximately 1.5 weeks. So the process of learning to code might look like: 
+There are roughly eight-time units on the graph. So if your timeline is 12 weeks, each milestone is approximately 1.5 weeks. So the process of learning to code might look like:
 
 - sugar high @ week 1.5
 - immediate drop and low point @ week 3
@@ -35,4 +35,4 @@ Don't forget that the cadence at a micro-level – not just the macro – is als
 
 Following these paradigms, we will work through lots of exercises and challenges throughout most lectures, and follow an objective-based path that keeps us focused and productive.
 
-[Next](./02-housekeeping)
+[Next](/handbook/prework/02-housekeeping)

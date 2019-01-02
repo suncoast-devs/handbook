@@ -1,7 +1,4 @@
----
-title: Responsive Design
-draft: true
----
+# Responsive Design
 
 ## Responsive Design
 

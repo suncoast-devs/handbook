@@ -1,7 +1,4 @@
----
-title: Your New Best Friend
-draft: true
----
+# Your New Best Friend
 
 ## Text Editors
 
@@ -71,16 +68,18 @@ _Plugins we recommend to start with (some of these are installed by default)_
 _Settings we recommend to start with_
 
 Go to `Code` menu, then `Preferences`, then `Settings`
+
 - In the search bar enter `tab size`
 - Find the setting `Editor: Tab Size` and change this to `2`
 - In the search bar enter `formatOn`
-- Find the setting `Editor: Format on Save` and turn this *ON*
+- Find the setting `Editor: Format on Save` and turn this _ON_
 - In the search bar enter `Prettier`
-- Find the setting `Prettier: Semi` and turn this *OFF*
-- Find the setting `Prettier: Single Quote` and turn this *ON*
-- Find the setting `Prettier: Use Tabs` and turn this *OFF*
+- Find the setting `Prettier: Semi` and turn this _OFF_
+- Find the setting `Prettier: Single Quote` and turn this _ON_
+- Find the setting `Prettier: Use Tabs` and turn this _OFF_
 
 _Tips and Tricks_
+
 - [VS Code can do that?!](https://vscodecandothat.com)
 
 ### Sublime Text
@@ -100,4 +99,3 @@ _Tips and Tricks_
 ### Jetbrains (Intellij, Rubymine, etc.)
 
 ### Others
-

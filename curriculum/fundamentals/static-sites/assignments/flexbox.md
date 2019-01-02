@@ -1,7 +1,4 @@
----
-title: Flexbox
-draft: true
----
+# Flexbox
 
 Now that we have learned the power of flexbox we will apply it to the sites we are building. We'll also go back to a past assignment and see how flexbox would simplify our HTML and CSS.
 
@@ -23,17 +20,17 @@ Now that we have learned the power of flexbox we will apply it to the sites we a
 
 - [ ] Revisit your `Expanding Your World` assignment and redo your CSS using flexbox where appropriate. Add, commit, and push those changes to your existing repository.
 - [ ] Recreate the page 'The Daily Kitteh' using flexbox as closely as you possibly can. Use the same fonts, sizes, and colors. Download some of your favorite
-  - ![image](./assets/daily-kitteh.png)
+  - ![image](/handbook/curriculum/fundamentals/static-sites/assignments/assets/daily-kitteh.png)
 
 ## Adventure Mode
 
 - [ ] Recreate the page `Flebox Article Layout' as closely as possible.
-  - ![image](./assets/flexbox-article-layout.png)
+  - ![image](/handbook/curriculum/fundamentals/static-sites/assignments/assets/flexbox-article-layout.png)
 
 ## Epic Mode
 
 - [ ] Recreate the page `Skeleton Layout example` as closely as possible.
-  - ![image](./assets/skeleton-layout-example.png)
+  - ![image](/handbook/curriculum/fundamentals/static-sites/assignments/assets/skeleton-layout-example.png)
 
 ## Additional Resources
 

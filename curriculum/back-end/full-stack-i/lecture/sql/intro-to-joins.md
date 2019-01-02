@@ -1,7 +1,4 @@
----
-title: Introduction to joins
-draft: true
----
+# Introduction to joins
 
 ## Relational Databases and Data Normalization
 
@@ -90,7 +87,7 @@ CREATE TABLE ratings (
 
 #### Lets insert some ratings:
 
-``` sql
+```sql
 INSERT INTO ratings (rating) VALUES ('G');
 INSERT INTO ratings (rating) VALUES ('PG');
 INSERT INTO ratings (rating) VALUES ('PG-13');
@@ -141,9 +138,9 @@ The ERD of this looks like:
              +----------------------------+
 ```
 
-Lets add a new column to our `movies` to indicate *WHICH* rating is associated to each row representing a movie.
+Lets add a new column to our `movies` to indicate _WHICH_ rating is associated to each row representing a movie.
 
-The column we are adding is a `rating_id` that is an integer since this is the same data type as a `SERIAL` which we are going to relate to. The `NULL` indicates that we are allowed to have no value and the value to place in the column when no data is present is `NULL`.  Next we indicate that this is a foreign key (we are _relating_ this table) to the `ratings` table. We also specify the column in the other table, in this case `id` in `ratings`, we mean to match.
+The column we are adding is a `rating_id` that is an integer since this is the same data type as a `SERIAL` which we are going to relate to. The `NULL` indicates that we are allowed to have no value and the value to place in the column when no data is present is `NULL`. Next we indicate that this is a foreign key (we are _relating_ this table) to the `ratings` table. We also specify the column in the other table, in this case `id` in `ratings`, we mean to match.
 
 ```sql
 ALTER TABLE movies ADD COLUMN rating_id INTEGER NULL REFERENCES ratings (id);
@@ -184,9 +181,9 @@ This default kind of join is called an `INNER JOIN` and can be seen in the diagr
 
 ![](https://i.stack.imgur.com/VQ5XP.png)
 
-See this [blog post] (https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/) for a more detailed description of the various joins.
+See this [blog post](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/) for a more detailed description of the various joins.
 
-If we want to see *ALL* the `movies` and include the `ratings` table information when there is a match we modify the query to use `LEFT JOIN`
+If we want to see _ALL_ the `movies` and include the `ratings` table information when there is a match we modify the query to use `LEFT JOIN`
 
 #### Query all the movies and include ratings when possible
 
@@ -248,7 +245,7 @@ The ERD of this looks like:
                                        |    birthday    DATE     |
                                        |                         |
                                        +-------------------------+
- ```
+```
 
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables. In this case we need a third table, commonly referred to as a _join table_ to store the relationships. In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.) We attempt to name this table based on the relationship between the two tables.
 
@@ -261,7 +258,6 @@ CREATE TABLE cast_members (
   actor_id  INTEGER REFERENCES actors (id)
 );
 ```
-
 
 ```
       +--------------------------------+           +---------------------------+
@@ -292,9 +288,6 @@ CREATE TABLE cast_members (
 
 ```
 
-
-
-
 #### Update Orlando Bloom for Pirates & LOTR. The three LOTR movies are `id` 7, 8 and 9. The Pirates movie is `id` 2. Orlando Bloom's id is 1
 
 ```sql
@@ -323,7 +316,7 @@ INSERT INTO cast_members (movie_id, actor_id) VALUES (10,3);
 
 In order to tie `movies` to `actors` we need to join the movies first to the `cast_members` and then join the `cast_members` to the actors. Since the `cast_members` table has relations to each of these tables, it acts as the link in the chain between the two tables.
 
-Notice for the `actors` entry Orlando Bloom there are *TWO* entries in `cast_members` since he has appeared in two of our `movies`
+Notice for the `actors` entry Orlando Bloom there are _TWO_ entries in `cast_members` since he has appeared in two of our `movies`
 
 ```sql
 SELECT movies.title, actors.full_name
@@ -358,5 +351,5 @@ LEFT JOIN actors on actors.id = cast_members.actor_id;
 ```
 
 ### Resources
-- [http://www.sql-join.com](http://www.sql-join.com)
 
+- [SQL Joins Explained](http://www.sql-join.com)

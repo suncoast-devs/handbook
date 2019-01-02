@@ -1,7 +1,4 @@
----
-title: Building Simple Web Pages
-draft: true
----
+# Building Simple Web Pages
 
 ## Introduction
 
@@ -21,4 +18,4 @@ draft: true
 
 ## Demo: Goonies(or other idea) Fan Page
 
- - Basic HTML content
+- Basic HTML content

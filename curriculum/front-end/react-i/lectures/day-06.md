@@ -1,7 +1,4 @@
----
-title: Build One List User Interface
-draft: true
----
+# Build One List User Interface
 
 #### Day Six
 
@@ -10,6 +7,4 @@ draft: true
 ##### Today's work
 
 - Team activity: Build One List
-- Assignment: [Function-Junction](../../../fundamentals/javascript/assignments/function-junction)
-
-
+- Assignment: [Function-Junction](/handbook/curriculum/fundamentals/javascript/assignments/function-junction)

@@ -1,7 +1,4 @@
----
-title: Diversity & Inclusion
-draft: true
----
+# Diversity & Inclusion
 
 Suncoast Developers Guild is committed to fostering a diverse and inclusive environment.
 
@@ -47,4 +44,4 @@ We only stand to improve the quality and impact of our products if the people bu
 
 [Inclusion Starts With I](https://www.youtube.com/watch?v=2g88Ju6nkcg)
 
-[Access the slide presentation](./assets/diversity-inclusion.pdf)
+[Access the slide presentation](/handbook/career/assets/diversity-inclusion.pdf)

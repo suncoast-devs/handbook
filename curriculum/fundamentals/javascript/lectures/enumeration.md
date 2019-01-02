@@ -1,11 +1,9 @@
----
-title: Blackjack Review + Array Enumeration
-draft: true
----
+# Blackjack Review + Array Enumeration
 
-# Black Jack Questions
+## Black Jack Questions
 
-# Map, Reduce, Filter
-- Good video explaining `map, filter, and reduce` [https://www.youtube.com/watch?v=UXiYii0Y7Nw](https://www.youtube.com/watch?v=UXiYii0Y7Nw)
+## Map, Reduce, Filter
+
+- A [Good video](https://www.youtube.com/watch?v=UXiYii0Y7Nw) explaining `map, filter, and reduce`.
 
 ## HW: Blog

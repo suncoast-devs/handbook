@@ -1,7 +1,4 @@
----
-title: Branding Yourself
-draft: true
----
+# Branding Yourself
 
 When conducting a job search or even just maintaining your visibility to potential employers it is important to brand yourself.
 
@@ -47,5 +44,5 @@ So how do you "brand yourself"?
 
 ## Resources
 
-- [Access the slide presentation](./assets/branding-yourself.pdf)
+- [Access the slide presentation](/handbook/career/assets/branding-yourself.pdf)
 - [Recorded screen share](https://youtu.be/mGjYWEfAm8s)

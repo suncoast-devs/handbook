@@ -1,9 +1,6 @@
----
-title: Intro to Active Record
-draft: true
----
+# Intro to Active Record
 
-# Pre-work
+## Pre-work
 
 To get the most of out using Ruby for databases, we should do some configuration of our `irb` sessions. This will make printing of database objects more _awesome_
 
@@ -84,9 +81,9 @@ if ENV['RAILS_ENV'] || defined?(Rails)
 end
 ```
 
-# Database setup
+## Database setup
 
-- Step 1: Make sure you have these tables created. You likely have these created if you have previously followed [this lesson](../sql/intro-to-joins)
+- Step 1: Make sure you have these tables created. You likely have these created if you have previously followed [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
 
 ```sql
 CREATE TABLE movies (
@@ -117,16 +114,16 @@ CREATE TABLE cast_members (
 );
 ```
 
-- Step 2: See [this lesson](../sql/intro-to-joins) for `INSERT INTO` statements to populate the database
+- Step 2: See [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins) for `INSERT INTO` statements to populate the database
 
-# Install the Active Record gem
+## Install the Active Record gem
 
 ```sh
 gem install pg
 gem install activerecord
 ```
 
-# Basic Active Record Setup
+## Basic Active Record Setup
 
 - NOTE: In the code below replace `"movies"` with the name of your database where the `movies`, `actors`, and `cast_members` tables were created.
 
@@ -141,7 +138,7 @@ ActiveRecord::Base.establish_connection(
 )
 ```
 
-# Setup models
+## Setup models
 
 ```ruby
 class Movie < ActiveRecord::Base
@@ -151,7 +148,7 @@ class Rating < ActiveRecord::Base
 end
 ```
 
-# Query
+## Query
 
 - Get all the movies
   - `Movie.all`
@@ -170,23 +167,23 @@ end
 - Get all movies where the name contains `aliens`
   - `Movie.where("title like ?", "%aliens%")
 
-# Insert
+## Insert
 
 - `Movie.create(title: "SDG: The Adventure", primary_director: "Suncoast", year_released: 2018, genre: "code")`
 
-# Delete
+## Delete
 
 - `Movie.where("year_released > ?", 1984).delete_all`
 - `movie = Movie.find(42)` then `movie.delete`
 
-# Update
+## Update
 
 - `movie = Movie.find(4)`
 - `movie.title = "New Title"`
 - `movie.save`
 - `movie.update_attributes(title: "Newer Title", year_released: 2007)`
 
-# Join
+## Join
 
 - Update the `Movie` model
 
@@ -218,7 +215,7 @@ rating = Rating.first
 p rating.movies
 ```
 
-# Many to Many Join
+## Many to Many Join
 
 - We must define a model for the `CastMember` model that joins the `Movie` model and the `Actor` model
 
@@ -256,7 +253,7 @@ actor = Actor.find_by(full_name: "Martin Freeman")
 p actor.movies
 ```
 
-# Sneak peek at using this for APIs
+## Sneak peek at using this for APIs
 
 Lets get all the `Movie` objects and print the resulting array of these movies as JSON.
 
@@ -274,7 +271,7 @@ If we were doing this all at once this could look like:
 puts JSON.pretty_generate(Movie.all.as_json)
 ```
 
-# Additional `ActiveRecord` resources
+## Additional `ActiveRecord` resources
 
 - [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
   - Sections 1, 2, 3, 5

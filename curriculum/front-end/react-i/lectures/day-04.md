@@ -1,7 +1,4 @@
----
-title: Model more complex ideas, really embracing component architecture
-draft: true
----
+# Model more complex ideas, really embracing component architecture
 
 #### Day Four
 
@@ -10,5 +7,4 @@ draft: true
 ##### Today's work
 
 - Group Demo: Memory Game
-- Assignment: [Minesweeper](../react-ii/react-ii/assignments/minesweeper)
-
+- Assignment: [Minesweeper](/handbook/curriculum/front-end/react-i/assignments/minesweeper)

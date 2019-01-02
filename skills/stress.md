@@ -1,7 +1,4 @@
----
-title: Stress Management
-draft: true
----
+# Stress Management
 
 Resources on Stress and Stress Management
 
