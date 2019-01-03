@@ -76,11 +76,11 @@ Edit the file `config/routes.rb` and _JUST_ before the last `end` in the file, a
   end
 ```
 
-### Step 6 - Create the heroku app if needed
+## Step 6 - Create the heroku app if needed
 
 See existing instructions
 
-### Step 7 - Add the node buildpack
+## Step 7 - Add the node buildpack
 
 ```sh
 heroku buildpacks:add --index 1 heroku/nodejs
