@@ -4,7 +4,7 @@
 
 > SQL (Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.
 >
-> - Mozilla Developer Network
+> Mozilla Developer Network
 
 ### Why a Database
 
