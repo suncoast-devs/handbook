@@ -1,20 +1,16 @@
 # Setting up your Development Environment
 
-## Required Dev tools
-
 Over the course the training you will be using a variety of tools. To get started we need the follow software and tools
 
-## Tools
+## Slack
 
-### Slack
-
-#### What
+### What
 
 Slack will be our main form of communication. You will communicate with your instructors and SDG staff via Slack. You will get notifications of homework, links to resources, and be able to ask for help via Slack.
 
 Download it to you computer; if you have a smart phone, I _highly_ recommend installing the app.
 
-#### How:
+### How:
 
 Open your browser and [download the desktop client](https://slack.com/downloads) for your platform.
 
@@ -22,7 +18,7 @@ Open your phone's application store and install the mobile application and sign 
 
 You should have received an invitation to several Slack _Teams_ -- SDG maintains two main Slack Teams, one is for students and alumni _only_ and the other is a general Tampa Bay community team that includes over 1,300 members.
 
-### Editors / IDEs
+## Editors / IDEs
 
 `IDE` stands for `Integrated Developer Environment`. Developers can be fiercely opinionated about which one is better. Here at SDG, we allow students to use any light weight editor they want, but recommend using either Visual Studio Code or Atom.
 
@@ -79,11 +75,11 @@ See setup instructions here under `Atom`: [Editors](/handbook/tools/editors)
 - Visual Studio Code:
   - Code Menu > Preferences > Settings > Editor Font Family > Type 'Hack' in the input box
 
-#### Database Setup
+## Database Setup
 
 See [here](/handbook/tools/postgresql)
 
-### Mac and Windows Specific Setup
+## Mac and Windows Specific Setup
 
 Mac OS users continue [here](/handbook/tools/environment-mac)
 
