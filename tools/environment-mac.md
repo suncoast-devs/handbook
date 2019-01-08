@@ -1,16 +1,16 @@
 # Mac OS X - Setting up your Development Environment
 
-### Terminal
+## Terminal
 
-#### What
+### What
 
 Terminal.app is the application that allows us to run our `shell` -- the default shell we will use is called `bash`
 
-#### Why
+### Why
 
 A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](/handbook/skills/command-line)
 
-### How
+## How
 
 Using either Finder or Spotlight, start the `Terminal` application.
 
@@ -35,17 +35,17 @@ Copy the following line and paste it into your terminal window
 echo UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxbXGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVsbCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxbXGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVieSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1kaXIpL2JpbjokUEFUSCIK | base64 -D >> ~/.bash_profile
 ```
 
-### Homebrew
+## Homebrew
 
-#### What
+### What
 
 Homebrew is an easy, terminal based way of installing apps to our Mac. It helps us, as developers, manage the apps and tools we use to create software.
 
-#### Why
+### Why
 
 This will be how will install many of the other tools.
 
-#### How
+### How
 
 Start Terminal application and copy the following line and paste it into your terminal window
 
@@ -55,17 +55,17 @@ Start Terminal application and copy the following line and paste it into your te
 
 The installation may prompt you for your password several times (your password won't show on screen when you type it) and it may take a while to complete the installation
 
-### Node.js
+## Node.js
 
-#### What
+### What
 
 Node is a runtime for javascript. This means that with node, we can run javascript on our machines without having to be in a browser
 
-#### Why
+### Why
 
 For the first part of the training, we are concentrating on the HTML/CSS and JavaScript. Many useful tools for those languages are built with node.
 
-#### How
+### How
 
 From your terminal, run the following command (current directory does not matter):
 
@@ -73,17 +73,17 @@ From your terminal, run the following command (current directory does not matter
 brew install node
 ```
 
-### Yarn
+## Yarn
 
-#### What
+### What
 
 Yarn is a package manager for node packages. This means that we can install and use libraries that are written in node.
 
-#### Why
+### Why
 
 We will be using this to run our scripts and as well as installing packages. This will be more useful the more we dive deeper in JavaScript
 
-#### How
+### How
 
 From your terminal, run the following command (current directory does not matter):
 
@@ -91,17 +91,17 @@ From your terminal, run the following command (current directory does not matter
 brew install yarn
 ```
 
-### App App
+## App App
 
-#### What
+### What
 
 App-App is a tool created by SDG for creating projects using HTML, CSS, and JavaScript
 
-#### Why
+### Why
 
 App App ensures a good project folder setup and includes all the needed tools
 
-#### How
+### How
 
 From your terminal, run the following command (current directory does not matter):
 
@@ -109,17 +109,17 @@ From your terminal, run the following command (current directory does not matter
 npm install -g app-app
 ```
 
-### Surge
+## Surge
 
-#### What
+### What
 
 Surge is a static website hosting company. It allows for easy deploy of your websites so they are on the web!
 
-#### Why
+### Why
 
 We will use this to host some projects to see how the deploy process works
 
-#### How
+### How
 
 Once you have node installed, run the following command in the terminal.
 
@@ -127,17 +127,17 @@ Once you have node installed, run the following command in the terminal.
 npm install --global surge
 ```
 
-### Git
+## Git
 
-#### What
+### What
 
 Git is a distributed source control system. This allows us to work on and collaborate on different projects with little to no headache.
 
-#### Why
+### Why
 
 Git is how we will be managing our files and sharing code between each other. It will seem rough at first but with practice, you will never know how any else shares documents
 
-#### How
+### How
 
 From your terminal, run the following commands (current directory does not matter):
 
@@ -165,13 +165,13 @@ From your terminal, run the following commands (current directory does not matte
 git config --global hub.protocol https
 ```
 
-### Trash
+## Trash
 
-#### What
+### What
 
 A command line tool to safely delete files by placing them in the _trash folder_ instead of immediately deleting them.
 
-#### How
+### How
 
 From your terminal, run the following commands (current directory does not matter):
 
@@ -186,13 +186,13 @@ trash file
 trash directory
 ```
 
-### Hub
+## Hub
 
-#### What
+### What
 
 Hub is command line helper for github. It allows for easy github manipulation from our terminal.
 
-#### How
+### How
 
 From your terminal, run the following commands (current directory does not matter):
 
