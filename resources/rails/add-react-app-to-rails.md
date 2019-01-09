@@ -24,6 +24,7 @@ From the base of your Rails application:
 *Choice B* - if you are creating a *NEW* react application
 
 ```sh
+# Only run this if you are making a BRAND NEW react app
 app-app --gamma client
 ```
 
