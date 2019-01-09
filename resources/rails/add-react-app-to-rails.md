@@ -10,15 +10,24 @@ The React app will exist at the root of the site (e.g. `/`) and any routes that 
 npm install -g json
 ```
 
-## Step 1 - Create the React app
+## Step 1 - Create or Copy the React app
+
+We need to get our React application into the Rails application. We have two choices, either we make a new react app or we copy an existing one.
 
 From the base of your Rails application:
 
-_NOTE_ Do _not_ choose to create a GitHub project if prompted
+*Choice A* - if you already have a separate React app you want to merge
+
+- Copy that project into the root of the rails application and rename it to `client`
+- If that project was a git project then do `trash client/.git` or `rm -r client/.git` to dis-associate it from that git repository
+
+*Choice B* - if you are creating a *NEW* react application
 
 ```sh
 app-app --gamma client
 ```
+
+_NOTE_ Do _not_ choose to create a GitHub project if prompted
 
 _NOTE_ - The use of the app name of `client` is important here. We will refer to this later
 
@@ -30,7 +39,7 @@ Run the following command:
 bundle add rack-cors
 ```
 
-Create the file `config/initializers/rack-cors.rb` with this content:
+Add this content to the end of `config/initializers/cors.rb`:
 
 ```ruby
 if Rails.env.development?
