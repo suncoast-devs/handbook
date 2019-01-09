@@ -57,6 +57,7 @@ end
 This configuration will ensure that the client folder is built when deployed.
 
 ```sh
+[ -f package.json ] || echo '{ "private": true }' > package.json
 json -I -f package.json -e 'this.cacheDirectories=["client/node_modules"]'
 json -I -f package.json -e 'this.scripts={}'
 json -I -f package.json -e 'this.scripts.build="cd client && npm install && npm run build && cd .."'
@@ -85,12 +86,27 @@ Edit the file `config/routes.rb` and _JUST_ before the last `end` in the file, a
   end
 ```
 
-## Step 6 - Create the heroku app if needed
+## Step 6 - Stop here unless you are ready to setup deployment
+
+## Step 7 - Create the heroku app if needed
 
 See existing instructions
 
-## Step 7 - Add the node buildpack
+## Step 8 - Do at least ONE deploy to heroku
+
+```sh
+git push heroku master
+```
+
+## Step 8 - Add the node buildpack
 
 ```sh
 heroku buildpacks:add --index 1 heroku/nodejs
+```
+
+## Step 9 - Do a new push to heroku
+
+```sh
+git commit --allow-empty -m "Empty Commit"
+git push heroku master
 ```
