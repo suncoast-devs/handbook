@@ -2,6 +2,7 @@
 
 ## Additional Reading
 
+- How to [add a react app](/handbook/resources/add-react-app-to-rails) to your Rails app
 - Rails is [Omakase](http://david.heinemeierhansson.com/2012/rails-is-omakase.html)
 - Dramatic Reading of [Rails is Omakase](https://www.youtube.com/watch?v=E99FnoYqoII)
 - Rails blog in [15-ish minutes](https://www.youtube.com/watch?v=Gzj723LkRJY)
