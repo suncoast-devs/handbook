@@ -11,12 +11,14 @@ The requirements are:
 
 ### Step 0 - Install/Enable Windows Subsystem for Linux
 
-- If you are comfortable in PowerShell, run this command
+- If you are comfortable in PowerShell: enter 'PowerShell' in the windows search bar, find 'Windows Powersell' and *right click* and select "Run As administrator"
+- Once the PowerShell window opens, enter the following:
 
 ```sh
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
+- This might take a while depending on the speed of your computer.
 - If this succeeds, proceed to step 3
 - Otherwise, continue to step 1
 
