@@ -96,5 +96,5 @@ restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Addr
 restuarant.image.attach(file_name: "pic.png", io: open("https://placem.at/people?random=1"))
 ```
 
-This will use the https://placem.at service to pull a random image and supply it as our restaurant image.
+This will use the https://placem.at service to pull a [random image](https://placem.at/people?random=1) and supply it as our restaurant image.
 

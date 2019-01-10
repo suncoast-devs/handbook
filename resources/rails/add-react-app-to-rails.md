@@ -87,27 +87,7 @@ Edit the file `config/routes.rb` and _JUST_ before the last `end` in the file, a
   end
 ```
 
-## Step 6 - Stop here unless you are ready to setup deployment
+## Step 6 - Setup Heroku if you are ready to setup deployment
 
-## Step 7 - Create the heroku app if needed
+Follow the guide for [adding heroku hosting](/handbook/resources/rails/add-heroku-hosting-to-our-rails-app) if you are ready
 
-See existing instructions
-
-## Step 8 - Do at least ONE deploy to heroku
-
-```sh
-git push heroku master
-```
-
-## Step 8 - Add the node buildpack
-
-```sh
-heroku buildpacks:add --index 1 heroku/nodejs
-```
-
-## Step 9 - Do a new push to heroku
-
-```sh
-git commit --allow-empty -m "Empty Commit"
-git push heroku master
-```
