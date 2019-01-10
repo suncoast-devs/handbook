@@ -4,10 +4,10 @@ As a developer, learning is a lifelong skill that you will continue to hone. Dur
 
 ## Explorer Mode
 
-- [ ] Select a topic that we did not cover in class, get it approved by your instructor, and research the topic to understand it
+- [ ] Select a topic that we did not cover in class, get it approved by your instructor, and research the subject to understand it
 - [ ] Give a 5-10 minutes presentation about that piece of technology that includes:
   - What is the technology
-  - What problem does the technology Solved
+  - What problem does the technology solve
   - Why makes the technology unique
 - [ ] Include a Hello World Implementation of the app.
 - [ ] Be able to answer some questions about from the group
@@ -16,8 +16,8 @@ _DELIVERABLES:_
 
 - _at least one_ of the following:
   - A slide deck with speaker notes
-  - Code for the app that was shown
-  - A short essay, summarizing what you talked about.
+  - Code for the app that you created
+  - A short essay, summarizing what you presented
 
 _NOTES_
 
@@ -40,13 +40,12 @@ _Not extensive, and not limited to_
 - Xamarin
 - F#
 - Typescript
-- Chat Bot
+- ChatBot
 - Angular
 - Python
 - Mongo DB
 - A Specific HTML5 Feature
 - JS Canvas
-- Bootstrap 4
 - Foundation
 - Webpack
 - Raspberry Pi
