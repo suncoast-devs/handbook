@@ -45,7 +45,7 @@ import history from './history'
 const DOMAIN = 'OURAPP.auth0.com'
 const CLIENTID = 'xxxxxxxxx'
 
-export default class Auth {
+class Auth {
   userProfile
 
   auth0 = new auth0.WebAuth({
@@ -76,13 +76,18 @@ export default class Auth {
     history.replace('/')
   }
 
-  handleAuthentication() {
+  handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
         this.setSession(authResult)
-        history.replace('/')
+
+        if (callback) {
+          callback()
+        }
+
+        history.replace('/Profile')
       } else if (err) {
-        history.replace('/')
+        history.replace('/SignIn')
         console.log(err)
       }
     })
@@ -136,6 +141,10 @@ export default class Auth {
     return `Bearer ${this.getIdToken()}`
   }
 }
+
+const auth = new Auth()
+
+export default auth
 ```
 
 - Create `src/history.js`
@@ -151,8 +160,7 @@ export default createHistory()
 - In the component that contains your `Router`, add the following
 
 ```js
-import Auth from './auth'
-const auth = new Auth()
+import auth from './auth'
 
 import history from './history'
 ```
@@ -178,7 +186,14 @@ Because of that we will change from using the `BrowserRouter` to a simple `Route
     }}
   />
   <Route path="/callback" render={() => {
-      auth.handleAuthentication()
+      auth.handleAuthentication(() => {
+        // NOTE: Uncomment the following lines if you are using axios
+        //
+        // Set the axios authentication headers
+        // axios.defaults.headers.common = {
+        //   Authorization: auth.authorizationHeader()
+        // }
+      })
 
       return <></>
     }}
@@ -187,51 +202,22 @@ Because of that we will change from using the `BrowserRouter` to a simple `Route
 
 Now we can use the `/login` and `/logout` routes to allow the user to login or logout. Additionally we can check if the user is authenticated and redirect them to the `/login` page if we need to (e.g. ensuring that some parts of our app are protected behind a login form)
 
-## Change your code to route the user to auth
-
-- To have the user login, send them to the `/login` route
-
-Now every time we make a request to the backend we should include information about our identity. This allows the backend to identify which User/Profile/Account in the database the current user is associated with. In order to do this we update every API request to include a `header` with an `Authorization` header equal to ` Bearer ${token}`` where `\${token}`is the`auth0` token.
-
-For example:
-
-```js
-  axios.get('/tacos').then(response => {
-    console.log(response.data)
-  }
-```
-
-becomes
-
-```js
-axios
-  .get(
-    '/tacos',
-    {},
-    {
-      headers: {
-        Authorization: auth.authorizationHeader()
-      }
-    }
-  )
-  .then(response => {
-    console.log(response.data)
-  })
-```
-
-_NOTE_ If you are using `axios` as your library for web requests you can set this header globally and not have to repeat it for every request.
+## Setup axios to provide custom Authorization headers for every request.
 
 To do this, add this code in your `App` `componentWillMount` callback. It will ensure every axios request will include the authorization header to let our backend know our identity.
 
 ```js
-const auth = new Auth()
 
-if (auth.isAuthenticated()) {
-  axios.defaults.headers.common = {
-    Authorization: auth.authorizationHeader()
+componentWillMount() {
+  if (auth.isAuthenticated()) {
+    axios.defaults.headers.common = {
+      Authorization: auth.authorizationHeader()
+    }
   }
 }
 ```
+
+_NOTE_ If you are using fetch, or if you do not want to set the common headers, you must provide the `Authorization` header on every request.
 
 ## Setting up the Rails environment to be ready to process our requests
 
@@ -254,7 +240,6 @@ In the file `app/controllers/application_controller.rb`
 ```ruby
   private
 
-  require 'json_web_token'
   def current_user
     token = request.headers["Authorization"].to_s.split(" ").last
     payload, header = *JSONWebToken.verify(token)
@@ -270,9 +255,23 @@ In the file `app/controllers/application_controller.rb`
 This code needs our `User` class to be able to find (or create) a user. So, in your `User` ActiveRecord class add the following code. _NOTE_ that inside the `do` block is where you would capture any user specific information such as `avatar`, `name`, `email`, etc.
 
 ```ruby
+
+# Add this line at the top of your `user.rb` (or `profile.rb`, etc)
+require 'net/http'
+
+# Add this code *within* the `class` definition
 def self.from_auth_hash(payload)
   User.find_or_create_by(auth_sub: payload["sub"]) do |user|
+    # This code will be called whenever we create a User for the first time.
+
+    # This code would save a user's avatar as a URL
     # user.avatar_url = payload["picture"]
+
+    # This code would attach an ActiveStorage profile image by downloading the user's profile and storing it locally
+    # user.profile_image.attach(io: Net::HTTP.get(URI.parse(payload["picture"])), filename: "profile.png")
+
+    # This code would store their email address
+    # user.email = payload["email"]
     user.name = payload["name"]
   end
 end
@@ -280,26 +279,27 @@ end
 
 ### Payload example
 
-_NOTE_ Here is an example of what is in the `payload` variable
+Here is an example of what is in the `payload` variable.
 
 ```ruby
 {
-  "given_name"=>"Gavin",
-  "family_name"=>"Stark",
-  "nickname"=>"gavin",
-  "name"=>"Gavin Stark", "picture"=>"https://lh3.googleusercontent.com/-c6NG56mpFhk/AAAAAAAAAAI/AAAAAAAAAfI/fMqUEK6ZmOI/photo.jpg",
-  "gender"=>"male",
-  "locale"=>"en",
-  "updated_at"=>"2019-01-14T15:37:55.567Z",
-  "email"=>"gavin@gstark.com",
-  "email_verified"=>true,
-  "iss"=>"https://gstark.auth0.com/",
-  "sub"=>"google-oauth2|113743542470462017512",
-  "aud"=>"sPmodN6xIAdBYJuCZczXxKXqf0Bwht81",
-  "iat"=>1547480275,
-  "exp"=>1547516275,
-  "at_hash"=>"jivTOKfCQHcnVtdTwo0qUA",
-  "nonce"=>"fYMdfd_HsH2FMQjBilfGyCX0LP_Y7vPn"
+  "given_name"     => "Gavin",
+  "family_name"    => "Stark",
+  "nickname"       => "gavin",
+  "name"           => "Gavin Stark",
+  "picture"        => "https://lh3.googleusercontent.com/-c6NG56mpFhk/AAAAAAAAAAI/AAAAAAAAAfI/fMqUEK6ZmOI/photo.jpg",
+  "gender"         => "male",
+  "locale"         => "en",
+  "updated_at"     => "2019-01-14T15:37:55.567Z",
+  "email"          => "gavin@gstark.com",
+  "email_verified" => true,
+  "iss"            => "https://gstark.auth0.com/",
+  "sub"            => "google-oauth2|113743542470462017512",
+  "aud"            => "sPmodN6xIAdBYJuCZczXxKXqf0Bwht81",
+  "iat"            => 1547480275,
+  "exp"            => 1547516275,
+  "at_hash"        => "jivTOKfCQHcnVtdTwo0qUA",
+  "nonce"          => "fYMdfd_HsH2FMQjBilfGyCX0LP_Y7vPn"
 }
 ```
 
@@ -313,7 +313,9 @@ rails generate migration AddAuthSubToUser auth_sub:text
 
 ### Add the JWT support code
 
-Next we need a class, `JSONWebToken` in the file `lib/json_web_token.rb` that can parse the jwt and present a payload and header
+Next we need a class, `JSONWebToken` in the file `app/lib/json_web_token.rb` that can parse the jwt and present a payload and header
+
+_NOTE_ Replace `OURPAPP` with the domain name you created in auth0
 
 ```ruby
 require "net/http"
@@ -339,4 +341,3 @@ class JSONWebToken
   end
 end
 ```
-
