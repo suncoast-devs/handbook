@@ -85,9 +85,9 @@ class Auth {
           callback()
         }
 
-        history.replace('/Profile')
+        history.replace('/')
       } else if (err) {
-        history.replace('/SignIn')
+        history.replace('/')
         console.log(err)
       }
     })
@@ -244,7 +244,7 @@ In the file `app/controllers/application_controller.rb`
     token = request.headers["Authorization"].to_s.split(" ").last
     payload, header = *JSONWebToken.verify(token)
 
-    User.from_auth_hash(payload)
+    @user ||= User.from_auth_hash(payload)
   rescue JWT::VerificationError, JWT::DecodeError
     nil
   end
@@ -268,7 +268,7 @@ def self.from_auth_hash(payload)
     # user.avatar_url = payload["picture"]
 
     # This code would attach an ActiveStorage profile image by downloading the user's profile and storing it locally
-    # user.profile_image.attach(io: Net::HTTP.get(URI.parse(payload["picture"])), filename: "profile.png")
+    # user.profile_image.attach(io: StringIO.new(Net::HTTP.get(URI.parse(payload["picture"]))), filename: "profile.png")
 
     # This code would store their email address
     # user.email = payload["email"]
