@@ -4,16 +4,6 @@ _NOTE_ This assumes you created an `API` only style Rails application
 
 _NOTE_ This also assumes you have [React Router](https://github.com/ReactTraining/react-router) installed in your React client
 
-## Add auth0 to our client application
-
-Inside the _client_ folder (cd client)
-
-```sh
-yarn add auth0-js
-```
-
-_NOTE_ Restart your `yarn start` if it was already running
-
 ## Configuring auth0 service
 
 - Login (or signup)
@@ -31,7 +21,17 @@ In this section we will configure our React front end to
 - integrate with the Auth0 interface
 - Add routes to handle the login, logout, and `callback` from Auth0
 
-## Create a class to interact with the Auth0 API
+### Add auth0 to our client application
+
+Inside the _client_ folder (cd client)
+
+```sh
+yarn add auth0-js
+```
+
+_NOTE_ Restart your `yarn start` if it was already running
+
+### Create a class to interact with the Auth0 API
 
 - In the React app create an `Auth` class in `src/auth.js`
 
@@ -155,7 +155,7 @@ import createHistory from 'history/createBrowserHistory'
 export default createHistory()
 ```
 
-## Add Routes to our `<Router>` to work with login, logout, and callback
+### Add Routes to our `<Router>` to work with login, logout, and callback
 
 - In the component that contains your `Router`, add the following
 
@@ -202,7 +202,7 @@ Because of that we will change from using the `BrowserRouter` to a simple `Route
 
 Now we can use the `/login` and `/logout` routes to allow the user to login or logout. Additionally we can check if the user is authenticated and redirect them to the `/login` page if we need to (e.g. ensuring that some parts of our app are protected behind a login form)
 
-## Setup axios to provide custom Authorization headers for every request.
+### Setup axios to provide custom Authorization headers for every request.
 
 To do this, add this code in your `App` `componentWillMount` callback. It will ensure every axios request will include the authorization header to let our backend know our identity.
 
