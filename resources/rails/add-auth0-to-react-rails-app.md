@@ -241,10 +241,12 @@ In the file `app/controllers/application_controller.rb`
   private
 
   def current_user
-    token = request.headers["Authorization"].to_s.split(" ").last
-    payload, header = *JSONWebToken.verify(token)
+    @user ||= begin
+      token = request.headers["Authorization"].to_s.split(" ").last
+      payload, header = *JSONWebToken.verify(token)
 
-    @user ||= User.from_auth_hash(payload)
+      User.from_auth_hash(payload)
+    end
   rescue JWT::VerificationError, JWT::DecodeError
     nil
   end
