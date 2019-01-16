@@ -9,6 +9,7 @@
 - Our code will go in the `Main()` method in  `Program.cs`
 - to run the app, use the command `dotnet run`. This will bulid and run and our project. 
 - C# is a compiled language. That means that the code we write is translated in machine code before anything is run. Compiling our codes allows for our to be (probably) faster and eliminate an entire class of bugs.  
+- Every line of code needs a `;` or a `{` at the end
 
 ## Declaring Variables
 
@@ -51,69 +52,90 @@ int score = 95;
 - Reference Types can be `null`
 
 
-- Strings
-- `name = "Gavin"`
-- `name.length`
+### Variable Examples
+
+- integers
+ `var score = 42;`
+
+- floats
+ `var total = 10f;`
+
+- decimal
+- `var total = 10m;`
+
+- double
+- `var total = 10.0;`
+- `var total = 10d;`
+
+- char are respresented by single quotes `'`
+`var piratesFavoriteLetter = 'c';`
+
+- Strings are treated as arrays of characters
+ `var name = "Mark";`
+ `var x = name.Length;`
+
+- Strings are indexed based
+` var firstLetter = name[0];`
+
+- Crashes when trying to access a index that does not exist
+`var oops = name[-1];`
+
 - String interpolation
-- `new_string = "My score is #{41 + 1}"`
-- Numbers
-- `score = 42`
-- Arrays
-- `scores = [100, 98, 42, 65]`
-- Indexing
-  - `scores[0]` is the _first_ thing in the array (100)
-  - `scores[1]` is the _second_ thing in the array (98)
-- Negative indexing
-  - `scores[-1]` is the _last_ thing in the array (65)
-  - `scores[-2]` is the _second to last_ thing in the array (42)
-- Returns `nil` if the index isn't there
-  - `scores[500]` is `nil`
-- Methods
-  - `length` gives you the length of the array
-- Can store mixed types
-  - `my_array = ["Gavin", 42, "Toni", 100]
-  - `array_with_arrays_inside = ["Gavin", 42, ["Toni", "Jason"], 100]`
-- Hash (like a dictionary)
-- `person = { "name" => "Gavin Stark", "score" => 42, "favorite_color" => "blue" }`
-- `person["score"]` (returns _42_)
-- `person["favorite_color"]` (returns _blue_)
-- Returns `nil` if the key isn't there `person["address"]` returns `nil`
-- Values (and keys, though they are usually strings) can be comples
-  - `person = { "name" => "Gavin Stark", "scores" => [100, 98, 42, 64] }
-  - `person["scores"]` is `[100, 98, 42, 64]`
-  - `person["scores"][2]` is `42` since `person["scores"]` is an array, and then we index the array at `2` to get the _third_ element
+ `var new_string = $"My score is {41 + 1}";`
+
+- Arrays are more restrictive on functionality are rarely used
+- Arrays still have 0 based indexes
+- Once an array is created, it's size cannot change
+- Crashes when trying to access a index that does not exist
+` var scores = new int[] { 100, 98, 42, 65 };`
+` var second = scores[1];`
+` var numberOfScores = scores.Length;`
+
+- Arrays can only store data of the same type
+` var arrayOfSize10 = new int[10];`
+` arrayOfSize10[4] = "hello"; // Can't do this since arrayOfSize10 is a an array of int, not strings` 
+
+- Lists are a more flexible, commonly used arrays
+- Lists are most like JavaScript arrays
+
+- to create a list of doubles
+` var scores = new List<double>();`
+- to add to a list 
+` scores.Add(100);`
+- Lists are still accessed as a 0 based list 
+` scores[0] = 100;`
+
+
+- a Dictionary is strongly typed key:value look up table
+- this can be thought of an actual dictionary, a thing that words and those words each have a definition. In this case the word is the key and the definition is value. 
+- When creating a dictionary, the first type is the type of the Key and the second type is the type of the Value
+- this will create a dictionary in the real world, with a stirng as the key (the word) and a string as value (the definition)
+` var oxford  = new Dictionary<string, string>();`
+- this will a dictionary with a string as the key (the player name) and a int as the value (the player's score)
+` var playerScores = new Dictionary<string, int>();`
+` playerScores.Add("Robbie Lakeman", 1247700 )
+- crashes if you try to access a key that doesn't exist
+
+
 
 ## Interacting with users
 
-- `puts` outputs information without any formatting. Good for user output
-- `p` outputs information formatted for programmer friendliness. Good for debugging.
+- `Console.WriteLine()` outputs to the console.
+- `Console.WriteLine()` will convert what is passed into it to a string
 
-```ruby
-name = "Gavin"
-puts name       # Would output:      Gavin
-p name          # Would output:      "Gavin"
-
-empty_string = ""
-puts empty_string    # Would output:
-p empty_string       # Would output:   ""
+```C# 
+var hello = "Hello, World!";
+Console.WriteLine(hello);
 ```
 
-- `gets` retrieves information from input (usually the terminal from the user typing)
-- However, it includes a `newline` character (the _return key_ that ends a line)
-- We use `chomp` to remove it.
+- `Console.ReadLine()` will wait for user input. This will continue to accept input until the user hits `enter`
 
-```ruby
-puts "What is your name?"
-name_with_newline = gets
-name = name_with_newline.chomp
+``` C# 
 
-# or
-puts "What is your name?"
-name = gets.chomp
+Console.WriteLine("What is your name?");
+var input = Console.ReadLine();
+Console.WriteLine($"Sorry {name}, I'm afraid I can do that");
 
-# or
-puts "What is your name?"
-name = gets(chomp: true)
 ```
 
 ## Control Flow
