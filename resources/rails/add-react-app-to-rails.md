@@ -76,15 +76,16 @@ json -I -f client/package.json -e 'this.proxy="http://localhost:3000"'
 
 ## Step 5 - Configure the Rails app to forward any unknown assets to the front end
 
-Edit the file `config/routes.rb` and _JUST_ before the last `end` in the file, add this line:
+Add a file `config/initializers/mount_react_app.rb` with this content:
 
 ```ruby
-
-  if Rails.env.production?
+if Rails.env.production?
+  Rails.application.config.after_initialize do |app|
     CLIENT_HTML = File.read(Rails.root.join('public/index.html'))
 
-    get "*path", to: proc { [200, {}, [CLIENT_HTML]] }
+    app.routes.append { match '*path', to: proc { [200, {}, [CLIENT_HTML]] }, via: [:get] }
   end
+end
 ```
 
 ## Step 6 - Setup Heroku if you are ready to setup deployment
