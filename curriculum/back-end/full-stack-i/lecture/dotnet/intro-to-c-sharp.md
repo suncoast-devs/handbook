@@ -142,28 +142,42 @@ Console.WriteLine($"Sorry {name}, I'm afraid I can do that");
 
 - if statements
 
-```ruby
-if name == "Gavin"
-  puts "The name was Gavin!"
+``` C#
+if (song == "Harpua")
+{
+  Console.WriteLine("Oom Pah Pah");
+}
+else if (song == "Run Like an Antelope")
+{
+  Console.WriteLine("Out of Control")
+}
 else
-  puts "The name isn't Gavin"
-end
+{
+  Console.WriteLine("Jam on");
+} 
 ```
 
 ## Looping
 
-- loop / break
+- For loops 
 
-```ruby
-loop do
-  puts "Give me some input"
-  input = gets.chomp
-  if input == "done"
-    break
-  ene
-  puts "You said #{input}"
-end
+```C# 
+
+for(var i = 0; i < 10; i++){
+  Console.WriteLine(i);
+}
+
 ```
+
+- Foreach loops
+- works on arrays, lists, dictionarys, etc
+``` C# 
+for (var score in scores)
+{
+  Console.WriteLine(score);
+}
+```
+
 
 ## Comments
 
@@ -175,59 +189,67 @@ end
 
 - Organizing code
 - Placing a name on a set of steps or a way of doing something
-- Methods have a name, and optionally a set of inputs (arguments) and a return
-- Example:
+- Methods have whats called a signature. Signatures are composed of the methods name and the params
+- Signatures have to be unique in their scoping.
 
-```ruby
-
-# This method has no inputs or return
-def say_hello
-  puts "Hello there!"
-end
-
-# This method has an input but no returns
-def say_hello(name)
-  puts "Hello there #{name}!"
-end
-
-# This method has inputs and a return
-def make_sentence(name, score)
-  return "The score for #{name} is #{score}"
-end
+- Generic Method declaration
+```C#
+public ReturnType Name(Param1Type Param1, Param2Type Param2)
+{
+  // method body
+}
 ```
 
-- Without a `return` keyword, a method _returns_ the value of the last statement of the function.
 
-```ruby
-# This method has inputs and a return
-def make_sentence(name, score)
-  "The score for #{name} is #{score}"
-end
+```C#
+// This method has no inputs or return
+public void PrintHello()
+{
+  Console.WriteLine("Hello!");
+}
+
+// This method has an input but no returns
+public void PrintName(string name)
+{
+  Console.WriteLine($"Hello, {name}");
+}
+
+// This method has inputs and a return
+public string MakeSentence(string name, int score)
+{
+  return $"{name} has a score of {score}";
+}
+
+// Method Expressions, if the body of the Method is only 1 line, we can use the lambda syntax
+// this method is the same as one above
+public string MakeSentence(string name, int score) => $"{name} has a score of {score}";
+
+
 ```
 
 ## More control flow
 
 - Conditionals
   - Are two things true:
-    - `if score > 10 && score < 80`
+    - `if (score > 10 && score < 80)`
   - Are either of two things true
-    - `if score > 90 || name == "Gavin"`
-- What if we are looking for a few options we have the `case` statement
+    - `if (score > 90 || name == "Gavin")`
+- What if we are looking for a few options we have the `switch` statement
 
-  ```ruby
+```C#
 
-  case name
-  when "Gavin"
-    puts "Instructor"
-  when "Mark"
-    puts "Instructor"
-  when "Jason"
-    puts "Instructor"
-  when "Dania"
-    puts "Ops"
-  when "Holly"
-    puts "Ops"
-  when "Toni"
-    puts "Campus Director"
-  end
+int caseSwitch = new Random().Next(0,2);
+      
+switch (caseSwitch)
+{
+    case 1:
+        Console.WriteLine("Case 1");
+        break;
+    case 2:
+        Console.WriteLine("Case 2");
+        break;
+    default:
+        Console.WriteLine("Default case");
+        break;
+}
   ```
