@@ -165,9 +165,11 @@ loop do
 end
 ```
 
-## Ruby Comments
+## Comments
 
-- Comments start with a `#` mark. With a bare `#`, anything that follows will be ignored by Ruby.
+- Comments start with a `//`. 
+- Block Comments (multi-line) are denoted by `/*     */`
+- `#` can be used to compile time commands and events, don't worry about using these.
 
 ## Methods
 
