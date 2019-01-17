@@ -7,106 +7,85 @@
 - `Class`es are the template that describes what data, and what behavior we have
 - `Object`s are _instances_ of a class.
 - `Class`es are like cookie cutters, where `object`s are like the cookies
-- Instances of objects
-  - We have already created many objects, just using the _literal_ form of creating them.
-  - e.g. `name = "Gavin"`
-  - e.g. `score = 42`
-  - e.g. instance of a string: `name = String.new("Gavin")`
-- But we can make our own classes. Lets make one to keep track of information
-  about my dog.
+- In C# everything is an object and everything inherits from the base `Object`
+- This base `Object` gives
+- We can make our own classes. Lets make one to keep track of information about my dog.
+
+  ``` C#
+  public class Dog 
+  {
+
+  }
+
+  // later in your code
+  var courage = new Dog();
 
   ```
-  class Dog
-  end
 
-  riley = Dog.new
-  ```
+- and we can define methods.
+- These methods follow the same rules that our other methods follow
 
-- and we can define methods
+  ``` C#
 
-  ```
-  class Dog
-    def age
-      return 1
-    end
-  end
-  ```
-
-  And then call them:
-
-  ```
-  riley = Dog.new
-  p riley.age
-  # => 1
-  ```
-
-- But what if there are two dogs with different ages?
-- Same behavior, different data.
-- Must give the data to the object some how
-- Done via the `initialize` method
-
-```
-class Dog
-  def initialize(age)
-    @age = age
-  end
-
-  def age
-    return @age
-  end
-end
+  public class Dog 
+  {
+      public void Bark()
+      {
+          Console.WriteLine("Woof");
+      }
+  }
+  
+  // later 
+  var scooby = new Dog();
+  scooby.Bark();
 ```
 
-- New type of variable, the _instance_ variable, noted by
-  the fact that it starts with an `@`
-- Every _isntance_ of a `Dog` has it's _own_ instance variables.
-- Now that we have an initialize method we _must_ supply the age
-  when creating each _instance_ of a Dog.
+- But not all dogs sound the same! 
+- We can use `properties` to help describe a dog
+- Properties have types and can be set set and accessed at any time. 
+- Properties allow us to have different values per instance of the class
 
-```
-riley = Dog.new(1)
-roscoe = Dog.new(7)
-```
+``` C#
+public class Dog 
+{
+    public string BarkSound { get; set; }
+    public void Bark()
+    {
+        Console.WriteLine("Woof");
+    }
+}
+  
+  // later 
+  var tacoBellDog = new Dog();
+  tacoBellDog.BarkSound = "yo quiero taco bell";
+  tacoBellDog.Bark();
 
-- We also added a _behavior_ (method) to ask for the age of a `Dog`
-- `age` simply returns _this_ `Dog` instances `@age` _instance_ variable.
-- Thus the same behavior (knowing a `Dog`'s age) but different data (the
-  actual age of the dog) results in different action.
-- `attr_accessor` allows us to shortcut the defining of methods to return
-  the value of the data (attribute) as well as _set_ the value.
+  var underDog = new Dog();
+  underDog.BackSound = "There's no need to fear!";
+  underDog.Bark();
 
-```
-class Dog
-  attr_accessor :age, :sound, :color
-
-  def initialize(age, sound, color)
-    @age   = age
-    @sound = sound
-    @color = color
-  end
-end
-
-riley = Dog.new(1, "woof", "red")
-puts "Riley is #{riley.age} years old, sounds like #{riley.sound} and is #{riley.red} in color"
-
-# Riley gets a little older
-riley.age = 2
-puts "Riley is now #{riley.age} years old, sounds like #{riley.sound} and is #{riley.red} in color"
+  // we can use Initializer syntax
+  var huckleberry = new Dog {
+      BarkSound = "Howdy Y'all!"
+  };
+  huckleBerry.Bark();
 ```
 
 ## Inheritance
 
 - Classes can have a `parent` class from which they gain all the data and behavior from but can extend with new data and behavior.
+- Inheritance can be thought of as "is a" or "is a kind of"
 
-```ruby
-class GoodDog < Dog
-  def toys
-    ["bone", "tennis ball", "blanket"]
-  end
-end
 
-goodie = GoodDog.new(4, "woof", "brown)
-p goodie.toys
+``` C#
+public class GoodDog: Dog
+{
+    public List<strings> Toys {get;set;} = new List<string> {"tennis ball", "bone", "chewie"};
+}
+
+// later 
+var seymour = new GoodDog{
+    BackVoice = "Woof!"
+};
 ```
 
-- Inheritance can be thought of as "is a" or "is a kind of"
