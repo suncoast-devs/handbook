@@ -219,7 +219,9 @@ componentWillMount() {
 
 _NOTE_ If you are using fetch, or if you do not want to set the common headers, you must provide the `Authorization` header on every request.
 
-## Setting up the Rails environment to be ready to process our requests
+## Rails Backend Setup
+
+### Setting up the Rails environment to be ready to process our requests
 
 Before we get started we need to add the following gem to our `Gemfile`:
 
@@ -257,10 +259,6 @@ In the file `app/controllers/application_controller.rb`
 This code needs our `User` class to be able to find (or create) a user. So, in your `User` ActiveRecord class add the following code. _NOTE_ that inside the `do` block is where you would capture any user specific information such as `avatar`, `name`, `email`, etc.
 
 ```ruby
-
-# Add this line at the top of your `user.rb` (or `profile.rb`, etc)
-require 'net/http'
-
 # Add this code *within* the `class` definition
 def self.from_auth_hash(payload)
   User.find_or_create_by(auth_sub: payload["sub"]) do |user|
@@ -270,7 +268,14 @@ def self.from_auth_hash(payload)
     # user.avatar_url = payload["picture"]
 
     # This code would attach an ActiveStorage profile image by downloading the user's profile and storing it locally
-    # user.profile_image.attach(io: StringIO.new(Net::HTTP.get(URI.parse(payload["picture"]))), filename: "profile.png")
+    # If you do this, you must also run `bundle add down` to add the `down` gem
+    #
+    # begin
+    #   picture = Down.download(payload["picture"])
+    #   user.profile_image.attach(io: picture, filename: picture.original_filename)
+    # rescue Down::Error => exception
+    #   Rails.logger.info exception
+    # end
 
     # This code would store their email address
     # user.email = payload["email"]
