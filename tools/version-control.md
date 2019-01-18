@@ -1,5 +1,5 @@
----
-title: Version Control
+# Version Control
+
 ---
 
 <!-- I guess I can't really explain it very well except by analogy and example -->

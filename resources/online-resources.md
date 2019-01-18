@@ -1,7 +1,4 @@
----
-title: Online Resources
-draft: true
----
+# Online Resources
 
 ## Fonts & Font Pairing
 

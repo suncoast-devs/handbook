@@ -1,7 +1,4 @@
----
-title: "Challenge: Quest for the Holy Grail"
-draft: false
----
+# "Challenge: Quest for the Holy Grail"
 
 From Wikipedia:
 

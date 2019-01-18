@@ -1,7 +1,4 @@
----
-title: OOP! It's Raining
-draft: true
----
+# OOP! It's Raining
 
 Yesterday you created a simple weather viewer. Today, we discussed a new topic, `Object Oriented Programing`. This involved the thought of abstraction and encapsulation (among other ideas). For tonight, refactor your code to use classes to encapsulate and abstract your code and ideas from yesterday.
 
@@ -35,4 +32,4 @@ git checkout oop-refactor
 
 ### Epic Mode
 
-- [ ] using [https://leafletjs.com/](https://leafletjs.com/) add a map that allows using see weather where ever they click
+- [ ] using [Leaflet](https://leafletjs.com/) add a map that allows using see weather where ever they click

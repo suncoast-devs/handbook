@@ -1,7 +1,4 @@
----
-title: Come Visit Mars
-draft: true
----
+# Come Visit Mars
 
 ## Introduction
 

@@ -1,7 +1,4 @@
----
-title: Basic Git Merge Instructions
-draft: true
----
+# Basic Git Merge Instructions
 
 ## How to merge one branch into another.
 

@@ -1,7 +1,4 @@
----
-title: Resumes & Cover Letters - Making the Connection
-draft: true
----
+# Resumes & Cover Letters - Making the Connection
 
 ## Resumes
 
@@ -59,12 +56,15 @@ Bonus:
 
 ### Proof of Skill + Narrative + Recommendation x 10/week = JOB SUCCESS!
 
-[Access the slide presentation](./assets/resumes-cover-letters.pdf)
+[Access the slide presentation](/handbook/career/assets/resumes-cover-letters.pdf)
 
 ### Alumni Resume Examples
 
-- [Example Resume 1](./assets/example-resumes/ResumeExample1.pdf)
-- [Example Resume 2](./assets/example-resumes/ResumeExample2.pdf)
-- [Example Resume 3](./assets/example-resumes/ResumeExample3.pdf)
-- [Example Resume 4](./assets/example-resumes/ResumeExample4.pdf)
-- [Example Resume 5](./assets/example-resumes/ResumeExample5.pdf)
+- [Example Resume 1](/handbook/career/assets/example-resumes/ResumeExample1.pdf)
+- [Example Resume 2](/handbook/career/assets/example-resumes/ResumeExample2.pdf)
+- [Example Resume 3](/handbook/career/assets/example-resumes/ResumeExample3.pdf)
+- [Example Resume 4](/handbook/career/assets/example-resumes/ResumeExample4.pdf)
+- [Example Resume 5](/handbook/career/assets/example-resumes/ResumeExample5.pdf)
+- [Example Resume 6](/handbook/career/assets/example-resumes/ResumeExample6.pdf)
+- [Example Resume 7](/handbook/career/assets/example-resumes/ResumeExample7.pdf)
+- [Example Resume 8](/handbook/career/assets/example-resumes/ResumeExample8.pdf)

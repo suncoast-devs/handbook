@@ -1,15 +1,10 @@
----
-title: JavaScript Iteration
-draft: true
----
-
 # JavaScript Iteration
 
 ## Objectives
 
 After completing this assignment, you should be able to:
 
-* Demonstrate understanding of iteration/enumeration
+- Demonstrate understanding of iteration/enumeration
 
 ## Instructions
 
@@ -20,9 +15,9 @@ After completing this assignment, you should be able to:
 5. Install the dependencies: `yarn install` (or just `yarn` for short)
 6. Open in your editor]
 7. Start the test runner: `yarn test`
-7. Open `src/functions.test.js` and work on functions until tests pass.
-8. Commit and push your work to GitHub.
-9. Turn in the URL to your GitHub repo.
+8. Open `src/functions.test.js` and work on functions until tests pass.
+9. Commit and push your work to GitHub.
+10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 

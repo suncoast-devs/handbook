@@ -1,7 +1,4 @@
----
-title: "Challenge: Google it!"
-draft: true
----
+# "Challenge: Google it!"
 
 Take time this morning to replicate the [Google homepage](https://www.google.com/) as best you can.
 

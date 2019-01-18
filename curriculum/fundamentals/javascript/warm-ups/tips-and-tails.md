@@ -1,7 +1,4 @@
----
-title: "Challenge: Tips & Tails!"
-draft: true
----
+# "Challenge: Tips & Tails!"
 
 https://www.codewars.com/kata/tip-calculator
 

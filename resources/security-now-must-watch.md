@@ -1,7 +1,4 @@
----
-title: How the Internet Works
-draft: true
----
+# How the Internet Works
 
 ### Part One
 

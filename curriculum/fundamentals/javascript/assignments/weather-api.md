@@ -1,7 +1,4 @@
----
-title: Cloudy with a chance of Syntax Error
-draft: true
----
+# Cloudy with a chance of Syntax Error
 
 Using a popular weather API, Create a web site that allows a user to search for a location and gets that places weather.
 
@@ -39,4 +36,4 @@ Using a popular weather API, Create a web site that allows a user to search for 
 ### Epic Mode
 
 - [ ] Add a type a head using Google Places API
-- [ ] Head back to blackjack and use [https://deckofcardsapi.com/](https://deckofcardsapi.com/) as your API
+- [ ] Head back to Blackjack and use [this as your API](https://deckofcardsapi.com/).

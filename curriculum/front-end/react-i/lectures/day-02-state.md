@@ -1,54 +1,47 @@
-footer: © Suncoast Developers Guild
-slidenumbers: true
-
 # React State
 
 ---
 
-# React is based on `Components`
+## React is based on `Components`
 
 ---
 
-# Each component has `props` (properties)
+## Each component has `props` (properties)
 
 ---
 
-# `props` are read only values passed into a component from a parent
+## `props` are read only values passed into a component from a parent
 
 ```js
-
-class Card extends React.Component
-{
-
+class Card extends React.Component {
   render() {
     return (
       <div>
         The ${this.props.face} of ${this.props.suit}
       </div>
-    )
+    );
   }
 }
 
-class Deck extends React.Component
-{
+class Deck extends React.Component {
   render() {
     return (
       <div>
-        <Card face='7' suit='Hearts'/>
-        <Card face='A' suit='Diamons'/>
+        <Card face="7" suit="Hearts" />
+        <Card face="A" suit="Diamons" />
       </div>
-    )
+    );
   }
 }
 ```
 
 ---
 
-# STATE
+## STATE
 
 ---
 
-# STATE is
+## STATE is
 
 - ... used to store information
 - ... local to that component
@@ -56,27 +49,27 @@ class Deck extends React.Component
 
 ---
 
-# STATE is
+## STATE is
 
 - ... used to pass data into child components.
 - ... sent from the parent to become props in the children
 
 ---
 
-# BASIC STATE
+## BASIC STATE
 
-## Using state within a component
+### Using state within a component
 
 - where there is `constructor(props)` there will be `super(props)`
 
 ```js
 class Person extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       age: 36
-    }
+    };
   }
 
   render() {
@@ -85,80 +78,79 @@ class Person extends React.Component {
         <h1>Hello, world!</h1>
         <h2>I am {this.state.age} years old.</h2>
       </div>
-    )
+    );
   }
 }
 ```
 
 ---
 
-# BASIC STATE
+## BASIC STATE
 
-## Using state to send props to a child component
+### Using state to send props to a child component
 
 ```js
 class Person extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-        age: 36
-    }
+      age: 36
+    };
   }
 
   render() {
     return (
       <div>
         <h1>Hello, world!</h1>
-        <AgeDisplay age={this.state.age}/>
+        <AgeDisplay age={this.state.age} />
       </div>
-    )
+    );
   }
 }
 ```
 
 ---
 
-# Updating State
+## Updating State
 
 ---
 
-# Basic Example
+## Basic Example
 
 - `setState()` update state after the initial state setup
   - setState function in React works asynchronously
 
 ```js
-class Person extends Component{
-  constructor(props){
-    super(props)
+class Person extends Component {
+  constructor(props) {
+    super(props);
 
     this.state = {
-      lastName: 'Tennant'
-    }
+      lastName: "Tennant"
+    };
   }
 
-  updateLastName () {
+  updateLastName() {
     this.setState({
-      lastName: 'Smith',
-      maidenName: 'Tennant'
-    })
+      lastName: "Smith",
+      maidenName: "Tennant"
+    });
   }
 
-  render () {
-    return <div>${this.state.lastName}</div>
+  render() {
+    return <div>${this.state.lastName}</div>;
   }
 }
 ```
 
+---
+
+## Life Cycle
 
 ---
 
-# Life Cycle
-
----
-
-# componentDidMount
+### componentDidMount
 
 > `componentDidMount()` is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
 
@@ -171,20 +163,17 @@ class Person extends Component{
 ```js
 class Clock extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { date: new Date() }
+    this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    setInterval(
-      () => this.tick(),
-      1000
-    )
+    setInterval(() => this.tick(), 1000);
   }
 
   tick() {
-    this.setState({ date: new Date() })
+    this.setState({ date: new Date() });
   }
 
   render() {
@@ -193,7 +182,7 @@ class Clock extends React.Component {
         <h3>The current time is</h3>
         <h2>{this.state.date.toLocaleTimeString()}</h2>
       </div>
-    )
+    );
   }
 }
 ```

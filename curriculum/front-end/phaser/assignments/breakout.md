@@ -1,9 +1,4 @@
----
-title: Breakout
-draft: true
----
-
-## Breakout
+# Breakout
 
 In this assignment, you'll modify a more complex game
 

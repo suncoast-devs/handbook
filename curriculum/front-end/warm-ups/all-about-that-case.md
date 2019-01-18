@@ -1,7 +1,4 @@
----
-title: "All about that Case"
-draft: true
----
+# "All about that Case"
 
 Start here:
 https://www.hackerrank.com/challenges/camelcase/problem

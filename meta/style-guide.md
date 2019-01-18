@@ -1,5 +1,5 @@
----
-title: Style Guide
+# Style Guide
+
 ---
 
 This is a work-in-progress style guide for authoring content in this handbook.
@@ -14,7 +14,7 @@ This is a work-in-progress style guide for authoring content in this handbook.
 ## Assignments
 
 - Avoid use of temporal phrases like: "today, we discussed a new topic", or "in yesterday's assignment".
-- Follow the [assignment template](./assignment-template).
+- Follow the [assignment template](/handbook/meta/assignment-template).
 - Requirements should be stated in clear, _complete_ sentences, including punctuation:
   > Put your short essay into an HTML page, using appropriate semantic HTML tags.
 - Objectives may be stated as sentence fragments, without punctuation:

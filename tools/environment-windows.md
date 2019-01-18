@@ -1,7 +1,4 @@
----
-title: Setting up your Development Environment
-draft: true
----
+# Setting up your Development Environment
 
 ### Node.js
 
@@ -15,9 +12,7 @@ For the first part of the training, we are concentrating on the HTML/CSS and Jav
 
 #### How
 
-Run the installer here:
-<br/>
-[https://nodejs.org/en/](https://nodejs.org/en/)
+Run the [node.js installer](https://nodejs.org/en/).
 
 ### Yarn
 
@@ -31,9 +26,7 @@ We will be using this to run our scripts and as well as installing packages. Thi
 
 #### How
 
-Follow these instructions for you operating system:
-
-[https://yarnpkg.com/lang/en/docs/install/](https://yarnpkg.com/lang/en/docs/install/)
+Follow [the instructions](https://yarnpkg.com/lang/en/docs/install/) for you operating system.
 
 ### Surge
 
@@ -65,8 +58,7 @@ Git is how we will be managing our files and sharing code between each other. It
 
 #### How
 
-Go here and download the install:
-[https://gitforwindows.org/](https://gitforwindows.org/)
+Download the install [Git for Windows](https://gitforwindows.org/).
 
 NOTES: - It will ask you about your path variable, I recommend selecting the third option `use git and optional unix tools`. This will allow git to be used in your terminal
 
@@ -90,7 +82,6 @@ Finally we will tell Git and GitHub to use the `https` protocol we will enter th
 git config --global hub.protocol https
 ```
 
-
 ### Hub
 
 #### What
@@ -99,8 +90,7 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 
 #### How
 
-Download and run this installer:
-[https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-windows-amd64-2.3.0-pre9.zip](https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-windows-amd64-2.3.0-pre9.zip)
+Download and run [the installer](https://github.com/github/hub/releases/download/v2.3.0-pre9/hub-windows-amd64-2.3.0-pre9.zip).
 
 ---
 
@@ -112,8 +102,7 @@ Download and run this installer:
 
 #### How
 
-Follow these instructions
-https://github.com/dahlbyk/posh-git#installation
+Follow [the instructions](https://github.com/dahlbyk/posh-git#installation).
 
 to move on, you should be able to run `Import-Module posh-git` in a git repo and get a display.
 

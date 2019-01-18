@@ -1,7 +1,4 @@
----
-title: Minesweeper
-draft: true
----
+# Minesweeper
 
 In this assignment, you will communicate with a back-end API server to create the user-interface for a [Minesweeper][1] clone. It might help to [familiarize yourself](https://www.youtube.com/watch?v=7B85WbEiYf4) with the game if you've never played it.
 

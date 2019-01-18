@@ -1,7 +1,4 @@
----
-title: Party Like it's 1989!
-draft: true
----
+# Party Like it's 1989!
 
 It's 1989. The Internet has just come online and Tim Berners-Lee is going to invent the World Wide Web. The Cold War is ending, and the Berlin Wall will be coming down. It's also going to be a great year for film. In this assignment you're going to build a small webpage that showcases some of the most popular movies of 1989.
 

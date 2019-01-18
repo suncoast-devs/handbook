@@ -1,6 +1,4 @@
----
-title: Hello, World.
----
+# Hello, World.
 
 In your first assignment you will end up with a web page, no matter how simple, published on the web.
 
@@ -18,7 +16,7 @@ In your first assignment you will end up with a web page, no matter how simple, 
 
 ### Explorer Mode
 
-- [ ] If you have experience with existing HTML/CSS frameworks (bootstrap, bulma, etc) you may *not* use them for these assignments.
+- [ ] If you have experience with existing HTML/CSS frameworks (bootstrap, bulma, etc) you may _not_ use them for these assignments.
 - [ ] Follow all of the setup instructions (See "Assignment Setup").
 - [ ] Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy, or would like to learn
       about. We will be expanding on this page in future assignments, so pick something fun!
