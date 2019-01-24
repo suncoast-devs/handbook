@@ -27,12 +27,22 @@ Go to `Code` menu, then `Preferences`, then `Settings`
 
 - In the search bar enter `tab size`
 - Find the setting `Editor: Tab Size` and change this to `2`
+
 - In the search bar enter `formatOn`
 - Find the setting `Editor: Format on Save` and turn this _ON_
+
 - In the search bar enter `Prettier`
 - Find the setting `Prettier: Semi` and turn this _OFF_
 - Find the setting `Prettier: Single Quote` and turn this _ON_
 - Find the setting `Prettier: Use Tabs` and turn this _OFF_
+
+_Settings we recommend_
+
+Go to `Code` menu, then `Preferences`, then `Settings`
+
+- In the search bar enter: `enable preview`
+- Disable `Workbench › Editor: Enable Preview From Quick Open`
+- Also consider: Disable `Workbench › Editor: Enable Preview`
 
 _Tips and Tricks_
 
