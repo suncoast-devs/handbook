@@ -45,6 +45,40 @@ Start Terminal application and copy the following line and paste it into your te
 
 The installation may prompt you for your password several times (your password won't show on screen when you type it) and it may take a while to complete the installation
 
+## Git
+
+Git is a distributed source control system. This allows us to work on and collaborate on different projects with little to no headache.
+
+Git is how we will be managing our files and sharing code between each other. It will seem rough at first but with practice, you will never know how any else shares documents
+
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
+brew install git
+```
+
+To configure Git to know who you are, we need to teach it your email address and your full name.
+
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
+(
+  echo -n "Type in your name as you used at GitHub: " && read name
+  echo -n "Type in the email address you used at GitHub: " && read email
+
+  git config --global user.name "${name}"
+  git config --global user.email "${email}"
+)
+```
+
+Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
+
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
+git config --global hub.protocol https
+```
+
 ## Node.js
 
 Node is a runtime for javascript. This means that with node, we can run javascript on our machines without having to be in a browser
@@ -78,7 +112,7 @@ App App ensures a good project folder setup and includes all the needed tools
 From your terminal, run the following command (current directory does not matter):
 
 ```sh
-npm install -g app-app
+npm install --global app-app
 ```
 
 ## Netlify
@@ -87,7 +121,7 @@ Netlify is a static website hosting company. It allows for easy deploy of your w
 
 We will use this to host some projects to see how the deploy process works
 
-Once you have node installed, run the following command in the terminal.
+Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
 
 ```sh
 npm install -g netlify-cli 
@@ -111,21 +145,7 @@ To configure Git to know who you are, we need to teach it your email address and
 From your terminal, run the following commands (current directory does not matter):
 
 ```sh
-(
-  echo -n "Type in your name as you used at GitHub: " && read name
-  echo -n "Type in the email address you used at GitHub: " && read email
-
-  git config --global user.name "${name}"
-  git config --global user.email "${email}"
-)
-```
-
-Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
-
-From your terminal, run the following commands (current directory does not matter):
-
-```sh
-git config --global hub.protocol https
+npm install --global netlify
 ```
 
 ## Trash

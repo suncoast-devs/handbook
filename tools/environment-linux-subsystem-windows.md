@@ -20,7 +20,7 @@ NOTES: - Also choose "Visual Studio Code" as your default editor
 
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
-To enter this configuration, start by typing 'PowerShell' into the windows search bar, and click on the "Windows Powershll - Desktop App" entry
+To enter this configuration, start by typing 'PowerShell' into the windows search bar, and click on the "Windows Powershell - Desktop App" entry
 
 ```sh
 mkdir C:\home
@@ -87,12 +87,6 @@ Restart the Ubuntu environment.
 sudo apt update
 ```
 
-## Trash
-
-```sh
-sudo apt install trash-cli
-```
-
 ## Configure Git for Linux
 
 ```sh
@@ -128,8 +122,18 @@ npm install -g suncoast-devs/app-app
 
 ## Netlify
 
+Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
+
+Once you have your account created, run the following command in the terminal.
+
 ```sh
 npm install -g netlify-cli
+```
+
+## Trash
+
+```sh
+sudo apt install trash-cli
 ```
 
 ## Hub
