@@ -87,7 +87,9 @@ Netlify is a static website hosting company. It allows for easy deploy of your w
 
 We will use this to host some projects to see how the deploy process works
 
-Once you have node installed, run the following command in the terminal.
+Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
+
+Once you have your account created, run the following command in the terminal.
 
 ```sh
 npm install --global netlify
