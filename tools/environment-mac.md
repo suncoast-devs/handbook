@@ -128,27 +128,6 @@ npm install -g netlify-cli
 
 ```
 
-## Git
-
-Git is a distributed source control system. This allows us to work on and collaborate on different projects with little to no headache.
-
-Git is how we will be managing our files and sharing code between each other. It will seem rough at first but with practice, you will never know how any else shares documents
-
-From your terminal, run the following commands (current directory does not matter):
-
-```sh
-brew install git
-```
-
-To configure Git to know who you are, we need to teach it your email address and your full name.
-
-From your terminal, run the following commands (current directory does not matter), but replace `YOUR_NAME` with your name, and `YOUR_EMAIL` with the email:
-
-```
-  git config --global user.name "YOUR_NAME"
-  git config --global user.email "YOUR_EMAIL"
-```
-
 
 ## Trash
 
