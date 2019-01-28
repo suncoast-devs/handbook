@@ -142,11 +142,13 @@ brew install git
 
 To configure Git to know who you are, we need to teach it your email address and your full name.
 
-From your terminal, run the following commands (current directory does not matter):
+From your terminal, run the following commands (current directory does not matter), but replace `YOUR_NAME` with your name, and `YOUR_EMAIL` with the email:
 
-```sh
-npm install --global netlify
 ```
+  git config --global user.name "YOUR_NAME"
+  git config --global user.email "YOUR_EMAIL"
+```
+
 
 ## Trash
 
