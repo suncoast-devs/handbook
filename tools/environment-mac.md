@@ -90,7 +90,8 @@ We will use this to host some projects to see how the deploy process works
 Once you have node installed, run the following command in the terminal.
 
 ```sh
-npm install --global netlify
+npm install -g netlify-cli 
+
 ```
 
 ## Git

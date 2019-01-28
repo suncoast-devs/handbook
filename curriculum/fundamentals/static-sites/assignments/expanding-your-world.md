@@ -1,6 +1,9 @@
 # Expanding Your World
 
+
 In this assignment you will end up with a simple styled web page, published on the web.
+
+Create a new website that shows some basic styling and formating using HTMl and CSS
 
 ## Objectives
 
