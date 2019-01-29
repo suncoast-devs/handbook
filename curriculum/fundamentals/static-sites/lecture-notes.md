@@ -4,6 +4,10 @@
 
 ---
 
+## [Tags We Like](/handbook/curriculum/fundamentals/static-sites/tags-we-like)
+
+---
+
 ## [Styling Basics](/handbook/curriculum/fundamentals/static-sites/lectures/day-02)
 
 ---
