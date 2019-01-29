@@ -161,6 +161,12 @@ If you click any attribute's you will see the [MDN documentation](https://develo
 
 ---
 
+### [position](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+> sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements.
+
+---
+
 ### [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
 
 > sets the horizontal alignment of an inline or table-cell box. This means it works like vertical-align but in the horizontal direction.
