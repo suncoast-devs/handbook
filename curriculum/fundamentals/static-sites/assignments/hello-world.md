@@ -24,7 +24,7 @@ For this assignment, you will following along with you instructors to complete t
 
 ### Explorer Mode
 
-- [ ] Follow all of the [setup instructions](handbook/tools/assignment-setup).
+- [ ] Follow all of the [setup instructions](https://suncoast.io/handbook/tools/assignment-setup).
 - [ ] Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy, or would like to learn about. We will be expanding on this page in future assignments, so pick something fun!
 - [ ] Put your short essay into an HTML page, using appropriate semantic HTML tags. (See the link `HTML Tag Reference` below). Give your webpage a simple header and footer as well.
 - [ ] Deploy your site.
