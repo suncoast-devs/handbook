@@ -75,6 +75,7 @@ If you click any attribute's you will see the [MDN documentation](https://develo
 ### [display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
 
 > defines the display type of an element, which consists of the two basic qualities of how an element generates boxes — the outer display type defining how the box participates in flow layout, and the inner display type defining how the children of the box are laid out.
+
 ---
 
 ### [font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
