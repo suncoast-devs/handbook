@@ -8,6 +8,10 @@
 
 ---
 
+## [CSS Attributes We Like](/handbook/curriculum/fundamentals/static-sites/lectures/css-attributes-we-like)
+
+---
+
 ## [Styling Basics](/handbook/curriculum/fundamentals/static-sites/lectures/day-02)
 
 ---
