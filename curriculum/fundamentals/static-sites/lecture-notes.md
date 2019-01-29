@@ -4,7 +4,7 @@
 
 ---
 
-## [Tags We Like](/handbook/curriculum/fundamentals/static-sites/tags-we-like)
+## [Tags We Like](/handbook/curriculum/fundamentals/static-sites/lectures/tags-we-like)
 
 ---
 
