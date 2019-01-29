@@ -1,8 +1,8 @@
-# CSS Attributes We Like
+# CSS Properties We Like
 
-There are [many CSS Attributes](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) you can use to affect the style of your page. In practice we find this list of CSS attributes the most common and useful.
+There are [many CSS properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) you can use to affect the style of your page. In practice we find this list of CSS properties the most common and useful.
 
-If you click any attribute's you will see the [MDN documentation](https://developer.mozilla.org) and demonstrations for each.
+If you click any property's you will see the [MDN documentation](https://developer.mozilla.org) and demonstrations for each.
 
 ---
 
