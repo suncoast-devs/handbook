@@ -4,7 +4,11 @@
 
 ---
 
-## [Tags We Like](/handbook/curriculum/fundamentals/static-sites/lectures/tags-we-like)
+## [Elements We Like](/handbook/curriculum/fundamentals/static-sites/lectures/elements-we-like)
+
+---
+
+## [CSS Properties We Like](/handbook/curriculum/fundamentals/static-sites/lectures/css-properties-we-like)
 
 ---
 
