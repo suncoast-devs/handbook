@@ -14,7 +14,7 @@ Read [Fixed vs. Growth: The Two Basic Mindsets That Shape Our Lives](http://www.
 
 ## Realize Your Learning Style
 
-Developers are life long learners. The tech field is ever growing and ever-changing. Learning is a precious skill to hone. During the course, this skill is sharpened to help but you on the route to success. Understanding how you learn helps put developers, both new and veteran,  on a path to success.  
+Developers are life long learners. The tech field is ever growing and ever-changing. Learning is a precious skill to hone. During the course, this skill is sharpened to help you on the route to success. Understanding how you learn helps put any developer, both new and veteran, on a path to success.  
 
 There are many different models of how people learn. One such model is the [VARK](http://vark-learn.com/introduction-to-vark/). VARK breaks down how people tend to learn and teach. 
 

@@ -6,12 +6,37 @@ The `Linux Subsystem for Windows` allows us to run all of the open source tools 
 
 The requirements are:
 
-- Windows 10
 - 64-Bit version of Windows 10
 
-### Step 0 - Install/Enable Windows Subsystem for Linux
+## Step 1 - Install Git for Windows
 
-- If you are comfortable in PowerShell: enter 'PowerShell' in the windows search bar, find 'Windows Powersell' and *right click* and select "Run As administrator"
+We also need to install Git in Windows so our editor can use it.
+
+Download and RUN the installer [Git for Windows](https://gitforwindows.org/).
+
+NOTES: - It will ask you about your path variable, I recommend selecting the third option `use git and optional unix tools`. This will allow git to be used in your terminal
+
+NOTES: - Also choose "Visual Studio Code" as your default editor
+
+To configure Git to know who you are, we need to teach it your email address and your full name.
+
+To enter this configuration, start by typing 'PowerShell' into the windows search bar, and click on the "Windows Powershell - Desktop App" entry
+
+```sh
+mkdir C:\home
+
+$Name = Read-Host -Prompt 'Type in your name as you used at GitHub: '
+$Email = Read-Host -Prompt 'Type in the email address you used at GitHub: '
+git config --global hub.protocol https
+git config --global user.name "$Name"
+git config --global user.email "$Email"
+```
+
+Exit this PowerShell
+
+### Step 2 - Install/Enable Windows Subsystem for Linux
+
+- Enter 'PowerShell' in the windows search bar, find 'Windows Powersell' and *right click* and select "Run As administrator"
 - Once the PowerShell window opens, enter the following:
 
 ```sh
@@ -19,43 +44,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ```
 
 - This might take a while depending on the speed of your computer.
-- If this succeeds, proceed to step 3
-- Otherwise, continue to step 1
 
-### Step 1 - Enable Developer Options
-
-- Run `Settings` from the `Type here to search` bar
-- Then select `Update & Security`
-
-![](./assets/update-and-security.png)
-
-- Then select 'For Developers'
-
-![](./assets/for-developers.png)
-
-- Then select `Developer Mode` by clicking the radio button
-
-- Close the window
-
-### Step 2 - Install the Linux Subsystem
-
-- Run `Control Panel` from the `Type here to search` bar
-- Then select `Programs`
-
-![](./assets/control-panel.png)
-
-- Then select `Turn features on/off`
-
-![](./assets/turn-features-on-off.png)
-
-- Scroll down and turn ON the checkbox for `Widnows Subsystem for Linux`
-
-![](./assets/windows-subsystem-for-linux.png)
-
-- Click OK
-- Close the window
-
-### Step 3 - Install Ubuntu
+### Step 2 - Install Ubuntu
 
 - Open a browser and navigate to `https://aka.ms/wslstore`
 
@@ -65,17 +55,103 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ![](./assets/choose-ubuntu.png)
 
-- Click on the `Get` button and then on `Install` once the button changes from `Get` to `Install`
+- Click on the `Get` button. Wait for the download to complete and then click `Launch`
 
 ![](./assets/ubuntu.png)
 
-### Step 4 - Run a bash shell
+### Step 3 - Follow prompts for first time run
 
-![](./assets/bash.png)
+The screen will say "Installing, this may take a few minutes..."
 
-- If it asks you to create a username and a password, choose a short username with no spaces and a new password
+When the prompt indicates `Enter new UNIX username:` enter a lowercase and no-spaces version of your first initial and last name.
+When the prompt indicates `Enter new UNIX password:` enter the same password as your windows password
+When the prompt indicates `Retype new UNIX password:` retype your password
 
-### Step 5 - Install `chruby`
+Once you receive a prompt:
+
+```sh
+echo UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxbXGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVsbCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxbXGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVieSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwgJiYgZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1kaXIpL2JpbjokUEFUSCIK | base64 -d >> ~/.bash_profile
+
+echo "cd" >> ~/.bash_profile
+
+sudo sed -i "s/\/home\/${USER}/\/mnt\/c\/home/g" /etc/passwd
+
+mv .??* /mnt/c/home
+```
+
+Exit the Ubuntu environment.
+
+Restart the Ubuntu environment.
+
+```sh
+sudo apt update
+```
+
+## Configure Git for Linux
+
+```sh
+sudo ln -s "/mnt/c/Program Files/Git/cmd/git.exe" /usr/local/bin/git
+```
+
+## Node.js
+
+```sh
+sudo apt install --no-install-recommends nodejs npm
+```
+
+When complete, continue with:
+
+```sh
+mkdir ~/.npm-global
+npm config set prefix '~/.npm-global'
+echo "export PATH=~/.npm-global/bin:\$PATH" >> ~/.bash_profile
+source ~/.bash_profile
+```
+
+## Yarn
+
+```sh
+npm install -g yarn
+```
+
+## App App
+
+```sh
+npm install -g suncoast-devs/app-app
+```
+
+## Netlify
+
+Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
+
+Once you have your account created, run the following command in the terminal.
+
+```sh
+npm install -g netlify-cli
+```
+
+## Trash
+
+```sh
+sudo apt install trash-cli
+```
+
+## Hub
+
+```sh
+cd
+wget https://github.com/github/hub/releases/download/v2.7.1/hub-linux-amd64-2.7.1.tgz
+tar -xf hub-linux-amd64-2.7.1.tgz
+cd hub-linux-amd64-2.7.1
+sudo ./install
+cd
+```
+
+## Installing Ruby
+
+_To be installed prior to Unit-3 for Ruby students_
+
+### Step 1 - Install `chruby`
 
 ```sh
 cd
@@ -87,7 +163,9 @@ sudo make install
 sudo ./scripts/setup.sh
 ```
 
-### Step 6 - Install `ruby-install`
+_NOTE_ You may be prompted to close this window and rerun the `Ubuntu` program.
+
+### Step 2 - Install `ruby-install`
 
 ```sh
 cd
@@ -97,14 +175,15 @@ cd ruby-install-0.7.0/
 sudo make install
 ```
 
-### Step 7 - Install Ruby 2.5.3
+### Step 3 - Install Ruby 2.5.3
 
 ```sh
 cd
+sudo apt update
 ruby-install ruby-2.5.3
 ```
 
-### Step 8 - Make Ruby 2.5.3 your default
+### Step 4 - Make Ruby 2.5.3 your default
 
 ```sh
 cd
@@ -112,9 +191,9 @@ echo 'ruby-2.5.3' > ~/.ruby-version
 echo 'chruby ruby-2.5.3' | tee -a ~/.profile
 ```
 
-### Step 9 - Validate Ruby install
+### Step 5 - Validate Ruby install
 
-- Close your `bash` window
-- Start a new `bash` window
+- Close your `Ubuntu` window
+- Start a new `Ubuntu` window
 - Type `ruby -v`
 - The output should include `2.5.3`
