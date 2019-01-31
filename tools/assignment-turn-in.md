@@ -1,44 +1,40 @@
 # Turning In Assignments
 
-**Note**: You should complete at least the tasks given for _explorer_ mode as listed in the assignment before turning
-it in, as well as before attempting _adventure_ or _epic_ modes.
+Assigned homework appear in your `issues` repository. Follow these steps to turn in, and get credit for your homework.
 
-Your homework will be assigned to you via `issues` on your `assignments` repository. These steps will be followed for
-almost every assignment going forward. Once you've completed at least _explorer_ mode and you're satisfied with your
-work, let's get it published. First let's get it up on GitHub.
+You should complete at least the tasks given for _explorer_ mode as listed in the assignment before turning it in, as well as before attempting _adventure_ or _epic_ modes.
 
-**NOTE** All the following commands are run from your terminal and _inside_ the project directory. You will need
-to `cd` into the directory where your project exists.
+**NOTE**: All the following commands need to be run in your terminal and _inside_ the project directory. You will need to `cd` into the directory where your project exists.
+
+### Step 1: Commit your code to GitHub
 
 Add all our work to git, and commit it:
 
 ```sh
 git add .
-git commit -m "Done with explorer mode"
+git commit -m "Done with explorer mode."
 ```
 
-Please replace _"Hello, world."_ with a more meaningful message. It should try to capture what work you did.
+** NOTE **: Please replace _"Done with explorer mode."_ with a more meaningful message. It should try to capture what work you did.
 
 Push our local commits to GitHub:
 
 ```sh
-git push -u origin master
+git push
 ```
 
-The `-u` option tells git we want to making pushing the `master` branch to `origin` the default, so next time, we can
-just type `git push`.
+### Step 2: Deploy your code.
 
-Now that our source code is up on GitHub, let's publish our page. A command to do this has already been setup for you:
+For unit-i and unit-ii we will be using Netlify for hosting our websites. To deploy your page, run the command:
 
 ```sh
-npm run deploy
+yarn deploy
 ```
 
-This command will deploy your website to a hosting platform called [Surge](http://surge.sh/). The first time you run it,
-follow the prompts to set up your account.
+This command will run the tools and commands to push your code to Netlify. Running this command deploys your code and will give you a URL that you should have on your GitHub repository.
 
----
+### Step 3: Turning your code in.
 
-Once you are done, go to the issue on our `assignments` repository in your web browser. As a comment, leave a link
-to the repository of your project, and close the issue. To get the link to your repository, `hub browse` will open github.com
-with your repository URL loaded. Your instructors will not know you are done until you've closed the issue.
+Once you have your code deployed and pushed to GitHub, go to the issue on our `assignments` repository in your web browser. As a comment, leave a link to the repository of your project and close the issue. To get the link to your repository, `hub browse` will open github.com with your repository URL loaded. Your assignment will not be considered done until you close the issue.\_
+
+After you have closed the issue, your instructor will evaluate your work, and leave any comments. If deemed incomplete or unaccepted they will reopen the issue for you to work the project some more.
