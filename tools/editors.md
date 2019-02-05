@@ -19,6 +19,7 @@ code --install-extension ecmel.vscode-html-css
 code --install-extension xabikos.reactsnippets
 code --install-extension bierner.markdown-preview-github-styles
 code --install-extension 2gua.rainbow-brackets
+code --install-extension ms-vsliveshare.vsliveshare
 ```
 
 _Settings we require_
