@@ -8,7 +8,7 @@ Create a simple page that had a button, and when the user clicks it, it displays
 
 ## Adventure
 
-If you are table top gamer, you know there are more dice. Add to your page, the ability to roll the following sided dice:
+If you are table top gamer, you know there are [more dice](https://www.dieharddice.com/what-are-dnd-dice). Add to your page, the ability to roll the following sided dice:
 
 - 20
 - 12
