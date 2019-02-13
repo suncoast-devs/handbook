@@ -39,11 +39,10 @@
 - Under the To Do card, + Add a card
 - Company hyphen job title
 - Description
-- Company website link
-- Location
-- Job Link
-- Add me to the card in the description
-  @toniwarren / @ktrammellsdg
+
+  - Company website link
+  - Location
+  - Job Link
 
 ## Resources
 

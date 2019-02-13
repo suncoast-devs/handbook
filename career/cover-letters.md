@@ -2,9 +2,7 @@
 
 ## Resumes
 
-### Keys to a good resume
-
-#### Key areas of Information:
+## Key areas of Information:
 
 Contact information
 
@@ -37,7 +35,20 @@ Bonus:
 - Volunteering and community service
 - If you have room feel free to add it
 
+#### Alumni Resume Examples
+
+- [Example Resume 1](/handbook/career/assets/example-resumes/ResumeExample1.pdf)
+- [Example Resume 2](/handbook/career/assets/example-resumes/ResumeExample2.pdf)
+- [Example Resume 3](/handbook/career/assets/example-resumes/ResumeExample3.pdf)
+- [Example Resume 4](/handbook/career/assets/example-resumes/ResumeExample4.pdf)
+- [Example Resume 5](/handbook/career/assets/example-resumes/ResumeExample5.pdf)
+- [Example Resume 6](/handbook/career/assets/example-resumes/ResumeExample6.pdf)
+- [Example Resume 7](/handbook/career/assets/example-resumes/ResumeExample7.pdf)
+- [Example Resume 8](/handbook/career/assets/example-resumes/ResumeExample8.pdf)
+
 ## Cover Letters
+
+![](./assets/inigo-montoya.png)
 
 ### Look for the Narrative
 
@@ -57,14 +68,3 @@ Bonus:
 ### Proof of Skill + Narrative + Recommendation x 10/week = JOB SUCCESS!
 
 [Access the slide presentation](/handbook/career/assets/resumes-cover-letters.pdf)
-
-### Alumni Resume Examples
-
-- [Example Resume 1](/handbook/career/assets/example-resumes/ResumeExample1.pdf)
-- [Example Resume 2](/handbook/career/assets/example-resumes/ResumeExample2.pdf)
-- [Example Resume 3](/handbook/career/assets/example-resumes/ResumeExample3.pdf)
-- [Example Resume 4](/handbook/career/assets/example-resumes/ResumeExample4.pdf)
-- [Example Resume 5](/handbook/career/assets/example-resumes/ResumeExample5.pdf)
-- [Example Resume 6](/handbook/career/assets/example-resumes/ResumeExample6.pdf)
-- [Example Resume 7](/handbook/career/assets/example-resumes/ResumeExample7.pdf)
-- [Example Resume 8](/handbook/career/assets/example-resumes/ResumeExample8.pdf)
