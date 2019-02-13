@@ -44,5 +44,5 @@ So how do you "brand yourself"?
 
 ## Resources
 
-- [Access the slide presentation](/handbook/career/assets/branding-yourself.pdf)
+- [Access the slide presentation](./assets/branding-yourself.pdf)
 - [Recorded screen share](https://youtu.be/mGjYWEfAm8s)

@@ -14,4 +14,4 @@ Info about the mock interviews SDG does with students.
 
 Tips for preparing for technical interviews.
 
-[Behavioral Interview Questions](/handbook/career/assets/behavioral-interview-questions.pdf)
+[Behavioral Interview Questions](./assets/behavioral-interview-questions.pdf)
