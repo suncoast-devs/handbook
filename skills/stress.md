@@ -1,5 +1,9 @@
 # Stress Management
 
+Student Assistance Program with BayCare
+
+- [Student Assistance Program Flyer](./assets/sap-poster.pdf)
+
 Resources on Stress and Stress Management
 
 - [How to manage stress](https://www.mind.org.uk/information-support/types-of-mental-health-problems/stress/signs-of-stress/#.W7Y1BJNKhQK)

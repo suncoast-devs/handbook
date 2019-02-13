@@ -15,3 +15,7 @@ Info about the mock interviews SDG does with students.
 Tips for preparing for technical interviews.
 
 [Behavioral Interview Questions](./assets/behavioral-interview-questions.pdf)
+
+#### Resources
+
+- [Free, anonymous technical interview practice with engineers from Google, Facebook, and more](https://interviewing.io/)

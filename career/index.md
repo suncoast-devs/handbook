@@ -6,7 +6,7 @@
 
 ## [3. Blogging](/handbook/career/blogging)
 
-## [4. Trello](/handbook/career/trello)
+## [4. Trello & Time Management](/handbook/career/trello)
 
 ## [5. Decoding Job Descriptions](/handbook/career/decoding-job-descriptions)
 
@@ -21,6 +21,8 @@
 ## [10. Freelancing and How to Get Hired](/handbook/career/freelance)
 
 ## [11. How to Actively Look for a Job](/handbook/career/actively-looking)
+
+## [12. Job Search Resources](/handbook/career/job-resources)
 
 --
 

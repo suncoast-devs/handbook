@@ -42,6 +42,8 @@ We only stand to improve the quality and impact of our products if the people bu
 - If you see someone who isn't a part of the mix, invite them in.
 - Be mindful of hurtful humor. If a person or group of people are the punchline of a joke, don’t say it.
 
-[Inclusion Starts With I](https://www.youtube.com/watch?v=2g88Ju6nkcg)
+#### Resources
 
-[Access the slide presentation](./assets/diversity-inclusion.pdf)
+- [Inclusion Starts With I](https://www.youtube.com/watch?v=2g88Ju6nkcg)
+- [Brown eye Blue eye, Jane Elliott](https://www.youtube.com/watch?v=jPZEJHJPwIw)
+- [Access the slide presentation](./assets/diversity-inclusion.pdf)

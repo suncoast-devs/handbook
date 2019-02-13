@@ -46,6 +46,8 @@ Bonus:
 - [Example Resume 7](./assets/example-resumes/ResumeExample7.pdf)
 - [Example Resume 8](./assets/example-resumes/ResumeExample8.pdf)
 
+- [How to write a killer Software Engineering résumé – freeCodeCamp.org](https://medium.freecodecamp.org/writing-a-killer-software-engineering-resume-b11c91ef699d)
+
 ## Cover Letters
 
 ![](./assets/inigo-montoya.png)
@@ -67,4 +69,7 @@ Bonus:
 
 ### Proof of Skill + Narrative + Recommendation x 10/week = JOB SUCCESS!
 
-[Access the slide presentation](./assets/resumes-cover-letters.pdf)
+#### Resources
+
+- [Access the slide presentation](./assets/resumes-cover-letters.pdf)
+- [How to write a cover letter](https://www.skillgigs.com/blog/how-to-write-a-cover-letter/)
