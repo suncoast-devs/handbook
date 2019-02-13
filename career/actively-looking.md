@@ -112,4 +112,4 @@ Applying for jobs can be a full-time job by itself. Here is a checklist that wil
 - Send a follow-up email asking if they would be willing to provide feedback
 - Relate back to something that you learned in the interview
 
-###### [Download the Career Support Checklist](/handbook/career/assets/cs-checklist.pdf)
+###### [Download the Career Support Checklist](./assets/cs-checklist.pdf)
