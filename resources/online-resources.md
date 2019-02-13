@@ -2,7 +2,7 @@
 
 ## History of Web Design
 
--[Brief history of web design for designers](http://blog.froont.com/brief-history-of-web-design-for-designers)
+- [Brief history of web design for designers](http://blog.froont.com/brief-history-of-web-design-for-designers)
 
 ## Fonts & Font Pairing
 

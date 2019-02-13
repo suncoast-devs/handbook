@@ -4,4 +4,4 @@
 - Ergonomics, wrists (carpal tunnel syndrome, etc)
 - Sit, stand, walk
 
-- [Stretches that help your hands and wrists](hhttps://www.seymourduncan.com/blog/the-players-room/keep-it-loose-stretches-for-guitarists)
+- [Stretches that help your hands and wrists](https://www.seymourduncan.com/blog/the-players-room/keep-it-loose-stretches-for-guitarists)
