@@ -46,6 +46,8 @@
 
 ## Resources
 
+- [Trello Add ons and Apps](https://blog.trello.com/big-list-of-trello-chrome-extensions)
+- [Time Management for Developers](https://expertise.jetruby.com/time-management-for-developers-control-your-life-9151d7c24967)
 - [Access the slide presentation](./assets/trello.pdf)
 - [Recorded screen share](https://youtu.be/tiHP3riVm40)
 - [Time Management with Charles Burgess](https://youtu.be/zxcwyWl_TZ8)
