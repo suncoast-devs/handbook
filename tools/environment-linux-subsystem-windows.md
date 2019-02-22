@@ -70,11 +70,21 @@ When the prompt indicates `Retype new UNIX password:` retype your password
 Once you receive a prompt:
 
 ```sh
-echo UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxbXGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVsbCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxbXGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVieSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwgJiYgZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1kaXIpL2JpbjokUEFUSCIK | base64 -d >> ~/.bash_profile
+echo \
+UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxb \
+XGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVs \
+bCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxb \
+XGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0t \
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVi \
+eSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0t \
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t \
+LS0KZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwg \
+JiYgZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1k \
+aXIpL2JpbjokUEFUSCIK | base64 -d >> ~/.bash_profile
 
 echo "cd" >> ~/.bash_profile
 
-sudo sed -i "s/\/home\/${USER}/\/mnt\/c\/home/g" /etc/passwd
+sudo sed -i "s#/home/${USER}#/mnt/c/home#g" /etc/passwd
 
 mv .??* /mnt/c/home
 ```
