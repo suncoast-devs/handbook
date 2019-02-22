@@ -127,7 +127,7 @@ npm install -g yarn
 ## App App
 
 ```sh
-npm install -g suncoast-devs/app-app
+npm install -g app-app
 ```
 
 ## Netlify
