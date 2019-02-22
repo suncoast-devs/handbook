@@ -69,7 +69,8 @@ When the prompt indicates `Retype new UNIX password:` retype your password
 
 Once you receive a prompt:
 
-```sh
+<pre>
+
 echo \
 UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxb \
 XGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVs \
@@ -87,7 +88,8 @@ echo "cd" >> ~/.bash_profile
 sudo sed -i "s#/home/${USER}#/mnt/c/home#g" /etc/passwd
 
 mv .??* /mnt/c/home
-```
+
+</pre>
 
 Exit the Ubuntu environment.
 
