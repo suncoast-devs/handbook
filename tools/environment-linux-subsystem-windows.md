@@ -36,7 +36,7 @@ Exit this PowerShell
 
 ### Step 2 - Install/Enable Windows Subsystem for Linux
 
-- Enter 'PowerShell' in the windows search bar, find 'Windows Powersell' and *right click* and select "Run As administrator"
+- Enter 'PowerShell' in the windows search bar, find 'Windows Powersell' and _right click_ and select "Run As administrator"
 - Once the PowerShell window opens, enter the following:
 
 ```sh
@@ -69,27 +69,25 @@ When the prompt indicates `Retype new UNIX password:` retype your password
 
 Once you receive a prompt:
 
-<pre>
-
-echo \
-UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxb \
-XGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVs \
-bCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxb \
-XGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0t \
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVi \
-eSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0t \
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t \
-LS0KZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwg \
-JiYgZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1k \
+```sh
+echo \\\n
+UFMxPSdcW1xlWzM2bVx3XF0gXFtcZVszM21cXVxb \\\n
+XGVbMW1cXSQoZ2l0IGJyYW5jaCAyPi9kZXYvbnVs \\\n
+bCB8IHNlZCAicy8qIFwoLipcKS9cMSAvIikkIFxb \\\n
+XGVbMG1cXScKCiMtLS0tLS0tLS0tLS0tLS0tLS0t \\\n
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiMgUnVi \\\n
+eSBHZW0gZW5zdXJlIHBhdGgKIy0tLS0tLS0tLS0t \\\n
+LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t \\\n
+LS0KZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwg \\\n
+JiYgZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1k \\\n
 aXIpL2JpbjokUEFUSCIK | base64 -d >> ~/.bash_profile
 
 echo "cd" >> ~/.bash_profile
 
-sudo sed -i "s#/home/${USER}#/mnt/c/home#g" /etc/passwd
+sudo sed -i "s#/home/$\{USER\}#/mnt/c/home#g" /etc/passwd
 
 mv .??* /mnt/c/home
-
-</pre>
+```
 
 Exit the Ubuntu environment.
 
