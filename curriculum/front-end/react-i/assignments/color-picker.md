@@ -33,7 +33,9 @@ Use `range` type `input` elements to drive a color display. You'll end up with s
 **HINT**: You will want to combine techniques of string interpolation and using [inline styles in React](https://reactjs.org/docs/dom-elements.html#style), for example:
 
 ```
-<div style={{ backgroundColor: `hsl(50,8%,20%)` }} />
+<div style={{ backgroundColor: `hsl(50,8%,20%)` }} >
+  Hello World
+</div>
 ```
 
 ### Explorer Mode
@@ -41,16 +43,14 @@ Use `range` type `input` elements to drive a color display. You'll end up with s
 - [ ] Represent the three values, `hue`, `saturation`, and `lightness` in your state.
 - [ ] Add three sliders that update their respective values (`hue`, `saturation`, and `lightness`) in the state when changed.
 - [ ] Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`) and the actual color as a background color on an element.
+- [ ] Initialize the state to a random color when the page is loaded.
+- [ ] Add a button that picks a new random color.
 
 ### Adventure Mode
 
 - [ ] Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
+- [ ] Add a section that displays a css class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
 - [ ] Only display the output color text in `hsla()` if the alpha value is less than `1`.
-
-### Epic Mode
-
-- [ ] Initialize the state to a random color when the page is loaded.
-- [ ] Add a button that picks a new random color.
 
 In both cases, the sliders should be in the correct positions to represent this random color.
 

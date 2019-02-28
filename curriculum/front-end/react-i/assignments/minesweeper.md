@@ -11,7 +11,7 @@ In this assignment, you will communicate with a back-end API server to create th
 - Understand and use REST APIs
 - Use React lifecycle methods
 - Understand and interpret API documentation
-- Use `fetch` to perform `POST` request
+- Use `fetch` or `axios` to perform `POST` request or
 
 ## Requirements
 
@@ -27,7 +27,7 @@ Here's an example implementation of this assignment:
 
 ### Explorer Mode
 
-- [ ] Create a new game when the page loads, and render it on the screen
+- [ ] Create a new game when the page loads, and render it on the screen, this look as close to gif as possible.
 - [ ] Style the cells appropriately.
 - [ ] Left clicking a cell performs the `check` action
 - [ ] Right/secondary clicking a cell performs the `flag` action
@@ -36,12 +36,14 @@ Here's an example implementation of this assignment:
 ### Adventure Mode
 
 - [ ] Before creating the game, prompt the user to choose: _Easy_, _Medium_, or _Hard_ mode.
+- [ ] Have fun with the styling, make it your own
 
 ### Epic Mode
 
 - [ ] Render your victory/failure message as it's own "_screen_".
 - [ ] On that screen add a button to restart or play again.
 - [ ] Store the current game id in `localStorage`, and render the same game, rather than creating a new one every time (until the player presses the restart button).
+- [ ] Add sound effects.
 
 ## Additional Resources
 

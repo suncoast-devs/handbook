@@ -11,7 +11,7 @@ You'll identify the main `Component`s on the page and create React components fo
 ## Objectives
 
 - Learn to identify parts of a web site as `Component`s
-- Use `create-react-app` to build a React project
+- Use `app-app` (GAMMA stack) to build a React project
 - Understand and use React components
 
 ## Stretch Objectives
