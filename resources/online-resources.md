@@ -1,5 +1,9 @@
 # Online Resources
 
+## History of Web Design
+
+- [Brief history of web design for designers](http://blog.froont.com/brief-history-of-web-design-for-designers)
+
 ## Fonts & Font Pairing
 
 - [FontPair](https://fontpair.co)
@@ -36,6 +40,10 @@
 ## Responsive Design
 
 - [Acquia Engage Ethan Marcotte: Focus Responsive Design with Mobile-First Approach](https://www.youtube.com/watch?v=UdP6R1esjds)
+
+## Additional Tools
+
+-[Find out what websites are Built With](https://builtwith.com/)
 
 ## The Most Important Non-Programming Skills for Programmers
 
