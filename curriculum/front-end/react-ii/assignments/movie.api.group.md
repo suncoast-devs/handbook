@@ -12,11 +12,9 @@ This weekend, you will pair up in groups of 2 to create a "Now Playing in Theatr
 
 - Use [this API](https://developers.themoviedb.org/3/getting-started/introduction)
   - You will have to create an account to get a key, Feel free to use the address and phone number of campus to sign up with
-- Work in groups of 2, these must be decided by end of "Review at Two"
+- Work in groups of 2, these must be decided by the time you leave today
 - Each group will be working on one repository, decide in each group who's account it goes under
 - Use React Router to create the pages.
-
-**Note**: This might include prerequisites or setup instructions.
 
 ### Explorer Mode
 
@@ -36,7 +34,7 @@ This weekend, you will pair up in groups of 2 to create a "Now Playing in Theatr
 
 ## Recommended Practice:
 
-- Plan early and communicate! The most successful teams work together to create a plan of attack, and commincate what is going on
-- Wireframe out the pages first, that way each member of the group knows the end goal. Stick to the wireframes.
+- Plan early and communicate! The most successful teams work together to create a plan of attack, and communicate what is going on
+- Wireframe out the pages first, that way each member of the group knows the end goal. After you agree on the wireframes, Stick to the wireframes.
 - Work in branches or forks. This will help when you need to merge everything together
 - Like making a git commit, merging & pulling should happen frequently. **Do not wait until Monday night to try to merge everything together**
