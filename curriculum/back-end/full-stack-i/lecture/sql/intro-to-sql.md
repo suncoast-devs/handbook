@@ -136,44 +136,44 @@ The insert statement has several components. The first is `table_name` to tell t
 Example `INSERT` Statements:
 
 ```sql
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('Night of the Living Dummy', 'R. L. Stine', 1993, 'horror');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('A Shocker on Shock Street', 'R. L. Stine', 1995, 'horror');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('The Lost World', 'Michael Crichton', 1995, 'sci-fi');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('Harry Potter and Goblet of Fire', 'J.K. Rowling', 2000, 'fantasy');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('The Hobbit', 'J.R.R. Tolkien', 1937, 'fantasy');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('The Lord of the Rings: The Return of the King', 'J.R.R. Tolkien', 1955, 'fantasy');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('The Lord of the Rings: The Fellowship of the Ring', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('The Lord of the Rings: The Two Towers', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('Hitchhikers Guide to the Galaxy', 'Douglas Adams', 1979, 'sci-fi');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('Cujo', 'Stephen King', 1981, 'horror');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('It', 'Stephen King', 1986, 'horror');
 
-INSERT INTO books (title,  author, published_year, genre)
+INSERT INTO books (title,  primary_author, year_published, genre)
 VALUES ('Howls Moving Castle', 'Diana Wynne Jones', 1986, 'fantasy');
 ```
 
-Notice that we supplied the title, author, year, and genre in the `VALUES` section in the same order as the list of columns.
+Notice that we supplied the title, primary_author, year, and genre in the `VALUES` section in the same order as the list of columns.
 
 #### SELECT
 
