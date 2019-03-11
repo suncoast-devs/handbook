@@ -34,17 +34,15 @@ brew services start postgresql
   - Ruby: named 'employees'
 - [ ] Add the following columns to the table, Use your best judgement for data types
   - C#
-    - Id (Primary Key)
     - FullName
     - Salary
-    - Position
+    - JobPosition
     - PhoneExtension
     - IsPartTime
   - Ruby
-    - id (Primary Key)
     - full_name
     - salary
-    - position
+    - job_position
     - phone_extension
     - part_time
 - [ ] Create queries that can do the following:
