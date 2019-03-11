@@ -60,7 +60,7 @@ Into this `books` table, we would design columns that represent the specific dat
 
 Columns are the part of the table that defines the structure (what we often call the `schema`) of the data we are storing. This is where we define the attributes of the "thing" represented by the table. Every column has a data type that defines and restricts what type of data we can place into each column.
 
-In our `books` table, we will want to store specific details, such as the title, the primary author, and the genre of the book. We will name these columns `title`, `primary_author` and `genre`. In a language such as JavaScript, Ruby, or C# we would naturally define each of these as a `string` -- In a database, we have a few choices for the data type:
+In our `books` table, we will want to store specific details, such as the title, the primary author, the year published, and the genre of the book. We will name these columns `title`, `primary_author`, `year_published`, and `genre`. In a language such as JavaScript, Ruby, or C# we would naturally define each of these as a `string` -- In a database, we have a few choices for the data type:
 
 - `char(N)` - The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is _always_ `N` characters long
 - `varchar(N)` - Again the `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is _not_ filled with spaces.
@@ -96,11 +96,16 @@ As with most things in programming, there are tools to help make developers live
 
 SQL databases use the `S`tructured `Q`uery `L`anguage to both define the `schema` (structure) of our database and as a way to create, read, update, and delete data within it. We call the statements we ask a database to do for us a `query`, even if the statement's purpose is to create tables, or delete rows. Here are some sample queries to help get you started.
 
+#### NOTE
+
+If you are using `pgcli`, ensure `MULTILINE` is `ON` before starting. You can turn this feature on and off by using the `F3` key.
+
+
 #### CREATE TABLE
 
 After connecting to a new database, we need to create a table to store our information. This table will have rows (data) and columns (structure).
 
-Let's change our requirements a little bit and store the `title`, `primary_author`, and the `year_published` for our `books`
+Let's start by creating the table with only the `title`, `primary_author`, and the `year_published` columns for our `books`
 
 ```sql
 CREATE TABLE books (
@@ -114,7 +119,7 @@ CREATE TABLE books (
 
 The structure of our tables is not set in stone. They can be modified at a later date by using the `ALTER TABLE` query.
 
-Let's add the `genre` column to our table
+To demonstrate this, let's add the `genre` column we omitted when creating our table.
 
 ```sql
 ALTER TABLE books ADD COLUMN genre TEXT;
@@ -180,7 +185,7 @@ Notice that we supplied the title, primary_author, year, and genre in the `VALUE
 `SELECT` statements allow us to query and return a new view of the data.
 
 ```sql
-SELECT * FROM books
+SELECT * FROM books;
 ```
 
 This query will give us back all the columns (`*`) from all the rows in the `books` table. Regardless if there are ten rows or ten million rows, this statement will return them all.
@@ -188,7 +193,7 @@ This query will give us back all the columns (`*`) from all the rows in the `boo
 Often we do not want _all_ the columns from the table so we can specify specific columns.
 
 ```sql
-SELECT title FROM books
+SELECT title FROM books;
 ```
 
 While this will still return all the rows, we will only see the `title` column for all those rows.
@@ -246,7 +251,7 @@ To remove one or many rows, we can use the `DELETE` statement.
 Example:
 
 ```sql
-DELETE FROM books WHERE year_published = 1995
+DELETE FROM books WHERE year_published = 1995;
 ```
 
 This will delete all the books with a `year_published` of 1995.
