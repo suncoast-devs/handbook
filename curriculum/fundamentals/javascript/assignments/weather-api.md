@@ -1,6 +1,6 @@
 # Cloudy with a chance of Syntax Error
 
-Using a popular weather API, Create a web site that allows a user to search for a location and gets that places weather.
+Using a popular weather API, Create a web site that allows a user to search for a location and gets that location's weather.
 
 ## Objectives
 
@@ -30,7 +30,7 @@ Using a popular weather API, Create a web site that allows a user to search for 
 ### Adventure Mode
 
 - [ ] Using the HTML5 Geolocation API, search for the users current location when page loads.
-- [ ] Store the Users last search and pull it and search for the value on page load.
+- [ ] Store the Users last search and use it to search for the value on page load. HINT: localstorage
 - [ ] remove the need for the search button and search when the user stops typing. HINT: use setTimeout and the change event. to track when the user stops typing.
 
 ### Epic Mode

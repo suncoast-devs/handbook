@@ -10,7 +10,7 @@ In this project you will create a playable game of [Blackjack](https://en.wikipe
 
 ## Requirements
 
-Create a single player black jack games that plays against the house, i.e. a human player and computer dealer. You are free to create the user interface however you want, but keep it simple for **Explorer Mode**.
+Create a single player black jack games that plays against the house, i.e. a human player and computer dealer. You are free to create the user interface however you want, **but keep it simple for Explorer Mode**.
 
 General Rules:
 

@@ -11,7 +11,7 @@ Get to know React Router by building yourself a small photo gallery site.
 
 ## Requirements
 
-Using the JSON data below as a starter, build a photo gallery app. Here's [an example](http://things-i-like.surge.sh/).
+Using the JSON data below as a starter, build a photo gallery app. Here's [an example](https://things-i-like.netlify.com/).
 
 ```JSON
 {
@@ -21,36 +21,49 @@ Using the JSON data below as a starter, build a photo gallery app. Here's [an ex
     "photos": [
       {
         "title": "Panda Waving",
-        "imageURL": "https://cdn-images-1.medium.com/max/1600/1*i1vVm3EqqDIkyucD0079wg.jpeg",
+        "imageURL": "https://things-i-like.netlify.com/images/baby_panda.jpg",
         "sourceURL": "https://codeburst.io/pandas-for-data-stuff-code-challenge-7972207a8294"
       },
       {
         "title": "Großer Panda im Ocean Park, Hongkong",
-        "imageURL":
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Grosser_Panda.JPG/2560px-Grosser_Panda.JPG",
+        "imageURL": "https://things-i-like.netlify.com/images/grosser_panda.jpg",
         "sourceURL": "https://en.wikipedia.org/wiki/Giant_panda"
+      },
+      {
+        "title": "Wild pandas get a boost; the iconic species has been upgraded from 'endangered' to 'vulnerable.'",
+        "imageURL": "https://things-i-like.netlify.com/images/tree_panda.png",
+        "sourceURL": "https://www.worldwildlife.org/magazine/issues/spring-2017/articles/wild-pandas-get-a-boost--2"
+      },
+      {
+        "title": "Sacred Warrior, by Adrian Smith",
+        "imageURL": "https://things-i-like.netlify.com/images/rising_sun.png",
+        "sourceURL": "https://www.artstation.com/adrian-smith/albums/1298277"
       }
     ]
   },
   "miniatures": {
     "title": "Miniature Painting",
-    "description": "I enjoy painting miniatures. I've only been painting for about 6-months, here's some of my work.",
+    "description": "I enjoy painting miniatures from board games. I've been painting since early 2018, here's some of my work.",
     "photos": [
       {
+        "title": "City of Kings",
+        "imageURL": "https://things-i-like.netlify.com/images/city_of_kings.jpg",
+        "sourceURL": "https://www.instagram.com/p/Btv-0uYH8Xc"
+      },
+      {
         "title": "Blood Rage, Ram Clan",
-        "imageURL":
-          "https://instagram.ftpf1-1.fna.fbcdn.net/vp/ac13de8676b9e7d7b3a4f1aaf38a9a55/5C3728A2/t51.2885-15/e35/32203464_178578342778306_8009127367152762880_n.jpg",
-        "sourceURL": "https://www.instagram.com/p/BjRKLqYh4gK/?taken-by=ambethia"
+        "imageURL": "https://things-i-like.netlify.com/images/ram_clan.jpg",
+        "sourceURL": "https://www.instagram.com/p/BjRKLqYh4gK"
       },
       {
         "title": "Cormac the Druid, work in progress",
-        "imageURL":
-          "https://instagram.ftpf1-1.fna.fbcdn.net/vp/fbe274a10d9f125721b996b1c900a38a/5BFA5B76/t51.2885-15/e35/37190638_643058652730656_5948932439748378624_n.jpg",
-        "sourceURL": "https://www.instagram.com/p/Bl09Fg3jM54/?taken-by=ambethia"
+        "imageURL": "https://things-i-like.netlify.com/images/cormac.jpg",
+        "sourceURL": "https://www.instagram.com/p/BnW2QrWDaky"
       }
     ]
   }
 }
+
 ```
 
 Save this as a JSON file in your project and import it.

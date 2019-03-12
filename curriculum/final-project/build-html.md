@@ -8,7 +8,7 @@ With the wire frames created, we need to start breathing life into our applicati
 
 ## Requirements
 
-- Using `app-app`, `create-react-app` or `vue create` to start implementing your HTML
+- Using `app-app`to start implementing your HTML
 
 ### Explorer Mode, Due Wednesday 9/19
 

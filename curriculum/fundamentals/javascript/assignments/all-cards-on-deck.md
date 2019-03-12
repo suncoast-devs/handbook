@@ -15,7 +15,7 @@ Computers are notoriously bad at random numbers. This is a pretty deep and compl
 ## Requirements
 
 - Your deck should contain 52 unique cards.
-- All cards should have a "rank" and a "suit".
+- All cards should be represented as as string such as "Ace of Hearts"
 - There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
 - There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", and "King".
 
@@ -64,3 +64,7 @@ Let's break this down from the inside out:
 4.  We use `Math.floor()` to round down to the nearest whole number, i.e. `8`.
 
 Because we're rounding down, it's impossible to get `20`. This will give us an integer between `0` and `19`. This technique is perfect for finding a "random" index in an array of length `n`.
+
+## Slides
+
+https://slides.com/markdewey-1/arrays-and-loops

@@ -89,7 +89,7 @@ Know what you want to do and craft your portfolio for that.
 - Online community for user-made artwork: https://dribbble.com/
 - _Source: Samantha Warren_: http://samanthatoy.com/
 
-[Access the slide presentation](/handbook/career/assets/portfolios.pdf)
+[Access the slide presentation](./assets/portfolios.pdf)
 
 ## Notes from Friday Conversations:
 

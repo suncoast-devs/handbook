@@ -73,7 +73,7 @@ If our `Restaurant` model has an attached `image` we can supply it like this:
 ```ruby
 restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Address.full_address)
 
-restuarant.image.attach(file_name: "pic.png", io: File.open(Rails.root.join("public/pic.png")))
+restuarant.image.attach(filename: "pic.png", io: File.open(Rails.root.join("public/pic.png")))
 ```
 
 This assumes the picture is in our `public` folder and is named `pic.png`
@@ -82,18 +82,12 @@ This assumes the picture is in our `public` folder and is named `pic.png`
 
 What if we want to use a placeholder image service?
 
-If we add this code at the *TOP* of our file:
-
-```ruby
-require 'open-uri'
-```
-
-we can write code such as:
+If we add the `down` gem to our `Gemfile` we can write code such as:
 
 ```ruby
 restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Address.full_address)
 
-restuarant.image.attach(file_name: "pic.png", io: open("https://placem.at/people?random=1"))
+restuarant.image.attach(filename: "pic.png", io: Down.download("https://placem.at/people?random=1"))
 ```
 
 This will use the https://placem.at service to pull a [random image](https://placem.at/people?random=1) and supply it as our restaurant image.
