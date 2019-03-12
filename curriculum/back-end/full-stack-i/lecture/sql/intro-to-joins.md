@@ -126,6 +126,7 @@ When we have a relationship such as the ratings for a movie, we say that this is
 The ERD of this looks like:
 
 ```
+
                                                              +-----------------------+
              +----------------------------+                  |        RATINGS        |
              |         MOVIES             |                  |                       |
@@ -136,6 +137,7 @@ The ERD of this looks like:
              | year_released       INT    |
              | genre               TEXT   |
              +----------------------------+
+
 ```
 
 Lets add a new column to our `movies` to indicate _WHICH_ rating is associated to each row representing a movie.
@@ -223,6 +225,7 @@ For the list of actors in the cast we might say "A movie has many cast members" 
 The ERD of this looks like:
 
 ```
+
       +--------------------------------+           +---------------------------+
       |            MOVIES              |           |         RATINGS           |
       |                                |           |                           |
@@ -260,6 +263,7 @@ CREATE TABLE cast_members (
 ```
 
 ```
+
       +--------------------------------+           +---------------------------+
       |            MOVIES              |           |         RATINGS           |
       |                                |           |                           |
