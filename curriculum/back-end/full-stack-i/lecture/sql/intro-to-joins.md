@@ -2,7 +2,19 @@
 
 ## Relational Databases and Data Normalization
 
-In this lecture we are going to develop a database to keep information about movies. Along the way we will need to track information about the movie that isn't singular information. With a single table we store information in columns that is singular. We also want to avoid repeating information. For instance, the movie's title is a single piece of information while the list of actors in the cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc) would be repeated information per row. We will learn how to create `relations` to store this information in separate tables and _join_ / _relate_ it back to the movies.
+In this topic we are going to develop a database to keep information about movies. Along the way we will need to track information about the movie that isn't singular information. With a single table we store information in columns that is singular. We also want to avoid repeating information. For instance, the movie's title is a single piece of information while the list of actors in the cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc) would be repeated information per row. We will learn how to create `relations` to store this information in separate tables and _join_ / _relate_ it back to the movies.
+
+### Creating our database
+
+```sh
+createdb suncoast_movies
+```
+
+This is the database we will use for the rest of this discussion.
+
+```sh
+pgcli suncoast_movies
+```
 
 ### Primary Keys
 
