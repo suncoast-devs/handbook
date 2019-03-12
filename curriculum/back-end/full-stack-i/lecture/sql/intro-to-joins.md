@@ -138,18 +138,15 @@ When we have a relationship such as the ratings for a movie, we say that this is
 The ERD of this looks like:
 
 ```
-
-                                                             +-----------------------+
-             +----------------------------+                  |        RATINGS        |
-             |         MOVIES             |                  |                       |
-             |                            |                  |   id        SERIAL    |
-             | id                  SERIAL +------------------+   rating    TEXT      |
-             | title               TEXT   |  many        one |                       |
-             | primary_director    TEXT   |                  +-----------------------+
-             | year_released       INT    |
-             | genre               TEXT   |
-             +----------------------------+
-
++----------------------------+                  +-----------------------+
+|         MOVIES             |                  |       RATINGS         |
+|                            |                  |                       |
+| id                  SERIAL +------------------+   id        SERIAL    |
+| title               TEXT   | many         one |   rating    TEXT      |
+| primary_director    TEXT   |                  |                       |
+| year_released       INT    |                  +-----------------------+
+| genre               TEXT   |
++----------------------------+
 ```
 
 Lets add a new column to our `movies` to indicate _WHICH_ rating is associated to each row representing a movie.
@@ -237,29 +234,28 @@ For the list of actors in the cast we might say "A movie has many cast members" 
 The ERD of this looks like:
 
 ```
-
-      +--------------------------------+           +---------------------------+
-      |            MOVIES              |           |         RATINGS           |
-      |                                |           |                           |
-      |    id                  SERIAL  |           |     id        SERIAL      |
-      |    title               TEXT    |many    one|     rating    TEXT        |
-      |    primary_director    TEXT    +-----------+                           |
-      |    year_released       INT     |           +---------------------------+
-      |    genre               TEXT    |
-      |                                |
-      +------------+-------------------+
-                   |
-                   | many
-                   |
-                   |
-                   |                   +-------------------------+
-                   |                   |        ACTORS           |
-                   |                   |                         |
-                   |              many |    id          SERIAL   |
-                   +-------------------+    full_name   TEXT     |
-                                       |    birthday    DATE     |
-                                       |                         |
-                                       +-------------------------+
++--------------------------------+           +---------------------------+
+|            MOVIES              |           |         RATINGS           |
+|                                |           |                           |
+|    id                  SERIAL  |           |     id        SERIAL      |
+|    title               TEXT    |many    one|     rating    TEXT        |
+|    primary_director    TEXT    +-----------+                           |
+|    year_released       INT     |           +---------------------------+
+|    genre               TEXT    |
+|                                |
++------------+-------------------+
+             |
+             | many
+             |
+             |
+             |                   +-------------------------+
+             |                   |        ACTORS           |
+             |                   |                         |
+             |              many |    id          SERIAL   |
+             +-------------------+    full_name   TEXT     |
+                                 |    birthday    DATE     |
+                                 |                         |
+                                 +-------------------------+
 ```
 
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables. In this case we need a third table, commonly referred to as a _join table_ to store the relationships. In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.) We attempt to name this table based on the relationship between the two tables.
@@ -275,32 +271,30 @@ CREATE TABLE cast_members (
 ```
 
 ```
-
-      +--------------------------------+           +---------------------------+
-      |            MOVIES              |           |         RATINGS           |
-      |                                |           |                           |
-      |    id                  SERIAL  |           |     id        SERIAL      |
-      |    title               TEXT    | many   one|     rating    TEXT        |
-      |    primary_director    TEXT    +-----------+                           |
-      |    year_released       INT     |           +---------------------------+
-      |    genre               TEXT    |
-      |                                |
-      +-------------+------------------+
-                    | one
-                    |
-                    |
-                    |
-                    |
-                    | many
-            +-------+---------------+               +-------------------------+
-            |     CAST MEMBERS      |               |          ACTORS         |
-            |                       | many      one |                         |
-            |   id       SERIAL     +---------------+    id          SERIAL   |
-            |                       |               |    full_name   TEXT     |
-            |                       |               |    birthday    DATE     |
-            |                       |               |                         |
-            +-----------------------+               +-------------------------+
-
++--------------------------------+           +---------------------------+
+|            MOVIES              |           |         RATINGS           |
+|                                |           |                           |
+|    id                  SERIAL  |           |     id        SERIAL      |
+|    title               TEXT    | many   one|     rating    TEXT        |
+|    primary_director    TEXT    +-----------+                           |
+|    year_released       INT     |           +---------------------------+
+|    genre               TEXT    |
+|                                |
++-------------+------------------+
+              | one
+              |
+              |
+              |
+              |
+              | many
+      +-------+---------------+               +-------------------------+
+      |     CAST MEMBERS      |               |          ACTORS         |
+      |                       | many      one |                         |
+      |   id       SERIAL     +---------------+    id          SERIAL   |
+      |                       |               |    full_name   TEXT     |
+      |                       |               |    birthday    DATE     |
+      |                       |               |                         |
+      +-----------------------+               +-------------------------+
 
 ```
 
