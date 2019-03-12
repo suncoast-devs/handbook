@@ -135,17 +135,19 @@ So now we have a way to identify each movie, rating, and actor. Next we will tal
 
 When we have a relationship such as the ratings for a movie, we say that this is a "One to Many" relationship. That is, a movie has one rating (e.g. the movie _Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many movies with a _G_ rating)
 
-The ERD of this looks like:
+When describing our database it is often usual to have a visualization of the structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
+
+The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add in the actors soon...)
 
 ```
-+----------------------------+                  +-----------------------+
-|         MOVIES             |                  |       RATINGS         |
-|                            |                  |                       |
-| id                  SERIAL +------------------+   id        SERIAL    |
-| title               TEXT   | many         one |   rating    TEXT      |
-| primary_director    TEXT   |                  |                       |
-| year_released       INT    |                  +-----------------------+
-| genre               TEXT   |
++----------------------------+         +-----------------------+
+|         MOVIES             |         |       RATINGS         |
+|                            |         |                       |
+| id                  SERIAL |         |                       |
+| title               TEXT   |         |   id        SERIAL    |
+| primary_director    TEXT   |         |   rating    TEXT      |
+| year_released       INT    |         |                       |
+| genre               TEXT   |         +-----------------------+
 +----------------------------+
 ```
 
@@ -155,6 +157,22 @@ The column we are adding is a `rating_id` that is an integer since this is the s
 
 ```sql
 ALTER TABLE movies ADD COLUMN rating_id INTEGER NULL REFERENCES ratings (id);
+```
+
+Now our ERD looks like this. The `rating_id` from `movies` _links_ (_joins_) us to the `ratings` table
+
+```
++----------------------------+                  +-----------------------+
+|         MOVIES             |                  |       RATINGS         |
+|                            |                  |                       |
+| id                  SERIAL |        +--------->   id        SERIAL    |
+| title               TEXT   |        |     one |   rating    TEXT      |
+| primary_director    TEXT   |        |         |                       |
+| year_released       INT    |        |         |                       |
+| genre               TEXT   | many   |         +-----------------------+
+| rating_id           INT    <--------+
+|                            |
++----------------------------+
 ```
 
 Now we can specify the `rating_id` associated to each movie when we insert the movie.
