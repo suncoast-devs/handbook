@@ -1,5 +1,4 @@
-# Object Oriented Programing in C#
-
+# Object Oriented Programing in C
 
 ## Classes
 
@@ -11,8 +10,8 @@
 - This base `Object` gives
 - We can make our own classes. Lets make one to keep track of information about my dog.
 
-  ``` C#
-  public class Dog 
+  ```C#
+  public class Dog
   {
 
   }
@@ -25,28 +24,30 @@
 - and we can define methods.
 - These methods follow the same rules that our other methods follow
 
-  ``` C#
+  ```C#
 
-  public class Dog 
+  public class Dog
   {
       public void Bark()
       {
           Console.WriteLine("Woof");
       }
   }
-  
-  // later 
+
+  // later
   var scooby = new Dog();
   scooby.Bark();
-```
+  ```
 
-- But not all dogs sound the same! 
+````
+
+- But not all dogs sound the same!
 - We can use `properties` to help describe a dog
-- Properties have types and can be set set and accessed at any time. 
+- Properties have types and can be set set and accessed at any time.
 - Properties allow us to have different values per instance of the class
 
 ``` C#
-public class Dog 
+public class Dog
 {
     public string BarkSound { get; set; }
     public void Bark()
@@ -54,8 +55,8 @@ public class Dog
         Console.WriteLine("Woof");
     }
 }
-  
-  // later 
+
+  // later
   var tacoBellDog = new Dog();
   tacoBellDog.BarkSound = "yo quiero taco bell";
   tacoBellDog.Bark();
@@ -69,23 +70,21 @@ public class Dog
       BarkSound = "Howdy Y'all!"
   };
   huckleBerry.Bark();
-```
+````
 
 ## Inheritance
 
 - Classes can have a `parent` class from which they gain all the data and behavior from but can extend with new data and behavior.
 - Inheritance can be thought of as "is a" or "is a kind of"
 
-
-``` C#
+```C#
 public class GoodDog: Dog
 {
     public List<strings> Toys {get;set;} = new List<string> {"tennis ball", "bone", "chewie"};
 }
 
-// later 
+// later
 var seymour = new GoodDog{
-    BackVoice = "Woof!"
+    BarkSound = "Woof!"
 };
 ```
-

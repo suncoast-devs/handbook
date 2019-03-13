@@ -12,7 +12,7 @@ Week Goal: Learn the new Languages
   - Intro to back-end engineering,
   - Intro to back-end language,
   - Dev env setup,
-  - See [Ruby Lecture Notes](/handbook/curriculum/back-end/full-stack-i/lecture/ruby/intro-to-ruby)
+  - See [Ruby Lecture Notes](/handbook/curriculum/back-end/full-stack-i/lecture/ruby/intro-to-ruby) or [.Net Notes](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)
 - Homework:
   - [Assignment](/handbook/curriculum/back-end/full-stack-i/assignments/a-whole-new-world/welcome-to-a-new-language.origin)
   - [Assignment with capstone wireframes](/handbook/curriculum/back-end/full-stack-i/assignments/a-whole-new-world/welcome-to-a-new-language.wireframes)
