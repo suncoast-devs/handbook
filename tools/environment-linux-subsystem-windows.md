@@ -100,7 +100,19 @@ sudo apt update
 ## Configure Git for Linux
 
 ```sh
-sudo ln -s "/mnt/c/Program Files/Git/cmd/git.exe" /usr/local/bin/git
+sudo apt install git
+```
+
+and then
+
+```sh
+(
+  echo -n "Type in your name as you used at GitHub: " && read name
+  echo -n "Type in the email address you used at GitHub: " && read email
+
+  git config --global user.name "${name}"
+  git config --global user.email "${email}"
+)
 ```
 
 ## Node.js

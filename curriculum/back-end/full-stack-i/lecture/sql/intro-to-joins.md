@@ -2,7 +2,19 @@
 
 ## Relational Databases and Data Normalization
 
-In this lecture we are going to develop a database to keep information about movies. Along the way we will need to track information about the movie that isn't singular information. With a single table we store information in columns that is singular. We also want to avoid repeating information. For instance, the movie's title is a single piece of information while the list of actors in the cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc) would be repeated information per row. We will learn how to create `relations` to store this information in separate tables and _join_ / _relate_ it back to the movies.
+In this topic we are going to develop a database to keep information about movies. Along the way we will need to track information about the movie that isn't singular information. With a single table we store information in columns that is singular. We also want to avoid repeating information. For instance, the movie's title is a single piece of information while the list of actors in the cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc) would be repeated information per row. We will learn how to create `relations` to store this information in separate tables and _join_ / _relate_ it back to the movies.
+
+### Creating our database
+
+```sh
+createdb suncoast_movies
+```
+
+This is the database we will use for the rest of this discussion.
+
+```sh
+pgcli suncoast_movies
+```
 
 ### Primary Keys
 
@@ -123,19 +135,20 @@ So now we have a way to identify each movie, rating, and actor. Next we will tal
 
 When we have a relationship such as the ratings for a movie, we say that this is a "One to Many" relationship. That is, a movie has one rating (e.g. the movie _Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many movies with a _G_ rating)
 
-The ERD of this looks like:
+When describing our database it is often usual to have a visualization of the structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
+
+The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add in the actors soon...)
 
 ```
-                                                             +-----------------------+
-             +----------------------------+                  |        RATINGS        |
-             |         MOVIES             |                  |                       |
-             |                            |                  |   id        SERIAL    |
-             | id                  SERIAL +------------------+   rating    TEXT      |
-             | title               TEXT   |  many        one |                       |
-             | primary_director    TEXT   |                  +-----------------------+
-             | year_released       INT    |
-             | genre               TEXT   |
-             +----------------------------+
++----------------------------+         +-----------------------+
+|         MOVIES             |         |       RATINGS         |
+|                            |         |                       |
+| id                  SERIAL |         |                       |
+| title               TEXT   |         |   id        SERIAL    |
+| primary_director    TEXT   |         |   rating    TEXT      |
+| year_released       INT    |         |                       |
+| genre               TEXT   |         +-----------------------+
++----------------------------+
 ```
 
 Lets add a new column to our `movies` to indicate _WHICH_ rating is associated to each row representing a movie.
@@ -144,6 +157,22 @@ The column we are adding is a `rating_id` that is an integer since this is the s
 
 ```sql
 ALTER TABLE movies ADD COLUMN rating_id INTEGER NULL REFERENCES ratings (id);
+```
+
+Now our ERD looks like this. The `rating_id` from `movies` _links_ (_joins_) us to the `ratings` table
+
+```
++----------------------------+                  +-----------------------+
+|         MOVIES             |                  |       RATINGS         |
+|                            |                  |                       |
+| id                  SERIAL |        +--------->   id        SERIAL    |
+| title               TEXT   |        |     one |   rating    TEXT      |
+| primary_director    TEXT   |        |         |                       |
+| year_released       INT    |        |         |                       |
+| genre               TEXT   | many   |         +-----------------------+
+| rating_id           INT    <--------+
+|                            |
++----------------------------+
 ```
 
 Now we can specify the `rating_id` associated to each movie when we insert the movie.
@@ -223,28 +252,28 @@ For the list of actors in the cast we might say "A movie has many cast members" 
 The ERD of this looks like:
 
 ```
-      +--------------------------------+           +---------------------------+
-      |            MOVIES              |           |         RATINGS           |
-      |                                |           |                           |
-      |    id                  SERIAL  |           |     id        SERIAL      |
-      |    title               TEXT    |many    one|     rating    TEXT        |
-      |    primary_director    TEXT    +-----------+                           |
-      |    year_released       INT     |           +---------------------------+
-      |    genre               TEXT    |
-      |                                |
-      +------------+-------------------+
-                   |
-                   | many
-                   |
-                   |
-                   |                   +-------------------------+
-                   |                   |        ACTORS           |
-                   |                   |                         |
-                   |              many |    id          SERIAL   |
-                   +-------------------+    full_name   TEXT     |
-                                       |    birthday    DATE     |
-                                       |                         |
-                                       +-------------------------+
++--------------------------------+           +---------------------------+
+|            MOVIES              |           |         RATINGS           |
+|                                |           |                           |
+|    id                  SERIAL  |           |     id        SERIAL      |
+|    title               TEXT    |many    one|     rating    TEXT        |
+|    primary_director    TEXT    +-----------+                           |
+|    year_released       INT     |           +---------------------------+
+|    genre               TEXT    |
+|                                |
++------------+-------------------+
+             |
+             | many
+             |
+             |
+             |                   +-------------------------+
+             |                   |        ACTORS           |
+             |                   |                         |
+             |              many |    id          SERIAL   |
+             +-------------------+    full_name   TEXT     |
+                                 |    birthday    DATE     |
+                                 |                         |
+                                 +-------------------------+
 ```
 
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables. In this case we need a third table, commonly referred to as a _join table_ to store the relationships. In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.) We attempt to name this table based on the relationship between the two tables.
@@ -260,31 +289,30 @@ CREATE TABLE cast_members (
 ```
 
 ```
-      +--------------------------------+           +---------------------------+
-      |            MOVIES              |           |         RATINGS           |
-      |                                |           |                           |
-      |    id                  SERIAL  |           |     id        SERIAL      |
-      |    title               TEXT    | many   one|     rating    TEXT        |
-      |    primary_director    TEXT    +-----------+                           |
-      |    year_released       INT     |           +---------------------------+
-      |    genre               TEXT    |
-      |                                |
-      +-------------+------------------+
-                    | one
-                    |
-                    |
-                    |
-                    |
-                    | many
-            +-------+---------------+               +-------------------------+
-            |     CAST MEMBERS      |               |          ACTORS         |
-            |                       | many      one |                         |
-            |   id       SERIAL     +---------------+    id          SERIAL   |
-            |                       |               |    full_name   TEXT     |
-            |                       |               |    birthday    DATE     |
-            |                       |               |                         |
-            +-----------------------+               +-------------------------+
-
++--------------------------------+           +---------------------------+
+|            MOVIES              |           |         RATINGS           |
+|                                |           |                           |
+|    id                  SERIAL  |           |     id        SERIAL      |
+|    title               TEXT    | many   one|     rating    TEXT        |
+|    primary_director    TEXT    +-----------+                           |
+|    year_released       INT     |           +---------------------------+
+|    genre               TEXT    |
+|                                |
++-------------+------------------+
+              | one
+              |
+              |
+              |
+              |
+              | many
+      +-------+---------------+               +-------------------------+
+      |     CAST MEMBERS      |               |          ACTORS         |
+      |                       | many      one |                         |
+      |   id       SERIAL     +---------------+    id          SERIAL   |
+      |                       |               |    full_name   TEXT     |
+      |                       |               |    birthday    DATE     |
+      |                       |               |                         |
+      +-----------------------+               +-------------------------+
 
 ```
 
