@@ -36,7 +36,7 @@
   - `length` gives you the length of the array
 
 - Can store mixed types
-  - `my_array = ["Gavin", 42, "Toni", 100]
+  - `my_array = ["Gavin", 42, "Toni", 100]`
   - `array_with_arrays_inside = ["Gavin", 42, ["Toni", "Jason"], 100]`
 
 ### Hash (like a dictionary)
@@ -48,7 +48,7 @@
 - Missing keys
   - Returns `nil` if the key isn't there `person["address"]` returns `nil`
 - Values (and keys, though they are usually strings) can be complex
-  - `person = { "name" => "Gavin Stark", "scores" => [100, 98, 42, 64] }
+  - `person = { "name" => "Gavin Stark", "scores" => [100, 98, 42, 64] }`
   - `person["scores"]` is `[100, 98, 42, 64]`
   - `person["scores"][2]` is `42` since `person["scores"]` is an array, and then we index the array at `2` to get the _third_ element
 
@@ -111,7 +111,7 @@ loop do
   input = gets.chomp
   if input == "done"
     break
-  ene
+  end
   puts "You said #{input}"
 end
 ```
