@@ -27,9 +27,9 @@ After that, this weekend is the next big push your final project, work on the HT
   - C# `DepartmentId` to your `Employee` Table
   - Ruby: `department_id` to your `employees` table
 - [ ] Add tables named:
-  - C#: `Products` and `Orders`. Give each table a few columns
-  - Ruby: `products` and a `orders`. Give each table a few columns
-- [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the tables and foreign keys needed for this to happen
+  - C#: `Products` and `Orders`. Give each table a few columns. `Orders` should minimally have a `OrderNumber` and an `Id`
+  - Ruby: `products` and a `orders`. Give each table a few columns. `orders` should minimally have a `order_number` and an `id`
+- [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the 3 tables (`Orders`, `Products` and `ProductOrders`) and foreign keys needed for this to happen
 
 * [ ] Create queries that can do the following:
   - [ ] Given a department id, give me all employees in the department
@@ -37,7 +37,7 @@ After that, this weekend is the next big push your final project, work on the HT
   - [ ] Find all orders that contain the product id of `2`
   - [ ] Given an order id, display on the `OrderNumber`, and all the product names
   - [ ] Inserts a new product
-  - [ ] Creates a new order
+  - [ ] Inserts a new order
   - [ ] Adds a product to an order
   - [ ] Adds a new employee to a department
   - [ ] Updating a employee's department
