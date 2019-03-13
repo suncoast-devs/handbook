@@ -197,20 +197,20 @@ cd ruby-install-0.7.0/
 sudo make install
 ```
 
-### Step 3 - Install Ruby 2.5.3
+### Step 3 - Install Ruby 2.6.1
 
 ```sh
 cd
 sudo apt update
-ruby-install ruby-2.5.3
+ruby-install ruby-2.6.1
 ```
 
-### Step 4 - Make Ruby 2.5.3 your default
+### Step 4 - Make Ruby 2.6.1 your default
 
 ```sh
 cd
-echo 'ruby-2.5.3' > ~/.ruby-version
-echo 'chruby ruby-2.5.3' | tee -a ~/.profile
+echo 'ruby-2.6.1' > ~/.ruby-version
+echo 'chruby ruby-2.6.1' | tee -a ~/.profile
 ```
 
 ### Step 5 - Validate Ruby install
@@ -218,4 +218,4 @@ echo 'chruby ruby-2.5.3' | tee -a ~/.profile
 - Close your `Ubuntu` window
 - Start a new `Ubuntu` window
 - Type `ruby -v`
-- The output should include `2.5.3`
+- The output should include `2.6.1`
