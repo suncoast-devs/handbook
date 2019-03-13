@@ -220,7 +220,14 @@ chruby ruby-2.6.1
 gem install irb
 ```
 
-### Step 5 - Validate Ruby install
+### Step 6 - Ensure irb is configured
+
+```sh
+[ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
+gem install awesome_print
+```
+
+### Step 6 - Validate Ruby install
 
 - Close your `Ubuntu` window
 - Start a new `Ubuntu` window

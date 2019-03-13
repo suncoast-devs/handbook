@@ -169,4 +169,11 @@ Close your terminal window. Start a new terminal window
 gem install irb
 ```
 
+Configure our irb environment
+
+```sh
+[ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
+gem install awesome_print
+```
+
 ---
