@@ -213,6 +213,13 @@ echo 'ruby-2.6.1' > ~/.ruby-version
 echo 'chruby ruby-2.6.1' | tee -a ~/.profile
 ```
 
+### Step 5 - Ensure irb is installed
+
+```sh
+chruby ruby-2.6.1
+gem install irb
+```
+
 ### Step 5 - Validate Ruby install
 
 - Close your `Ubuntu` window

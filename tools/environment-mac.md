@@ -156,4 +156,17 @@ From your terminal, run the following commands (current directory does not matte
 brew install hub
 ```
 
+## Ruby
+
+```sh
+brew install ruby
+echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bashrc
+```
+
+Close your terminal window. Start a new terminal window
+
+```sh
+gem install irb
+```
+
 ---
