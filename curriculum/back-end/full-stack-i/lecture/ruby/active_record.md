@@ -107,7 +107,7 @@ CREATE TABLE actors (
   birthday  DATE
 );
 
-CREATE TABLE cast_members (
+CREATE TABLE roles (
   id       SERIAL PRIMARY KEY,
   movie_id  INTEGER REFERENCES movies (id),
   actor_id  INTEGER REFERENCES actors (id)
@@ -116,25 +116,49 @@ CREATE TABLE cast_members (
 
 - Step 2: See [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins) for `INSERT INTO` statements to populate the database
 
-## Install the Active Record gem
+## Using `bundler`
 
-```sh
-gem install pg
-gem install activerecord
+[Bundler](https://bundler.io) is the main package manager for Ruby. It is like [npm](https://npmjs.org) or [yarn](yarnpkg.com) for JavaScript.
+
+In most Ruby applications we will be using Bundler for managing the dependencies of our code. Bundler is a very powerful tool that can add libraries to your code from the main repository at [rubygems](https://rubygems.org) or from Github. Bundler also allows you to require some libraries in development mode, some in test, and others in production. It also has a very powerful and flexible version requirement langauge.
+
+For now we are going to use Bundler in it's [inline](https://bundler.io/v2.0/guides/bundler_in_a_single_file_ruby_script.html) mode since we'll only be dealing with a single Ruby file. Soon we will use Bundler in it's typical mode by using a [`Gemfile`](https://bundler.io/gemfile.html)
+
+## Use bundler to require the Postgres and ActiveRecord libraries
+
+Create a ruby script (`movies.rb`) to contain our Ruby code
+
+```ruby
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'pg'
+  gem 'activerecord'
+end
+
+require 'active_record'
 ```
 
 ## Basic Active Record Setup
 
-- NOTE: In the code below replace `"movies"` with the name of your database where the `movies`, `actors`, and `cast_members` tables were created.
+- NOTE: If you did not use the name `suncoast_movies`, replace `"suncoast_movies"` with the name of your database where the `movies`, `actors`, and `roles` tables were created.
 
 ```ruby
-require 'pg'
+require 'bundler/inline'
+
+gemfile do
+  source 'https://rubygems.org'
+  gem 'pg'
+  gem 'activerecord'
+end
+
 require 'active_record'
 
 ActiveRecord::Base.logger = Logger.new(STDOUT)
 ActiveRecord::Base.establish_connection(
   adapter: "postgresql",
-  database: "movies"
+  database: "suncoast_movies"
 )
 ```
 
@@ -217,29 +241,29 @@ p rating.movies
 
 ## Many to Many Join
 
-- We must define a model for the `CastMember` model that joins the `Movie` model and the `Actor` model
+- We must define a model for the `Role` model that joins the `Movie` model and the `Actor` model
 
 ```ruby
 class Actor < ActiveRecord::Base
 end
 
-class CastMember < ActiveRecord::Base
+class Role < ActiveRecord::Base
   belongs_to :movie
   belongs_to :actor
 end
 ```
 
-- Now we can revise `Movie` and `Actor` to use the `CastMember` model as our join model, we call this `has_many :through`
+- Now we can revise `Movie` and `Actor` to use the `Role` model as our join model, we call this `has_many :through`
 
 ```ruby
 class Actor < ActiveRecord::Base
-  has_many :cast_members
-  has_many :movies, through: :cast_members
+  has_many :roles
+  has_many :movies, through: :roles
 end
 
 class Movie < ActiveRecord::Base
-  has_many :cast_members
-  has_many :actors, through: :cast_members
+  has_many :roles
+  has_many :actors, through: :roles
 end
 ```
 
