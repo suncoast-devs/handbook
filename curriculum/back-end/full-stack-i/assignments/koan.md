@@ -7,6 +7,7 @@ As we learn a new language, we need to practice the new ideas, syntax, and parad
 ## Objectives
 
 - Complete your language Koans
+- further your capstone project
 
 ## Requirements
 
@@ -21,6 +22,8 @@ As we learn a new language, we need to practice the new ideas, syntax, and parad
 ### Explorer Mode
 
 - [ ] Complete the Koans
+- [ ] Once you are done with you koans, (or need a break), continue to work on the HTML of you capstone.
+- [ ] Now that you know some SQL and databases, start working on an ERD (Entity relationship diagram) of you capstone projects.
 
 ### Adventure Mode
 
