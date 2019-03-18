@@ -32,15 +32,16 @@ _NOTE_: The Additional Resources section below is _very_ helpful. Consider readi
 ### Explorer Mode (Ruby)
 - [ ] Create a database called `safari_vacation`
   - [ ] This will have 1 table called `animals` that has the following columns
-    - `id` (int)
+    - `id` (serial primary key)
     - `species` (string)
     - `seen_count` (int)
     - `last_seen_location` (string)
   * NOTE: This should be made all in the code (Ruby), and **not** created in the `pgcli`.
-- [ ] Create a small console application. Your application should prompt the user with a menu with the following options and corresponding actions
+- [ ] Use pgcli to create your `animals` table and insert a few species of your own.
+- [ ] Create a ruby file called 'safari.rb' Your application should prompt the user with a menu with the following options and corresponding actions
   - [ ] Type `display_all` to show all the animals.
   - [ ] Type 'increment` to then prompt the user for a species. Add `1` to the `seen_count` for that species and display the new count.
-  - [ ] Type `specie` to prompt for a specific species and show the details for just that species.
+  - [ ] Type `species` to prompt for a specific species and show the details for just that species.
   - [ ] Type 'spot' to prompt the user for a species and a location. Update that species `last_seen_location`
   - [ ] Type 'extinct' to prompt the user for a location and delete all the species in that location
   - [ ] Type 'total` to get the total `seen_count` of all animals
@@ -66,8 +67,6 @@ _NOTE_: The Additional Resources section below is _very_ helpful. Consider readi
   - Sections 1, 2, 3, 5
 - [Active Record Querying](http://guides.rubyonrails.org/active_record_querying.html)
   - Sections 1, 2, 3, 4, 5
-- [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
-  - Sections 1, 2
 
 ### .NET
 
