@@ -8,10 +8,14 @@ We are taking a surprise trip to the Savannah for a safari to see all sorts of e
 
 ## Requirements
 
-### Explorer Mode
+### Additional Reading
 
-- [ ] Create a database called `SafariVacation` / `safari_vacation`
-  - [ ] This will have 1 table called `SeenAnimals` / `seen_animals` that has the following columns
+_NOTE_: The Additional Resources section below is _very_ helpful. Consider reading this after reading _Explorer_ mode. Then make a plan for the assignment for digging in and writing code.
+
+### Explorer Mode (C#)
+
+- [ ] Create a database called `SafariVacation`
+  - [ ] This will have 1 table called `SeenAnimals` that has the following columns
     - `Id` / `id` (int)
     - `Species` / `species` (string)
     - `CountOfTimesSeen` / `count_of_times_seen` (int)
@@ -25,15 +29,45 @@ We are taking a surprise trip to the Savannah for a safari to see all sorts of e
   - [ ] Add all the `CountOfTimesSeen` and get a total number of animals seen
   - [ ] Get the `CountOfTimesSeen` of `lions`, `tigers` and `bears`
 
-### Adventure Mode
+### Explorer Mode (Ruby)
+- [ ] Create a database called `safari_vacation`
+  - [ ] This will have 1 table called `animals` that has the following columns
+    - `id` (int)
+    - `species` (string)
+    - `seen_count` (int)
+    - `last_seen_location` (string)
+  * NOTE: This should be made all in the code (Ruby), and **not** created in the `pgcli`.
+- [ ] Create a small console application. Your application should prompt the user with a menu with the following options and corresponding actions
+  - [ ] Type `display_all` to show all the animals.
+  - [ ] Type 'increment` to then prompt the user for a species. Add `1` to the `seen_count` for that species and display the new count.
+  - [ ] Type `specie` to prompt for a specific species and show the details for just that species.
+  - [ ] Type 'spot' to prompt the user for a species and a location. Update that species `last_seen_location`
+  - [ ] Type 'extinct' to prompt the user for a location and delete all the species in that location
+  - [ ] Type 'total` to get the total `seen_count` of all animals
 
-- [ ] Add a new column called `LastSeenTime` (Ruby: `last_seen_at`), with a type of DateTime. This will require you to add and run a new migration.
+### Adventure Mode (C#)
+
+- [ ] Add a new column called `LastSeenTime`, with a type of DateTime. This will require you to add and run a new migration.
+
+### Adventure Mode (Ruby)
+
+- [ ] Add a new column called `last_seen_at`, with a type of DateTime.
+- [ ] Update the `spot` and `increment` menu options to record the current time as `last_seen_at`
 
 ### Epic Mode
 
 - [ ] Continue to make progress on your capstone project.
 
 ## Additional Resources
+
+### Ruby
+
+- [Active Record Basics](http://guides.rubyonrails.org/active_record_basics.html)
+  - Sections 1, 2, 3, 5
+- [Active Record Querying](http://guides.rubyonrails.org/active_record_querying.html)
+  - Sections 1, 2, 3, 4, 5
+- [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
+  - Sections 1, 2
 
 ### .NET
 
@@ -74,6 +108,3 @@ dotnet ef database update
 
 - Documentation: [Dotnet EF CLI Docs](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
 
-## Reading Material
-
-To prepare for upcoming lessons, students might want to read links shared here.
