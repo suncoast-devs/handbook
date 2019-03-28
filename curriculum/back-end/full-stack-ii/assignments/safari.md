@@ -16,11 +16,11 @@ _NOTE_: The Additional Resources section below is _very_ helpful. Consider readi
 
 - [ ] Create a database called `SafariVacation`
   - [ ] This will have 1 table called `SeenAnimals` that has the following columns
-    - `Id` / `id` (int)
-    - `Species` / `species` (string)
-    - `CountOfTimesSeen` / `count_of_times_seen` (int)
-    - `LocationOfLastSeen` / `location_of_last_seen` (string)
-  * NOTE: This should be made all in the code (C#/Ruby), and **not** created in the `pgcli`.
+    - `Id` (int)
+    - `Species` (string)
+    - `CountOfTimesSeen` (int)
+    - `LocationOfLastSeen` (string)
+  * NOTE: This should be made all in the code (C#), and **not** created in the `pgcli`.
 - [ ] Create a small console application, and create the following queries using your languages ORM.
   - [ ] Display all animals the user has seen
   - [ ] Update the `CountOfTimesSeen` and `LocationOfLastSeen` for an animal
@@ -36,8 +36,9 @@ _NOTE_: The Additional Resources section below is _very_ helpful. Consider readi
     - `species` (string)
     - `seen_count` (int)
     - `last_seen_location` (string)
-  * NOTE: This should be made all in the code (Ruby), and **not** created in the `pgcli`.
-- [ ] Use pgcli to create your `animals` table and insert a few species of your own.
+- [ ] Use pgcli to:
+  - [ ] Create your `animals` table.
+  - [ ] Insert a few species of your own.
 - [ ] Create a ruby file called 'safari.rb' Your application should prompt the user with a menu with the following options and corresponding actions
   - [ ] Type `display_all` to show all the animals.
   - [ ] Type 'increment` to then prompt the user for a species. Add `1` to the `seen_count` for that species and display the new count.
