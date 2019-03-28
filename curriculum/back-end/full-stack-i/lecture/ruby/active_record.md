@@ -145,17 +145,29 @@ require 'active_record'
 - NOTE: If you did not use the name `suncoast_movies`, replace `"suncoast_movies"` with the name of your database where the `movies`, `actors`, and `roles` tables were created.
 
 ```ruby
+# Tell Ruby we are going to use Bundler
 require 'bundler/inline'
 
+# Define which libraries to use
 gemfile do
+  # Use the official source (rubygems)
   source 'https://rubygems.org'
+
+  # Use postgres library
   gem 'pg'
+
+  # Use ActiveRecord ORM
   gem 'activerecord'
 end
 
+# Load up the Active Record code
 require 'active_record'
 
+# When ActiveRecord needs to log something, like what SQL
+# it is generating, send it to "STANDARD OUTput" (our terminal)
 ActiveRecord::Base.logger = Logger.new(STDOUT)
+
+# Hey ActiveRecord, establish a connection to our database
 ActiveRecord::Base.establish_connection(
   adapter: "postgresql",
   database: "suncoast_movies"
@@ -187,9 +199,9 @@ end
 - Get all movies released in 1984
   - `Movie.where(year_released: 1984)`
 - Get all movies released after 1984
-  - `Movie.where("year_released > ?", 1984)
+  - `Movie.where("year_released > ?", 1984)`
 - Get all movies where the name contains `aliens`
-  - `Movie.where("title like ?", "%aliens%")
+  - `Movie.where("title like ?", "%aliens%")`
 
 ## Insert
 
