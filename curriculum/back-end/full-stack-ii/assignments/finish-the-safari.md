@@ -12,7 +12,12 @@ For this assignment, you should take your safari API that was already created, a
 
 ### Explorer Mode
 
-- [ ] Finish all the endpoints from the Safari API
+- [ ] Add 3 the endpoints to the Safari API
+
+  - [ ] Create a `GET /Animal/{location}` that returns animals of only that location
+  - [ ] Create a `PUT /Animal/{id}` endpoint that adds 1 to the count of times seen for that animal (given by id)
+  - [ ] Create a `DELETE /Animal/{id}` endpoint that deletes that animal id from the database
+
 - [ ] Create a simple react app, that uses some css make it looks friendly.
 - [ ] The react app should:
   - [ ] Display all animals the user has seen
@@ -23,45 +28,4 @@ For this assignment, you should take your safari API that was already created, a
 
 ### Adventure Mode
 
-- [ ] Work on your capstone's HTML, CSS and JS
-
-## Additional Resources
-
-### .NET
-
-Here are the interesting commands you will need for tonight's assignment
-
-- To add Entity Framework to your project:
-
-```
- dotnet add package Microsoft.EntityFrameworkCore.Design --version 2.1.3
-
- dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL --version 2.1.2
-```
-
-- To create your database:
-
-```
-createdb <<DatabaseName>>
-```
-
-- To create the DbContext
-
-```
-dotnet ef dbcontext scaffold "server=localhost;database=<<DatabaseName>>" Npgsql.EntityFrameworkCore.PostgreSQL -c <<DatabaseName>>Context
-
-```
-
-- Add a migration:
-
-```
- dotnet ef migrations add AddBaordGameTable
-```
-
-- Update your database
-
-```
-dotnet ef database update
-```
-
-- Documentation: [Dotnet EF CLI Docs](https://docs.microsoft.com/en-us/ef/core/miscellaneous/cli/dotnet)
+- [ ] Work on your capstone' front end. This should include, creating the react app, adding react-router and also start thing about the AJAX (axios/fetch) calls your app needs.

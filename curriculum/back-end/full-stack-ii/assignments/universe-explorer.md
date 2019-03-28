@@ -26,7 +26,7 @@ You could pick from any fictional universe (Harry Potter, Star Wars, Star Trek, 
     - [ ] Update
     - [ ] Delete
 
-- [ ] Create an Admin site that called the above endpoints and manages the data
+- [ ] Create a React app that called the above endpoints and manages the data
 
 ### Adventure Mode
 
