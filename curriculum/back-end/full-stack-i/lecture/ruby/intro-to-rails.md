@@ -60,6 +60,7 @@ Core concepts:
   - `bundle`
 - Since this a _new_ app we will create the databases
   - `rails db:create`
+- We will be using the [jbuilder](https://github.com/rails/jbuilder) library for generating json so uncomment it in the `Gemfile` and run `bundle install`
 - Now we can start coding!
 
 ### Creating `scaffold`s
