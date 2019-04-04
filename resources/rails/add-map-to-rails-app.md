@@ -87,7 +87,6 @@ render() {
       {...viewport}
       width="100%"
       height="100%"
-      mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
     />
   </div>
@@ -117,7 +116,6 @@ render() {
         {...viewport}
         width="100%"
         height="100%"
-        mapStyle="mapbox://styles/mapbox/dark-v9"
         mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
         onViewportChange={this._updateViewport}
       >
@@ -143,7 +141,6 @@ render() {
       {...viewport}
       width="100%"
       height="100%"
-      mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
     >
@@ -175,7 +172,6 @@ render() {
       {...viewport}
       width="100%"
       height="100%"
-      mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
     >
@@ -252,7 +248,6 @@ render() {
       {...viewport}
       width="100%"
       height="100%"
-      mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
     >
