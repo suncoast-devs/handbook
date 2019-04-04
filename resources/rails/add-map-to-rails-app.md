@@ -146,20 +146,20 @@ render() {
       mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
-    />
-
-    <Marker
-      latitude={27.7712188}
-      longitude={-82.6697279536116}
-      offsetTop={-64}
-      offsetLeft={-32}
     >
-      <img width="64" height="64" src={pin}/>
-    </Marker>
+      <Marker
+        latitude={27.7712188}
+        longitude={-82.6697279536116}
+        offsetTop={-64}
+        offsetLeft={-32}
+      >
+        <img width="64" height="64" src={pin}/>
+      </Marker>
 
-    <div className="nav" style={this.navStyle}>
-      <NavigationControl onViewportChange={this._updateViewport}/>
-    </div>
+      <div className="nav" style={this.navStyle}>
+        <NavigationControl onViewportChange={this._updateViewport}/>
+      </div>
+    </MapGL>
   </div>
 }
 ```
@@ -178,23 +178,24 @@ render() {
       mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
-    />
+    >
 
-    {this.props.locations.map(location => {
-      <Marker
-        key={location.id}
-        longitude={location.latitude}
-        latitude={location.longitude}
-        offsetTop={-64}
-        offsetLeft={-32}
-      >
-        <img src={pin} />
-      </Marker>
-    })
+      {this.props.locations.map(location => {
+        <Marker
+          key={location.id}
+          longitude={location.latitude}
+          latitude={location.longitude}
+          offsetTop={-64}
+          offsetLeft={-32}
+        >
+          <img src={pin} />
+        </Marker>
+      })
 
-    <div className="nav" style={this.navStyle}>
-      <NavigationControl onViewportChange={this._updateViewport}/>
-    </div>
+      <div className="nav" style={this.navStyle}>
+        <NavigationControl onViewportChange={this._updateViewport}/>
+      </div>
+    </MapGL>
   </div>
 }
 ```
@@ -254,29 +255,30 @@ render() {
       mapStyle="mapbox://styles/mapbox/dark-v9"
       mapboxApiAccessToken="pk.eyJ1IjoiZ2F2aW5zdGFyayIsImEiOiIxZjVmODFhYWQ2NjIyZGY1MTQ5MzM3ZTE2MWNkMDkxMiJ9.HG1IbUfea4FfcJ0WrY7Pqg"
       onViewportChange={this._updateViewport}
-    />
+    >
 
-    {this.renderPopup()}
+      {this.renderPopup()}
 
-    {this.props.locations.map(location => {
-      <Marker
-        key={location.id}
-        longitude={location.latitude}
-        latitude={location.longitude}
-        offsetTop={-64}
-        offsetLeft={-32}
-      >
-        <img
-          onClick={() => {
-            this.setState({ popupInfo: location })
-          }}
-          src={pin} />
-      </Marker>
-    })
+      {this.props.locations.map(location => {
+        <Marker
+          key={location.id}
+          longitude={location.latitude}
+          latitude={location.longitude}
+          offsetTop={-64}
+          offsetLeft={-32}
+        >
+          <img
+            onClick={() => {
+              this.setState({ popupInfo: location })
+            }}
+            src={pin} />
+        </Marker>
+      })
 
-    <div className="nav" style={this.navStyle}>
-      <NavigationControl onViewportChange={this._updateViewport}/>
-    </div>
+      <div className="nav" style={this.navStyle}>
+        <NavigationControl onViewportChange={this._updateViewport}/>
+      </div>
+    </MapGL>
   </div>
 }
 ```
