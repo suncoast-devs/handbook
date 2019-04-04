@@ -2,7 +2,7 @@
 
 As we continue to explore databases and ideas, this project will help you practice model databases and relationships, as well as help you get started on your capstone project.
 
-First, you will expand you CompanyDatabase to have `Departments`, `Products` and `Orders`. You will be crafting queries for these new tables.
+First, you will expand your CompanyDatabase to have `Departments`, `Products` and `Orders`. You will be crafting queries for these new tables.
 
 After that, this weekend is the next big push your final project, work on the HTML and CSS; As well as the database schema.
 
@@ -10,20 +10,13 @@ After that, this weekend is the next big push your final project, work on the HT
 
 - Work with Foreign Keys
 - Craft Queries
-- Further you final project
+- Further your final project
 
 ## Requirements
 
 - Add a few tables and foreign keys to an existing database
 - Create the Schema for your final project
 - Work on the HTML & CSS for your final project
-
-### Optional
-
-Install [pgcli](https://www.pgcli.com/install)
-
-- For Mac you can `brew install pgcli`
-- For Windows you need to install python and pip
 
 ### Explorer Mode
 
@@ -34,9 +27,9 @@ Install [pgcli](https://www.pgcli.com/install)
   - C# `DepartmentId` to your `Employee` Table
   - Ruby: `department_id` to your `employees` table
 - [ ] Add tables named:
-  - C#: `Products` and `Orders`. Give each table a few columns
-  - Ruby: `products` and a 'orders`. Give each table a few columns
-- [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the tables and foreign keys needed for this to happen
+  - C#: `Products` and `Orders`. Give each table a few columns. `Orders` should minimally have a `OrderNumber` and an `Id`
+  - Ruby: `products` and a `orders`. Give each table a few columns. `orders` should minimally have a `order_number` and an `id`
+- [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the 3 tables (`Orders`, `Products` and `ProductOrders`) and foreign keys needed for this to happen
 
 * [ ] Create queries that can do the following:
   - [ ] Given a department id, give me all employees in the department
@@ -44,7 +37,7 @@ Install [pgcli](https://www.pgcli.com/install)
   - [ ] Find all orders that contain the product id of `2`
   - [ ] Given an order id, display on the `OrderNumber`, and all the product names
   - [ ] Inserts a new product
-  - [ ] Creates a new order
+  - [ ] Inserts a new order
   - [ ] Adds a product to an order
   - [ ] Adds a new employee to a department
   - [ ] Updating a employee's department

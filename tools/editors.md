@@ -37,6 +37,13 @@ Go to `Code` menu, then `Preferences`, then `Settings`
 - Find the setting `Prettier: Single Quote` and turn this _ON_
 - Find the setting `Prettier: Use Tabs` and turn this _OFF_
 
+- In the search bar enter 'clear previous output'
+- Find the setting "Clear Previous Output" and ensure this is checked
+
+- In the search bar enter 'code-runner save'
+- Find the setting "Save All Files Before Run" and ensure this is checked
+- Find the setting "Save File Before Run" and ensure this is checked
+
 _Settings we recommend_
 
 Go to `Code` menu, then `Preferences`, then `Settings`

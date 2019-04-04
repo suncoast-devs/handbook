@@ -37,13 +37,18 @@ _NOTE_ Restart your `yarn start` if it was already running
 
 _NOTE_ Replace the value of `DOMAIN` with the domain from your `auth0` account
 _NOTE_ Replace the value of `CLIENTID` with the configured client id from your `auth0` account
+_NOTE_ Replace the value of `AFTER_LOGIN` with the React route to go to after a successful login
+_NOTE_ Replace the value of `FAILED_LOGIN` with the React route to go to after a failed login
+_NOTE_ Replace the value of `AFTER_LOGOUT` with the React route to go to after a successful logout
 
 ```js
 import auth0 from 'auth0-js'
 import history from './history'
 
-const DOMAIN = 'OURAPP.auth0.com'
+const DOMAIN = 'OURDOMAIN.auth0.com'
 const CLIENTID = 'xxxxxxxxx'
+const AFTER_LOGIN = '/'
+const AFTER_LOGOUT = '/'
 
 class Auth {
   userProfile
@@ -72,8 +77,8 @@ class Auth {
     localStorage.removeItem('access_token')
     localStorage.removeItem('id_token')
     localStorage.removeItem('expires_at')
-    // navigate to the home route
-    history.replace('/')
+
+    window.location = AFTER_LOGOUT
   }
 
   handleAuthentication(callback) {
@@ -85,9 +90,9 @@ class Auth {
           callback()
         }
 
-        history.replace('/')
+        window.location = AFTER_LOGIN
       } else if (err) {
-        history.replace('/')
+        window.location = FAILED_LOGIN
         console.log(err)
       }
     })
@@ -188,8 +193,8 @@ Because of that we will change from using the `BrowserRouter` to a simple `Route
   <Route path="/callback" render={() => {
       auth.handleAuthentication(() => {
         // NOTE: Uncomment the following lines if you are using axios
-        //
-        // Set the axios authentication headers
+        //       to set the axios authentication headers
+
         // axios.defaults.headers.common = {
         //   Authorization: auth.authorizationHeader()
         // }
@@ -254,6 +259,29 @@ In the file `app/controllers/application_controller.rb`
   end
 ```
 
+### If you don't already have a User model in your app ...
+
+If you have not created a model for the user yet, you should do so now.
+
+You should include the user's `name`, and their `auth_sub`. The `auth_sub` is the `OAuth` identifier for the user. It includes the service (google, facebook, twitter) and their identifier on that service. It is the column we lookup users by and is mandatory.
+
+You may also want to add other columns such as `email`, etc.
+
+_NOTE_ If you already have a User model, do not do this step.
+
+```sh
+rails generate model User name:string email:string auth_sub:string
+```
+
+### If you already have a User model ...
+
+We need to add the `auth_sub` column on our `User` (or `Profile` or etc) model:
+
+```sh
+rails generate migration AddAuthSubToUser auth_sub:string
+```
+
+
 ### Add a method to the User (Profile, etc) class to find or create the account
 
 This code needs our `User` class to be able to find (or create) a user. So, in your `User` ActiveRecord class add the following code. _NOTE_ that inside the `do` block is where you would capture any user specific information such as `avatar`, `name`, `email`, etc.
@@ -279,6 +307,8 @@ def self.from_auth_hash(payload)
 
     # This code would store their email address
     # user.email = payload["email"]
+
+    # Capture the user's name
     user.name = payload["name"]
   end
 end
@@ -310,19 +340,11 @@ Here is an example of what is in the `payload` variable.
 }
 ```
 
-### Add missing columns to the User (Profile, etc) model
-
-We may also need this `auth_sub` column on our `User` (or `Profile` or etc) model:
-
-```sh
-rails generate migration AddAuthSubToUser auth_sub:text
-```
-
 ### Add the JWT support code
 
 Next we need a class, `JSONWebToken` in the file `app/lib/json_web_token.rb` that can parse the jwt and present a payload and header
 
-_NOTE_ Replace `OURPAPP` with the domain name you created in auth0
+_NOTE_ Replace the *two* instances of the text `OURDOMAIN` with the domain name you created in auth0
 
 ```ruby
 require "net/http"
@@ -333,14 +355,14 @@ class JSONWebToken
     JWT.decode(token, nil,
               true,
               algorithm: "RS256",
-              iss: "https://OURAPP.auth0.com/",
+              iss: "https://OURDOMAIN.auth0.com/",
               verify_iss: true) do |header|
       jwks_hash[header["kid"]]
     end
   end
 
   def self.jwks_hash
-    jwks_raw = Net::HTTP.get URI("https://OURAPP.auth0.com/.well-known/jwks.json")
+    jwks_raw = Net::HTTP.get URI("https://OURDOMAIN.auth0.com/.well-known/jwks.json")
 
     jwks_keys = Array(JSON.parse(jwks_raw)["keys"])
 

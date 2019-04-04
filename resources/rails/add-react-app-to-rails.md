@@ -4,7 +4,7 @@ If you are creating a Rails API, or a Rails Monolith, and you want to add a full
 
 The React app will exist at the root of the site (e.g. `/`) and any routes that the Rails app does not supply will be handled by the React app. Thus you likely want your _api_ to be in a namespace like `/api` and your admin pages in a namespace like `/admin` -- setting that up is not covered in this guide.
 
-## Step 0 - Install the 'json` tool
+## Step 0 - Install the `json` tool
 
 ```sh
 npm install -g json
@@ -72,6 +72,12 @@ This will allow us to send our JSON API requests to the Rails server when in dev
 
 ```sh
 json -I -f client/package.json -e 'this.proxy="http://localhost:3000"'
+```
+
+This will remove any 'homepage' setting present in the client package.json file. We remove this since we do not need to specify a homepage.
+
+```sh
+json -I -f package.json -e 'delete this.homepage'
 ```
 
 ## Step 5 - Configure the Rails app to forward any unknown assets to the front end

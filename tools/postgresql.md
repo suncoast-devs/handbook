@@ -16,6 +16,7 @@ sed -i.bak "s/multiline_continuation_char = ''/multiline_continuation_char = '.'
 sed -i.bak "s/multi_line = False/multi_line = True/g" ~/.config/pgcli/config
 sed -i.bak "s/enable_pager = True/enable_pager = False/g" ~/.config/pgcli/config
 sed -i.bak "s/wider_completion_menu = False/wider_completion_menu = True/g" ~/.config/pgcli/config
+sed -i.bak "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
 ```
 
 To have the database engine running all the time:
@@ -53,6 +54,7 @@ sed -i "s/multiline_continuation_char = ''/multiline_continuation_char = '.'/g" 
 sed -i "s/multi_line = False/multi_line = True/g" ~/.config/pgcli/config
 sed -i "s/enable_pager = True/enable_pager = False/g" ~/.config/pgcli/config
 sed -i "s/wider_completion_menu = False/wider_completion_menu = True/g" ~/.config/pgcli/config
+sed -i "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
 ```
 
 ### Linux Subsystem Starting PostgreSQL after a reboot

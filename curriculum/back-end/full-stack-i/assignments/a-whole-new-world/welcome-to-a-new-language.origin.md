@@ -12,10 +12,7 @@ Today you learned a new language and will be starting to explore it more in dept
 
 ### .NET Students
 
-- Install the [.NET Core SDK](https://www.microsoft.com/net/download).
-- Install the `C#` plugin in VS Code.
-
-- To verify everything was installed correctly, run `dotnet -v` in your terminal.
+- Make sure your [dev env is set up](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00-env-set-up/)
 
 ### Ruby
 
@@ -58,6 +55,7 @@ You should already have Ruby installed.
 
 - .NET
   - [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+  - [Lecture notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/01-intro-to-c-sharp)
 
 ## Reading Material
 

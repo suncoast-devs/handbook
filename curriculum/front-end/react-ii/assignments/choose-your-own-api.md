@@ -1,11 +1,11 @@
-# Choose your own API
+# Choose your own API Adventure
 
 In this assignment, you'll build a front end for an API of your choice
 
 ## Objectives
 
 - Reinforce component architecture in React
-- Reinforce reading of API documentation (some is great, and some is terrible)
+- Reinforce reading of API documentation (some are great, and some are terrible)
 - Creating and designing your own features for a web app
 
 ## Requirements

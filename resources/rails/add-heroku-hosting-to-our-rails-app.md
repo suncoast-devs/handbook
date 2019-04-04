@@ -1,6 +1,22 @@
 # Add Heroku hosting to our rails application
 
-We are going to use [Heroku](https://heroku.com) to host our rails application. Before continuing ensure that you have a Heroku account.
+We are going to use [Heroku](https://heroku.com) to host our rails application.
+
+## Create a Heroku account
+
+Before continuing ensure that you have a [Heroku](https://heroku.com) account.
+
+## Install the Client (MAC)
+
+```sh
+brew tap heroku/brew && brew install heroku
+```
+
+## Install the Client (Linux Subsystem for Windows)
+
+```sh
+curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
+```
 
 ## Adding heroku to our application
 

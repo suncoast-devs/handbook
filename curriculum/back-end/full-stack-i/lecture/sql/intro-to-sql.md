@@ -119,10 +119,10 @@ CREATE TABLE books (
 
 The structure of our tables is not set in stone. They can be modified at a later date by using the `ALTER TABLE` query.
 
-To demonstrate this, let's add the `genre` column we omitted when creating our table.
+To demonstrate this, let's add the `genre` column we omitted when creating our table. We will make it a small text field since genre descriptions are typically short.
 
 ```sql
-ALTER TABLE books ADD COLUMN genre TEXT;
+ALTER TABLE books ADD COLUMN genre VARCHAR(15);
 ```
 
 Now our table has four columns. You might be wondering what value the `genre` column will have for any existing rows. Each database engine (Postgres, MySQL, Oracle, Microsoft SQL Server for instance) may have different rules. In our case, with Postgres, it will use a `null` value for `genre` for existing rows. That is, the database considers that those rows have _NO_ value for that column. This is different from having a value for that column, but being blank. In SQL, `null` is different than empty (`""`)
