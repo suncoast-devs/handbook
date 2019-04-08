@@ -10,7 +10,7 @@ An alternative is to create a `rails task` to use the same commands from `rails 
 rails generate task sampledata:load
 ```
 
-This will create a file `lib/tasks/sampledata` that looks like this:
+This will create a file `lib/tasks/sampledata.rb` that looks like this:
 
 ```ruby
 namespace :sampledata do

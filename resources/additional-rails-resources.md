@@ -1,12 +1,15 @@
 # Additional Rails Resources
 
+## How-to:
+
+- [add a react app](/handbook/resources/rails/add-react-app-to-rails) to your Rails app
+- [add sample data](/handbook/resources/rails/add-sample-data-to-rails-app) to your Rails app
+- [add auth0](/handbook/resources/rails/add-auth0-to-react-rails-app) to your Rails app
+- [deploy your application to Heroku](/handbook/resources/rails/add-heroku-hosting-to-our-rails-app)
+- [add a dynamic map](/handbook/resources/rails/add-map-to-rails-app) to our Rails app
+
 ## Additional Reading
 
-- How to [add a react app](/handbook/resources/rails/add-react-app-to-rails) to your Rails app
-- How to [add sample data](/handbook/resources/rails/add-sample-data-to-rails-app) to your Rails app
-- How to [add auth0](/handbook/resources/rails/add-auth0-to-react-rails-app) to your Rails app
-- How to [deploy your application to Heroku](/handbook/resources/rails/add-heroku-hosting-to-our-rails-app)
-- How to [add a dynamic map](/handbook/resources/rails/add-map-to-rails-app) to our Rails app
 - Rails is [Omakase](http://david.heinemeierhansson.com/2012/rails-is-omakase.html)
 - Dramatic Reading of [Rails is Omakase](https://www.youtube.com/watch?v=E99FnoYqoII)
 - Rails blog in [15-ish minutes](https://www.youtube.com/watch?v=Gzj723LkRJY)
