@@ -130,7 +130,7 @@ render() {
 ## Add a marker to the map
 
 - Let's add a single marker to the map. Each marker will be represented by a pin.
-- We will add a `<Marker>` component within the <MapGL> component to represent this marker.
+- We will add a `<Marker>` component within the `<MapGL>` component to represent this marker.
 
 ```js
 import pin from './pin.png'
@@ -195,7 +195,6 @@ render() {
   </div>
 }
 ```
-
 
 ## Add a popup when clicking on a pin
 
