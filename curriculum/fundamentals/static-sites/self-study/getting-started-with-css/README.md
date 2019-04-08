@@ -19,9 +19,9 @@ The above descriptions may or may not have made sense, so let's make sure things
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>My CSS experiment</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <h1>Hello World!</h1>
@@ -44,7 +44,7 @@ p {
 }
 ```
 
-The first rule starts with an h1 selector, which means that it will apply its property values to the `<h1>` element. It contains three properties and their values (each property/value pair is called a declaration):
+The first rule starts with an `h1` selector, which means that it will apply its property values to the `<h1>` element. It contains three properties and their values (each property/value pair is called a declaration):
 
 - The first one sets the text color to blue.
 - The second sets the background color to yellow.
@@ -57,7 +57,6 @@ In a web browser, the code above would produce the following output:
 ![](https://mdn.mozillademos.org/files/12537/first-example.png)
 
 This isn't too pretty, but at least it starts to give you an idea of how CSS works.
-
 
 ---
 
