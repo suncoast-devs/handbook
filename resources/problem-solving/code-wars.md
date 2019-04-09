@@ -14,5 +14,10 @@ Challenges we like:
 |  8  | Convert a string to an array    | https://www.codewars.com/kata/convert-a-string-to-an-array                     |
 |  8  | Opposites Attract               | https://www.codewars.com/kata/opposites-attract                                |
 |  8  | Tip Calculator                  | https://www.codewars.com/kata/tip-calculator                                   |
+|  8  | Rock Paper Scissors             | https://www.codewars.com/kata/5672a98bdbdd995fad00000f/train/javascript        |
+|  8  | Parse nice int from char        | https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1/train/javascript        | 
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character/train/javascript |
 |  7  | Ones and Zeros                  | https://www.codewars.com/kata/ones-and-zeros                                   |
+|  7  | Mumbling                        | https://www.codewars.com/kata/5667e8f4e3f572a8f2000039/train/javascript        |
+|  7  | Get the Middle Character        | https://www.codewars.com/kata/56747fd5cb988479af000028/train/javascript        |   
+|  7  | Vowel Count                     | https://www.codewars.com/kata/54ff3102c1bad923760001f3/train/javascript        |
