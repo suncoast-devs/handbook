@@ -2,7 +2,7 @@
 
 CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
 
-## How does CSS affect HTML?Section
+## How does CSS affect HTML?
 
 Web browsers apply CSS rules to a document to affect how they are displayed. A CSS rule is formed from:
 
@@ -60,4 +60,4 @@ This isn't too pretty, but at least it starts to give you an idea of how CSS wor
 
 ---
 
-[Next: Vocabulary](./02)
+[Next: Vocabulary](/handbook/curriculum/fundamentals/static-sites/self-study/getting-started-with-css/02)
