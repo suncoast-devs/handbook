@@ -34,26 +34,46 @@ _NOTE_ - The use of the app name of `client` is important here. We will refer to
 
 ## Step 2 - Add `rack-cors` to our Gemfile
 
+If you previously added `rack-cors` to your project you can skip this step.
+
+Do *ONE* of the two following options:
+
+**Option A**:
+
+Uncomment the line `gem 'rack-cors'` in the Gemfile.
+Run the following command:
+
+```sh
+bundle install
+```
+
+**Option B**:
+
 Run the following command:
 
 ```sh
 bundle add rack-cors
 ```
 
-Add this content to the end of `config/initializers/cors.rb`:
+## Step 3: Configure CORS
+
+The contents of the file `config/initializers/cors.rb` should be:
 
 ```ruby
 if Rails.env.development?
   Rails.application.config.middleware.insert_before 0, Rack::Cors do
     allow do
-      origins 'localhost:*'
-      resource '*', headers: :any
+      origins "*"
+
+      resource "*",
+        headers: :any,
+        methods: [:get, :post, :put, :patch, :delete, :options, :head]
     end
   end
 end
 ```
 
-## Step 3 - Configure the `package.json` file in the main Rails application
+## Step 4 - Configure the `package.json` file in the main Rails application
 
 This configuration will ensure that the client folder is built when deployed.
 
@@ -66,7 +86,7 @@ json -I -f package.json -e 'this.scripts.deploy="cp -a client/build/. public/"'
 json -I -f package.json -e 'this.scripts.postinstall="npm run build && npm run deploy"'
 ```
 
-## Step 4 - Configure the `package.json` file in the client application
+## Step 5 - Configure the `package.json` file in the client application
 
 This will allow us to send our JSON API requests to the Rails server when in development mode
 
@@ -80,7 +100,7 @@ This will remove any 'homepage' setting present in the client package.json file.
 json -I -f package.json -e 'delete this.homepage'
 ```
 
-## Step 5 - Configure the Rails app to forward any unknown assets to the front end
+## Step 6 - Configure the Rails app to forward any unknown assets to the front end
 
 Add a file `config/initializers/mount_react_app.rb` with this content:
 
@@ -94,7 +114,7 @@ if Rails.env.production?
 end
 ```
 
-## Step 6 - Setup Heroku if you are ready to setup deployment
+## Step 7 - Setup Heroku if you are ready to setup deployment
 
 Follow the guide for [adding heroku hosting](/handbook/resources/rails/add-heroku-hosting-to-our-rails-app) if you are ready
 

@@ -10,7 +10,7 @@ An alternative is to create a `rails task` to use the same commands from `rails 
 rails generate task sampledata:load
 ```
 
-This will create a file `lib/tasks/sampledata` that looks like this:
+This will create a file `lib/tasks/sampledata.rb` that looks like this:
 
 ```ruby
 namespace :sampledata do
@@ -50,7 +50,35 @@ To clear any existing data before running your sample data load you can do this:
 ```sh
 rails db:schema:load
 ```
-## Step 6: Use `Faker` to generate fake data
+
+## Additional: Related Models
+
+Let's say that we have a model `Review` that relates to a `Restaurant` with a `belongs_to` relationship.
+
+```ruby
+class Review < ApplicationRecord
+  belongs_to :restaurant
+end
+```
+
+Then we can create related reviews like this:
+
+```ruby
+restaurant = Restaurant.create!(name: "Ultimate Tacos", location: "123 Main Street")
+
+restaurant.reviews.create!(body: "Best tacos in the world", stars: 5)
+restaurant.reviews.create!(body: "Definitely try the chips and salsa.", stars: 4)
+restaurant.reviews.create!(body: "Pro tip: tacos are $2 on Taco Tuesday", stars: 4)
+```
+
+_NOTE_: This also works well when you have data related to a user. For instance:
+
+```ruby
+bill = User.create!(name: "Bill")
+bill.posts.create!(subject: "How to generate data in Ruby", text: "Lorem ipsum...")
+```
+
+## Additional: Use `Faker` to generate fake data
 
 The [Faker](https://github.com/stympy/faker) library can be used to generate fake data
 
@@ -64,7 +92,7 @@ Now we can use code such as `Faker::StarWars.character`, or `Faker::Name.name` t
 restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Address.full_address)
 ```
 
-## Step 7: Supply sample images to models that use `ActiveStorage`
+## Addutional: Supply sample images to models that use `ActiveStorage`
 
 ### Using a local file
 
