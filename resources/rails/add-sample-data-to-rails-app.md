@@ -7,7 +7,7 @@ An alternative is to create a `rails task` to use the same commands from `rails 
 ## Step 1: Create a rails task
 
 ```sh
-rails generate task sampledata:load
+rails generate task sampledata load
 ```
 
 This will create a file `lib/tasks/sampledata.rb` that looks like this:
