@@ -23,14 +23,7 @@ curl https://cli-assets.heroku.com/install-ubuntu.sh | sh
 From the main directory of your rails application
 
 ```sh
-echo "On the next line type the name of your application"
-echo ""
-echo "It must *NOT* have spaces in the name, use dashes for separation"
-echo ""
-echo "Example:  my-cool-app"
-echo ""
-echo -n "Type the name of the application: " && read name
-heroku create "${name}"
+echo "On the next line type the name of your application" && echo "" && echo "It must *NOT* have spaces in the name, use dashes for separation" && echo "" && echo "Example:  my-cool-app" && echo "" && echo -n "Type the name of the application: " && read name && heroku create "${name}"
 ```
 
 ## Push once to heroku
