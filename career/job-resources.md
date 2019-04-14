@@ -12,6 +12,7 @@
 - [ZipRecruiter](https://www.ziprecruiter.com/)
 - [Simply Hired](https://www.simplyhired.com/)
 - [CareerBuilder](https://www.careerbuilder.com/)
+- [Regional Engineering Jobs](https://www.rengineeringjobs.com/)
 
 ###### Local Recruiters
 - [Jesus Vidaurri](https://www.linkedin.com/in/jesus-vidaurri-214ab061/)
