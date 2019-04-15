@@ -1,0 +1,26 @@
+{
+ "version": "0.1.0",
+ "command": "cmd",
+ "args": ["/C"],
+ "isShellCommand": true,
+ "showOutput": "always",
+ "suppressTaskName": true,
+ "tasks": [
+     {
+         "taskName": "Chrome",
+         "args": ["start chrome -incognito \"${workspaceRoot}\\public\\index.html\""]
+     },
+     {
+         "taskName": "Firefox",
+         "args": ["start firefox -private-window \"${workspaceRoot}\\public\\index.html\""]
+     },
+     {
+         "taskName": "Edge",
+         "args": ["\"${workspaceRoot}\\public\\index.html\""]
+     },
+     {
+         "taskName":"Browser-Sync",
+         "args":["browser-sync start --server \"public\" --files \"public\""]
+     } 
+    ]
+}
