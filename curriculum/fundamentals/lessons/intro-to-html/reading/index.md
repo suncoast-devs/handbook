@@ -2,4 +2,4 @@
 
 In this guide we cover the absolute basics of HTML, to get you started. We define elements, attributes, and all the other important terms you may have heard, and where they fit into the language. We also show how an HTML element is structured, how a typical HTML page is structured, and explain other important basic language features. Along the way, we'll play with some HTML to get you interested!
 
-[Next: What is HTML?](/handbook/curriculum/fundamentals/static-sites/self-study/getting-started-with-html/02)
+[Next: What is HTML?](/handbook/curriculum/fundamentals/lessons/intro-to-html/reading/02)

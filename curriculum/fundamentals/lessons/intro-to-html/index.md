@@ -8,6 +8,8 @@ It's primary purpose is to put text, pictures, and links onto a website. If you'
 
 [Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-html/reading)
 
+[Resources](/handbook/curriculum/fundamentals/lessons/intro-to-html/resources)
+
 [Lecture](/handbook/curriculum/fundamentals/lessons/intro-to-html/lecture)
 
 [Assignments](/handbook/curriculum/fundamentals/lessons/intro-to-html/assignments)
