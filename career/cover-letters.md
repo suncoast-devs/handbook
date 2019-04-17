@@ -71,5 +71,7 @@ Bonus:
 
 #### Resources
 
+- [Mock Job Descriptions](https://docs.google.com/document/d/e/2PACX-1vTAUdgkKCLK7MgA-rbHOwNxWmUipr6_aSw2_uxL2Rn_f9zetpPoGbY-tEtceWqdM2h5GvqJnZUzF2N-/pub)
+
 - [Access the slide presentation](./assets/resumes-cover-letters.pdf)
 - [How to write a cover letter](https://www.skillgigs.com/blog/how-to-write-a-cover-letter/)
