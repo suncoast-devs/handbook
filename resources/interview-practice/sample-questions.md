@@ -1,6 +1,8 @@
 # Sample Questions
 
-Technical interviews are skill that requires practice. We having gathered some sampe questions that we have heard are used, or have been used by community members in hiring. These are not the only questions that can be asked but the types of questions that might be asked. When using these questions, be sure to understand the question being asked, as well as the answer and try to avoid using "canned answers"
+Technical interviews is a skill that requires practice. We have gathered some sample questions that we have heard are used or have been used by community members in hiring. These are not the only questions out there, but the types of questions that might be. 
+
+When using these questions try to avoid using `canned answers`. Also,  it's usually not about giving the correct answer, but more along the lines of giving a `good` answer. A `good` answer is an answer that shows the employers what you know, no more no less, and you can talk about technology and tech ideas. Its all about finding out what you know, what you don't know and how you work.
 
 ## General Questions
 
@@ -16,18 +18,18 @@ Workflow:
 - What are your problem-solving steps?
 - How do you solve a problem that you have already tried and failed to solve?
 - What is your source control strategy?
-- How would you test your code? test your design?
+- How would you validate your solution? 
 - How would you rapid prototype an idea?
 - Someone found a bug in your code. How would you fix a bug in your code?
 
-What are you thoughts on:
+What are your thoughts on:
 
 - What do you think the future of programming and the web is?
 - What is your most controversial technical opinion?
 - What 3 things do you look for in a company before you take the job?
 - Google, Apple or Microsoft -- rank from most to least favorite. explain - that order
 - What do you think the future of programming, design and the web is?
-- What advice would you give to an entry level dev?
+- What advice would you give to an entry-level dev?
 - What book do you think everyone on the team should read?
 - If you could master one technology this year, what would it be?
 - How do you organize your code? (module pattern, classical inheritance?)
@@ -42,25 +44,25 @@ Soft Skills:
 - What do you do when someone disagrees with your idea?
 
 ## Tech Specific Questions
-These are a healthy mix of technical level questions, spanning from entry to senior. So you probably won't know all the answers. And that is okay. Use these as a guide to see what kinds of things software developers are asked during interviews. When learning the answers, its important to not only know what is going on, but also to create some code sample to explore the concepts. The questions are generally ordered in each section from easy to hard 
+These are a healthy mix of technical level questions, spanning from entry to senior. So you probably won't know all the answers. Moreover, that is okay. Use these as a guide to see what kinds of things software developers should expect to hear during interviews. When learning the answers, it's essential to not only know what is going on but also to create some code sample to explore the concepts. 
 
-For example, for `javascript` => `- Explain == vs ===`, create a small script that demonstrates to yourself, that you know they are mean, and not just pulling up text book answers.  
+For example, for `javascript` => `- Explain == vs. ===`, create a small script that demonstrates to yourself, that you know they are mean, and not just pulling up textbook answers.  
 
 
 
 General Technical Knowledge
-- What is your least/most favorite language that you use? why?
+- What is your least/most favorite language that you use? Why?
 - How would you improve (a technology you have used a lot)?
 - Describe or give an example of asynchronous programming?
-- What is your best definition of Object Oriented Programming? of Functional programming? or Procedural Programming? 
-- What is a RESTful api?
+- What is your best definition of Object Oriented Programming? of Functional programming? Of Procedural Programming? 
+- What is a RESTful API?
 - What is an idempotent operation?
 - Tell me about your experience with testing?
-- What is caching? what are some of your caching strategies?
+- What is caching? What are some of your caching strategies?
 - Have you ever encountered a scalability issue? How did you solve that?
 - Compare and contract Inheritance and Composition? 
 - What is tail recursion?  Why is it useful?
-- Explain MVC vs MVVM vs MVP?
+- Explain MVC vs. MVVM vs. MVP?
 - How much do you know about concurrency and programming?
 
 
@@ -68,7 +70,7 @@ HTML
 - What is the difference between a div and a span?
 - What is your favorite HTML tag?
 - What goes in the head of your HTML?
-- What is the `<!DOCTYPE html>` do? Is it needed?
+- What is `<!DOCTYPE html>` do? Is it needed?
 
 CSS
 - What is your working definition of the box model?
@@ -78,11 +80,11 @@ CSS
 - What does specificity mean in the regards to CSS?
 
 JavaScript
-- Explain == vs ===, which one should you use?
-- what is the difference between `let`, `const` and `var`. Which one should you use?
-- What is a ternary? what is short circuiting?
+- Explain == vs. ===, which one should you use?
+- What is the difference between `let`, `const` and `var`? Which one should you use?
+- What is a ternary? What is short-circuiting?
 - What is your JS Framework of choice and why?
-- explain the arrow function vs the function declaration 
+- explain the arrow function vs. the function declaration 
 - Explain “this” in javascript.
 - Explain async/await
 - What is an event? What events have you used, that is not `onClick`
@@ -109,9 +111,9 @@ React
 
 
 Design
-- Describe UI vs UX
+- Describe UI vs. UX
 - Name 3 ways to decrease page load (perceived or actual load time).
-- Material vs Flat design
+- Material vs. Flat design
 - What is A/B testing?
 - How do you test your design?
 - How do you create a color scheme?
@@ -123,11 +125,11 @@ Back End (C#)
 - What is static typing?
 - Explain `var` to me
 - What is LINQ?
-- What is a ternary? what is short circuiting?
-- What is Dependency Injection? Why should use it?
+- What is a ternary? What is short-circuiting?
+- What is Dependency Injection? Why should you use it?
 - Explain async/await
 - Have you ever used Generics?
-- What are Interfaces? and abstract classes?
+- What are Interfaces? Also, abstract classes?
 - What are Extension methods?
 - What are delegates? Funcs? Actions?
 - Describe boxing and unboxing. Provide an example.
@@ -138,7 +140,7 @@ Database
 - What are Joins?
 - What is a transactional query and when would I use it?
 - Compare and contrast Relational and NoSQL  and give use cases for both
-- Ever used noSQL database?
+- Ever used NoSQL database?
 - Any sharding experience?
 
 DevOps
@@ -146,5 +148,5 @@ DevOps
 - What is docker?
 - What is kubernetes?
 - Have you ever used a CI server?
-- Talk to me about Horizontal vs Vertical Scaling solutions
+- Talk to me about Horizontal vs. Vertical Scaling solutions
 - What is Blue-green deployment?
