@@ -31,7 +31,6 @@ What are you thoughts on:
 - What book do you think everyone on the team should read?
 - If you could master one technology this year, what would it be?
 - How do you organize your code? (module pattern, classical inheritance?)
-- What are some of the advantages/disadvantages of writing JavaScript code - in a language that compiles to JavaScript?
 - What is your favorite feature in Internet Explorer?
 - What is currently your favorite Github repo?
 
@@ -43,7 +42,7 @@ Soft Skills:
 - What do you do when someone disagrees with your idea?
 
 ## Tech Specific Questions
-These are a healthy mix of technical level questions, spanning from entry to senior. So you probably won't know all the answers. And that is okay. Use these as a guide to see what kinds of things software developers are asked during interviews. When learning the answers, its important to not only know what is going on, but also to create some code sample to explore the concepts. 
+These are a healthy mix of technical level questions, spanning from entry to senior. So you probably won't know all the answers. And that is okay. Use these as a guide to see what kinds of things software developers are asked during interviews. When learning the answers, its important to not only know what is going on, but also to create some code sample to explore the concepts. The questions are generally ordered in each section from easy to hard 
 
 For example, for `javascript` => `- Explain == vs ===`, create a small script that demonstrates to yourself, that you know they are mean, and not just pulling up text book answers.  
 
@@ -53,48 +52,51 @@ General Technical Knowledge
 - What is your least/most favorite language that you use? why?
 - How would you improve (a technology you have used a lot)?
 - Describe or give an example of asynchronous programming?
-- How much do you know about concurrency and programming?
 - What is your best definition of Object Oriented Programming? of Functional programming? or Procedural Programming? 
 - What is a RESTful api?
+- What is an idempotent operation?
+- Tell me about your experience with testing?
 - What is caching? what are some of your caching strategies?
-- Explain MVC vs MVVM vs MVP?
 - Have you ever encountered a scalability issue? How did you solve that?
 - Compare and contract Inheritance and Composition? 
 - What is tail recursion?  Why is it useful?
-- What is an idempotent operation?
-- What is a ternary? what is short circuiting?
+- Explain MVC vs MVVM vs MVP?
+- How much do you know about concurrency and programming?
 
 
 HTML
 - What is the difference between a div and a span?
 - What is your favorite HTML tag?
 - What goes in the head of your HTML?
-- What is the `<!DOCTYPE html>`
+- What is the `<!DOCTYPE html>` do? Is it needed?
 
 CSS
-- What does specificity mean in the regards to CSS?
+- What is your working definition of the box model?
+- What is Flexbox? Contract that to CSS Grid.
 - What is your CSS framework of choice and why?
 - Have you ever used a grid system, and if so, what do you prefer?
-- What is Flexbox? Contract that to CSS Grid.
-- What is your working definition of the box model?
+- What does specificity mean in the regards to CSS?
 
 JavaScript
+- Explain == vs ===, which one should you use?
+- what is the difference between `let`, `const` and `var`. Which one should you use?
+- What is a ternary? what is short circuiting?
 - What is your JS Framework of choice and why?
+- explain the arrow function vs the function declaration 
+- Explain “this” in javascript.
+- Explain async/await
 - What is an event? What events have you used, that is not `onClick`
 - Explain event delegation
 - What is a closure, and how/why would you use one?
 - What is the event loop?
-- Explain “this” in javascript.
-- explain the arrow function vs the function declaration 
-- Explain == vs ===, which one should you use?
-- what is the difference between `let`, `const` and `var`. Which one should you use?
-- Explain async/await
+- What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
 
 React
 - What is React?
 - How would you set up a React app? (basic structure and boilerplate)
 - What are the two types of components you can create in React? Why would you choose one over the other?
 - What is the virtual DOM? Is it a good thing?
+- What are hooks?
 - What is JSX? Why can't the browser read JSX? How do you get it to read it?
 - Explain props.
 - Explain state.
@@ -104,7 +106,6 @@ React
 - What is redux and why would you use it?
 - What are the four components of redux?
 - What is React Router and when would you use it?
-- What are hooks?
 
 
 Design
@@ -112,35 +113,38 @@ Design
 - Name 3 ways to decrease page load (perceived or actual load time).
 - Material vs Flat design
 - What is A/B testing?
+- How do you test your design?
+- How do you create a color scheme?
+- What is the best UX you have ever seen?
 
 
 Back End (C#)
+- What is .NET Core vs .NET Framework?
 - What is static typing?
 - Explain `var` to me
-- What is .NET Core vs .NET Framework?
-- What is Dependency Injection? Why should use it?
-- Tell me about your experience with testing?
-- What are Interfaces? and abstract classes?
-- Have you ever used Generics?
-- What are Extension methods?
 - What is LINQ?
+- What is a ternary? what is short circuiting?
+- What is Dependency Injection? Why should use it?
 - Explain async/await
+- Have you ever used Generics?
+- What are Interfaces? and abstract classes?
+- What are Extension methods?
 - What are delegates? Funcs? Actions?
 - Describe boxing and unboxing. Provide an example.
 
 
 Database
-- What are Joins?
 - Explain Foreign Keys
+- What are Joins?
+- What is a transactional query and when would I use it?
 - Compare and contrast Relational and NoSQL  and give use cases for both
 - Ever used noSQL database?
 - Any sharding experience?
-- What is a transactional query and when would I use it?
 
 DevOps
-- Talk to me about Horizontal vs Vertical Scaling solutions
-- What is Blue-green deployment?
 - What exposure have you had with PaaS (Azure, AWS, Google Apps)?
-- Have you ever used a CI server?
 - What is docker?
 - What is kubernetes?
+- Have you ever used a CI server?
+- Talk to me about Horizontal vs Vertical Scaling solutions
+- What is Blue-green deployment?
