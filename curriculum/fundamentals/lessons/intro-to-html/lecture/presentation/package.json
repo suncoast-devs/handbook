@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "mdx-deck index.mdx"
+  },
+  "devDependencies": {
+    "mdx-deck": "^2.2.1"
+  }
+}
