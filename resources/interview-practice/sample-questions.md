@@ -71,6 +71,15 @@ HTML
 - What is your favorite HTML tag?
 - What goes in the head of your HTML?
 - What is `<!DOCTYPE html>` do? Is it needed?
+- What are the purpose of the meta tags in the head of an HTML file?
+- What is the difference between an inline and a block element? Give an example of each.
+- What is the purpose of alt text in an image tag?
+- What heading types are supported in HTML?
+- How do you create a link that opens in a new browser tab?
+- What does it mean to write semantic HTML?
+- What are the types of lists that are available in HTML?
+- Semantically, what is the best way to set up navigation menu content?
+- What is the basic structure of an HTML file?
 
 CSS
 - What is your working definition of the box model?
@@ -78,6 +87,17 @@ CSS
 - What is your CSS framework of choice and why?
 - Have you ever used a grid system, and if so, what do you prefer?
 - What does specificity mean in the regards to CSS?
+- What is the box model and what are its elements?
+- When would you use a class selector and when would you use an id selector?
+- How is z-index used?
+- What is a pseudo-element?
+- What is a pseudo-class?
+- What are the three ways to add styles to an HTML file? Why would you use each of the three methods?
+- Have you ever worked with a CSS library for styles or grids? How did you implement it and why did you use it? (Bootstrap, FontAwesome, Animate.css, Semantic UI, etc.)
+- What are some default styles that come along with HTML? (Pick a tag and explain.)
+- How do you make a website responsive with CSS?
+- Compare and contrast CSS Grid, Flexbox, and Bootstrap.
+- What is the difference between absolute and relative positioning?
 
 JavaScript
 - Explain == vs. ===, which one should you use?
