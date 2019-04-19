@@ -17,10 +17,6 @@ export const getLanguage = className => {
 export const createCode = (opts = {}) => props => {
   const language = getLanguage(props.className)
 
-  console.log({ ...opts })
-  console.log(language)
-  console.log(props)
-
   return <Prism style={style} language={language} {...props} />
 }
 
@@ -32,6 +28,7 @@ export default {
     code: createCode(),
   },
 
+  googleFont: 'Source Sans Pro',
   css: {
     '@media screen and (min-width:56em)': {
       fontSize: '2rem',
@@ -42,15 +39,38 @@ export default {
     '@media print': {
       fontSize: '1rem',
     },
+    background: '#80ced2',
+    color: '#2f3737',
+  },
+  li: {
+    margin: '1rem',
+    listStyle: 'none',
+  },
+  heading: {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    maxWidth: '100%',
+    width: '100vw',
+    textAlign: 'center',
+  },
+  code: {
+    color: 'inherit',
   },
   pre: {
     margin: '2rem',
     code: {
       display: 'block',
+      fontSize: '1rem',
     },
   },
-  code: {
-    fontSize: '1rem',
+  blockquote: {
+    margin: '0',
+    padding: '0',
+  },
+  p: {
+    textAlign: 'left',
+    margin: '0 auto',
   },
   table: {
     td: {
@@ -59,6 +79,6 @@ export default {
     },
   },
   Slide: {
-    padding: '1rem',
+    padding: '0 6rem',
   },
 }

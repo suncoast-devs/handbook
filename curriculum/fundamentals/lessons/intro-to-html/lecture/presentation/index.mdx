@@ -1,8 +1,8 @@
 export { default as theme } from './components/theme'
 
-import { Split } from 'mdx-deck/layouts'
 import { FullScreenCode } from 'mdx-deck/layouts'
 import { Notes } from 'mdx-deck'
+import { OurSplit as Split } from './components/OurSplit'
 
 # What is HTML?
 
@@ -22,6 +22,7 @@ Jason
 ```
 
 ![](assets/jason-plain.png)
+
 </Split>
 
 <Notes>
@@ -107,52 +108,46 @@ Browsers are very forgiving of invalid HTML (even if your instructors or teammat
 <Split>
 
 <Box>
-The invalid code above looks like this in the browser. There is no difference in the browser of the broken code as the correct code. Only until we add more content to the page may we see the effects of our error.
+
+The invalid code above looks like this in the browser. There is no difference in the browser of the broken code as the correct code. 
 
 Making sure you have _correct_ code is very important.
 
 </Box>
 
 ![](assets/jason-invalid.png)
+
 </Split>
 
 ---
 
 # HTML Attributes
 
-Elements can also have attributes, which look like this:
-
-![inline fit](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
-
----
-
 <Split>
 
-# Attributes
+Elements can also have attributes, which look like this
 
-<Box>
+![](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
 
-- Attributes contain extra information about the element which you don't want to appear in the actual content.
-
-* In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
-
-</Box>
 </Split>
 
 ---
 
-<Split>
+# Attributes
 
-## Attributes Should Have
+- Attributes contain extra information about the element which you don't want to appear in the actual content.
 
-<Box>
+- In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
+
+
+---
+
+# Attributes Should Have
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)
 1. The attribute name, followed by an equals sign.
 1. An attribute value, with opening and closing quote marks wrapped around it.
 
-</Box>
-</Split>
 
 ---
 
@@ -626,7 +621,12 @@ Just about any web content can be converted to a link, so that when clicked it w
 
 <Split>
 
+<Box>
+
 A basic link is created by wrapping the content you want to turn into a link inside an `<a>` element, and giving it an href attribute that will contain the web address you want the link to point to.
+
+NOTE that `href` stands for `Hypertext REFerence`
+</Box>
 
 <!-- prettier-ignore -->
 ```html
@@ -639,7 +639,6 @@ A basic link is created by wrapping the content you want to turn into a link ins
 
 </Split>
 
-NOTE that `href` stands for `Hypertext REFerence`
 
 ---
 
@@ -781,10 +780,6 @@ Take a look at [this example](https://mdn.github.io/learning-area/html/tables/as
 
 - A table is comprised of three major portions: `thead`, `tfoot`, and `tbody`
 
-- These elements don't make the table any more accessible to screenreader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout
-
-
-
 - The `<thead>` element needs to wrap the part of the table that is the header
 - The `<tfoot>` element needs to wrap the part of the table that is the footer
 - The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer.
@@ -866,6 +861,7 @@ Lets see what this looks like:
 
 ---
 
+<FullScreenCode>
 
 ```html
 <!DOCTYPE html>
@@ -900,6 +896,7 @@ Lets see what this looks like:
 </html>
 ```
 
+</FullScreenCode>
 
 ---
 
