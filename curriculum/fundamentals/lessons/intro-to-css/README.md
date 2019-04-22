@@ -6,4 +6,12 @@ By linking your HTML page up with a set of CSS rules, you can make your website 
 
 Often we will use a hybrid approach, telling this section to look like this and this other section over here to have brighter text and a shadowy backdrop.
 
-[Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-css/reading)
+[Learning Objectives](./objectives)
+
+[Begin your Reading](./reading)
+
+[Additional Resources](./resources)
+
+[Lecture](./lecture)
+
+[Assignments](./assignments)

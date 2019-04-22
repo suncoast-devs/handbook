@@ -60,4 +60,4 @@ This isn't too pretty, but at least it starts to give you an idea of how CSS wor
 
 ---
 
-[Next: Vocabulary](/handbook/curriculum/fundamentals/static-sites/self-study/getting-started-with-css/02)
+[Next: Vocabulary](/handbook/curriculum/fundamentals/lessons/intro-to-css/reading/02)
