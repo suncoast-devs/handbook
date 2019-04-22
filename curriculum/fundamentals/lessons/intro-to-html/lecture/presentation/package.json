@@ -1,9 +1,15 @@
 {
   "private": true,
   "scripts": {
-    "start": "mdx-deck index.mdx"
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "pdf": "mdx-deck pdf index.mdx"
   },
   "devDependencies": {
     "mdx-deck": "^2.2.1"
+  },
+  "dependencies": {
+    "@mdx-deck/export": "^2.2.1",
+    "file-loader": "^3.0.1"
   }
 }

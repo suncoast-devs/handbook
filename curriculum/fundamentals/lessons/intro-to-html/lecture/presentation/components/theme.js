@@ -1,9 +1,6 @@
 import { code as parentTheme } from 'mdx-deck/themes'
 import { Prism } from 'react-syntax-highlighter'
-
-import style from 'react-syntax-highlighter/dist/styles/prism/atom-dark'
-
-const pre = props => props.children
+import prismStyle from 'react-syntax-highlighter/dist/styles/prism/atom-dark'
 
 export const getLanguage = className => {
   const match = /language-(\w*)/.exec(className || 'language-javascript')
@@ -14,18 +11,35 @@ export const getLanguage = className => {
   return lang
 }
 
-export const createCode = (opts = {}) => props => {
-  const language = getLanguage(props.className)
+const pre = props => props.children
 
-  return <Prism style={style} language={language} {...props} />
-}
+const code = props => (
+  <Prism
+    style={prismStyle}
+    showLineNumbers
+    language={getLanguage(props.className)}
+    {...props}
+  />
+)
+
+const img = props => (
+  <img
+    src={props.src}
+    style={{
+      maxWidth: '100%',
+      height: 'auto',
+      objectFit: 'cover',
+    }}
+  />
+)
 
 export default {
   ...parentTheme,
 
   components: {
     pre,
-    code: createCode(),
+    code,
+    img,
   },
 
   googleFont: 'Source Sans Pro',

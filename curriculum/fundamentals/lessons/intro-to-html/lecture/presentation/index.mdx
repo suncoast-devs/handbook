@@ -4,6 +4,8 @@ import { FullScreenCode } from 'mdx-deck/layouts'
 import { Notes } from 'mdx-deck'
 import { OurSplit as Split } from './components/OurSplit'
 
+import Image from './components/Image'
+
 # What is HTML?
 
 - HTML (Hypertext Markup Language) is a markup language
@@ -21,7 +23,7 @@ import { OurSplit as Split } from './components/OurSplit'
 Jason
 ```
 
-![](assets/jason-plain.png)
+<Image src={require("./assets/jason-plain.png")} />
 
 </Split>
 
@@ -39,7 +41,8 @@ Jason
 <p>Jason</p>
 ```
 
-![](assets/jason-paragraph.png)
+<Image src={require("./assets/jason-paragraph.png")} />
+
 </Split>
 
 <Notes> This tells the browser that this is an entire paragraph, which in the browser will make the text appear on it's own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_</Notes>
@@ -76,7 +79,7 @@ To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` eleme
  our <strong>CEO</strong></p>
 ```
 
-![](assets/jason-strong.png)
+<Image src={require("./assets/jason-strong.png")} />
 </Split>
 
 ---
@@ -115,7 +118,7 @@ Making sure you have _correct_ code is very important.
 
 </Box>
 
-![](assets/jason-invalid.png)
+<Image src={require("./assets/jason-invalid.png")} />
 
 </Split>
 
@@ -142,7 +145,7 @@ Elements can also have attributes, which look like this
 
 ---
 
-# Attributes Should Have
+# Attributes Should Have ...
 
 1. A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)
 1. The attribute name, followed by an equals sign.
@@ -184,7 +187,18 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 
 > The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -196,7 +210,18 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 
 However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right. `<!DOCTYPE html>` is the shortest string of characters that counts as a valid doctype; that's all you really need to know.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -208,7 +233,18 @@ However, these days no one really cares about them, and they are really just a h
 
 The `<html>` element. This element wraps all the content on the entire page, and is sometimes known as the root element.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -220,19 +256,41 @@ The `<html>` element. This element wraps all the content on the entire page, and
 
 The `<head>` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
 ---
 
-### `<meta charset="utf-8">`
+# `<meta charset="utf-8">`
 
 <Split>
 
 This element sets the character set your document should use to UTF-8, which includes most characters from the vast majority of human written languages. Essentially it can now handle any textual content you might put on it. There is no reason not to set this, and it can help avoid some problems later.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -244,7 +302,18 @@ This element sets the character set your document should use to UTF-8, which inc
 
 The `<title>` element. This sets the title of your page, which is the title that appears in the browser tab the page is loaded in, and is used to describe the page when you bookmark/favorite it.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -256,7 +325,18 @@ The `<title>` element. This sets the title of your page, which is the title that
 
 The `<body>` element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
 
-![](assets/html-page.png)
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>About SDG</title>
+  </head>
+  <body>
+    <p>Jason is our <strong>CEO</strong></p>
+  </body>
+</html>
+```
 
 </Split>
 
@@ -900,7 +980,7 @@ Lets see what this looks like:
 
 ---
 
-![](./assets/code-01.png)
+<Image src={require("./assets/code-01.png")} />
 
 ^ Notice that we haven't, other than `<img>` tag applied any structure to the content
 
