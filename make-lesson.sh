@@ -28,19 +28,3 @@ LESSON_NAME=$(echo $LESSON_NAME | sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A
 
 mkdir -p curriculum/${UNIT}/lessons/${LESSON_NAME}
 cp -n -a .lesson-template/* curriculum/${UNIT}/lessons/${LESSON_NAME}
-
-# cd curriculum/${UNIT}/lessons/${LESSON_NAME}
-# 
-# echo "# Introduction goes here" > index.md
-# echo "# List of Learning Objectives goes here" > objectives.md
-# mkdir -p reading/
-# echo "# This should introduce the flipped-classroom-style-reading\n# Suggest making many linked pages to walk students through the subject" > reading/index.md
-# mkdir -p lecture/
-# echo "# This folder includes resources for an instructor to use during a lecture on this lesson" > lecture/index.md
-# mkdir -p lecture/code/
-# echo "# This directory should contain a series of directories, nubmered 01, 02, etc, that are the progressive steps of code to show during lecture" > lecture/code/index.md
-# mkdir -p lecture/presentation/
-# echo "# This should be a markdown based presentation to show/follow during lecture" > lecture/presentation/index.md
-# mkdir -p assignments/
-# echo "# This directory should contain markdown of several example assignments that relate to this lesson" > assignments/index.md
-# 
