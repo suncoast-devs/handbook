@@ -210,7 +210,6 @@ You can nest strong and emphasis inside one another if desired:
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

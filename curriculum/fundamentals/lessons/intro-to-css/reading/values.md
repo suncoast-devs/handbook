@@ -227,7 +227,6 @@ p {
 
 There is another way to specify transparency via CSS — the opacity property. Instead of setting the transparency of a particular color, this sets the transparency of all selected elements and their children. Again, let's study an example so we can see the difference.
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

@@ -13,7 +13,6 @@ Now that we have some basic terminology, lets review the different kinds of _sel
 
 Lets go through these selectors and learn how we can effectively target content in our HTML to apply CSS styles.
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

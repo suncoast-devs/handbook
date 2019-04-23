@@ -12,7 +12,6 @@ No matter how much whitespace you use (which can include space characters, but a
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

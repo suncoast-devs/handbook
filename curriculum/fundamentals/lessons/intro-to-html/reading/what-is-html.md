@@ -18,7 +18,6 @@ If we wanted the line to stand by itself, we could specify that it is a paragrap
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

@@ -29,7 +29,6 @@ For example:
 - Is it a figure or image that needs a caption?
 - Should it have a header and a footer in addition to the global site-wide header and footer?
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

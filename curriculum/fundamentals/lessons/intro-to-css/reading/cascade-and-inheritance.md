@@ -83,7 +83,6 @@ As another example, it makes sense for `margin`, `padding`, `border`, and `backg
 
 Which properties are inherited by default and which aren't is largely down to common sense. If you want to be sure, however, you can consult the [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) — each separate property page contains a summary table including various details about that element, including whether it is inherited or not.
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

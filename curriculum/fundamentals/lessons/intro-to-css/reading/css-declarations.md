@@ -67,7 +67,6 @@ background-scroll: fixed;
 
 We won't attempt to teach these exhaustively — you'll come across many examples as you work with CSS.
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

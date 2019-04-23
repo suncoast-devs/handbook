@@ -21,7 +21,6 @@ div {
 
 One of the more common CSS functions is the [`url()`](https://developer.mozilla.org/en-US/docs/Web/CSS/url) function notation, which returns a file; generally an image as seen above.
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

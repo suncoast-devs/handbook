@@ -1,6 +1,4 @@
 import CodePen from '@handbook/CodePen'
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
 
 ## Simple Selectors
 
@@ -176,4 +174,6 @@ a[href$="musk"] {
 
 </CodePen>
 
-<ReadingNav pages={pages} />
+import Nav from './Nav'
+
+<Nav/>

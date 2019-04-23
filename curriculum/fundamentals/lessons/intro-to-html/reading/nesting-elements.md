@@ -18,7 +18,6 @@ The elements have to open and close correctly, so they are clearly inside or out
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

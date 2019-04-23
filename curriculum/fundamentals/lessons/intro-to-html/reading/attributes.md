@@ -26,7 +26,6 @@ Edit the line below in the Input area to turn it into a link to your favorite we
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

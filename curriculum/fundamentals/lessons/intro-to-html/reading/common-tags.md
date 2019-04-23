@@ -130,7 +130,6 @@ Here are some of the most common HTML tags we see used, their purpose, and the d
 
 ---
 
-import pages from './pages'
-import ReadingNav from '@handbook/ReadingNav'
+import Nav from './Nav'
 
-<ReadingNav pages={pages}/>
+<Nav/>

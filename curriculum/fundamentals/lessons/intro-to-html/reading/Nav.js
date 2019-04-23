@@ -1,4 +1,7 @@
-export default [
+import React from 'react'
+import ReadingNav from '@handbook/ReadingNav'
+
+const pages = [
   {
     path: 'intro',
     text: 'Introduction to HTML',
@@ -64,3 +67,7 @@ export default [
     text: 'Common Tags',
   },
 ]
+
+const Nav = () => <ReadingNav pages={pages} />
+
+export default Nav
