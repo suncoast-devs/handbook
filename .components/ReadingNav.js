@@ -5,8 +5,6 @@ const ReadingNav = props => {
   const { pages } = props
 
   const findIndex = location => {
-    console.log(location)
-
     const path = location.pathname
       .replace(/\/*$/, '')
       .split('/')
