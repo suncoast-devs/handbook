@@ -6,7 +6,7 @@ It's primary purpose is to put text, pictures, and links onto a website. If you'
 
 [Learning Objectives](/handbook/curriculum/fundamentals/lessons/intro-to-html/objectives)
 
-[Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-html/reading)
+[Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-html/reading/intro)
 
 [Resources](/handbook/curriculum/fundamentals/lessons/intro-to-html/resources)
 

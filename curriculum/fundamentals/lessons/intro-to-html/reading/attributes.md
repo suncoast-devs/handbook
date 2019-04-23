@@ -1,0 +1,32 @@
+## Attributes
+
+Elements can also have attributes, which look like this:
+
+![](https://mdn.mozillademos.org/files/9345/grumpy-cat-attribute-small.png)
+
+Attributes contain extra information about the element which you don't want to appear in the actual content. In this case, the class attribute allows you to give the element an identifying name that can be later used to target the element with style information and other things.
+
+An attribute should have:
+
+- A space between it and the element name (or the previous attribute, if the element already has one or more attributes.)
+- The attribute name, followed by an equals sign.
+- An attribute value, with opening and closing quote marks wrapped around it.
+
+## Active learning: Adding attributes to an element
+
+Another example of an element is `<a>` — this stands for "anchor" and will make the piece of text it wraps around into a hyperlink. This can take a number of attributes, but several are as follows:
+
+- `href`: This attribute specifies as its value the web address that you want the link to point to; where the browser navigates to when the link is clicked. For example, href="https://www.mozilla.org/".
+- `title`: The title attribute specifies extra information about the link, such as what the page is that you are linking to. For example, title="The Mozilla homepage". This will appear as a tooltip when hovered over.
+- `target`: The target attribute specifies the browsing context which will be used to display the link. For example, target="\_blank" will display the link in a new tab. If you want to display the link in the current tab just omit this attribute.
+
+Edit the line below in the Input area to turn it into a link to your favorite website. First, add the `<a>` element. Second, add the `href` attribute and the `title` attribute. Lastly, specify `target` attribute to open the link in the new tab. You'll be able to see your changes update live in the Output area. You should see a link that when hovered over displays the title attribute's content, and when clicked navigates to the web address in the href element. Remember that you need to include a space between the element name, and each attribute.
+
+<iframe src="https://mdn.mozillademos.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started$samples/Playable_code2?revision=1430258" height="400" width="700" id="frame_Playable_code2" class="live-sample-frame hide-codepen-jsfiddle" frameborder="0" style="border: 3px solid black"></iframe>
+
+---
+
+import pages from './pages'
+import ReadingNav from '@handbook/ReadingNav'
+
+<ReadingNav pages={pages}/>
