@@ -10,7 +10,7 @@ const CodePen = props => {
     <div style={{ display: 'flex', flex: 1 }}>
       <div style={{ width: '50%' }}>{other}</div>
       <div
-        className="codepen"
+        className="codepen-later"
         data-prefill
         data-height="500"
         data-editable
