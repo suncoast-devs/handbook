@@ -14,44 +14,38 @@ const ReadingNav = props => {
     return pages.findIndex(page => page.path === path)
   }
 
-  const nextPath = location => {
+  const relativePath = location =>
+    location.pathname.endsWith('/') ? '..' : '.'
+
+  const path = (location, offset) => {
     const index = findIndex(location)
 
-    return pages[index + 1] && `./${pages[index + 1].path}`
+    return (
+      pages[index + offset] &&
+      `${relativePath(location)}/${pages[index + offset].path}`
+    )
   }
 
-  const nextText = location => {
+  const text = (location, offset) => {
     const index = findIndex(location)
 
-    return pages[index + 1] && pages[index + 1].text
-  }
-
-  const prevPath = location => {
-    const index = findIndex(location)
-
-    return pages[index - 1] && `./${pages[index - 1].path}`
-  }
-
-  const prevText = location => {
-    const index = findIndex(location)
-
-    return pages[index - 1] && pages[index - 1].text
+    return pages[index + offset] && pages[index + offset].text
   }
 
   return (
     <Location>
       {({ location }) => (
         <ul className="handbook-nav-links">
-          {nextPath(location) && (
+          {path(location, +1) && (
             <li>
               <i className="fa fa-angle-right" />
-              <a href={nextPath(location)}>{nextText(location)}</a>
+              <a href={path(location, +1)}>{text(location, +1)}</a>
             </li>
           )}
-          {prevPath(location) && (
+          {path(location, -1) && (
             <li>
               <i className="fa fa-angle-left" />
-              <a href={prevPath(location)}>{prevText(location)}</a>
+              <a href={path(location, -1)}>{text(location, -1)}</a>
             </li>
           )}
         </ul>
