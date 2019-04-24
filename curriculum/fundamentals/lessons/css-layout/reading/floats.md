@@ -58,7 +58,7 @@ p {
 
 ---
 
-![image](/handbook/curriculum/fundamentals/lessons/css-layout/reading/assets/wow-floats.png)
+![wow floats](./assets/wow-floats.png)
 
 > WOW, AMAZING, SUCH CONTROL.
 
