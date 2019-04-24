@@ -2,7 +2,7 @@
 
 [Learning Objectives](./objectives)
 
-[Begin your Reading](./reading)
+[Begin your Reading](./reading/intro)
 
 [Additional Resources](./resources)
 

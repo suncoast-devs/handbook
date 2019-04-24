@@ -10,15 +10,17 @@ const CodePen = props => {
     <></>
   )
 
+  const parentStyle = other.length > 0 ? { display: 'flex' } : {}
+
   return (
-    <div style={{ display: 'flex', flex: 1 }}>
+    <div style={parentStyle}>
       {other.length > 0 && <div style={{ width: '50%' }}>{other}</div>}
       <div
         className="codepen-later"
         data-prefill
         data-height="500"
         data-editable
-        data-default-tab="html,css,result"
+        data-default-tab={props.defaultTab || 'html,result'}
       >
         {codePenData}
       </div>

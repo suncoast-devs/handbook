@@ -1,4 +1,4 @@
-import CodePen from '@handbook/codepen'
+import CodePen from '@handbook/CodePen'
 
 ## Nesting elements
 
