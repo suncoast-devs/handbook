@@ -1,14 +1,18 @@
 import React from 'react'
 
 const CodePen = props => {
-  const codePenData = props.children.filter(
-    child => child.props.mdxType === 'pre'
+  const codePenData = props.children.filter
+    ? props.children.filter(child => child.props.mdxType === 'pre')
+    : props.children
+  const other = props.children.filter ? (
+    props.children.filter(child => child.props.mdxType !== 'pre')
+  ) : (
+    <></>
   )
-  const other = props.children.filter(child => child.props.mdxType !== 'pre')
 
   return (
     <div style={{ display: 'flex', flex: 1 }}>
-      <div style={{ width: '50%' }}>{other}</div>
+      {other.length > 0 && <div style={{ width: '50%' }}>{other}</div>}
       <div
         className="codepen-later"
         data-prefill

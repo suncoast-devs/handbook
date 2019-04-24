@@ -1,12 +1,20 @@
+import CodePen from '@handbook/codepen'
+
 ## Nesting elements
 
-You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a `<strong>` element, which means that the word is to be strongly emphasized:
+<CodePen>
 
-```html
+You can put elements inside other elements too — this is called nesting. If we wanted to state that our cat is very grumpy, we could wrap the word "very" in a `<strong>` element, which means that the word is to be strongly emphasized.
+
+<pre data-lang='html'>
+{`
 <p>My cat is <strong>very</strong> grumpy.</p>
-```
+`}
+</pre>
 
-<iframe src="https://codepen.io/gstark/full/KGYbrv/" height="400" width="400" style="border: 3px solid black"></iframe>
+</CodePen>
+
+---
 
 You do however need to make sure that your elements are properly nested: in the example above, we opened the p element first, then the strong element, therefore we have to close the strong element first, then the p. The following is incorrect:
 

@@ -34,15 +34,19 @@ const ReadingNav = props => {
     <Location>
       {({ location }) => (
         <ul className="handbook-nav-links">
+          <li>
+            <i class="fas fa-home" />
+            <a href="../">Main</a>
+          </li>
           {path(location, +1) && (
             <li>
-              <i className="fa fa-angle-right" />
+              <i class="fas fa-chevron-right" />
               <a href={path(location, +1)}>{text(location, +1)}</a>
             </li>
           )}
           {path(location, -1) && (
             <li>
-              <i className="fa fa-angle-left" />
+              <i class="fas fa-chevron-left" />
               <a href={path(location, -1)}>{text(location, -1)}</a>
             </li>
           )}
