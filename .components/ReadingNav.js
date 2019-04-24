@@ -36,7 +36,7 @@ const ReadingNav = props => {
         <ul className="handbook-nav-links">
           <li>
             <i class="fas fa-home" />
-            <a href={location.endsWith('/') ? '../..' : '..'}>Main</a>
+            <a href={location.pathname.endsWith('/') ? '../..' : '..'}>Main</a>
           </li>
           {path(location, +1) && (
             <li>
