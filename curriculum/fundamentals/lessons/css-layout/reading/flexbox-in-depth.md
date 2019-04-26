@@ -180,13 +180,13 @@ When elements are laid out as flexible boxes, they are laid out along two axes:
 
 ![flex terms](https://developer.mozilla.org/files/3739/flex_terms.png)
 
-|                                                      |                                                                                                                                                                                                         |
-| ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| main axis                                            | The axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end. |
-| cross axis                                           | The axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the cross start and cross end.                                          |
-| parent                                               | The parent element that has `display: flex` set on it (the `<section>` in our example) is called the flex container.                                                                                    |
-| <span style="white-space: nowrap;">flex items</span> | The items being laid out as flexible boxes inside the flex container are called flex items (the `<article>` elements in our example).                                                                   |
-|                                                      |                                                                                                                                                                                                         |
+|            |                                                                                                                                                                                                         |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| main axis  | The axis running in the direction the flex items are being laid out in (e.g. as rows across the page, or columns down the page.) The start and end of this axis are called the main start and main end. |
+| cross axis | The axis running perpendicular to the direction the flex items are being laid out in. The start and end of this axis are called the cross start and cross end.                                          |
+| parent     | The parent element that has `display: flex` set on it (the `<section>` in our example) is called the flex container.                                                                                    |
+| flex items | The items being laid out as flexible boxes inside the flex container are called flex items (the `<article>` elements in our example).                                                                   |
+|            |                                                                                                                                                                                                         |
 
 ## Columns vs Rows
 
@@ -413,12 +413,12 @@ You can also use flexbox features to align flex items along the main or cross ax
 
 `align-items` controls where the flex items sit on the cross axis.
 
-|                                                                  |                                                                                                                                                                                                                                                                                                                                   |
-| ---------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `stretch`                                                        | By default, the value is stretch, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items. This is how our first example got equal height columns by default. |
-| `center`                                                         | The center value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.                                                                                                                 |
-| <span style='white-space: nowrap;'>`flex-start, flex-end`</span> | You can also have values like flex-start and flex-end, which will align all items at the start and end of the cross axis respectively. See align-items for the full details.                                                                                                                                                      |
-|                                                                  |                                                                                                                                                                                                                                                                                                                                   |
+|                        |                                                                                                                                                                                                                                                                                                                                   |
+| ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `stretch`              | By default, the value is stretch, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items. This is how our first example got equal height columns by default. |
+| `center`               | The center value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.                                                                                                                 |
+| `flex-start, flex-end` | You can also have values like flex-start and flex-end, which will align all items at the start and end of the cross axis respectively. See align-items for the full details.                                                                                                                                                      |
+|                        |                                                                                                                                                                                                                                                                                                                                   |
 
 > Try changing `align-items` in this example to `stretch`, `flex-start`, and `flex-end`
 
@@ -426,14 +426,14 @@ You can also use flexbox features to align flex items along the main or cross ax
 
 `justify-content` controls where the flex items sit on the main axis.
 
-|                                                           |                                                                                                                                                        |
-| --------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `flex-start`                                              | The default value is flex-start, which makes all the items sit at the start of the main axis.                                                          |
-| `flex-end`                                                | You can use flex-end to make them sit at the end.                                                                                                      |
-| `center`                                                  | center is also a value for justify-content, and will make the flex items sit in the center of the main axis.                                           |
-| `space-around`                                            | The value we've used above, space-around, is useful — it distributes all the items evenly along the main axis, with a bit of space left at either end. |
-| <span style='white-space: nowrap;'>`space-between`</span> | There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.                     |
-|                                                           |                                                                                                                                                        |
+|                 |                                                                                                                                                        |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `flex-start`    | The default value is flex-start, which makes all the items sit at the start of the main axis.                                                          |
+| `flex-end`      | You can use flex-end to make them sit at the end.                                                                                                      |
+| `center`        | center is also a value for justify-content, and will make the flex items sit in the center of the main axis.                                           |
+| `space-around`  | The value we've used above, space-around, is useful — it distributes all the items evenly along the main axis, with a bit of space left at either end. |
+| `space-between` | There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.                     |
+|                 |                                                                                                                                                        |
 
 > Try changing `justify-content` in this example to `flex-start`, `flex-end`, `center`, `space-around` and `space-between`
 
