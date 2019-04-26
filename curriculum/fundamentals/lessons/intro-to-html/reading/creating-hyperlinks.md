@@ -89,6 +89,40 @@ Here's an example that includes a cc, bcc, subject and body:
 
 ---
 
+## Absolute Links
+
+When linking to a specific location within your site or application you can use an `absolute` link. When using an absolute link you provide the entire path to the page.
+
+** Example **
+
+```html
+<a href="/marketing/products/promotional/cups">Cups</a>
+```
+
+If we were making a link from the `cups` page to a page that was a _sibling_ we could use a `relative` link.
+
+** example **
+
+```html
+<a href="./mugs">Mugs</a>
+```
+
+The `./` at the beginning of the link means _from the current path_ and then we look for a page `mugs`
+
+If we were on the `cups` page and wanted to go back to the `promotional` page we could use another form of relative link.
+
+_example_
+
+```html
+<a href="..">Promotional</a>
+```
+
+In this case the `..` means to go up one level. Since we are currently at `/marketing/products/promotional/cups` we would end up at `/marketing/products/promotional`
+
+By using absolute and relative links we can navigate the structure of our page. Absolute links help us link to specific locations on our site by resetting us back to the root of the site. Relative links help us avoid having to repeatedly reference all the way back to the root which helps us move entire sections of our site without breaking links.
+
+---
+
 import Nav from './Nav'
 
 <Nav/>
