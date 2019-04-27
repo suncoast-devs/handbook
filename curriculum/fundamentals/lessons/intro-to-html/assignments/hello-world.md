@@ -13,10 +13,9 @@ For this assignment, you will following along with you instructors to complete t
 - Write some HTML
 - Publish a web page
 
-
 ## Requirements
 
-- Have `git`, `hub`, `node`, `app-app` installed. We should have done this together in class. Reminder: you only have to install these tools once. 
+- Have `git`, `hub`, `node`, `app-app` installed. We should have done this together in class. Reminder: you only have to install these tools once.
 
 - All of your HTML (and CSS if you do _epic_ mode) should be formatted cleanly and consistently (use your editor to your advantage).
 
@@ -33,7 +32,7 @@ For this assignment, you will following along with you instructors to complete t
 
 - [ ] Use at least one image somewhere on the page.
 - [ ] Learn about and investigate the `a` to add (at least 2) more pages to your site.
-- [ ] Re-deploy your site. 
+- [ ] Re-deploy your site.
 - [ ] [Read more about CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS).
 
 ### Epic Mode
@@ -48,13 +47,5 @@ For this assignment, you will following along with you instructors to complete t
 - [HTML Tag Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 - [How do HTML Tags work](https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags)
 - [Evolution of the Web](http://www.evolutionoftheweb.com)
-- [Atom Flight Manual](https://flight-manual.atom.io)
-  - [Moving in Atom](https://flight-manual.atom.io/using-atom/sections/moving-in-atom/)
-  - [Selecting Text](https://flight-manual.atom.io/using-atom/sections/atom-selections/)
-  - [Find and Replace](https://flight-manual.atom.io/using-atom/sections/find-and-replace/)
 - [Getting started with VS Code](https://code.visualstudio.com/docs/getstarted/introvideos)
 - [Visual Studio Code Basics](https://code.visualstudio.com/docs/introvideos/basics)
-
-## Reading Material
-
-To prep for tomorrow's lesson, you can [read about CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS).

@@ -1,5 +1,3 @@
-# Additional resources for the students
+# Additional resources
 
-## This should have more resources for students
-
-- Videos, blogs, tutorials, codepens, etc.
+- Here are some [popular CSS properties](/handbook/curriculum/fundamentals/lessons/intro-to-css/resources/css-properties-we-like)

@@ -51,7 +51,3 @@ Create a new website that shows some basic styling and formatting using HTML and
 
 - [HTML Tags](https://developer.mozilla.org/en-US/Learn/HTML/HTML_tags)
 - [Evolution of the Web](http://www.evolutionoftheweb.com)
-
-## Reading Material
-
-To prep for tomorrow's lesson, you can [read about flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).

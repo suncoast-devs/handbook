@@ -1,3 +1,3 @@
 # Assignments
 
-- List of possible assignments
+- [Hello World](/handbook/curriculum/fundamentals/lessons/intro-to-html/assignments/hello-world)
