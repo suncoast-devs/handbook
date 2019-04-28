@@ -1,7 +1,9 @@
 import CodePen from '@handbook/CodePen'
+import AdvancedTopic from '@handbook/AdvancedTopic'
 
 # What is a table
 
+<AdvancedTopic message='Table structuring and styling is an advanced subject'>
 A table is a structured set of data made up of of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day or the week, or the timetable for a local swimming pool.
 
 ![](https://mdn.mozillademos.org/files/14583/numbers-table.png)
@@ -593,6 +595,7 @@ To use them:
 The `<thead>` element needs to wrap the part of the table that is the header — this will commonly be the first row containing the column headings, but this is not necessarily always the case. If you are using `<col>`/`<colgroup>` element, the table header should come just below those.
 The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
 The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it (see the notes above).
+</AdvancedTopic>
 
 import Nav from './Nav'
 

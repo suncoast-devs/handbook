@@ -4,12 +4,12 @@ Now that we can create a semantic web page, style it with CSS, and control it's 
 
 Being able to _respond_ to these differences while maintaining a single code base gives us the best change of providing all our users the best experience.
 
-[Learning Objectives](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/objectives)
+[Learning Objectives](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/objectives)
 
-[Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/reading/intro)
+[Begin your Reading](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/reading/intro)
 
-[Additional Resources](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/resources)
+[Additional Resources](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/resources)
 
-[Lecture](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/lecture)
+[Lecture](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/lecture)
 
-[Assignments](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/assignments)
+[Assignments](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/assignments)

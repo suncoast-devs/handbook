@@ -6,12 +6,12 @@ By linking your HTML page up with a set of CSS rules, you can make your website 
 
 Often we will use a hybrid approach, telling this section to look like this and this other section over here to have brighter text and a shadowy backdrop.
 
-[Learning Objectives](/handbook/curriculum/fundamentals/lessons/intro-to-css/objectives)
+[Learning Objectives](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/objectives)
 
-[Begin your Reading](/handbook/curriculum/fundamentals/lessons/intro-to-css/reading/intro)
+[Begin your Reading](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/reading/intro)
 
-[Additional Resources](/handbook/curriculum/fundamentals/lessons/intro-to-css/resources)
+[Additional Resources](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/resources)
 
-[Lecture](/handbook/curriculum/fundamentals/lessons/intro-to-css/lecture)
+[Lecture](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/lecture)
 
-[Assignments](/handbook/curriculum/fundamentals/lessons/intro-to-css/assignments)
+[Assignments](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/assignments)

@@ -1,3 +1,3 @@
 # Assignment
 
-- [Octodex](/handbook/curriculum/fundamentals/lessons/intro-to-responsive/assignments/octodex)
+- [Octodex](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-responsive/assignments/octodex)

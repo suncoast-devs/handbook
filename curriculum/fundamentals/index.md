@@ -11,4 +11,4 @@
 
 ## JavaScript
 
-- [Blah]()
+- [Introduction to Javascript](/handbook/curriculum/fundamentals/modules/javascript/lessons/intro)
