@@ -26,6 +26,18 @@ const pages = [
     path: 'operators',
     text: 'Operators',
   },
+  {
+    path: 'text-formatting',
+    text: 'Text Formatting (Strings)',
+  },
+  {
+    path: 'arrays',
+    text: 'Arrays',
+  },
+  {
+    path: 'objects',
+    text: 'Objects',
+  },
 ]
 
 const Nav = () => <ReadingNav pages={pages} />
