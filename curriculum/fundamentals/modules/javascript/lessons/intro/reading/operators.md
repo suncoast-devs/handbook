@@ -1,4 +1,5 @@
 import CodePen from '@handbook/CodePen'
+import AdvancedTopic from '@handbook/AdvancedTopic'
 
 # Operators
 
@@ -25,22 +26,22 @@ An assignment operator assigns a value to its left operand based on the value of
 
 There are also compound assignment operators that are shorthand for the operations listed in the following table:
 
-| Name                            | Shorthand operator | Meaning      |
-| ------------------------------- | ------------------ | ------------ |
-| Assignment                      | x = y              | x = y        |
-| Addition assignment             | x += y             | x = x + y    |
-| Subtraction assignment          | x -= y             | x = x - y    |
-| Multiplication assignment       | x \*= y            | x = x \* y   |
-| Division assignment             | x /= y             | x = x / y    |
-| Remainder assignment            | x %= y             | x = x % y    |
-| Exponentiation assignment       | x \*\*= y          | x = x \*\* y |
-| Left shift assignment           | x <<= y            | x = x << y   |
-| Right shift assignment          | x >>= y            | x = x >> y   |
-| Unsigned right shift assignment | x >>>= y           | x = x >>> y  |
-| Bitwise AND assignment          | x &= y             | x = x & y    |
-| Bitwise XOR assignment          | x ^= y             | x = x ^ y    |
-| Bitwise OR assignment           | x \| = y           | x = x \| y   |
-|                                 |                    |              |
+| Name                            | Shorthand operator | Meaning       |
+| ------------------------------- | ------------------ | ------------- |
+| Assignment                      | `x = y`            | `x = y`       |
+| Addition assignment             | `x += y`           | `x = x + y`   |
+| Subtraction assignment          | `x -= y`           | `x = x - y`   |
+| Multiplication assignment       | `x *= y`           | `x = x * y`   |
+| Division assignment             | `x /= y`           | `x = x / y`   |
+| Remainder assignment            | `x %= y`           | `x = x % y`   |
+| Exponentiation assignment       | `x **= y`          | `x = x ** y`  |
+| Left shift assignment           | `x <<= y`          | `x = x << y`  |
+| Right shift assignment          | `x >>= y`          | `x = x >> y`  |
+| Unsigned right shift assignment | `x >>>= y`         | `x = x >>> y` |
+| Bitwise AND assignment          | `x &= y`           | `x = x & y`   |
+| Bitwise XOR assignment          | `x ^= y`           | `x = x ^ y`   |
+| Bitwise OR assignment           | `x |= y`           | `x = x | y`   |
+|                                 |                    |               |
 
 **Destructuring Assignment**
 
@@ -102,6 +103,8 @@ In addition to the standard arithmetic operations (+, -, \* /), JavaScript provi
 
 ## Bitwise operators
 
+<AdvancedTopic message={`Bitwise operators aren't used very often, but they are useful to understand`}>
+
 A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has a binary representation of `1001`. Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values.
 
 The following table summarizes JavaScript's bitwise operators.
@@ -136,6 +139,8 @@ Bitwise shift operators
 | Sign-propagating right shift (`>>`) | This operator shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Copies of the leftmost bit are shifted in from the left. | `9>>2` yields `2`, because `1001` shifted 2 bits to the right becomes `10`, which is `2`. Likewise, `-9>>2` yields `-3`, because the sign is preserved.                                                 |
 | Zero-fill right shift (`>>>`)       | This operator shifts the first operand the specified number of bits to the right. Excess bits shifted off to the right are discarded. Zero bits are shifted in from the left.                  | `19>>>2` yields `4`, because `10011` shifted `2` bits to the right becomes `100`, which is `4`. For non-negative numbers, zero-fill right shift and sign-propagating right shift yield the same result. |
 
+</AdvancedTopic>
+
 ## Logical operators
 
 Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value. The logical operators are described in the following table.
@@ -143,8 +148,8 @@ Logical operators are typically used with Boolean (logical) values; when they ar
 | Operator           | Usage            | Description                                                                                                                                                                                      |
 | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Logical AND (`&&`) | `expr1 && expr2` | Returns `expr1` if it can be converted to `false`; otherwise, returns `expr2`. Thus, when used with Boolean values, `&&` returns `true` if both operands are `true`; otherwise, returns `false`. |
-| Logical OR (       |                  | )                                                                                                                                                                                                | expr1 |  | expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, |  | returns true if either operand is true; if both are false, returns false. |
-| Logical NOT (!)    | !expr            | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
+| Logical OR (`||`)  | expr1            |                                                                                                                                                                                                  | expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, |  | returns true if either operand is true; if both are false, returns false. |
+| Logical NOT (`!`)  | `!expr`          | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
 
 ---
 
