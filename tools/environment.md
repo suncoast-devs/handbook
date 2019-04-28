@@ -55,4 +55,4 @@ See [here](/handbook/tools/postgresql)
 
 Mac OS users continue [here](/handbook/tools/environment-mac)
 
-Windows users continue [here](/handbook/tools/environment-linux-subsystem-windows)
+Windows users continue [here](/handbook/tools/environment-windows)

@@ -124,12 +124,21 @@ We will use this to host some projects to see how the deploy process works
 Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
 
 ```sh
-npm install -g netlify-cli 
+npm install -g netlify-cli
 
 ```
 
+## Hub
 
-## Trash
+Hub is command line helper for github. It allows for easy github manipulation from our terminal.
+
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
+brew install hub
+```
+
+## Trash (Mac only)
 
 A command line tool to safely delete files by placing them in the _trash folder_ instead of immediately deleting them.
 
@@ -146,17 +155,7 @@ trash file
 trash directory
 ```
 
-## Hub
-
-Hub is command line helper for github. It allows for easy github manipulation from our terminal.
-
-From your terminal, run the following commands (current directory does not matter):
-
-```sh
-brew install hub
-```
-
-## Ruby
+<!-- ## Ruby
 
 ```sh
 brew install ruby
@@ -174,6 +173,6 @@ Configure our irb environment
 ```sh
 [ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
 gem install awesome_print
-```
+``` -->
 
 ---
