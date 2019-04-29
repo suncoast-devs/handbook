@@ -33,7 +33,13 @@ const ReadingNav = props => {
   return (
     <Location>
       {({ location }) => (
-        <ul className="handbook-nav-links">
+        <ul className="handbook-nav-links box">
+          {path(location, -1) && (
+            <li>
+              <i class="fas fa-chevron-left" />
+              <a href={path(location, -1)}>Previous: {text(location, -1)}</a>
+            </li>
+          )}
           <li>
             <i class="fas fa-home" />
             <a href={location.pathname.endsWith('/') ? '../..' : '..'}>Main</a>
@@ -41,13 +47,7 @@ const ReadingNav = props => {
           {path(location, +1) && (
             <li>
               <i class="fas fa-chevron-right" />
-              <a href={path(location, +1)}>{text(location, +1)}</a>
-            </li>
-          )}
-          {path(location, -1) && (
-            <li>
-              <i class="fas fa-chevron-left" />
-              <a href={path(location, -1)}>{text(location, -1)}</a>
+              <a href={path(location, +1)}>Next: {text(location, +1)}</a>
             </li>
           )}
         </ul>
