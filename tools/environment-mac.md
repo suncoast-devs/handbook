@@ -17,6 +17,7 @@ Lets do some configuration to give us a nice user interface.
 - Click on "Pro" entry in the list that appears on the left
 - Click the "default" button which is found underneath the list
 - Ensure `Antialias text` is selected
+- If you want a larger font, click the "Change" button next to the font name and choose a larger font size.
 - Click the area to the left "Color & Effects" found within the "Background" section
 - Change `Opacity` to 100%
 - Close the popup window
@@ -28,8 +29,10 @@ Now restart Terminal application. The background should be a solid black color.
 If you haven't previously configured your command prompt, copy and paste the following command into terminal:
 
 ```sh
-IyBHaXQgY29tcGxldGlvbnMKWyAtZiAvdXNyL2xvY2FsL2V0Yy9iYXNoX2NvbXBsZXRpb24uZC9naXQtY29tcGxldGlvbi5iYXNoIF0gJiYgc291cmNlIC91c3IvbG9jYWwvZXRjL2Jhc2hfY29tcGxldGlvbi5kL2dpdC1jb21wbGV0aW9uLmJhc2gKWyAtZiAvdXNyL2xvY2FsL2V0Yy9iYXNoX2NvbXBsZXRpb24uZC9naXQtcHJvbXB0LnNoIF0gJiYgc291cmNlIC91c3IvbG9jYWwvZXRjL2Jhc2hfY29tcGxldGlvbi5kL2dpdC1wcm9tcHQuc2gKCiMgUHJvbXB0IHdpdGggZnVsbCBwYXRoIGFuZCBnaXQgc3RhdHVzClBTMT0nXFtcZVszNm1cd1xdIFxbXGVbMzNtXF1cW1xlWzFtXF0kKF9fZ2l0X3BzMSAiKCVzKSIgMj4vZGV2L251bGwpICQgXFtcZVswbVxdJwoKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBSdWJ5IEdlbSBlbnN1cmUgcGF0aAojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQpleHBvcnQgUEFUSD0iJChnZW0gZW52IGdlbWRpciAyPi9kZXYvbnVsbCkvYmluOiRQQVRIIgo= | base64 -D >> ~/.bash_profile
+echo WyAtZiAvdXNyL2xvY2FsL2V0Yy9iYXNoX2NvbXBsZXRpb24uZC9naXQtY29tcGxldGlvbi5iYXNoIF0gJiYgc291cmNlIC91c3IvbG9jYWwvZXRjL2Jhc2hfY29tcGxldGlvbi5kL2dpdC1jb21wbGV0aW9uLmJhc2gKWyAtZiAvdXNyL2xvY2FsL2V0Yy9iYXNoX2NvbXBsZXRpb24uZC9naXQtcHJvbXB0LnNoIF0gJiYgc291cmNlIC91c3IvbG9jYWwvZXRjL2Jhc2hfY29tcGxldGlvbi5kL2dpdC1wcm9tcHQuc2gKCiMgUHJvbXB0IHdpdGggZnVsbCBwYXRoIGFuZCBnaXQgc3RhdHVzCmV4cG9ydCBQUzE9J1xbXGVbMDszMm1cXVx3IFxbXGVbMDszMW1cXSQoX19naXRfcHMxICIoJXMpIiAyPi9kZXYvbnVsbCkgXFtcZVswOzMzbVxdXCQgXFtcZVswOzAwbVxdJwoKIy0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KIyBSdWJ5IEdlbSBlbnN1cmUgcGF0aAojLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoKZXhwb3J0IFBBVEg9IiQoZ2VtIGVudiBnZW1kaXIgMj4vZGV2L251bGwpL2JpbjokUEFUSCIK | base64 -D >> ~/.bash_profile
 ```
+
+Now restart the Terminal application.
 
 ## Homebrew
 
@@ -62,13 +65,7 @@ To configure Git to know who you are, we need to teach it your email address and
 From your terminal, run the following commands (current directory does not matter):
 
 ```sh
-(
-  echo -n "Type in your name as you used at GitHub: " && read name
-  echo -n "Type in the email address you used at GitHub: " && read email
-
-  git config --global user.name "${name}"
-  git config --global user.email "${email}"
-)
+echo -n "Type in your name as you used at GitHub (example: Jane Smith): " && read name; echo -n "Type in the email address you used at GitHub (example: jane@example.com): " && read email; git config --global user.name "${name}"; git config --global user.email "${email}"
 ```
 
 Finally we will tell Git and GitHub to use the `https` protocol we will enter the following in Terminal:
@@ -117,15 +114,12 @@ npm install --global app-app
 
 ## Netlify
 
-Netlify is a static website hosting company. It allows for easy deploy of your websites so they are on the web!
-
-We will use this to host some projects to see how the deploy process works
+Netlify is a static website hosting company. It allows for easy deployment of your websites so they are on the web!
 
 Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
 
 ```sh
 npm install -g netlify-cli
-
 ```
 
 ## Hub
@@ -158,21 +152,87 @@ trash directory
 <!-- ## Ruby
 
 ```sh
-brew install ruby
-echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bashrc
+brew install chruby ruby-install
+echo "source /usr/local/opt/chruby/share/chruby/chruby.sh" >> ~/.bash_profile
+echo "source /usr/local/opt/chruby/share/chruby/auto.sh" >> ~/.bash_profile
 ```
 
 Close your terminal window. Start a new terminal window
 
 ```sh
-gem install irb
+ruby-install --latest ruby && (ls ~/.rubies | tail -1 > ~/.ruby-version)
 ```
 
-Configure our irb environment
+Close your terminal window. Start a new terminal window.
 
 ```sh
-[ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
-gem install awesome_print
-``` -->
+ruby -v
+```
 
----
+This should show a recent ruby version (2.6.3 as of this writing - April 2019)
+
+```sh
+gem install awesome_print
+```
+
+Additional setup:
+
+```sh
+[ -f ~/.irbrcg ] || cat > ~/.irbrcg <<EOF
+require 'irb/completion'
+require 'irb/ext/save-history'
+
+# Require awesome_print in our environment
+begin
+  require 'awesome_print'
+rescue LoadError
+end
+
+# Keep an IRB history
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
+
+# Simple prompt mode
+IRB.conf[:PROMPT_MODE] = :SIMPLE
+
+# Configure awesome print if available
+if defined?(AwesomePrint)
+  require 'awesome_print/ext/active_support'
+  require 'awesome_print/ext/active_record'
+
+  AwesomePrint.irb!
+
+  AwesomePrint.defaults = {
+    plain: false,
+    index: false,
+    ruby19_syntax: true,
+    color: {
+      hash:       :pale,
+      class:      :white,
+      bigdecimal: :yellow,
+      integer:    :yellow,
+      fixnum:     :yellow,
+      symbol:     :yellow,
+    },
+    indent: -2
+  }
+end
+
+# If we are in Rails
+if ENV['RAILS_ENV'] || defined?(Rails)
+  # Customize the IRB prompt
+  app_name = Rails.application.class.parent_name.downcase
+  app_env  = Rails.env[0...3]
+
+  IRB.conf[:PROMPT] ||= {}
+  IRB.conf[:PROMPT][:RAILS] = {
+    PROMPT_I: "#{app_name}> ",
+    PROMPT_S: "#{app_name}* ",
+    PROMPT_C: "#{app_name}? ",
+    RETURN: "=> %s\n"
+  }
+  IRB.conf[:PROMPT_MODE] = :RAILS
+end
+EOF
+```
+ -->
