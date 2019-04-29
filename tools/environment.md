@@ -30,7 +30,7 @@ See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 
 ### [Hack](https://sourcefoundry.org/hack/)
 
-> A typeface designed for source code
+Hack is a typeface designed for reading and writing source code. This is not required, but can be a useful tool.
 
 #### Mac Setup
 
@@ -47,12 +47,12 @@ See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 - Visual Studio Code:
   - Code Menu > Preferences > Settings > Editor Font Family > Type 'Hack' in the input box
 
-## Database Setup
+<!-- ## Database Setup
 
-See [here](/handbook/tools/postgresql)
+See [here](/handbook/tools/postgresql) -->
 
 ## Mac and Windows Specific Setup
 
 Mac OS users continue [here](/handbook/tools/environment-mac)
 
-Windows users continue [here](/handbook/tools/environment-linux-subsystem-windows)
+Windows users continue [here](/handbook/tools/environment-windows)
