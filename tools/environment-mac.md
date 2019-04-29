@@ -155,24 +155,4 @@ trash file
 trash directory
 ```
 
-<!-- ## Ruby
-
-```sh
-brew install ruby
-echo 'export PATH="/usr/local/opt/ruby/bin:$PATH"' >> ~/.bashrc
-```
-
-Close your terminal window. Start a new terminal window
-
-```sh
-gem install irb
-```
-
-Configure our irb environment
-
-```sh
-[ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
-gem install awesome_print
-``` -->
-
 ---
