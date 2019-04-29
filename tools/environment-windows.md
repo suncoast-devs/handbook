@@ -4,6 +4,8 @@ As a developers on the Windows platform, one of our main tools is `Powershell`. 
 
 A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](/handbook/skills/command-line)
 
+To open `Powershell`, open your `start` menu and type `powershell`, this will look in your system and give you the option to start it, just like any other program.
+
 ## Git
 
 ### What
@@ -18,9 +20,12 @@ Git is how we will be managing our files and sharing code between each other. It
 
 Download the install [Git for Windows](https://gitforwindows.org/).
 
-NOTES: - It will ask you about your path variable, I recommend selecting the third option `use git and optional unix tools`. This will allow git to be used in your terminal
+NOTES: - There are lots of options here, and we only need to worry about 2:
 
-To configure Git to know who you are, we need to teach it your email address and your full name.
+1. Change your default editor to `Visual Studio Code`, instead of `vim`. This will cause git to use VS Code when it needs to use an editor.
+2. The installer will ask you are adjusting your PATH. Select the 3rd option (`use git and optional unix tools`). This will allow git to be used in your terminal
+
+After the installation, re-open Powershell. We need to run a few commands to configuration git correctly.
 
 ```sh
 git config --global user.name "Replace This With Your Full Name"
