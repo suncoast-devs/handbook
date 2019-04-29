@@ -77,24 +77,6 @@ We use yarn to run our scripts and as well as installing packages. Package manag
 
 Follow [the instructions](https://yarnpkg.com/lang/en/docs/install/) for Windows.
 
-## App App
-
-### What
-
-App-App is a tool created by SDG for creating projects using HTML, CSS, and JavaScript.
-
-### Why
-
-App-App ensures a good project folder setup and includes all the needed tools.
-
-### How
-
-With node installed, from Powershell, run the following command (current directory does not matter):
-
-```sh
-npm install --global app-app
-```
-
 ## Netlify
 
 ### What
@@ -113,6 +95,24 @@ Once you have node installed, run the following command in terminal.
 
 ```sh
 npm install netlify-cli -g
+```
+
+## App App
+
+### What
+
+App-App is a tool created by SDG for creating projects using HTML, CSS, and JavaScript.
+
+### Why
+
+App-App ensures a good project folder setup and includes all the needed tools.
+
+### How
+
+With node installed, from Powershell, run the following command (current directory does not matter):
+
+```sh
+npm install --global app-app
 ```
 
 ## Hub

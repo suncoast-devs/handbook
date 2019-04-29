@@ -136,12 +136,6 @@ source ~/.bash_profile
 npm install -g yarn
 ```
 
-## App App
-
-```sh
-npm install -g app-app
-```
-
 ## Netlify
 
 Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
@@ -150,6 +144,12 @@ Once you have your account created, run the following command in the terminal.
 
 ```sh
 npm install -g netlify-cli
+```
+
+## App App
+
+```sh
+npm install -g app-app
 ```
 
 ## Trash

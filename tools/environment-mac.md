@@ -100,6 +100,16 @@ From your terminal, run the following command (current directory does not matter
 brew install yarn
 ```
 
+## Netlify
+
+Netlify is a static website hosting company. It allows for easy deployment of your websites so they are on the web!
+
+Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
+
+```sh
+npm install -g netlify-cli
+```
+
 ## App App
 
 App-App is a tool created by SDG for creating projects using HTML, CSS, and JavaScript
@@ -110,16 +120,6 @@ From your terminal, run the following command (current directory does not matter
 
 ```sh
 npm install --global app-app
-```
-
-## Netlify
-
-Netlify is a static website hosting company. It allows for easy deployment of your websites so they are on the web!
-
-Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
-
-```sh
-npm install -g netlify-cli
 ```
 
 ## Hub
