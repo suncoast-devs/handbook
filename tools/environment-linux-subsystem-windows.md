@@ -146,6 +146,17 @@ Once you have your account created, run the following command in the terminal.
 npm install -g netlify-cli
 ```
 
+## Hub
+
+```sh
+cd
+wget https://github.com/github/hub/releases/download/v2.7.1/hub-linux-amd64-2.7.1.tgz
+tar -xf hub-linux-amd64-2.7.1.tgz
+cd hub-linux-amd64-2.7.1
+sudo ./install
+cd
+```
+
 ## App App
 
 ```sh
@@ -156,17 +167,6 @@ npm install -g app-app
 
 ```sh
 sudo apt install trash-cli
-```
-
-## Hub
-
-```sh
-cd
-wget https://github.com/github/hub/releases/download/v2.7.1/hub-linux-amd64-2.7.1.tgz
-tar -xf hub-linux-amd64-2.7.1.tgz
-cd hub-linux-amd64-2.7.1
-sudo ./install
-cd
 ```
 
 ## Installing Ruby

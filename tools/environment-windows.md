@@ -97,6 +97,18 @@ Once you have node installed, run the following command in terminal.
 npm install netlify-cli -g
 ```
 
+## Hub
+
+### What
+
+Hub is command line helper for GitHub. It allows for easy GitHub manipulation from Powershell.
+
+### How
+
+Download and run [the installer](https://github.com/github/hub/releases/download/v2.11.2/hub-windows-amd64-2.11.2.zip).
+
+After you have downloaded the zip file, extract the folder, and run `install.bat`
+
 ## App App
 
 ### What
@@ -114,20 +126,6 @@ With node installed, from Powershell, run the following command (current directo
 ```sh
 npm install --global app-app
 ```
-
-## Hub
-
-### What
-
-Hub is command line helper for GitHub. It allows for easy GitHub manipulation from Powershell.
-
-### How
-
-Download and run [the installer](https://github.com/github/hub/releases/download/v2.11.2/hub-windows-amd64-2.11.2.zip).
-
-After you have downloaded the zip file, extract the folder, and run `install.bat`
-
----
 
 ## Posh-git (Windows Only)
 

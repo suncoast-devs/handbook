@@ -110,6 +110,16 @@ Before continuing, please sign up for an account with [Netlify](https://www.netl
 npm install -g netlify-cli
 ```
 
+## Hub
+
+Hub is command line helper for github. It allows for easy github manipulation from our terminal.
+
+From your terminal, run the following commands (current directory does not matter):
+
+```sh
+brew install hub
+```
+
 ## App App
 
 App-App is a tool created by SDG for creating projects using HTML, CSS, and JavaScript
@@ -120,16 +130,6 @@ From your terminal, run the following command (current directory does not matter
 
 ```sh
 npm install --global app-app
-```
-
-## Hub
-
-Hub is command line helper for github. It allows for easy github manipulation from our terminal.
-
-From your terminal, run the following commands (current directory does not matter):
-
-```sh
-brew install hub
 ```
 
 ## Trash (Mac only)
