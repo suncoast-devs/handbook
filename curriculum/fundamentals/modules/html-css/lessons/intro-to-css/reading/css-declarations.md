@@ -6,7 +6,7 @@ Setting CSS properties to specific values is the core function of the CSS langua
 
 There are more than [300 different properties](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) in CSS and nearly an infinite number of different values. Not all pairs of properties and values are allowed; each property has a specific list of valid values defined for it.
 
-We have listed many of our [favorite CSS properties](/handbook/curriculum/fundamentals/static-sites/lectures/css-properties-we-like) that we feel represent the most typical properties a developer should be familiar with.
+We have listed many of our [favorite CSS properties](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/resources/css-properties-we-like) that we feel represent the most typical properties a developer should be familiar with.
 
 ## CSS declaration blocks
 
