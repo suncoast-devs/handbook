@@ -132,7 +132,7 @@ From your terminal, run the following command (current directory does not matter
 npm install --global app-app
 ```
 
-## Trash (Mac only)
+## Trash
 
 A command line tool to safely delete files by placing them in the _trash folder_ instead of immediately deleting them.
 
