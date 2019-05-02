@@ -16,9 +16,7 @@ You should have received an invitation to several Slack _Teams_ -- SDG maintains
 
 ## Editors / IDEs
 
-`IDE` stands for `Integrated Developer Environment`. Developers can be fiercely opinionated about which one is better. Here at SDG, we allow students to use any light weight editor they want, but recommend using Visual Studio Code.
-
-### VS Code
+`IDE` stands for `Integrated Developer Environment`. Developers can be fiercely opinionated about which one is better. Here at SDG, we require using Visual Studio Code.
 
 VS Code is a extendable lightweight editor that allows us to see what is going on so if you ever get the more powerful tools (like Visual Studio or Eclipse). It will not be a crutch, but a tool. This is like starting with a screwdriver, and working our way up to power drill.
 
@@ -28,22 +26,16 @@ See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 
 ## Editor Fonts
 
-### [Hack](https://sourcefoundry.org/hack/)
+The font that comes with VS Code is a good editor font. If you want to try an alternative font, we recommend [hack](https://sourcefoundry.org/hack/). Hack is a typeface designed for reading and writing source code. This is not required, but can be a useful.
 
-Hack is a typeface designed for reading and writing source code. This is not required, but can be a useful tool.
+- Mac Setup
 
-#### Mac Setup
+`brew cask install caskroom/fonts/font-hack`
 
-- `brew cask install caskroom/fonts/font-hack`
+- Windows Setup
 
-#### Windows Setup
+See the [setup instructions](https://github.com/source-foundry/Hack#windows)
 
-- See the [setup instructions](https://github.com/source-foundry/Hack#windows)
-
-#### Editor Setup
-
-- Atom:
-  - Atom Menu > Preferences > Editor > `Font Family` > Type `Hack` in the input box
 - Visual Studio Code:
   - Code Menu > Preferences > Settings > Editor Font Family > Type 'Hack' in the input box
 
