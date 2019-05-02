@@ -1,21 +1,19 @@
 # Tools of the Trade
 
-## Setting up the tools of our trade
-
 There are a number of tools we will be using during your time at SDG. This guide covers setting these up, configuring them, and provides some links to help you learn to use them.
 
-## [Setting up your Development Environment](/handbook/tools/environment)
+- How to [setup up your development environment](/handbook/tools/environment) for SDG
 
-## [Setup for Working on Assignments](/handbook/tools/assignment-setup)
+- How to [work on assignments](/handbook/tools/assignment-setup) while at SDG
 
-## [Turning In Assignments](/handbook/tools/assignment-turn-in)
+- How to [turn in ssignments](/handbook/tools/assignment-turn-in) while at SDG
 
-## A survey of [text editors and IDEs](/handbook/tools/editors)
+- A survey of [text editors and IDEs](/handbook/tools/editors)
 
-## Tips and tricks for the unix-style [command line](/handbook/tools/command-line)
+- Tips and tricks for the unix-style [command line](/handbook/tools/command-line)
 
-## Using [version control](/handbook/tools/version-control) to keep track of our code
+- Using [version control](/handbook/tools/version-control) to keep track of our code
 
-## A survey of modern [programming languages](/handbook/tools/languages), currently in mainstream use.
+- A survey of modern [programming languages](/handbook/tools/languages), currently in mainstream use.
 
-## Tips on [how to ask questions](/handbook/tools/asking-questions), to your instructor, mentors, peers, the community, etc.
+- Tips on [how to ask questions](/handbook/tools/asking-questions), to your instructor, mentors, peers, the community, etc.
