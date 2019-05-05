@@ -24,3 +24,7 @@ that spans multiple lines
 ```
 
 Comments behave like whitespace and are discarded during script execution.
+
+import Nav from './Nav'
+
+<Nav/>

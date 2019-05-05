@@ -1,6 +1,6 @@
 # Variables
 
-In JavaScript we store information in `variables.` Variables are names we assign to store a value so that we can refer to it later.
+Like in most modern programming languages, in JavaScript we store information in `variables.` Variables are placeholders with meaningful names that we use to store a value so that we can refer to it later.
 
 The names of variables, called identifiers, conform to certain rules.
 
@@ -20,7 +20,7 @@ There are four ways we can assign a variable in JavaScript
 
 `const` variables are assigned a value on the same statement where they are declared. They can also not be re-assigned at a later date.
 
-The variables that you create should be defaulted to using `const`. This will help you keep your varibles, values and data more organized and reliable.
+> The variables that you create should be defaulted to using `const`. This will help you keep your variables, values and data more organized and reliable.
 
 ```js
 const answer = 42
