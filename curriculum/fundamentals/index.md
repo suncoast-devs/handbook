@@ -11,4 +11,5 @@
 
 ## JavaScript
 
-- [Introduction to Javascript](/handbook/curriculum/fundamentals/modules/javascript/lessons/intro)
+- [JavaScript Basics](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics)
+- [Welcome to JavaScript](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript)
