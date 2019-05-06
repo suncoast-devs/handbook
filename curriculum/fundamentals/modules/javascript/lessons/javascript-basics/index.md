@@ -1,11 +1,11 @@
 # Introduction goes here
 
-[Learning Objectives](./objectives)
+[Learning Objectives](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics/reading/objectives)
 
-[Begin your Reading](/handbook/curriculum/fundamentals/modules/javascript/lessons/intro/reading/intro)
+[Begin your Reading](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics/reading/intro)
 
-[Additional Resources](./resources)
+[Additional Resources](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics/reading/resources)
 
-[Lecture](./lecture)
+[Lecture](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics/reading/lecture)
 
-[Assignments](./assignments)
+[Assignments](/handbook/curriculum/fundamentals/modules/javascript/lessons/javascript-basics/reading/assignments)
