@@ -1,29 +1,48 @@
 # Career Support
 
-## [1. Branding yourself](/handbook/career/branding-yourself)
+Career Support is more than just writing your resume and applying for jobs. This section of the handbook will also help you find tools for time management, stress management, and much more.
 
-## [2. Blogging](/handbook/career/blogging)
+[Soft Skills]
 
-## [3. Trello & Time Management](/handbook/career/trello)
+[Time Management](/handbook/career/modules/soft-skills/lessons/time-management/lecture/time)
 
-## [4. Decoding Job Descriptions](/handbook/career/decoding-job-descriptions)
+[Trello for Time Management](/handbook/career/modules/soft-skills/lessons/time-management/lecture/trello)
 
-## [5. Resumes & Cover Letters](/handbook/career/cover-letters)
+[Problem Solving](/handbook/career/modules/soft-skills/lessons/time-management/lecture/trello)
 
-## [6. Diversity & Inclusion](/handbook/career/diversity-inclusion)
+[Self Care](/handbook/career/modules/soft-skills/lessons/self-care/lecture/health)
 
-## [7. Portfolios](/handbook/career/portfolios)
+[Stress Management](/handbook/career/modules/soft-skills/lessons/stress-management/lecture/stress)
 
-## [8. Preparing for Interviews](/handbook/career/interviews)
+[Diversity & Inclusion](/handbook/career/modules/soft-skills/lessons/diversity/lecture/diversity-inclusion)
 
-## [9. Freelancing and How to Get Hired](/handbook/career/freelance)
+[Preparing to Apply for Jobs]
 
-## [10. How to Actively Look for a Job](/handbook/career/actively-looking)
+[Branding yourself](/handbook/career/modules/job-prep/lessons/branding/lecture/branding-yourself)
 
-## [11. Job Search Resources](/handbook/career/job-resources)
+[Blogging](/handbook/career/modules/job-prep/lessons/blogging/lecture/blogging)
+
+[Decoding Job Descriptions](/handbook/career/modules/job-prep/lessons/decoding/lecture/decoding-job-desc)
+
+[Resumes](/handbook/career/modules/job-prep/lessons/resumes/lecture/resumes)
+
+[Cover Letters](/handbook/career/modules/job-prep/lessons/cover-letters/lecture/cover-letters)
+
+[Portfolios](/handbook/career/modules/job-prep/lessons/portfolios/lecture/portfolios)
+
+
+[Searching for Jobs]
+
+[How to Actively Look for a Job](/handbook/career/modules/job-search/lessons/actively-looking/lecture/actively-looking)
+
+[Preparing for Interviews](/handbook/career/modules/job-search/lessons/interviewing/lecture/interviews)
+
+[Job Search Resources](/handbook/career/modules/job-search/lessons/job-resources/lecture/job-resources)
+
+[Freelancing and How to Get Hired](/handbook/career/modules/job-search/lessons/freelance/lecture/freelance)
 
 --
 
-## [The Care and Feeding of Junior Developers](/handbook/career/mentorship)
+- [The Care and Feeding of Junior Developers](/handbook/career/mentorship)
 
 Notes for senior developers working with, and companies looking to hire, junior developers on how to foster their growth and provide valuable mentorship.

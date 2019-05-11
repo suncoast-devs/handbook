@@ -7,6 +7,7 @@
 - Lambdacast
 - CS Book Club
 - Scale Your Code
+- Thundernerds
 
 ## JavaScript Focused
 

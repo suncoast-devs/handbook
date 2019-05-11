@@ -17,4 +17,4 @@ One tool our instructors may enact as a policy is "the buddy system" for student
 
 ### Talking to the Duck
 
-https://www.youtube.com/watch?v=huOPVqztPdc
+[Talking to the Duck](https://www.youtube.com/watch?v=huOPVqztPdc)
