@@ -17,3 +17,5 @@
 ## [Videos](/handbook/resources/videos)
 
 ## [What happens when you enter a URL in the browser](/handbook/resources/what-happens-when-enter-url-in-browser)
+
+## [Sample Interview Questions](/handbook/resources/interview-practice/sample-questions)

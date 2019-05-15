@@ -2,8 +2,6 @@
 
 In this assignment, you'll build a front end for an API of your choice
 
-![Snowman](/handbook/curriculum/front-end/react-ii/assignments/assets/snowman.gif)
-
 ## Objectives
 
 - Reinforce component architecture in React

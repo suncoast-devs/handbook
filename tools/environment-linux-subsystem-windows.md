@@ -136,12 +136,6 @@ source ~/.bash_profile
 npm install -g yarn
 ```
 
-## App App
-
-```sh
-npm install -g app-app
-```
-
 ## Netlify
 
 Before continuing, please sign up for an account with [Netlify](https://www.netlify.com/)
@@ -150,12 +144,6 @@ Once you have your account created, run the following command in the terminal.
 
 ```sh
 npm install -g netlify-cli
-```
-
-## Trash
-
-```sh
-sudo apt install trash-cli
 ```
 
 ## Hub
@@ -167,6 +155,18 @@ tar -xf hub-linux-amd64-2.7.1.tgz
 cd hub-linux-amd64-2.7.1
 sudo ./install
 cd
+```
+
+## App App
+
+```sh
+npm install -g app-app
+```
+
+## Trash
+
+```sh
+sudo apt install trash-cli
 ```
 
 ## Installing Ruby
