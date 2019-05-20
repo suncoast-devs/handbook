@@ -17,8 +17,6 @@
 - Self-hosting
   - Handrolled
 
-![](./assets/sdg-blog.png)
-
 “To be successful as a blogger there is really just one requirement: a passion for your topic.” - theblogstarter.com
 
 ## Share it far and wide
