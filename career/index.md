@@ -2,7 +2,7 @@
 
 Career Support is more than just writing your resume and applying for jobs. This section of the handbook will also help you find tools for time management, stress management, and much more.
 
-[Soft Skills]
+## Soft Skills
 
 [Time Management](/handbook/career/modules/soft-skills/lessons/time-management/lecture/time)
 
@@ -16,7 +16,7 @@ Career Support is more than just writing your resume and applying for jobs. This
 
 [Diversity & Inclusion](/handbook/career/modules/soft-skills/lessons/diversity/lecture/diversity-inclusion)
 
-[Preparing to Apply for Jobs]
+## Preparing to Apply for Jobs
 
 [Branding yourself](/handbook/career/modules/job-prep/lessons/branding/lecture/branding-yourself)
 
@@ -31,7 +31,7 @@ Career Support is more than just writing your resume and applying for jobs. This
 [Portfolios](/handbook/career/modules/job-prep/lessons/portfolios/lecture/portfolios)
 
 
-[Searching for Jobs]
+## Searching for Jobs
 
 [How to Actively Look for a Job](/handbook/career/modules/job-search/lessons/actively-looking/lecture/actively-looking)
 
@@ -41,7 +41,7 @@ Career Support is more than just writing your resume and applying for jobs. This
 
 [Freelancing and How to Get Hired](/handbook/career/modules/job-search/lessons/freelance/lecture/freelance)
 
---
+## Additional Resources
 
 - [The Care and Feeding of Junior Developers](/handbook/career/mentorship)
 
