@@ -46,4 +46,4 @@ We only stand to improve the quality and impact of our products if the people bu
 
 - [Inclusion Starts With I](https://www.youtube.com/watch?v=2g88Ju6nkcg)
 - [Brown eye Blue eye, Jane Elliott](https://www.youtube.com/watch?v=jPZEJHJPwIw)
-- [Access the slide presentation](./assets/diversity-inclusion.pdf)
+- [Access the slide presentation](./assets/diversity.pdf)
