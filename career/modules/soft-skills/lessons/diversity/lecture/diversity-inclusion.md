@@ -8,7 +8,7 @@ We offer free code education for kids because we believe in investing in the loc
 
 ## Diversity in Tech
 
-## Why? It makes sense…
+### Why? It makes sense…
 
 - Diverse teams outperform homogeneous groups on creative problem-solving exercises.
 - Diverse teams are more creative because creativity is usually a reflection of people’s backgrounds.
@@ -22,7 +22,7 @@ We only stand to improve the quality and impact of our products if the people bu
 
 ## Inclusion
 
-## An inclusive environment…
+### An inclusive environment…
 
 - Creates a positive and nurturing environment where individuals feel safe being themselves.
 - Provides a place where no one is excluded.
@@ -32,7 +32,7 @@ We only stand to improve the quality and impact of our products if the people bu
 - Recognizes that no one is intrinsically superior to another.
 - Allows working together to remove all forms of discrimination.
 
-## How can we be more inclusive?
+### How can we be more inclusive?
 
 - Show respect to everyone (in person and online communication).
 - Think before you speak.
@@ -42,7 +42,7 @@ We only stand to improve the quality and impact of our products if the people bu
 - If you see someone who isn't a part of the mix, invite them in.
 - Be mindful of hurtful humor. If a person or group of people are the punchline of a joke, don’t say it.
 
-#### Resources
+### Resources
 
 - [Inclusion Starts With I](https://www.youtube.com/watch?v=2g88Ju6nkcg)
 - [Brown eye Blue eye, Jane Elliott](https://www.youtube.com/watch?v=jPZEJHJPwIw)
