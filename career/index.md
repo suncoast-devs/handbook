@@ -8,8 +8,6 @@ Career Support is more than just writing your resume and applying for jobs. This
 
 [Trello for Time Management](/handbook/career/modules/soft-skills/lessons/time-management/lecture/trello)
 
-[Problem Solving](/handbook/career/modules/soft-skills/lessons/time-management/lecture/trello)
-
 [Self Care](/handbook/career/modules/soft-skills/lessons/self-care/lecture/health)
 
 [Stress Management](/handbook/career/modules/soft-skills/lessons/stress-management/lecture/stress)
