@@ -6,6 +6,8 @@ The React app will exist at the root of the site (e.g. `/`) and any routes that 
 
 ## Step 0 - Install the `json` tool
 
+> NOTE: Run the following commands from the terminal (from any directory)
+
 ```sh
 npm install -g json
 ```
@@ -22,6 +24,8 @@ From the base of your Rails application:
 - If that project was a git project then do `trash client/.git` or `rm -r client/.git` to dis-associate it from that git repository
 
 *Choice B* - if you are creating a *NEW* react application
+
+> NOTE: Run the following commands from the terminal while in the directory of your rails application (e.g. the same spot you'd normally run `rails server`)
 
 ```sh
 # Only run this if you are making a BRAND NEW react app
@@ -41,7 +45,8 @@ Do *ONE* of the two following options:
 **Option A**:
 
 Uncomment the line `gem 'rack-cors'` in the Gemfile.
-Run the following command:
+
+> Run the following commands from the terminal while in the directory of your rails application (e.g. the same spot you'd normally run `rails server`)
 
 ```sh
 bundle install
@@ -49,7 +54,7 @@ bundle install
 
 **Option B**:
 
-Run the following command:
+> Run the following commands from the terminal while in the directory of your rails application (e.g. the same spot you'd normally run `rails server`)
 
 ```sh
 bundle add rack-cors
@@ -77,6 +82,8 @@ end
 
 This configuration will ensure that the client folder is built when deployed.
 
+> NOTE: Run the following commands from the terminal while in the directory of your rails application (e.g. the same spot you'd normally run `rails server`)
+
 ```sh
 [ -f package.json ] || echo '{ "private": true }' > package.json
 json -I -f package.json -e 'this.cacheDirectories=["client/node_modules"]'
@@ -89,6 +96,8 @@ json -I -f package.json -e 'this.scripts.postinstall="npm run build && npm run d
 ## Step 5 - Configure the `package.json` file in the client application
 
 This will allow us to send our JSON API requests to the Rails server when in development mode
+
+> NOTE: Run the following commands from the terminal while in the directory of your rails application (e.g. the same spot you'd normally run `rails server`)
 
 ```sh
 json -I -f client/package.json -e 'this.proxy="http://localhost:3000"'
