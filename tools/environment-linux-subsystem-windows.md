@@ -223,7 +223,7 @@ gem install irb
 ### Step 6 - Ensure irb is configured
 
 ```sh
-[ -f ~/.irbrc ] || curl https://suncoast.io/handbook/tools/assets/irbrc > ~/.irbrc
+[ -f ~/.irbrc ] || https://gist.githubusercontent.com/gstark/059eb9cbbb807140fdbe5a37af65c066/raw/b237a66b37fdeed9d6991093a6febf6d4b386822/.irbrc > ~/.irbrc
 gem install awesome_print
 ```
 
