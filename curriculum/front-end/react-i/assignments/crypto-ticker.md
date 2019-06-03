@@ -27,7 +27,7 @@ https://s2.coinmarketcap.com/static/img/coins/16x16/${coin.id}.png
 
 ### Explorer Mode
 
-- [ ] Use `create-react-app` to setup your new application.
+- [ ] Create a new react app
 - [ ] Fetch new currency data from the API endpoint every 10 seconds.
 - [ ] Update the applications state with currency data from the API.
 - [ ] Create an HTML table to display the currency data in the application state.
