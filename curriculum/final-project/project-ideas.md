@@ -53,12 +53,11 @@ Here are some pre-selected ideas to help get you started.
 
 ## Projects we liked in the past
 
-- Sports Team roster management (http://extracurricular.site/)
-- A Shift Scheduler for a restaurant (https://schedulequik.surge.sh/)
-- Voyager (Pokemon GO Clone)
-- Migo, a resource for finding places to learn English (http://migo-app.herokuapp.com/)
-- devsculture.com, a place for devs to gather resources
-- tidetracker.live, a site to track tide data
-- Dev-life.surge.sh, a site to help developers find a new state to work
-- https://www.gpcal.pro/, a tracker for race car races
-- Better Budget, https://betterbudget.herokuapp.com/, a simple budget calculator
+- [http://extracurricular.site/](http://extracurricular.site/), a Sports Team roster management
+- [https://schedulequik.surge.sh/](https://schedulequik.surge.sh/), a Shift Scheduler for a restaurant
+- [http://migo-app.herokuapp.com/](http://migo-app.herokuapp.com/), a resource for finding places to learn English ()
+- [http://devsculture.com](devsculture.com), a place for devs to gather resources
+- [http://tidetracker.live](tidetracker.live), a site to track tide data
+- [http://Dev-life.surge.sh](Dev-life.surge.sh), a site to help developers find a new state to work
+- [https://www.gpcal.pro/](https://www.gpcal.pro/), a tracker for race car races
+- [https://betterbudget.herokuapp.com/](https://betterbudget.herokuapp.com/) a simple budget calculator
