@@ -25,6 +25,12 @@ To have the database engine running all the time:
 brew services start postgresql
 ```
 
+## Windows instructions
+
+To download the Postgres [download the installer](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and follow the prompts.
+
+To get pgcli, you need to install [python](https://realpython.com/installing-python/#windows), then install [pip](https://www.liquidweb.com/kb/install-pip-windows/), then follow [these instructions](https://www.pgcli.com/install)
+
 ## Linux or Linux Subsystem for Windows instructions
 
 - If using another flavor of Linux the `apt` and `service` instructions may be different. For instance with OpenSUSE the instruction is `sudo systemctrl postgresql start` instead.

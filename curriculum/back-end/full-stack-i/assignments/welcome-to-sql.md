@@ -10,18 +10,7 @@ Every application uses data in some way. This will help you set up your developm
 
 ## Requirements
 
-### For Mac:
-
-Use homebrew to install Postgres
-
-```sh
-brew install postgres
-brew services start postgresql
-```
-
-### Windows:
-
-- [Download the installer](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and follow the prompts.
+- Set up postgres by following [these directions.](https://suncoast.io/handbook/tools/postgresql/)
 
 ### Explorer Mode
 
