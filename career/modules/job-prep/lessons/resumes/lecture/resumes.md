@@ -77,10 +77,10 @@
 
 ## Alumni Resume Examples
 
-- [Example Resume 1](./assets/resume-example-1.png)
-- [Example Resume 2](./assets/resume-example-2.png)
-- [Example Resume 3](./assets/resume-example-3.png)
-- [Example Resume 4](./assets/resume-example-4.png)
+- [Example Resume 1](https://drive.google.com/file/d/1hfkcv64Pv-k4QkZe2DrgvtY2rE_tQcS8/view?usp=sharing)
+- [Example Resume 2](https://drive.google.com/file/d/1hul1Ps_Yl21qHGlIbwdxtXXpiVsL5nyN/view?usp=sharing)
+- [Example Resume 3](https://drive.google.com/file/d/1FKU63YX5qc1G9KSuBE4s-NEgeZA3gtwb/view?usp=sharing)
+- [Example Resume 4](https://drive.google.com/file/d/1Zg9KwEK2HoM6w1UbzpEw9c44m2BcUzn6/view?usp=sharing)
 
 ## Additional Resources:
 - [How to write a killer Software Engineering résumé – freeCodeCamp.org](https://medium.freecodecamp.org/writing-a-killer-software-engineering-resume-b11c91ef699d)
