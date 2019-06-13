@@ -15,25 +15,16 @@ Every application uses data in some way. This will help you set up your developm
 ### Explorer Mode
 
 - [ ] Install Postgres
-- [ ] Create a database:
-  - C#: called `CompanyDatabase`
-  - Ruby: called `company_database`
-- [ ] Create a table:
-  - C#: named `Employees`
-  - Ruby: named 'employees'
+- [ ] Create a database: `company_database`
+- [ ] Create a table: `employees`
 - [ ] Add the following columns to the table, Use your best judgement for data types
-  - C#
-    - FullName
-    - Salary
-    - JobPosition
-    - PhoneExtension
-    - IsPartTime
-  - Ruby
-    - full_name
-    - salary
-    - job_position
-    - phone_extension
-    - part_time
+
+  - full_name
+  - salary
+  - job_position
+  - phone_extension
+  - part_time
+
 - [ ] Create queries that can do the following:
 
   - [ ] Select all columns for all employees
@@ -42,20 +33,17 @@ Every application uses data in some way. This will help you set up your developm
   - [ ] Update all employees that are the cooks to have a salary of 500
   - [ ] Delete all employees that have the full name of "Lazy Lynn"
   - [ ] Update all employees to be full time
-  - [ ] Add a column to the table
-    - C#: called `ParkingSpotNumber` as a string that up to 10 characters long
-    - Ruby: called `parking_spot_number` as a string that up to 10 characters long
+  - [ ] Add a column to the table: `parking_spot_number` as a string that up to 10 characters long
 
 - [ ] Turn in the above queries as a gist
 
 ### Adventure Mode
 
-- [ ] Work on the Koans
 - [ ] Work on your final project
 
 ### Epic Mode
 
-- [ ] Investigate working with C#/Ruby and Postgres
+- [ ] Investigate working with C# and Postgres, HINT: `entity framework core`
 
 ## Additional Resources
 
