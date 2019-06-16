@@ -172,8 +172,6 @@ if (movieToDelete != null){
 
 ## Useful commands for using EF Core
 
-### .NET
-
 Here are the interesting commands you will need for tonight's assignment
 
 - To add Entity Framework to your project:
