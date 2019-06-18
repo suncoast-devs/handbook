@@ -131,7 +131,7 @@ npm install --global app-app
 
 ### What
 
-`post-git` is an extension for Powershell that allows easy management for git. Posh-git shows beneficial git information when we are in a repository.
+`posh-git` is an extension for Powershell that allows easy management for git. Posh-git shows beneficial git information when we are in a repository.
 
 ### How
 
