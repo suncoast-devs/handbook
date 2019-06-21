@@ -12,7 +12,7 @@ SDG is asking you to help us create documentation, and formalize our curriculum 
 
 The course in its current format is 12 weeks long, with approximately 9 weeks of full-time lecture, that is roughly 108 hours of lecture, content, and knowledge. This is where you come in.
 
-At this [location](INSERT_LINK), There is a list of all the lectures we need to have added to the handbook. Select the lecture that looks the most appealing to you and still outstanding. Use [these instructions](INSERT_LINK) Take this lecture, watch the video, and create lecture notes. These notes should follow [this format](INSERT_LINK). Don't worry too much about formatting or adding too much more than what is in the video. These notes should not be a for word dictation of what is said, but a written guide for the students to follow along with and have for a resource for homework and self-study.
+At this [location](./lectures-to-do.md), There is a list of all the lectures we need to have added to the handbook. Select the lecture that looks the most appealing to you and still outstanding. Use [these instructions](INSERT_LINK) Take this lecture, watch the video, and create lecture notes. These notes should follow [this format](INSERT_LINK). Don't worry too much about formatting or adding too much more than what is in the video. These notes should not be a for word dictation of what is said, but a written guide for the students to follow along with and have for a resource for homework and self-study.
 
 When you are done with your notes, follow [these instructions](INSERT_LINK) to submit a pull request to the handbook. For this first pass, after you submit pull request, a member of the SDG team merges it and put in the content in the current, correct spot in the curriculum.
 
