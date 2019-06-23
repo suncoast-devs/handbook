@@ -1,6 +1,6 @@
 # Lecture topics to do
 
-##Once you pic a section, send a pull request with your name added next to it
+## Once you pick a video, send a pull request with your name added next to it
 
 ## Pick a cohort
 
@@ -49,34 +49,34 @@ Feel free to pick the video from your cohort, or a different cohort
 
 ### unit iii - full-stack development
 
-| language |                topic                 | first person | second pass |
-| :------: | :----------------------------------: | :----------- | :---------- |
-|   SQL    |             intro to sql             |              |             |
-|   SQL    |              sql joins               |              |             |
-|   .NET   |             intro to C#              |              |             |
-|   .NET   |         Using Objects in C#          |              |             |
-|   .NET   |      intro to ORMs and EF Core       |              |             |
-|   .NET   | arrays, lists and IEnumerable in C#  |              |             |
-|   .NET   |            what is an api            |              |             |
-|   .NET   |       our first Web API in C#        |              |             |
-|   .NET   |      using ef core in a web API      |              |             |
-|   .NET   |     creating a RESTful API in C#     |              |             |
-|   .NET   |          scaffolding in C#           |              |             |
-|   .NET   |  creating and using reacting in C#   |              |             |
-|   .NET   |       Authentication with jwt        |              |             |
-|   .NET   |      authentication with OAuth       |              |             |
-|   .NET   |      authentication with Auth0       |              |             |
-|   .NET   | deployment to heroku for c# (docker) |              |             |
-|   .NET   |    deployment to heroku for ruby     |              |             |
-|   .NET   |         SOLID OOP principles         |              |             |
-|   .NET   |            Images in .NET            |              |             |
-|   ruby   |            intro to ruby             |              |             |
-|   ruby   |             ruby classes             |              |             |
-|   ruby   |           ruby enumerables           |              |             |
-|   ruby   |      using ActiveRecord in ruby      |              |             |
-|   ruby   |        Joins in ActiveRecord         |              |             |
-|   ruby   |           into to Sinatra            |              |             |
-|   ruby   |        intro to ruby on rails        |              |             |
-|   ruby   |          rails scaffolding           |              |             |
-|   ruby   |  building a RESTful API with rails   |              |             |
-|   ruby   |      Images with ruby on rails       |              |             |
+| language |                topic                 | first pass | second pass |
+| :------: | :----------------------------------: | :--------- | :---------- |
+|   SQL    |             intro to sql             |            |             |
+|   SQL    |              sql joins               |            |             |
+|   .NET   |             intro to C#              |            |             |
+|   .NET   |         Using Objects in C#          |            |             |
+|   .NET   |      intro to ORMs and EF Core       |            |             |
+|   .NET   | arrays, lists and IEnumerable in C#  |            |             |
+|   .NET   |            what is an api            |            |             |
+|   .NET   |       our first Web API in C#        |            |             |
+|   .NET   |      using ef core in a web API      |            |             |
+|   .NET   |     creating a RESTful API in C#     |            |             |
+|   .NET   |          scaffolding in C#           |            |             |
+|   .NET   |  creating and using reacting in C#   |            |             |
+|   .NET   |       Authentication with jwt        |            |             |
+|   .NET   |      authentication with OAuth       |            |             |
+|   .NET   |      authentication with Auth0       |            |             |
+|   .NET   | deployment to heroku for c# (docker) |            |             |
+|   .NET   |    deployment to heroku for ruby     |            |             |
+|   .NET   |         SOLID OOP principles         |            |             |
+|   .NET   |            Images in .NET            |            |             |
+|   ruby   |            intro to ruby             |            |             |
+|   ruby   |             ruby classes             |            |             |
+|   ruby   |           ruby enumerables           |            |             |
+|   ruby   |      using ActiveRecord in ruby      |            |             |
+|   ruby   |        Joins in ActiveRecord         |            |             |
+|   ruby   |           into to Sinatra            |            |             |
+|   ruby   |        intro to ruby on rails        |            |             |
+|   ruby   |          rails scaffolding           |            |             |
+|   ruby   |  building a RESTful API with rails   |            |             |
+|   ruby   |      Images with ruby on rails       |            |             |
