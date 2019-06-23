@@ -1,1 +1,1 @@
-# Sample Lecture Notes
+# Sample project!
