@@ -14,7 +14,7 @@ Send a pull request with your name next to the lecture you are doing.
 
 Once you have sent the pull request, you can begin taking notes. Your notes should follow [this format](https://github.com/suncoast-devs/handbook/blob/master/meta/lecture-notes-project/sample-lecture-notes.md). We not looking for word for dictation, but rather what topics, examples and ideas are cover in the lecture. [Follow the sample](https://github.com/suncoast-devs/handbook/blob/master/meta/lecture-notes-project/sample-lecture-notes.md) and you should be good.
 
-Put your notes in the [folder here](INSERT_LINK). Then the SDG academics team will place them in the correct place in the handbook. Once we get this structure bult out, then you all will be able to contribute directly.
+Put your notes in the [notes folder](https://github.com/suncoast-devs/handbook/tree/master/meta/lecture-notes-project/notes). Then the SDG academics team will place them in the correct place in the handbook. Once we get this structure bult out, then you all will be able to contribute directly.
 
 ## 3) Pull request
 
