@@ -1,6 +1,6 @@
 # Contribution Instructions
 
-## 0) Getting the Rep
+## 0) Fork/Clone the Repo
 
 We are using standard git workflow for this project. Fork the [handbook](https://github.com/suncoast-devs/handbook).
 
