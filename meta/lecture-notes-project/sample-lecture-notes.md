@@ -1,5 +1,14 @@
 # Hello, React
 
+This covers the basic intro to the Reactjs.
+
+## Learning Objectives
+
+- what is react?
+- how to run a react app
+- learning about react components
+- creating using JSX to create HTML in React
+
 ## Day One - Hello, react
 
 - react name origin: reacts to its environment
