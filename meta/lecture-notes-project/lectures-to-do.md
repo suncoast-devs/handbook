@@ -9,7 +9,7 @@ Feel free to pick the video from your cohort, or a different cohort
 | cohort |                                 playlist                                 |
 | :----: | :----------------------------------------------------------------------: |
 |   X    | https://www.youtube.com/playlist?list=PLyKTFNBDP80CAIlvaopdeq5tbJYz1ZmhI |
-|   XI   | https://www.youtube.com/playlist?list=PLyKTFNBDP80Ac0bhandAEn-6AwuEJj57_ |
+|   XI   | https://www.youtube.com/playlist?list=PLWwthP6_aKmdxLKyXwDh0XXEgsWarTEpI |
 |  XII   | https://www.youtube.com/playlist?list=PLWwthP6_aKmfPNYkguhH-7yodRqAC_AIm |
 |  XIII  | https://www.youtube.com/playlist?list=PLyKTFNBDP80AIhGtCARUYralbLmjeQ0iD |
 |  XIV   | https://www.youtube.com/playlist?list=PLyKTFNBDP80BROdsw5K1Evze5UJ61N7VU |
