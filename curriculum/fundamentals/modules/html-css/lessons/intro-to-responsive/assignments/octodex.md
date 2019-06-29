@@ -9,7 +9,6 @@ Unfortunately, the Octodex is not responsive\*! Today, your task is to recreate 
 ## Objectives
 
 - Build on your knowledge of HTML & CSS
-- Implement a responsive design with media queries
 - Implement, from scratch, a given design
 - Understand HTML/CSS Layout
 - Be able to place elements on a page where you want them.

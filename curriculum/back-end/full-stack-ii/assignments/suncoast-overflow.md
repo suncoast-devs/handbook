@@ -2,7 +2,7 @@
 
 As we explore the concepts of a full stack web app, a good way to practice is to duplicate an existing site. For this project, you will be creating a copy of a site that you know very well, StackOverflow.
 
-The finished product will be due Monday, so this will be a little bigger. Pace yourself
+The finished product will be due Friday, so this will be a little bigger. Pace yourself
 
 First, we need to the database schema and start to build the API for the core functionality
 
@@ -19,7 +19,7 @@ The core functionality is:
 
 - [ ] as a user I should be able to view and search questions asked
 - [ ] As a user I should be able to view a question and its answers
-- [ ] As a user I should be able to post a question, this can anonymous, and should be Explorer Mode
+- [ ] As a user I should be able to post a question, this can anonymous, and should be for Explorer Mode
 - [ ] As a user I should be able to answer a question
 - [ ] As a user I should be able to up/down vote an answer
 - [ ] As a user I should be able to up/down vote a question
@@ -28,7 +28,8 @@ The core functionality is:
 
 - [ ] Create an ERD for the core functionality above
 - [ ] Create API definitions for the all the endpoints needed. This should include URLs, params, body, and return types.
-- [ ] Start building out the API
+- [ ] Create and API that supports your design
+- [ ] Create the Client app application that uses your API
 
 ### Adventure Mode
 
