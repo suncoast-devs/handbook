@@ -6,6 +6,8 @@
 
 ## [Basic Git Merge Instructions](/handbook/resources/basic-git-merge)
 
+## [Shell commands we like](/handbook/resources/bash/commands-we-like)
+
 ## [Additional Ruby / Rails Resources](/handbook/resources/additional-rails-resources)
 
 ## [Books to read](/handbook/resources/books-to-read)
