@@ -1,6 +1,6 @@
 # The Shell
 
-Developers typically like working on the command line (shell). The command is a [REPL]() for running commands against the operation system. Running commands in this manner can lead to a more using of our machines, as well as, eventually, enables developers to write little programs, called scripts, to help automate some tasks. Use a terminal to try to :
+Developers typically like working on the command line (shell). The shell is a [REPL]() for running commands against the operation system directly. By running commands in this manner, developers can more efficiently use their machines to get work done. Common tasks that developers use the terminal for are:
 
 - navigate to your "Documents."
 - create a director
@@ -8,31 +8,27 @@ Developers typically like working on the command line (shell). The command is a 
 - open a file
 - run a program
 
+There are many more commands and tools that the shell can use. What makes these powerful and useful is that eventually we will ba able to chain these commands together and run scripts that help automate the boring repeative tasks.
+
 A shell is called different names on different operating systems, but the idea is the same across all platforms. Typically, but not all the time, Mac users use `terminal`, Windows users use `PowerShell`, and Unix systems use `bash`. The commands might be slightly different across all operating systems, but the ideas are the same.
 
 ## Useful commands
 
 The following commands are the basic commands that we at SDG teach new developers. These commands are not an exhaustive list, but rather a resource to check for commands to help guide when you are lost.
 
----
+### pwd
 
-Summary of commands
+#### How to use
 
-- mkdir
-- cd
-- ls
-- pwd
-- code
-- node
-- npm
-- yarn
-- app-app
-- git
-- hub
-- start/open
-- ctrl+c
+> pwd
 
----
+#### What does it do?
+
+This simple command stands for "present working directory." This command shows you which directory you currently are in by printing the current directory. Knowing where you are, helps you to know what commands you can run and what tools, programs, and files you can manipulate.
+
+#### When do use pwd?
+
+Use `pwd` to help you see where you currently are in your terminal.
 
 ### mkdir
 
@@ -48,7 +44,19 @@ This command allows us to create a folder from the terminal.
 
 Use this command to create a new folder. We can and should create new folders to help us manage our various projects.
 
----
+### List
+
+#### How to use
+
+> ls
+
+#### What does it do?
+
+This command lists the files and directories in your current folder. `ls` is usually used to see where you are and what files you can currently use.
+
+#### When do use ls?
+
+Use `ls` to help you see what files are in your current directory.
 
 ### Change Directory
 
@@ -64,7 +72,7 @@ To navigate our computer, we need to be able to change folders and navigate our 
 cd folder_name
 ```
 
-To switch our current working directory. Switching directories is roughly equal to double-clicking a folder in finder. This switching moves you down to the new directory. If you wanted to go back up to the parent directory, we use `..` to represent the parent directory
+This switches our current working directory to the new directory. Switching directories is roughly equal to double-clicking a folder in finder. This switching moves you down to the new directory. If you wanted to go back up to the parent directory, we use `..` to represent the parent directory
 
 For example, consider the following folder structure.
 
@@ -93,40 +101,6 @@ cd ..
 
 Use cd to navigate to a new folder, a current project, or another place on your computer.
 
----
-
-### List
-
-#### How to use
-
-> ls
-
-#### What does it do?
-
-This command lists the files and directories in your current folder. `ls` is usually used to see where you are and what files you can currently use.
-
-#### When do use ls?
-
-Use `ls` to help you see what files are in your current directory.
-
----
-
-### pwd
-
-#### How to use
-
-> pwd
-
-#### What does it do?
-
-This simple command stands for "present working directory." This command shows you which directory you currently are in by printing the current directory. Knowing where you are, helps you to know what commands you can run and what tools, programs, and files you can manipulate.
-
-#### When do use ls?
-
-Use `pwd` to help you see where you currently are in your terminal.
-
----
-
 ### Open VS Code
 
 #### How to use
@@ -153,8 +127,6 @@ code my_project
 
 Use this when you want to open a file or project and write or edit code or files.
 
----
-
 ### node
 
 #### How to use
@@ -167,15 +139,16 @@ Node is a runtime for javascript. Using node, we can run javascript on our machi
 
 #### When do use node?
 
-We typically use this for running JavaScript code. This how we can run and test specific ideas without having to use a browser. We use this in one of two ways.
+We typically use this for running JavaScript code. This how we can run and test specific ideas without having to use a browser (like Chrome). We use this in one of two ways.
+<br/>
 
 First, we use this as a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) to run lines of JavaScript. This way allows us to run an individual or a small number of lines of code to test out an algorithm or idea.
+<br/>
 
 The second time to use this to the run `*.js` files. This how we run node files or any javascript files that do not interact with the DOM.
+<br/>
 
 Usually, students at the beginning of their journey do not run node directly but use node to run other tools.
-
----
 
 ### npm
 
@@ -192,8 +165,6 @@ Usually, students at the beginning of their journey do not run node directly but
 You need to use npm to install new tools in the command line from time to time.
 
 Generally, you need to run this command when dealing with project setups or to use new tools
-
----
 
 ### yarn
 
@@ -217,8 +188,6 @@ yarn start
 
 We also use yarn to run other tasks (such as `yarn deploy` for deployment) and other scripts we might make later.
 
----
-
 ### app-app
 
 #### How to use
@@ -229,13 +198,11 @@ We also use yarn to run other tasks (such as `yarn deploy` for deployment) and o
 
 `app-app` is a tool built by SDG to help kick start projects. `app-app` is a scaffolding tool. A scaffolding tool allows developers to quickly built projects based on a template that includes many tools and process that start the same for every project
 
-`app-app` has 3 different stacks built in; ALPHA, BETA, and GAMMA. ALPHA stack is a basic HTML and CSS website. BETA stack adds vanilla JavaScript. GAMMA stack gives a basic React app.
+`app-app` currently has 3 different stacks built in; ALPHA, BETA, and GAMMA. ALPHA stack is a basic HTML and CSS website. BETA stack adds vanilla JavaScript. GAMMA stack gives a basic React app.
 
 #### When do use app-app?
 
-We only use `app-app` to create a new project. Means it is only one run when we start a new HTML/CSS/JavaScript project that we want to run in the browser.
-
----
+We only use `app-app` to create a new front end development project. Which means, it is only once run when we start a new HTML/CSS/JavaScript project that we want to run in the browser.
 
 ### git
 
@@ -245,7 +212,7 @@ We only use `app-app` to create a new project. Means it is only one run when we 
 
 #### What does it do?
 
-Git is a distributed version control system for tracking changes in source code during software development. Git is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows [from wikipedia](https://en.wikipedia.org/wiki/Git).
+Git is a distributed version control system for tracking changes in source code during software development. Git is designed for coordinating work among programmers, but it can be used to track changes in any set of files. Its goals include speed, data integrity, and support for distributed, non-linear workflows [[from wikipedia]](https://en.wikipedia.org/wiki/Git).
 
 Git is different than [GitHub](http://github.com). GitHub is a web-based provider of a git; whereas git is the underlying tool. Github runs git, and we save our changes to our code to GitHub using git.
 
@@ -268,8 +235,6 @@ git push origin master
 
 To learn more about git [check this out](http://try.github.io/)
 
----
-
 ### hub
 
 #### How to use
@@ -288,9 +253,7 @@ This tool is mostly used in the background to set up and help manage your reposi
 hub browse
 ```
 
-If your current directory is a git repository, this command attempts to open the corresponding GitHub repository.
-
----
+If your current directory is a git repository, this command will open the corresponding GitHub repository.
 
 ### open the current directory in finder
 
@@ -311,8 +274,6 @@ This command opens your present working directory in your file explorer for you.
 #### When do use start/open?
 
 We use this when we need to see the current directory in our file explorer.
-
----
 
 ### Stopping long-running tasks
 
