@@ -11,7 +11,7 @@ _NOTE_ This also assumes you have [React Router](https://github.com/ReactTrainin
 - Create a new application
 - Choose an application name
 - Select `Single Page Web App` as the application type
-- Select the `settings` tab. Scroll down to `Allowed Callback URLs` and enter `http://localhost:5001/callback`
+- Select the `settings` tab. Scroll down to `Allowed Callback URLs` and enter `https://localhost:5001/callback`
 - Make note of your `domain` and your `Client ID` values
 
 ## React Front End
@@ -27,6 +27,10 @@ Inside the _client_ folder (cd client)
 
 ```sh
 yarn add auth0-js
+```
+or
+```sh
+npm install auth0-js
 ```
 
 _NOTE_ Restart your `yarn start` if it was already running
@@ -150,6 +154,7 @@ export default auth
 ```
 
 - Create `src/history.js`
+- Insert the following lines
 
 ```js
 import { createBrowserHistory } from 'history'
@@ -195,6 +200,10 @@ import auth from './auth'
 ```
 
 Now we can use the `/login` and `/logout` routes to allow the user to login or logout. Additionally we can check if the user is authenticated and redirect them to the `/login` page if we need to (e.g. ensuring that some parts of our app are protected behind a login form)
+_NOTE_ Make sure if you are using axios to include the import statement as well as uncommenting lines 193 & 194 
+```js
+import axios from 'axios'
+```
 
 Now go to `index.js` and add
 
@@ -207,8 +216,8 @@ We need the auth component so we can allow the user to login, logout, and access
 Because of that we will change from using the `BrowserRouter` to a simple `Router` and provide our custom history object to it.
 
 - In your import, change your `BrowserRouter` to a simple `Router`
-
-- In your `render` function where `<Router>` is found, add `history={history}`
+- In your `render` function, change `<BrowserRouter>` tags to `<Router>`
+- In your `render` function where `<Router>` is found, add the property `history={history}` to the `<Router>` tag/component.
 
 ### Setup axios to provide custom Authorization headers for every request.
 
@@ -233,13 +242,15 @@ _NOTE_ If you are using fetch, or if you do not want to set the common headers, 
 
 Go the `StartUp.cs` file
 
-First add to your
+After the line `app.UseHttpsRedirection();`
+
+Add:
 
 ```c#
       app.UseAuthentication();
 ```
 
-After the line `app.UseHttpsRedirection();`
+
 
 Next, add to your `ConfigurationServices` method
 
@@ -259,8 +270,12 @@ Next, add to your `ConfigurationServices` method
 ```
 
 You will have to add the correct `using` statement.
+```c#
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+```
 
 Replace `DOMAIN` with the same domain you used in the client app and replace `CLIENTID` with the client ID that you used in the client app
+_NOTE_ This time when setting the `DOMAIN` be sure to include `Https://`.  
 
 ### Restricting endpoints
 
@@ -281,7 +296,7 @@ That means that if we the userId for the current user it would look like this:
     public object Get()
     {
       var userId = User.Claims.First(f => f.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier").Value;
-      return new {userId = userId, message="only logged in users can see this"}
+      return new {userId = userId, message="only logged in users can see this"};
     }
   }
 ```
