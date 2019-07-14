@@ -5,14 +5,25 @@ This covers the basic intro to SQL.
 ## Learning Objectives
 
 - What is SQL?
-- Describing the topics,
-- Concepts and ideas discussed
+- What is Database?
+- What are features of a DataBase?
 - During the lecture
 
 ## Recommended Previous Knowledge
 
-This is what concepts the student should be familiar with in order to benefit from this lecture.
+The students aren't required previous knowledge of SQL.
 
 ## Notes
 
-This is where the meat and potatoes should be. There should code samples, as well as prose detailing out what the lesson is talking about. This should be longed and detailed.
+-What is SQL?
+SQL is a programming language that helps us to manipulate data on a DataBase.
+
+-What is Database?
+It is a computer or server where we store safety and correctly the data of business logical.
+
+- What are features of a DataBase?
+
+  - Atomicity - It is the ability of the database to execute all transactions or none.
+  - Consistency
+  - Isolation
+  - Durability
