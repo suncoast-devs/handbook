@@ -6,6 +6,8 @@
 
 ## [Basic Git Merge Instructions](/handbook/resources/basic-git-merge)
 
+## [Git Cheat Sheet](/handbook/resources/Git-Cheat-Sheet.md)
+
 ## [Shell commands we like](/handbook/resources/bash/commands-we-like)
 
 ## [Starting and Getting back to projects](/handbook/resources/working-on-projects/index)
