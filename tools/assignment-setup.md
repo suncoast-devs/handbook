@@ -1,12 +1,8 @@
 # Setup for Assignments
 
-This section describes the process for setting up assignments in Unit I.
+This section describes the process for setting up assignments in unit i.
 
-First, ensure you have the [`app-app` generator](https://github.com/suncoast-devs/app-app) installed. We may have done this in class, and you will only need to do it once:
-
-```sh
-npm install -g app-app
-```
+Before you started, make [to have your developer env set up](/handbook/tools/environment) and be familiar with [commands we like](/handbook/resources/bash/commands-we-like)
 
 Open your terminal, then create and change into your project directory:
 

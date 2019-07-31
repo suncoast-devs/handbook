@@ -34,7 +34,7 @@ Create a new website that shows some basic styling and formatting using HTML and
 
 ### Epic Mode
 
-- [ ] Explore CSS animations and add some life to your static page. Feel free to really dig into these and try to animate all elements on your page to some extent
+- [ ] Explore CSS animations and add some life to your static page. Feel free to really dig into these and try to animate all elements on your page to some extent. Make it ridiculous.
 
 ## Additional Resources
 
