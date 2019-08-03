@@ -71,14 +71,12 @@ const lastName = "Holmes";
 
 const fullName = firstName + " " + lastName;```
 
-The  "fullName" has a space in the middle because we want a space in between the names.  Javascript is very literal, and if we didn't have this space fullName would equal SherlockHolmes.
-
-The "fullName" example shows that we can add variables together.  Make sure you are aware of the types of variable you are adding together; you may get an error, like "NaN".  "NaN" is not a number.  JavaScript is trying, but the calculation you asked for doesn't return a number.
+The "fullName" has a space in the middle because we want a space in between the names.  Javascript is very literal, and if we didn't have this space fullName would equal SherlockHolmes.  This example shows that we can add variables together.  Make sure you are aware of the types of variable you are adding together; you may get an error, like "NaN".  "NaN" is not a number.  JavaScript is trying, but the calculation you asked for doesn't return a number.
 
 Remember: It is ok to change variables and it is okay to use "const" - it just depends on what you need for your data. But once you declare a "const" you cannot change its value.
 
 
-If you are adding thing together, these three lines of code are functionally the same (42:03):
+If you are adding things together, these three lines of code are functionally the same (42:03):
 
 ```time = time + 1
 
