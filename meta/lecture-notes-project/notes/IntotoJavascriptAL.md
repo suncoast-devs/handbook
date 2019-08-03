@@ -1,23 +1,23 @@
-<h1> Welcome to Javascript </h2>
+# Welcome to Javascript
 
 (using Cohort XIV lecture notes: https://www.youtube.com/watch?v=kXCmz-GiEeg&list=PLyKTFNBDP80BROdsw5K1Evze5UJ61N7VU&index=2)
 
 Javascript lets you create content that updates dynamically, animate portions of your webpage, and controls your content.
 
-<h2> Learning Objects </h2>
-<ul>
-  <li> What JavaScript can do </li>
-  <li> Scripts - lines of code </li>
-  <li> Variables - ways to manipulate data </li>
-  <li> REPL - Read Eval Print Loop </li>
-</ul>
+## Learning Objects
 
-<h2> Recommended Previous Knowledge </h2>
-HTML and CSS give you the static content of a website.  Once you know enough HTML and CSS to get a website running, you can go directly to JavaScript and use it to dynamically play with what you have.
+- What JavaScript can do
+- Scripts - lines of code
+- Variables - ways to manipulate data
+- REPL - Read Eval Print Loop
 
-<h2> NOTES </h2>
+## Recommended Previous Knowledge
 
-<h4> What is it? </h4>
+HTML and CSS give you the static content of a website. Once you know enough HTML and CSS to get a website running, you can go directly to JavaScript and use it to dynamically play with what you have.
+
+## NOTES
+
+#### What is it?
 
 "JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles." from (https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
@@ -88,6 +88,6 @@ time ++```
 
 JavaScript is very trusting of the developer to know what they are trying to do.
 
-<h4>Terminal commands you may find useful in the future:</h4>
+#### Terminal commands you may find useful in the future:
 
 node // runs JavaScript in terminal
