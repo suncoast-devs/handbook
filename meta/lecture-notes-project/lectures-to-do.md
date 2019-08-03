@@ -23,7 +23,7 @@ Feel free to pick the video from your cohort, or a different cohort
 |             intro to css              |            |             |
 |               flex box                |            |             |
 |             media queries             |            |             |
-|        javascript and the DOM         |            |             |
+|        javascript and the DOM         |A Leaders   |             |
 |    if statements and boolean logic    |            |             |
 |                 loops                 |            |             |
 |                Arrays                 |            |             |
