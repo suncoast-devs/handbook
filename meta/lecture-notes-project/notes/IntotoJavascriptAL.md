@@ -71,7 +71,7 @@ const lastName = "Holmes";
 
 const fullName = firstName + " " + lastName;```
 
-```const fullName``` has a space in the middle because we want a space in between the names.  Javascript is very literal, and if we didn't have this space fullName would equal SherlockHolmes.
+The  "fullName" has a space in the middle because we want a space in between the names.  Javascript is very literal, and if we didn't have this space fullName would equal SherlockHolmes.
 
 The "fullName" example shows that we can add variables together.  Make sure you are aware of the types of variable you are adding together; you may get an error, like "NaN".  "NaN" is not a number.  JavaScript is trying, but the calculation you asked for doesn't return a number.
 
