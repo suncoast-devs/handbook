@@ -6,11 +6,23 @@
 
 **`git add .`** //tells git that there are changes to track in the current directory
 
+**`git stash`** //stash you changes if you aren't ready to commit, but need to switch branches
+
+**`git stash list`** //shows you the list of stashes you've stored
+
+**`git stash apply "Name of stash"`** //applies the specific stash you've named
+
+**`git stash pop`** //applies the most recent stash and removes it from storage
+
 **`git commit -m "Your descriptive commit message"`** //creating the save point with a comment
 
-**`git push`** //push the commit
+**`git commit -amend -m "Your corrected descriptive commit message"`** //a way to fix minor mistakes with the commit or the message 
 
-**`git pull`** //pull from a git repo to update local
+**`git push`** //push the commit 
+
+**`git pull`** //pull from a git repo to update local 
+
+**`git pull origin master`** //pull from original repo to update local (you can also use `upstream master` if you have multiple branches)
 
 **`git clone <url to repository>`** //clone an existing repository
 
@@ -25,6 +37,12 @@
 **`git checkout -b newBranchName`** //create a branch from Master
 
 **`git checkout -b existingBranchName newBranchName`** //create Branch from a Branch
+
+**`git reset HEAD~1`** //takes your branch back one commit, but your changes are still in the working tree (I recommend `git add .` next)
+
+**`git reset --keep HEAD~1`** //resets head and working branch, keeps your changes, and won't override any unsaved changes.
+
+**`git reset --hard specificCommitName`** //takes you back to that specific commit (you lose the commit - only for when you really mean it.)
 
 How to push to an already created repo’s master:
 
