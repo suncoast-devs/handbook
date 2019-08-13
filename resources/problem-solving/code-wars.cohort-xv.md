@@ -10,9 +10,11 @@ Challenges we like:
 
 | kyu | Name                            | link                                                          |
 | :-: | :------------------------------ | :------------------------------------------------------------ |
-|  8  | Volume of a Cuboid              | https://www.codewars.com/kata/volume-of-a-cuboid              |
-|  8  | Convert a string to an array    | https://www.codewars.com/kata/convert-a-string-to-an-array    |
 |  8  | Opposites Attract               | https://www.codewars.com/kata/opposites-attract               |
+|  8  | Volume of a Cuboid              | https://www.codewars.com/kata/volume-of-a-cuboid              |
+|  8  | Count the Monkeys               | https://www.codewars.com/kata/56f69d9f9400f508fb000ba7        |
+|  -  | -                               | -                                                             |
+|  8  | Convert a string to an array    | https://www.codewars.com/kata/convert-a-string-to-an-array    |
 |  8  | Tip Calculator                  | https://www.codewars.com/kata/tip-calculator                  |
 |  8  | Rock Paper Scissors             | https://www.codewars.com/kata/5672a98bdbdd995fad00000f        |
 |  8  | Parse nice int from char        | https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1        |
@@ -26,7 +28,6 @@ Challenges we like:
 |  8  | DNA to RNA                      | https://www.codewars.com/kata/5556282156230d0e5e000089        |
 |  8  | Is n divisible by x and y       | https://www.codewars.com/kata/5545f109004975ea66000086        |
 |  8  | Keep Hydrated!                  | https://www.codewars.com/kata/582cb0224e56e068d800003c        |
-|  8  | Count the Monkeys               | https://www.codewars.com/kata/56f69d9f9400f508fb000ba7        |
 |  7  | Ones and Zeros                  | https://www.codewars.com/kata/ones-and-zeros                  |
 |  7  | Mumbling                        | https://www.codewars.com/kata/5667e8f4e3f572a8f2000039        |
 |  7  | Get the Middle Character        | https://www.codewars.com/kata/56747fd5cb988479af000028        |
