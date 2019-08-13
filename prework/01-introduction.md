@@ -31,7 +31,7 @@ There are roughly eight-time units on the graph. So if your timeline is 12 weeks
 - inflection point @ week 9.5
 - fluency @ week 12
 
-Don't forget that the cadence at a micro-level – not just the macro – is also essential. The serial position effect (embedded below) demonstrates that we inherently learn and retain the first few and last few items discussed. By using, perhaps, a Pomodoro Technique™ with short breaks in-between, we can encourage a higher retention rate of materials by splitting lecture up into ~45-minute segments with ~10-15 minutes of break in-between.
+Don't forget that the cadence at a micro-level – not just the macro – is also essential. The serial position effect (embedded below) demonstrates that we inherently learn and retain the first few and last few items discussed. By using, perhaps, a [Pomodoro Technique™](https://lifehacker.com/productivity-101-a-primer-to-the-pomodoro-technique-1598992730) with short breaks in-between, we can encourage a higher retention rate of materials by splitting lecture up into ~45-minute segments with ~10-15 minutes of break in-between.
 
 Following these paradigms, we will work through lots of exercises and challenges throughout most lectures, and follow an objective-based path that keeps us focused and productive.
 
