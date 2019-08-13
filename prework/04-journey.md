@@ -36,6 +36,8 @@ To overcome decision fatigue and be more productive in general, Tim Ferriss reco
 
 Adopt the same priorities: as soon as lunch begins, take a mental break, go for a walk, and then get to work and **remove distractions**. Computers give us too many excuses to not focus on our task at hand; don't let them control you.
 
+A way to organize activities is based on [urgency vs importance](https://www.mindtools.com/pages/article/newHTE_91.htm). This helps a developer focus on what to work on next.
+
 ## Talking the lingo
 
 During your time here, you will be asked to communicate technical ideas in various ways. During the course, you may be asked blog about various topics, give presentations to your classmates and network with people in the community. These vary from talking about a technical idea you are using to sharing your journey on learning to be a developer.
