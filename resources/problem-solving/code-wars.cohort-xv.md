@@ -13,9 +13,9 @@ Challenges we like:
 |  8  | Opposites Attract               | https://www.codewars.com/kata/opposites-attract               |
 |  8  | Volume of a Cuboid              | https://www.codewars.com/kata/volume-of-a-cuboid              |
 |  8  | Count the Monkeys               | https://www.codewars.com/kata/56f69d9f9400f508fb000ba7        |
-|  -  | -                               | -                                                             |
 |  8  | Convert a string to an array    | https://www.codewars.com/kata/convert-a-string-to-an-array    |
 |  8  | Tip Calculator                  | https://www.codewars.com/kata/tip-calculator                  |
+|  -  | -                               | -                                                             |
 |  8  | Rock Paper Scissors             | https://www.codewars.com/kata/5672a98bdbdd995fad00000f        |
 |  8  | Parse nice int from char        | https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1        |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character |
