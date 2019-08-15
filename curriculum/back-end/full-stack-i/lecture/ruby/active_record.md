@@ -301,7 +301,7 @@ puts JSON.pretty_generate(movies_as_a_hash)
 
 The `movies.as_json` turns the collection of ActiveRecord objects into a Ruby `hash` and then `JSON.pretty_generate` formats a nice, human readable, JSON string. Finally `puts` prints the results.
 
-If we were doing this all at once this could look like:
+If we were doing this _all at once_ this could look like:
 
 ```ruby
 puts JSON.pretty_generate(Movie.all.as_json)
