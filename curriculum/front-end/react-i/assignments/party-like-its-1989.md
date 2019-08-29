@@ -4,7 +4,13 @@ It's 1989. The Internet has just come online and Tim Berners-Lee is going to inv
 
 The data for this assignment comes from [The Movie DB](https://www.themoviedb.org) API.
 
-Download and use [this JSON file](./assets/1989.json) as your data source. Take a look a the structure of the data. It contains an array of objects that look like this:
+This is the API end-point that supplied the data file for this project:
+
+`https://api.themoviedb.org/3/discover/movie?primary_release_year=1989&sort_by=popularity.desc&api_key=YOUR_KEY_HERE`
+
+You will need to sign up and make an account to get an API key.
+
+An example of the movie object is
 
 ```JSON
 {
@@ -40,19 +46,14 @@ https://image.tmdb.org/t/p/w185_and_h278_bestv2/4p1N2Qrt8j0H8xMHMHvtRxv9weZ.jpg
 
 ## Objectives
 
-- Work with JSON data
-- Use `create-react-app` to build a React project
+- Work with API data
 - Understand and use React components
 - Understand and use "props" in React
 - Use `Array.prototype.map` to render a collection of components in React
 
-## Requirements
-
-You do _not_ need to use the tmdb.org API for this assignment; you should use the supplied JSON file (see above).
-
 ### Explorer Mode
 
-- [ ] "Mapping" over the array, render all of the films in the supplied data file.
+- [ ] Use the API to fetch the data and render it on the page, rather than the supplied JSON file.
 - [ ] You should have at _least_ two components; `App` and `Movie`.
 - [ ] Render at least the title, poster image, and plot overview. Feel free to include other pieces of the data.
 - [ ] Try to capture an 1980's or early 90's aesthetic when you style your page. Have fun with it!
@@ -60,17 +61,14 @@ You do _not_ need to use the tmdb.org API for this assignment; you should use th
 ### Adventure Mode
 
 - [ ] Sort the films by release date, rather than as they appear in the file.
-- [ ] Display the release date in a formatted manner, e.g. "May 24th", rather than `1989-05-24`.
+- [ ] Display the release date in a formatted manner, e.g. "May 24th", rather than `1989-05-24`. _HINT:_ moment.js or date-fns
 
 ### Epic Mode
 
-- [ ] Use the API to fetch the data and render it on the page, rather than the supplied JSON file.
-
-This is the API end-point that supplied the data file for this project:
-
-`https://api.themoviedb.org/3/discover/movie?primary_release_year=1989&sort_by=popularity.desc&api_key=YOUR_KEY_HERE`
-
-**NOTE**: You'll need to sign up for your own API key first.
+- [ ] give the user a chance to "favorite" movies and store favorite movies in local storage
+- [ ] Explore the API and use other endpoints.
+- [ ] Allow the user to change the year they are searching for
+- [ ] change the style based on the decade they user selected
 
 ## Additional Resources
 

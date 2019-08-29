@@ -1,10 +1,6 @@
-# React-ified Octocats
+# React-ify Octocats
 
-Your Octodex is amazing. It has revolutionized the Github Octodex experience and more people are viewing Octocats on their mobile devices than ever.
-
-However, the code is repetitive and isn't yet setup to work with an API.
-
-Your task now is to refactor the static Octodex into a static (non-API) version in React.
+Octodex is a fun way to celebrate a powerful tool we use for development. In that same spirit, recreate [this site](https://octodex.github.com/)
 
 You'll identify the main `Component`s on the page and create React components for each, breaking down those `Component`s into smaller ones as needed.
 
@@ -21,18 +17,16 @@ You'll identify the main `Component`s on the page and create React components fo
 
 ### Explorer Mode
 
-- [ ] Reuse your Octodex as a starting point for this assignment. Or use an existing well factored (HTML and CSS) Octodex.
 - [ ] Figure out the main components of the page. These will be the main components in your `<App>` component.
-- [ ] You should have at _least_ two components...
 - [ ] Create your React app
-- [ ] Copy the CSS from your Octodex into `index.css`
+- [ ] Your CSS should be in `index.css`
+- [ ] You should have at _least_ two components...
 - [ ] Clear out the implementation in the `render` method of `App` and have it render your main components.
-- [ ] Create those components and paste the appropriate HTML from your Octodex into the `render` method of those components.
-- [ ] Break down those components and use `this.props` to dynamically customize the components that need it.
+- [ ] Use props to try to reuse components
 
 ### Adventure Mode
 
-- [ ] Place the definition of each Octocat in an `array` and use `map` to generate the Octocat components
+- [ ] Place the definition of each Octocat in an `array` of objects and use `map` to generate the Octocat components
 
 ### Epic Mode
 
