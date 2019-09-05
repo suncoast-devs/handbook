@@ -31,12 +31,12 @@ Challenges we like:
 |  7  | Disemvowel Troll                | https://www.codewars.com/kata/52fba66badcd10859f00097e        |
 |  8  | DNA to RNA                      | https://www.codewars.com/kata/5556282156230d0e5e000089        |
 |  7  | Complementary DNA               | https://www.codewars.com/kata/554e4a2f232cdd87d9000038        |
-|  -  | -                               | -                                                             |
 |  8  | Count of positives sum of...    | https://www.codewars.com/kata/576bb71bbbcf0951d5000044        |
+|  7  | Descending Val                  | https://www.codewars.com/kata/5467e4d82edf8bbf40000155        |
+|  -  | -                               | -                                                             |
 |  8  | Is n divisible by x and y       | https://www.codewars.com/kata/5545f109004975ea66000086        |
 |  8  | Keep Hydrated!                  | https://www.codewars.com/kata/582cb0224e56e068d800003c        |
 |  7  | Exes and Ohs                    | https://www.codewars.com/kata/55908aad6620c066bc00002a        |
 |  7  | Square every digit              | https://www.codewars.com/kata/546e2562b03326a88e000020        |
 |  7  | Shortest Word                   | https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9        |
-|  7  | Descending Val                  | https://www.codewars.com/kata/5467e4d82edf8bbf40000155        |
 |  7  | List filtering                  | https://www.codewars.com/kata/53dbd5315a3c69eed20002dd        |

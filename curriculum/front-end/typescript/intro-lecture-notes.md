@@ -51,11 +51,11 @@ This will be a quick walkthrough into using Typescript in a React App. This also
       - parameters
 
     ```typescript
-    const rollDice: number = () => {
+    const rollDice = (): number => {
       return Math.ceil(Math.random() * 6)
     }
 
-    const sum: number = (x: number, y: number) => {
+    const sum = (x: number, y: number): number => {
       return x + y
     }
     ```
@@ -95,6 +95,12 @@ This will be a quick walkthrough into using Typescript in a React App. This also
   ```
 
 * React and Typescript
+
+  - to add typescript to an existing react project
+
+  ```bash
+    yarn add typescript @types/node @types/react @types/react-dom @types/jest
+  ```
 
   - Allows to add types to state/useState
 
