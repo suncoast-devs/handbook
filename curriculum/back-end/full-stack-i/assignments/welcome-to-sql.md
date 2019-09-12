@@ -44,10 +44,14 @@ Every application uses data in some way. This will help you set up your developm
 ### Epic Mode
 
 - [ ] Investigate working with C# and Postgres, HINT: `entity framework core`
+- [LINQ Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/03-Linq/)
+- [EF Core notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
 
 ## Additional Resources
 
-- [PostgreSQL 10 Documentation](https://www.postgresql.org/docs/10/static/index.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [SQL Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-sql/)
+- [Join Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/)
 
 ## Recommended Practice:
 

@@ -22,13 +22,21 @@ After that, this weekend is the next big push your final project, work on the HT
 
 - [ ] In your Company Database, add a table named:
   - C#: `Departments`. Give this table a few columns
-  - Ruby: `departments`. Give this table a few columns
 - [ ] Add a Foreign key named:
   - C# `DepartmentId` to your `Employee` Table
-  - Ruby: `department_id` to your `employees` table
 - [ ] Add tables named:
-  - C#: `Products` and `Orders`. Give each table a few columns. `Orders` should minimally have a `OrderNumber` and an `Id`
-  - Ruby: `products` and a `orders`. Give each table a few columns. `orders` should minimally have a `order_number` and an `id`
+  - C#: `Products` and `Orders`.
+    - `Orders` should have the columns
+      - `OrderNumber` as string
+      - `Id` as a primary key
+      - `DatePlaced` as datetime
+      - `Email` as string
+    - `Product` should have the columns
+      - `Id` as a primary key
+      - `Price` as double
+      - `Name` as string
+      - `Description` as string
+      - `NumberInStock` as int
 - [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the 3 tables (`Orders`, `Products` and `ProductOrders`) and foreign keys needed for this to happen
 
 * [ ] Create queries that can do the following:
@@ -58,7 +66,9 @@ After that, this weekend is the next big push your final project, work on the HT
 
 ## Additional Resources
 
-- [PostgreSQL 10 Documentation](https://www.postgresql.org/docs/10/static/index.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+- [SQL Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-sql/)
+- [Join Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/)
 
 ## Recommended Practice:
 

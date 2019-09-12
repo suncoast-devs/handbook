@@ -6,7 +6,7 @@ Today you learned a new language and will be starting to explore it more in dept
 
 - Set up your dev machines
 - Create a simple console application to ensure your machine is set up correctly
-- Write a blog article to practice talking about technology
+- start working through your wireframes for your capstone
 
 ## Requirements
 
@@ -21,10 +21,6 @@ Today you learned a new language and will be starting to explore it more in dept
   - [ ] [ `.gitignore'](https://marketplace.visualstudio.com/items?itemName=hasanali.gitignore-templates)
 
 - To verify everything was installed correctly, run `dotnet -v` in your terminal.
-
-### Ruby
-
-You should already have Ruby installed.
 
 ### Explorer Mode
 
@@ -54,3 +50,4 @@ You should already have Ruby installed.
 - .NET
 
   - [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+  - [Lecture Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)
