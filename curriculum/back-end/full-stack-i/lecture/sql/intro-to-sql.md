@@ -100,7 +100,6 @@ SQL databases use the `S`tructured `Q`uery `L`anguage to both define the `schema
 
 If you are using `pgcli`, ensure `MULTILINE` is `ON` before starting. You can turn this feature on and off by using the `F3` key.
 
-
 #### CREATE TABLE
 
 After connecting to a new database, we need to create a table to store our information. This table will have rows (data) and columns (structure).
@@ -111,7 +110,8 @@ Let's start by creating the table with only the `title`, `primary_author`, and t
 CREATE TABLE books (
   title           TEXT NOT NULL,
   primary_author  TEXT,
-  year_published  INT
+  year_published  INT,
+  id SERIAL PRIMARY KEY,
 );
 ```
 

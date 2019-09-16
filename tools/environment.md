@@ -24,7 +24,13 @@ After [downloading VS Code](https://code.visualstudio.com), double-click the ZIP
 
 See setup instructions here under `VS Code`: [Editors](/handbook/tools/editors)
 
-## Editor Fonts
+## Mac and Windows Specific Setup
+
+Mac OS users continue [here](/handbook/tools/environment-mac)
+
+Windows users continue [here](/handbook/tools/environment-windows)
+
+## Editor Fonts (Optional)
 
 The font that comes with VS Code is a good editor font. If you want to try an alternative font, we recommend [hack](https://sourcefoundry.org/hack/). Hack is a typeface designed for reading and writing source code. This is not required, but can be a useful.
 
@@ -42,9 +48,3 @@ See the [setup instructions](https://github.com/source-foundry/Hack#windows)
 <!-- ## Database Setup
 
 See [here](/handbook/tools/postgresql) -->
-
-## Mac and Windows Specific Setup
-
-Mac OS users continue [here](/handbook/tools/environment-mac)
-
-Windows users continue [here](/handbook/tools/environment-windows)
