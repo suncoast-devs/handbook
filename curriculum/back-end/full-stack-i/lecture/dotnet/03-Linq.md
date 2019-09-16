@@ -1,7 +1,7 @@
 # LINQ
 
 - LINQ stands for Language INtergrated Query
-- Used to query and manilupated List of items
+- Used to query and manipulated List of items
 - Like map/reduce/filter in JavaScript, but much powerful and more options
 - LINQ is in the namespace `System.Linq`
 - LINQ operates on anything that is an `IEnumerable<T>` (pronouced "IEnumerable of T"), where `T` is a place holder for a type. `IEnumerable<T>` is a fancy way of saying list of things.

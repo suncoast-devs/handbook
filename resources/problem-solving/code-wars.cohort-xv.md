@@ -39,6 +39,8 @@ Challenges we like:
 |  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
 |  8  | Parse nice int from char        |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |     C#     |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
+|  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
+|  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |            |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |            |

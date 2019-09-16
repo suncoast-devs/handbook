@@ -4,7 +4,7 @@
 - EF Core allows developers to use databases while using our native language (C#).
 - ORMs are not unique to C#, and are usually found in many modern languages.
 - In C#, Ef Core uses a combination of classes (Plain Old C# Objects or POCOs) and LINQ.
-- We use a class coalled our DbContext to represent our database. This will hold all the configuration (connection string, type, etc...) and what tables the database has.
+- We use a class called our DbContext to represent our database. This will hold all the configuration (connection string, type, etc...) and what tables the database has.
 - We use POCOs to model our database tables. This includes schema (columns) and the relationships
 - We use LINQ statements to generate SQL queries against our database.
 
@@ -53,8 +53,7 @@ createdb MovieDb
 We need to “scaffold” our ​database context​. This is the connection between the database and the ​ORM.
 
 ```bash
-dotnet ef dbcontext scaffold "server=localhost;database=MovieDb"
-Npgsql.EntityFrameworkCore.PostgreSQL -c MovieContext
+dotnet ef dbcontext scaffold "server=localhost;database=MovieDb" Npgsql.EntityFrameworkCore.PostgreSQL -c MovieContext
 ```
 
 This will create a file called `MovieContext.cs` in the root of our project. We will adding code to this file later.
@@ -158,6 +157,8 @@ if (bestMovie != null){
   db.SaveChanges();
 }
 ```
+
+///2.//
 
 ### Delete
 
