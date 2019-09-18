@@ -29,7 +29,6 @@ For tonight, I want you to create a simple API with two endpoints, one for the `
   - [ ] The one get will accept a string
   - [ ] This endpoint will take the string passed to it, manipulate according to the kata [hhttps://www.codewars.com/kata/digits-explosion](hhttps://www.codewars.com/kata/digits-explosion) and return the result
   - [ ] This will return a `ActionResult<string>`
-- [ ] turn in your project via github with a .gitignore.
 
 ### Adventure Mode
 
