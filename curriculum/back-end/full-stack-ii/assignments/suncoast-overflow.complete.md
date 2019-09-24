@@ -13,7 +13,7 @@ It is recommend to start with wire frames, then go from there.
 
 ## Requirements
 
-In groups of 2 or 3, create an anonymous question and answer site, that allows users to up-vote and down-vote questions and answers.
+In groups of 2, create an anonymous question and answer site, that allows users to up-vote and down-vote questions and answers.
 
 The core functionality is:
 

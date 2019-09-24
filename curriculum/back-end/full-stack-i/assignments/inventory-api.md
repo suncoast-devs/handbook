@@ -29,11 +29,11 @@ Now that we have new API skills, we want to create an API to help our favorite s
 
 - [ ] Create a GET endpoint for all items in your inventory
 - [ ] Create a GET endpoint for each item
-- [ ] Create a POST endpoint that allows a user/client to add an item to the inventory
-- [ ] Create a PUT endpoint that allows a user/client to update an item
-- [ ] Create a DELETE endpoint that allows a user/client to delete an item
+- [ ] Create a POST endpoint that allows a client to add an item to the inventory
+- [ ] Create a PUT endpoint that allows a client to update an item
+- [ ] Create a DELETE endpoint that allows a client to delete an item
 - [ ] Create a GET endpoint to get all items that are out of stock
-- [ ] Create a GET endpoint that allows the user to search for an item based on SKU
+- [ ] Create a GET endpoint that allows the to search for an item based on SKU
 
 ### Adventure Mode
 

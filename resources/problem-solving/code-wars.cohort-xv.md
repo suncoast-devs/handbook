@@ -41,8 +41,10 @@ Challenges we like:
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
 |  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
 |  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
+|  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
+|  7  | Shortest Word                   |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
+|  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
+|  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
+|  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
 |  -  | -                               |                               -                               |     -      |
-|  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |            |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |            |
-|  7  | Shortest Word                   |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |            |
-|  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |            |
