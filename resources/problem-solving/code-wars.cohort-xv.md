@@ -46,5 +46,6 @@ Challenges we like:
 |  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
 |  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
 |  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
+|  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
+|  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     | javascript |
 |  -  | -                               |                               -                               |     -      |
-|  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |            |
