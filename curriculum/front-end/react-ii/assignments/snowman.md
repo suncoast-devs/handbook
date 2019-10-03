@@ -29,6 +29,7 @@ You will need to download these files and add them to your project:
 ### Adventure Mode
 
 - [ ] After the word has been completed, offer the player to play again. Reset the state of the game without a page reload.
+- [ ] Use [this API](https://sdg-words.herokuapp.com/api/words/random) to get your random word
 
 ### Epic Mode
 
