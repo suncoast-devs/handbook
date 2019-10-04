@@ -24,6 +24,7 @@ int score = 95;
 
 - Better to use `var`
 - `var` is used to type a variable implicitly
+- type is inferred from the value on the right of the expression
 
 ```C#
     var name = "Mark"; // typed to string
