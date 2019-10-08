@@ -1,18 +1,18 @@
 # Welcome to a simple API in .NET
 
-An API (application programming interface) is an interface or communication protocol between a client and a server intended to simplify the building of client-side software. [wikipedia](https://en.wikipedia.org/wiki/Application_programming_interface). In our world that means that an API is a web server that allows developers to store, retreive and manipulate data.
+An API (application programming interface) is an interface or communication protocol between a client and a server intended to simplify the building of client-side software. [wikipedia](https://en.wikipedia.org/wiki/Application_programming_interface). In our world, that means that an API is a web server that allows developers to store, retrieve, and manipulate data.
 
 ## RESTful APIs
 
-Like most ideas in the developer world, an API can be build in a variety of ways. SOAP and GraphQL are alternatives solutions but the majority of website are using RESTful APIs to power their front end applications. We will be exploring how to create a RESTful API.
+Like most ideas in the software world, there are multiway ways to build an API. SOAP and GraphQL are alternatives solutions, but the majority of websites use RESTful APIs to power their front end applications. We are exploring how to create a RESTful API.
 
 ### What is a RESTful API
 
-A RESTful API is an API designed and built around the idea that everything in my server is a resource and all my service calls are stateless.
+A RESTful API is an API designed and built around the idea that everything in my server is a resource, and all my service calls are stateless.
 
 #### A Resource
 
-A Resource is considered to be any named `thing` inside the system. This could be a image, a document, a object, a user, or a service. Each resources has a a unique URI (universal resource identifier). This URI is usually realized in the form of a URL. These URLs should always reflect `things`, not actions. Actions in a RESTful API are described in the HTTP Verbs of the request.
+A Resource is considered to be any named `thing` inside the system. A resource could be an image, a document, an object, a user, or a service; which in turn, has a unique URI (universal resource identifier). This URI typically is a URL. These URLs should always reflect `things,` not actions. Actions in a RESTful API are described using the HTTP Verbs of the request.
 
 Good URI/URLs:
 
@@ -21,35 +21,35 @@ Good URI/URLs:
 
 #### Stateless
 
-REST is an acronym that sounds for REpresentational State Transfer. This means that the server does not have any information about client.Statelessness means that every request to our server happens in complete isolation. Each request is idempotent. Each request The responsibility for storing and handling all state related information falls on the client; In our case, the client is a React App.
+REST is an acronym that sounds for REpresentational State Transfer. The idea of REST means that the server does not have any information about the client. Statelessness means that every request to our server happens in complete isolation. Each request is idempotent. Each request The responsibility for storing and handling all state-related information falls on the client; In our case, the client is a React App.
 
 ## RESTful and Web API
 
-In the C# world, to build RESTful APIs, we use a technology called Web API. Web API is a part of ASP.NET, specifically designed for build APIs.
+In the C# world, to build RESTful APIs, we use a technology called Web API. Web API is a part of ASP.NET, designed explicitly for build APIs.
 
 ## Create a new API
 
-To create a new API, we will use the dotnet scaffolding tools. For a basic web app, use the comment
+To create a new API, we use the dotnet scaffolding tools. For a basic web app, use the comment.
 
 ```
 dotnet new webapi -n MyCoolApiProject
 ```
 
-That will make you a new API project called 'MyCoolApiProject'. `cd` into that project and open it with `code .` and run the project with `dotnet watch run`
+That makes you a new API project called 'MyCoolApiProject'. `cd` into that project and open it with `code .` and run the project with `dotnet watch run`.
 
-### The key parts of an Web API project
+### The critical parts of a Web API project
 
 #### StartUp.cs
 
 The Startup.cs contains 2 important methods; `ConfigureServices` and `Configure`
 
-- **ConfigureServices** is an optional (though usually defined) method that is called when the service is initially started. This method is used to configure and register different services for your webserver. Services are classes and libraries that we use in our apps to solve problems, such as database connections and also setting up authentication schemes. This is usually a
+- **ConfigureServices** is an optional (though usually defined) method that is called when the server is started. This method is used to configure and register different services for your webserver. Services are classes and libraries that we use in our apps to solve problems, such as database connections and also setting up authentication schemes.
 
-- **Configure** is how the server will respond to HTTP requests. This method creates what is called the HTTP pipeline. The HTTP pipeline denotes how the request is handled and in what order methods are run. Common tasks here include routing, enforce HTTPs, and establish where static files are.
+- **Configure** is how the server responds to HTTP requests. This method creates what is called the HTTP pipeline. The HTTP pipeline denotes how the request is handled and in what order methods run. Usual tasks here include routing, enforce HTTPs, and establish where static files are.
 
 These methods are usually touch very little.
 
-Sample Startup.cs with comments in line
+Sample Startup.cs with comments inline
 
 ```C#
 
@@ -101,11 +101,11 @@ namespace TestApi5
 
 #### Controllers
 
-> Web API and web apps in general are structure in a MVC architectural pattern. To learn more about this pattern, [**read this page**](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.0) and then come back.
+> Web API and web apps, in general, are structured in an MVC architectural pattern. To learn more about this pattern, [**read this page**](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.0) and then come back.
 
-Controllers are where our logic will take place. Controllers are classes that handle browser requests. They retrieve data from the database (the Models) and create the response for the View. This could be HTML or, for an API, JSON. For example, the controller accepts parameters from a incoming request, queries the database, and then will create the JSON structure to be retured to the view; in our case, a React app.
+Controllers are where our logic takes place. Controllers are classes that handle browser requests. They retrieve data from the database (the Models) and create the response for the View. The View could be HTML or, for an API, JSON. For example, the controller accepts parameters from an incoming request, queries the database, and then creates the JSON structure to be returned to the view; in our case, a React app.
 
-A Sample Controller with comments in line
+A Sample Controller with comments inline
 
 ```C#
 
@@ -115,7 +115,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 
-// All controllers should go into the Contorller namespace, and by extension be in the controller folder
+// All controllers should go into the Controller namespace, and by extension, be in the controller folder
 namespace SampleApi.Controllers
 {
     // enables certain API behaviors: https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#apicontroller-attribute
@@ -143,17 +143,17 @@ namespace SampleApi.Controllers
 }
 ```
 
-Controllers and the Startup.cs are the main part of the an API. In other lessons we will cover talking to databases and using a React app
+Controllers and the Startup.cs are the central part of an API. In other lessons, we cover talking to databases and using a React app.
 
 ### SDG Template
 
-SDG has a template to make developing APIs even easier. To install the template:
+SDG has a template to make developing APIs even more straightforward. To install the template:
 
 ```bash
 dotnet new -i SDG.templates.Web.API
 ```
 
-This has already installed and set up:
+This template has already installed and set up:
 
 - CORS
 - Postgres & EF Core
