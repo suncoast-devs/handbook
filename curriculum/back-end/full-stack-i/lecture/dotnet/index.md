@@ -19,3 +19,7 @@ Linq will cover a powerful tool chain in .NET called LINQ.
 ## [EF Core](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework)
 
 Entity Framework Core is the ORM that we use in .NET Core to talk to our database.
+
+## [Deployment](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/08-deployment)
+
+Using Docker to deploy our apps to Heroku.
