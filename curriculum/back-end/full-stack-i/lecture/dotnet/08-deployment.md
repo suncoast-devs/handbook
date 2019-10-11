@@ -2,7 +2,7 @@
 
 ## Working Sample:
 
-See a full working example at [https://github.com/mdewey/WordApi](https://github.com/mdewey/WordApi). Clone and following along if you want!
+See a full working example at [https://github.com/mdewey/WordApi](https://github.com/mdewey/WordApi). Clone and follow along if you want!
 
 ## Learning the basics
 
@@ -23,7 +23,24 @@ Sample Docker file:
 This file takes our current code, builds it into a container, and then runs in a separate container. This file describes how to build an image that builds and runs our .NET Core application.
 
 ```dockerfile
-2
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0 AS build
+WORKDIR /app
+
+# copy csproj and restore as distinct layers
+
+COPY *.csproj .
+RUN dotnet restore
+
+# copy everything else and build app
+COPY . .
+RUN dotnet publish -c Release -o out
+
+
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.0 AS runtime
+WORKDIR /app
+COPY --from=build /app/out ./
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet WordApi.dll
+
 
 ```
 
@@ -67,9 +84,9 @@ Install the following:
   - [windows premium](https://docs.docker.com/docker-for-windows/install/)
   - [windows home](https://docs.docker.com/toolbox/toolbox_install_windows/)
 
-### set up Heroku (only has to be done once)
+### Set up Heroku (only has to be done once)
 
-_frequency: only has to be done once_
+_**frequency**: only has to be done once per computer_
 
 1. Create a [heroku account](https://heroku.com)
 2. Sign in to the Heroku CLI by running
@@ -86,7 +103,7 @@ heroku login
 
 ### Create the app (once per project)
 
-_frequency: only has to be done once per project_
+_**frequency**: only has to be done once per project_
 
 4. You need to create your app in Heroku first. In your terminal, run
 
@@ -97,7 +114,7 @@ heroku create my-cool-heroku-name
 
 ### Add the database
 
-_frequency: only has to be done once per web app_
+_**frequency**: only has to be done once per web app_
 
 5. Add a database to your new server
 
@@ -107,7 +124,7 @@ heroku addons:create heroku-postgresql:hobby-dev
 
 ### Update the deploy.sh
 
-_frequency: only has to be done once per project_
+_**frequency**: only has to be done once per project_
 
 In the deploy.sh file, this is the set of 4 commands to deploy our app.
 
@@ -127,9 +144,9 @@ In your file, you should update 5 places.
 
 - replace `my-cool-Heroku-name` with the name of your Heroku web app.
 
-#### using the Deploy script
+#### Using the Deploy script
 
-_frequency: only has to be done once per project to set up, once per deployment to deploy our app_
+_**frequency**: only has to be done once per project to set up, run once per deployment to deploy our app_
 
 With the commands updated, we want to run `deploy.sh.
 
