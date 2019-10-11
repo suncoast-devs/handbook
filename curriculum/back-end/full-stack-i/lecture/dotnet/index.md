@@ -4,6 +4,10 @@
 
 This will help get your env set up to start creating .NET apps.
 
+## [Learning the Terms](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00.1-dotnet-terms.md)
+
+This will explain some of the words, acronyms and tools that we will be using
+
 ## [Intro to C#](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/01-intro-to-c-sharp)
 
 During this lecture we will explore the basics of C# and learn about the syntax and ideas behind this language.
