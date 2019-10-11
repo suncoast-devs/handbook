@@ -171,5 +171,5 @@ Rename the file from `deploy.sh` to `deploy.bat`.
 You can run with
 
 ```shell
-.\deploy.bat
+./deploy.bat
 ```
