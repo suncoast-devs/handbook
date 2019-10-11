@@ -16,5 +16,3 @@ public class Comment {
 ```
 
 ## API Definiation
-
-``
