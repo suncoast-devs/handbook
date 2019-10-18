@@ -1,5 +1,3 @@
-list of all lectures in
-
 # unit i
 
 - chapter 1: HTML and CSS
