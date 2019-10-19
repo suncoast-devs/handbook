@@ -1,5 +1,7 @@
 # GIT Cheat Sheet
 
+## Basic
+
 **`git status`** //returns status of the current git repository
 
 **`git init`** //creates a local empty git repository
@@ -44,7 +46,7 @@
 
 **`git reset --hard specificCommitName`** //takes you back to that specific commit (you lose the commit - only for when you really mean it.)
 
-How to push to an already created repo’s master:
+### How to push to an already created repo’s master
 
 **`git init`**
 **`git remote add origin <url to repository>`**
@@ -52,8 +54,27 @@ How to push to an already created repo’s master:
 **`git commit -m "A descriptive commit message"`**
 **`git push origin master`**
 
-How to merge to an existing Branch:
+## How to merge to an existing Branch
 
 **`git checkout branchName`**
 **`git merge --no-ff otherBranch`** // No fast-forwarding
 **`git push origin branchName`**
+
+## Advanced
+
+### Fork an existing repo
+
+**`Click Fork in upper right of repo on Github`** // this creates a copy of the repo on your account
+**`Clone your fork onto your computer`**
+
+### Syncing a Fork to keep it up-to-date with the original ('upstream') repository
+
+**`git fetch upstream`** // check your forks local master branch
+**`git checkout master`** // switch to master branch,
+**`git merge upstream/master`** // merge your changes to upstream/master
+
+### Creating a PR via your Fork
+
+**`git push`** // push your changes up to your forked repo
+**`Open your forked repo on github`**
+**`Create PR from your forked repo on github`**
