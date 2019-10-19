@@ -4,7 +4,7 @@
 set -e
 
 UNIT="$1"
-MODULE="$2"
+MODULE_NAME="$2"
 LESSON_NAME="$3"
 
 # Prompt if missing
@@ -19,7 +19,7 @@ if [ ! -d ./curriculum/${UNIT} ]; then
 fi
 
 # Prompt if missing
-if [ -z "${MODULE}" ]; then
+if [ -z "${MODULE_NAME}" ]; then
   /bin/echo -n "Enter the name of the module: "
   read MODULE_NAME
 fi
