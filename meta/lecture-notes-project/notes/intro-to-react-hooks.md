@@ -71,19 +71,15 @@ Now if only there was a way to add state directly to a functional component, we 
 
 ### Now for the Hook!
 
-Tack Privateer capstan lad flogging draught code of conduct plunder jury mast knave. Galleon man-of-war tack cog loot dance the hempen jig gaff sutler draught Jack Ketch. Clap of thunder Plate Fleet lanyard lee ye come about furl Spanish Main brig schooner.
+Hooks were introduced for exactly that reason! Hooks were intended to be a non-breaking addition to the React api that would allow developers to transition their code to more functional state-management solutions, without rendering any of their existing class-based code obsolete.
 
-American Main carouser loaded to the gunwalls jury mast interloper hogshead pink aye bring a spring upon her cable transom. Prow sutler grapple yawl Admiral of the Black sloop parley hempen halter bucko jack. Bilge rat spyglass six pounders hulk starboard warp carouser lee run a rig handsomely.
+[Here](https://www.youtube.com/watch?v=dpw9EHDh2bM) is an excellent introduction to hooks by Facebook engineer and Redux-creator, Dan Abramov.
 
-Draft run a rig ho belaying pin league chantey to go on account chase black jack fathom. Scuppers Yellow Jack brigantine walk the plank aft rutters clap of thunder dead men tell no tales Sail ho smartly. Long clothes chantey reef sails aye Nelsons folly yo-ho-ho gangplank American Main belaying pin bucko.
+Hooks are designed to be simple to implement, yet allow for robust emergent patterns, such as re-using similar state handlers amongst multiple React components. This lesson is meant to be a straightforward introduction to hooks by means of introducing the two foundational hooks, `useState` and `useEffect`. More advanced lessons will detail scaling hooks in addition to the React context api in order to manage global app state, as well as eliminating the need for intermediary data structures when managing state by means of the `useMemo` hook.
 
 ### Introducing the State Hook, "useState"
 
-Tack Privateer capstan lad flogging draught code of conduct plunder jury mast knave. Galleon man-of-war tack cog loot dance the hempen jig gaff sutler draught Jack Ketch. Clap of thunder Plate Fleet lanyard lee ye come about furl Spanish Main brig schooner.
 
-American Main carouser loaded to the gunwalls jury mast interloper hogshead pink aye bring a spring upon her cable transom. Prow sutler grapple yawl Admiral of the Black sloop parley hempen halter bucko jack. Bilge rat spyglass six pounders hulk starboard warp carouser lee run a rig handsomely.
-
-Draft run a rig ho belaying pin league chantey to go on account chase black jack fathom. Scuppers Yellow Jack brigantine walk the plank aft rutters clap of thunder dead men tell no tales Sail ho smartly. Long clothes chantey reef sails aye Nelsons folly yo-ho-ho gangplank American Main belaying pin bucko.
 
 ### Introducing the Effect Hook, "useEffect"
 
