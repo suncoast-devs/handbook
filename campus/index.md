@@ -2,6 +2,12 @@
 
 Information about our campus. Location, hours of operation, rules, and more.
 
+#### [Campus Location](/handbook/campus/campus)
+
+- location / address
+- building front
+- parking
+
 #### [Welcome to St Petersburg](/handbook/campus/st-pete)
 
 - Parking Information

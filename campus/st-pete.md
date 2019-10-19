@@ -2,17 +2,10 @@
 
 Information about downtown St Pete for folks from out of town. Parking garages, dining, entertainment, etc.
 
-The mayor of St Petersburg is Rick Kriseman.
+The mayor of St Petersburg is [Rick Kriseman](http://www.stpete.org/mayor_s_office/mayor_s_biography.php).
 
-## Campus Location
-
-Our campus is located at:
-2220 Central Ave
-St. Petersburg, FL 33712
-
-## Parking Map
-
-<iframe src="https://www.google.com/maps/d/u/3/embed?mid=1kPO8ZSzBwbTIN1961cqPOn_bwTaYi005" width="640" height="480"></iframe>
+- [City Website](http://www.stpete.org/)
+- [Local Weather](https://www.accuweather.com/en/us/saint-petersburg-fl/33713/minute-weather-forecast/14705_pc)
 
 ## Places in St. Petersburg
 
