@@ -117,6 +117,8 @@ Now, note that the above example ignores the React component lifecycle for sake 
 
 Also, we are just demonstrating updating a `string`, but your state value can ba any data type you want (and is inferred based on what you initialize it as).
 
+#### Example:
+
 Let's update our `Counter` functional component from the intro to include its own state with the useState hook!
 
 ```js
@@ -147,12 +149,178 @@ Now we can completely remove class-based components from our app ...or can we?
 
 ### Introducing the Effect Hook, "useEffect"
 
+While `useState` covers the basics of adding a piece of state and providing a means of updating it manually, we still can't quite do everything possible in class-based components. Without going into too much depth, there are common patterns utilizing class lifecycle methods that `useState` can't quite handle. The lifecycles methods `componentDidMount` and `componentDidUpdate` are often used to _invoke code as a side effect of a component mounting or updating_. Although complex side-effects are discouraged in React, it is still very common to do things such as _make an api request when a component mounts_, or _invoke an external function when a state value updates_. So, in order for hooks to replace class-based components, we need a way to listen to state value changes and invoke code as a side-effect...
 
+In comes our second "hook", `useEffect`!
+
+We can access the second hooks in the same fashion as the `useState` hook:
+
+```js
+// option A
+import React from 'react';
+// inside our functional component...
+React.useEffect();
+
+// option B
+import React, { useEffect } from 'react';
+// inside our functional component...
+useEffect();
+```
+
+#### Using useEffect to invoke "side-effects"
+
+The `useEffect` hook takes two parameters: _a callback function to invoke_ and _an array of values (from setState) to listen to and invoke the callback function when they update_. That's hard to understand with words, so let's just look at in action. We're going to build on our Counter component:
+
+```js
+import React, { useState, useEffect } from 'react';
+
+const Counter = (props) => {
+  const [count, setCount] = useState(0);
+
+  // This is new! we log the count value to the console every time it updates
+  useEffect(() => {
+    console.log(count);
+  }, [count]);
+
+  const incrementCount = () => {
+    const newCount = count + 1;
+
+    setCount(newCount);
+  };
+
+  return (
+    <div>
+      <p>Count: {count} <button onClick={incrementCount} /></p>
+    </div>
+  );
+}
+```
+
+In the example above, our _callback function_:
+```js
+() => {
+  console.log(count);
+}
+```
+will be invoked every time `count`, as supplied in `[count]` changes.
+
+Now we have side-effects! But we still can't simulate a class-component's ability to invoke code when a component mounts... 🤔 yet.
+
+#### Using useEffect to invoke code on component mount
+
+Here's a nifty trick: _By passing an empty array as the second parameter to the useEffect hook, your callback function will be invoked only once, on mount!_ 💥💥💥 
+
+Although not obvious, this is a very powerful technique which gives us almost all of the functionality previously provided by class-based components. This is very useful for things like fetching data only once, on component mount.
+
+#### Example:
+
+```js
+import React, { useState, useEffect } from 'react';
+
+const Counter = (props) => {
+  const [count, setCount] = useState(0);
+
+  // This useEffect hook is invoked only the first time the component mounts
+  useEffect(() => {
+    console.log(`My component mounted, and my initial count value is ${count}.`);
+  }, []);
+
+  // This useEffect hook is invoked every time count changes (including when it is first mounted ⚠️)
+  useEffect(() => {
+    console.log(`My new count value is ${count}.`);
+  }, [count]);
+
+  const incrementCount = () => {
+    const newCount = count + 1;
+
+    setCount(newCount);
+  };
+
+  return (
+    <div>
+      <p>Count: {count} <button onClick={incrementCount} /></p>
+    </div>
+  );
+}
+```
 
 ### Full class-based component converted to a functional component using hooks 🎉
 
-Tack Privateer capstan lad flogging draught code of conduct plunder jury mast knave. Galleon man-of-war tack cog loot dance the hempen jig gaff sutler draught Jack Ketch. Clap of thunder Plate Fleet lanyard lee ye come about furl Spanish Main brig schooner.
+With the basics of the `useState` and `useEffect` hooks in-hand, we can rewrite a moderately complex class-based component which fetches data and has an updateable state value, and rewrite it to be a completely functional component:
 
-American Main carouser loaded to the gunwalls jury mast interloper hogshead pink aye bring a spring upon her cable transom. Prow sutler grapple yawl Admiral of the Black sloop parley hempen halter bucko jack. Bilge rat spyglass six pounders hulk starboard warp carouser lee run a rig handsomely.
+#### Final Example:
 
-Draft run a rig ho belaying pin league chantey to go on account chase black jack fathom. Scuppers Yellow Jack brigantine walk the plank aft rutters clap of thunder dead men tell no tales Sail ho smartly. Long clothes chantey reef sails aye Nelsons folly yo-ho-ho gangplank American Main belaying pin bucko.
+_Class-Based Component:_
+```js
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  state = {
+    count: 0,
+  };
+
+  componentDidMount() {
+    // getting an initial value from a remote source...
+    const initialSavedValue = await someFetchFunction();
+
+    this.setState({
+      count: initialSavedValue;
+    });
+  }
+
+  incrementCount = async () => {
+    const newValue = this.state.count + 1;
+
+    // then updating the local component state
+    this.setState({ count: newCount });
+
+    // saving the updated value to a remote source...
+    saveMyValueExternally(newValue);
+  };
+
+  render() {
+    return (
+      <div>
+        <p>Count: {this.state.count} <button onClick={this.incrementCount} /></p>
+      </div>
+    );
+  }
+}
+```
+
+_Equivalent Functional Component:_
+```js
+import React, { useState, useEffect } from 'react';
+
+const Counter = (props) => {
+  const [count, setCount] = useState(0);
+
+  // This useEffect hook is invoked only the first time the component mounts
+  useEffect(() => {
+    // getting an initial value from a remote source...
+    const initialSavedValue = await someFetchFunction();
+
+    setCount(initialSavedValue);
+  }, []);
+
+  // This useEffect hook is invoked every time count changes (including when it is first mounted ⚠️)
+  useEffect(() => {
+    // saving the updated value to a remote source...
+    saveMyValueExternally(newValue);
+  }, [count]);
+
+  const incrementCount = () => {
+    const newCount = count + 1;
+
+    setCount(newCount);
+  };
+
+  return (
+    <div>
+      <p>Count: {count} <button onClick={incrementCount} /></p>
+    </div>
+  );
+}
+```
+
+This is just the beginning! Stay tuned for more lessons detailing the power of hooks 🎣🔥
