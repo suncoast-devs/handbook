@@ -38,7 +38,30 @@ Git is a distributed source control system and is how we will be managing our pr
 - The `.` in `git add .` takes all the changes and adds them to the staging area.  
 - Once you stage your changes, you want to commit them by typing `git commit -m 'a short commit message'`
 - The `- m` stands for message and is followed by a short or descriptive message you put between quotes.
-- If you do not type `-m` and a message you may open `vim.`  Vim is a powerful text editor built into terminal.  If it opens, simply type `:wq` to save ('write') and quit Vim.  
+- If you do not type `-m` and a message you may open `vim.`  Vim is a powerful text editor built into terminal.  If it opens, simply type `:wq` to save ('write') and quit Vim. You can also close that window/tab and carry on.
+- Once you have commited your changes you want to `push` those changes to Github by typing `git push`.  
+- Make sure to add, commit and push often!
+
+### Branches
+
+- Branching is how we can maintain various versions of one project.
+- Branchings is great if you are trying something out and not sure it will work _and_ do not want to risk breaking your existing code.
+- When you initialize Git it creates a `master` branch.  
+- If you want to create a new branch type `git branch <name-of-branch>` in the commandline within your project.  This creates a branch but does not take you to the branch.
+- You _must_ `checkout` the branch in order to edit it.  Type `git checkout <name-of-branch>` to work on that branch.
+- The command `git checkout -b <name-of-branch>` will create and checkout (take you) to that branch.
+
+### Merging a branch back into master
+
+- If you like the work you have done on your new branch make sure to `git add .`, `git commit -m 'message'`, and `git push` as usual.
+- Return to your master branch by typing `git checkout master`
+- You can merge your branch into master from the command line by typing `git merge <name-of-branch>` or by creating a [`pull request`](https://help.github.com/en/articles/about-pull-requests)
+- Once it is merged into master, add, commit and push your master branch to github.
+
+### Tips
+
+- Remember to commit often!  
+- The more commits you have the easier it will be to [`revert to a previous commit`](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert) your code if you make a big mistake.
 
 
 ## Possible Assignments
