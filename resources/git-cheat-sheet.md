@@ -62,10 +62,13 @@
 
 ## Advanced
 
+If you want to hack on open source projects (incuding this handbook) you will the following steps: 
+
 ### Fork an existing repo
 
 **`Click Fork in upper right of repo on Github`** // this creates a copy of the repo on your account
 **`Clone your fork onto your computer`**
+**`git checkout -b <branch-name>`** // create and check out a branch locally for your changes
 
 ### Syncing a Fork to keep it up-to-date with the original ('upstream') repository
 
