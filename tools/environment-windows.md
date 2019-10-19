@@ -1,20 +1,22 @@
 # Setting up your Development Environment
 
-As a developer on the Windows platform, one of our main tools is `Powershell`. `Powershell` is the command line interface (or shell) we use to run commands and interact with our computer. Using the shell seems harder at first, but with practice, this is a much more efficient way of using our computers.
+## Powershell
 
-A shell is a program that allows us to interact with our computer by executing commands and seeing the results. For a tutorial on using a shell, see [this page](/handbook/skills/command-line)
+As a developer on the Windows platform, one of our main tools is `Powershell`. `Powershell` is the command line interface (or shell) we use to run commands and interact with our computer. Using the shell seems difficult at first, but with practice, this becomes a much more efficient way of using our computers. For a tutorial on using the shell, see [this page.](/handbook/skills/command-line)
 
-To open `Powershell`, open your `start` menu and type `Powershell`, this searches your system and give you the option to start it, just like any other program.
+To open `Powershell`, open your `start` menu or type \(Win + R\), then type `Powershell`, this searches your system and give you the option to start it, just like any other program.
+
 
 ## Git
 
 ### What
 
-Git is a distributed source control system. Git allows us to work on and collaborate on different projects with little to no headache.
+Git is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
 
 ### Why
 
-Git is how we manage our files and share code. It can be rough at first, but with practice, it becomes second nature.
+Git manages our files and allows us to share code. It can be rough to use at first, but with practice, it becomes second nature.
 
 ### How
 
@@ -39,7 +41,7 @@ git config --global user.name "Replace This With Your Full Name"
 git config --global user.email email-address-you-used-at-github@example.com
 ```
 
-Instead of `"Replace This With Your Full Name"` use your fill name.
+Instead of `"Replace This With Your Full Name"` use your full name, e.g., "Jane Q Public" or "John Q Public".
 
 Instead of `email-address-you-used-at-github@example.com` use the same email address you gave to GitHub.
 
@@ -53,11 +55,11 @@ git config --global hub.protocol https
 
 ### What
 
-Node is a runtime for javascript. Using node, we can run javascript on our machines without having to be in a browser.
+Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser.
 
 ### Why
 
-For the first part of the training, we are concentrating on the HTML/CSS and JavaScript. Many useful tools for those languages run on node.
+During the first part of training, we are concentrating on HTML/CSS and JavaScript. Since many useful tools for those languages run on node we can simplify our efforts by working in this environment.
 
 ### How
 
@@ -71,7 +73,7 @@ Yarn is a package manager for node packages. Yarn allows us to install and use l
 
 ### Why
 
-We use yarn to run our scripts and as well as installing packages. Package management more useful and meaningful the more we dive deeper in JavaScript.
+We use yarn to run our scripts and as well as install packages. Package management software becomes more meaningful and useful as we dive deeper in JavaScript.
 
 ### How
 
@@ -81,11 +83,11 @@ Follow [the instructions](https://yarnpkg.com/lang/en/docs/install/) for Windows
 
 ### What
 
-Netlify is a static website hosting company. It allows for easy deploy of your websites, so they are on the web!
+Netlify is an all-in-one platform for automating modern web projects. It is a static website hosting company that provides easy deployment of your websites. Plus they are on the web!
 
 ### Why
 
-We use Netlify this to host our projects to see how the deploy process works, and we can share our projects with other people.
+We use Netlify to host our projects and learn how the deploy process works. We are also able to share our projects with other people.
 
 ### How
 
@@ -117,11 +119,11 @@ App-App is a tool created by SDG for creating projects using HTML, CSS, and Java
 
 ### Why
 
-App-App ensures a good project folder setup and includes all the needed tools.
+App-App ensures correct project folder setup and includes all the needed tools.
 
 ### How
 
-With node installed, from Powershell, run the following command (current directory does not matter):
+With Node installed, from Powershell, run the following command (current directory does not matter):
 
 ```sh
 npm install --global app-app
