@@ -50,6 +50,7 @@ Git is a distributed source control system and is how we will be managing our pr
 - If you want to create a new branch type `git branch <name-of-branch>` in the commandline within your project.  This creates a branch but does not take you to the branch.
 - You _must_ `checkout` the branch in order to edit it.  Type `git checkout <name-of-branch>` to work on that branch.
 - The command `git checkout -b <name-of-branch>` will create and checkout (take you) to that branch.
+- Continue to add and commit as usual, but the first time you `push` your branch to Github, it will prompt you to `git push --set-upstream origin <name-of-branch>`.  Run that command and it will create a new `upstream` branch on Github.
 
 ### Merging a branch back into master
 
@@ -61,30 +62,19 @@ Git is a distributed source control system and is how we will be managing our pr
 ### Tips
 
 - Remember to commit often!  
-- The more commits you have the easier it will be to [`revert to a previous commit`](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert) your code if you make a big mistake.
-
+- The more commits you have the easier it will be to [`revert to a previous commit`](https://www.atlassian.com/git/tutorials/undoing-changes/git-revert) if you make a big mistake.
 
 ## Possible Assignments
 
-- list and link to possible assignments to follow up the lecture
-- should include an 3 options. an 'easy', 'medium' 'hard' (i do not like those words)
-- 1 for if the students struggled to grasp
-- 1 for normal
-- 1 if the students really grasped the concept or need a challenge
+- Create a repo, add a file, change a file, stage your changes, commit your changes and push to Github.
 
 ## Additional Resources
 
 - [SDG's Git Cheat Sheet](https://suncoast.io/handbook/resources/Git-Cheat-Sheet.md)
 - [Github Help](https://help.github.com/)
-- [Bitbucket Git tutorial](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud) - Bitbucket is a web based git control system like Github but owned and maintained by Atlassian
 - [TIG](https://github.com/jonas/tig) - Tig is a text-mode interface you can use from termainl/powershell.  
 
 ## Recommended Practice:
 
-- An (optional) list of external practice resources a student might use to exercise these learning objectives further,
-  e.g. Codewars, Flexbox Froggy, etc.
+- [Bitbucket Git tutorial](https://www.atlassian.com/git/tutorials/learn-git-with-bitbucket-cloud) - Bitbucket is a web based git control system like Github but owned and maintained by Atlassian.
 
-## Next Lectures
-
-- What are some topics/ideas that would make for natural progress for the next lecture
-- either to start if every one 'gets it' or to act as a preview for what is to come
