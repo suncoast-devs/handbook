@@ -19,23 +19,26 @@ There is no previous knowledge required.
 
   ```
   for (initializer; exit-condition; final-expression) {
-  // code to run
+  statement // code to run
   }
   ```
 
   The keyword **for**, followed by some parentheses.
   Inside the parentheses we have three items, separated by semi-colons:
 
-  An **initializer** — this is usually a variable set to a number, which is incremented to count the number of times the loop has run. It is also sometimes referred to as a counter variable.
-  An **exit-condition** — as mentioned before, this defines when the loop should stop looping. This is generally an expression featuring a comparison operator, a test to see if the exit condition has been met.
-  A **final-expression** — this is always evaluated (or run) each time the loop has gone through a full iteration. It usually serves to increment (or in some cases decrement) the counter variable, to bring it closer to the exit condition value.
-  Some curly braces that contain a block of code — this code will be run each time the loop iterates.
+  An **initializer** — this is generally a variable that you assign a number that means the beginning of the loop.
+
+  An **exit-condition** — this is generally **initializer** variable that you assign a number that means the end of the loop.
+
+  A **final-expression** — It usually uses to increment the **initializer** variable, and it brings **initializer** variable closer to the **exit condition value**.
+
+  A **statement** - It is inside the curly braces. This code will be run each time the loop iterates.
 
   In the following example, the sugarSpoon runs 5 times, with values of sugarSpoon 0 through 4.
 
 ```
 for (let sugarSpoon = 0; sugarSpoon < 5; sugarSpoon++) {
-  console.log('My cup of coffee has ' + sugarSpoon + 'spoon(s) of sugar');
+  console.log('My cup of coffee has ' + sugarSpoon + ' sugar\' spoon(s)';
 }
 ```
 
@@ -44,11 +47,11 @@ for (let sugarSpoon = 0; sugarSpoon < 5; sugarSpoon++) {
 
   ```
   do
-  statement  // code to run
+  statement // code to run
   while (condition);
   ```
 
-  **statement** is always executed once before the condition is checked. If condition is true, the statement executes again. At the end of every execution, the condition is checked. When the condition is false, execution stops and control passes to the statement following **do...while**.
+  A **statement** - this is always executed once before the **condition** is checked. If **condition** is true, the statement executes again. At the end of every execution, the **condition** is checked. When the **condition** is false, execution stops and control passes to the statement following **do...while**.
 
   In the following example, the do loop iterates at least once and reiterates until sugarSpoon is no longer less than 5.
 
@@ -56,6 +59,29 @@ for (let sugarSpoon = 0; sugarSpoon < 5; sugarSpoon++) {
   let sugarSpoon = 0;
   do {
   sugarSpoon += 1;
-  console.log('My cup of coffee has ' + sugarSpoon + 'spoon(s) of sugar');
+  console.log('My cup of coffee has ' + sugarSpoon + ' sugar\' spoon(s)');
   } while (sugarSpoon < 5);
   ```
+
+- **While loop**
+  The **while** loop executes a specified **statement** as long as the test condition evaluates to true. The **condition** is evaluated before executing the statement.
+
+```
+while (condition)
+  statement
+```
+
+In the following example, the while loop iterates will run until sugarSpoon < 5.
+
+```
+let sugarSpoon = 0;
+
+while (sugarSpoon < 5) {
+  sugarSpoon++;
+}
+console.log('My cup of coffee has ' + sugarSpoon + ' sugar\' spoon(s)');
+```
+
+## Resource
+
+https://developer.mozilla.org/en-US/
