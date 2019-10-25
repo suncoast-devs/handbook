@@ -25,3 +25,5 @@
 ## [What happens when you enter a URL in the browser](/handbook/resources/what-happens-when-enter-url-in-browser)
 
 ## [Sample Interview Questions](/handbook/resources/interview-practice/sample-questions)
+
+## [Week 13 guide](/handbook/resources/week-13)
