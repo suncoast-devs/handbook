@@ -15,6 +15,10 @@ const pages = [
     text: 'Flexbox',
   },
   {
+    path: 'grid',
+    text: 'Grid',
+  },
+  {
     path: 'floats',
     text: 'Floats',
   },
