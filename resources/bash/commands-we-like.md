@@ -24,7 +24,7 @@ The following commands are the basic commands that we at SDG teach new developer
 
 #### What does it do?
 
-This simple command stands for "present working directory." This command shows you which directory you currently are in by printing the current directory. Knowing where you are, helps you to know what commands you can run and what tools, programs, and files you can manipulate.
+This simple command stands for "print working directory." This command shows you which directory you currently are in by printing the current directory. Knowing where you are, helps you to know what commands you can run and what tools, programs, and files you can manipulate.
 
 #### When do use pwd?
 
