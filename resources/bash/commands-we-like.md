@@ -245,7 +245,7 @@ To learn more about git [check this out](http://try.github.io/)
 
 Hub is the last bit of glue that ties our local git code and repositories to GitHub. Hub is a command line program that lets you more easily work with GitHub, the place where we store our code.
 
-#### When do use hub?
+#### When to use hub?
 
 This tool is mostly used in the background to set up and help manage your repositories. The two useful commands are:
 
