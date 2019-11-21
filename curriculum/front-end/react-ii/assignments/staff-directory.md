@@ -25,7 +25,7 @@ Over the last 6 weeks, you have learn many concepts about front-end development.
     - [ ] Each employee item should link to the `employee page` for that employee. The url should look like: `/employee/${employeeId}`
   - [ ] An Employee Page
     - [ ] This should display all the details for an employee, All the details that are on a employee should be listed on the page.
-    - [ ] The API endpoint to use will look like this:[https://sdg-staff-directory-app.herokuapp.com/api/${companyName}/employees/${employeeId}].
+    - [ ] The API endpoint to use will look like this:[https://sdg-staff-directory-app.herokuapp.com/api/\${companyName}/employees/\${employeeId}].
   - [ ] Add a Employee Page
     - [ ] This should allow the usre to add all of the fields for an employee.
     - [ ] The UI should let the user know that the person was added to the API successfully
