@@ -21,8 +21,8 @@ Over the last six weeks, you have learned many concepts about front-end developm
 
   - [ ] View All Employees page
     - [ ] This page should list all the employees for your company
-    - [ ] Each employee should display the employee's full name, job title, full-time status, and profile image. All employees that are returned by the `Get all employees endpoint`, [https://sdg-staff-directory-app.herokuapp.com/api/\${companyName}/employees](https://sdg-staff-directory-app.herokuapp.com/api/${companyName}/employees).
-    - [ ] Each employee item should link to the `employee page` for that employee. The URL should look like: `/employee/${employeeId}`
+    - [ ] Each employee should display the employee's full name, job title, full-time status, and profile image. All employees that are returned by the `Get all employees endpoint`, `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees`.
+    - [ ] Each employee item should link to the `employee page` for that employee. The URL should look like: `/employee/:employeeId`
   - [ ] An Employee Page
 
     - [ ] This should display all the details for an employee, The details page should list the following:
@@ -38,7 +38,7 @@ Over the last six weeks, you have learned many concepts about front-end developm
       - [ ] PTO hours
       - [ ] profile image
 
-    - [ ] The API endpoint to use will look like this:[https://sdg-staff-directory-app.herokuapp.com/api/${companyName}/employees/${employeeId}].l
+    - [ ] The API endpoint to use will look like this: `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees/:employeeId`
 
   - [ ] Add a Employee Page
     - [ ] This should allow the user to add all of the fields for an employee.
