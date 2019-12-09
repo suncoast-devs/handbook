@@ -60,7 +60,8 @@ https://image.tmdb.org/t/p/w185_and_h278_bestv2/4p1N2Qrt8j0H8xMHMHvtRxv9weZ.jpg
 
 ### Adventure Mode
 
-- [ ] Sort the films by release date, rather than as they appear in the file.
+- [ ] Sort the films by release date, rather than as they appear in the file.'
+- [ ] Add a search bar that filters down the shown results. Note that is not making a new API call, just `filter`ing the current list
 - [ ] Display the release date in a formatted manner, e.g. "May 24th", rather than `1989-05-24`. _HINT:_ moment.js or date-fns
 
 ### Epic Mode

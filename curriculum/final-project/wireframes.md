@@ -31,3 +31,5 @@ The elevator pitch and wire frames should be treated as a detailed road map. Whe
 
 - [Adobe XD](https://www.adobe.com/products/xd.html), _free_ software from Adobe for designing and prototyping website and mobile apps.
 - [Moqups](https://moqups.com/), a web-based tool for collaborating on wireframes, mockups and prototypes.
+- [Figma](https://www.figma.com/), a web-based tool currently very popular among developers
+- [Sketch](https://www.sketch.com/) a web-based tool that popular among designers

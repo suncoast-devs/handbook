@@ -13,7 +13,6 @@ You'll identify the main `Component`s on the page and create React components fo
 ## Stretch Objectives
 
 - Understand and use "props" in React
-- Use `Array.prototype.map` to render a collection of components in React
 
 ### Explorer Mode
 
@@ -21,7 +20,6 @@ You'll identify the main `Component`s on the page and create React components fo
 - [ ] Create your React app
 - [ ] Your CSS should be in `index.css`
 - [ ] You should have at _least_ two components...
-- [ ] Clear out the implementation in the `render` method of `App` and have it render your main components.
 - [ ] Use props to try to reuse components
 
 ### Adventure Mode

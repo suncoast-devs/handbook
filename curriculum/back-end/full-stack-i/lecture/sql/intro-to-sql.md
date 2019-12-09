@@ -111,7 +111,7 @@ CREATE TABLE books (
   title           TEXT NOT NULL,
   primary_author  TEXT,
   year_published  INT,
-  id SERIAL PRIMARY KEY,
+  id SERIAL PRIMARY KEY
 );
 ```
 
