@@ -32,7 +32,7 @@ Today you learned a new language and will be starting to explore it more in dept
       **NOTE** You will be translating this from the event driven paradigm of HTML to the more procedural paradigm of a console application.
 - [ ] For Explorer Mode, you do not have to put in menu or other user experience "nice to haves", focus on the just the core algorithm.
 
-#### Wireframes and Ideas
+#### Capstone
 
 - [ ] Work on your wireframes and ironing out your idea. Work with your instructors and peers to work out the kinks. Ideas should be approved by tomorrow.
 

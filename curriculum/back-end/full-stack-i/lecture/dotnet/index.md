@@ -4,7 +4,7 @@
 
 This will help get your env set up to start creating .NET apps.
 
-## [Learning the Terms](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00.1-dotnet-terms.md)
+## [Learning the Terms](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00.1-dotnet-terms)
 
 This will explain some of the words, acronyms and tools that we will be using
 
