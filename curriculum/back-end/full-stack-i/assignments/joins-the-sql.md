@@ -20,23 +20,23 @@ After that, this weekend is the next big push your final project, work on the HT
 
 ### Explorer Mode
 
-- [ ] In your Company Database, add a table named:
-  - C#: `Departments`. Give this table a few columns
-- [ ] Add a Foreign key named:
-  - C# `DepartmentId` to your `Employee` Table
-- [ ] Add tables named:
-  - C#: `Products` and `Orders`.
-    - `Orders` should have the columns
-      - `OrderNumber` as string
-      - `Id` as a primary key
-      - `DatePlaced` as datetime
-      - `Email` as string
-    - `Product` should have the columns
-      - `Id` as a primary key
-      - `Price` as double
-      - `Name` as string
-      - `Description` as string
-      - `NumberInStock` as int
+- [ ] In your Company Database, add a table named `Departments`. Give this table a few columns:
+  - `Id` as a primary key
+  - `DepartmentName` as text
+  - `Building` as text
+- [ ] Add a Foreign key `DepartmentId` to your `Employee` Table
+- [ ] Add tables named `Products` and `Orders`.
+  - `Orders` should have the columns
+    - `OrderNumber` as string
+    - `Id` as a primary key
+    - `DatePlaced` as datetime
+    - `Email` as string
+  - `Product` should have the columns
+    - `Id` as a primary key
+    - `Price` as double
+    - `Name` as string
+    - `Description` as string
+    - `NumberInStock` as int
 - [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the 3 tables (`Orders`, `Products` and `ProductOrders`) and foreign keys needed for this to happen
 
 * [ ] Create queries that can do the following:
@@ -52,12 +52,11 @@ After that, this weekend is the next big push your final project, work on the HT
   - [ ] Removing a product from an order
 
 - [ ] Turn in the above queries as a gist
-- [ ] Work on your final project HTML. DO not sleep on this. You have the time and resources to get a good bit of this done this weekend.
-- [ ] Complete your first draft of your database schema for your final project.
 
 ### Adventure Mode
 
-- [ ] Work on the Koans.
+- [ ] Work on your final project. Do not sleep on this.
+- [ ] Start drafting of your database schema for your final project.
 - [ ] Give these [SQL Koans](https://sqlkoans.com/) a try.
 
 ### Epic Mode

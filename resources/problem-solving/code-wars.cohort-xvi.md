@@ -23,14 +23,18 @@ Challenges we like:
 |  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     | javascript |
 |  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     | javascript |
 |  5  | Advanced Pig Latin              |    https://www.codewars.com/kata/533c46b140aafec05b000d31     | javascript |
+|  8  | Parse nice int from char        |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
+|  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     | javascript |
+|  7  | Two fighters, one winner        |     https://www.codewars.com/kata/two-fighters-one-winner     | javascript |
+|  8  | Rock Paper Scissors             |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     | javascript |
+|  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
+|  6  | Create Phone Number             |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     | javascript |
 |  -  | -                               |                               -                               |     -      |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Tip Calculator                  |         https://www.codewars.com/kata/tip-calculator          | javascript |
-|  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     | javascript |
 |  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
-|  8  | Rock Paper Scissors             |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     | javascript |
 |  8  | Even or Odd                     |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     | javascript |
-|  8  | Parse nice int from char        |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
+|  8  | Parse nice int from char        |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |     C#     |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
@@ -43,14 +47,11 @@ Challenges we like:
 |  7  | Square every digit              |    https://www.codewars.com/kata/546e2562b03326a88e000020     | javascript |
 |  8  | Opposites Attract               |        https://www.codewars.com/kata/opposites-attract        |     C#     |
 |  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
-|  8  | Parse nice int from char        |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |     C#     |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
 |  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
 |  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
 |  7  | Shortest Word                   |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
-|  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     | javascript |
-|  6  | Create Phone Number             |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     | javascript |
