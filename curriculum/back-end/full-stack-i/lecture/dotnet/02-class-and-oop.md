@@ -39,14 +39,12 @@
   scooby.Bark();
   ```
 
-````
-
 - But not all dogs sound the same!
 - We can use `properties` to help describe a dog
 - Properties have types and can be set set and accessed at any time.
 - Properties allow us to have different values per instance of the class
 
-``` C#
+```C#
 public class Dog
 {
     public string BarkSound { get; set; }
@@ -70,7 +68,7 @@ public class Dog
       BarkSound = "Howdy Y'all!"
   };
   huckleBerry.Bark();
-````
+```
 
 ## Inheritance
 

@@ -16,7 +16,6 @@ Today you learned a new language and will be starting to explore it more in dept
 
 #### .NET
 
-- [ ] Install your [dev env](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00-env-set-up)
 - [ ] Create a new console application that will store the list of dinosaurs they have in the park
 - [ ] You will be creating a class for your dinosaurs
 - [ ] a Dinosaur has the following properties
@@ -34,23 +33,22 @@ Today you learned a new language and will be starting to explore it more in dept
     - [ ] This command will let the user type in the information for a dinosaur and add it to the list
   - [ ] Remove a dinosaur
     - [ ] This will delete a dinosaur by name
+  - [ ] Transfer
+    - [ ] Add the ability to update a dinosaur to a new enclosure
   - [ ] quit the program
-  - [ ] this will stop the program
+    - [ ] this will stop the program
 
 #### Capstone
 
 - [ ] Work on your wireframes and ironing out your idea. Work with your instructors and peers to work out the kinks. Ideas should be approved by tomorrow.
+- [ ] If you idea is approved start coding.
+- [ ] Start thinking and mapping out your ERD for your database
 
 ### Adventure Mode
 
-- [ ] Add the ability to update a dinosaurs
-- [ ] Add a nice user experience to the console app. Include features such as
-      `Try again` and `Welcome, press enter to start`
-- [ ] Start thinking and mapping out your ERD for your datbase
+- [ ] Eventually we will be using a MVC application structure. To prepare for this, refactor your code to have all your business logic in separate class and all your console interaction in the main class.
 
 ### Epic Mode
-
-- [ ] Eventually we will be using a MVC application structure. To prepare for this, refactor your code to have all your business logic in separate class and all your console interaction in the main class.
 
 ## Additional Resources
 

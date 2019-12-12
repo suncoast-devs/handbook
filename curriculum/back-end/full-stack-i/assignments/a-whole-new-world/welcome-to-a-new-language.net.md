@@ -6,7 +6,7 @@ Today you learned a new language and will be starting to explore it more in dept
 
 - Set up your dev machines
 - Create a simple console application to ensure your machine is set up correctly
-- start working through your wireframes for your capstone
+- Continue working through your wireframes for your capstone
 
 ## Requirements
 
