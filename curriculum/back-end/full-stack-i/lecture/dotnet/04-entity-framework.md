@@ -24,6 +24,15 @@ Using the dotnet cli, create a new project
 
 ### 2. Add the needed Libraries
 
+Before we add any project specific packages, we need to install the global tools to work with EF Core
+
+``` bash 
+  dotnet tool install --global dotnet-ef
+```
+This will allow us to use the EF Core tools to work with our databases.
+
+Next we need to install project specific tools.
+
 In order to talk to our database, we have to tell our code how to talk to our database and what language.
 
 ​- How we talk to the database aka ORM (EntityFramework)
