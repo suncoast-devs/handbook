@@ -8,6 +8,10 @@ This will help get your env set up to start creating .NET apps.
 
 This will explain some of the words, acronyms and tools that we will be using
 
+## [Setting Up a New Project](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00.2-creating-a-new-project)
+
+This step by step guide will show you how to create a new project and get it on GitHub
+
 ## [Intro to C#](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/01-intro-to-c-sharp)
 
 During this lecture we will explore the basics of C# and learn about the syntax and ideas behind this language.

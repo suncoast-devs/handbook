@@ -2,7 +2,7 @@
 
 With the wireframes created, we need to start breathing life into our application. The next step would be to create HTML & CSS. This is the next step because, remember, it all comes down to HTML. This is what the user sees
 
-_NOTE_: Really take advantage of this weekend to get make progress on your capstone. Like the last 6 weeks, the next 6 weeks will go by _fast_.
+_NOTE_: Really take advantage of this time to make progress on your capstone. Time seems to speed up as we approach the final stretch.
 
 ## Objectives
 
@@ -10,7 +10,7 @@ _NOTE_: Really take advantage of this weekend to get make progress on your capst
 
 ## Requirements
 
-- Using `app-app`tAo start implementing your HTML
+- Using `app-app` to start implementing your HTML
 
 ### Explorer Mode
 
