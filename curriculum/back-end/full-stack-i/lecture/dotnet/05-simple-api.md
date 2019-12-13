@@ -12,9 +12,9 @@ A RESTful API is an API designed and built around the idea that everything in my
 
 #### A Resource
 
-A Resource is considered to be any named `thing` inside the system. A resource could be an image, a document, an object, a user, or a service; which in turn, has a unique URI (universal resource identifier). This URI typically is a URL. These URLs should always reflect `things,` not actions. Actions in a RESTful API are described using the HTTP Verbs of the request.
+A Resource is any named `thing` inside the system. A resource could be an image, a document, an object, a user, or a service, which, in turn, has a unique URI (universal resource identifier). This URI typically is a URL. These URLs should always reflect `things,` not actions. Actions in a RESTful API are described using the HTTP Verbs of the request.
 
-Good URI/URLs:
+Useful URI/URLs:
 
 - https://www.sdg.com/api/students/4
 - https://www.sdg.com/api/food/ice cream
@@ -43,9 +43,9 @@ That makes you a new API project called 'MyCoolApiProject'. `cd` into that proje
 
 The Startup.cs contains 2 important methods; `ConfigureServices` and `Configure`
 
-- **ConfigureServices** is an optional (though usually defined) method that is called when the server is started. This method is used to configure and register different services for your webserver. Services are classes and libraries that we use in our apps to solve problems, such as database connections and also setting up authentication schemes.
+- **ConfigureServices** is an optional (though usually defined) method that is called when the server is started. This method configures and registers different services for your webserver. Services are classes and libraries that we use in our apps to solve problems, such as database connections and also setting up authentication schemes.
 
-- **Configure** is how the server responds to HTTP requests. This method creates what is called the HTTP pipeline. The HTTP pipeline denotes how the request is handled and in what order methods run. Usual tasks here include routing, enforce HTTPs, and establish where static files are.
+- **Configure** is how the server responds to HTTP requests. This method creates what is called the HTTP pipeline. The HTTP pipeline denotes how requests to your web server are handled and in what order methods run. Usual tasks here include routing, enforce HTTPs, and establish where static files are.
 
 These methods are usually touch very little.
 
@@ -62,39 +62,39 @@ using Microsoft.Extensions.Hosting;
 
 namespace TestApi5
 {
-    public class Startup
-    {
+ public class Startup
+ {
 
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+ public Startup(IConfiguration configuration)
+ {
+ Configuration = configuration;
+ }
 
-        public IConfiguration Configuration { get; }
+ public IConfiguration Configuration { get; }
 
-        // This method gets called by the runtime. Use this method to add services to the container.
-        public void ConfigureServices(IServiceCollection services)
-        {
-            // lets our app know we have controllers (see MVC for more about controllers)
-            services.AddControllers();
-        }
+ // This method gets called by the runtime. Use this method to add services to the container.
+ public void ConfigureServices(IServiceCollection services)
+ {
+ // lets our app know we have controllers (see MVC for more about controllers)
+ services.AddControllers();
+ }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            // checks if the incoming request is HTTPs, if its not, then it will redirect to HTTP
-            app.UseHttpsRedirection();
-            // The app that we are using some form of routing that will follow.
-            app.UseRouting();
-            // Checks if the incoming request has any authentication data (tokens, cookies, etc). If it does, then use it.
-            app.UseAuthorization();
-            // Maps our controllers to be our endpoints for out app
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
-        }
-    }
+ // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+ {
+ // checks if the incoming request is HTTPs, if its not, then it will redirect to HTTP
+ app.UseHttpsRedirection();
+ // The app that we are using some form of routing that will follow.
+ app.UseRouting();
+ // Checks if the incoming request has any authentication data (tokens, cookies, etc). If it does, then use it.
+ app.UseAuthorization();
+ // Maps our controllers to be our endpoints for out app
+ app.UseEndpoints(endpoints =>
+ {
+ endpoints.MapControllers();
+ });
+ }
+ }
 }
 
 ```
@@ -118,28 +118,28 @@ using Microsoft.EntityFrameworkCore;
 // All controllers should go into the Controller namespace, and by extension, be in the controller folder
 namespace SampleApi.Controllers
 {
-    // enables certain API behaviors: https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#apicontroller-attribute
-    [ApiController]
-    // defines the URL for the controller. This one will be at https://domain.com/api/people
-    [Route("api/[controller]")]
-    // All controllers are just classes, and this class inherits from ControllerBase. ControllerBase gives basic support for handling web requests with Razor; read more : https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#controllerbase-class
-    public class PeopleController : ControllerBase
-    {
-        // use the services to give the controller access to the database
-        private readonly DatabaseContext _context;
+ // enables certain API behaviors: https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#apicontroller-attribute
+ [ApiController]
+ // defines the URL for the controller. This one will be at https://domain.com/api/people
+ [Route("api/[controller]")]
+ // All controllers are just classes, and this class inherits from ControllerBase. ControllerBase gives basic support for handling web requests with Razor; read more : https://docs.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-3.0#controllerbase-class
+ public class PeopleController : ControllerBase
+ {
+ // use the services to give the controller access to the database
+ private readonly DatabaseContext _context;
 
-        public PeopleController(DatabaseContext context)
-        {
-            _context = context
-        }
-        // each method on the class is a new endpoint in the API. This is a GET method and located at GET /api/People
-        // this returns a HTTP 200, with a List of People
-        [HttpGet]
-        public ActionResult<IEnumerable<Person>> GetAllFavoritePeople()
-        {
-           return _context.People.Where(w => w.isFavorite);
-        }
-    }
+ public PeopleController(DatabaseContext context)
+ {
+ _context = context
+ }
+ // each method on the class is a new endpoint in the API. This is a GET method and located at GET /api/People
+ // this returns a HTTP 200, with a List of People
+ [HttpGet]
+ public ActionResult<IEnumerable<Person>> GetAllFavoritePeople()
+ {
+ return _context.People.Where(w => w.isFavorite);
+ }
+ }
 }
 ```
 
