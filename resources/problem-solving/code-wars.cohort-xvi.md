@@ -33,9 +33,10 @@ Challenges we like:
 |  8  | Even or Odd                     |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     |     C#     |
 |  6  | Create Phone Number             |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
 |  -  | -                               |                               -                               |     -      |
-|  -  | -                               |                               -                               |     -      |
+|  8  | Tip Calculator                  |         https://www.codewars.com/kata/tip-calculator          |     C#     |
 |  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
-|  8  | Tip Calculator                  |         https://www.codewars.com/kata/tip-calculator          | javascript |
+|  6  | IP Validation                   |    https://www.codewars.com/kata/515decfd9dcfc23bb6000006     |     C#     |
+|  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
