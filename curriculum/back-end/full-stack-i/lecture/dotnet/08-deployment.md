@@ -119,7 +119,7 @@ _**frequency**: only has to be done once per web app_
 5. Add a database to your new server
 
 ```shell
-heroku addons:create heroku-postgresql:hobby-dev
+heroku addons:create heroku-postgresql:hobby-dev -a my-cool-heroku-name
 ```
 
 ### Update the deploy.sh
