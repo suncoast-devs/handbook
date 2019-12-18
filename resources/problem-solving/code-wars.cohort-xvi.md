@@ -35,12 +35,16 @@ Challenges we like:
 |  8  | Tip Calculator                  |         https://www.codewars.com/kata/tip-calculator          |     C#     |
 |  7  | Longest Vowel Chain             |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
 |  6  | IP Validation                   |    https://www.codewars.com/kata/515decfd9dcfc23bb6000006     |     C#     |
-|  -  | -                               |                               -                               |     -      |
 |  8  | digits-explosion                |    https://www.codewars.com/kata/585b1fafe08bae9988000314     |     C#     |
 |  7  | Mumbling                        |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     | javascript |
 |  6  | Deaf rats                       |    https://www.codewars.com/kata/598106cb34e205e074000031     |     C#     |
 |  -  | -                               |                               -                               |     -      |
+|  8  | Opposites Attract               |        https://www.codewars.com/kata/opposites-attract        |     C#     |
+|  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
+|  6  | RPN                        |    https://www.codewars.com/kata/52f78966747862fc9a0009ae     |     C#     |
+|  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
+|  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
 |  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
 |  7  | Vowel Count                     |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     | javascript |
@@ -50,13 +54,10 @@ Challenges we like:
 |  7  | Descending Val                  |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     | javascript |
 |  8  | Is n divisible by x and y       |    https://www.codewars.com/kata/5545f109004975ea66000086     | javascript |
 |  7  | Square every digit              |    https://www.codewars.com/kata/546e2562b03326a88e000020     | javascript |
-|  8  | Opposites Attract               |        https://www.codewars.com/kata/opposites-attract        |     C#     |
 |  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
-|  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
 |  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
 |  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
 |  7  | Shortest Word                   |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
-|  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     | javascript |
