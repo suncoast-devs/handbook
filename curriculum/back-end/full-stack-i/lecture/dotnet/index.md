@@ -35,3 +35,7 @@ Here we are exploring what an API is and how to build simple API using Web API
 ## [Deployment](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/08-deployment)
 
 Using Docker to deploy our apps to Heroku.
+
+## [Secret Values](/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/13-user-secrets)
+
+Using the user-secrets to hide configuration values from source control.
