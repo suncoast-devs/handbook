@@ -20,7 +20,7 @@ These are the notes that were created from the [Intro to Joins lectures](/handbo
 
 This is a _really good_ example, yours don't have this detail, but this a good target to hit
 
-- [ ] Work on your HTML & CSS for your capstone. Focus on looks, no so much on functionality. While working this, start mapping out what API endpoints and database tables you will need to support your UI.
+- [ ] Work on your for your capstone. Focus on looks, no so much on functionality. While working this, start mapping out what API endpoints and database tables you will need to support your UI. Even go as far as creating the API and Models.
 
 ### Adventure Mode
 

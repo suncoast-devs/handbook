@@ -26,7 +26,7 @@ The core functionality is:
 
 ### Explorer Mode
 
-- [ ] Let your ns
+- [ ] Create wireframes for your app. really focus on the MVP
 - [ ] Create an ERD for the core functionality above
 - [ ] Create API definitions for all the endpoints needed. This should include URLs, params, body, and return types.
 - [ ] Create an API that supports your design

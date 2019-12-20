@@ -38,10 +38,10 @@ Challenges we like:
 |  8  | digits-explosion                |    https://www.codewars.com/kata/585b1fafe08bae9988000314     |     C#     |
 |  7  | Mumbling                        |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     | javascript |
 |  6  | Deaf rats                       |    https://www.codewars.com/kata/598106cb34e205e074000031     |     C#     |
-|  -  | -                               |                               -                               |     -      |
 |  8  | Opposites Attract               |        https://www.codewars.com/kata/opposites-attract        |     C#     |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
-|  6  | RPN                        |    https://www.codewars.com/kata/52f78966747862fc9a0009ae     |     C#     |
+|  6  | RPN                             |    https://www.codewars.com/kata/52f78966747862fc9a0009ae     |     C#     |
+|  -  | -                               |                               -                               |     -      |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
