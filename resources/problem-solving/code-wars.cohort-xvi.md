@@ -44,10 +44,10 @@ Challenges we like:
 |  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
 |  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  6  | Christmas Tree                  |    https://www.codewars.com/kata/52755006cc238fcae70000ed     |     C#     |
-|  -  | -                               |                               -                               |     -      |
 |  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
 |  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
 |  6  | Strongest Number                |    https://www.codewars.com/kata/5d16af632cf48200254a6244     |     C#     |
+|  -  | -                               |                               -                               |     -      |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
