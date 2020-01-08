@@ -20,10 +20,15 @@ Authentication happens only when a user logs into an app. There are several auth
 
 Authorization is the process that we use to validate that user can do what they are trying to do. This will is when we are able to tell if the user is allowed to do what they are doing.
 
-In practice, authorization and authentication usually go hand in hand, in
+In practice, authorization and authentication usually go hand in hand. Typically use the same technology to accomplish both tasks. In modern apps one such strategy is to use [json web tokens(JWT)](https://jwt.io).
+
+### JWT
+
+// todo
 
 ## The code
 
+// TODO:
 Auth Controller
 
 ```C#
