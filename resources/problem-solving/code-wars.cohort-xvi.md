@@ -2,7 +2,7 @@
 
 [Code Wars](https://codewars.com) is a great site to practice your problem solving in a variety of languages. This site is focused on creating clever solutions to practice solving problems in a variety of ways and languages. Code wars is a very community orientated and driven.
 
-The site is organized into challenges that have a `kyu`. This `kyu` is a community driven estimate to how hard a given challenge is. `8 kyu` is the easiest and a great place to start for beginners.
+The site is organized into challenges that have a `kyu` . This `kyu` is a community driven estimate to how hard a given challenge is. `8 kyu` is the easiest and a great place to start for beginners.
 
 // Coming soon: a path to enlightenment using code wars
 
@@ -41,11 +41,16 @@ Challenges we like:
 |  8  | Opposites Attract               |        https://www.codewars.com/kata/opposites-attract        |     C#     |
 |  7  | Exes and Ohs                    |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |     C#     |
 |  6  | RPN                             |    https://www.codewars.com/kata/52f78966747862fc9a0009ae     |     C#     |
+|  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
+|  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
+|  6  | Christmas Tree                  |    https://www.codewars.com/kata/52755006cc238fcae70000ed     |     C#     |
+|  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
+|  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
+|  6  | Strongest Number                |    https://www.codewars.com/kata/5d16af632cf48200254a6244     |     C#     |
 |  -  | -                               |                               -                               |     -      |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
-|  8  | Find the smallest Integer       |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript |
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
 |  7  | Vowel Count                     |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     | javascript |
 |  8  | A needle in the haystack        |    https://www.codewars.com/kata/56676e8fabd2d1ff3000000c     | javascript |
@@ -54,9 +59,6 @@ Challenges we like:
 |  7  | Descending Val                  |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     | javascript |
 |  8  | Is n divisible by x and y       |    https://www.codewars.com/kata/5545f109004975ea66000086     | javascript |
 |  7  | Square every digit              |    https://www.codewars.com/kata/546e2562b03326a88e000020     | javascript |
-|  7  | You're a square                 |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
-|  8  | Sum of Positives                |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |     C#     |
-|  7  | Get the Middle Character        |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  8  | Keep Hydrated!                  |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
 |  7  | Shortest Word                   |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  7  | List filtering                  |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
