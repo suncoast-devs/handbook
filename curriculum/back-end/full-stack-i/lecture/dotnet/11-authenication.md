@@ -24,7 +24,7 @@ In practice, authorization and authentication usually go hand in hand. Typically
 
 ### JWT
 
-// todo
+[Json web tokens(JWT)](https://jwt.io) are a open, industry standard method of transferring verifiable data between two systems. We will use JWTs as a way to validate that our users have been authenticated.
 
 ## The code
 
