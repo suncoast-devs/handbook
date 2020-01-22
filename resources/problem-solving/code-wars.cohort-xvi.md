@@ -50,12 +50,12 @@ Challenges we like:
 |  8  | A needle in the haystack        |    https://www.codewars.com/kata/56676e8fabd2d1ff3000000c     | javascript |
 |  7  | Disemvowel Troll                |    https://www.codewars.com/kata/52fba66badcd10859f00097e     | javascript |
 |  6  | Blackjack                       |    https://www.codewars.com/kata/5bebcbf2832c3acc870000f6     |     C#     |
-|  -  | -                               |                               -                               |     -      |
 |  8  | Remove First and Last Character | https://www.codewars.com/kata/remove-first-and-last-character | javascript |
 |  7  | Ones and Zeros                  |         https://www.codewars.com/kata/ones-and-zeros          |     C#     |
-|  -  | -                               |                               -                               |     -      |
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
 |  7  | Vowel Count                     |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     | javascript |
+|  -  | -                               |                               -                               |     -      |
+|  -  | -                               |                               -                               |     -      |
 |  8  | Count of positives sum of...    |    https://www.codewars.com/kata/576bb71bbbcf0951d5000044     | javascript |
 |  7  | Descending Val                  |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     | javascript |
 |  8  | Is n divisible by x and y       |    https://www.codewars.com/kata/5545f109004975ea66000086     | javascript |
