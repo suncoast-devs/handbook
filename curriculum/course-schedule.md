@@ -1,3 +1,7 @@
+# High level course schedule
+
+The course is broken in 3 units, each with chapters. These chapters _roughly_ correspond to weeks. The schedule might change at the discretion of the intsructor to better suit the needs of the class.
+
 # unit i - fundamentals
 
 ## chapter 0: learning the basics
@@ -16,7 +20,7 @@
 - lesson 0: enumeration with LINQ
 - lesson 1: SOLID
 
-## chapter 3: working with data
+## chapter 2: working with data
 
 - lesson 0: files and storing data
 - lesson 1: storing data using SQL
@@ -26,7 +30,7 @@
 
 # unit ii - bringing it on the web
 
-## chapter 4: servers and APIs
+## chapter 0: servers and APIs
 
 - lesson 0: Setting up the dev machine
 - lesson 1: what is back-end engineer
@@ -36,7 +40,7 @@
 - lesson 6: docker and deployment of an API only project
 - lesson 7: interacting with other APIs
 
-## chapter 5: HTML, CSS and accessibility
+## chapter 1: HTML, CSS and accessibility
 
 - lesson 0: Setting up the dev machine
 - lesson 1: Intro to HTML
@@ -45,14 +49,14 @@
 - lesson 4: Responsive Web with Media Queries
 - lesson 5: Accessibility
 
-## chapter 6: JavaScript
+## chapter 2: JavaScript
 
 - lesson 0: Intro to JS
 - lesson 2: JavaScript and the Web
 - lesson 3: consuming APIs
 - lesson 4: building a API for a front-end app
 
-## chapter 7: Dynamic Web Apps
+## chapter 3: Dynamic Web Apps
 
 - lesson 0: what is a front-end framework
 - lesson 1: philosophy and structure of a react app
@@ -60,7 +64,7 @@
 - lesson 3: state & react life cycle
 - lesson 5: hooks
 
-## chapter 8: bringing it all together
+## chapter 4: bringing it all together
 
 - lesson 0: using apis and react
 - lesson 1: react router
@@ -69,7 +73,7 @@
 
 # unit iii - reinforcement and application
 
-## chapter X: practice, practice practice
+## chapter 0: practice, practice practice
 
 - lesson 0: Authentication and Authorization
 - lesson 1: how to apply react to a real world site
