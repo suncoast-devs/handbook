@@ -39,6 +39,7 @@ The course is broken in 3 units, each with chapters. These chapters _roughly_ co
 - lesson 5: scaffolding
 - lesson 6: docker and deployment of an API only project
 - lesson 7: interacting with other APIs
+- lesson 8: Server returning HTML instead of data
 
 ## chapter 1: HTML, CSS and accessibility
 
