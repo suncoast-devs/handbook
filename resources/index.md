@@ -26,4 +26,6 @@
 
 ## [Sample Interview Questions](/handbook/resources/interview-practice/sample-questions)
 
+## [Demo day guide](/handbook/resources/demo-day-guide)
+
 ## [Week 13 guide](/handbook/resources/week-13)
