@@ -4,7 +4,7 @@ Over the cohorts, we have found some tips and tricks to help students have a suc
 
 ## Know your story
 
-Your story is unique to you. You need to be able to talk about your own story, but also the story about your capstone. Why do you choose the project? What as it like making the app? Your audience wants to know your story. Be sure to be clear about your problem.
+Your story is unique to you. You need to be able to talk about your own story, but also the story about your capstone. Why do you choose the project? What as it like making the app? Your audience wants to know your story. Be sure to be clear about your problem is and how your app solves that problem.
 
 ## Know your happy path
 
@@ -12,7 +12,7 @@ While you are demoing your app, you have plenty of really cool features, but kno
 
 ## Know your codebase
 
-Be able to talk about your code. Know what libraries, technologies, and packages you are using and be sure to talk about them. Be able to say your app is mobile friendly. You should know where everything in your app and where it c to your code.
+Be able to talk about your code. Know what libraries, technologies, and packages you are using and be sure to talk about them. Be able to say your app is mobile friendly. You should know where everything in your app is and where it is happening in your code. When demoing, be sure to only use features that you know work. Avoid features that are incomplete.
 
 ## Know your audience
 
@@ -29,9 +29,12 @@ Have answers for the following questions:
 
 ## Quick tips
 
-- Remove the words "just" and "only" from your talking points
+- Remove the words "just", "simple" and "only" from your talking points
 - Use positive words, avoid "didn't do that"-ism
+- Avoid verbal filler when talking
 - Be proud of your app and accomplishments
 - Roll with the demo and be flexible
 - Interact with your audience
 - Be able to explain every feature
+- Avoid try to move
+- Have questions ready for your audience
