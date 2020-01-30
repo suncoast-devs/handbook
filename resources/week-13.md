@@ -2,7 +2,7 @@
 
 Welcome to post-grad life! This guide should help serve as a guideline on how to approach the upcoming weeks.
 
-## Job Search
+## Job search
 
 Of course, your highest priority during this time is the job search.
 
@@ -10,7 +10,7 @@ Of course, your highest priority during this time is the job search.
 
 Applying for jobs should be a good chunk of your time. During this, it's good to keep a healthy pace for applying for jobs. We recommend at least 5 quality job applications per week. A quality application is one that is well-put-together and customized for the company. Check out your career support resources to remember what makes a proper application.
 
-### Social Media
+### Social media
 
 Social media is a powerful way to connect, meet, and interact with the tech community and also folks who are hiring.
 
@@ -37,7 +37,7 @@ Also, to help you prepare, you can use [this as a guide](https://suncoast.io/han
 
 You have come very far during the cohort, but your learning can't stop with graduation.
 
-### Attending Meetups
+### Attending meetups
 
 Meetups are a great way to meet new people but also learn new ideas and see what projects and ideas people are working on. During the job hunt, we recommend 2-3 a week. When at these meetups, be an active participant; ask questions, talk to other people and thank the speaker in person afterwards. A good goal is to meet 3 new people at every meetup.
 
@@ -47,7 +47,7 @@ Understandably, this is a big leap, but it has a considerable ROI. Giving a tech
 
 Not only will your knowledge grow, but a tech talk is an extended commercial for you. It should ensure that you are excited about tech, have a passion for learning new ideas, and can comminate what you are thinking.
 
-### Continue Coding
+### Continue coding
 
 **Coding every day is the best way to keep your skills sharp and to make getting that job a little easier.** Keeping your skills sharp is like going to the gym, its better to be consistent that to go in spurts.
 
@@ -115,9 +115,9 @@ During this time, you might be tempted to try to learn all the things after grad
 
 As always, our [handbook](https://github.com/suncoast-devs/handbook) is open source and is always looking for contributors, and this is a great way to help reinforce areas that you might want more practice with.
 
-## Final words of Wisdom
+## Final words of wisdom
 
-### stay active
+### Stay active
 
 Stay active and be pro-active during the job search. This will help speed up the process and keep you occupied during your search.
 
