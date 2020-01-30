@@ -55,6 +55,7 @@ Challenges we like:
 |  8  | Grasshopper Summation           |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     | javascript |
 |  7  | Vowel Count                     |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     | javascript |
 |  -  | -                               |                               -                               |     -      |
+|  7  | Form the hightest               |    https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e     |     C#     |
 |  -  | -                               |                               -                               |     -      |
 |  8  | Count of positives sum of...    |    https://www.codewars.com/kata/576bb71bbbcf0951d5000044     | javascript |
 |  7  | Descending Val                  |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     | javascript |
