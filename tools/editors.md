@@ -2,24 +2,27 @@
 
 ## [Visual Studio Code](https://code.visualstudio.com)
 
-_First time setup instructions_
+_First time setup instructions for Mac_
 
+- Make sure you are running VS Code from your applications folder, not your downloads
 - Launch VS Code
-- Use `Command Shift P` (or `Control Shift P`) to launch the command palette
+- Use `Command Shift P` to launch the command palette
 - Type `command` to search for the entry `Shell Command: Install 'code' command in PATH` and press `ENTER`
 
 _Plugins we recommend to start with_
 
 ```sh
-code --install-extension streetsidesoftware.code-spell-checker
-code --install-extension dbaeumer.vscode-eslint
+code --install-extension 2gua.rainbow-brackets
+code --install-extension austincummings.razor-plus
 code --install-extension esbenp.prettier-vscode
 code --install-extension hasanali.gitignore-templates
-code --install-extension ecmel.vscode-html-css
-code --install-extension xabikos.reactsnippets
-code --install-extension bierner.markdown-preview-github-styles
-code --install-extension 2gua.rainbow-brackets
-code --install-extension ms-vsliveshare.vsliveshare
+code --install-extension jchannon.csharpextensions
+code --install-extension jorgeserrano.vscode-csharp-snippets
+code --install-extension ms-azuretools.vscode-docker
+code --install-extension ms-vscode.csharp
+code --install-extension ScottSauber.blazorsnippets
+code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension esbenp.prettier-vscode
 ```
 
 _Settings we require_
@@ -31,19 +34,6 @@ Go to `Code` menu, then `Preferences`, then `Settings`
 
 - In the search bar enter `formatOn`
 - Find the setting `Editor: Format on Save` and turn this _ON_
-
-- In the search bar enter `Prettier`
-- Find the setting `Prettier: Semi` and turn this _OFF_
-- Find the setting `Prettier: Single Quote` and turn this _ON_
-- Find the setting `Prettier: Use Tabs` and turn this _OFF_
-
-_Settings we recommend_
-
-Go to `Code` menu, then `Preferences`, then `Settings`
-
-- In the search bar enter: `enable preview`
-- Disable `Workbench › Editor: Enable Preview From Quick Open`
-- Also consider: Disable `Workbench › Editor: Enable Preview`
 
 _Tips and Tricks_
 
