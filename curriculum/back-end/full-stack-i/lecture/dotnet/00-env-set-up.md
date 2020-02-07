@@ -1,14 +1,21 @@
 # Get going with .NET Core
 
 ## CLI
-To run dotnet applications need to install the latest SDK. 
+
+To run dotnet applications need to install the latest SDK.
 
 [Download the latest](https://dotnet.microsoft.com/download)
 
 ## VS Code extensions
 
-There are many tools to help us create applications. In VS Code, download the following extensions to help make your development easier.
+Be sure to have VS Code configured according to the [VS Code setup instructions](/handbook/tools/editors)
 
-- [C# for Visual Studio Code (powered by OmniSharp)](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp)
-- [C# Extensions](https://marketplace.visualstudio.com/items?itemName=jchannon.csharpextensions)
-- [C# Snippets](https://marketplace.visualstudio.com/items?itemName=jorgeserrano.vscode-csharp-snippets)
+## Scaffolding tools
+
+To help get our projects started, we will install a few tools to help us create projects as we go.
+
+For unit-i, you use the dotnet template for console apps. This template can be install (and updated) by running the command
+
+```sh
+dotnet new --install SDG.templates.Console
+```
