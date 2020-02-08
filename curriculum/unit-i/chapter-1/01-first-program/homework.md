@@ -1,4 +1,4 @@
-# Variables, Variables and Variables
+# Variables, Variables, and Variables
 
 # Let's get started
 
@@ -18,23 +18,23 @@ All your code should place inside the `static void Main(string args[])`
 
 ### Explorer Mode
 
-- [ ] Create a new `sdg-console` app that does the follow.
+- [ ] Create a new `sdg-console` app that does the following.
 
-  - Create a variable (use your best judgement for type) that stores the `numberOfCupsOfCoffee` that you drink everyday
-  - Create a variable (use your best judgement for type) called `fullName` and set it equal your full name.
-  - Create a variable (use your best judgement for type) call `today` and set it equal to today's date.
+  - Create a variable (use your best judgment for type) that stores the `numberOfCupsOfCoffee` that you drink every day
+  - Create a variable (use your best judgment for type) called `fullName` and set it equal to your full name.
+  - Create a variable (use your best judgment for type) call `today` and set it equal to today's date.
   - using your variables, `numberOfCupsOfCoffee`, `fullName`and `today`, Console.WriteLine out all three on one line.
   - Ask the user for their name and store it in a variable called 'user'.
   - Print out a greeting to the user, using their name
   - Ask the user to input two numbers
   - Get the numbers as Strings using `Console.ReadLine`
-  - Convert a String to a double using [double.parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.parse?view=netcore-3.1). Save the the first double value in an `operand1` variable and the second double value in an `operand2` variable
+  - Convert a String to a double using [double.parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.parse?view=netcore-3.1). Save the first double value in an `operand1` variable and the second double value in an `operand2` variable
   - Add the operands and save in a `sum` variable
   - Subtract the operands and save in a `difference` variable
   - Divide the operands and save in a `quotient` variable
-  - Multiplty the operands and save in a `product` variable
+  - Multiply the operands and save in a `product` variable
   - Find the remainder when one operand is divided by the other and save in a `remainder` variable. See [this page](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators#remainder-operator-) if you need to learn more about the modulo operator.
-  - print all all the results to the screen in meaning way.
+  - print all the results to the screen in a meaningful way.
 
 ### Adventure Mode
 
