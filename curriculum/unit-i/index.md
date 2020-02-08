@@ -24,4 +24,4 @@ During this unit, students will learn about the basic of programming and data. T
 - lesson 1: storing data using SQL
 - lesson 2: complex relationships in SQL
 - lesson 3: applying ORMS
-- lesson 4: Dependency Injection --> -->
+- lesson 4: Dependency Injection -->
