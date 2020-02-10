@@ -19,3 +19,13 @@ For unit-i, you use the dotnet template for console apps. This template can be i
 ```sh
 dotnet new --install SDG.templates.Console
 ```
+
+This only has to be done once per machine.
+
+## Using the scaffolding
+
+To create a new project with the scaffolding.
+
+```sh
+dotnet new sdg-console -o MyCoolProject
+```
