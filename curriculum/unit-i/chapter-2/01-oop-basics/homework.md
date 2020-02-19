@@ -1,20 +1,20 @@
 # Welcome to Jurassic Park
 
-Today you learned a new language and will be starting to explore it more in depth in the coming weeks. Like any good craftsman, the first thing you need is to learn your tools. Tonight, you will be setting up your developer environment, creating a simple console application, and continuing your final project.
+So far you have traveled far in your learning and will continue to explore it more in depth in the coming weeks. Like any good craftsman, practice turns into mastery. Tonight, you will be creating a simple console application that help manages a zoo full of Dinosaurs.
 
 ## Objectives
 
-- Set up your dev machines
-- Create a simple console application to ensure your machine is set up correctly
-- keep working through your wireframes for your capstone
+- Practice control structures
+- Practice data structures
+- Practice working with user data
+- Practice with LINQ
+- Practice with OOP concepts
 
 ## Requirements
 
-- Create a simple console application that manages the dinosaurs in your amusement park
+- Create a simple console application that manages the dinosaurs in your zoo.
 
 ### Explorer Mode
-
-#### .NET
 
 - [ ] Create a new console application that will store the list of dinosaurs they have in the park
 - [ ] You will be creating a class for your dinosaurs
@@ -24,7 +24,7 @@ Today you learned a new language and will be starting to explore it more in dept
   - [ ] DietType - This will be carnivore or herbivore
   - [ ] DateAcquired - This will be defaulted when the dinosaur is created
   - [ ] Weight - In pounds, how heavy the dinosaur is
-  - [ ] EnclosureNumber - the Pen that the dinosaur is currently on
+  - [ ] EnclosureNumber - the Pen that the dinosaur is currently in, thing should be a number
 
 - [ ] Your dinosaurs will be stored in a `List<Dinosaur>`.
 - [ ] When the console application runs, it should let the user choose one of the following actions:
@@ -44,11 +44,13 @@ Today you learned a new language and will be starting to explore it more in dept
 
 ### Adventure Mode
 
-- [ ] Eventually we will be using a [MVC application structure](https://dotnet.microsoft.com/apps/aspnet/mvc). To prepare for this, refactor your code to have all your business logic in separate class and all your console interaction in the main class.
+- [ ] Go back and work on the either .net-iterations, koans, or function-junction
 
 ### Epic Mode
 
-- [ ] Your data is currently stored in a list. This list is lost every time the program restarts. On Monday, we starting to explore something called SQL. [Add a database](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
+- [ ] Eventually we will be using a [MVC application structure](https://dotnet.microsoft.com/apps/aspnet/mvc). To prepare for this, refactor your code to have all your business logic in separate class, called `ParkService` and all your console interaction in the main class.
+
+- [ ] Your data is currently stored in a list. This list is lost every time the program restarts. On Monday, we starting to explore something called SQL. [Add a database](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/). Convert your code to use Ef Core to store your data in a database.
 
 ## Additional Resources
 
