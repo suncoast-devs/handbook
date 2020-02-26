@@ -76,7 +76,9 @@ Open your project in vs code using `code .` .
 We need to create a new file, name it `Movie.cs`. This is we are creating a POCO that represents our database table.
 
 ```C#
-namespace KurtsVideoRental ​
+using System;
+
+namespace KurtsVideoRental
 {
      public class Movie {
         public int Id { get; set; }
