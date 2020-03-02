@@ -37,4 +37,30 @@ Go to `Code` menu, then `Preferences`, then `Settings`
 
 _Tips and Tricks_
 
+In VS Code Use `Command Shift P` to launch the command palette and Type `Configure User Snippets`
+
+- Look for the `csharp.json` and open it.
+- Copy the following below and paste underneath the commented section within the `{}`.
+
+```json
+"Print to console": {
+		"prefix": "write",
+		"body": [
+			"Console.WriteLine($\"$1\");",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+	"Read from Console": {
+		"prefix": "read",
+		"body": [
+			"Console.ReadLine().ToLower();",
+			"$1"
+		],
+		"description": "Read input from user, set to lower"
+
+	}
+```
+- This allows you to more efficiently create `Console.WriteLine($" ");` and `Console.ReadLine().ToLower();`
+
 - [VS Code can do that?!](https://vscodecandothat.com)
