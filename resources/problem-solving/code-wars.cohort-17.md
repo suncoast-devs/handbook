@@ -14,11 +14,15 @@ Challenges we like:
 |  8  | Opposite Number                  |    https://www.codewars.com/kata/56dec885c54a926dcd001095     |     C#     |
 |  8  | Count the Monkeys                |    https://www.codewars.com/kata/56f69d9f9400f508fb000ba7     |     C#     |
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
-|  -  | -                                |                               -                               |     -      |
 |  8  | Volume of a Cuboid               |       https://www.codewars.com/kata/volume-of-a-cuboid        |     C#     |
 |  8  | Difference of Volumes of Cuboids |    https://www.codewars.com/kata/58cb43f4256836ed95000f97     |     C#     |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
 |  -  | -                                |                               -                               |     -      |
+|  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     |     C#     |
+|  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     |     C#     |
+|  -  | -                                |                               -                               |     -      |
+|  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
+|  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |
 |  8  | Count the Monkeys                |    https://www.codewars.com/kata/56f69d9f9400f508fb000ba7     | javascript |
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     | javascript |
 |  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     | javascript |
@@ -27,8 +31,6 @@ Challenges we like:
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          | javascript |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     | javascript |
 |  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     | javascript |
-|  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
-|  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |
 |  8  | Sum of Positives                 |    https://www.codewars.com/kata/5715eaedb436cf5606000381     | javascript |
 |  5  | Advanced Pig Latin               |    https://www.codewars.com/kata/533c46b140aafec05b000d31     | javascript |
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
