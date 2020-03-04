@@ -7,11 +7,13 @@ Now that we have new API skills, we want to create an API to help our favorite s
 - Create an API that can CRUD against a Database
 - practice creating ASP.NET Web API endpoints
 - practice EF Core.
+- Working with docker
 
 ## Requirements
 
 - Create a simple API that has a handful of endpoints to manage data
 - The API should be using Web API Controllers, Ef Core, and Postgres database
+- deploy your app to heroku
 
 ### Explorer Mode
 
@@ -35,8 +37,4 @@ Now that we have new API skills, we want to create an API to help our favorite s
 - [ ] Create a GET endpoint to get all items that are out of stock
 - [ ] Create a GET endpoint that allows the to search for an item based on SKU
 
-### Adventure Mode
-
-- [ ] Ensure your instructor has seen and approved your wireframes for your capstone.
-- [ ] Work on the HTML for your capstone.
-- [ ] Work on your Resume for Career Support.
+- [ ] [Deploy your app to heroku](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/08-deployment/)

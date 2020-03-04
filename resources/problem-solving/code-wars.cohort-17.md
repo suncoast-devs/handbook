@@ -17,15 +17,17 @@ Challenges we like:
 |  8  | Volume of a Cuboid               |       https://www.codewars.com/kata/volume-of-a-cuboid        |     C#     |
 |  8  | Difference of Volumes of Cuboids |    https://www.codewars.com/kata/58cb43f4256836ed95000f97     |     C#     |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
-|  -  | -                                |                               -                               |     -      |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     |     C#     |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     |     C#     |
+|  -  | -                                |                               -                               |     -      |
+|  8  | Rock Paper Scissors              |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     | javascript |
+|  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     | javascript |
+|  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     | javascript |
 |  -  | -                                |                               -                               |     -      |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |
 |  8  | Count the Monkeys                |    https://www.codewars.com/kata/56f69d9f9400f508fb000ba7     | javascript |
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     | javascript |
-|  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     | javascript |
 |  8  | Convert a string to an array     |  https://www.codewars.com/kata/convert-a-string-to-an-array   | javascript |
 |  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     | javascript |
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          | javascript |
@@ -36,9 +38,7 @@ Challenges we like:
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     | javascript |
 |  7  | Two fighters, one winner         |     https://www.codewars.com/kata/two-fighters-one-winner     | javascript |
-|  8  | Rock Paper Scissors              |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     | javascript |
 |  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
-|  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     | javascript |
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |     C#     |
 |  8  | Even or Odd                      |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     |     C#     |
 |  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
