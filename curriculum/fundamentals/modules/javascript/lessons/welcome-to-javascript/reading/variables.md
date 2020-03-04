@@ -121,7 +121,7 @@ A leading 0b (or 0B) indicates a binary integer literal. Binary integers can onl
 
 Some examples of integer literals are:
 
-```js
+```plain
 0, 117 and -345 (decimal, base 10)
 015, 0001 and -0o77 (octal, base 8)
 0x1123, 0x00111 and -0xF1A7 (hexadecimal, "hex" or base 16)
