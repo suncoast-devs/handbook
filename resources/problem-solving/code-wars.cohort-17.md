@@ -19,10 +19,13 @@ Challenges we like:
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |     C#     |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     |     C#     |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     |     C#     |
+|  8  | Rock Paper Scissors              |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     |     C#     |
+|  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
+|  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
 |  -  | -                                |                               -                               |     -      |
-|  8  | Rock Paper Scissors              |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     | javascript |
-|  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     | javascript |
-|  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     | javascript |
+|  8  | Keep Hydrated!                   |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
+|  7  | Shortest Word                    |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
+|  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     | javascript |
 |  -  | -                                |                               -                               |     -      |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |
@@ -32,7 +35,6 @@ Challenges we like:
 |  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     | javascript |
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          | javascript |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     | javascript |
-|  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     | javascript |
 |  8  | Sum of Positives                 |    https://www.codewars.com/kata/5715eaedb436cf5606000381     | javascript |
 |  5  | Advanced Pig Latin               |    https://www.codewars.com/kata/533c46b140aafec05b000d31     | javascript |
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
@@ -69,7 +71,5 @@ Challenges we like:
 |  7  | Descending Val                   |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     | javascript |
 |  8  | Is n divisible by x and y        |    https://www.codewars.com/kata/5545f109004975ea66000086     | javascript |
 |  7  | Square every digit               |    https://www.codewars.com/kata/546e2562b03326a88e000020     | javascript |
-|  8  | Keep Hydrated!                   |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
-|  7  | Shortest Word                    |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
 |  7  | Exes and Ohs                     |    https://www.codewars.com/kata/55908aad6620c066bc00002a     | javascript |
