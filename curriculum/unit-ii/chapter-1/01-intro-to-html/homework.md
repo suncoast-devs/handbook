@@ -6,7 +6,7 @@ All web pages have to start somewhere, and this site is no different. To start o
 
 To start, you will need to start with the HTML and content.
 
-[Here is a sample](https://sdg-restaurant-html.netlify.com)
+[Here is a sample](XXXXX)
 
 ### Requirements
 
@@ -28,7 +28,7 @@ To start, you will need to start with the HTML and content.
 - [ ] Your website should minimally have
   - [ ] a navbar
   - [ ] a ["hero"](https://www.sitepoint.com/exploring-hero-section/) section
-  - [ ] a few sections about the restaurant, get creative here
+  - [ ] at least 3 sections about the restaurant, get creative here. Specials, events and locations would be a good start here.
   - [ ] Contact information
   - [ ] a footer
 - [ ] Push your site to GitHub
