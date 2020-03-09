@@ -22,10 +22,10 @@ Challenges we like:
 |  8  | Rock Paper Scissors              |    https://www.codewars.com/kata/5672a98bdbdd995fad00000f     |     C#     |
 |  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     |     C#     |
 |  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
-|  -  | -                                |                               -                               |     -      |
 |  8  | Keep Hydrated!                   |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
 |  7  | Shortest Word                    |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     | javascript |
+|  -  | -                                |                               -                               |     -      |
 |  -  | -                                |                               -                               |     -      |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |

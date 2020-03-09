@@ -24,3 +24,11 @@ During this unit, students will learn about the basic of programming and data. T
 - lesson 1: storing data using SQL
 - lesson 2: complex relationships in SQL
 - lesson 3: applying ORMS
+
+## chapter 4: building servers
+
+- lesson 0: how does the web work
+- lesson 1: what is an API
+- lesson 2: building a CRUD API
+- lesson 3: database driven API
+- lesson 4: dev ops and docker
