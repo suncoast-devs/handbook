@@ -13,7 +13,7 @@ During this unit, students will learn about the basic of programming and data. T
 - lesson 6: methods, functions and procedures
 - lesson 7: objects
 
-<!-- ## chapter 1: Deeper basic
+## chapter 1: Deeper basic
 
 - lesson 0: enumeration with LINQ
 - lesson 1: SOLID
@@ -24,4 +24,3 @@ During this unit, students will learn about the basic of programming and data. T
 - lesson 1: storing data using SQL
 - lesson 2: complex relationships in SQL
 - lesson 3: applying ORMS
-- lesson 4: Dependency Injection -->
