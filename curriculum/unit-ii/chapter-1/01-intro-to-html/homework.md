@@ -6,7 +6,7 @@ All web pages have to start somewhere, and this site is no different. To start o
 
 To start, you will need to start with the HTML and content.
 
-[Here is a sample](XXXXX)
+[Here is a sample](https://raw.githubusercontent.com/suncoast-devs/handbook/master/curriculum/unit-ii/chapter-1/01-intro-to-html/assets/homework-sample.png)
 
 ### Requirements
 
