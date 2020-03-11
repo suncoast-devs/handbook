@@ -24,8 +24,11 @@ Challenges we like:
 |  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
 |  8  | Keep Hydrated!                   |    https://www.codewars.com/kata/582cb0224e56e068d800003c     |     C#     |
 |  7  | Shortest Word                    |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
-|  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     | javascript |
+|  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     |     C#     |
 |  -  | -                                |                               -                               |     -      |
+|  8  | Even or Odd                      |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     |     C#     |
+|  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
+|  6  | IP Validation                    |    https://www.codewars.com/kata/515decfd9dcfc23bb6000006     |     C#     |
 |  -  | -                                |                               -                               |     -      |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     | javascript |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     | javascript |
@@ -40,13 +43,10 @@ Challenges we like:
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     | javascript |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     | javascript |
 |  7  | Two fighters, one winner         |     https://www.codewars.com/kata/two-fighters-one-winner     | javascript |
-|  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     | javascript |
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |     C#     |
-|  8  | Even or Odd                      |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     |     C#     |
 |  6  | Create Phone Number              |    https://www.codewars.com/kata/525f50e3b73515a6db000b83     |     C#     |
 |  8  | Tip Calculator                   |         https://www.codewars.com/kata/tip-calculator          |     C#     |
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |     C#     |
-|  6  | IP Validation                    |    https://www.codewars.com/kata/515decfd9dcfc23bb6000006     |     C#     |
 |  8  | digits-explosion                 |    https://www.codewars.com/kata/585b1fafe08bae9988000314     |     C#     |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     | javascript |
 |  6  | Deaf rats                        |    https://www.codewars.com/kata/598106cb34e205e074000031     |     C#     |
