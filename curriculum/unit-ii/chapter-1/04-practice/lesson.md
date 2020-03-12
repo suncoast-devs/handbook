@@ -8,6 +8,8 @@ This is an in-class activity to help reinforce concepts and provide milage to be
 
 - Practice HTML and CSS
 - Work on replicating a mock-up
+  - [mobile](https://github.com/suncoast-devs/handbook/blob/master/curriculum/unit-ii/chapter-1/04-practice/assets/tourism-mobile.png?raw=true)
+  - [web](https://github.com/suncoast-devs/handbook/blob/master/curriculum/unit-ii/chapter-1/04-practice/assets/tourism-web.png?raw=true)
 
 ## Requirements
 
@@ -20,6 +22,7 @@ This is an in-class activity to help reinforce concepts and provide milage to be
 For explorer mode, work to recreate the site exactly
 
 - [ ] Start with build the HTML, focus on semantics
+  - [ ] [images are here]()
 - [ ] After you are happy with the HTML, build out the mobile view
 - [ ] Build out the desktop view
 - [ ] deploy your app
