@@ -1,46 +1,41 @@
-# JavaScript Iteration
+# Score Board
 
-Using JavaScript takes practice and the best practice is repetition. This exercise allow you time to work on the basics of JavaScript and how to apply that logic to solving problems.
+For this assignment, you will be creating a simple interactive scoreboard for your favorite sport.
 
-## Objectives
+## Requirements
 
-After completing this assignment, you should be able to:
+- Refer to this mockup to design your page:
 
-- Demonstrate understanding of iteration/enumeration
-- Further your black jack game
+![](./assets/scoreboard.png)
 
-## Instructions
+- Use the HTML and CSS [here](https://gist.github.com/mdewey/d331c0a449b8e53b4adc472ec0e5a1e8) to jump-start your project.
+- A user should be able to update a score and the teams playing.
 
-1. Fork [this repository](https://github.com/suncoast-devs/js-iteration) to your own account.
-2. Change into your projects directory:
-3. Clone your repository: `hub clone js-iteration`
-4. Change into your project's directory: `cd js-iteration``
-5. Install the dependencies: `yarn install` (or just `yarn` for short)
-6. Open in your editor
-7. Start the test runner: `yarn test`
-8. Open `src/functions.test.js` and work on functions until tests pass.
-9. Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
+### Explorer Mode
 
-Hello fellaS!!!!!!!!
+### Part 1:
 
-## Explorer Mode
+- [ ] Create a new project and implement the design using the given HTML & CSS.
+- [ ] Assign click events to the `update` buttons to update the corresponding values on the page. The score buttons should adjust the current score by a "hard-coded" value.
+- [ ] Deploy your site.
 
-- Take a little time, (up to an hour or two) and work on your black game using the ideas we covered today in class
-- Work on `js-iterations` using the directions above
-- Finish the code and have all tests passing
-- Have no linter warnings
-- Turn in the homework using the URL to your repository on GitHub.
+### Part 2:
 
-## Adventure Mode
+- [ ] Add a `if` statement to stop each team's score from going below 0.
+- [ ] Add an `if` statement to stop each team's score from going above 21
+- [ ] When a team gets 21 points, disable the buttons and display an message to the user of who won
+- [ ] Add a `reset` button that resets the scoreboard back to the each team having 0 points and re-enables the buttons
 
-- Do the same with the JavaScript Koans at [https://github.com/suncoast-devs/koans/blob/master/koans.js](https://github.com/suncoast-devs/koans/blob/master/koans.js)
+### Adventure Mode
 
-- Do the same with the Function-Junction Koans at [https://github.com/suncoast-devs/function-junction](https://github.com/suncoast-devs/function-junction)
+- [ ] Add more CSS to the winning teams score to indicate who won.
+- [ ] Implement a Quarter/Period Tracker that would be appropriate for the sport.
+- [ ] Add some styling to make it more presentable. Have fun with it.
+- [ ] Make the layout responsive.
 
-## Additional Resources
+### Epic Mode
 
-Reference the documentation on DevDocs to find what kind of helpful functions might already be in JavaScript.
-
-- [String Functions on DevDocs](https://devdocs.io/javascript/global_objects/string).
-- [Array Functions on DevDocs](http://devdocs.io/javascript/global_objects/array).
+- [ ] Add a Timer that counts down automatically and updates the period/quarter appropriately.
+- [ ] Save/load the information to local storage.
+- [ ] Add anything else that your sport would have on its scoreboard (e.g. fouls, sacks, shots on goal, etc.).
+- [ ] Improve the UX to help to make score keeping by your sport easier.
