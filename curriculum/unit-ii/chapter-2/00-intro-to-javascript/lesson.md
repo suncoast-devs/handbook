@@ -10,3 +10,7 @@ functions
 arrays
 objects
 classes
+
+part 2:
+
+in the DOM!
