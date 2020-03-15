@@ -1,18 +1,18 @@
 # Distance Learning!
 
-During the next few weeks, to help practice social distancing, we are running the course online. This document serves as documentation to help guide us through this new process
+During the next few weeks, to practice social distancing, we are running the course online. This serves as documentation to guide us through this new process.
 
-We are using Slack as our primary form of communication. Make sure to be signed in and able to receive notifications, as this may change.
+We are using Slack as our primary form of communication. Make sure you are signed in and able to receive notifications, as this may change.
 
 **NOTE**: This may change at any time due to evolving circumstances, at the team's discretion.
 
-**NOTE**: During this time, communication is the word of day. During times when teams are working remotely, such as this, it is essential to communicate. From the small victories to big questions to funny programming memes, staying active makes this easier.
+**NOTE**: During this time, communication is the word of the day. It is essential to communicate when teams are working remotely -- from small victories, big questions, or funny programming memes, staying active makes this easier.
 
 **Reminder**: Slack has reactions. Slack reactions are an excellent way to signal that you have seen messages.
 
 ## Daily Schedule
 
-The schedule is staying relatively the same, with some minor tweaks
+The schedule is staying the same, with some minor tweaks.
 
 |        Time         | What                |
 | :-----------------: | :------------------ |
@@ -24,22 +24,22 @@ The schedule is staying relatively the same, with some minor tweaks
 |  3:00 PM - 4:00 PM  | Virtual Office Hour |
 |  4:00 PM - 5:00 PM  | Lab                 |
 
-### Stand Ups
+### Stand-ups
 
-These are going to be virtual. Stands up are going to be a question send in a Slack message asked by the instructor. Students are to give there response on the thread. Your response is how we are going to take attendance. You are not marked "present" until you answer the stand-up question. Answering should be done no later than 9:05. So we can transition into the warmup
+These are going to be virtual. Stand-ups are questions sent in Slack asked by the instructor. Students are to give their response on the thread. Your response is how we are going to take attendance. You are not marked "present" until you answer the stand-up question. Answering should be done no later than 9:05. So we can transition into the warm-up.
 
 ### Warm-Ups
 
-Warms up are the same; the instructor sends out a coding problem to work on, and review happens at about 9:45. This review is optional and takes place over Zoom.
+Warm-ups remain the same -- the instructor sends out a coding problem. The review happens at about 9:45. This review is optional and takes place over Zoom.
 
 ### Lectures
 
-Lectures will happen from 10 till noon, with a break, as usual. The lecture is going to take place over Zoom. The lecture is not optional, and you are going to be marked absent if you are not on the Zoom session.
+Lectures happen from 10 till noon, with a break, as usual. The lecture is going to take place over Zoom. The lecture is not optional, and you are marked as absent if you are not on the Zoom session.
 
 ### Lunch and Lab
 
-This is unchanged, Lunch and Lab time is your time to get homework, projects and other tasks complete. There is online virtual support from the academics team. You are encouraged to use Slack, Meet, and other online collaboration tools to work together.
+This is unchanged -- lunch and lab time is your time to get homework, projects, and other tasks complete. Online virtual support is available from the academics team. You are encouraged to use Slack, Meet, and other online collaboration tools to work together.
 
 ### Virtual Office Hour
 
-The instructor is hosting a virtual office hour to answers questions. This will a Zoom meeting that will be posted in Slack. These are not required but are there for any all to ask questions and to hear other student's questions.
+The instructor is hosting a virtual office hour to answers questions. A Zoom meeting will be posted in Slack. These are not required but are there for any/all students to ask questions and to hear other students' questions.
