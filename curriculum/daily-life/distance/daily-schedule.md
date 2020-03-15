@@ -30,7 +30,7 @@ These are going to be virtual. Stand-ups are questions sent in Slack asked by th
 
 ### Warm-Ups
 
-Warm-ups remain the same -- the instructor sends out a coding problem. The review happens at about 9:45. This review is optional and takes place over Zoom.
+Warm-ups remain the same -- the instructor sends out a coding problem. The review happens at about 9:45. This review takes place over Zoom.
 
 ### Lectures
 
