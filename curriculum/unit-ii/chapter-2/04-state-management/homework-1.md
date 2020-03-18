@@ -28,7 +28,7 @@ You can also read [this short guide to HSL](https://www.nixsensor.com/what-is-hs
 
 Use `range` type `input` elements to drive a color display. You'll end up with something like this:
 
-![](./assets/color-picker.gif)
+![](https://raw.githubusercontent.com/suncoast-devs/handbook/master/curriculum/unit-ii/chapter-2/04-state-management/assets/color-picker.gif)
 
 **HINT**: You will want to combine techniques of string interpolation and using [inline styles in React](https://reactjs.org/docs/dom-elements.html#style), for example:
 
@@ -46,11 +46,11 @@ Use `range` type `input` elements to drive a color display. You'll end up with s
 - [ ] Initialize the state to a random color when the page is loaded.
 - [ ] Add a button that picks a new random color.
 
-- [ ] Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
 - [ ] In all cases, the sliders should be in the correct positions to represent this random color.
 
 ### Adventure Mode
 
+- [ ] Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
 - [ ] Add a section that displays a css class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
 - [ ] Only display the output color text in `hsla()` if the alpha value is less than `1`.
 
