@@ -1,8 +1,20 @@
 # Capstone Projects Rundown
 
+## General Requirements:
+
+The capstone project is the final of the course. This project should be significant in scope, but able to be trimmed down to a [MVP (minimal viable product)](https://www.freecodecamp.org/news/what-the-hell-does-minimum-viable-product-actually-mean-anyway-7d8f6a110f38/). Capstones are not necessarily new ideas that are supposed to change the world. Even though news ideas are accepted (and sometimes encourage, with instructor guidance), some of the best demo's did re-invent the wheel.
+
+The capstone has 2 mains goals.
+
+- The capstone provides you _practice_ on the skills that you have grown over the course. During the course, you have built many projects, but on a small scale. The capstone projects allow you to built something at a bigger scale, and over a longer timeline. This more significant scope helps reinforce fundamental concepts.
+
+- The capstone provides a vehicle to _show off_ the skills you have cultivated and want to grow upon further. This project is a great portfolio piece. As described in career support, employers love to see what you build. This portfolio peice helps showcase the skills you want to work on and grow on going forward.
+
 The goal of the capstone project is to show off what skills the students learned during their tenure at SDG. The core idea should be a bigger than a weekend project, but the initial scope should be limited.
 
-These dates are rough and approximate and can be fluid.
+# Miles stones
+
+Follow these important milestones, on a timely schedule to ensure a successful project. Weeks are approximate, but the students should have 2 full weeks to work on it, plus other time during the cohort.
 
 1. Elevator pitch,
 

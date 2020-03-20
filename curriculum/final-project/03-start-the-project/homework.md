@@ -6,7 +6,7 @@ With the wire frames, html and css created, next up and will be to continue on b
 
 - Start making your front end dynamic and creating components
 - Create an ERD for your database, at least a first draft
-- Start thinking about your API
+- Start thinking about your API, and if you feel good, start implementing
 
 ## Explorer Mode
 
