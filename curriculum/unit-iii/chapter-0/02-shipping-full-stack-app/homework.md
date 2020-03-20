@@ -27,6 +27,7 @@ The core functionality is:
 ### Explorer Mode
 
 - [ ] Complete the app that has the above functionality
+- [ ] Deploy it
 
 ### Adventure Mode
 
