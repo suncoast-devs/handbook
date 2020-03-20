@@ -1,6 +1,6 @@
 # It all starts with HTML
 
-During ths week, you will be building a website for your new chain of restaurants. This will have a few pages and will serve for us as a playground to learn about web development.
+During this week, you will be building a website for your new chain of restaurants. This will have a few pages and will serve as a playground to learn about web development.
 
 All web pages have to start somewhere, and this site is no different. To start off, you will be laying the groundwork for the days to come.
 
@@ -30,9 +30,9 @@ To start, you will need to start with the HTML and content.
   - [ ] a navbar
   - [ ] a ["hero"](https://www.sitepoint.com/exploring-hero-section/) section
   - [ ] at least 3 sections about the restaurant, get creative here. Specials, events and locations would be a good start here.
-  - [ ] Contact information
+  - [ ] contact information
   - [ ] a footer
-- [ ] Push your site to GitHub
+- [ ] Push your code to GitHub
 - [ ] Deploy your site.
 
 **NOTE**: Remember, this is all about content, do not worry about making your website look nice, we will do that later.

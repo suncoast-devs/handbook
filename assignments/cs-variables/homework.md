@@ -14,36 +14,53 @@ Today, we are starting our journey into development. This journey has to start s
 
 This should have been done in class, but make sure your [laptop is set up and ready to go](https://suncoast.io/handbook/tools/environment/).
 
+You can create your project following [getting going with .NET](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00-env-set-up)
+
 All your code should place inside the `static void Main(string args[])`
 
 ### Explorer Mode
 
 - [ ] Create a new `sdg-console` app that does the following.
 
-  - Create a variable (use your best judgment for type) that stores the `numberOfCupsOfCoffee` that you drink every day
-  - Create a variable (use your best judgment for type) called `fullName` and set it equal to your full name.
-  - Create a variable (use your best judgment for type) call `today` and set it equal to today's date.
-  - using your variables, `numberOfCupsOfCoffee`, `fullName`and `today`, Console.WriteLine out all three on one line.
-  - Ask the user for their name and store it in a variable called 'user'.
-  - Print out a greeting to the user, using their name
-  - Ask the user to input two numbers
-  - Get the numbers as Strings using `Console.ReadLine`
-  - Convert a String to a double using [double.parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.parse?view=netcore-3.1). Save the first double value in an `operand1` variable and the second double value in an `operand2` variable
-  - Add the operands and save in a `sum` variable
-  - Subtract the operands and save in a `difference` variable
-  - Divide the operands and save in a `quotient` variable
-  - Multiply the operands and save in a `product` variable
-  - Find the remainder when one operand is divided by the other and save in a `remainder` variable. See [this page](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators#remainder-operator-) if you need to learn more about the modulo operator.
-  - print all the results to the screen in a meaningful way.
+  - Practice Creating Variables
+
+    - Create a variable (use your best judgment for type) that stores the `numberOfCupsOfCoffee` that you drink every day
+    - Create a variable (use your best judgment for type) called `fullName` and set it equal to your full name.
+    - Create a variable (use your best judgment for type) call `today` and set it equal to today's date.
+    - Use `Console.WriteLine` and your variables, `numberOfCupsOfCoffee`, `fullName`, and `today`, to output all three on one line.
+
+  - Practice Getting Input From the User
+
+    - Ask the user for their name and store it in a variable named `userName`.
+    - Print out a greeting to the user, using their name.
+
+  - Practice Getting Different Types of Input From the User
+
+    - Ask the user to input two numbers.
+    - Get the numbers as `string`s using `Console.ReadLine`, store them in variables named `firstNumberAsString` and `secondNumberAsString`
+
+  - Converting String Input Into Numbers
+
+    - Convert each `string` above to a `double` using [Double.parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.parse?view=netcore-3.1). Save the first value in a variable named `firstOperand` and the second value in a variable named `secondOperand`.
+
+  - Doing Math
+    - Add the operand variables from above and save the results into a variable named `sum`.
+    - Subtract the operand variables and save the results in a variable named `difference`.
+    - Divide the operand variables and save the results in a variable named `quotient`.
+    - Multiply the operand variables and save in results in a variable named `product`.
+    - Find the remainder when one operand is divided by the other and save the results in a variable named `remainder`. See [this page](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/arithmetic-operators#remainder-operator-) if you need to learn more about the modulo operator.
+    - Use `Console.WriteLine` to present the user, in a meaningful way, each the values of your `sum`, `difference`, `quotient`, `product` and `remainder` variables.
 
 ### Adventure Mode
 
-- [ ] Some logic to your program that prints our a special message for a user with the of `Alice`
-- [ ] Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent today.
+- Using Logic
+  - [ ] Add some _logic_ to your program that prints a different, special, greeting to the user if their name happens to be `Alice`.
+- Using Advanced Types
+  - [ ] Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent today.
 
 ### Epic Mode
 
-- [ ] Move all of your logic to separate file and Call it from the `Main` method
+- [ ] Move all of your code to separate file and invoke it from the `Main` method.
 
 ## Additional Resources
 

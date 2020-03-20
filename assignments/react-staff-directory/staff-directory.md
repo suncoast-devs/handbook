@@ -40,7 +40,7 @@ Over the last six weeks, you have learned many concepts about front-end developm
 
     - [ ] The API endpoint to use will look like this: `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees/:employeeId`
 
-  - [ ] Add a Employee Page
+  - [ ] Add an Employee Page
     - [ ] This should allow the user to add all of the fields for an employee.
     - [ ] The UI should let the user know that the person was added to the API successfully
   - [ ] Your app should be styled and responsive. Have fun with it.
@@ -124,9 +124,3 @@ with my data in this JSON format:
   "ptoHours": 0,
 }
 ```
-
-## Preview.
-
-- Next, we start learning SQL. [Read this as a preview](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-sql/)
-
-https://github.com/mdewey/SdgStaffDirectory

@@ -1,6 +1,6 @@
 # Octodex
 
-GitHub has a great mascot called OctoCat. OctoCat even has its own gallery of variations, created by GitHub itself and fans, called [Octodex](https://octodex.github.com).
+GitHub has a great mascot called Octocat. Octocat even has its own gallery of variations, created by GitHub itself and fans, called [Octodex](https://octodex.github.com).
 
 You can use all the tools you have at your disposal to get the job done. Use your browser's Developer Tools to inspect their site to find the exact font sizes and padding amounts.
 
@@ -23,6 +23,7 @@ You can use all the tools you have at your disposal to get the job done. Use you
 
 - [ ] Recreate the page as closely as you possibly can. Use the same fonts, sizes, and colors. Download some of your favorites
 - [ ] Use _some_ Octocat images to use in your page (12-16 or so). Your layout should be flexible but doesn't need to _perfectly_ responsive.
+  - Don't bother downloading details of the Octocat, we've [made a site]((https://sdg-octodex.herokuapp.com/) that will give you all the data you need.
 - [ ] Use CSS _media queries_ to resize the Octocat containers to look great as the screen changes size. Even though the site has desktop, laptop, tablet and mobile display, for explorer mode only worry about desktop and mobile.
 - [ ] deploy your site.
       **TIP** Reminder to breakdown the layout into smaller chunks that are easier to style

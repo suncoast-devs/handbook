@@ -1,6 +1,6 @@
 # React-ify Octocats
 
-Octodex is a fun way to celebrate a powerful tool we use for development. In that same spirit, recreate [this site](https://octodex.github.com/)
+The Octodex is a fun way to celebrate a powerful tool we use for development. In that same spirit, recreate [this site](https://octodex.github.com/)
 
 You'll identify the main `Component`s on the page and create React components for each, breaking down those `Component`s into smaller ones as needed.
 
@@ -28,9 +28,9 @@ You'll identify the main `Component`s on the page and create React components fo
 
 ### Epic Mode
 
-- [ ] Put the `array` of Octocats in a `octocats.json` file and `import` that into your app.
+- [ ] Put the `array` of Octocats in an `octocats.json` file and `import` that into your app.
 - _OR_
-- [ ] Use the `fetch` api to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
+- [ ] Use the `fetch` API to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
 
 ## Additional Resources
 
