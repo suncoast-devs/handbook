@@ -1,1 +1,0 @@
-# pyrimid of \*s
