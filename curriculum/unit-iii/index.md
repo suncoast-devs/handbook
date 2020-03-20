@@ -8,7 +8,7 @@ During this unit, students will practice, build and explore building full stack 
 - lesson 1: Authentication
 - lesson 2: Practice and Application
 
-## chapter 1: Bonus Topics, in any order
+## chapter 1: Bonus Topics, in any order, or no order!
 
 - event loop in detail
 - Typescript
