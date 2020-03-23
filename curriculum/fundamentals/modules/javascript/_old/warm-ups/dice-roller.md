@@ -4,7 +4,7 @@ I have seem to have forgotten my dice set at home. Being the developers we are, 
 
 ## Explorer
 
-Create a simple page that had a button, and when the user clicks it, it displays a random number between 1 and 6.
+Create a React app that has a button, and when the user clicks it, it displays a random number between 1 and 6.
 
 ## Adventure
 
@@ -21,4 +21,6 @@ Also, let the user see all their past rolls.
 
 ## Epic
 
-Let the user add a multiplier to roll several dice at once, and let the user add a modifier to the dice roll. For example, as a user I want to roll 3d10+3 (3 ten sided dice) and add 3 to that result
+- Let the user add a multiplier to roll several dice at once, and let the user add a modifier to the dice roll. For example, as a user I want to roll 3d10+3 (3 ten sided dice) and add 3 to that result.
+
+- Try to refactor your code to be as DRY as possible. HINT: It can a be based off an array.

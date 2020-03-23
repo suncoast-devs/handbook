@@ -23,6 +23,8 @@ Now that you have full-stack powers, you can now build apps that communicate wit
 
 ### Adventure Mode
 
+- [ ] Get caught up on homework
+- [ ] Deploy your Pet site to interact with your React and Docker App
 - [ ] Capstone. Finish wireframes and start HTML and CSS
 
 ### Epic Mode
