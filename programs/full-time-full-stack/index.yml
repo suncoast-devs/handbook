@@ -1,0 +1,54 @@
+- lessons:
+    - C#
+      - cs-environment-setup
+      - cs-how-to-create-and-run-programs
+      - cs-variables
+        # - what-is-a-variable
+        # - strongly-typed
+        # - type-inference
+        # - strings
+        # - string-interpolation
+        # - numbers
+        # - arrays
+        # - hashes-dictionaries
+        # - naming-convention
+      - cs-commenting-code
+      - cs-interacting-with-the-console
+        # - outputting-information
+        # - inputting-information
+      - control-flow
+        # - while
+        # - if-else
+        # - case
+      - loops-and-arrays
+        # - for-index-loop
+        # - for-in-loop
+      - what-is-null
+      - exceptions
+      - methods
+      - classes
+        # - state-and-behavior
+        # - encapsulation
+        # - accessors-properties
+      - inheritance
+      - enumeration-linq
+        # - map-filter-reduce
+      - files-reading-and-writing
+      - packages
+      - csv
+      - sql-intro
+      - sql-joins
+      - orms
+      - api-intro
+      - http-intro
+      - json
+      - CRUD
+      - deployment
+    - HTML/CSS/JS
+      - environment-setup
+      - html-intro
+      - css-intro
+      - grids
+      - flexbox
+      - responsive
+      - react-intro
