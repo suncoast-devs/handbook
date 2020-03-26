@@ -1,8 +1,8 @@
 ## Looping
 
-Often in programming we need to do a task a certain number of times, or we need to process all the items in some collection. This is where the idea of `loops` can help.
+Often in programming, we need to perform a task repeatedly, or we need to process all the items in some collection. For these situations we can use the idea of `loops`.
 
-Let's say we want to do some statement `10` times. We could do this with the `while` control flow statement as follows:
+Let's say we want to perform some statement, or statements, `10` times. We could do this with the `while` control flow statement as follows:
 
 ```C#
 var counter = 0;
@@ -14,7 +14,7 @@ while (counter < 10) {
 }
 ```
 
-> NOTE the `counter++`, this is a shortcut for `counter = counter + 1`
+> NOTE that `counter++` is a shortcut for `counter = counter + 1`
 
 This kind of loop is so common that we have a special syntax for it, the `for loop`. The basic structure of a for loop is:
 

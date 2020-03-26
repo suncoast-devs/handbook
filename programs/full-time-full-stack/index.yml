@@ -16,11 +16,11 @@
       - cs-interacting-with-the-console
         # - outputting-information
         # - inputting-information
-      - control-flow
+      - cs-control-flow
         # - while
         # - if-else
         # - case
-      - loops-and-arrays
+      - cs-loops
         # - for-index-loop
         # - for-in-loop
       - what-is-null
