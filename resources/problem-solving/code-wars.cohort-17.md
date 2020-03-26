@@ -32,8 +32,13 @@ Challenges we like:
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |   javascript    |
 |  8  | DNA to RNA                       |    https://www.codewars.com/kata/5556282156230d0e5e000089     |   javascript    |
 |  7  | Complementary DNA                |    https://www.codewars.com/kata/554e4a2f232cdd87d9000038     |   javascript    |
-|  -  | -                                |                               -                               |        -        |
 |  8  | Find the smallest Integer        |    https://www.codewars.com/kata/55a2d7ebe362935a210000b2     | javascript / C# |
+|  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     |       C#        |
+|  7  | Disemvowel Troll                 |    https://www.codewars.com/kata/52fba66badcd10859f00097e     |   javascript    |
+|  6  | Christmas Tree                   |    https://www.codewars.com/kata/52755006cc238fcae70000ed     |       C#        |
+|  -  | -                                |                               -                               |        -        |
+|  7  | Exes and Ohs                     |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |       C#        |
+|  6  | Deaf rats                        |    https://www.codewars.com/kata/598106cb34e205e074000031     |       C#        |
 |  -  | -                                |                               -                               |        -        |
 |  8  | Convert a string to an array     |  https://www.codewars.com/kata/convert-a-string-to-an-array   |   javascript    |
 |  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     |   javascript    |
@@ -50,17 +55,12 @@ Challenges we like:
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |       C#        |
 |  8  | digits-explosion                 |    https://www.codewars.com/kata/585b1fafe08bae9988000314     |       C#        |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     |   javascript    |
-|  6  | Deaf rats                        |    https://www.codewars.com/kata/598106cb34e205e074000031     |       C#        |
-|  8  | Opposites Attract                |        https://www.codewars.com/kata/opposites-attract        |       C#        |
-|  7  | Exes and Ohs                     |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |       C#        |
 |  6  | RPN                              |    https://www.codewars.com/kata/52f78966747862fc9a0009ae     |       C#        |
 |  8  | Sum of Positives                 |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |       C#        |
 |  7  | Get the Middle Character         |    https://www.codewars.com/kata/56747fd5cb988479af000028     |       C#        |
-|  6  | Christmas Tree                   |    https://www.codewars.com/kata/52755006cc238fcae70000ed     |       C#        |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |       C#        |
 |  6  | Strongest Number                 |    https://www.codewars.com/kata/5d16af632cf48200254a6244     |       C#        |
 |  8  | A needle in the haystack         |    https://www.codewars.com/kata/56676e8fabd2d1ff3000000c     |   javascript    |
-|  7  | Disemvowel Troll                 |    https://www.codewars.com/kata/52fba66badcd10859f00097e     |   javascript    |
 |  6  | Blackjack                        |    https://www.codewars.com/kata/5bebcbf2832c3acc870000f6     |       C#        |
 |  8  | Remove First and Last Character  | https://www.codewars.com/kata/remove-first-and-last-character |   javascript    |
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          |       C#        |
