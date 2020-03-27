@@ -22,6 +22,6 @@ modules:
     title: "JavaScript: Behavior & Interaction"
     description: >
       JavaScript (JS) is a light-weight, dynamic programming language that can be used for scripting in web browsers.
-    lessions:
+    lessons:
       - js-intro
       - js-basics
