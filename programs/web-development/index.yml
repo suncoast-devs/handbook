@@ -1,5 +1,8 @@
-- lessons:
-    - C#
+title: Web Development Program
+modules:
+  - c-sharp:
+    title: Introduction to Programming with C#
+    lessons:
       - cs-environment-setup
       - cs-how-to-create-and-run-programs
       - cs-variables
@@ -42,9 +45,11 @@
       - api-intro
       - http-intro
       - json
-      - CRUD
+      - crud
       - deployment
-    - HTML/CSS/JS
+  - front-end-fundamentals:
+    title: Fundamentals of Front-end Web Development
+    lessons:
       - environment-setup
       - html-intro
       - css-intro

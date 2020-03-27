@@ -1,0 +1,27 @@
+title: Web Developement Test Drive
+description: >
+  In this six-week course, students learn the basics of front-end web development. Students will learn the basic practices, fundamentals,
+  and ideas behind creating dynamic websites with HTML, CSS, and JavaScript.
+modules:
+  - html:
+    title: "HTML: Structure & Semantics"
+    description: >
+      HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.
+    lessons:
+      - html-intro
+  - css:
+    title: "CSS: Style & Presentation"
+    description: >
+      Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of structured documents such as HTML.
+    lessons:
+      - css-intro
+      - grids
+      - flexbox
+      - responsive
+  - javascript:
+    title: "JavaScript: Behavior & Interaction"
+    description: >
+      JavaScript (JS) is a light-weight, dynamic programming language that can be used for scripting in web browsers.
+    lessions:
+      - js-intro
+      - js-basics
