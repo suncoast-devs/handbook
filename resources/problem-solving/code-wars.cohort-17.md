@@ -36,12 +36,13 @@ Challenges we like:
 |  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     |       C#        |
 |  7  | Disemvowel Troll                 |    https://www.codewars.com/kata/52fba66badcd10859f00097e     |   javascript    |
 |  6  | Christmas Tree                   |    https://www.codewars.com/kata/52755006cc238fcae70000ed     |       C#        |
-|  -  | -                                |                               -                               |        -        |
 |  7  | Exes and Ohs                     |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |       C#        |
-|  6  | Deaf rats                        |    https://www.codewars.com/kata/598106cb34e205e074000031     |       C#        |
 |  -  | -                                |                               -                               |        -        |
 |  8  | Convert a string to an array     |  https://www.codewars.com/kata/convert-a-string-to-an-array   |   javascript    |
 |  8  | Opposites Attract                |    https://www.codewars.com/kata/555086d53eac039a2a000083     |   javascript    |
+|  7  | Descending Val                   |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     |   javascript    |
+|  6  | Deaf rats                        |    https://www.codewars.com/kata/598106cb34e205e074000031     |       C#        |
+|  -  | -                                |                               -                               |        -        |
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          |   javascript    |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     |   javascript    |
 |  8  | Sum of Positives                 |    https://www.codewars.com/kata/5715eaedb436cf5606000381     |   javascript    |
@@ -68,7 +69,6 @@ Challenges we like:
 |  7  | Vowel Count                      |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     |   javascript    |
 |  7  | Form the hightest                |    https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e     |       C#        |
 |  8  | Count of positives sum of...     |    https://www.codewars.com/kata/576bb71bbbcf0951d5000044     |   javascript    |
-|  7  | Descending Val                   |    https://www.codewars.com/kata/5467e4d82edf8bbf40000155     |   javascript    |
 |  8  | Is n divisible by x and y        |    https://www.codewars.com/kata/5545f109004975ea66000086     |   javascript    |
 |  7  | Square every digit               |    https://www.codewars.com/kata/546e2562b03326a88e000020     |   javascript    |
 |  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |       C#        |
