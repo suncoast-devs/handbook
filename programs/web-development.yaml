@@ -26,7 +26,7 @@ modules:
       - cs-loops
         # - for-index-loop
         # - for-in-loop
-      - what-is-null
+      - cs-what-is-null
       - exceptions
       - methods
       - classes
@@ -34,7 +34,7 @@ modules:
         # - encapsulation
         # - accessors-properties
       - inheritance
-      - enumeration-linq
+      - cs-linq
         # - map-filter-reduce
       - files-reading-and-writing
       - packages
@@ -46,7 +46,7 @@ modules:
       - http-intro
       - json
       - crud
-      - deployment
+      - cs-deployment-to-heroku-with-docker
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
