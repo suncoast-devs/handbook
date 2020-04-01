@@ -2,6 +2,33 @@
 
 The database engine we will be using for our back-end work.
 
+## Installation (via Scoop)
+
+```sh
+scoop install postgresql
+```
+
+Start a Powershell as Administrator
+
+```sh
+pg_ctl register -N PostgreSQL
+pg_ctl start
+```
+
+Return to a regular Powershell
+
+```sh
+createuser -U postgres --superuser $USER
+```
+
+```sh
+scoop install python27
+```
+
+```sh
+pip install pgcli
+```
+
 ## Installation
 
 [Download the installer](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads) and follow the prompts.

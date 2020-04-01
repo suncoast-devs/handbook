@@ -2,6 +2,12 @@
 
 `posh-git` is an extension for Powershell that allows easy management for git. Posh-git shows beneficial git information when we are in a repository.
 
+## Installation (via Scoop)
+
+```sh
+scoop install posh-git
+```
+
 ## Installing
 
 Follow [the instructions](https://github.com/dahlbyk/posh-git#installation).

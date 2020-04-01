@@ -8,6 +8,12 @@ Git is how we will be managing our files and sharing code with each other. Git i
 
 First, make sure you have a [GitHub](http://github.com/) account.
 
+## Installation (via Scoop)
+
+```sh
+scoop install git
+```
+
 ## Installing
 
 Download the install [Git for Windows](https://gitforwindows.org/).

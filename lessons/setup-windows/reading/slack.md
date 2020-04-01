@@ -4,6 +4,12 @@ Slack will be our main form of communication. You will communicate with your ins
 
 Download it to you computer; if you have a smart phone, I _highly_ recommend installing the app.
 
+## Installation (via Scoop)
+
+```sh
+scoop install slack
+```
+
 ## Installation
 
 Open your browser and [download the desktop client](https://slack.com/downloads) for your platform.

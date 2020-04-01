@@ -4,6 +4,12 @@ Hub is command line helper for github. It allows for easy github manipulation fr
 
 From your terminal, run the following commands (current directory does not matter):
 
+## Installation (via Scoop)
+
+```sh
+scoop install hub
+```
+
 ## Installing
 
 Download and run [the installer](https://github.com/github/hub/releases/download/v2.11.2/hub-windows-amd64-2.11.2.zip).

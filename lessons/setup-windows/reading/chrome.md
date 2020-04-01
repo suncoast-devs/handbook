@@ -2,4 +2,14 @@
 
 We recommend using [Google Chrome](https://www.google.com/chrome/) during this course.
 
-We are going to be using Chrome's `Development Tools` feature extensively when developing front end applications. Even if you do not use Chrome for your web browsing expereince, having all of your fellow students on the same development tools will help.
+We are going to be using Chrome's `Development Tools` feature extensively when developing front end applications. Even if you do not use Chrome for your web browsing experience, having all of your fellow students on the same development tools will help.
+
+## Installation (via Scoop)
+
+```sh
+scoop install googlechrome
+```
+
+## Installation
+
+Download from [the Google Chrome site](https://www.google.com/chrome/) and install.

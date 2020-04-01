@@ -4,6 +4,12 @@ Developers can be fiercely opinionated about which code editing environment is b
 
 VS Code is a extendable lightweight editor that allows us to see what is going on so if you ever get the more powerful tools (like Visual Studio or Eclipse). It will not be a crutch, but a tool. This is like starting with a screwdriver, and working our way up to power drill.
 
+## Installation (via Scoop)
+
+```sh
+scoop install vscode
+```
+
 ## Installation
 
 After [downloading VS Code](https://code.visualstudio.com/Download), double-click the EXE file to run the installation process.
