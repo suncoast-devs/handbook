@@ -51,6 +51,10 @@ code   --install-extension  xabikos.ReactSnippets
 
 - Heroku
 - Docker
+
+- postgres
+- pgcli
+
 - Dotnet CLI
 
 - dotnet tools:
