@@ -38,3 +38,7 @@ A trial should have the following properties
 
 As a user I should be able to add hiking trails
 As a user, I should be able to search for a trail, based on location
+
+## Homework :
+
+Stackoverflow group work
