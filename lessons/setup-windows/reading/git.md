@@ -48,6 +48,10 @@ git config --global user.name "Replace This With Your Full Name"
 git config --global user.email "email-address-you-used-at-github@example.com"
 ```
 
+```sh
+git config --global core.editor "code --wait"
+```
+
 ### Tell Git + Hub to use `HTTPS`
 
 Finally, we need to set up Git and GitHub to use the `https` protocol. Enter the following in your shell (`Powershell`):
