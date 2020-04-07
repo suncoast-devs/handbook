@@ -47,13 +47,16 @@ Challenges we like:
 |  8  | Count of positives sum of...     |    https://www.codewars.com/kata/576bb71bbbcf0951d5000044     |   javascript    |
 |  7  | Vowel Count                      |    https://www.codewars.com/kata/54ff3102c1bad923760001f3     |   javascript    |
 |  5  | Advanced Pig Latin               |    https://www.codewars.com/kata/533c46b140aafec05b000d31     |   javascript    |
-|  -  | -                                |                               -                               |        -        |
 |  8  | digits-explosion                 |    https://www.codewars.com/kata/585b1fafe08bae9988000314     |       C#        |
 |  7  | Mumbling                         |    https://www.codewars.com/kata/5667e8f4e3f572a8f2000039     |   javascript    |
 |  6  | Strongest Number                 |    https://www.codewars.com/kata/5d16af632cf48200254a6244     |       C#        |
+|  8  | Grasshopper Summation            |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     |   javascript    |
+|  7  | Square every digit               |    https://www.codewars.com/kata/546e2562b03326a88e000020     |   javascript    |
+|  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |       C#        |
 |  -  | -                                |                               -                               |        -        |
-|  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          |   javascript    |
 |  8  | Parse nice int from char         |    https://www.codewars.com/kata/557cd6882bfa3c8a9f0000c1     |   javascript    |
+|  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          |   javascript    |
+|  -  | -                                |                               -                               |        -        |
 |  7  | Longest Vowel Chain              |    https://www.codewars.com/kata/59c5f4e9d751df43cf000035     |       C#        |
 |  7  | You're a square                  |    https://www.codewars.com/kata/54c27a33fb7da0db0100040e     |   javascript    |
 |  7  | Two fighters, one winner         |     https://www.codewars.com/kata/two-fighters-one-winner     |   javascript    |
@@ -69,7 +72,4 @@ Challenges we like:
 |  6  | Blackjack                        |    https://www.codewars.com/kata/5bebcbf2832c3acc870000f6     |       C#        |
 |  8  | Remove First and Last Character  | https://www.codewars.com/kata/remove-first-and-last-character |   javascript    |
 |  7  | Ones and Zeros                   |         https://www.codewars.com/kata/ones-and-zeros          |       C#        |
-|  8  | Grasshopper Summation            |    https://www.codewars.com/kata/55d24f55d7dd296eb9000030     |   javascript    |
-|  7  | Square every digit               |    https://www.codewars.com/kata/546e2562b03326a88e000020     |   javascript    |
-|  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |       C#        |
 |  7  | Exes and Ohs                     |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |   javascript    |
