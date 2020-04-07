@@ -66,13 +66,13 @@ we had a database setup that looks like this:
 
 ```
 +--------------------------------+           +---------------------------+
-|            movies              |           |         ratings           |
+|            Movies              |           |         Ratings           |
 |                                |           |                           |
-|    id                  SERIAL  |           |     id        SERIAL      |
-|    title               TEXT    | many  one |     rating    TEXT        |
-|    primary_director    TEXT    <----------->                           |
-|    year_released       INT     |           +---------------------------+
-|    genre               TEXT    |
+|    Id                  SERIAL  |           |     Id           SERIAL   |
+|    Title               TEXT    | many  one |     Description  TEXT     |
+|    PrimaryDirector     TEXT    <----------->                           |
+|    YearReleased        INT     |           +---------------------------+
+|    Genre               TEXT    |
 |                                |
 +-------------^------------------+
               | one
@@ -81,14 +81,14 @@ we had a database setup that looks like this:
               |
               |
               | many
-      +-------v------------------+               +-------------------------+
-      |        roles             |               |          actors         |
-      |                          | many      one |                         |
-      |   id              SERIAL | <-----------> |    id          SERIAL   |
-      |   character_name  TEXT   |               |    full_name   TEXT     |
-      |                          |               |    birthday    DATE     |
-      +-------------------------+|               |                         |
-                                                 +-------------------------+
+      +-------v----------------+               +-------------------------+
+      |        Roles           |               |          Actors         |
+      |                        | many      one |                         |
+      |   Id            SERIAL |<------------> |    Id          SERIAL   |
+      |   CharacterName TEXT   |               |    FullName    TEXT     |
+      |                        |               |    Birthday    DATE     |
+      |                        |               |                         |
+      +------------------------+               +-------------------------+
 ```
 
 and we are eventually going to represent these relationships in our `C#` code.
@@ -125,18 +125,17 @@ namespace SuncoastMovies
 {
   class Movie
   {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string primary_director { get; set; }
-    public int year_released { get; set; }
-    public string genre { get; set; }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string PrimaryDirector { get; set; }
+    public int YearReleased { get; set; }
+    public string Genre { get; set; }
   }
 
   class Program
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("Hello World!");
     }
   }
 }
@@ -171,7 +170,7 @@ class SuncoastMoviesContext : DbContext
   // our local machine.
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
-    optionsBuilder.UseNpgsql("server=localhost;database=suncoast_movies");
+    optionsBuilder.UseNpgsql("server=localhost;database=SuncoastMovies");
   }
 }
 ```
@@ -180,7 +179,7 @@ class SuncoastMoviesContext : DbContext
 
 Let's walk through this class. It is derived from `DbContext` which is provided by EF Core. The `DbContext` is what allows us to connect to our database and relate our models to tables.
 
-We then define a property `movies` (plural) which we state is of type `DbSet<Movie>`. The `Movie` here is the model we wish to relate and `movies` corresponds to the `movies` table in our database. `DbSet` will act much like our `List` collection but has much more knowledge of how to read and write from the database.
+We then define a property `Movies` (plural) which we state is of type `DbSet<Movie>`. The `Movie` here is the model we wish to relate and `Movies` corresponds to the `Movies` table in our database. `DbSet` will act much like our `List` collection but has much more knowledge of how to read and write from the database.
 
 Finally, we **override** a method required by `EF Core` that tells us how to connect to the database. EF Core will call this method to setup the connection to the database. In here we tell the options we are using a postgres database (`UseNpgsql`) and that the database is named `suncoast_movies` and is on our local machine.
 
@@ -196,11 +195,11 @@ namespace SuncoastMovies
 {
   class Movie
   {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string primary_director { get; set; }
-    public int year_released { get; set; }
-    public string genre { get; set; }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string PrimaryDirector { get; set; }
+    public int YearReleased { get; set; }
+    public string Genre { get; set; }
   }
 
   // Define a database context for our Suncoast Movies database.
@@ -208,8 +207,8 @@ namespace SuncoastMovies
   // abilities of a database context from EF Core.
   class SuncoastMoviesContext : DbContext
   {
-    // Define a Movies property that is a DbSet.
-    public DbSet<Movie> movies { get; set; }
+    // Define a movies property that is a DbSet.
+    public DbSet<Movie> Movies { get; set; }
 
     // Define a method required by EF that will configure our connection
     // to the database.
@@ -219,7 +218,7 @@ namespace SuncoastMovies
     // our local machine.
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseNpgsql("server=localhost;database=suncoast_movies");
+      optionsBuilder.UseNpgsql("server=localhost;database=SuncoastMovies");
     }
   }
 
@@ -236,16 +235,16 @@ Now we can add code to the `Main` to use our context and access our data.
 
 ```C#
 // Get a new context which will connect to the database
-var context = new SuncoastMoviesContext()
+var context = new SuncoastMoviesContext();
 ```
 
-With this object we access our `movies` property:
+With this object we access our `Movies` property:
 
 ```C#
 // Get a reference to our collection of movies.
 // NOTE: this doesn't yet access any of them, just gives
 //       us a variable that knows how.
-var movies = context.movies;
+var movies = context.Movies;
 ```
 
 Now with this `movies` object we can use some of our familiar `LINQ` capabilities. We start by seeing how we would count the number of movies in the table.
@@ -282,6 +281,8 @@ Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we 
 
 ```
 There are 14 movies!
+There is a movie named Howls Moving Castle
+There is a movie named Hitchhikers Guide to the Galaxy
 There is a movie named The Lost World
 There is a movie named Pirates of the Caribbean: The Curse of the Black Pearl
 There is a movie named Harry Potter and Goblet of Fire
@@ -289,13 +290,11 @@ There is a movie named The Hobbit: An Unexpected Journey
 There is a movie named The Hobbit: The Desolation of Smaug
 There is a movie named The Hobbit: The Battle of the Five Armies
 There is a movie named The Lord of the Rings: The Return of the King
-There is a movie named Cujo
-There is a movie named It
-There is a movie named It
-There is a movie named Howls Moving Castle
 There is a movie named The Lord of the Rings: The Fellowship of the Ring
 There is a movie named The Lord of the Rings: The Two Towers
-There is a movie named Hitchhikers Guide to the Galaxy
+There is a movie named Cujo
+There is a movie named It
+There is a movie named Ity
 ```
 
 So our application now looks like this:
@@ -309,11 +308,11 @@ namespace SuncoastMovies
 {
   class Movie
   {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string primary_director { get; set; }
-    public int year_released { get; set; }
-    public string genre { get; set; }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string PrimaryDirector { get; set; }
+    public int YearReleased { get; set; }
+    public string Genre { get; set; }
   }
 
   // Define a database context for our Suncoast Movies database.
@@ -321,8 +320,8 @@ namespace SuncoastMovies
   // abilities of a database context from EF Core.
   class SuncoastMoviesContext : DbContext
   {
-    // Define a Movies property that is a DbSet.
-    public DbSet<Movie> movies { get; set; }
+    // Define a movies property that is a DbSet.
+    public DbSet<Movie> Movies { get; set; }
 
     // Define a method required by EF that will configure our connection
     // to the database.
@@ -332,7 +331,7 @@ namespace SuncoastMovies
     // our local machine.
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      optionsBuilder.UseNpgsql("server=localhost;database=suncoast_movies");
+      optionsBuilder.UseNpgsql("server=localhost;database=SuncoastMovies");
     }
   }
 
@@ -340,20 +339,19 @@ namespace SuncoastMovies
   {
     static void Main(string[] args)
     {
-      // Get a new context which will connect to the database
       var context = new SuncoastMoviesContext();
 
       // Get a reference to our collection of movies.
       // NOTE: this doesn't yet access any of them, just gives
       //       us a variable that knows how.
-      var movies = context.movies;
+      var movies = context.Movies;
 
       var movieCount = movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
       foreach (var movie in movies)
       {
-        Console.WriteLine($"There is a movie named {movie.title}");
+        Console.WriteLine($"There is a movie named {movie.Title}");
       }
     }
   }
@@ -411,21 +409,21 @@ There is a movie named Hitchhikers Guide to the Galaxy
 
 ### Adding in related tables.
 
-Our database has other tables we could add to our system: `ratings`, `roles`, and `actors`.
+Our database has other tables we could add to our system: `Ratings`, `Roles`, and `Actors`.
 
 Lets add a model for our ratings.
 
 ```C#
 class Rating
 {
-  public int id { get; set; }
-  public string rating { get; set; }
+  public int Id { get; set; }
+  public string Description { get; set; }
 }
 
 // Add this inside `SuncoastMoviesContext`
 
 // Define a Ratings property that is a DbSet.
-public DbSet<Movie> ratings { get; set; }
+public DbSet<Rating> Ratings { get; set; }
 ```
 
 Now we would be able to query our table of ratings. This is great, but what we want to do is see the rating for a specific movie. To achieve this we need to relate the two tables.
@@ -433,18 +431,16 @@ Now we would be able to query our table of ratings. This is great, but what we w
 We need to modify the `Movie` model to tell it how to relate to the `Rating` model. To do this, we'll add the following code:
 
 ```C#
-[ForeignKey("rating_id")]
-public Rating rating { get; set; }
+public int RatingId { get; set; }
+public Rating Rating { get; set; }
 ```
 
-> NOTE: This will require `using System.ComponentModel.DataAnnotations.Schema;`
+This tells the `Movie` model that it can use the `Rating` property to return a `Rating` object.
 
-This tells the `Movie` model that it can use the `rating` property to return a `Rating` object. It also tells the system to use the `rating_id` column to look up the corresponding `id` in the `ratings` table. We need this because by default it is expecting a column named `ratingid`.
-
-Now when we access the `context.movies` we can also tell it to fetch the related `rating` via the `Include` method.
+Now when we access the `context.Movies` we can also tell it to fetch the related `Rating` via the `Include` method.
 
 ```C#
-var movies = context.movies.Include(movie => movie.rating);
+var movies = context.Movies.Include(movie => movie.Rating);
 ```
 
 Now when we access the `movies` we are going to generate a **JOIN** to the `ratings` table and bring that information back again.
@@ -454,55 +450,54 @@ Now we can change our loop to also show the `rating` if it has one.
 ```C#
 foreach (var movie in movies)
 {
-  if (movie.rating == null)
+  if (movie.Rating == null)
   {
-    Console.WriteLine($"There is a movie named {movie.title} and has not been rated yet");
+    Console.WriteLine($"There is a movie named {movie.Title} and has not been rated yet");
   }
   else
   {
-    Console.WriteLine($"There is a movie named {movie.title} and a rating of {movie.rating.rating}");
+    Console.WriteLine($"There is a movie named {movie.Title} and a rating of {movie.Rating.Description}");
   }
 }
 ```
 
-Notice how if their is no related `rating` we need to see that the `movie.rating` is not `null`. This will be the case for each row in `movies` that doesn't have a `rating_id` that matches something from the `ratings` table.
+Notice how if their is no related `Rating` we need to see that the `movie.Rating` is not `null`. This will be the case for each row in `Movies` that doesn't have a `RatingId` that matches something from the `Ratings` table.
 
 If we run this code we will see the SQL joins being generated:
 
 ```
 info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
-      Entity Framework Core 3.1.3 initialized 'SuncoastMoviesContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+      Entity Framework Core 3.1.3 initialized 'SuncoastMoviesContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL'
+with options: None
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
-      Executed DbCommand (3ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      Executed DbCommand (15ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
       SELECT COUNT(*)::INT
-      FROM movies AS m
+      FROM "Movies" AS m
 There are 14 movies!
 info: Microsoft.EntityFrameworkCore.Database.Command[20101]
-      Executed DbCommand (18ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
-      SELECT m.id, m.genre, m.primary_director, m.rating_id, m.title, m.year_released, r.id, r.rating
-      FROM movies AS m
-      LEFT JOIN ratings AS r ON m.rating_id = r.id
-There is a movie named The Lost World and has not been rated yet
-There is a movie named Pirates of the Caribbean: The Curse of the Black Pearl and has not been rated yet
-There is a movie named Harry Potter and Goblet of Fire and has not been rated yet
-There is a movie named The Hobbit: An Unexpected Journey and has not been rated yet
-There is a movie named The Hobbit: The Desolation of Smaug and has not been rated yet
-There is a movie named The Hobbit: The Battle of the Five Armies and has not been rated yet
-There is a movie named The Lord of the Rings: The Return of the King and has not been rated yet
-There is a movie named Cujo and has not been rated yet
-There is a movie named It and has not been rated yet
-There is a movie named It and has not been rated yet
-There is a movie named Howls Moving Castle and has not been rated yet
-There is a movie named The Lord of the Rings: The Fellowship of the Ring and a rating of G
-There is a movie named The Lord of the Rings: The Two Towers and a rating of G
-There is a movie named Hitchhikers Guide to the Galaxy and a rating of G
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT m."Id", m."Genre", m."PrimaryDirector", m."RatingId", m."Title", m."YearReleased", r."Id", r."Description"
+      FROM "Movies" AS m
+      INNER JOIN "Ratings" AS r ON m."RatingId" = r."Id"
+There is a movie named Hitchhikers Guide to the Galaxy and a rating of PG
+There is a movie named The Lost World and a rating of PG-13
+There is a movie named Pirates of the Caribbean: The Curse of the Black Pearl and a rating of PG-13
+There is a movie named Harry Potter and Goblet of Fire and a rating of PG-13
+There is a movie named The Hobbit: An Unexpected Journey and a rating of PG-13
+There is a movie named The Hobbit: The Desolation of Smaug and a rating of PG-13
+There is a movie named The Hobbit: The Battle of the Five Armies and a rating of PG-13
+There is a movie named The Lord of the Rings: The Return of the King and a rating of PG-13
+There is a movie named The Lord of the Rings: The Fellowship of the Ring and a rating of PG-13
+There is a movie named The Lord of the Rings: The Two Towers and a rating of PG-13
+There is a movie named Cujo and a rating of R
+There is a movie named It and a rating of R
+There is a movie named It and a rating of R
 ```
 
 Here is our code so far:
 
 ```C#
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -511,21 +506,20 @@ namespace SuncoastMovies
 {
   class Movie
   {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string primary_director { get; set; }
-    public int year_released { get; set; }
-    public string genre { get; set; }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string PrimaryDirector { get; set; }
+    public int YearReleased { get; set; }
+    public string Genre { get; set; }
 
-    [ForeignKey("rating_id")]
-    public Rating rating { get; set; }
-    public int rating_id { get; set; }
+    public int RatingId { get; set; }
+    public Rating Rating { get; set; }
   }
 
   class Rating
   {
-    public int id { get; set; }
-    public string rating { get; set; }
+    public int Id { get; set; }
+    public string Description { get; set; }
   }
 
   // Define a database context for our Suncoast Movies database.
@@ -533,11 +527,11 @@ namespace SuncoastMovies
   // abilities of a database context from EF Core.
   class SuncoastMoviesContext : DbContext
   {
-    // Define a Movies property that is a DbSet.
-    public DbSet<Movie> movies { get; set; }
+    // Define a movies property that is a DbSet.
+    public DbSet<Movie> Movies { get; set; }
 
     // Define a Ratings property that is a DbSet.
-    public DbSet<Rating> ratings { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
 
     // Define a method required by EF that will configure our connection
     // to the database.
@@ -550,7 +544,7 @@ namespace SuncoastMovies
       var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
       optionsBuilder.UseLoggerFactory(loggerFactory);
 
-      optionsBuilder.UseNpgsql("server=localhost;database=suncoast_movies");
+      optionsBuilder.UseNpgsql("server=localhost;database=SuncoastMovies");
     }
   }
 
@@ -558,27 +552,25 @@ namespace SuncoastMovies
   {
     static void Main(string[] args)
     {
-      // Get a new context which will connect to the database
       var context = new SuncoastMoviesContext();
 
       // Get a reference to our collection of movies.
       // NOTE: this doesn't yet access any of them, just gives
       //       us a variable that knows how.
-      // ALSO: use the Include method to bring in the rating
-      var movies = context.movies.Include(movie => movie.rating);
+      var movies = context.Movies.Include(movie => movie.Rating);
 
       var movieCount = movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
       foreach (var movie in movies)
       {
-        if (movie.rating == null)
+        if (movie.Rating == null)
         {
-          Console.WriteLine($"There is a movie named {movie.title} and has not been rated yet");
+          Console.WriteLine($"There is a movie named {movie.Title} and has not been rated yet");
         }
         else
         {
-          Console.WriteLine($"There is a movie named {movie.title} and a rating of {movie.rating.rating}");
+          Console.WriteLine($"There is a movie named {movie.Title} and a rating of {movie.Rating.Description}");
         }
       }
     }
@@ -590,10 +582,17 @@ namespace SuncoastMovies
 
 Finally, we can add the relationships for `Role` and `Actor`.
 
+Notice that when adding the `Roles` relationship to the `Movie` class we add it as such:
+
+```C#
+public List<Role> Roles { get; set; }
+```
+
+We are telling the `Movie` that it has a _list_ of related `Roles`. Since we have setup or relationships with appropriate SQL syntax, EF Core can determine how to join these tables together.
+
 ```C#
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -602,46 +601,51 @@ namespace SuncoastMovies
 {
   class Movie
   {
-    public int id { get; set; }
-    public string title { get; set; }
-    public string primary_director { get; set; }
-    public int year_released { get; set; }
-    public string genre { get; set; }
+    public int Id { get; set; }
+    public string Title { get; set; }
+    public string PrimaryDirector { get; set; }
+    public int YearReleased { get; set; }
+    public string Genre { get; set; }
 
-    [ForeignKey("rating_id")]
-    public Rating rating { get; set; }
-    public int? rating_id { get; set; }
+    // This is the column in the database
+    public int RatingId { get; set; }
+    // This is the related object we can use from our code (if properly used with Include)
+    public Rating Rating { get; set; }
 
-    public List<Role> roles { get; set; }
+    // This is the related list of roles we an use (if properly used with Include)
+    public List<Role> Roles { get; set; }
   }
 
   class Rating
   {
-    public int id { get; set; }
-    public string rating { get; set; }
+    public int Id { get; set; }
+    public string Description { get; set; }
   }
 
   class Role
   {
-    public int id { get; set; }
-    public string character_name { get; set; }
+    public int Id { get; set; }
+    public string CharacterName { get; set; }
 
-    public int movie_id { get; set; }
-    [ForeignKey("movie_id")]
-    public Movie movie { get; set; }
+    // This is the column in the database
+    public int MovieId { get; set; }
+    // This is the related object we can use from our code (if properly used with Include)
+    public Movie Movie { get; set; }
 
-    public int actor_id { get; set; }
-    [ForeignKey("actor_id")]
-    public Actor actor { get; set; }
+    // This is the column in the database
+    public int ActorId { get; set; }
+    // This is the related object we can use from our code (if properly used with Include)
+    public Actor Actor { get; set; }
   }
 
   class Actor
   {
-    public int id { get; set; }
-    public string full_name { get; set; }
-    public DateTime birthday { get; set; }
+    public int Id { get; set; }
+    public string FullName { get; set; }
+    public DateTime Birthday { get; set; }
 
-    public List<Role> roles { get; set; }
+    // This is the related list of roles we an use (if properly used with Include)
+    public List<Role> Roles { get; set; }
   }
 
   // Define a database context for our Suncoast Movies database.
@@ -649,17 +653,17 @@ namespace SuncoastMovies
   // abilities of a database context from EF Core.
   class SuncoastMoviesContext : DbContext
   {
-    // Define a Movies property that is a DbSet.
-    public DbSet<Movie> movies { get; set; }
+    // Define a movies property that is a DbSet.
+    public DbSet<Movie> Movies { get; set; }
 
     // Define a Ratings property that is a DbSet.
-    public DbSet<Rating> ratings { get; set; }
+    public DbSet<Rating> Ratings { get; set; }
 
-    // Define a roles property that is a DbSet.
-    public DbSet<Role> roles { get; set; }
+    // Define a Roles property that is a DbSet.
+    public DbSet<Role> Roles { get; set; }
 
-    // Define an actors property that is a DbSet.
-    public DbSet<Actor> actors { get; set; }
+    // Define an Actors property that is a DbSet.
+    public DbSet<Actor> Actors { get; set; }
 
     // Define a method required by EF that will configure our connection
     // to the database.
@@ -672,7 +676,7 @@ namespace SuncoastMovies
       var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
       optionsBuilder.UseLoggerFactory(loggerFactory);
 
-      optionsBuilder.UseNpgsql("server=localhost;database=suncoast_movies");
+      optionsBuilder.UseNpgsql("server=localhost;database=SuncoastMovies");
     }
   }
 
@@ -680,35 +684,79 @@ namespace SuncoastMovies
   {
     static void Main(string[] args)
     {
-      // Get a new context which will connect to the database
       var context = new SuncoastMoviesContext();
 
       // Get a reference to our collection of movies.
       // NOTE: this doesn't yet access any of them, just gives
       //       us a variable that knows how.
-      // ALSO: use the Include method to bring in the rating
-      var movies = context.movies.Include(movie => movie.rating).Include(movie => movie.roles).ThenInclude(role => role.actor);
+      var movies = context.Movies.Include(movie => movie.Rating).Include(movie => movie.Roles).ThenInclude(role => role.Actor);
 
       var movieCount = movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
       foreach (var movie in movies)
       {
-        if (movie.rating == null)
+        if (movie.Rating == null)
         {
-          Console.WriteLine($"There is a movie named {movie.title} with has not been rated yet");
+          Console.WriteLine($"There is a movie named {movie.Title} and has not been rated yet");
         }
         else
         {
-          Console.WriteLine($"There is a movie named {movie.title} with a rating of {movie.rating.rating}");
+          Console.WriteLine($"There is a movie named {movie.Title} and a rating of {movie.Rating.Description}");
         }
 
-        foreach (var role in movie.roles)
+        foreach (var role in movie.Roles)
         {
-          Console.WriteLine($" - Has a character named {role.character_name} played by {role.actor.full_name}");
+          Console.WriteLine($" - Has a character named {role.CharacterName} played by {role.Actor.FullName}");
         }
       }
     }
   }
 }
+```
+
+And our program's output is now.
+
+```
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 3.1.3 initialized 'SuncoastMoviesContext' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL' with options: None
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)::INT
+      FROM "Movies" AS m
+There are 14 movies!
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT m."Id", m."Genre", m."PrimaryDirector", m."RatingId", m."Title", m."YearReleased", r."Id", r."Description", t."Id", t."ActorId", t."CharacterName", t."MovieId", t."Id0", t."Birthday", t."FullName"
+      FROM "Movies" AS m
+      INNER JOIN "Ratings" AS r ON m."RatingId" = r."Id"
+      LEFT JOIN (
+          SELECT r0."Id", r0."ActorId", r0."CharacterName", r0."MovieId", a."Id" AS "Id0", a."Birthday", a."FullName"
+          FROM "Roles" AS r0
+          INNER JOIN "Actors" AS a ON r0."ActorId" = a."Id"
+      ) AS t ON m."Id" = t."MovieId"
+      ORDER BY m."Id", r."Id", t."Id", t."Id0"
+There is a movie named The Lost World and a rating of PG-13
+There is a movie named Pirates of the Caribbean: The Curse of the Black Pearl and a rating of PG-13
+ - Has a character named Will Turner played by Orlando Bloom
+There is a movie named Harry Potter and Goblet of Fire and a rating of PG-13
+ - Has a character named Filius Flitwick played by Warwick Davis
+There is a movie named The Hobbit: An Unexpected Journey and a rating of PG-13
+ - Has a character named Bilbo played by Martin Freeman
+There is a movie named The Hobbit: The Desolation of Smaug and a rating of PG-13
+ - Has a character named Bilbo played by Martin Freeman
+There is a movie named The Hobbit: The Battle of the Five Armies and a rating of PG-13
+ - Has a character named Bilbo played by Martin Freeman
+There is a movie named The Lord of the Rings: The Return of the King and a rating of PG-13
+ - Has a character named Legolas played by Orlando Bloom
+There is a movie named The Lord of the Rings: The Fellowship of the Ring and a rating of PG-13
+ - Has a character named Legolas played by Orlando Bloom
+There is a movie named The Lord of the Rings: The Two Towers and a rating of PG-13
+ - Has a character named Legolas played by Orlando Bloom
+There is a movie named Hitchhikers Guide to the Galaxy and a rating of PG
+ - Has a character named Marvin played by Warwick Davis
+ - Has a character named Arthur Dent played by Martin Freeman
+There is a movie named Cujo and a rating of R
+There is a movie named It and a rating of R
+There is a movie named It and a rating of R
 ```

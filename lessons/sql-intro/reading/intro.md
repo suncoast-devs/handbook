@@ -30,7 +30,7 @@ Using a database is one of the best ways to store, persist and query data that w
 
 - Atomicity - Updates to the database allow for multiple changes to be requested at once and either all of them fail, or all of them succeed. For instance, if our application is a banking application and we want to withdraw \$10 from Andy's account and add it to Barbara's account, we might first write a statement to decrease Andy's balance by 10. Then a second statement would increase Barbara's balance by 10. If these two statements aren't guaranteed to succeed in pairs we have the possibility that we would decrease Andy's balance without correspondingly increase Barabara's. In an `atomic` system, either we would both decrease Andy's balance and increase Barbara's balance - _or_ - if an error occurs, their balances are as they were at the start.
 
-- Consistency - The data we store is consistent. That is any rules the database enforces are applied when asking for changes. An example is when creating a user to a system we _require_ the user to have an email address and a password. If we attempt to create a row in the `users` table but the `email` field is blank, we do not allow the row. This ensures that our expectations of the contents of the database are always upheld.
+- Consistency - The data we store is consistent. That is any rules the database enforces are applied when asking for changes. An example is when creating a user to a system we _require_ the user to have an email address and a password. If we attempt to create a row in the `Users` table but the `Email` field is blank, we do not allow the row. This ensures that our expectations of the contents of the database are always upheld.
 
 - Isolation - This allows for multiple database requests to be handled concurrently (e.g. reading and writing to multiple tables/rows at the same time) This feature is what allows databases to be a great choice for multi-user systems.
 
@@ -42,7 +42,7 @@ As far as databases are concerned, there are two overarching types: SQL and NoSQ
 
 SQL is a table-based storage paradigm, that stores data arranged in an Excel-like format, that focuses on normalizing our data by focusing on relationships and structure. This is often referred to as "Relational Databases"
 
-NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database stores data in form other the table structure in SQL. This looseness of data structure allows developers to more freely control what and how the data is stored. NoSQL databases, while existing for while, have become popular with the rise of data science and big data.
+NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database stores data in form other the table structure in SQL. This looseness of data structure allows developers to more freely control what and how the data is stored. NoSQL databases have become popular with the rise of data science and big data.
 
 Currently "Relational/SQL Databases" are the most common databases we will explore what a SQL database is and what it can do.
 
@@ -54,15 +54,15 @@ As we mentioned, a SQL (relational) database stores and arranges our data into t
 
 Tables are the containers for our data. Usually, a database has multiple tables, one for each "thing" we are storing.
 
-For instance, let's imagine we are designing and building a system to manage books for a library. We could create a database named `book_collection` and in that database, there would be one table, called `books`.
+For instance, let's imagine we are designing and building a system to manage books for a library. We could create a database named `BookCollection` and in that database, there would be one table, called `Books`.
 
-Into this `books` table, we would design columns that represent the specific data about books we wish to track. Each row in the `books` table would represent a unique book in our collection.
+Into this `Books` table, we would design columns that represent the specific data about books we wish to track. Each row in the `Books` table would represent a unique book in our collection.
 
 ### Columns
 
 Columns are the part of the table that defines the structure (what we often call the `schema`) of the data we are storing. This is where we define the attributes of the "thing" represented by the table. Every column has a data type that defines and restricts what type of data we can place into each column.
 
-In our `books` table, we will want to store specific details, such as the title, the primary author, the year published, and the genre of the book. We will name these columns `title`, `primary_author`, `year_published`, and `genre`. In a language such as JavaScript, Ruby, or C# we would naturally define each of these as a `string` -- In a database, we have a few choices for the data type:
+In our `Books` table, we will want to store specific details, such as the title, the primary author, the year published, and the genre of the book. We will name these columns `Title`, `PrimaryAuthor`, `YearPublished`, and `Genre`. In a language such as JavaScript, Ruby, or C# we would naturally define each of these as a `string` -- In a database, we have a few choices for the data type:
 
 - `char(N)` - The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is _always_ `N` characters long
 - `varchar(N)` - Again the `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is _not_ filled with spaces.
@@ -74,14 +74,14 @@ Check out the [Postgres docs on types](https://www.postgresql.org/docs/current/d
 
 ### Rows
 
-Rows are where our data is actually stored. Each row represents one "thing", in our case one "book". In our example, a row of data would contain 'The Cat in the Hat' (`title`), 'Dr. Suess' (`author`), and 'kids' (`genre`).
+Rows are where our data is actually stored. Each row represents one "thing", in our case one "book". In our example, a row of data would contain 'The Cat in the Hat' (`Title`), 'Dr. Suess' (`Author`), and 'kids' (`Genre`).
 
 ## Getting started with Postgres
 
 First, we need to create a database. After you have installed Postgres, use the command:
 
 ```bash
-createdb book_collection
+createdb BookCollection
 ```
 
 to create a new, empty database.
@@ -89,7 +89,7 @@ to create a new, empty database.
 To connect to that database and start running queries against it, use the command:
 
 ```bash
-psql book_collection
+psql BookCollection
 ```
 
 As with most things in programming, there are tools to help make developers lives easier; `pgcli` is one of those tools. This tool offers intellisense and a few other handy tools to make things a bit easier when working with Postgres.
@@ -106,14 +106,14 @@ If you are using `pgcli`, ensure `MULTILINE` is `ON` before starting. You can tu
 
 After connecting to a new database, we need to create a table to store our information. This table will have rows (data) and columns (structure).
 
-Let's start by creating the table with only the `title`, `primary_author`, and the `year_published` columns for our `books`
+Let's start by creating the table with only the `Title`, `PrimaryAuthor`, and the `YearPublished` columns for our `Books`
 
 ```sql
-CREATE TABLE books (
-  title           TEXT NOT NULL,
-  primary_author  TEXT,
-  year_published  INT,
-  id SERIAL PRIMARY KEY
+CREATE TABLE Books (
+  Title           TEXT NOT NULL,
+  PrimaryAuthor  TEXT,
+  YearPublished  INT,
+  Id SERIAL PRIMARY KEY
 );
 ```
 
@@ -121,20 +121,20 @@ CREATE TABLE books (
 
 The structure of our tables is not set in stone. They can be modified at a later date by using the `ALTER TABLE` query.
 
-To demonstrate this, let's add the `genre` column we omitted when creating our table. We will make it a small text field since genre descriptions are typically short.
+To demonstrate this, let's add the `Genre` column we omitted when creating our table. We will make it a small text field since genre descriptions are typically short.
 
 ```sql
-ALTER TABLE books ADD COLUMN genre VARCHAR(15);
+ALTER TABLE Books ADD COLUMN Genre VARCHAR(15);
 ```
 
-Now our table has four columns. You might be wondering what value the `genre` column will have for any existing rows. Each database engine (Postgres, MySQL, Oracle, Microsoft SQL Server for instance) may have different rules. In our case, with Postgres, it will use a `null` value for `genre` for existing rows. That is, the database considers that those rows have _NO_ value for that column. This is different from having a value for that column, but being blank. In SQL, `null` is different than empty (`""`)
+Now our table has four columns. You might be wondering what value the `Genre` column will have for any existing rows. Each database engine (Postgres, MySQL, Oracle, Microsoft SQL Server for instance) may have different rules. In our case, with Postgres, it will use a `null` value for `Genre` for existing rows. That is, the database considers that those rows have _NO_ value for that column. This is different from having a value for that column, but being blank. In SQL, `null` is different than empty (`""`)
 
 #### INSERT
 
 To create a new row in our database, we need to use `INSERT`. A `INSERT` statement looks like this:
 
 ```sql
-INSERT INTO table_name (columnA, columnB, columnC)
+INSERT INTO TableName (columnA, columnB, columnC)
 VALUES ('columnAValue', 'columnBValue', 'columnCValue')
 ```
 
@@ -143,40 +143,40 @@ The insert statement has several components. The first is `table_name` to tell t
 Example `INSERT` Statements:
 
 ```sql
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('Night of the Living Dummy', 'R. L. Stine', 1993, 'horror');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('A Shocker on Shock Street', 'R. L. Stine', 1995, 'horror');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('The Lost World', 'Michael Crichton', 1995, 'sci-fi');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('Harry Potter and Goblet of Fire', 'J.K. Rowling', 2000, 'fantasy');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('The Hobbit', 'J.R.R. Tolkien', 1937, 'fantasy');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('The Lord of the Rings: The Return of the King', 'J.R.R. Tolkien', 1955, 'fantasy');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('The Lord of the Rings: The Fellowship of the Ring', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('The Lord of the Rings: The Two Towers', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('Hitchhikers Guide to the Galaxy', 'Douglas Adams', 1979, 'sci-fi');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('Cujo', 'Stephen King', 1981, 'horror');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('It', 'Stephen King', 1986, 'horror');
 
-INSERT INTO books (title,  primary_author, year_published, genre)
+INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
 VALUES ('Howls Moving Castle', 'Diana Wynne Jones', 1986, 'fantasy');
 ```
 
@@ -187,41 +187,37 @@ Notice that we supplied the title, primary_author, year, and genre in the `VALUE
 `SELECT` statements allow us to query and return a new view of the data.
 
 ```sql
-SELECT * FROM books;
+SELECT * FROM Books;
 ```
 
-This query will give us back all the columns (`*`) from all the rows in the `books` table. Regardless if there are ten rows or ten million rows, this statement will return them all.
+This query will give us back all the columns (`*`) from all the rows in the `Books` table. Regardless if there are ten rows or ten million rows, this statement will return them all.
 
 Often we do not want _all_ the columns from the table so we can specify specific columns.
 
 ```sql
-SELECT title FROM books;
+SELECT Title FROM Books;
 ```
 
-While this will still return all the rows, we will only see the `title` column for all those rows.
+While this will still return all the rows, we will only see the `Title` column for all those rows.
 
 We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied. For example:
 
 ```sql
-SELECT title, primary_author FROM books WHERE genre = 'horror';
+SELECT Title, PrimaryAuthor FROM Books WHERE Genre = 'horror';
 ```
 
-This query only returns the `title` and `primary_author` of books that have a genre of `horror`
+This query only returns the `Title` and `PrimaryAuthor` of books that have a genre of `horror`
 
 More examples:
 
 ```sql
-SELECT * FROM books;
+SELECT * FROM Books;
 
-SELECT title, primary_author from books;
-
-SELECT title, primary_author from books where genre = 'horror';
-
-SELECT title, primary_author from books where genre = 'fantasy' OR genre = 'sci-fi';
-
-SELECT title, primary_author from books where genre = 'horror' ORDER BY title;
-
-SELECT title, primary_author from books where title LIKE 'The Lord of the Rings%' ORDER BY title;
+SELECT Title, PrimaryAuthor from Books;
+SELECT Title, PrimaryAuthor from Books where Genre = 'horror';
+SELECT Title, PrimaryAuthor from Books where Genre = 'fantasy' OR Genre = 'sci-fi';
+SELECT Title, PrimaryAuthor from Books where Genre = 'horror' ORDER BY Title;
+SELECT Title, PrimaryAuthor from Books where Title LIKE 'The Lord of the Rings%' ORDER BY Title;
 ```
 
 #### UPDATE
@@ -229,12 +225,12 @@ SELECT title, primary_author from books where title LIKE 'The Lord of the Rings%
 To change data in our database, we use an `UPDATE` statement. The general structure of an `UPDATE` is:
 
 ```sql
-UPDATE table_name
-SET columnA = 'new value'
-WHERE columnB = 'some value'
+UPDATE TableName
+SET ColumnA = 'new value'
+WHERE ColumnB = 'some value'
 ```
 
-The above update statement will update all rows that have `columnB = 'some value` and change `columnA` to contain `new value`.
+The above update statement will update all rows that have `ColumnB = 'some value` and change `ColumnA` to contain `new value`.
 
 NOTE: The same syntax for `WHERE` clauses from `SELECT` apply here. We can use multiple conditions and combine them with `AND` and `OR`
 
@@ -243,7 +239,7 @@ NOTE: The same syntax for `WHERE` clauses from `SELECT` apply here. We can use m
 Example:
 
 ```sql
-UPDATE books SET genre = 'children horror' WHERE primary_author = 'R. L. Stine';
+UPDATE Books SET genre = 'children horror' WHERE PrimaryAuthor = 'R. L. Stine';
 ```
 
 #### DELETE
@@ -253,10 +249,10 @@ To remove one or many rows, we can use the `DELETE` statement.
 Example:
 
 ```sql
-DELETE FROM books WHERE year_published = 1995;
+DELETE FROM Books WHERE YearPublished = 1995;
 ```
 
-This will delete all the books with a `year_published` of 1995.
+This will delete all the books with a `YearPublished` of 1995.
 
 As with the `UPDATE` statement the `DELETE` statement can use the same `WHERE` syntax to filter which rows will be deleted.
 
