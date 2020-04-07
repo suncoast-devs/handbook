@@ -27,16 +27,15 @@ modules:
         # - for-index-loop
         # - for-in-loop
       - cs-what-is-null
-      - exceptions
-      - methods
-      - classes
+      - TODO-exceptions
+      - cs-methods
+      - cs-classes
         # - state-and-behavior
         # - encapsulation
         # - accessors-properties
-      - inheritance
       - cs-linq
         # - map-filter-reduce
-      - files-reading-and-writing
+      - cs-files-reading-and-writing
       - packages
       - csv
       - sql-intro
