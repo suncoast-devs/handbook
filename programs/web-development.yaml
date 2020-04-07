@@ -36,11 +36,10 @@ modules:
       - cs-linq
         # - map-filter-reduce
       - cs-files-reading-and-writing
-      - packages
-      - csv
+      - todo-packages
       - sql-intro
       - sql-joins
-      - orms
+      - cs-object-relational-mapping
       - api-intro
       - http-intro
       - json

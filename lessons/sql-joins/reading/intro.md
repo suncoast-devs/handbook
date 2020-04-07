@@ -414,7 +414,7 @@ LEFT JOIN roles ON roles.movie_id = movies.id
 LEFT JOIN actors on actors.id = roles.actor_id;
 ```
 
-````
+```
 +--------+--------------------------------------------------------+----------------+------------------+
 | id     | title                                                  | full_name      | character_name   |
 |--------+--------------------------------------------------------+----------------+------------------|
@@ -433,7 +433,8 @@ LEFT JOIN actors on actors.id = roles.actor_id;
 | <null> | It                                                     | <null>         | <null>           |
 | <null> | The Lost World                                         | <null>         | <null>           |
 | <null> | Howls Moving Castle                                    | <null>         | <null>           |
-+--------+--------------------------------------------------------+----------------+------------------+```
++--------+--------------------------------------------------------+----------------+------------------+
+```
 
 Now lets update the roles for Martin Freeman
 
@@ -443,7 +444,7 @@ UPDATE roles SET character_name = 'Arthur Dent' WHERE id = 6;
 
 -- Martin Freeman played Bilbo in all three Hobbit movies (IDs 7, 8, and 9)
 UPDATE roles SET character_name = 'Bilbo' WHERE id IN (7,8,9);
-````
+```
 
 We could do the same for Orlando Bloom and for Warwick Davis. However, Warwick Davis played more than one role in the Harry Potter movie. To achieve this we would have to insert more rows, each with the name of the character he played.
 
