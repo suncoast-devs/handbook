@@ -41,10 +41,10 @@ modules:
       - sql-joins
       - cs-object-relational-mapping
       - http-intro
-      - api-intro
-      - json
-      - crud
-      - cs-deployment-to-heroku-with-docker
+      - TODO-api-intro
+      - TODO-json
+      - TODO-crud
+      - TODO-cs-deployment-to-heroku-with-docker
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
