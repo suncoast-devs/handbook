@@ -40,8 +40,8 @@ modules:
       - sql-intro
       - sql-joins
       - cs-object-relational-mapping
-      - api-intro
       - http-intro
+      - api-intro
       - json
       - crud
       - cs-deployment-to-heroku-with-docker
