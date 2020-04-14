@@ -18,6 +18,18 @@ During installation, if you are presented with any choices, simply select the de
 
 ## Post Installation
 
+### dotnet EF Core
+
+We will need a few tools along the way so we will make sure they are installed now:
+
+In a Powershell window:
+
+```sh
+dotnet tool install --global dotnet-ef
+```
+
+### Set dotnet locally to "Development Mode"
+
 In a Powershell window:
 
 ```sh
