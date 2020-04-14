@@ -80,6 +80,21 @@ Within VS Code go to the `File` menu, then `Preferences`, then `Settings`
 - In the search bar enter `formatOn`
 - Find the setting `Editor: Format on Save` and turn this _ON_
 
+## Configure proper spacing.
+
+In VS Code Use `Control Shift P` to launch the command palette and Type `Open Settings JSON` and select the first match found.
+
+This will open an editor window.
+
+At the top of the file and just after the first `{` paste the following:
+
+```
+  "[csharp]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  },
+```
+
 ## Additional Tips and Tricks
 
 In VS Code Use `Control Shift P` to launch the command palette and Type `Configure User Snippets`

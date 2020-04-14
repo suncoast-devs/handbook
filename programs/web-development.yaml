@@ -37,6 +37,7 @@ modules:
         # - map-filter-reduce
       - cs-files-reading-and-writing
       - todo-packages
+      - sql-erd
       - sql-intro
       - sql-joins
       - cs-object-relational-mapping
