@@ -36,7 +36,7 @@ modules:
       - cs-linq
         # - map-filter-reduce
       - cs-files-reading-and-writing
-      - todo-packages
+      - cs-packages
       - sql-erd
       - sql-intro
       - sql-joins
