@@ -6,35 +6,15 @@ modules:
       - cs-environment-setup
       - cs-how-to-create-and-run-programs
       - cs-variables
-        # - what-is-a-variable
-        # - strongly-typed
-        # - type-inference
-        # - strings
-        # - string-interpolation
-        # - numbers
-        # - arrays
-        # - hashes-dictionaries
-        # - naming-convention
       - cs-commenting-code
       - cs-interacting-with-the-console
-        # - outputting-information
-        # - inputting-information
       - cs-control-flow
-        # - while
-        # - if-else
-        # - case
       - cs-loops
-        # - for-index-loop
-        # - for-in-loop
       - cs-what-is-null
       - TODO-exceptions
       - cs-methods
       - cs-classes
-        # - state-and-behavior
-        # - encapsulation
-        # - accessors-properties
       - cs-linq
-        # - map-filter-reduce
       - cs-files-reading-and-writing
       - cs-packages
       - sql-erd
@@ -42,10 +22,13 @@ modules:
       - sql-joins
       - cs-object-relational-mapping
       - http-intro
-      - TODO-api-intro
       - TODO-json
-      - TODO-crud
+      - TODO-api-intro
+      - TODO-rest
+      - TODO-cs-api-applications
       - TODO-cs-deployment-to-heroku-with-docker
+      - TODO-misc-optimizing-developer-workspace
+      - TODO-cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
