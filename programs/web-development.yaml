@@ -22,7 +22,7 @@ modules:
       - sql-joins
       - cs-object-relational-mapping
       - http-intro
-      - TODO-json
+      - misc-json
       - TODO-api-intro
       - TODO-rest
       - TODO-cs-api-applications
