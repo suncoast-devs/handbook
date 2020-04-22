@@ -487,7 +487,7 @@ var secondEmployee = new Employee {
 
 ```
 -------------------------------       ----------------------------------
-|      firstEmployee            |       |        secondEmployee            |
+|      firstEmployee          |       |        secondEmployee          |
 ------------------------------|       ---------------------------------|
 | Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
 | Department    | 42          |       | Department    | 100            |
