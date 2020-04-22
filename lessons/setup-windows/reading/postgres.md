@@ -22,7 +22,11 @@ createuser -U postgres --superuser $USER
 ```
 
 ```sh
-scoop install python27
+scoop install python
+```
+
+```sh
+pip install https://download.lfd.uci.edu/pythonlibs/s2jqpv5t/setproctitle-1.1.10-cp38-cp38-win_amd64.whl
 ```
 
 ```sh
