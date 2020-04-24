@@ -55,5 +55,3 @@ Any warms for the day
 
 - What are some topics/ideas that would make for natural progress for the next lecture
 - either to start if every one 'gets it' or to act as a preview for what is to come
-
-# Starting a full stack app
