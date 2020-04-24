@@ -29,6 +29,8 @@ None
 - dotnet
 - nexus
 
+Assign the students the first homework assigment [hello world](./homework.md) and do it with them, and get them to turn it in.
+
 ## Additional Resources
 
 - [env set up guide](https://suncoast.io/handbook/tools/environment/)

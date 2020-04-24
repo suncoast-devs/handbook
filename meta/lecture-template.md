@@ -11,6 +11,14 @@ The elevator pitch for the lecture
 
 This is what concepts the student should be familiar with in order to benefit from this lecture.
 
+## Stand up
+
+question each person will answer to get started
+
+## Warm up
+
+Any warms for the day
+
 ## Slides
 
 (optional) Any slide show that goes along with this lecture
@@ -47,3 +55,5 @@ This is what concepts the student should be familiar with in order to benefit fr
 
 - What are some topics/ideas that would make for natural progress for the next lecture
 - either to start if every one 'gets it' or to act as a preview for what is to come
+
+# Starting a full stack app
