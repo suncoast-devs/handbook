@@ -18,14 +18,42 @@ During installation, if you are presented with any choices, simply select the de
 
 ## Post Installation
 
-### dotnet EF Core
-
 We will need a few tools along the way so we will make sure they are installed now:
+
+### dotnet EF Core
 
 In a Powershell window:
 
 ```sh
 dotnet tool install --global dotnet-ef
+```
+
+### dotnet code generator
+
+In a Powershell window:
+
+```sh
+dotnet tool install --global dotnet-aspnet-codegenerator
+```
+
+### SDG tools
+
+In a Powershell window:
+
+```sh
+dotnet new --install SDG.templates.Console
+```
+
+```sh
+dotnet new --install SDG.templates.Console.Database
+```
+
+```sh
+dotnet new --install SDG.templates.Web.API
+```
+
+```sh
+dotnet new --install SDG.templates.Web.React
 ```
 
 ### Set dotnet locally to "Development Mode"
