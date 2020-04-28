@@ -23,9 +23,11 @@ modules:
       - cs-object-relational-mapping
       - http-intro
       - misc-json
-      - TODO-misc-api-intro
+      - misc-api-intro
       - TODO-misc-rest
-      - TODO-cs-api-applications
+      - cs-intro-to-api
+      - TODO-cs-build-api
+      - TODO-cs-build-api-with-database
       - TODO-cs-deployment-to-heroku-with-docker
       - TODO-misc-optimizing-developer-workspace
       - TODO-cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
