@@ -70,3 +70,9 @@ Mac users need to:
 echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.zshrc
 echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.bash_profile
 ```
+
+## Security
+
+```sh
+dotnet dev-certs https --trust
+```
