@@ -286,7 +286,3 @@ namespace content.Controllers
   }
 }
 ```
-
-import Nav from './Nav'
-
-<Nav/>

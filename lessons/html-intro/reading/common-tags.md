@@ -129,7 +129,3 @@ Here are some of the most common HTML tags we see used, their purpose, and the d
 > Represents tabular data — that is, information presented in a two-dimensional table comprised of rows and columns of cells containing data. See `<tbody>`, `<thead>`, `<tr>`, and `<td>`
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

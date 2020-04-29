@@ -48,15 +48,15 @@ There are also compound assignment operators that are shorthand for the operatio
 For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.
 
 ```js
-let numbers = ['one', 'two', 'three']
+let numbers = ["one", "two", "three"];
 
 // without destructuring
-let one = numbers[0]
-let two = numbers[1]
-let three = numbers[2]
+let one = numbers[0];
+let two = numbers[1];
+let three = numbers[2];
 
 // with destructuring
-let [one, two, three] = numbers
+let [one, two, three] = numbers;
 ```
 
 ## Comparison Operators
@@ -64,8 +64,8 @@ let [one, two, three] = numbers
 A comparison operator compares its operands and returns a logical value based on whether the comparison is true. The operands can be numerical, string, logical, or object values. Strings are compared based on standard ordering. In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison. This behavior generally results in comparing the operands numerically. The sole exceptions to type conversion within comparisons involve the === and !== operators, which perform strict equality and inequality comparisons. These operators do not attempt to convert the operands to compatible types before checking equality. The following table describes the comparison operators in terms of this sample code:
 
 ```js
-let var1 = 3
-let var2 = 4
+let var1 = 3;
+let var2 = 4;
 ```
 
 | Operator                     | Description                                                                                         | Examples returning true                      |
@@ -85,8 +85,8 @@ let var2 = 4
 An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces Infinity). For example:
 
 ```js
-1 / 2 // 0.5
-1 / 2 == 1.0 / 2.0 // this is true
+1 / 2; // 0.5
+1 / 2 == 1.0 / 2.0; // this is true
 ```
 
 In addition to the standard arithmetic operations (+, -, \* /), JavaScript provides the arithmetic operators listed in the following table:
@@ -152,7 +152,3 @@ Logical operators are typically used with Boolean (logical) values; when they ar
 | Logical NOT (`!`)  | `!expr`          | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

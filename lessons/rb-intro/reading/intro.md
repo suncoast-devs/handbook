@@ -189,7 +189,3 @@ end
     puts "#FFF"
   end
   ```
-
-import Nav from './Nav'
-
-<Nav/>

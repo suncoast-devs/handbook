@@ -209,7 +209,3 @@ You can nest strong and emphasis inside one another if desired:
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

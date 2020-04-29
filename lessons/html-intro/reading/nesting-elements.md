@@ -25,7 +25,3 @@ You do however need to make sure that your elements are properly nested: in the 
 The elements have to open and close correctly, so they are clearly inside or outside one another. If they overlap like above, then your web browser will try to make a best guess at what you were trying to say, and you may well get unexpected results. So don't do it!
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

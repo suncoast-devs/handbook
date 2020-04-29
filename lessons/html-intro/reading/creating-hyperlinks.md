@@ -122,7 +122,3 @@ In this case the `..` means to go up one level. Since we are currently at `/mark
 By using absolute and relative links we can navigate the structure of our page. Absolute links help us link to specific locations on our site by resetting us back to the root of the site. Relative links help us avoid having to repeatedly reference all the way back to the root which helps us move entire sections of our site without breaking links.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

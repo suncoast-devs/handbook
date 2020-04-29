@@ -16,7 +16,7 @@ For example, the following code defines a simple function named square:
 
 ```js
 function square(number) {
-  return number * number
+  return number * number;
 }
 ```
 
@@ -27,7 +27,7 @@ The function `square` takes one parameter, called `number`. The function consist
 Defining a function does not execute it. Defining the function simply names the function and specifies what to do when the function is called. Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:
 
 ```js
-square(5)
+square(5);
 ```
 
 The preceding statement calls the function with an argument of 5. The function executes its statements and returns the value 25.
@@ -37,10 +37,10 @@ The preceding statement calls the function with an argument of 5. The function e
 While the function declaration above is syntactically a statement, functions can also be created by a `function expression`. Such a function can be **anonymous**; it does not have to have a name. For example, the function square could have been defined as:
 
 ```js
-let square = function(number) {
-  return number * number
-}
-let x = square(4) // x gets the value 16
+let square = function (number) {
+  return number * number;
+};
+let x = square(4); // x gets the value 16
 ```
 
 ## Functions are values of variables
@@ -52,29 +52,29 @@ In fact, in JavaScript, functions are values themselves and can be passed to fun
 ```js
 function printIt(array, func) {
   for (let index = 0; index < array.length; index++) {
-    const value = array[index]
-    const result = func(value)
+    const value = array[index];
+    const result = func(value);
 
-    console.log(`After the function we turned ${value} into ${result}`)
+    console.log(`After the function we turned ${value} into ${result}`);
   }
 }
 
-const square = function(number) {
-  return number * number
-}
+const square = function (number) {
+  return number * number;
+};
 
-const double = function(number) {
-  return number * 2
-}
+const double = function (number) {
+  return number * 2;
+};
 
-const numbers = [1, 2, 3, 4, 5]
-printIt(numbers, square)
+const numbers = [1, 2, 3, 4, 5];
+printIt(numbers, square);
 // After the function we turned 1 into 1
 // After the function we turned 2 into 4
 // After the function we turned 3 into 9
 // After the function we turned 4 into 16
 // After the function we turned 5 into 25
-printIt(numbers, double)
+printIt(numbers, double);
 // After the function we turned 1 into 2
 // After the function we turned 2 into 4
 // After the function we turned 3 into 6
@@ -93,18 +93,18 @@ Variables defined inside a function cannot be accessed from anywhere outside the
 example:
 
 ```js
-const PI = 3.14
-const numbers = [1, 2, 4, 8, 16]
+const PI = 3.14;
+const numbers = [1, 2, 4, 8, 16];
 
 function pies() {
   // Inside this function we can "see" the variables `PI` and `numbers`
   // because we are *INSIDE* the scope where they were defined
   for (let index = 0; index < numbers.length; index++) {
-    const number = numbers[index]
+    const number = numbers[index];
 
-    const area = PI * number * number
+    const area = PI * number * number;
 
-    console.log(`The area of a circle with radius ${number} is ${area}`)
+    console.log(`The area of a circle with radius ${number} is ${area}`);
   }
 
   // Here we *cannot* see the variable `area` since we are *OUTSIDE* the scope
@@ -150,7 +150,3 @@ There are some other considerations where arrow functions are better and we will
 > For now we'll prefer arrow functions over traditional function definitions.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

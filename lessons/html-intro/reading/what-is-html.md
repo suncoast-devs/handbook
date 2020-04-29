@@ -31,7 +31,3 @@ If we wanted the line to stand by itself, we could specify that it is a paragrap
 </CodePen>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

@@ -29,7 +29,3 @@ import CodePen from '@handbook/CodePen'
   - `take` [docs](https://devdocs.io/ruby~2.5/enumerable#method-i-take)
 
   - Chaining enumerable methods
-
-import Nav from './Nav'
-
-<Nav/>

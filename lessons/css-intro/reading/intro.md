@@ -63,7 +63,3 @@ p {
 </CodePen>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

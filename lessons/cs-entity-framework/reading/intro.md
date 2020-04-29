@@ -219,7 +219,3 @@ dotnet ef dbcontext scaffold "server=localhost;database=<<DatabaseName>>" Npgsql
 ```
 dotnet ef database update
 ```
-
-import Nav from './Nav'
-
-<Nav/>

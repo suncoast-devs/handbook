@@ -18,11 +18,13 @@ HTML:
 JS:
 
 ```js
-const handleButtonClick = event => {
-  console.log('button was clicked')
-}
+const handleButtonClick = (event) => {
+  console.log("button was clicked");
+};
 
-document.querySelector('.my-rad-button').addEventListener('click', handleButtonClick)
+document
+  .querySelector(".my-rad-button")
+  .addEventListener("click", handleButtonClick);
 ```
 
 React way:
@@ -61,7 +63,3 @@ React way:
 
 - Demo: Convert Score Board
 - Assignment: [Color Picker](/handbook/curriculum/front-end/react-i/assignments/color-picker)
-
-import Nav from './Nav'
-
-<Nav/>

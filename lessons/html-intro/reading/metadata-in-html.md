@@ -51,7 +51,3 @@ If you set your character encoding to `ISO-8859-1`, for example (the character s
 <img src="https://mdn.mozillademos.org/files/12341/bad-encoding.png"/>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

@@ -28,7 +28,3 @@ For example:
 - Is it an article with sections and an aside of related information?; does it list out definitions?
 - Is it a figure or image that needs a caption?
 - Should it have a header and a footer in addition to the global site-wide header and footer?
-
-import Nav from './Nav'
-
-<Nav/>

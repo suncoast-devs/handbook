@@ -253,7 +253,3 @@ p {
 ```
 
 You can use all the length units you'd expect, to be able to specify the values you want — `px`, `percentages`, `rems`, etc.
-
-import Nav from './Nav'
-
-<Nav/>

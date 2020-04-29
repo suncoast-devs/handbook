@@ -257,7 +257,3 @@ This will delete all the books with a `YearPublished` of 1995.
 As with the `UPDATE` statement the `DELETE` statement can use the same `WHERE` syntax to filter which rows will be deleted.
 
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be deleted.
-
-import Nav from './Nav'
-
-<Nav/>

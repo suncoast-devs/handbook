@@ -89,7 +89,3 @@ import CodePen from '@handbook/CodePen'
   - Get back a 301 redirect
   - redirects to `https://amazon.com`
   - which redirects to `https://www.amazon.com`
-
-import Nav from './Nav'
-
-<Nav/>

@@ -9,7 +9,7 @@ Not only do we use JavaScript to code our logic, but we also use JavaScript to i
 In order to interact with the DOM, we need to query the DOM to find the element we want to use. Take a look at the following code.
 
 ```js
-const pageHeader = document.querySelector('.page-header')
+const pageHeader = document.querySelector(".page-header");
 ```
 
 This code goes to the `document` and finds the first element that has the class `.page-header` and stores a reference to that element in the variable called `pageHeader`. Now that we have the `pageHeader` as a variable we use it in our code just like any other variable. Notice the parameter to the quearySelector function; that is the same style of selector we have in CSS. These selectors can be as complex and as specific as the CSS selectors we have previously learned.
@@ -20,7 +20,6 @@ This interaction can lead to powerful and dynamic web apps and enables full cont
 
 --
 
-import Nav from './Nav'
+```
 
-<Nav/>
 ```

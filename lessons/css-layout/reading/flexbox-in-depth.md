@@ -737,7 +737,3 @@ Flexbox can be a challenging concept to master. Here are some references we feel
 - [Flexbox Visual Guide Tutorial](https://marina-ferreira.github.io/tutorials/css/flexbox/)
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

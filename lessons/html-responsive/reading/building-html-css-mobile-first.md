@@ -435,7 +435,7 @@ In order to do this we will add a data-email attribute to each team member's a t
 /* The content for this will be fetched from the `data-email` attribute */
 @media all and (min-width: 1001px) {
   aside ul li a:after {
-    content: ' (' attr(data-email) ')';
+    content: " (" attr(data-email) ")";
     font-size: 11px;
     font-style: italic;
     color: #666;
@@ -445,7 +445,7 @@ In order to do this we will add a data-email attribute to each team member's a t
 /* When wider than 700 pxels but less than 1000px we will add the word `Email:` before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
-    content: 'Email: ';
+    content: "Email: ";
     font-style: italic;
     color: #666;
   }
@@ -642,7 +642,3 @@ aside ul li a {
 </CodePen>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

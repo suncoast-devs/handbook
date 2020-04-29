@@ -31,32 +31,33 @@ import CodePen from '@handbook/CodePen'
 
   ```js
   // all the files needed need to be imported
-  import React, { Component } from 'react'
-  import './App.css'
+  import React, { Component } from "react";
+  import "./App.css";
   // import Header component from Header.js in current directory ("./" => current directory)
-  import Header from './Header'
+  import Header from "./Header";
   // import Header component from Articles.js in current directory
-  import Header from './Articles'
+  import Header from "./Articles";
   // import Header component from Footer.js in current directory
-  import Header from './Footer'
+  import Header from "./Footer";
 
   class App extends Component {
     render() {
       return (
         // DOM element
         <div>
-          // children components of DOM element // these components need to exist, either within the same page or as
-          separate files and imported to the page
+          // children components of DOM element // these components need to
+          exist, either within the same page or as separate files and imported
+          to the page
           <Header />
           <Articles />
           <Footer />
         </div>
-      )
+      );
     }
   }
 
   // component needs to be exported so it can be available for other components to import
-  export default App
+  export default App;
   ```
 
 - to add class, use `className` (approx 01:05:20)
@@ -67,9 +68,9 @@ import CodePen from '@handbook/CodePen'
   (approx 01:12:10)
 
   ```js
-  import React, { Component } from 'react'
+  import React, { Component } from "react";
   // import Article component from Article in current directory
-  import Article from './Article'
+  import Article from "./Article";
 
   class Articles extends Component {
     render() {
@@ -80,16 +81,22 @@ import CodePen from '@handbook/CodePen'
               title="Gavin can't spell Artclie"
               content="Gavin can't type on a monday. Thats why. He also went to a party last night"
             />
-            <Article title="What is wrong with Gavin" content="Gavin is tired this morning" />
-            <Article title="Sending Gavin back to school" content="If you pay, he will go" />
+            <Article
+              title="What is wrong with Gavin"
+              content="Gavin is tired this morning"
+            />
+            <Article
+              title="Sending Gavin back to school"
+              content="If you pay, he will go"
+            />
             <Article title="React is cool" content="Hell yeah it is" />
           </main>
         </div>
-      )
+      );
     }
   }
 
-  export default Articles
+  export default Articles;
   ```
 
   - Article.js
@@ -99,11 +106,11 @@ import CodePen from '@handbook/CodePen'
     - You can create unlimited different articles using Article component
 
     ```js
-    import React, { Component } from 'react'
+    import React, { Component } from "react";
 
     class Article extends Component {
       render() {
-        console.log(this.props)
+        console.log(this.props);
 
         return (
           <article className="intro-article">
@@ -114,11 +121,11 @@ import CodePen from '@handbook/CodePen'
             </a>
             <div className="read-more-underline" />
           </article>
-        )
+        );
       }
     }
 
-    export default Article
+    export default Article;
     ```
 
 - Loading Props data from somewhere else
@@ -195,37 +202,38 @@ import CodePen from '@handbook/CodePen'
 - eventually `Articles.js` code will look like this
 
   ```js
-  import React, { Component } from 'react'
-  import Article from './Article'
+  import React, { Component } from "react";
+  import Article from "./Article";
 
   class Articles extends Component {
     render() {
       const data = [
         {
           title: "Gavin can't spell Article",
-          content: "Gavin can't type on a Monday . That's why. He went to a party last night",
+          content:
+            "Gavin can't type on a Monday . That's why. He went to a party last night",
         },
         {
-          title: 'What is wrong with Gavin',
-          content: 'Gavin is tired this morning',
+          title: "What is wrong with Gavin",
+          content: "Gavin is tired this morning",
         },
-      ]
+      ];
 
       // save new array in a variable and just refer to it in a DOM
       // (approx 1:39:10)
-      const articles = data.map(element => {
-        return <Article title={element.title} content={element.content} />
-      })
+      const articles = data.map((element) => {
+        return <Article title={element.title} content={element.content} />;
+      });
 
       return (
         <div className="all-main-content">
           <main>{articles}</main>
         </div>
-      )
+      );
     }
   }
 
-  export default Articles
+  export default Articles;
   ```
 
 ## React is declarative
@@ -240,7 +248,3 @@ import CodePen from '@handbook/CodePen'
 - Class Demo: Adventure Time (Basic)
 - Suggested Assignment Focusing on Components: [Reactified Octocats](/handbook/curriculum/front-end/react-i/assignments/reactified-octocats)
 - Suggested Assignment: [Party Like it's 1989!](/handbook/curriculum/front-end/react-i/assignments/party-like-its-1989)
-
-import Nav from './Nav'
-
-<Nav/>

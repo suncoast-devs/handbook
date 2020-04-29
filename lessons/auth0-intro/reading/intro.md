@@ -59,7 +59,3 @@ https://slides.com/markdewey-1/authenticationandauthorization#/
 ## Next Lectures
 
 - This should be towards the end of full stack fundamentals, so the next lecture should be more practice, with possibly adding auth to an existing app
-
-import Nav from './Nav'
-
-<Nav/>

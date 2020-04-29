@@ -166,7 +166,3 @@ end
 ## Additional Ruby / Rails Resources
 
 - See the [Resources](/handbook/resources) section
-
-import Nav from './Nav'
-
-<Nav/>

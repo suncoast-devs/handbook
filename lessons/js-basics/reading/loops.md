@@ -7,7 +7,7 @@ Loops offer a quick and easy way to do something repeatedly. You can think of a 
 ```js
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log('Walking east one step')
+  console.log("Walking east one step");
 }
 ```
 
@@ -28,7 +28,7 @@ A for statement looks as follows:
 
 ```js
 for ([initialExpression]; [condition]; [incrementExpression]) {
-  statement
+  statement;
 }
 ```
 
@@ -46,8 +46,8 @@ The do...while statement repeats until a specified condition evaluates to false.
 
 ```js
 do {
-  statement
-} while (condition)
+  statement;
+} while (condition);
 ```
 
 `statement` is always executed once before the condition is checked (and then again until the while `condition` returns `false`). To execute multiple statements, use a block statement (`{ ... }`) to group those statements. If `condition` is `true`, the `statement` executes again. At the end of every execution, the `condition` is checked. When the `condition` is `false`, execution stops and control passes to the statement following `do...while`.
@@ -58,7 +58,7 @@ A `while` statement executes its statements as long as a specified `condition` e
 
 ```js
 while (condition) {
-  statement
+  statement;
 }
 ```
 
@@ -71,11 +71,11 @@ To execute multiple statements, use a block statement (`{ ... }`) to group those
 The following while loop iterates as long as n is less than three:
 
 ```js
-let n = 0
-let x = 0
+let n = 0;
+let x = 0;
 while (n < 3) {
-  n++
-  x += n
+  n++;
+  x += n;
 }
 ```
 
@@ -85,18 +85,18 @@ The `for...in` statement iterates a specified variable over all the enumerable p
 
 ```js
 for (variable in object) {
-  statements
+  statements;
 }
 ```
 
 The following function takes as its argument an object and the object's name. It then iterates over all the object's properties and returns a string that lists the property names and their values.
 
 ```js
-const car = { make: 'Ford', model: 'Mustang' }
+const car = { make: "Ford", model: "Mustang" };
 
 for (let property in car) {
-  const message = `The value of ${property} is ${car[property]}`
-  console.log(message)
+  const message = `The value of ${property} is ${car[property]}`;
+  console.log(message);
 }
 // The value of make is Ford
 // The value of model is Mustang
@@ -109,15 +109,11 @@ for (let property in car) {
 The `for...of` statement creates a loop iterating over iterable objects (including `Array`, `Map`, `Set`, arguments object and so on), invoking a block with statements to be executed for the value of each distinct property.
 
 ```js
-var numbers = [3, 5, 7]
+var numbers = [3, 5, 7];
 
 for (let number of numbers) {
-  console.log(number) // logs 3, 5, 7
+  console.log(number); // logs 3, 5, 7
 }
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

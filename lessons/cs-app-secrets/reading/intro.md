@@ -67,7 +67,3 @@ Secrets will only be loaded when you app is development mode. You will need upda
 ## Read More
 
 Checkout the latest [documentation](https://docs.microsoft.com/en-us/aspnet/core/security/app-secrets?view=aspnetcore-3.1&tabs=linux)
-
-import Nav from './Nav'
-
-<Nav/>

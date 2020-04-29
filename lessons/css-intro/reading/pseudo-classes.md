@@ -75,7 +75,3 @@ li:hover {
 - [`:nth-child`](https://developer.mozilla.org/en-US/docs/Web/CSS/:nth-child) - matches elements based on their position in a group of siblings.
 
 </CodePen>
-
-import Nav from './Nav'
-
-<Nav/>
