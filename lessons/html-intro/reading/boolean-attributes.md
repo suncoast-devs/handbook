@@ -22,7 +22,3 @@ As shorthand, it is perfectly allowable to write this as follows (we've also inc
 </CodePen>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

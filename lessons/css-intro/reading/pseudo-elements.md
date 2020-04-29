@@ -87,7 +87,3 @@ span[data-descr]:hover::after {
 </pre>
 
 </CodePen>
-
-import Nav from './Nav'
-
-<Nav/>

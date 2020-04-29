@@ -90,7 +90,3 @@ We'd like to have a definitive set of media queries to cover all devices. Unfort
 Thankfully the fine folks at [CSS Tricks](https://css-tricks.com) have a great list of [Media Queries for Standard Devices](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/) that makes a great starting point for our `@media` needs.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

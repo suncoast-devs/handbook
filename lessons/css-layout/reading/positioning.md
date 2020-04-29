@@ -248,7 +248,3 @@ Sticky positioning is the final positioning method that we have at our disposal.
 </pre>
 
 </CodePen>
-
-import Nav from './Nav'
-
-<Nav/>

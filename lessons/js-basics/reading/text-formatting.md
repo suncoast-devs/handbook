@@ -10,8 +10,8 @@ JavaScript's String type is used to represent textual data. It is a set of "elem
 You can create simple strings using either single or double quotes:
 
 ```js
-'foo'
-'bar'
+"foo";
+"bar";
 ```
 
 ## Methods of strings
@@ -34,7 +34,3 @@ You can create simple strings using either single or double quotes:
 |                                          |                                                                                                                                 |
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

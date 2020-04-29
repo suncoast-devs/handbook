@@ -83,7 +83,3 @@ The template also includes `Bootstrap` and nicer, bootstrap-capable templates wh
   - Create the database
   - Load the schema (table structure)
   - Initialize the seeds
-
-import Nav from './Nav'
-
-<Nav/>

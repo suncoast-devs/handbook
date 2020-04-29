@@ -35,7 +35,7 @@ import CodePen from '@handbook/CodePen'
 ## When we import an image
 
 ```js
-import photo from './skywalker.png'
+import photo from "./skywalker.png";
 ```
 
 ##### We get a string representing the path to the image to use in code
@@ -77,7 +77,3 @@ render() {
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

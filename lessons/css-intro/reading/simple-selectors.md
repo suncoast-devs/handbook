@@ -173,7 +173,3 @@ a[href$="musk"] {
 </pre>
 
 </CodePen>
-
-import Nav from './Nav'
-
-<Nav/>

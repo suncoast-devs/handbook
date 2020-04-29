@@ -175,7 +175,3 @@ You can run with
 ```shell
 ./deploy.bat
 ```
-
-import Nav from './Nav'
-
-<Nav/>

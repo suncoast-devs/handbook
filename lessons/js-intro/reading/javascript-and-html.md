@@ -21,7 +21,3 @@ Now our HTML pages look like this:
 ```
 
 In `main.js`, we will be putting our JavaScript code. Next we will look at some of the basics of JavaScript.
-
-import Nav from './Nav'
-
-<Nav/>

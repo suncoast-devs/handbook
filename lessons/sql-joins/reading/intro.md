@@ -483,7 +483,5 @@ Let's see what our query looks like now:
 
 - [SQL Joins Explained](http://www.sql-join.com)
 
-import Nav from './Nav'
 
-<Nav/>
 ````

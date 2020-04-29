@@ -12,7 +12,3 @@ Now that we have some basic terminology, lets review the different kinds of _sel
 | Multiple selectors  | Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.                                                    |
 
 Lets go through these selectors and learn how we can effectively target content in our HTML to apply CSS styles.
-
-import Nav from './Nav'
-
-<Nav/>

@@ -26,7 +26,3 @@ There are two important categories of elements in HTML which you should know abo
 </CodePen>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

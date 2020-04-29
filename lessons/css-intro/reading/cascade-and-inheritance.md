@@ -82,7 +82,3 @@ For example, it makes sense for `font-family` and `color` to be inherited, as th
 As another example, it makes sense for `margin`, `padding`, `border`, and `background-image` to NOT be inherited. Imagine the styling/layout mess that would occur if you set these properties on a container element and had them inherited by every single child element, and then had to unset them all on each individual element!
 
 Which properties are inherited by default and which aren't is largely down to common sense. If you want to be sure, however, you can consult the [MDN CSS Reference](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference) — each separate property page contains a summary table including various details about that element, including whether it is inherited or not.
-
-import Nav from './Nav'
-
-<Nav/>

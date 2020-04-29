@@ -67,7 +67,3 @@ Floats are very powerful and for a long time they were the primary means of cont
 You will, on _legacy projects_ still see `float` used for layout.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

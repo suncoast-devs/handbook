@@ -107,7 +107,3 @@ console.log(diagonalLength(4, 3)); // -> 5
 ---
 
 ## See, modules are easy!
-
-import Nav from './Nav'
-
-<Nav/>

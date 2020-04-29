@@ -25,7 +25,3 @@ On top of everything else, you have to consider the kinds of situations mobile d
 When developing mobile app layouts, you often run into problems with navigation menus. The concept is the same regardless of the target device — you want to provide a mechanism for users to search for things and get to different views/pages of the application — but because mobile screens are so much smaller, a reasonable desktop navigation can spoil the experience by filling up most of the initial view of the app, covering up the content.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

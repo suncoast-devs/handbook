@@ -26,13 +26,13 @@ Looking at this list you might think that having `null` and `undefined` is redun
 JavaScript is a dynamically typed language. That means you don't have to specify the data type of a variable when you declare it, and data types are converted automatically as needed during script execution. So, for example, you could define a variable as follows:
 
 ```js
-let answer = 42
+let answer = 42;
 ```
 
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish...'
+answer = "Thanks for all the fish...";
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
@@ -40,15 +40,15 @@ Because JavaScript is dynamically typed, this assignment does not cause an error
 In expressions involving numeric and string values with the + operator, JavaScript converts numeric values to strings. For example, consider the following statements:
 
 ```js
-let x = 'The answer is ' + 42 // "The answer is 42"
-let y = 42 + ' is the answer' // "42 is the answer"
+let x = "The answer is " + 42; // "The answer is 42"
+let y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ## Literals
@@ -85,18 +85,18 @@ Some examples of integer literals are:
 A string literal is zero or more characters enclosed in double (") or single (') quotation marks. A string must be delimited by quotation marks of the same type; that is, either both single quotation marks or both double quotation marks. The following are examples of string literals:
 
 ```js
-'foo'
-'bar'
-'1234'
-'one line \n another line'
-"John's cat"
+"foo";
+"bar";
+"1234";
+"one line \n another line";
+"John's cat";
 ```
 
 Template literals are also available. Template literals are enclosed by the back-tick (\`) (grave accent) character instead of double or single quotes. Inside the backticks we can use `${}` to evaluate statements
 
 ```js
-let score = 56
-let prompt = `The current score is ${score} and the next score is ${score + 1}`
+let score = 56;
+let prompt = `The current score is ${score} and the next score is ${score + 1}`;
 // The current score is 56 and the next score is 57
 ```
 
@@ -130,7 +130,7 @@ An array literal is a list of zero or more expressions, each of which represents
 The following example creates the coffees array with three elements and a length of three:
 
 ```js
-let coffees = ['French Roast', 'Colombian', 'Kona']
+let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
 **Extra commas in array literals**
@@ -138,7 +138,7 @@ let coffees = ['French Roast', 'Colombian', 'Kona']
 You do not have to specify all elements in an array literal. If you put two commas in a row, the array is created with undefined for the unspecified elements. The following example creates the fish array:
 
 ```js
-let fish = ['Lion', , 'Angel']
+let fish = ["Lion", , "Angel"];
 ```
 
 This array has two elements with values and one empty element (`fish[0]` is "Lion", `fish[1]` is undefined, and `fish[2]` is "Angel").
@@ -158,7 +158,7 @@ An object literal is a list of zero or more pairs of property names and associat
 The following is an example of an object literal. The first element of the person object defines a property, name, and assigns to it a new string, "Thomas"; the second element, the age property, is assigned a number, `21`
 
 ```js
-let person = { name: 'Thomas', age: 21 }
+let person = { name: "Thomas", age: 21 };
 ```
 
 Object property names can be any string, including the empty string. If the property name would not be a valid JavaScript identifier or number, it must be enclosed in quotes. Property names that are not valid identifiers also cannot be accessed as a dot (`.`) property, but can be accessed and set with the array-like notation("`[]`").
@@ -175,7 +175,3 @@ unusualPropertyNames['!'] // Bang!
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

@@ -128,7 +128,3 @@ div {
 </pre>
 
 </CodePen>
-
-import Nav from './Nav'
-
-<Nav/>

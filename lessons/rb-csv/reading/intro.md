@@ -160,7 +160,3 @@ end
 ```
 
 By passing `headers: true`, we tell the `foreach` method that each item of the first line represents a column of data; thus each item on subsequent lines will be recognized by the relevant header on line 1. The `header_converters: :symbol` option allows us to use a Symbol, such as `:name`, to access the value of a given row's name value. Together, these options make parsing CSVs much easier.
-
-import Nav from './Nav'
-
-<Nav/>

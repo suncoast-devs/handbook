@@ -11,7 +11,3 @@ It is usually much better to create a single version of your code which doesn't 
 There are disadvantages to this approach as well. If the content, layout, and functionality need to change greatly for different devices, it may not be such a good approach. Also, taking an existing site and adding responsiveness to it, to make it mobile/tablet friendly, can be a lot more effort than just creating a separate mobile site or app, especially if it is a sprawling enterprise site. Read more about responsive design advantages and disadvantages.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

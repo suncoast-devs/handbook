@@ -54,7 +54,3 @@ The methods that can change how elements are laid out in CSS are as follows:
 Primarily what we will be covering is using the `display` property to control flow. Every element in CSS has a default `display` property which gives it a natural flow in the page. When discussing customizing a layout the two most important values are `display: flex` and `display: grid` In this lesson we will primarily cover `display: flex`
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

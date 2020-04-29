@@ -23,7 +23,7 @@ There are four ways we can assign a variable in JavaScript
 > The variables that you create should be defaulted to using `const`. This will help you keep your variables, values and data more organized and reliable.
 
 ```js
-const answer = 42
+const answer = 42;
 ```
 
 The value of this variable cannot be changed.
@@ -31,7 +31,7 @@ The value of this variable cannot be changed.
 `let` versus `var` -- These are both ways to declare variables which can be changed. The difference between these two ways of declaring a variable have to do with `scope.` We haven't discussed `scope` yet, so for now we will limit ourselves to using the `let` style of declaring variables.
 
 ```js
-let score = 98
+let score = 98;
 ```
 
 The value of the `score` variable can be changed at a later time. That is, we can increment it, decrement it, or change it to any other value we like.
@@ -41,10 +41,10 @@ The value of the `score` variable can be changed at a later time. That is, we ca
 When declaring a variable with `let` we do not have to specify a value. After declaring a variable but before assigning it a value, the variable will contain a special value known as `undefined`
 
 ```js
-let name
+let name;
 // name contains 'undefined'
 
-name = 'Jane'
+name = "Jane";
 // name now contains the value 'Jane'
 ```
 
@@ -76,13 +76,13 @@ Looking at this list you might think that having `null` and `undefined` is redun
 JavaScript is a dynamically typed language. That means you don't have to specify the data type of a variable when you declare it, and data types are converted automatically as needed during script execution. So, for example, you could define a variable as follows:
 
 ```js
-let answer = 42
+let answer = 42;
 ```
 
 And later, you could assign the same variable a string value, for example:
 
 ```js
-answer = 'Thanks for all the fish...'
+answer = "Thanks for all the fish...";
 ```
 
 Because JavaScript is dynamically typed, this assignment does not cause an error message.
@@ -90,15 +90,15 @@ Because JavaScript is dynamically typed, this assignment does not cause an error
 In expressions involving numeric and string values with the + operator, JavaScript converts numeric values to strings. For example, consider the following statements:
 
 ```js
-let x = 'The answer is ' + 42 // "The answer is 42"
-let y = 42 + ' is the answer' // "42 is the answer"
+let x = "The answer is " + 42; // "The answer is 42"
+let y = 42 + " is the answer"; // "42 is the answer"
 ```
 
 In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
 ```js
-'37' - 7 // 30
-'37' + 7 // "377"
+"37" - 7; // 30
+"37" + 7; // "377"
 ```
 
 ## Literals
@@ -152,18 +152,18 @@ For example:
 A string literal is zero or more characters enclosed in double (") or single (') quotation marks. A string must be delimited by quotation marks of the same type; that is, either both single quotation marks or both double quotation marks. The following are examples of string literals:
 
 ```js
-'foo'
-'bar'
-'1234'
-'one line \n another line'
-"John's cat"
+"foo";
+"bar";
+"1234";
+"one line \n another line";
+"John's cat";
 ```
 
 Template literals are also available. Template literals are enclosed by the back-tick (\`) (grave accent) character instead of double or single quotes. Inside the backticks we can use `${}` to evaluate statements
 
 ```js
-let score = 56
-let prompt = `The current score is ${score} and the next score is ${score + 1}`
+let score = 56;
+let prompt = `The current score is ${score} and the next score is ${score + 1}`;
 // The current score is 56 and the next score is 57
 ```
 
@@ -174,7 +174,3 @@ The Boolean type has two literal values: `true` and `false`.
 ---
 
 Now we have data, we need ways to manipulate the varibles
-
-import Nav from './Nav'
-
-<Nav/>

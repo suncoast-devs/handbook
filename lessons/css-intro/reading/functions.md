@@ -13,14 +13,10 @@ div {
   /* calculate the computed value of 90% of the current width minus 15px */
   width: calc(90% - 15px);
   /* fetch an image from the network to be used as a background image */
-  background-image: url('myimage.png');
+  background-image: url("myimage.png");
   /* create a gradient and use it as a background image */
   background-image: linear-gradient(to left, teal, aquamarine);
 }
 ```
 
 One of the more common CSS functions is the [`url()`](https://developer.mozilla.org/en-US/docs/Web/CSS/url) function notation, which returns a file; generally an image as seen above.
-
-import Nav from './Nav'
-
-<Nav/>

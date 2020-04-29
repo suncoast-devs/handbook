@@ -21,7 +21,7 @@ class Card extends React.Component {
       <div>
         The ${this.props.face} of ${this.props.suit}
       </div>
-    )
+    );
   }
 }
 
@@ -32,7 +32,7 @@ class Deck extends React.Component {
         <Card face="7" suit="Hearts" />
         <Card face="A" suit="Diamons" />
       </div>
-    )
+    );
   }
 }
 ```
@@ -67,11 +67,11 @@ class Deck extends React.Component {
 ```js
 class Person extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       age: 36,
-    }
+    };
   }
 
   render() {
@@ -80,7 +80,7 @@ class Person extends React.Component {
         <h1>Hello, world!</h1>
         <h2>I am {this.state.age} years old.</h2>
       </div>
-    )
+    );
   }
 }
 ```
@@ -94,11 +94,11 @@ class Person extends React.Component {
 ```js
 class Person extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       age: 36,
-    }
+    };
   }
 
   render() {
@@ -107,7 +107,7 @@ class Person extends React.Component {
         <h1>Hello, world!</h1>
         <AgeDisplay age={this.state.age} />
       </div>
-    )
+    );
   }
 }
 ```
@@ -126,22 +126,22 @@ class Person extends React.Component {
 ```js
 class Person extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
-      lastName: 'Tennant',
-    }
+      lastName: "Tennant",
+    };
   }
 
   updateLastName() {
     this.setState({
-      lastName: 'Smith',
-      maidenName: 'Tennant',
-    })
+      lastName: "Smith",
+      maidenName: "Tennant",
+    });
   }
 
   render() {
-    return <div>${this.state.lastName}</div>
+    return <div>${this.state.lastName}</div>;
   }
 }
 ```
@@ -165,17 +165,17 @@ class Person extends Component {
 ```js
 class Clock extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.state = { date: new Date() }
+    this.state = { date: new Date() };
   }
 
   componentDidMount() {
-    setInterval(() => this.tick(), 1000)
+    setInterval(() => this.tick(), 1000);
   }
 
   tick() {
-    this.setState({ date: new Date() })
+    this.setState({ date: new Date() });
   }
 
   render() {
@@ -184,13 +184,9 @@ class Clock extends React.Component {
         <h3>The current time is</h3>
         <h2>{this.state.date.toLocaleTimeString()}</h2>
       </div>
-    )
+    );
   }
 }
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

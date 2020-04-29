@@ -13,7 +13,3 @@ An attribute should have:
 - An attribute value, with opening and closing quote marks wrapped around it.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

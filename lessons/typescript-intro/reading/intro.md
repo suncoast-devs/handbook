@@ -42,10 +42,10 @@ This will be a quick walkthrough into using Typescript in a React App. This also
     - typing of variables
 
     ```typescript
-    let count: number = 10
-    const name: string = 'Billy'
-    const students: Array<string> = ['Billy', 'Mandy', 'Grim']
-    const data: object = ['Billy', 'Mandy', 'Grim']
+    let count: number = 10;
+    const name: string = "Billy";
+    const students: Array<string> = ["Billy", "Mandy", "Grim"];
+    const data: object = ["Billy", "Mandy", "Grim"];
     ```
 
     - functions
@@ -54,12 +54,12 @@ This will be a quick walkthrough into using Typescript in a React App. This also
 
     ```typescript
     const rollDice = (): number => {
-      return Math.ceil(Math.random() * 6)
-    }
+      return Math.ceil(Math.random() * 6);
+    };
 
     const sum = (x: number, y: number): number => {
-      return x + y
-    }
+      return x + y;
+    };
     ```
 
 * Interfaces
@@ -70,30 +70,30 @@ This will be a quick walkthrough into using Typescript in a React App. This also
 
   ```typescript
   interface IDuck {
-    walksLikeADuck: boolean
-    talksLikeADuck: boolean
-    quacksLikeADuck: boolean
+    walksLikeADuck: boolean;
+    talksLikeADuck: boolean;
+    quacksLikeADuck: boolean;
   }
   ```
 
   ```typescript
   interface IStudent {
-    name: string
-    id: number
-    profileImage: string
-    gpa: number
-    testScores: Array<number>
+    name: string;
+    id: number;
+    profileImage: string;
+    gpa: number;
+    testScores: Array<number>;
   }
 
   const findStudent = (searchTeam: string): IStudent => {
     // do some logic to find students
 
-    return foundStudent
-  }
+    return foundStudent;
+  };
 
   const createStudent = (data: IStudent) => {
     // Do the thing to create the student
-  }
+  };
   ```
 
 * React and Typescript
@@ -107,41 +107,37 @@ This will be a quick walkthrough into using Typescript in a React App. This also
   - Allows to add types to state/useState
 
     ```typescript
-    const [numberOfCandyBars, setNumberOfCandyBars] = useState<number>(0)
+    const [numberOfCandyBars, setNumberOfCandyBars] = useState<number>(0);
 
     // else where I can do this:
-    setNumberOfCandyBars(10)
+    setNumberOfCandyBars(10);
 
     // else where I CAN NOT do this:
-    setNumberOfCandyBars('10')
+    setNumberOfCandyBars("10");
     ```
 
   - practical example
 
     ```typescript
-    const [tvShows, setTVShows] = useState<Array<Shows>>([])
+    const [tvShows, setTVShows] = useState<Array<Shows>>([]);
 
     // else where I can do this only if i force the shape of the JSON calls into my tv show shape
-    setTVShows(resp.data.results)
+    setTVShows(resp.data.results);
     ```
 
   - Typed components
 
     ```typescript
     interface IShowProps {
-      title: string
-      image: string
-      rating: number
+      title: string;
+      image: string;
+      rating: number;
     }
 
     export const Show = (props: IShowProps) => {
-      return <div>show the show stuff</div>
-    }
+      return <div>show the show stuff</div>;
+    };
     ```
 
 Example apps:
 [https://github.com/mdewey/typescript-react-examples](https://github.com/mdewey/typescript-react-examples)
-
-import Nav from './Nav'
-
-<Nav/>

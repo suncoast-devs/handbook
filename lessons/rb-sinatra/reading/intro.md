@@ -186,7 +186,3 @@ end
 - Install the `sinatra-contrib` gem and use the `reloader` it provides
   - `gem install sinatra-contrib`
   - `require 'sinatra/reloader' if development?`
-
-import Nav from './Nav'
-
-<Nav/>

@@ -44,7 +44,7 @@ There are four ways we can assign a variable in JavaScript
 `const` variables are assigned a value on the same statement where they are declared. They can also not be re-assigned at a later date.
 
 ```js
-const answer = 42
+const answer = 42;
 ```
 
 The value of this variable cannot be changed.
@@ -52,7 +52,7 @@ The value of this variable cannot be changed.
 `let` versus `var` -- These are both ways to declare variables which can be changed. The difference between these two ways of declaring a variable have to do with `scope.` We haven't discussed `scope` yet, so for now we will limit ourselves to using the `let` style of declaring variables.
 
 ```js
-let score = 98
+let score = 98;
 ```
 
 The value of the `score` variable can be changed at a later time. That is, we can increment it, decrement it, or change it to any other value we like.
@@ -62,17 +62,13 @@ The value of the `score` variable can be changed at a later time. That is, we ca
 When declaring a variable with `let` we do not have to specify a value. After declaring a variable but before assigning it a value, the variable will contain a special value known as `undefined`
 
 ```js
-let name
+let name;
 // name contains 'undefined'
 
-name = 'Jane'
+name = "Jane";
 // name now contains the value 'Jane'
 ```
 
 Most of the time we are able to declare a variable and assign a value at the same time. However, it is sometimes useful to declare the variable and assign it's value later. Once we introduce conditions and functions we will see cases of this.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

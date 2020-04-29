@@ -144,7 +144,3 @@ p regular_dog.toys
 ```
 
 - Inheritance can be thought of as "is a" or "is a kind of"
-
-import Nav from './Nav'
-
-<Nav/>

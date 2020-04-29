@@ -9,7 +9,3 @@ In this module we will discuss client (browser) side JavaScript.
 Client-side JavaScript extends the core language by supplying objects to control a browser and its Document Object Model (DOM). For example, client-side extensions allow an application to place elements on an HTML form and respond to user events such as mouse clicks, form input, and page navigation. This means that in the browser, JavaScript can change the way the webpage (DOM) looks.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

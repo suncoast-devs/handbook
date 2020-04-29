@@ -31,7 +31,3 @@ Here we have:
 - `<body></body>`: The `<body>` element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

@@ -1,5 +1,7 @@
 const fs = require('fs').promises
+const path = require('path')
 const yaml = require('js-yaml')
+const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.sourceNodes = async (
   { actions: { createNode }, createNodeId, createContentDigest },
@@ -39,6 +41,53 @@ exports.sourceNodes = async (
   })
 }
 
+exports.onCreateNode = ({ node, actions, getNode }) => {
+  const { createNodeField } = actions
+  if (
+    node.internal.type === 'Mdx' &&
+    /handbook\/lessons/.test(node.fileAbsolutePath)
+  ) {
+    // Add `slug` field to lesson MDX files for URL generation
+    const value = createFilePath({ node, getNode, trailingSlash: false })
+    createNodeField({
+      name: 'slug',
+      node,
+      value: `/lessons${value}`,
+    })
+  }
+}
+
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+  const result = await graphql(`
+    query {
+      allMdx(filter: { fileAbsolutePath: { regex: "/handbook/lessons/" } }) {
+        nodes {
+          id
+          fields {
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  if (result.errors) {
+    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query')
+  }
+
+  // Create handbook pages.
+  const { nodes } = result.data.allMdx
+  nodes.forEach((node) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/components/Page.js`),
+      context: { id: node.id },
+    })
+  })
+}
+
+// TODO: Extract this logic?
 async function validateLesson(meta) {
   const warnings = []
 

@@ -38,7 +38,7 @@ import CodePen from '@handbook/CodePen'
   - Example:
 
     ```javascript
-    fetch('https://swapi.co/api/people')
+    fetch("https://swapi.co/api/people");
     ```
 
   - This will access the _Star Wars API_ and fetch a list of people in the _Star Wars_ universe
@@ -61,9 +61,9 @@ import CodePen from '@handbook/CodePen'
   - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
     ```javascript
-    fetch('https://swapi.co/api/people').then(response => {
-      console.log(response)
-    })
+    fetch("https://swapi.co/api/people").then((response) => {
+      console.log(response);
+    });
     ```
 
   - The response here is _still_ not quite usable:
@@ -85,13 +85,13 @@ import CodePen from '@handbook/CodePen'
   - Fortunately, the `response` object gives us a method to gain access to the JSON:
 
     ```javascript
-    fetch('https://swapi.co/api/people')
-      .then(response => {
-        return response.json()
+    fetch("https://swapi.co/api/people")
+      .then((response) => {
+        return response.json();
       })
-      .then(json => {
-        console.log(json)
-      })
+      .then((json) => {
+        console.log(json);
+      });
     ```
 
   - This returns usable information!
@@ -117,7 +117,3 @@ import CodePen from '@handbook/CodePen'
     ```
 
   - So our `json` object represents the response we could see in the [`SWAPI` documentation](https://swapi.co/documentation#people).
-
-import Nav from './Nav'
-
-<Nav/>

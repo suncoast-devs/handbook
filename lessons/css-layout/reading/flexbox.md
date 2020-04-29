@@ -93,7 +93,3 @@ The rest of this guide covers other layout methods, which are less important for
 We will also be returning for a deeper dive into `flexbox`
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

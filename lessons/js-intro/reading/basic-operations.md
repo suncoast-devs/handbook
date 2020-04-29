@@ -52,8 +52,8 @@ There are also compound assignment operators that are shorthand for the operatio
 An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces Infinity). For example:
 
 ```js
-1 / 2 // 0.5
-1 / 2 == 1.0 / 2.0 // this is true
+1 / 2; // 0.5
+1 / 2 == 1.0 / 2.0; // this is true
 ```
 
 In addition to the standard arithmetic operations (+, -, \* /), JavaScript provides the arithmetic operators listed in the following table:
@@ -79,7 +79,3 @@ Logical operators are typically used with Boolean (logical) values; when they ar
 | Logical NOT (`!`)  | `!expr`          | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

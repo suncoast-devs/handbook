@@ -15,7 +15,3 @@ This would output the following on your page:
 </div>
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

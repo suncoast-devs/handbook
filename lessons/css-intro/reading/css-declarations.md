@@ -66,7 +66,3 @@ background-scroll: fixed;
 ```
 
 We won't attempt to teach these exhaustively — you'll come across many examples as you work with CSS.
-
-import Nav from './Nav'
-
-<Nav/>

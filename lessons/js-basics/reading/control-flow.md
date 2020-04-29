@@ -31,9 +31,9 @@ Use the if statement to execute a statement if a logical condition is `true`. Us
 
 ```js
 if (condition) {
-  statement_1
+  statement_1;
 } else {
-  statement_2
+  statement_2;
 }
 ```
 
@@ -47,13 +47,13 @@ You may also compound the statements using `else if` to have multiple conditions
 
 ```js
 if (condition_1) {
-  statement_1
+  statement_1;
 } else if (condition_2) {
-  statement_2
+  statement_2;
 } else if (condition_n) {
-  statement_n
+  statement_n;
 } else {
-  statement_last
+  statement_last;
 }
 ```
 
@@ -61,11 +61,11 @@ In the case of multiple conditions only the first logical condition which evalua
 
 ```js
 if (condition) {
-  statement_1_runs_if_condition_is_true
-  statement_2_runs_if_condition_is_true
+  statement_1_runs_if_condition_is_true;
+  statement_2_runs_if_condition_is_true;
 } else {
-  statement_3_runs_if_condition_is_false
-  statement_4_runs_if_condition_is_false
+  statement_3_runs_if_condition_is_false;
+  statement_4_runs_if_condition_is_false;
 }
 ```
 
@@ -97,32 +97,28 @@ In the following example, if fruittype evaluates to "Bananas", the program match
 
 ```js
 switch (fruittype) {
-  case 'Oranges':
-    console.log('Oranges are $0.59 a pound.')
-    break
-  case 'Apples':
-    console.log('Apples are $0.32 a pound.')
-    break
-  case 'Bananas':
-    console.log('Bananas are $0.48 a pound.')
-    break
-  case 'Cherries':
-    console.log('Cherries are $3.00 a pound.')
-    break
-  case 'Mangoes':
-    console.log('Mangoes are $0.56 a pound.')
-    break
-  case 'Papayas':
-    console.log('Mangoes and papayas are $2.79 a pound.')
-    break
+  case "Oranges":
+    console.log("Oranges are $0.59 a pound.");
+    break;
+  case "Apples":
+    console.log("Apples are $0.32 a pound.");
+    break;
+  case "Bananas":
+    console.log("Bananas are $0.48 a pound.");
+    break;
+  case "Cherries":
+    console.log("Cherries are $3.00 a pound.");
+    break;
+  case "Mangoes":
+    console.log("Mangoes are $0.56 a pound.");
+    break;
+  case "Papayas":
+    console.log("Mangoes and papayas are $2.79 a pound.");
+    break;
   default:
-    console.log('Sorry, we are out of ' + fruittype + '.')
+    console.log("Sorry, we are out of " + fruittype + ".");
 }
-console.log("Is there anything else you'd like?")
+console.log("Is there anything else you'd like?");
 ```
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

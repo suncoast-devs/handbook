@@ -49,7 +49,3 @@ Once this view is engaged, we can select several options to change the mobile vi
 > NOTE: This view is purely an estimation of the way the mobile browser will work. Selecting an iPhone or Android device simply scales the browser to that size but does not reproduce any of that device's specific behaviors. Real testing on physical mobile devices is often still required.
 
 ---
-
-import Nav from './Nav'
-
-<Nav/>

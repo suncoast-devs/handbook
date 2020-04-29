@@ -317,7 +317,3 @@ puts JSON.pretty_generate(Movie.all.as_json)
   - Sections 1, 2, 3, 4, 5
 - [Active Record Associations](http://guides.rubyonrails.org/association_basics.html)
   - Sections 1, 2
-
-import Nav from './Nav'
-
-<Nav/>

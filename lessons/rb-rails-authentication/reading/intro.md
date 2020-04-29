@@ -226,7 +226,3 @@ import CodePen from '@handbook/CodePen'
       <%= link_to 'Login', login_path %> | <%= link_to 'Signup', signup_path %>
     <% end %>
     ```
-
-import Nav from './Nav'
-
-<Nav/>
