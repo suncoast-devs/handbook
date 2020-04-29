@@ -11,6 +11,8 @@ modules:
       - cs-control-flow
       - cs-loops
       - cs-what-is-null
+      - TODO-cs-guard-clauses
+      - TODO-cs-ternary
       - TODO-exceptions
       - cs-methods
       - cs-classes
@@ -26,7 +28,7 @@ modules:
       - misc-api-intro
       - TODO-misc-rest
       - cs-intro-to-api
-      - TODO-cs-build-api
+      - TODO-cs-api-build
       - TODO-cs-build-api-with-database
       - TODO-cs-deployment-to-heroku-with-docker
       - TODO-misc-optimizing-developer-workspace
