@@ -76,40 +76,40 @@ You have a foundation of web programming, to grow those skills start taking a to
 
 Over the course, you are introduced to only a sliver in the tech world. One way to grow your abilities and knowledge is to start to dip your toes into other technologies. The best way to learn new technology is to walk through a tutorial, and then build a project using the new ideas.
 
-| Other techs            | language             |
-| ---------------------- | -------------------- |
-| Redux                  | front-end            |
-| Typescript             | front-end            |
-| Progressive web apps   | front-end            |
-| Gatsby                 | front-end            |
-| Next.js                | front-end            |
-| Electron               | front-end            |
-| React Native           | front-end            |
-| Web Assembly           | front-end            |
-| Angular                | front-end            |
-| Vue                    | front-end            |
+| Other techs            | language             | what is it?                                     |
+| ---------------------- | -------------------- | ----------------------------------------------- |
+| Redux                  | front-end            | state management                                |
+| Typescript             | front-end            | strongly typed JavaScript                       |
+| Progressive web apps   | front-end            | makes your web apps feel more like a native app |
+| Gatsby                 | front-end            | static site generator                           |
+| Next.js                | front-end            | static site generator                           |
+| Electron               | front-end            | Create desktop apps with JavaScript             |
+| React Native           | front-end            | Create native apps with JavaScript              |
+| Web Assembly           | front-end            | An alternative to JavaScript                    |
+| Angular                | front-end            | An alternative to React                         |
+| Vue                    | front-end            | An alternative to React                         |
 | -                      | -                    |
-| Blazor                 | .NET                 |
-| Razor                  | .NET                 |
-| Blazor Server          | .NET                 |
-| WPF                    | .NET                 |
-| Serverless             | .NET                 |
-| Xamarin                | .NET                 |
-| Worker Service         | .NET                 |
-| Signalr                | .NET                 |
+| Blazor                 | .NET                 | Use C# instead of JavaScript                    |
+| Razor                  | .NET                 | Use C# to create dynamic HTML                   |
+| Blazor Server          | .NET                 | A new realtime app framwork                     |
+| WPF                    | .NET                 | Native Windows apps                             |
+| Serverless             | .NET/Backend         | Create functions in stead of servers            |
+| Xamarin                | .NET                 | Create native apps with C#                      |
+| Worker Service         | .NET                 | Have your server do stuff in the background     |
+| Signalr                | .NET                 | Realtime web apps in ASP.nET                    |
 | -                      | -                    |
-| Azure                  | DevOps               |
-| AWS                    | DevOps               |
-| Kubernetes             | DevOps               |
-| Docker                 | DevOps               |
-| CI Server              | DevOps               |
+| Azure                  | DevOps               | Cloud hosting service                           |
+| AWS                    | DevOps               | Cloud hosting service                           |
+| Kubernetes             | DevOps               | A way to manage docker deployments              |
+| Docker                 | DevOps               | Containerize your apps                          |
+| CI Server              | DevOps               | COntinuously deploy new features                |
 | -                      | -                    |
 | Ruby and Ruby on Rails | other web frameworks |
 | Java and Sprint        | other web frameworks |
 | Python and Django      | other web frameworks |
 | Node and Express       | other web frameworks |
 
-During this time, you might be tempted to try to learn all the things after graduation, but that might not be the best path to success. We would recommend only start to learn a new technology if you are going after a job that is different from what you learned during the cohort.
+During this time, you might be tempted to try to learn all the things after graduation, **but that might not be the best path to success.** We would recommend only start to learn a new technology if you are going after a job that is different from what you learned during the cohort.
 
 ### Give back!
 

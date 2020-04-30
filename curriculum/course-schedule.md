@@ -80,3 +80,18 @@ The course is broken in 3 units, each with chapters. These chapters _roughly_ co
 - lesson 1: how to apply react to a real world site
 - lesson 2: typescript
 - lesson 3: basic state management
+
+# Topic breakdown per week
+
+Week 1:
+Week 2:
+Week 3:
+Week 4:
+Week 5:
+Week 6:
+Week 7:
+Week 8:
+Week 9:
+Week 10:
+Week 11:
+Week 12:
