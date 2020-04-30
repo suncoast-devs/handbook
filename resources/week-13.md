@@ -109,7 +109,13 @@ Over the course, you are introduced to only a sliver in the tech world. One way 
 | Python and Django      | other web frameworks |
 | Node and Express       | other web frameworks |
 
-During this time, you might be tempted to try to learn all the things after graduation, **but that might not be the best path to success.** We would recommend only start to learn a new technology if you are going after a job that is different from what you learned during the cohort.
+During this time, you might be tempted to try to learn all the things after graduation, **but that might not be the best path to success.**
+
+We would recommend only start to learn a new technology if :
+
+- the technology solves a problem you have in a project
+- you are going after a job that has that as a "nice to have" or "requirement"
+- You need a short break from what you are currently working on.
 
 ### Give back!
 
