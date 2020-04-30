@@ -32,7 +32,7 @@ https://github.com/suncoast-devs/cohort-17/tree/master/week-02/CryptidTracker
 
 - Build a XXXX tracker, that has a Service class and a Class representing the XXXX
 - See the code example above for a sample
-- Should have CRUD on a List<XXXX>
+- Should have CRUD on a List of XXXX
 - Should have some stats/details
 
 ## Possible Assignments
