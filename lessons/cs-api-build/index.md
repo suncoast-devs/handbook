@@ -1,11 +1,13 @@
-# Introduction goes here
+---
+title: Building APIs in dotnet
+---
 
-[Learning Objectives](./objectives)
+In this lesson we will build our own API which will send and receive information
+over HTTP and the web. We will see structures of how to organize our code, the
+purpose and benefit of placing our code in _controllers_ and learn how to
+utilize databases to store data to feed our API,
 
-[Begin your Reading](./reading/intro)
+## Learning Objectives
 
-[Additional Resources](./resources)
-
-[Lecture](./lecture)
-
-[Assignments](./assignments)
+- One
+- Two
