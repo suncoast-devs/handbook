@@ -217,7 +217,7 @@ And then we need to supply this `stream` to the _deserializer_
 
 > NOTE: we need to add `using System.Text.Json;` as well as `using System.Collections.Generic` here
 
-Again we see `await` since the process of deserializing the list is done in an `async` manner. The `JsonSerializer.DeserializeAsync` also requires us to tell it what kind of object to extract. We do that by specifying `List<Item>` inside of `<>`. The outer `<>` are for the `DeserializeAsync` to mean "inside these <> is the type of data to try to deserialize" and inside the `List<Item>` says that the JSON data, inside the `responseAsStream` should be processed as a `List` of `Item` objects. Finally we supply the stream, `responseAsStream`
+Again we see `await` since the process of deserializing the list is done in an `async` manner. The `JsonSerializer.DeserializeAsync` also requires us to tell it what kind of object to extract. We do that by specifying `List<Item>` inside of `<>`. The outer `<>` are for the `DeserializeAsync` to mean "inside these `<>` is the type of data to try to deserialize" and inside the `List<Item>` says that the JSON data, inside the `responseAsStream` should be processed as a `List` of `Item` objects. Finally we supply the stream, `responseAsStream`
 
 This gives us a `List<Item>` that we can iterate.
 

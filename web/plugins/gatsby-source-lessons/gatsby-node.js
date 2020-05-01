@@ -1,6 +1,6 @@
 const fs = require('fs').promises
 const path = require('path')
-const yaml = require('js-yaml')
+const matter = require('gray-matter')
 const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.sourceNodes = async (
@@ -11,10 +11,7 @@ exports.sourceNodes = async (
     const nodeId = createNodeId(`handbook-lesson-${slug}`)
     const path = `${options.path}/${slug}`
 
-    let index = null
-    try {
-      index = yaml.load(await fs.readFile(`${path}/index.yaml`, 'utf8'))
-    } catch (error) {}
+    const index = matter(await fs.readFile(`${path}/index.md`, 'utf8')).data
 
     const lesson = { slug, path, ...index }
     const content = JSON.stringify(lesson)
@@ -35,10 +32,12 @@ exports.sourceNodes = async (
   }
 
   const files = await fs.readdir(options.path)
-  files.forEach(async (slug) => {
-    const lesson = await createLessonNode(slug)
-    await validateLesson(lesson)
-  })
+  return Promise.all(
+    files.map(async (slug) => {
+      const lesson = await createLessonNode(slug)
+      return validateLesson(lesson)
+    })
+  )
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -98,11 +97,8 @@ async function validateLesson(meta) {
         warnings.push(
           `The file ${filePath} appears to have insufficient content.`
         )
-      } else {
-        console.log(stats.size())
       }
     } catch (error) {
-      console.log(error)
       warnings.push(`The file ${filePath} does not exist.`)
     }
   }

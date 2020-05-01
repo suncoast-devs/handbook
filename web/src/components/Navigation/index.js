@@ -1,10 +1,10 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import cx from 'classnames'
+import SDGIcon from '../../images/button.svg'
+import { Transition } from '../Transition'
+import { useUIContext } from '../UIContext'
 import { Menu } from './Menu'
-import SDGIcon from '../images/button.svg'
-import { Transition } from './Transition'
-import { useUIContext } from './UIContext'
 
 function Header() {
   return (

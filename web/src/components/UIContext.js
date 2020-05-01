@@ -16,6 +16,10 @@ function reducer(state, action) {
       return { ...state, isSidebarHidden: true }
     }
 
+    case 'navigateToModule': {
+      return { ...state, currentNavModule: action.payload }
+    }
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
@@ -26,14 +30,21 @@ export function UIContextProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, {
     isSidebarOpen: false,
     isSidebarHidden: true,
+    currentNavModule: null,
   })
-
+  /* TODO: in `resetNavigation`, wait to unset currentNavModule after
+     transition, so it doesn't blink out when navigating back to the
+     program menu. See Menu.js */
   return (
     <UIContext.Provider
       value={{
         openSidebar: () => dispatch({ type: 'openSidebar' }),
         closeSidebar: () => dispatch({ type: 'closeSidebar' }),
         hideSidebar: () => dispatch({ type: 'hideSidebar' }),
+        navigateToModule: (module) =>
+          dispatch({ type: 'navigateToModule', payload: module }),
+        resetNavigation: () =>
+          dispatch({ type: 'navigateToModule', payload: null }),
         ...state,
       }}
     >

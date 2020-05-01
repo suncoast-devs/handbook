@@ -1,4 +1,6 @@
 title: Web Development Program
+description: >
+  A three-month immersive curriculum preparing students for entry-level work as full-stack web developers.
 modules:
   - c-sharp:
     title: Introduction to Programming with C#
@@ -11,9 +13,9 @@ modules:
       - cs-control-flow
       - cs-loops
       - cs-what-is-null
-      - TODO-cs-guard-clauses
-      - TODO-cs-ternary
-      - TODO-exceptions
+      # - cs-guard-clauses
+      # - cs-ternary
+      # - exceptions
       - cs-methods
       - cs-classes
       - cs-linq
@@ -26,20 +28,21 @@ modules:
       - http-intro
       - misc-json
       - misc-api-intro
-      - TODO-misc-rest
+      # - misc-rest
       - cs-intro-to-api
-      - TODO-cs-api-build
-      - TODO-cs-build-api-with-database
-      - TODO-cs-deployment-to-heroku-with-docker
-      - TODO-misc-optimizing-developer-workspace
-      - TODO-cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
+      # - cs-api-build
+      # - cs-build-api-with-database
+      # - cs-deployment-to-heroku-with-docker
+      # - misc-optimizing-developer-workspace
+      # - cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
-      - environment-setup
+      # - environment-setup
       - html-intro
       - css-intro
-      - grids
-      - flexbox
-      - responsive
+      # - grids
+      # - flexbox
+      # - responsive
       - react-intro
+position: 0

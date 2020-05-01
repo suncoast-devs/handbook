@@ -15,9 +15,9 @@ modules:
       Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of structured documents such as HTML.
     lessons:
       - css-intro
-      - grids
-      - flexbox
-      - responsive
+      # - grids
+      # - flexbox
+      # - responsive
   - javascript:
     title: "JavaScript: Behavior & Interaction"
     description: >
@@ -25,3 +25,4 @@ modules:
     lessons:
       - js-intro
       - js-basics
+position: 1
