@@ -32,7 +32,9 @@ export function UIContextProvider({ children }) {
     isSidebarHidden: true,
     currentNavModule: null,
   })
-
+  /* TODO: in `resetNavigation`, wait to unset currentNavModule after
+     transition, so it doesn't blink out when navigating back to the
+     program menu. See Menu.js */
   return (
     <UIContext.Provider
       value={{
