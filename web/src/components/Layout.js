@@ -10,7 +10,7 @@ export function Layout({ title, children }) {
   return (
     <UIContextProvider>
       <Helmet>
-        <title>SDG Handbook</title>
+        <title>SDG Handbook{title && ` - ${title}`}</title>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <script
           src="https://kit.fontawesome.com/abb24df607.js"
@@ -28,7 +28,7 @@ export function Layout({ title, children }) {
             ref={mainRef}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-              <h1 className="text-2xl font-semibold text-gray-900">
+              <h1 className="text-2xl mt-6 font-semibold text-gray-900">
                 {title || 'Missing Document Title'}
               </h1>
             </div>
