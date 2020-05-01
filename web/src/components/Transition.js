@@ -12,6 +12,7 @@ export function Transition({
   leaveFrom,
   leaveTo,
   children,
+  unmountOnExit = true,
   appear = false,
   onExited = () => {},
 }) {
@@ -50,7 +51,7 @@ export function Transition({
         node.classList.remove(...leaveFromClasses)
         node.classList.add(...leaveToClasses)
       }}
-      unmountOnExit={true}
+      unmountOnExit={unmountOnExit}
     >
       {Children.only(children)}
     </CSSTransition>

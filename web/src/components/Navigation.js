@@ -1,12 +1,32 @@
 import React from 'react'
-import { Transition } from './Transition.js'
+import Link from 'gatsby-link'
 import SDGIcon from '../images/button.svg'
+import { Transition } from './Transition.js'
+import { useUIContext } from './UIContext'
 
-export function Navigation({ isOpen, isHidden, hide, close }) {
+function Header() {
+  return (
+    <div className="h-16 flex flex-shrink-0 items-center bg-gray-900 px-4 text-white">
+      <img className="h-8 w-auto" src={SDGIcon} alt="SDG Icon" />
+      <Link to="/" className="ml-2 font-bold">
+        Student Handbook
+      </Link>
+    </div>
+  )
+}
+
+export function Navigation() {
+  const {
+    closeSidebar,
+    hideSidebar,
+    isSidebarOpen,
+    isSidebarHidden,
+  } = useUIContext()
+
   return (
     <>
       {/* Off-canvas menu for mobile */}
-      <div className={`${isHidden ? 'hidden ' : ''}md:hidden`}>
+      <div className={`${isSidebarHidden ? 'hidden ' : ''}md:hidden`}>
         <div className="fixed inset-0 flex z-40">
           <Transition
             enter="transition-opacity ease-linear duration-300"
@@ -15,10 +35,10 @@ export function Navigation({ isOpen, isHidden, hide, close }) {
             leave="transition-opacity ease-linear duration-300"
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
-            show={isOpen}
-            onExited={hide}
+            show={isSidebarOpen}
+            onExited={hideSidebar}
           >
-            <div className="fixed inset-0" onClick={close}>
+            <div className="fixed inset-0" onClick={closeSidebar}>
               <div className="absolute inset-0 bg-gray-600 opacity-75" />
             </div>
           </Transition>
@@ -29,24 +49,19 @@ export function Navigation({ isOpen, isHidden, hide, close }) {
             leave="transition ease-in-out duration-300 transform"
             leaveFrom="translate-x-0"
             leaveTo="-translate-x-full"
-            show={isOpen}
+            show={isSidebarOpen}
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full pt-5 pb-4 bg-gray-800">
+            <div className="relative flex-1 flex flex-col max-w-xs w-full pb-4 bg-gray-800">
               <div className="absolute top-0 right-0 -mr-14 p-1">
                 <button
                   className="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600"
                   aria-label="Close Sidebar"
-                  onClick={close}
+                  onClick={closeSidebar}
                 >
                   <i className="text-white far fa-times"></i>
                 </button>
               </div>
-              <div className="flex-shrink-0 flex items-center px-4">
-                <img className="h-8 w-auto" src={SDGIcon} alt="SDG Icon" />
-                <span className="ml-2 font-black text-purple-300">
-                  Student Handbook
-                </span>
-              </div>
+              <Header />
               <div className="mt-5 flex-1 h-0 overflow-y-auto">
                 <nav className="px-2">
                   <a
@@ -75,9 +90,7 @@ export function Navigation({ isOpen, isHidden, hide, close }) {
       {/* Static sidebar for desktop */}
       <div className="hidden md:flex md:flex-shrink-0">
         <div className="flex flex-col w-64">
-          <div className="flex items-center h-16 flex-shrink-0 px-4 bg-gray-900 text-white">
-            SDG Handbook
-          </div>
+          <Header />
           <div className="h-0 flex-1 flex flex-col overflow-y-auto">
             {/* Sidebar component, swap this element with another sidebar if you like */}
             <nav className="flex-1 px-2 py-4 bg-gray-800">
