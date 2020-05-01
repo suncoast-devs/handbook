@@ -108,7 +108,6 @@ async function validateLesson(meta) {
   if (!meta.assigments || meta.assignments.length === 0)
     warnings.push('No assignments.')
 
-  await validateFile('objectives.md')
   await validateFile('lecture/presentation/index.md')
   await validateFile('lecture/index.md')
 
