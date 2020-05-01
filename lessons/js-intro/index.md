@@ -1,11 +1,15 @@
-# Welcome to JavaScript
+---
+title: Welcome to JavaScript
+---
 
-[Learning Objectives](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript/objectives)
+# Learning Objectives
 
-[Begin your Reading](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript/reading/intro)
-
-[Additional Resources](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript/resources)
-
-[Lecture](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript/lecture)
-
-[Assignments](/handbook/curriculum/fundamentals/modules/javascript/lessons/welcome-to-javascript/assignments)
+- What is JavaScript
+- How does JavaScript fit in the web
+- What is a line of code
+- Basic JavaScript operations
+- Basic JavaScript types (strings and numbers)
+- What are variables and how to use them
+- What is a function
+- What is the DOM
+- How to listen to events
