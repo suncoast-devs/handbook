@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
 import { Transition } from './Transition'
+import { useUIContext } from './UIContext'
 
 function SubHeading({ children }) {
   return <h4 className="mx-6 mt-3 font-semibold">{children}</h4>
 }
 
 export function Menu() {
-  const [module, setModule] = useState(0)
+  const { currentNavModule, resetNavigation, navigateToModule } = useUIContext()
 
   function Heading({ children, onClick, icon }) {
     return (
@@ -32,7 +33,7 @@ export function Menu() {
     return (
       <li
         className="mt-1 group flex items-center justify-between px-3 py-2 text-sm leading-5 font-medium text-gray-400 hover:text-gray-200 rounded-l-md hover:bg-gray-600 focus:outline-none focus:bg-gray-100 transition ease-in-out duration-150"
-        onClick={() => setModule(1)}
+        onClick={() => navigateToModule(1)}
       >
         {children}
         <i className="far fa-angle-right"></i>
@@ -66,7 +67,7 @@ export function Menu() {
   function ModuleMenu() {
     return (
       <>
-        <Heading onClick={() => setModule(0)} icon="fas fa-caret-left">
+        <Heading onClick={resetNavigation} icon="fas fa-caret-left">
           Web Development Test Drive
         </Heading>
         <SubHeading>HTML: Structure & Semantics</SubHeading>
@@ -93,7 +94,7 @@ export function Menu() {
         leave="transition ease-in-out duration-300 transform"
         leaveFrom="translate-x-0"
         leaveTo="-translate-x-full"
-        show={module === 0}
+        show={!currentNavModule}
       >
         <div className="absolute left-0 right-0 translat">
           <ProgramMenu />
@@ -106,7 +107,7 @@ export function Menu() {
         leave="transition ease-in-out duration-300 transform"
         leaveFrom="translate-x-0"
         leaveTo="translate-x-full"
-        show={module === 1}
+        show={!!currentNavModule}
       >
         <div className="absolute left-0 right-0">
           <ModuleMenu />

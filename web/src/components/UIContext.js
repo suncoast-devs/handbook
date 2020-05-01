@@ -16,6 +16,10 @@ function reducer(state, action) {
       return { ...state, isSidebarHidden: true }
     }
 
+    case 'navigateToModule': {
+      return { ...state, currentNavModule: action.payload }
+    }
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
@@ -26,6 +30,7 @@ export function UIContextProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, {
     isSidebarOpen: false,
     isSidebarHidden: true,
+    currentNavModule: null,
   })
 
   return (
@@ -34,6 +39,10 @@ export function UIContextProvider({ children }) {
         openSidebar: () => dispatch({ type: 'openSidebar' }),
         closeSidebar: () => dispatch({ type: 'closeSidebar' }),
         hideSidebar: () => dispatch({ type: 'hideSidebar' }),
+        navigateToModule: (module) =>
+          dispatch({ type: 'navigateToModule', payload: module }),
+        resetNavigation: () =>
+          dispatch({ type: 'navigateToModule', payload: null }),
         ...state,
       }}
     >
