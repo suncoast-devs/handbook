@@ -1,18 +1,20 @@
 # Hello, World!
 
-Welcome to your journey as a developer. When learning a new language, a developer usually starts with creating a `hello, world` program. A `hello, world` is a simple program that allows a developer to test to see if their environment is set up and working.
+Welcome to your journey as a developer. When learning a new language, a developer usually starts with creating a `hello, world` program. A `hello, world` program is a simple program that allows a developer to see the basic structure of an application as well as confirm their environment is working.
 
 ## Objectives
 
-- Ensure your development environment is setup
+- Ensure your development environment is setup.
 
 ## Requirements
 
-This should have been done in class, but make sure your [laptop is set up and ready to go](https://suncoast.io/handbook/tools/environment/).
+Make sure you have followed the setup instructions for your computer's operating system
 
-You can create your project following [getting going with .NET](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/00-env-set-up)
+- LINK TO WINDOWS SETUP
+- LINK TO MAC SETUP
+- LINK TO LINUX SETUP
 
-All your code should place inside the `static void Main(string args[])`
+Follow this guide LINK TO CS-CONSOLE-ASSIGNMENT-SETUP
 
 ### Explorer Mode
 
@@ -21,4 +23,5 @@ All your code should place inside the `static void Main(string args[])`
 
 ## Additional Resources
 
+- See THIS PAGE on TURNING IN ASSIGNMENTS
 - [turning in assignments](https://suncoast.io/handbook/tools/assignment-turn-in/)
