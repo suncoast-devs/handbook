@@ -82,13 +82,11 @@ namespace our_dotnet_app
 Let's break down each of these lines to see the structure of a line of code in `C#` and how variable assignment works.
 
 ```
-          TYPE   NAME   VALUE
-
-           |       |      |
-           |       |      |
-           v       v      v
-
-          string name = "Mark";
+// Type   Name   Value    Statement End
+//  |       |      |       |
+//  |       |      |       |
+//  v       v      v       v
+  string  name = "Samantha";
 ```
 
 This is an _assignment_ statement. On the left hand side of the statement we have the type of variable we are asking to create, in this case a `string` followed by the _name_ of the variable, in this case `name`, followed by an equals sign `=` and then the value, the _string_ `"MARK"`. Strings are enclosed inside a pair of double-quotation marks (`"`) to let the computer know that we mean the letters `M`, then `a`, then `r`, then `k`. Otherwise the computer might think we are referring to another variable, one named `Mark`. Like all statements in `C#` we end (_terminate_) the statement with a semi-colon, `;`. Think of the `;` in `C#` like the period at the end of this sentence. It signifies the end of a complete thought. In the case of our code, the complete statement declaring our variable.
@@ -128,13 +126,13 @@ In `C#` there is a set of built-in types of variables that the language provides
   - **int** : a whole number from -2,147,483,648 to 2,147,483,64
   - **long** : a whole number from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
   - **double** : a 64 bit floating point value that has an approximate precision of ~15-17 digits
-  - **float** : a 32 bit floating poit value that has an approximate precision of 6-9 digits
+  - **float** : a 32 bit floating point value that has an approximate precision of 6-9 digits
   - **decimal** : a more precise way to store decimal numbers, but has a smaller range
 
 - Some other non-numeric primitives are:
   - **char** : represents a unicode character
   - **bool** : true or false
-  - **byte** : represents a raw chunk of data
+  - **byte** : represents a raw chunk of data (values from 0 to 255)
 
 > NOTE: Do not feel the need to memorize all the different primitive types, just know that they exist. Most of the time developers will just `var` and not think about the type until it matters. This is a case of knowing how to find the information is better than rote memorization of facts.
 

@@ -6,24 +6,12 @@ Before we can start writing code in `C#` we must have a directory and a project 
 
 We will be using the `dotnet` command frequently. This command has many ways to use it and we'll discover those in various other lessons. To get started with a `C#` project we'll use the `dotnet` command to make a `new` project. The simplest program we can write will interact with us, the user, by what we call the `console.` On Mac OS or Linux the `console` will be our `terminal/shell` and on Windows this will be our `Powershell` window.
 
-To create a new application we will first create a directory to store our project by using the `mkdir` command:
-
-```sh
-mkdir our-dotnet-app
-```
-
-And then we will make that directory our current directory by using the `cd` command:
-
-```sh
-cd our-dotnet-app
-```
-
 # Running `dotnet new console` to make a new console application
 
 Now that we have created a directory to contain our application we can use the `dotnet` app to create the project:
 
 ```sh
-dotnet new console
+dotnet new console -o our-dotnet-app
 ```
 
 You should see something similar to:
@@ -36,6 +24,12 @@ Running 'dotnet restore' on /Users/sdg-student/sdg/our-dotnet-app/our-dotnet-app
   Restore completed in 190.3 ms for /Users/sdg-student/sdg/our-dotnet-app/our-dotnet-app.csproj.
 
 Restore succeeded.
+```
+
+And then we will make that directory our current directory by using the `cd` command:
+
+```sh
+cd our-dotnet-app
 ```
 
 # What files make up our project?
@@ -95,8 +89,7 @@ watch : Waiting for a file to change before restarting dotnet...
 
 Now our working cycle can be:
 
-` Change code
-
+- Change code
 - See output
 - Repeat
 
