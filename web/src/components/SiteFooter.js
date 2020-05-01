@@ -47,7 +47,7 @@ export function SiteFooter({ main }) {
       unmountOnExit={false}
       show={position < 50 || position > height - 50}
     >
-      <footer className="h-16 flex items-center justify-center bg-white text-gray-500 shadow fixed right-0 left-0 bottom-0">
+      <footer className="h-16 flex items-center justify-center bg-white text-gray-500 shadow sticky bottom-0 left-0 right-0">
         &copy; 2017 - {new Date().getFullYear()}; Built with &hearts; in St.
         Petersburg, Florida.
       </footer>
