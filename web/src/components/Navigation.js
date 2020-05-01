@@ -52,7 +52,7 @@ export function Navigation() {
             leaveTo="-translate-x-full"
             show={isSidebarOpen}
           >
-            <div className="relative flex-1 flex flex-col max-w-xs w-full">
+            <div className="relative flex-1 flex flex-col max-w-sm w-full">
               <div className="absolute top-0 right-0 -mr-14 p-1">
                 <button
                   className="flex items-center justify-center h-12 w-12 rounded-full focus:outline-none focus:bg-gray-600"
@@ -70,7 +70,7 @@ export function Navigation() {
         </div>
       </div>
       <div className="hidden md:flex md:flex-shrink-0">
-        <div className="flex flex-col w-64">
+        <div className="flex flex-col w-96">
           <Header />
           <Menu />
         </div>

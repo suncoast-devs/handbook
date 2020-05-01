@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import cx from 'classnames'
 import { Transition } from './Transition'
 
-function SectionHeading({ children }) {
+function SubHeading({ children }) {
   return <h4 className="mx-6 mt-3 font-semibold">{children}</h4>
 }
 
@@ -45,14 +45,14 @@ export function Menu() {
       <>
         <Heading icon="far fa-house">All Programs</Heading>
         <nav className="mb-6">
-          <SectionHeading>Web Development Program</SectionHeading>
+          <SubHeading>Web Development Program</SubHeading>
           <ul className="pl-3">
             <Item>Introduction to Programming with C#</Item>
             <Item>Fundamentals of Front-end Web Development</Item>
           </ul>
         </nav>
         <nav>
-          <SectionHeading>Web Development Test Drive</SectionHeading>
+          <SubHeading>Web Development Test Drive</SubHeading>
           <ul className="pl-3">
             <Item>HTML: Structure & Semantics</Item>
             <Item>CSS: Style & Presentation</Item>
@@ -69,8 +69,8 @@ export function Menu() {
         <Heading onClick={() => setModule(0)} icon="fas fa-caret-left">
           Web Development Test Drive
         </Heading>
-        <SectionHeading>HTML: Structure & Semantics</SectionHeading>
-        <div className="m-3 p-3 text-sm leading-tight text-gray-300 bg-gray-700 rounded">
+        <SubHeading>HTML: Structure & Semantics</SubHeading>
+        <div className="m-3 p-3 text-sm leading-tight tracking-light text-gray-300 bg-gray-700 rounded">
           <p>
             HTML (HyperText Markup Language) is the most basic building block of
             the Web. It defines the meaning and structure of web content.
