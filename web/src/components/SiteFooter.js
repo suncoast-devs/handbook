@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import cx from 'classnames'
 import { Transition } from './Transition'
 
 function useScrollPosition(target) {
@@ -47,7 +48,12 @@ export function SiteFooter({ main }) {
       unmountOnExit={false}
       show={position < 50 || position > height - 50}
     >
-      <footer className="h-16 flex items-center justify-center bg-white text-gray-500 shadow sticky bottom-0 left-0 right-0">
+      <footer
+        className={cx(
+          'h-16 flex items-center justify-center bg-white text-gray-500 shadow bottom-0 left-0 right-0',
+          position > 0 ? 'sticky' : 'absolute'
+        )}
+      >
         &copy; 2017 - {new Date().getFullYear()}; Built with &hearts; in St.
         Petersburg, Florida.
       </footer>

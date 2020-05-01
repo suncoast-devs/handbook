@@ -85,7 +85,7 @@ export function Menu() {
   }
 
   return (
-    <div className="pt-6 flex-1 h-0 overflow-y-auto bg-gray-800 text-white relative">
+    <div className="pt-6 flex-1 h-0 overflow-y-auto overflow-x-hidden bg-gray-800 text-white relative">
       <Transition
         enter="transition ease-in-out duration-300 transform"
         enterFrom="-translate-x-full"
@@ -95,7 +95,7 @@ export function Menu() {
         leaveTo="-translate-x-full"
         show={module === 0}
       >
-        <div className="absolute left-0 right-0">
+        <div className="absolute left-0 right-0 translat">
           <ProgramMenu />
         </div>
       </Transition>
