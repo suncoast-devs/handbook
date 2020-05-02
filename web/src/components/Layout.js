@@ -2,13 +2,12 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Navigation } from './Navigation'
 import { SiteHeader } from './SiteHeader'
-import { UIContextProvider } from './UIContext'
 import { SiteFooter } from './SiteFooter'
 
 export function Layout({ title, children }) {
   const mainRef = React.useRef(null)
   return (
-    <UIContextProvider>
+    <>
       <Helmet>
         <title>{`SDG Handbook${title && ` - ` + title}`}</title>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
@@ -39,6 +38,6 @@ export function Layout({ title, children }) {
           </main>
         </div>
       </div>
-    </UIContextProvider>
+    </>
   )
 }
