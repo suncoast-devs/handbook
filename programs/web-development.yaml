@@ -1,6 +1,7 @@
 title: Web Development Program
 description: >
-  A three-month immersive curriculum preparing students for entry-level work as full-stack web developers.
+  A three-month immersive curriculum preparing students for entry-level work as
+  full-stack web developers.
 modules:
   - c-sharp:
     title: Introduction to Programming with C#
@@ -45,4 +46,10 @@ modules:
       # - flexbox
       # - responsive
       - react-intro
+  - full-stack-development:
+    title: Full-stack Application Development
+    lessons:
+      - cs-api-build
+      - auth0-intro
+      - cs-deployment-docker
 position: 0
