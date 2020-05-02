@@ -1,5 +1,7 @@
 ---
 title: C# Dev Environment Setup
+lessons:
+  - cs-hello-world
 ---
 
 ## Learning Objectives
