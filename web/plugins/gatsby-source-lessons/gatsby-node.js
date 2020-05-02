@@ -46,13 +46,19 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.internal.type === 'Mdx' &&
     /handbook\/lessons/.test(node.fileAbsolutePath)
   ) {
-    // Add `slug` field to lesson MDX files for URL generation
-    const value = createFilePath({ node, getNode, trailingSlash: false })
-    createNodeField({
-      name: 'slug',
-      node,
-      value: `/lessons${value}`,
-    })
+    // Add `slug` and `path` fields to lesson MDX files for URL generation
+    const subPath = createFilePath({ node, getNode, trailingSlash: false })
+    createNodeField({ name: 'path', node, value: `/lessons${subPath}` })
+
+    const slug = (subPath.match(/^\/([\w-]+)/) || [, 1])[1]
+    createNodeField({ name: 'slug', node, value: slug })
+
+    const type = (Object.entries({
+      reading: /^\/[\w-]+\/reading\/[\w-]+$/,
+      lecture: /^\/[\w-]+\/lecture\/[\w-]+$/,
+      index: /^\/[\w-]+$/,
+    }).find(([k, v]) => v.test(subPath)) || [])[0]
+    createNodeField({ name: 'type', node, value: type })
   }
 }
 
@@ -64,6 +70,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         nodes {
           id
           fields {
+            path
             slug
           }
         }
@@ -79,9 +86,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { nodes } = result.data.allMdx
   nodes.forEach((node) => {
     createPage({
-      path: node.fields.slug,
+      path: node.fields.path,
       component: path.resolve(`./src/components/Page.js`),
-      context: { id: node.id },
+      context: { id: node.id, slug: node.fields.slug },
     })
   })
 }
