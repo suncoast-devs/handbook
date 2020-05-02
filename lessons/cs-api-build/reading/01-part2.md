@@ -1,11 +1,21 @@
-# Making a full fledged CRUD API for our games
+---
+title: Making a full fledged CRUD API for our games
+---
 
-We are going to make an API that has the ability to `CRUD` (Create, Read, Update, and Delete) games. The first thing we should do is design our API to support all of these and to follow a common convention.
+We are going to make an API that has the ability to `CRUD` (Create, Read,
+Update, and Delete) games. The first thing we should do is design our API to
+support all of these and to follow a common convention.
 
-We are going to treat our games as a resource we can manage. The API we are designing will follow the style of a REST API (see THIS LESSON HERE ON WHAT REST IS). For now we only need to know:
+We are going to treat our games as a resource we can manage. The API we are
+designing will follow the style of a REST API (see THIS LESSON HERE ON WHAT REST
+IS). For now we only need to know:
 
 - Games are data (a resource) we are going to manage
-- If an endpoint uses the GET verb we expect the endpoint to return the same resource each time and not modify it. NOTE: the data inside may change (e.g. we may update the address, or date) but the resource, the Game Night, is still the same. When we say "the same resource" we don't mean the contents, but rather the concept (the Game Night with ID 1)
+- If an endpoint uses the GET verb we expect the endpoint to return the same
+  resource each time and not modify it. NOTE: the data inside may change (e.g.
+  we may update the address, or date) but the resource, the Game Night, is still
+  the same. When we say "the same resource" we don't mean the contents, but
+  rather the concept (the Game Night with ID 1)
 - If an endpoint uses POST/PUT/DELETE it will modify the resource in some way.
 - POST will modify the "list of all games" resource by adding a new Game.
 - PUT will modify a specific game by supplying new values
@@ -21,13 +31,22 @@ Thus we will end up with an API with these endpoints:
 | PUT /games/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
 | DELETE /games/{id} | Deletes the specific game given by its id                                                                                         |
 
-> This is a very typical pattern of API for a CRUD style application. These URL patterns and VERB combinations are enough of a pattern that we can typically make some guesses as to what an API does by only looking at the `URL`+`VERB` definition.
+> This is a very typical pattern of API for a CRUD style application. These URL
+> patterns and VERB combinations are enough of a pattern that we can typically
+> make some guesses as to what an API does by only looking at the `URL`+`VERB`
+> definition.
 
 ## Storing the games
 
-We'll start by adding some static data to our class. The `static` nature of these variables mean that they will be around for each API request. Every API request has `dotnet` create a `new` instance of our controller, thus any local variables are cleared after the request. The `static` variables are part of the class itself and will last until the program terminates.
+We'll start by adding some static data to our class. The `static` nature of
+these variables mean that they will be around for each API request. Every API
+request has `dotnet` create a `new` instance of our controller, thus any local
+variables are cleared after the request. The `static` variables are part of the
+class itself and will last until the program terminates.
 
-We will keep a `List<>` of `Game` objects as well as an `int` to keep track of the next ID to assign. The `NextID` will be incremented each time we add an item to the `List<>`. In this way it works similar to how a database `ID` works.
+We will keep a `List<>` of `Game` objects as well as an `int` to keep track of
+the next ID to assign. The `NextID` will be incremented each time we add an item
+to the `List<>`. In this way it works similar to how a database `ID` works.
 
 ```C#
 // A list of all the games we currently know about
@@ -51,19 +70,36 @@ public ActionResult<IEnumerable<Game>> GetAll()
 }
 ```
 
-We define the endpoint as `[HttpGet]` without any other URL parts. We also declare it as `ActionResult<IEnumerable<Game>>`. To break this down we start at the most inner `<>` and see we are returning `Game` objects. `IEnumerable<Game>` is just a more generic version of `List<Game>`. We use the more generic type here in case we decide to change the type of `GameList` in the future to some other type of container. In general, and unless there is a specific reason otherwise, we should return the most generic data type we can. Finally we wrap that in an `ActionResult<>` so we can return objects and status codes.
+We define the endpoint as `[HttpGet]` without any other URL parts. We also
+declare it as `ActionResult<IEnumerable<Game>>`. To break this down we start at
+the most inner `<>` and see we are returning `Game` objects. `IEnumerable<Game>`
+is just a more generic version of `List<Game>`. We use the more generic type
+here in case we decide to change the type of `GameList` in the future to some
+other type of container. In general, and unless there is a specific reason
+otherwise, we should return the most generic data type we can. Finally we wrap
+that in an `ActionResult<>` so we can return objects and status codes.
 
-> `ActionResult<IEnumerable<Game>>` is read as "An HTTP response containing status code, headers, and a BODY that is a _collection_ of `Game` objects, represented as JSON"
+> `ActionResult<IEnumerable<Game>>` is read as "An HTTP response containing
+> status code, headers, and a BODY that is a _collection_ of `Game` objects,
+> represented as JSON"
 
 ## `GET /games/{id}` endpoint - returns a single game
 
-The method accepts an integer `id` based on the URL. the `[HttpGet("{id})]` indicates that the base URL `/game` is followed by a `/` and then whatever is next is converted into an integer.
+The method accepts an integer `id` based on the URL. the `[HttpGet("{id})]`
+indicates that the base URL `/game` is followed by a `/` and then whatever is
+next is converted into an integer.
 
-Then we use LINQ's method `FirstOrDefault` to look through the `GameList` for any `game` that has the same `Id` as the `id` we were supplied. That code will go game by game through the list, handing each one to the expression `game => game.Id == id` and stop when it finds a `game` where that expression is true. If there is no match it will return `null`. SEE THE LESSON ON LINQ.
+Then we use LINQ's method `FirstOrDefault` to look through the `GameList` for
+any `game` that has the same `Id` as the `id` we were supplied. That code will
+go game by game through the list, handing each one to the expression
+`game => game.Id == id` and stop when it finds a `game` where that expression is
+true. If there is no match it will return `null`. SEE THE LESSON ON LINQ.
 
-If no match is found then we can immediately return a `NotFound` result and process no further.
+If no match is found then we can immediately return a `NotFound` result and
+process no further.
 
-Otherwise the method proceeds and we return an `Ok(game)` such that we return a `200` and the contents of `game`.
+Otherwise the method proceeds and we return an `Ok(game)` such that we return a
+`200` and the contents of `game`.
 
 ```C#
 // Get a specific game by ID
@@ -89,11 +125,16 @@ public ActionResult<Game> GetByID(int id)
 
 ## `POST /games` - Create a game
 
-We define this method as `[HttpPost]` so this means `POST` to the base URL `/games`
+We define this method as `[HttpPost]` so this means `POST` to the base URL
+`/games`
 
-The method takes a `Game gameToCreate` as an argument. That object is parsed from the body of the request and put into a `Game` object. The return of `ActionResult<Game>` indicates we return a single JSON representation of the created `Game`.
+The method takes a `Game gameToCreate` as an argument. That object is parsed
+from the body of the request and put into a `Game` object. The return of
+`ActionResult<Game>` indicates we return a single JSON representation of the
+created `Game`.
 
-The rest of the method is similar to our previous implementation except for incrementing and using `NextID`
+The rest of the method is similar to our previous implementation except for
+incrementing and using `NextID`
 
 ```C#
 // Create a game
@@ -153,17 +194,26 @@ public ActionResult<Game> Create(Game gameToCreate)
 
 ## `PUT /games/{id}` - Updating an existing game
 
-To update a specific game we need to indicate a `PUT` verb and that we will be specifying the `id` on the URL. We use `[HttpPut("{id}")]` to indicate this.
+To update a specific game we need to indicate a `PUT` verb and that we will be
+specifying the `id` on the URL. We use `[HttpPut("{id}")]` to indicate this.
 
-The method takes both an `int` and a `Game gameUpdate` as an argument. The `int id` comes from the URL processing. The object is parsed from the body of the request and put into a `Game` object. The return of `ActionResult<Game>` indicates we return a single JSON representation of the updated `Game`.
+The method takes both an `int` and a `Game gameUpdate` as an argument. The
+`int id` comes from the URL processing. The object is parsed from the body of
+the request and put into a `Game` object. The return of `ActionResult<Game>`
+indicates we return a single JSON representation of the updated `Game`.
 
-The method first uses `FirstOrDefault` similarly to the code to fetch and return one game. We need to ensure the `id` represented can be found so that we can modify the corresponding `Game`.
+The method first uses `FirstOrDefault` similarly to the code to fetch and return
+one game. We need to ensure the `id` represented can be found so that we can
+modify the corresponding `Game`.
 
-If the `foundGame` is `null` we know that no game with the supplied ID is in our list so we immediately return a `404 Not Found` and stop the method from proceeding.
+If the `foundGame` is `null` we know that no game with the supplied ID is in our
+list so we immediately return a `404 Not Found` and stop the method from
+proceeding.
 
 Next we validate the `gameUpdate` according to our validation rules.
 
-We then copy the values from `gameUpdate` to `foundGame` to save away the updated values. Finally we return `Ok(foundGame)` to return the updated values.
+We then copy the values from `gameUpdate` to `foundGame` to save away the
+updated values. Finally we return `Ok(foundGame)` to return the updated values.
 
 ```C#
 // Update a game
@@ -233,9 +283,17 @@ public ActionResult<Game> Update(int id, Game gameUpdate)
 
 ## `DELETE /games/{id}` - Delete a game
 
-Finally we have a method to remove a game. The endpoint uses the `DELETE` verb and provides the `id` as part of the URL. We specify `[HttpDelete("id")]` to indicate this. The method receives the `int id` as an argument and returns an `ActionResult<Game>` to indicate that we'll return a copy of the deleted `Game`'s data.
+Finally we have a method to remove a game. The endpoint uses the `DELETE` verb
+and provides the `id` as part of the URL. We specify `[HttpDelete("id")]` to
+indicate this. The method receives the `int id` as an argument and returns an
+`ActionResult<Game>` to indicate that we'll return a copy of the deleted
+`Game`'s data.
 
-Similar to retrieving or updating a single game we first use `FirstOrDefault` to seek a game with that `id`. Similarly if nothing was found we return a `404 Not Found` error. If something _is_ found then we call `Remove` on the list to remove the item from the list. Finally we return `Ok(foundGame)` to send a `200` response with the contents of the now deleted `Game`.
+Similar to retrieving or updating a single game we first use `FirstOrDefault` to
+seek a game with that `id`. Similarly if nothing was found we return a
+`404 Not Found` error. If something _is_ found then we call `Remove` on the list
+to remove the item from the list. Finally we return `Ok(foundGame)` to send a
+`200` response with the contents of the now deleted `Game`.
 
 ```C#
 // Remove a game
@@ -469,7 +527,8 @@ namespace BasicApi.Controllers
 
 ## Try it out!
 
-Run the app and then use Insomnia to send various requests to your application. Here are some things to try:
+Run the app and then use Insomnia to send various requests to your application.
+Here are some things to try:
 
 - Create a few games
 - Fetch a list of all the games
@@ -477,9 +536,12 @@ Run the app and then use Insomnia to send various requests to your application. 
 - Update an attribute of an existing `Game`
 - Delete a game
 
-You will notice that the system will keep track of all the games until one of two things happen:
+You will notice that the system will keep track of all the games until one of
+two things happen:
 
 - You quit the `dotnet watch run`
 - You make a code change which causes `dotnet watch run` to reload your code.
 
-Up next we create a full fledged API with a database backend. You'll see that we will retain a lot of our `GameController` and `Game` class code but with some new code and organization.
+Up next we create a full fledged API with a database backend. You'll see that we
+will retain a lot of our `GameController` and `Game` class code but with some
+new code and organization.

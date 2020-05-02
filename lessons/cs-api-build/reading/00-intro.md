@@ -1,4 +1,6 @@
-## Introducing a new dotnet template
+---
+title: Introducing a new dotnet template
+---
 
 In other lessons we have used `dotnet new console` to create our application
 that run in the terminal. Now we will be using a different template, one that
@@ -222,7 +224,7 @@ we use `http://localhost:5000` we will be redirected to the `https` version.
 If you open the `Insomnia` API testing tool, create a new request, and send a
 `GET` request to `https://localhost:5001`. You will see something like this:
 
-![](./hello-world-get.png)
+![](./assets/hello-world-get.png)
 
 If we peek at the `Header` tab you will see the `Content-Type` is `text/plain`.
 This is because our API method is just returning a simple string, which dotnet

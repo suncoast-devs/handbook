@@ -1,5 +1,5 @@
 ---
-title: Intro to OAuth
+title: Introduction to OAuth
 ---
 
 This lecture aims at giving a basic overview of authentication and

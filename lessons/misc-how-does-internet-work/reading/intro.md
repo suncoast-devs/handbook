@@ -1,5 +1,3 @@
-import CodePen from '@handbook/CodePen'
-
 # How does the web work
 
 ## Domains and Hosts
@@ -37,8 +35,14 @@ import CodePen from '@handbook/CodePen'
 
 - What happens after our computer resolves the address of a server?
   - Connect to a `service` over a `socket`
-    - A service is something like 'http' or 'https', or email via 'pop3' or 'smtp', or our `postgres` database
-    - The socket determines which `port number` to connect to. Each service dedicates a specific port number to listen on. Think of the `ip` as the address of a building and the `port number` as the apartment number or the office number. Port numbers for services can be between 1 and 65535, but are typically less than 1024. For instance `http` is `80` while `https` is `443`.
+    - A service is something like 'http' or 'https', or email via 'pop3' or
+      'smtp', or our `postgres` database
+    - The socket determines which `port number` to connect to. Each service
+      dedicates a specific port number to listen on. Think of the `ip` as the
+      address of a building and the `port number` as the apartment number or the
+      office number. Port numbers for services can be between 1 and 65535, but
+      are typically less than 1024. For instance `http` is `80` while `https` is
+      `443`.
   - What service are we talking about (web, email, etc)
   - How does the server know? PORTS
   - Unencrypted web is port 80
@@ -71,16 +75,12 @@ import CodePen from '@handbook/CodePen'
   - https://http.cat
 - What are other HTTP headers?
 
-  - `Date`
-    _Timestamp on Server_
-  - `Content-Type`
-    _How should this content be interpreted_
-  - `Content-Length`
-    _How long is this content in bytes_
-  - `Last-Modified`
-    _When was this content last modified_
-  - `ETag`
-    _A checksum of the content, would be the same value for the same content_
+  - `Date` _Timestamp on Server_
+  - `Content-Type` _How should this content be interpreted_
+  - `Content-Length` _How long is this content in bytes_
+  - `Last-Modified` _When was this content last modified_
+  - `ETag` _A checksum of the content, would be the same value for the same
+    content_
 
 - Other tools
   - `curl`

@@ -1,14 +1,18 @@
-# Refactors
+---
+title: Refactors
+---
 
 In this section we will refactor the code for these improvements:
 
-- Synchronous versus Asynchronous handling of requests. (Yes, our old friends async and await are coming back!)
+- Synchronous versus Asynchronous handling of requests. (Yes, our old friends
+  async and await are coming back!)
 - Refactoring common code
 - Optimizing the `Update` method
 
 ## Common Code
 
-We have repeated the finding of a single `Game` in multiple places. So lets extract that to a single method:
+We have repeated the finding of a single `Game` in multiple places. So lets
+extract that to a single method:
 
 ```C#
 // Find a Game with the given id, return null if not found
@@ -18,15 +22,20 @@ protected Game FindGameById(int id)
 }
 ```
 
-Then in all the places where we were calling `FirstOrDefault` we can change to use our new method. This code would be `var foundGame = await FindGameById(id);`
+Then in all the places where we were calling `FirstOrDefault` we can change to
+use our new method. This code would be `var foundGame = await FindGameById(id);`
 
 This change can be made in all of the functions that use this patter.
 
 ## Updating the Update method
 
-The current `Update` method has to find the existing record in the database and then copy in new properties. Since we send all the properties anyway we could also require the `id` property and thus we will always have all the fields. This means that we could just use this object to save to the database.
+The current `Update` method has to find the existing record in the database and
+then copy in new properties. Since we send all the properties anyway we could
+also require the `id` property and thus we will always have all the fields. This
+means that we could just use this object to save to the database.
 
-We also add an extra check that the `id` in the URL matches the `Id` in the object we parse from the body.
+We also add an extra check that the `id` in the URL matches the `Id` in the
+object we parse from the body.
 
 The resulting code is:
 
@@ -78,9 +87,14 @@ public ActionResult<Game> Update(int id, Game gameToUpdate)
 
 ## Async versus sync - optimizing our code
 
-The code in our methods accesses the database at least once, and perhaps more than once. Each of these database accesses can be relatively slow. Also the `GetAll` method would require us to fetch all the `Game` entries before we started processing them.
+The code in our methods accesses the database at least once, and perhaps more
+than once. Each of these database accesses can be relatively slow. Also the
+`GetAll` method would require us to fetch all the `Game` entries before we
+started processing them.
 
-With only one user accessing our code we would not see an impact for these synchronous calls. However, when we start adding more users we may start to see some requests _queueing_ and waiting. Luckily this is an easy thing to fix.
+With only one user accessing our code we would not see an impact for these
+synchronous calls. However, when we start adding more users we may start to see
+some requests _queueing_ and waiting. Luckily this is an easy thing to fix.
 
 Let's look at `GetAll`
 
@@ -92,7 +106,8 @@ public ActionResult<IEnumerable<Game>> GetAll()
 }
 ```
 
-The first thing we will do is extract out a variable to store the games and we will make a call to `ToList`
+The first thing we will do is extract out a variable to store the games and we
+will make a call to `ToList`
 
 ```C#
 [HttpGet]
@@ -107,7 +122,8 @@ public ActionResult<IEnumerable<Game>> GetAll()
 To make this asynchronous we do a few steps:
 
 1. Add `async` to the method definition
-2. Wrap the result in a `Task<>` to allow the code that calls our controller to wait on the data.
+2. Wrap the result in a `Task<>` to allow the code that calls our controller to
+   wait on the data.
 3. Use `await` and `ToListAsync` to the implementation.
 
 ```C#
@@ -120,9 +136,12 @@ public async Task<ActionResult<IEnumerable<Game>>> GetAll()
 }
 ```
 
-This code allows the system to process multiple requests while some of the complex actions such as fetching data from the database to happen in the background.
+This code allows the system to process multiple requests while some of the
+complex actions such as fetching data from the database to happen in the
+background.
 
-The same changes are made to other methods, including changing `SaveChanges` to `SaveChangesAsync` and `FirstOrDefault` to `FirstOrDefaultAsync`.
+The same changes are made to other methods, including changing `SaveChanges` to
+`SaveChangesAsync` and `FirstOrDefault` to `FirstOrDefaultAsync`.
 
 ## Optimized code
 

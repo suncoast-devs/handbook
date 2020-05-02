@@ -1,10 +1,17 @@
-# Full Database + API GameNight application
+---
+title: Full Database + API GameNight application
+---
 
-In this section we will expand on our previous code to build a complete Database + API application. Quite a lot of the previous code will be used here since managing a `List<>` is very similar to managing a `DbSet` from EF Core thanks to LINQ.
+In this section we will expand on our previous code to build a complete
+Database + API application. Quite a lot of the previous code will be used here
+since managing a `List<>` is very similar to managing a `DbSet` from EF Core
+thanks to LINQ.
 
-If you have not yet followed the LESSON ON SQL, LESSON ON SQL JOINS, and the LESSON ON EF CORE we suggest you study that lesson
+If you have not yet followed the LESSON ON SQL, LESSON ON SQL JOINS, and the
+LESSON ON EF CORE we suggest you study that lesson
 
-For this application we are going to use a new template. This template should have been added to your environment in LESSON ON COMPUTER SETUP.
+For this application we are going to use a new template. This template should
+have been added to your environment in LESSON ON COMPUTER SETUP.
 
 ## Generating an app with API and database support
 
@@ -12,11 +19,13 @@ For this application we are going to use a new template. This template should ha
 dotnet new sdg-api -o GameDatabaseAPI
 ```
 
-This will create a folder `GameDatabaseAPI` with a template of an application that will connect to a database as well as support API controllers.
+This will create a folder `GameDatabaseAPI` with a template of an application
+that will connect to a database as well as support API controllers.
 
 ## First step, create a _model_ to represent our `Game`
 
-From our previous work we have this POCO and we defined it right in our controller class.
+From our previous work we have this POCO and we defined it right in our
+controller class.
 
 ```C#
 public class Game
@@ -31,11 +40,15 @@ public class Game
 }
 ```
 
-Now we are going to place all of these database model files in their own directory. Open the `Models` folder and add a file `Game.cs` and place that code inside. This is where we are going to keep our database model files.
+Now we are going to place all of these database model files in their own
+directory. Open the `Models` folder and add a file `Game.cs` and place that code
+inside. This is where we are going to keep our database model files.
 
 ## Second step, inform our `DatabaseContext` of this model
 
-In our LESSON ON EF CORE we didn't have a separate file for our `DatabaseContext` however in most apps it lives in it's own file and you will find it in the `Models` folder here as well.
+In our LESSON ON EF CORE we didn't have a separate file for our
+`DatabaseContext` however in most apps it lives in it's own file and you will
+find it in the `Models` folder here as well.
 
 After this code:
 
@@ -44,7 +57,8 @@ public partial class DatabaseContext : DbContext
 {
 ```
 
-add this statement to let the `DatabaseContext` know we want to track `Game` in a `Games` table:
+add this statement to let the `DatabaseContext` know we want to track `Game` in
+a `Games` table:
 
 ```C#
 public partial class DatabaseContext : DbContext
@@ -54,7 +68,9 @@ public partial class DatabaseContext : DbContext
 
 ## Next up: generate a migration
 
-> NOTE: Any time we change the **properties** of a _model_ **OR** we create a **new** model we must generate a _Database Migration_ and _update_ our database.
+> NOTE: Any time we change the **properties** of a _model_ **OR** we create a
+> **new** model we must generate a _Database Migration_ and _update_ our
+> database.
 
 Since we just added a new model we need to create a migration
 
@@ -62,11 +78,15 @@ Since we just added a new model we need to create a migration
 dotnet ef migrations add AddGames
 ```
 
-> NOTE: The name of our migration should attempt to capture the database structure change we are making. In this case we are `Add`ing the `Games` table.
+> NOTE: The name of our migration should attempt to capture the database
+> structure change we are making. In this case we are `Add`ing the `Games`
+> table.
 
 ## Next up: ensure your migration is good
 
-You should have at least two new files in `Migrations`, one ending in `_AddGames.cs`. Open that file and ensure the `Up` method has the expected results:
+You should have at least two new files in `Migrations`, one ending in
+`_AddGames.cs`. Open that file and ensure the `Up` method has the expected
+results:
 
 ```C#
 protected override void Up(MigrationBuilder migrationBuilder)
@@ -91,7 +111,11 @@ protected override void Up(MigrationBuilder migrationBuilder)
 }
 ```
 
-> NOTE: It is important to inspect your migration files after running `dotnet ef migrations add` because we are about to change the structure of our database. It also helps to ensure we don't collect _empty_ migrations which will happen if we run `dotnet ef migrations add` when there is no change, or if there are other errors in our code.
+> NOTE: It is important to inspect your migration files after running
+> `dotnet ef migrations add` because we are about to change the structure of our
+> database. It also helps to ensure we don't collect _empty_ migrations which
+> will happen if we run `dotnet ef migrations add` when there is no change, or
+> if there are other errors in our code.
 
 ## Update the database with this migration change
 
@@ -103,9 +127,12 @@ dotnet ef database update
 
 ## Define our API controller
 
-Since we already created a controller file in our previous code we are going to copy over that code and then review the changes we need to make so that we are properly using EF Core.
+Since we already created a controller file in our previous code we are going to
+copy over that code and then review the changes we need to make so that we are
+properly using EF Core.
 
-We will create these imports and the namespace before copying over our `class GamesController`
+We will create these imports and the namespace before copying over our
+`class GamesController`
 
 ```C#
 using System.Collections.Generic;
@@ -117,7 +144,12 @@ namespace GameDatabaseAPI.Controllers
 }
 ```
 
-The first major change to our `GamesController` is that we will need a reference to our database context. We are going to use the database context for all the access to our `Games` model. In OUR LESSON ON EF CORE we created that context ourselves. However, in an API application the system creates the context for us and **provides** it to us when a controller is _instantiated_ for each request. Thus we need a `constructor` method like this:
+The first major change to our `GamesController` is that we will need a reference
+to our database context. We are going to use the database context for all the
+access to our `Games` model. In OUR LESSON ON EF CORE we created that context
+ourselves. However, in an API application the system creates the context for us
+and **provides** it to us when a controller is _instantiated_ for each request.
+Thus we need a `constructor` method like this:
 
 ```C#
 private readonly DatabaseContext _context;
@@ -128,9 +160,13 @@ public GamesController(DatabaseContext context)
 }
 ```
 
-This constructor takes the database context as an argument and saves a _reference_ to it in the `_context` variable. That variable is `private` so no other class can access it and `readonly` since we don't want to change it once we have our reference to it.
+This constructor takes the database context as an argument and saves a
+_reference_ to it in the `_context` variable. That variable is `private` so no
+other class can access it and `readonly` since we don't want to change it once
+we have our reference to it.
 
-Next up we remove the `List<Game>` and `int NextID` since our database context will take care of all of that.
+Next up we remove the `List<Game>` and `int NextID` since our database context
+will take care of all of that.
 
 ## Modifications to use the database context
 
@@ -176,7 +212,8 @@ var game = _context.Games.FirstOrDefault(game => game.Id == id);
 
 ### Create
 
-The first thing we do is remove the code for `NextId` and `GameList.Add` and replace them with:
+The first thing we do is remove the code for `NextId` and `GameList.Add` and
+replace them with:
 
 ```C#
 _context.Games.Add(gameToCreate);
@@ -185,9 +222,13 @@ _context.SaveChanges();
 
 ### Update
 
-We change this line `var foundGame = GameList.FirstOrDefault(game => game.Id == id);` to `var foundGame = _context.Games.FirstOrDefault(game => game.Id == id);` to find the existing game from the database.
+We change this line
+`var foundGame = GameList.FirstOrDefault(game => game.Id == id);` to
+`var foundGame = _context.Games.FirstOrDefault(game => game.Id == id);` to find
+the existing game from the database.
 
-Then before we can return our `Ok(foundGame)` we must tell the database this object has changed:
+Then before we can return our `Ok(foundGame)` we must tell the database this
+object has changed:
 
 ```C#
 _context.Entry(foundGame).State = EntityState.Modified;
@@ -201,9 +242,12 @@ _context.SaveChanges();
 
 ### Delete
 
-We change this line `var foundGame = GameList.FirstOrDefault(game => game.Id == id);` to `var foundGame = _context.Games.FirstOrDefault(game => game.Id == id);`
+We change this line
+`var foundGame = GameList.FirstOrDefault(game => game.Id == id);` to
+`var foundGame = _context.Games.FirstOrDefault(game => game.Id == id);`
 
-And we change `Games.Remove(foundGame)` to `_context.Games.Remove(foundGame);` and follow it with `_context.SaveChanges();`
+And we change `Games.Remove(foundGame)` to `_context.Games.Remove(foundGame);`
+and follow it with `_context.SaveChanges();`
 
 ## Final code
 
@@ -398,14 +442,21 @@ namespace GameDatabaseAPI.Controllers
 
 ## Run the app and work with the API
 
-That wasn't too many changes to convert from managing our list of games in a `List<>` to now fully managing them in a database. We even retain our list of games when we shut down our application since our data is _persisted_ in our local database!
+That wasn't too many changes to convert from managing our list of games in a
+`List<>` to now fully managing them in a database. We even retain our list of
+games when we shut down our application since our data is _persisted_ in our
+local database!
 
-Just like before, try running the app with `dotnet watch run` and send it some API requests. Create some games, fetch single games, update games, and delete some games.
+Just like before, try running the app with `dotnet watch run` and send it some
+API requests. Create some games, fetch single games, update games, and delete
+some games.
 
 ## Optimizations
 
-There are some things in this code we could improve. In the next section we'll talk about:
+There are some things in this code we could improve. In the next section we'll
+talk about:
 
-- Synchronous versus Asynchronous handling of requests. (Yes, our old friends async and await are coming back!)
+- Synchronous versus Asynchronous handling of requests. (Yes, our old friends
+  async and await are coming back!)
 - Refactoring common code
 - Optimizing the `Update` method
