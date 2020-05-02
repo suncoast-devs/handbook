@@ -1,19 +1,16 @@
-import CodePen from '@handbook/CodePen'
+---
+title: Intro to OAuth
+---
 
-# Intro to OAuth
-
-This lecture aims at giving a basic overview of authentication and authorization. This covers token based authentication and serves as the students first look into the aspects of user authentication. This lessons focuses on OAuth 2.
-
-## Learning Objectives
-
-- be able to describe authentication
-- be able to describe authorization
-- understand the OAuth work flow
-- Read and understand client side code that uses OAuth
+This lecture aims at giving a basic overview of authentication and
+authorization. This covers token based authentication and serves as the students
+first look into the aspects of user authentication. This lessons focuses on
+OAuth 2.
 
 ## Recommended Previous Knowledge
 
-This lecture should be given toward the later part of `unit-iii - full stack fundamentals`.
+This lecture should be given toward the later part of
+`unit-iii - full stack fundamentals`.
 
 ## Slides
 
@@ -58,4 +55,5 @@ https://slides.com/markdewey-1/authenticationandauthorization#/
 
 ## Next Lectures
 
-- This should be towards the end of full stack fundamentals, so the next lecture should be more practice, with possibly adding auth to an existing app
+- This should be towards the end of full stack fundamentals, so the next lecture
+  should be more practice, with possibly adding auth to an existing app

@@ -1,4 +1,6 @@
-# Additional resources for the students
+---
+title: Additional Resources
+---
 
 - The [formal definition](https://json.org) of the JSON format
 - A tool to [cleanup and format](https://jsonlint.com) JSON data.
