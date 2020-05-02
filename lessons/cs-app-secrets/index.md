@@ -1,11 +1,7 @@
-# Introduction goes here
+---
+title: Application Secrets
+---
 
-[Learning Objectives](./objectives)
-
-[Begin your Reading](./reading/intro)
-
-[Additional Resources](./resources)
-
-[Lecture](./lecture)
-
-[Assignments](./assignments)
+When developing, there are sometimes values we do not to keep in source control
+(git). These values include things like api keys, connection strings, api
+secrets and other sever configarations.
