@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: `/hanbook`,
   plugins: [
     {
       resolve: `gatsby-plugin-mdx`,
