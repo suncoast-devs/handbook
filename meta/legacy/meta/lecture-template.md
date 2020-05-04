@@ -11,6 +11,14 @@ The elevator pitch for the lecture
 
 This is what concepts the student should be familiar with in order to benefit from this lecture.
 
+## Stand up
+
+question each person will answer to get started
+
+## Warm up
+
+Any warms for the day
+
 ## Slides
 
 (optional) Any slide show that goes along with this lecture

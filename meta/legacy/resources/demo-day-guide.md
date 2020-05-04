@@ -22,10 +22,20 @@ Demo day attracts people from all over the tech community. From project managers
 
 Have answers for the following questions:
 
-- What is, was the hardest part of the project? How did you get past that?
-- What is your tech stack?
-- What is your next feature?
 - What is your favorite line of code?
+- What is a challenge you ran into and how did you overcome it?
+- What is your tech stack?
+- Did you know anything coming into SDG? Since progressing what skill sets allowed you to build out your project?
+- How did you handle the pressure of building the final project? Particularly remote?
+- What is something you learned doing this project that you didn’t necessarily expect you would?
+- What customer need did you hope to solve with your project and how did you go about solving that challenge(s)?
+- Did you have to make any hard choices or compromises during the project?
+- Did your project influence the types of jobs you’re looking for post-SDG? (Ie type of technology you want to work on / remote vs in person, etc.)
+- What advice do you have for someone considering doing SDG?
+- What was your most powerful learning from being part of SDG for the last few months?
+- If you were to keep going on this project, what would be the next feature would you add?
+
+- How did you have to rethink mobile/small screens for the UI/UX?
 
 ## Quick tips
 
