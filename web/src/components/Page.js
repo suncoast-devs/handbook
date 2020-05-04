@@ -16,6 +16,7 @@ export default function PageTemplate({
 }) {
   return (
     <Layout title={mdx.frontmatter.title}>
+      {/* TODO: Make this panel nav responsive */}
       <div className="bg-white overflow-hidden shadow rounded-lg float-right max-w-sm w-full ml-6 mb-6">
         <div className="border-b bg-gray-50 border-gray-200 py-2 px-5 flex items-center justify-between">
           <h4 className="font-bold">Reading</h4>

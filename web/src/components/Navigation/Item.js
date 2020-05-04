@@ -2,6 +2,7 @@ import React from 'react'
 import { navigate } from 'gatsby-link'
 import { useUIContext } from '../UIContext'
 
+// TODO: Use <Link> and `activeClassName instead of styling the li.
 export function Item({ children, onClick }) {
   return (
     <li
