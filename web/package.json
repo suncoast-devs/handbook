@@ -34,9 +34,9 @@
   },
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "start": "gatsby develop",
+    "start": "gatsby develop --prefix-paths",
     "serve": "gatsby serve",
     "clean": "gatsby clean"
   }

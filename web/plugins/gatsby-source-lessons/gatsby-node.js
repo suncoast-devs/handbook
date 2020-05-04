@@ -46,6 +46,8 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     node.internal.type === 'Mdx' &&
     /handbook\/lessons/.test(node.fileAbsolutePath)
   ) {
+    console.log('CREATING FIELDS ON A NODE')
+
     // Add `slug` and `path` fields to lesson MDX files for URL generation
     const subPath = createFilePath({ node, getNode, trailingSlash: false })
     createNodeField({ name: 'path', node, value: `/lessons${subPath}` })
@@ -59,6 +61,12 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       index: /^\/[\w-]+$/,
     }).find(([k, v]) => v.test(subPath)) || [])[0]
     createNodeField({ name: 'type', node, value: type })
+  } else {
+    console.log(
+      'NOT CREATING FIELD ON NODE',
+      node.internal.type,
+      node.fileAbsolutePath
+    )
   }
 }
 
