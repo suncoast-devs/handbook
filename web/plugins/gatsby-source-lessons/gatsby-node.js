@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "//lessons//" } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "/\\\\/lessons\\\\//" } }) {
         nodes {
           id
           fields {
