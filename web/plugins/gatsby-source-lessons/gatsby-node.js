@@ -44,7 +44,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
   if (
     node.internal.type === 'Mdx' &&
-    /handbook\/lessons/.test(node.fileAbsolutePath)
+    /\/lessons\//.test(node.fileAbsolutePath)
   ) {
     // Add `slug` and `path` fields to lesson MDX files for URL generation
     const subPath = createFilePath({ node, getNode, trailingSlash: false })
@@ -66,7 +66,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/handbook/lessons/" } }) {
+      allMdx(filter: { fileAbsolutePath: { regex: "//lessons//" } }) {
         nodes {
           id
           fields {
