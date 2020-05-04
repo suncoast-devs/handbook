@@ -1,6 +1,6 @@
 # High level course schedule
 
-The course is broken in 3 units, each with chapters. These chapters _roughly_ correspond to weeks. The schedule might change at the discretion of the intsructor to better suit the needs of the class.
+The course is broken in 3 units, each with chapters. These chapters _roughly_ correspond to weeks.
 
 # unit i - fundamentals
 
@@ -83,15 +83,87 @@ The course is broken in 3 units, each with chapters. These chapters _roughly_ co
 
 # Topic breakdown per week
 
-Week 1:
-Week 2:
-Week 3:
-Week 4:
-Week 5:
-Week 6:
-Week 7:
-Week 8:
-Week 9:
-Week 10:
-Week 11:
-Week 12:
+This is a rough weekly schedule of topics. The schedule might change at the discretion of the intsructor to better suit the needs of the class.
+
+## Week 1:
+
+- What is a program
+- What is an algorithm
+- Variables
+- Reading and Writing to STND IN/OUT
+- Booleans logic
+- Looping
+- Lists/Arrays
+- Classes
+- Methods
+
+## Week 2:
+
+- LINQ
+- CRUD of information
+- Basic OOP principles
+- Using files to store data(CSV or JSON)
+
+## Week 3:
+
+- SQL basics
+- SQL Joins
+- EF Core
+
+## Week 4:
+
+- What is an API
+- using an APOI
+- building a ASP.NET Core Web Api
+- Creating Controllers
+- Using a database in an API
+- Docker and deployment
+
+## Week 5:
+
+- What is a website
+- HTML (HTML5)
+- Semantic HTML
+- CSS (CSS3)
+- Flexbox
+- CSS Grid
+- Deploying to and using a CDN (Netlify)
+
+## Week 6:
+
+- What is JavaScript
+- The basic of JS
+- Vanilla JS
+- Intro to React,
+- React Class Components
+- React Props
+- React State
+
+## Week 7:
+
+- Hooks
+- useState
+- useEffect
+- Calling APIs from JavaScript
+
+## Week 8:
+
+- Building a full stack app
+
+## Week 9:
+
+- Adding Users
+- useContext
+- useReducer
+
+## Week 10
+
+- Capstone
+
+## Week 11
+
+- Capstone
+
+## Week 12
+
+- Demo Day
