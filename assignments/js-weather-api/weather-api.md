@@ -37,3 +37,4 @@ Using a popular weather API, Create a web site that allows a user to search for 
 
 - [ ] Add a type a head using Google Places API
 - [ ] Head back to Blackjack and use [this as your API](https://deckofcardsapi.com/).
+- [ ] Instead of localstorage, Store the user searches results in an Custom Built API
