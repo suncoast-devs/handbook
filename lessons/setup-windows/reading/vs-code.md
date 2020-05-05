@@ -1,8 +1,14 @@
-# Visual Studio Code
+---
+title: Visual Studio Code
+---
 
-Developers can be fiercely opinionated about which code editing environment is better. Here at SDG, we require using Visual Studio Code.
+Developers can be fiercely opinionated about which code editing environment is
+better. Here at SDG, we require using Visual Studio Code.
 
-VS Code is a extendable lightweight editor that allows us to see what is going on so if you ever get the more powerful tools (like Visual Studio or Eclipse). It will not be a crutch, but a tool. This is like starting with a screwdriver, and working our way up to power drill.
+VS Code is a extendable lightweight editor that allows us to see what is going
+on so if you ever get the more powerful tools (like Visual Studio or Eclipse).
+It will not be a crutch, but a tool. This is like starting with a screwdriver,
+and working our way up to power drill.
 
 ## Installation (via Scoop)
 
@@ -12,9 +18,11 @@ scoop install vscode
 
 ## Installation
 
-After [downloading VS Code](https://code.visualstudio.com/Download), double-click the EXE file to run the installation process.
+After [downloading VS Code](https://code.visualstudio.com/Download),
+double-click the EXE file to run the installation process.
 
-During the installation process accept the default options. You can choose to un-check the option to launch Visual Studio Code at the end of the process.
+During the installation process accept the default options. You can choose to
+un-check the option to launch Visual Studio Code at the end of the process.
 
 <!-- _First time setup instructions for Mac_
 
@@ -25,7 +33,10 @@ During the installation process accept the default options. You can choose to un
 
 ## Enable Extensions
 
-VS Code has a large number of optional extensions that increase the capabilities of the editor. We have chosen a few that we feel improve the workflow during the course. We recommend running the following commands to install these extensions into your Visual Studio Code
+VS Code has a large number of optional extensions that increase the capabilities
+of the editor. We have chosen a few that we feel improve the workflow during the
+course. We recommend running the following commands to install these extensions
+into your Visual Studio Code
 
 ### General Extensions:
 
@@ -82,7 +93,8 @@ Within VS Code go to the `File` menu, then `Preferences`, then `Settings`
 
 ## Configure proper spacing.
 
-In VS Code Use `Control Shift P` to launch the command palette and Type `Open Settings JSON` and select the first match found.
+In VS Code Use `Control Shift P` to launch the command palette and Type
+`Open Settings JSON` and select the first match found.
 
 This will open an editor window.
 
@@ -97,10 +109,12 @@ At the top of the file and just after the first `{` paste the following:
 
 ## Additional Tips and Tricks
 
-In VS Code Use `Control Shift P` to launch the command palette and Type `Configure User Snippets`
+In VS Code Use `Control Shift P` to launch the command palette and Type
+`Configure User Snippets`
 
 - Look for the `csharp` option and select it.
-- Copy the following below and paste underneath the commented section within the `{}`.
+- Copy the following below and paste underneath the commented section within the
+  `{}`.
 
 ```json
 "Print to console": {
@@ -121,4 +135,5 @@ In VS Code Use `Control Shift P` to launch the command palette and Type `Configu
 }
 ```
 
-- This allows you to more efficiently create `Console.WriteLine($" ");` and `Console.ReadLine().ToLower();`
+- This allows you to more efficiently create `Console.WriteLine($" ");` and
+  `Console.ReadLine().ToLower();`

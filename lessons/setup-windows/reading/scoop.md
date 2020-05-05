@@ -1,6 +1,11 @@
-# Scoop
+---
+title: Scoop
+---
 
-Scoop is a tool to automatically install programs via the command line. This simplifies the process of installing many of the tools we need by avoiding the steps of visiting the website, downloading the installer and then running the installer.
+Scoop is a tool to automatically install programs via the command line. This
+simplifies the process of installing many of the tools we need by avoiding the
+steps of visiting the website, downloading the installer and then running the
+installer.
 
 ## Installing
 
