@@ -13,15 +13,15 @@ will become familiar with the commands and options.
 
 First, make sure you have a [GitHub](http://github.com/) account.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
-scoop install git
+brew install git
 ```
 
 ## Post Installation Steps
 
-After the installation, re-open Powershell. We need to run a few commands to
+After the installation, re-open Terminal. We need to run a few commands to
 configuration git correctly.
 
 ### Tell Git your Name

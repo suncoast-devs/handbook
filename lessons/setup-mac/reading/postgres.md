@@ -6,46 +6,18 @@ The database engine we will be using for our back-end work.
 
 ## Installation
 
-Start a PowerShell and run:
+Start a Terminal and run:
 
 ```sh
-scoop install postgresql
-```
-
-Close that PowerShell
-
----
-
-Start a PowerShell as Administrator
-
-```sh
-pg_ctl register -N PostgreSQL
-```
-
-Close that PowerShell
-
----
-
-Reboot your computer
-
----
-
-Start a new regular PowerShell
-
-```sh
-createuser -U postgres --superuser $USER
+brew install postgresql
 ```
 
 ```sh
-scoop install python
+brew services start postgresql
 ```
 
 ```sh
-pip install https://download.lfd.uci.edu/pythonlibs/s2jqpv5t/setproctitle-1.1.10-cp38-cp38-win_amd64.whl
-```
-
-```sh
-pip install pgcli
+brew install pgcli
 ```
 
 <!--
@@ -63,7 +35,7 @@ sed -i "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
 
 ## Test if it is working:
 
-From PowerShell:
+From Terminal:
 
 ```sh
 createdb MyTestDatabase

@@ -11,5 +11,5 @@ require, or are written in, JavaScript with node.
 ## Installation
 
 ```sh
-scoop install nodejs
+brew install nodejs
 ```
