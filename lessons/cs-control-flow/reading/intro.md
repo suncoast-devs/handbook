@@ -1,6 +1,10 @@
-# Control Flow
+---
+title: Control Flow
+---
 
-If we just write lines of code one after another in our code we would have no way to make decisions and take different paths in our code. To allow us this flexibility we have the idea of `flow control` statements.
+If we just write lines of code one after another in our code we would have no
+way to make decisions and take different paths in our code. To allow us this
+flexibility we have the idea of `flow control` statements.
 
 The first and more simple of these is the `if` statement.
 
@@ -25,11 +29,13 @@ else {
 }
 ```
 
-The part `someBooleanCondition` can be a `bool`ean variable or a condition that evaluates to a boolean value.
+The part `someBooleanCondition` can be a `bool`ean variable or a condition that
+evaluates to a boolean value.
 
 ## Boolean Conditions
 
-Here are some examples of statements that result in a boolean value. As you can see we can compare strings to other strings, and numbers to other numbers.
+Here are some examples of statements that result in a boolean value. As you can
+see we can compare strings to other strings, and numbers to other numbers.
 
 | Kind                  | Example          |
 | --------------------- | ---------------- |
@@ -52,9 +58,11 @@ if (name == "Paul") {
 
 ## Boolean Or, Boolean And
 
-We can combine two conditions using a boolean _or_ and a boolean _and_. In `C#` we write an _or_ as `||` with _and_ being `&&`
+We can combine two conditions using a boolean _or_ and a boolean _and_. In `C#`
+we write an _or_ as `||` with _and_ being `&&`
 
-So if we wanted a condition that is true if the score is lower than `20` **OR** greater than `90`:
+So if we wanted a condition that is true if the score is lower than `20` **OR**
+greater than `90`:
 
 ```C#
 if (score < 20 || score > 90) {
@@ -62,7 +70,8 @@ if (score < 20 || score > 90) {
 }
 ```
 
-What if we wanted a condition that is true if the person is named `Paul` **AND** the score is more than `85`:
+What if we wanted a condition that is true if the person is named `Paul` **AND**
+the score is more than `85`:
 
 ```C#
 if (name == "Paul" && score > 85) {
@@ -70,9 +79,12 @@ if (name == "Paul" && score > 85) {
 }
 ```
 
-As you can see we can have conditions on different types together. This is because _each part_ of the boolean statement results in a boolean and then these are combined.
+As you can see we can have conditions on different types together. This is
+because _each part_ of the boolean statement results in a boolean and then these
+are combined.
 
-The following `truth tables` show the various combinations of `true` and `false` values and how they combine for `&&` (and) as well as `||` (or):
+The following `truth tables` show the various combinations of `true` and `false`
+values and how they combine for `&&` (and) as well as `||` (or):
 
 ### A && B
 
@@ -110,7 +122,8 @@ if (name == "Paul") {
 
 ## Cleaning up a long sequence of if/else
 
-When we find ourselves comparing the same variable to a sequence of values we can use another kind of control flow known as a `switch` statement.
+When we find ourselves comparing the same variable to a sequence of values we
+can use another kind of control flow known as a `switch` statement.
 
 ```C#
 switch (name)
@@ -134,13 +147,17 @@ The `switch` statement is a cleaner way of writing this type of control flow.
 
 ## Repeating code
 
-So far all of the control flow we've seen keeps our code processing line-by-line and proceeding to the end of the code. What if we want to repeat some code?
+So far all of the control flow we've seen keeps our code processing line-by-line
+and proceeding to the end of the code. What if we want to repeat some code?
 
-This is where a _loop_ style control flow helps us. The first we will see is the `while` statement.
+This is where a _loop_ style control flow helps us. The first we will see is the
+`while` statement.
 
-The `while` statement repeats the code inside the `{ }` braces as long as the condition supplied remains true.
+The `while` statement repeats the code inside the `{ }` braces as long as the
+condition supplied remains true.
 
-Lets say we want to ask the the user their name and greet them until the user enters the text `quit`. The code would look like this:
+Lets say we want to ask the the user their name and greet them until the user
+enters the text `quit`. The code would look like this:
 
 ```C#
 Console.Write("What is your name? ");

@@ -1,28 +1,36 @@
-import CodePen from '@handbook/CodePen'
-
-# Deploying with .NET and Docker
+---
+title: Deploying with .NET and Docker
+---
 
 ## Working Sample:
 
-See a full working example at [https://github.com/mdewey/WordApi](https://github.com/mdewey/WordApi). Clone and follow along if you want!
+See a full working example at
+[https://github.com/mdewey/WordApi](https://github.com/mdewey/WordApi). Clone
+and follow along if you want!
 
 ## Learning the basics
 
 ### Welcome to Docker!
 
-Docker is a platform for developing, shipping, and running applications. Docker allows developers to run your app in an isolated and controlled environment.
+Docker is a platform for developing, shipping, and running applications. Docker
+allows developers to run your app in an isolated and controlled environment.
 
 #### Key terms
 
-- An **image** is a blueprint of how the server should run. Images are considered a snapshot of the environment the app should run in.
-- A **container** is an instance of an image. You can use an image to make many containers.
+- An **image** is a blueprint of how the server should run. Images are
+  considered a snapshot of the environment the app should run in.
+- A **container** is an instance of an image. You can use an image to make many
+  containers.
 - A **registry** is a platform to host images.
 
-We use Docker to craft an image; to create a container; to publish to a registry; to update our site with the latest code.
+We use Docker to craft an image; to create a container; to publish to a
+registry; to update our site with the latest code.
 
 Sample Docker file:
 
-This file takes our current code, builds it into a container, and then runs in a separate container. This file describes how to build an image that builds and runs our .NET Core application.
+This file takes our current code, builds it into a container, and then runs in a
+separate container. This file describes how to build an image that builds and
+runs our .NET Core application.
 
 ```dockerfile
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
@@ -54,7 +62,8 @@ To build an image, we run this command in the root of your project.
 docker build -t sdg-words-image .
 ```
 
-The above command uses Docker to build an image called `sdg-words-image` using the current directory (`.`)
+The above command uses Docker to build an image called `sdg-words-image` using
+the current directory (`.`)
 
 To run a container of this image:
 
@@ -62,19 +71,26 @@ To run a container of this image:
 docker run -p 4000:80 sdg-words-image
 ```
 
-This command runs our app in a container, using the image `sdg-words-image` that we built above, on port 4000.
+This command runs our app in a container, using the image `sdg-words-image` that
+we built above, on port 4000.
 
-Now, if you go to [https://localhost:4000/api/words](http://localhost:4000/api/words), you should see a list of words
+Now, if you go to
+[https://localhost:4000/api/words](http://localhost:4000/api/words), you should
+see a list of words
 
-Now with a basic understanding of Docker, we can use this to deploy our web apps. We are using Docker to build an image, to run a container on Heroku.
+Now with a basic understanding of Docker, we can use this to deploy our web
+apps. We are using Docker to build an image, to run a container on Heroku.
 
 ## Steps for deploying your .NET app
 
-_NOTE: this assumes the project you are deploying uses with the SDG .NET templates_
+_NOTE: this assumes the project you are deploying uses with the SDG .NET
+templates_
 
-Inside the root of your project, you will two files `deploy.sh` and `dockerfile`. These files are the key to deploying your app.
+Inside the root of your project, you will two files `deploy.sh` and
+`dockerfile`. These files are the key to deploying your app.
 
-The Docker should not have to be touched, just double check that the .dll is the same as the .dll that your app builds.
+The Docker should not have to be touched, just double check that the .dll is the
+same as the .dll that your app builds.
 
 ### Install the Heroku CLI and Docker tools
 
@@ -148,7 +164,8 @@ In your file, you should update 5 places.
 
 #### Using the Deploy script
 
-_**frequency**: only has to be done once per project to set up, run once per deployment to deploy our app_
+_**frequency**: only has to be done once per project to set up, run once per
+deployment to deploy our app_
 
 With the commands updated, we want to run `deploy.sh.
 

@@ -1,8 +1,13 @@
-## Looping
+---
+title: Looping
+---
 
-Often in programming, we need to perform a task repeatedly, or we need to process all the items in some collection. For these situations we can use the idea of `loops`.
+Often in programming, we need to perform a task repeatedly, or we need to
+process all the items in some collection. For these situations we can use the
+idea of `loops`.
 
-Let's say we want to perform some statement, or statements, `10` times. We could do this with the `while` control flow statement as follows:
+Let's say we want to perform some statement, or statements, `10` times. We could
+do this with the `while` control flow statement as follows:
 
 ```C#
 var counter = 0;
@@ -16,7 +21,8 @@ while (counter < 10) {
 
 > NOTE that `counter++` is a shortcut for `counter = counter + 1`
 
-This kind of loop is so common that we have a special syntax for it, the `for loop`. The basic structure of a for loop is:
+This kind of loop is so common that we have a special syntax for it, the
+`for loop`. The basic structure of a for loop is:
 
 ```C#
 for(INITIALIZATION; CONDITION; POST-LOOP) {
@@ -24,7 +30,8 @@ for(INITIALIZATION; CONDITION; POST-LOOP) {
 }
 ```
 
-The code that goes in the `INITIALIZATION` often initializes a variable that will be used in the `CONDITION` and the `POST-LOOP`.
+The code that goes in the `INITIALIZATION` often initializes a variable that
+will be used in the `CONDITION` and the `POST-LOOP`.
 
 ```C#
 for (var counter = 0; counter < 10; counter++) {
@@ -32,19 +39,24 @@ for (var counter = 0; counter < 10; counter++) {
 }
 ```
 
-As you can see, all the elements of the `while` loop have their own place in the `for` loop example.
+As you can see, all the elements of the `while` loop have their own place in the
+`for` loop example.
 
-Another way to read the for loop is **Start the counter at 0 and as long as the value of counter is less than 10, do the contents of the loop and then increment counter**
+Another way to read the for loop is **Start the counter at 0 and as long as the
+value of counter is less than 10, do the contents of the loop and then increment
+counter**
 
 ## Looping through an array
 
-The `for` loop is also helpful for processing all the elements of an `array` or `List`
+The `for` loop is also helpful for processing all the elements of an `array` or
+`List`
 
 ```C#
 string[] names = { "Mark", "Paula", "Sandy" , "Bill" };
 ```
 
-If we wanted to print all the individual names in the array we could write a loop like:
+If we wanted to print all the individual names in the array we could write a
+loop like:
 
 ```C#
 for (var index = 0; index < names.Length; index++) {
@@ -54,7 +66,10 @@ for (var index = 0; index < names.Length; index++) {
 }
 ```
 
-In this case we start the `index` at 0 since our array index start at `0`. And we want to keep the loop going as long as the index stays _less_ than the length of the array (again, since array indexes start at `0` and end one index _before_ the value of their length)
+In this case we start the `index` at 0 since our array index start at `0`. And
+we want to keep the loop going as long as the index stays _less_ than the length
+of the array (again, since array indexes start at `0` and end one index _before_
+the value of their length)
 
 This code works well but there is an even more succinct syntax called `foreach`
 

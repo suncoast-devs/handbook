@@ -1,4 +1,6 @@
-# Entity Relationship Diagram
+---
+title: Entity Relationship Diagram
+---
 
 When modeling our systems we need to represent real world things in a format
 that lends itself to being stored in a relational database. One of our jobs as a

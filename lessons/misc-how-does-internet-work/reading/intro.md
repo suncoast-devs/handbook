@@ -1,4 +1,6 @@
-# How does the web work
+---
+title: How does the web work
+---
 
 ## Domains and Hosts
 

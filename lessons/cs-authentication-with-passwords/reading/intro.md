@@ -1,37 +1,60 @@
-import CodePen from '@handbook/CodePen'
+---
+title: Using identity for authentication
+---
 
-# Using identity for authentication
+When dealing with users, the very concept automatically adds several layers of
+complexity. Now we need to figure out how to store users, how to authenticate
+users and how to authorize users.
 
-When dealing with users, the very concept automatically adds several layers of complexity. Now we need to figure out how to store users, how to authenticate users and how to authorize users.
-
-Because authenication is complex topic with many solutions, we discuess the theory behind how and then discuss a stragety using ASP.NET Core Identity to help manage our users.
+Because authenication is complex topic with many solutions, we discuess the
+theory behind how and then discuss a stragety using ASP.NET Core Identity to
+help manage our users.
 
 ## Theory
 
 ### Storing users
 
-To start, our system will have users. Users is another noun in our system; that means we will be using a database to store our users. We treat this as we would any other entity in our system. The only special case is how we treat passwords. **Never store passwords in plain text**. We will be storing what is called a password hash. A hash is a one-way transformation from one string to another. When the server receives the password from the client, the server will run a hashing function on the password to generate a "shadow" of the password. We can store this "shadow" of the password and use that instead. Hashed passwords are secure because in order to figure out what the password is, it would an impractical amount of time (think centuries and longer)
+To start, our system will have users. Users is another noun in our system; that
+means we will be using a database to store our users. We treat this as we would
+any other entity in our system. The only special case is how we treat passwords.
+**Never store passwords in plain text**. We will be storing what is called a
+password hash. A hash is a one-way transformation from one string to another.
+When the server receives the password from the client, the server will run a
+hashing function on the password to generate a "shadow" of the password. We can
+store this "shadow" of the password and use that instead. Hashed passwords are
+secure because in order to figure out what the password is, it would an
+impractical amount of time (think centuries and longer)
 
 ### Authentication
 
-Authentication is the next part of users that we need to look at. Authentication is the process in which we verify users are who they say they are. This typically takes the form of a username and a secret phrase (a password).
+Authentication is the next part of users that we need to look at. Authentication
+is the process in which we verify users are who they say they are. This
+typically takes the form of a username and a secret phrase (a password).
 
-Authentication happens only when a user logs into an app. There are several authentication schemas, but they are do the same thing. At a basic level, they check that the secret phrase that you provided is valid for the user you are claiming to be.
+Authentication happens only when a user logs into an app. There are several
+authentication schemas, but they are do the same thing. At a basic level, they
+check that the secret phrase that you provided is valid for the user you are
+claiming to be.
 
 ### Authorization
 
-Authorization is the process that we use to validate that user can do what they are trying to do. This will is when we are able to tell if the user is allowed to do what they are doing.
+Authorization is the process that we use to validate that user can do what they
+are trying to do. This will is when we are able to tell if the user is allowed
+to do what they are doing.
 
-In practice, authorization and authentication usually go hand in hand. Typically use the same technology to accomplish both tasks. In modern apps one such strategy is to use [json web tokens(JWT)](https://jwt.io).
+In practice, authorization and authentication usually go hand in hand. Typically
+use the same technology to accomplish both tasks. In modern apps one such
+strategy is to use [json web tokens(JWT)](https://jwt.io).
 
 ### JWT
 
-[Json web tokens(JWT)](https://jwt.io) are a open, industry standard method of transferring verifiable data between two systems. We will use JWTs as a way to validate that our users have been authenticated.
+[Json web tokens(JWT)](https://jwt.io) are a open, industry standard method of
+transferring verifiable data between two systems. We will use JWTs as a way to
+validate that our users have been authenticated.
 
 ## The code
 
-// TODO:
-Auth Controller
+// TODO: Auth Controller
 
 ```C#
 using System;

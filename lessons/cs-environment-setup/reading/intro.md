@@ -1,6 +1,9 @@
-# Setting up our computers to work on CSharp and dotnet projects
+---
+title: Setting up our computers to work on C# and dotnet projects
+---
 
-To setup our computers for CSharp and dotnet projects we need to follow the setup instructions for the following tools:
+To setup our computers for CSharp and dotnet projects we need to follow the
+setup instructions for the following tools:
 
 TODO - MAKE EACH OF THESE LINKS TO THEIR RESPECTIVE LESSON READING
 

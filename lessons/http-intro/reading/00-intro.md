@@ -1,4 +1,6 @@
-## Internet history
+---
+title: Internet history
+---
 
 Starting in the 1970 researchers were looking for ways to interconnect computers
 to share information. These computers were mostly at research and educational

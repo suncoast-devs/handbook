@@ -1,8 +1,9 @@
-import CodePen from '@handbook/CodePen'
+---
+title: typescript and react
+---
 
-# typescript and react
-
-This will be a quick walkthrough into using Typescript in a React App. This also serves as a bridge to working with a compiled language.
+This will be a quick walkthrough into using Typescript in a React App. This also
+serves as a bridge to working with a compiled language.
 
 ## Learning Objectives
 
@@ -22,7 +23,8 @@ This will be a quick walkthrough into using Typescript in a React App. This also
 
   - SuperSet of JavaScript
   - Microsoft backed, JS + C# = TS
-  - takes your ts(x) files and truly compiles and does static analysis and verification
+  - takes your ts(x) files and truly compiles and does static analysis and
+    verification
 
 * Types
 
@@ -34,8 +36,10 @@ This will be a quick walkthrough into using Typescript in a React App. This also
   - What?
     - we know that values have types, and but they are not strictly enforced
       - duck typing
-    - but in a type system, we care about the types and we can about what types are things are
-    - this will help us know not only the data we are using but also the type of data we are using
+    - but in a type system, we care about the types and we can about what types
+      are things are
+    - this will help us know not only the data we are using but also the type of
+      data we are using
     - knowing this, we can get IDE help and as well as double checking ourselves
   - How
 

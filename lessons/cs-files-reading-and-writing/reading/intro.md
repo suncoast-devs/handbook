@@ -1,18 +1,35 @@
-# Files - Reading and Writing
+---
+title: Files - Reading and Writing
+---
 
-So far we have seen how to input, manage, and output data in our programs. However, this data is only stored in the computer's memory and thus when we stop our programs all of this information is lost.
+So far we have seen how to input, manage, and output data in our programs.
+However, this data is only stored in the computer's memory and thus when we stop
+our programs all of this information is lost.
 
-It would be helpful if our programs could keep track of the information we give it so that the next time our application runs it can bring all of that back into it's memory before we interact with it.
+It would be helpful if our programs could keep track of the information we give
+it so that the next time our application runs it can bring all of that back into
+it's memory before we interact with it.
 
-There are many ways to store information and we will investigate a few during our learning. The first way we will look at is reading and writing from files.
+There are many ways to store information and we will investigate a few during
+our learning. The first way we will look at is reading and writing from files.
 
 ## A simple structure for our data - Comma Separated Values
 
-Files on our computers are nothing more than a sequence of characters (really more accurately `bytes`). This is similar to how a `string` is also just a sequence of characters.
+Files on our computers are nothing more than a sequence of characters (really
+more accurately `bytes`). This is similar to how a `string` is also just a
+sequence of characters.
 
-However, files might be significantly larger than any strings we've dealt with in the past. Additionaly, as opposed to a `string` we would want our files to store more than one element. We've seen converting information to and from `string`s with various parsing functions. Lets take that one step further as we discuss files.
+However, files might be significantly larger than any strings we've dealt with
+in the past. Additionaly, as opposed to a `string` we would want our files to
+store more than one element. We've seen converting information to and from
+`string`s with various parsing functions. Lets take that one step further as we
+discuss files.
 
-One of the most straight forward structures for storing data in a file is the CSV (Comma Separated Value) form. Perhaps you have seen this before if you have worked with spreadsheet applications such as [Excel](https://products.office.com/en-us/excel) or [Numbers](https://www.apple.com/numbers/).
+One of the most straight forward structures for storing data in a file is the
+CSV (Comma Separated Value) form. Perhaps you have seen this before if you have
+worked with spreadsheet applications such as
+[Excel](https://products.office.com/en-us/excel) or
+[Numbers](https://www.apple.com/numbers/).
 
 The structure of a simple CSV file looks similar to this:
 
@@ -21,9 +38,12 @@ The structure of a simple CSV file looks similar to this:
 "Grace Hopper",100,24000
 ```
 
-In this format you will see that we have strings of data surrounded by `"` quotes and our values are separated by commas `,` and there are multiple lines representing, in this case, employees.
+In this format you will see that we have strings of data surrounded by `"`
+quotes and our values are separated by commas `,` and there are multiple lines
+representing, in this case, employees.
 
-The CSV file also allows us to have a header row that describes the data for any human and computer reader.
+The CSV file also allows us to have a header row that describes the data for any
+human and computer reader.
 
 ```csv
 "Name","Department","Salary"
@@ -35,7 +55,11 @@ Having a header makes the structure of the contents easier to understand.
 
 ## Sample Program
 
-Before we start with integrating CSV into our application, lets look at the application we are going to work with. This code will create a new, empty, list of numbers and ask the user to enter more numbers until they type in `quit`. Study this code since next we will add the ability to _save_ the list of numbers and then load it at the start.
+Before we start with integrating CSV into our application, lets look at the
+application we are going to work with. This code will create a new, empty, list
+of numbers and ask the user to enter more numbers until they type in `quit`.
+Study this code since next we will add the ability to _save_ the list of numbers
+and then load it at the start.
 
 If you want to code-along, use this to create a new project:
 
@@ -97,39 +121,63 @@ namespace NumberTracker
 
 ## Working with CSV
 
-Luckily for us the `C#` community has written code we can reuse to help us read and write CSV files. To do so we will add a new package to our application.
+Luckily for us the `C#` community has written code we can reuse to help us read
+and write CSV files. To do so we will add a new package to our application.
 
-In the same directory as our project (in the same directory as our _Program.cs_) we can add this library to our application with this command:
+In the same directory as our project (in the same directory as our _Program.cs_)
+we can add this library to our application with this command:
 
 ```sh
 dotnet add package CsvHelper
 ```
 
-This command looks up the library `CvsHelper` in a global repository of shared code. TODO: CREATE AND LINK LESSON ON DOTNET-LIBRARIES HERE.
+This command looks up the library `CvsHelper` in a global repository of shared
+code. TODO: CREATE AND LINK LESSON ON DOTNET-LIBRARIES HERE.
 
-Once we have added this _external_ library to our application we can add a `using` line to tell our `Program.cs` we would like to have that code available to us.
+Once we have added this _external_ library to our application we can add a
+`using` line to tell our `Program.cs` we would like to have that code available
+to us.
 
 ## Adding saving logic to our sample application
 
-Let's add some code to the end of our program that will _save_ this list of numbers to a file just before it ends. This way our list of numbers will be available to us for reading when we start the application again. We'll add that feature after the saving is working.
+Let's add some code to the end of our program that will _save_ this list of
+numbers to a file just before it ends. This way our list of numbers will be
+available to us for reading when we start the application again. We'll add that
+feature after the saving is working.
 
-Before we can write to the file we have to tell the code what file we want to write to. For this we will use a new object named `StreamWriter`. The purpose of the `StreamWriter` is to accept information and send it to a destination. Since eventually we may be writing a large amount of information the `StreamWriter` can process the information from our code and into the file in a flow, like water running in a stream. We simply need to tell it where the output goes, in this case a file named `numbers.csv`
+Before we can write to the file we have to tell the code what file we want to
+write to. For this we will use a new object named `StreamWriter`. The purpose of
+the `StreamWriter` is to accept information and send it to a destination. Since
+eventually we may be writing a large amount of information the `StreamWriter`
+can process the information from our code and into the file in a flow, like
+water running in a stream. We simply need to tell it where the output goes, in
+this case a file named `numbers.csv`
 
 ```C#
 // Create a stream for writing information into a file
 var fileWriter = new StreamWriter("numbers.csv");
 ```
 
-Notice that the filename is provided as an argument to the stream. Now we have this stream setup to receive information and write it to the file. Also note that we need to add the `using System.IO;` statement to be able to use the `StreamWriter`. Visual Studio Code can automatically add that to the top of your code for you.
+Notice that the filename is provided as an argument to the stream. Now we have
+this stream setup to receive information and write it to the file. Also note
+that we need to add the `using System.IO;` statement to be able to use the
+`StreamWriter`. Visual Studio Code can automatically add that to the top of your
+code for you.
 
-Now that we have a way to send information to a file, we need some code that knows how to write in the CSV format. From the `CsvHelper` library we can use the `CsvWriter` class to do so.
+Now that we have a way to send information to a file, we need some code that
+knows how to write in the CSV format. From the `CsvHelper` library we can use
+the `CsvWriter` class to do so.
 
 ```C#
 // Create an object that can write CSV to the fileWriter
 var csvWriter = new CsvWriter(fileWriter, CultureInfo.InvariantCulture);
 ```
 
-This class takes two arguments, the first the object, in our case the `fileWriter` where the information is going, and second some information on how to format various values. This `CultureInfo.InvariantCulture` indicates that we do not want any specific formatting of strings or numbers in our file. (e.g. don't format numbers like `12000` as `12,000` or `12.000`)
+This class takes two arguments, the first the object, in our case the
+`fileWriter` where the information is going, and second some information on how
+to format various values. This `CultureInfo.InvariantCulture` indicates that we
+do not want any specific formatting of strings or numbers in our file. (e.g.
+don't format numbers like `12000` as `12,000` or `12.000`)
 
 This object processes our list of numbers.
 
@@ -138,7 +186,8 @@ This object processes our list of numbers.
 csvWriter.WriteRecords(numbers);
 ```
 
-Finally, we have to tell the `fileWriter` we are complete and to close the file, ensuring all the information is saved.
+Finally, we have to tell the `fileWriter` we are complete and to close the file,
+ensuring all the information is saved.
 
 ```C#
 // Tell the file we are done
@@ -176,7 +225,8 @@ numbers
                          ---> `numbers.csv`
 ```
 
-If the user entered a sequence of numbers: `1`, `42`, `99`, `3`, and `17` our `numbers.csv` would look like this:
+If the user entered a sequence of numbers: `1`, `42`, `99`, `3`, and `17` our
+`numbers.csv` would look like this:
 
 ```
 1
@@ -266,14 +316,16 @@ namespace NumberTracker
 
 Now lets read this information from the file at the beginning of the code.
 
-Just as we have a `StreamWriter` we also have a `StreamReader` we can use to load data.
+Just as we have a `StreamWriter` we also have a `StreamReader` we can use to
+load data.
 
 ```C#
 // Creates a stream reader to get information from our file
 var fileReader = new StreamReader("numbers.csv");
 ```
 
-And as we have a `CsvWriter` we also have a `CsvReader` we can use to read the CSV data.
+And as we have a `CsvWriter` we also have a `CsvReader` we can use to read the
+CSV data.
 
 ```C#
 // Create a CSV reader to parse the stream into CSV format
@@ -297,7 +349,8 @@ And finally close the reader
 fileReader.Close();
 ```
 
-We replace the line `var numbers = new List<int>()` with the lines above. We also add `using System.Linq` in order to use `ToList()`.
+We replace the line `var numbers = new List<int>()` with the lines above. We
+also add `using System.Linq` in order to use `ToList()`.
 
 ```C#
 using System;
@@ -380,7 +433,8 @@ Now our code is reading a file at the start, and writing it at the end.
 
 ## Handling the case where there is no file
 
-What happens if we run our code and there is no `numbers.csv` file? We will get an error!
+What happens if we run our code and there is no `numbers.csv` file? We will get
+an error!
 
 To prevent this we can add a little logic at the top of our code:
 
@@ -401,6 +455,8 @@ else
 }
 ```
 
-By using this logic we can send the `CsvReader` an empty stream if there is no file rather than throwing an exception. When reading from the empty stream, the `var numbers` list will be empty.
+By using this logic we can send the `CsvReader` an empty stream if there is no
+file rather than throwing an exception. When reading from the empty stream, the
+`var numbers` list will be empty.
 
 <!-- TODO: Add an example of CSV to and from our EmployeeDatabase -->

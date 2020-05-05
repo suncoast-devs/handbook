@@ -1,10 +1,20 @@
-# Introduction to APIs with C# and dotnet (continued)
+---
+title: Introduction to APIs with C# and dotnet (continued)
+---
 
 ## Regarding API "IDs"
 
-The `One List API` provides an endpoint (URL and VERB) for fetching a specific todo item. Let's update our table to show the todo item ID so the user can know which item to refer to.
+The `One List API` provides an endpoint (URL and VERB) for fetching a specific
+todo item. Let's update our table to show the todo item ID so the user can know
+which item to refer to.
 
-Many APIs will assign an `ID` to a specific item. By having a unique ID these elements can be identified without using a field that might change, such as `text` in our case. Many APIs will use a number that starts at `1` and continually increases, never reusing IDs for items that are deleted. Other APIs might use a long string of numbers and digits which has no obvious sequence to it. In our case we do not care what the ID represents just that it is data we can use to reference a specific item.
+Many APIs will assign an `ID` to a specific item. By having a unique ID these
+elements can be identified without using a field that might change, such as
+`text` in our case. Many APIs will use a number that starts at `1` and
+continually increases, never reusing IDs for items that are deleted. Other APIs
+might use a long string of numbers and digits which has no obvious sequence to
+it. In our case we do not care what the ID represents just that it is data we
+can use to reference a specific item.
 
 ```
  --------------------------------------------------------------------------------------------------------
@@ -18,10 +28,16 @@ Many APIs will assign an `ID` to a specific item. By having a unique ID these el
  --------------------------------------------------------------------------------------------------------
 ```
 
-First we will add a simple menu to our application. Take a moment to review the code as we will be building on it. Much of the code should be familiar but here are a few things to notice:
+First we will add a simple menu to our application. Take a moment to review the
+code as we will be building on it. Much of the code should be familiar but here
+are a few things to notice:
 
-1. We've added a `while` loop with some prompting of a user's choice and then calling a method to handle the user's choice.
-2. We've moved the code for getting a list of all the items to a method `ShowAllItems` - Notice we need to _pass_ it the `token` so we have access to it. Also notice that we have to tell the `Main` method to `await` it's completion since it is now marked `async.
+1. We've added a `while` loop with some prompting of a user's choice and then
+   calling a method to handle the user's choice.
+2. We've moved the code for getting a list of all the items to a method
+   `ShowAllItems` - Notice we need to _pass_ it the `token` so we have access to
+   it. Also notice that we have to tell the `Main` method to `await` it's
+   completion since it is now marked `async.
 3. The `client` variable is also moved into `ShowAllItems`.
 
 ```C#
@@ -134,9 +150,12 @@ namespace OneListClient
 
 ## Fetching a specific todo item
 
-Let's add a new menu item to prompt the user for a specific item ID and then fetch details about it.
+Let's add a new menu item to prompt the user for a specific item ID and then
+fetch details about it.
 
-We'll update the menu code first. Changing `Console.Write("Get (A)ll todo, or Get (O)ne todo, or (Q)uit: ");` and adding a `case` statement to our `switch`.
+We'll update the menu code first. Changing
+`Console.Write("Get (A)ll todo, or Get (O)ne todo, or (Q)uit: ");` and adding a
+`case` statement to our `switch`.
 
 ```C#
 case "O":
@@ -156,7 +175,9 @@ Then we will make a new method to handle `GetOneItem`
 static async Task GetOneItem(string token, int id)
 ```
 
-Notice that this method requires two pieces of information in order to do it's work. First it needs the list's `token`, and second it requires the _integer_ `id` of the specific item we are looking for.
+Notice that this method requires two pieces of information in order to do it's
+work. First it needs the list's `token`, and second it requires the _integer_
+`id` of the specific item we are looking for.
 
 The implementation of the method is:
 
@@ -184,17 +205,36 @@ static async Task GetOneItem(string token, int id)
 }
 ```
 
-This looks very similar to the implementation of our code for getting all the items. However, you will notice that the `url` has been updated to specify the `{id}`. This follows the [documentation](https://one-list-api.herokuapp.com) of the _endpoint_ for getting a single item. Next our `DeserializeAsync` has been modified from `<List<Item>>` to simply `<Item>`. This is because the API should only be giving us back a single item, not a `List`. Correspondingly we name the resulting variable `item` as a reminder that this is a single item and not a list. NOTE, this is only _convetion_ as we could call the variable anything we like. Finally when we create our fancy table, we do not iterate since we only have the single `item` variable to add.
+This looks very similar to the implementation of our code for getting all the
+items. However, you will notice that the `url` has been updated to specify the
+`{id}`. This follows the [documentation](https://one-list-api.herokuapp.com) of
+the _endpoint_ for getting a single item. Next our `DeserializeAsync` has been
+modified from `<List<Item>>` to simply `<Item>`. This is because the API should
+only be giving us back a single item, not a `List`. Correspondingly we name the
+resulting variable `item` as a reminder that this is a single item and not a
+list. NOTE, this is only _convetion_ as we could call the variable anything we
+like. Finally when we create our fancy table, we do not iterate since we only
+have the single `item` variable to add.
 
-> Astute readers will notice that there is some repetition starting in the code. Specifically the `var client` and `https://one-list-api-herokuapp.com/items` part of the URL. There is also some repetition in how we are using the table, however we are printing _MORE_ information when we display a single item than when we display all items. Later in the lesson we will **refactor** this code to improve it.
+> Astute readers will notice that there is some repetition starting in the code.
+> Specifically the `var client` and `https://one-list-api-herokuapp.com/items`
+> part of the URL. There is also some repetition in how we are using the table,
+> however we are printing _MORE_ information when we display a single item than
+> when we display all items. Later in the lesson we will **refactor** this code
+> to improve it.
 
-> NOTE: As it pertains to refactoring code, we typically want to wait for a "rule of threes" when looking for repetitive code. A pattern repeated twice might not yet inspire us to refactor the code to clean it up. When we see the same pattern repeated a third time we should start to note these similarities and look for an opportunity to simplify the code.
+> NOTE: As it pertains to refactoring code, we typically want to wait for a
+> "rule of threes" when looking for repetitive code. A pattern repeated twice
+> might not yet inspire us to refactor the code to clean it up. When we see the
+> same pattern repeated a third time we should start to note these similarities
+> and look for an opportunity to simplify the code.
 
 ## What if the user enters an item that doesn't exist?
 
 Go ahead and try it!
 
-What you will see is an exception printed to your terminal and the program terminates.
+What you will see is an exception printed to your terminal and the program
+terminates.
 
 ```
 Unhandled exception. System.Net.Http.HttpRequestException: Response status code does not indicate success: 404 (Not Found).
@@ -202,13 +242,21 @@ Unhandled exception. System.Net.Http.HttpRequestException: Response status code 
    at System.Net.Http.HttpClient.FinishGetStreamAsync(Task`1 getTask)
 ```
 
-Uh oh, there is one of those _not a success_ error codes. Since it is a `4xx` code it indicates that the error is ours, not the servers (otherwise it would be a `5xx` code). In this case the `404` error code means the item we were looking for does not exist. Rather than displaying an exception we should display a nicer message to our user.
+Uh oh, there is one of those _not a success_ error codes. Since it is a `4xx`
+code it indicates that the error is ours, not the servers (otherwise it would be
+a `5xx` code). In this case the `404` error code means the item we were looking
+for does not exist. Rather than displaying an exception we should display a
+nicer message to our user.
 
 In order to do this we need to take another detour.
 
 ## DETOUR: Exceptions
 
-We must _handle the exception_ that this code is causing (called _throwing\_\_.) When code we use _"throws"\_ an exception it is saying to the system "I could not do the requested process and I'm raising the white flag in defeat hoping that someone who called **me** can handle this!" We do this by wrapping the code in a special syntax called `try/catch`.
+We must _handle the exception_ that this code is causing (called _throwing\_\_.)
+When code we use _"throws"\_ an exception it is saying to the system "I could
+not do the requested process and I'm raising the white flag in defeat hoping
+that someone who called **me** can handle this!" We do this by wrapping the code
+in a special syntax called `try/catch`.
 
 ```C#
 try
@@ -221,11 +269,15 @@ catch(KindOfException)
 }
 ```
 
-In this case we want to wrap our method in code that `catch`es an `HttpRequestException` and shows the user a message.
+In this case we want to wrap our method in code that `catch`es an
+`HttpRequestException` and shows the user a message.
 
 ## Handling an item that cannot be found
 
-To handle the case where the API returns with something other than success (`2xx`), in this case a `404`, we wrap the method in a `try/catch` block. In the `catch` portion of the code we simply print the user an error message and end the method.
+To handle the case where the API returns with something other than success
+(`2xx`), in this case a `404`, we wrap the method in a `try/catch` block. In the
+`catch` portion of the code we simply print the user an error message and end
+the method.
 
 ```C#
 static async Task GetOneItem(string token, int id)
@@ -408,9 +460,12 @@ namespace OneListClient
 
 ## Creating a new element
 
-Now that we can fetch all the todo items and fetch a single item, let's create a method to make a new item.
+Now that we can fetch all the todo items and fetch a single item, let's create a
+method to make a new item.
 
-First we update our prompt: `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, or (Q)uit: ");` and add some code to our `switch` statement.
+First we update our prompt:
+`Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, or (Q)uit: ");`
+and add some code to our `switch` statement.
 
 ```C#
 case "C":
@@ -468,11 +523,24 @@ static async Task AddOneItem(string token, Item newItem)
 }
 ```
 
-Whew, this is a long method and there is a lot going on. Let's go through it line by line. First we create the `URL` we are going to send the request to. Next up we start to create the JSON body we are going to send. Since this is a `POST` endpoint we need to send the `Item` (in the variable `newItem`) as part of the body. We first _serialize_ the `Item` into a JSON. The `PostAsync` method only knows how to send `HttpContent`-like objects that have the content of the body along with headers that indcate the type of data being sent. Thus we convert the JSON body into a "StringContent" object and add a _header_ that marks the body as JSON content.
+Whew, this is a long method and there is a lot going on. Let's go through it
+line by line. First we create the `URL` we are going to send the request to.
+Next up we start to create the JSON body we are going to send. Since this is a
+`POST` endpoint we need to send the `Item` (in the variable `newItem`) as part
+of the body. We first _serialize_ the `Item` into a JSON. The `PostAsync` method
+only knows how to send `HttpContent`-like objects that have the content of the
+body along with headers that indcate the type of data being sent. Thus we
+convert the JSON body into a "StringContent" object and add a _header_ that
+marks the body as JSON content.
 
-Finally we can `await client.PostAsync(url, jsonBodyAsContent)` to send the `POST` request to the URL.
+Finally we can `await client.PostAsync(url, jsonBodyAsContent)` to send the
+`POST` request to the URL.
 
-Next we ask the `response` for it's `Content` and get a _stream_ from it which we then send to our friend the _deserializer_ who in turn gives us an `Item`. This is the `item` that is being returned from the API. We get this item so that we can show the newly created item to the user (which would include it's ID, creation time, etc.)
+Next we ask the `response` for it's `Content` and get a _stream_ from it which
+we then send to our friend the _deserializer_ who in turn gives us an `Item`.
+This is the `item` that is being returned from the API. We get this item so that
+we can show the newly created item to the user (which would include it's ID,
+creation time, etc.)
 
 Using this feature would look like this:
 
@@ -486,7 +554,8 @@ ID    Description  Created At            Updated At            Completed
 Press ENTER to continue
 ```
 
-This is a lot of code and we will be able to _reuse_ quite a bit of it on our next feature, the `Update`. For now here is our code so far:
+This is a lot of code and we will be able to _reuse_ quite a bit of it on our
+next feature, the `Update`. For now here is our code so far:
 
 ```C#
 using System;
@@ -688,11 +757,21 @@ namespace OneListClient
 
 # Updating an item
 
-Updating an item is much like creating an item except for two specific changes. First we see the documentation asks us to use the `PUT` verb instead of `POST` and we must specify the `id` of the item in the URL in the same way we did for retrieving a specific item.
+Updating an item is much like creating an item except for two specific changes.
+First we see the documentation asks us to use the `PUT` verb instead of `POST`
+and we must specify the `id` of the item in the URL in the same way we did for
+retrieving a specific item.
 
-First we will prompt the user for the id of the item, and then prompt them to enter new values for the text and the completed state. This user interface could be enhanced if we were to first fetch the existing item and allow the user to _change_ the values instead of providing new entries. We'll leave this as an exercise and also revisit it during lessons when we create full web-based user interfaces.
+First we will prompt the user for the id of the item, and then prompt them to
+enter new values for the text and the completed state. This user interface could
+be enhanced if we were to first fetch the existing item and allow the user to
+_change_ the values instead of providing new entries. We'll leave this as an
+exercise and also revisit it during lessons when we create full web-based user
+interfaces.
 
-First we will change our prompt: `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, or (Q)uit: ");` and add a `case` to prompt the user:
+First we will change our prompt:
+`Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, or (Q)uit: ");`
+and add a `case` to prompt the user:
 
 ```C#
 case "U":
@@ -718,7 +797,9 @@ case "U":
     break;
 ```
 
-And then implement the method `UpdateOneItem`. Notice that it takes the token, the id, and the updatedItem. Also note there is a high similarity between this method and the `AddOneItem` method. We will refactor this later.
+And then implement the method `UpdateOneItem`. Notice that it takes the token,
+the id, and the updatedItem. Also note there is a high similarity between this
+method and the `AddOneItem` method. We will refactor this later.
 
 ```C#
 static async Task UpdateOneItem(string token, int id, Item updatedItem)
@@ -773,9 +854,12 @@ Press ENTER to continue
 
 ## Deleting an item
 
-For deleting an item the API documentation states we use a `DELETE` verb and specify the id in the URL.
+For deleting an item the API documentation states we use a `DELETE` verb and
+specify the id in the URL.
 
-First we will update our prompt `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, (D)elete an item, or (Q)uit: ");` and add a case statement:
+First we will update our prompt
+`Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, (D)elete an item, or (Q)uit: ");`
+and add a case statement:
 
 ```C#
 case "D":
@@ -1110,8 +1194,16 @@ We have created a TODO list manager that supports:
 - Update todo items
 - Delete todo items
 
-This Create, Read, Update, and Delete pattern is so familiar it is often called `CRUD` for short. You will find many applications that fit this `CRUD` pattern though sometimes we will have to look at our environment from a unique perspective to see the `CRUD` nature of it.
+This Create, Read, Update, and Delete pattern is so familiar it is often called
+`CRUD` for short. You will find many applications that fit this `CRUD` pattern
+though sometimes we will have to look at our environment from a unique
+perspective to see the `CRUD` nature of it.
 
-While creating an API client in `C#` has been interesting we will mostly create clients in our front-end lessons using JavaScript. However, all of the concepts we have covered here will be familiar to us when we create our front ends. In other lessons we will see how to create the code to manage the API itself which we will continue to use `C#` to implement.
+While creating an API client in `C#` has been interesting we will mostly create
+clients in our front-end lessons using JavaScript. However, all of the concepts
+we have covered here will be familiar to us when we create our front ends. In
+other lessons we will see how to create the code to manage the API itself which
+we will continue to use `C#` to implement.
 
-> NOTE: There is a quite a bit of code to refactor here and we will do that next if you would like to see how this code can be simplified.
+> NOTE: There is a quite a bit of code to refactor here and we will do that next
+> if you would like to see how this code can be simplified.

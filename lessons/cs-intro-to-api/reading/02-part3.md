@@ -1,10 +1,15 @@
-# Refactoring our One List API client
+---
+title: Refactoring our One List API client
+---
 
-There is quite a bit of repetitive code in our application. Lets take a look at places where we can share functionality.
+There is quite a bit of repetitive code in our application. Lets take a look at
+places where we can share functionality.
 
 ## Extract a property for the common base URL
 
-One of the first things you will notice in the application is the repetition of the `https://one-list-api.herokuapp.com/items/` part of the URL. We can extract this to a class property and access it throughout the code.
+One of the first things you will notice in the application is the repetition of
+the `https://one-list-api.herokuapp.com/items/` part of the URL. We can extract
+this to a class property and access it throughout the code.
 
 ```C#
 using System;
@@ -324,7 +329,10 @@ static void ShowOneItem(Item item)
 
 ## Add method to handle the response JSON when returning a single item
 
-Next up is the processing of the response JSON. We can make a method to handle that. Notice that since we call an `await` our method needs to be `async` and it returns a `Task<Item>` since we want it to return an `Item` but we wrap it in a `Task` so dotnet can handle the async nature.
+Next up is the processing of the response JSON. We can make a method to handle
+that. Notice that since we call an `await` our method needs to be `async` and it
+returns a `Task<Item>` since we want it to return an `Item` but we wrap it in a
+`Task` so dotnet can handle the async nature.
 
 ```C#
 static async Task<Item> ConvertResponseToItem(HttpResponseMessage response)
@@ -345,7 +353,8 @@ And now we can update the code to a pattern like:
 var item = await ConvertResponseToItem(response);
 ```
 
-Notice the `GetOneItem` method, it is using `GetStreamAsync`, but if we change this to `GetAsync` we can use our new `ConvertResponseToItem` method.
+Notice the `GetOneItem` method, it is using `GetStreamAsync`, but if we change
+this to `GetAsync` we can use our new `ConvertResponseToItem` method.
 
 ## Handle the code of converting an Item to an HTTP body
 
@@ -378,11 +387,17 @@ static HttpContent ConvertItemToHttpBody(Item item)
 }
 ```
 
-Notice here that the method returns an `HttpContent`, not a `StringContent`, this is because `HttpContent` is the _parent_ class and is more abstract. When possible we should return abstract classes but create specific types.
+Notice here that the method returns an `HttpContent`, not a `StringContent`,
+this is because `HttpContent` is the _parent_ class and is more abstract. When
+possible we should return abstract classes but create specific types.
 
 ## Final code
 
-While there is more we could refactor here, this is a nice improvement over the repeated code. It also makes each of the methods `GetOneItem`, `AddOneItem`, etc. easier to read since we are only concentrating on the major elements of the work each of those methods needs to do. The details are contained in shared methods and we can peek into them when needed.
+While there is more we could refactor here, this is a nice improvement over the
+repeated code. It also makes each of the methods `GetOneItem`, `AddOneItem`,
+etc. easier to read since we are only concentrating on the major elements of the
+work each of those methods needs to do. The details are contained in shared
+methods and we can peek into them when needed.
 
 ```C#
 using System;

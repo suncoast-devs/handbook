@@ -1,4 +1,6 @@
-# Extending our database
+---
+title: Extending our database
+---
 
 To review our `EmployeeDatabase` so far:
 
@@ -70,7 +72,10 @@ namespace EmployeeDatabase
 }
 ```
 
-While this is good, it isn't quite great. First of all we can only store one employee so our Employee Database is not very useful. To improve it, let's add a menu system to prompt the user to add, search, and delete employees. We will keep all these employees in a `List` and use `class`es to organize our code.
+While this is good, it isn't quite great. First of all we can only store one
+employee so our Employee Database is not very useful. To improve it, let's add a
+menu system to prompt the user to add, search, and delete employees. We will
+keep all these employees in a `List` and use `class`es to organize our code.
 
 ## Adding a `List` to store our employees
 
@@ -80,9 +85,14 @@ The `List` we will create will look like this:
 var employees = new List<Employee>();
 ```
 
-We name the variable `employees`, the plural of `employee` to give us the hint that this variable stores a collection of things. While this isn't a mandate by the language, choosing good names for our variables is a quality of a good developer and a habit we should start early. We define this variable as a `List` of things that will all be instances of our `Employee` class.
+We name the variable `employees`, the plural of `employee` to give us the hint
+that this variable stores a collection of things. While this isn't a mandate by
+the language, choosing good names for our variables is a quality of a good
+developer and a habit we should start early. We define this variable as a `List`
+of things that will all be instances of our `Employee` class.
 
-To put an employee in our list we use the code: `employees.Add(employee)` where `employee` is an instance of `Employee`
+To put an employee in our list we use the code: `employees.Add(employee)` where
+`employee` is an instance of `Employee`
 
 Now our code looks like:
 
@@ -159,9 +169,13 @@ namespace EmployeeDatabase
 
 ## Let's make a simple menu
 
-To make a menu, we'll introduce a `keepGoing` variable which will track if the user wishes to continue in our program. We will use this variable in a `while` loop to determine when to stop the loop. Inside the loop we will show a prompt and use the existing code to ask the user for details on a new employee.
+To make a menu, we'll introduce a `keepGoing` variable which will track if the
+user wishes to continue in our program. We will use this variable in a `while`
+loop to determine when to stop the loop. Inside the loop we will show a prompt
+and use the existing code to ask the user for details on a new employee.
 
-This allows us to continuously add more employees to our list until the user quits
+This allows us to continuously add more employees to our list until the user
+quits
 
 ```C#
 using System;
@@ -361,7 +375,11 @@ namespace EmployeeDatabase
 
 ## Find an employee by name
 
-Adding another menu option to find an employee by name. First we prompt for the name to look for. We use a `foreach` loop to look for an employee with a matching name. If we find one we update a variable named `foundEmployee` which otherwise will have the value `null`. Then if `foundEmployee` is `null` we tell the user no match was found, otherwise we show the details of `foundEmployee`.
+Adding another menu option to find an employee by name. First we prompt for the
+name to look for. We use a `foreach` loop to look for an employee with a
+matching name. If we find one we update a variable named `foundEmployee` which
+otherwise will have the value `null`. Then if `foundEmployee` is `null` we tell
+the user no match was found, otherwise we show the details of `foundEmployee`.
 
 ```C#
 using System;
@@ -488,15 +506,30 @@ namespace EmployeeDatabase
 
 ## Delete an employee and update an employee
 
-These are two other features that our employee database might need. We'll leave these to you to add to the application if you'd like to try.
+These are two other features that our employee database might need. We'll leave
+these to you to add to the application if you'd like to try.
 
 # Refactoring the database features into their own class
 
-The functions for adding, searching, and getting all the employees from the list are scattered through the main code. Let's pull that code into a specific class to manage the list.
+The functions for adding, searching, and getting all the employees from the list
+are scattered through the main code. Let's pull that code into a specific class
+to manage the list.
 
-We start by creating a class `EmployeeDatabase` and move our `List<Employee>` inside. We make this class property `private` since we do not want code outside of the class to be able to access it. All the use must come from the methods we create and allow as `public`. We then create methods to perform the common actions we need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of these methods _receives_ data it needs, and return the data it _provides_. This essentially creates an API (Application Programming Interface) for how to use this code.
+We start by creating a class `EmployeeDatabase` and move our `List<Employee>`
+inside. We make this class property `private` since we do not want code outside
+of the class to be able to access it. All the use must come from the methods we
+create and allow as `public`. We then create methods to perform the common
+actions we need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of
+these methods _receives_ data it needs, and return the data it _provides_. This
+essentially creates an API (Application Programming Interface) for how to use
+this code.
 
-By creating a class `EmployeeDatabase` we have isolated the code that has to do with the list of employees. This allows the database implementation to change without modifying the code that uses it. For instance, we could load and save the data from a data file. Any time we can change one part of the system, the employee database, without having to change other parts of the code (the menu system) we have created a good _decoupling_ of our system's parts.
+By creating a class `EmployeeDatabase` we have isolated the code that has to do
+with the list of employees. This allows the database implementation to change
+without modifying the code that uses it. For instance, we could load and save
+the data from a data file. Any time we can change one part of the system, the
+employee database, without having to change other parts of the code (the menu
+system) we have created a good _decoupling_ of our system's parts.
 
 ```C#
 using System;

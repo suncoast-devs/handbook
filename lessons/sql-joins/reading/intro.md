@@ -1,10 +1,18 @@
-import CodePen from '@handbook/CodePen'
-
-# Introduction to joins
+---
+title: Introduction to joins
+---
 
 ## Relational Databases and Data Normalization
 
-In this topic we are going to develop a database to keep information about movies. Along the way we will need to track information about the movie that isn't singular information. With a single table we store information in columns that is singular. We also want to avoid repeating information. For instance, the movie's title is a single piece of information while the list of actors in the cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc) would be repeated information per row. We will learn how to create `relations` to store this information in separate tables and _join_ / _relate_ it back to the movies.
+In this topic we are going to develop a database to keep information about
+movies. Along the way we will need to track information about the movie that
+isn't singular information. With a single table we store information in columns
+that is singular. We also want to avoid repeating information. For instance, the
+movie's title is a single piece of information while the list of actors in the
+cast are multiple pieces of information. Similarly, the `rating` (G, PG, etc)
+would be repeated information per row. We will learn how to create `relations`
+to store this information in separate tables and _join_ / _relate_ it back to
+the movies.
 
 ### Creating our database
 
@@ -20,11 +28,19 @@ pgcli SuncoastMovies
 
 ### Primary Keys
 
-Since we will be relating information between multiple tables we need a way to uniquely identify a row of data in a table. This is known as the table's `PRIMARY KEY` and is a special attribute of the column that says that it uniquely identifies the row and also cannot repeat.
+Since we will be relating information between multiple tables we need a way to
+uniquely identify a row of data in a table. This is known as the table's
+`PRIMARY KEY` and is a special attribute of the column that says that it
+uniquely identifies the row and also cannot repeat.
 
-You might have an existing column that you feel uniquely identify the row. For instance, you might think that the movie's title would uniquely identify the movie. However, we know that sometimes a movie's title changes during the production, or even uses the name of a movie that has existed in the past. So if we used the title to uniquely identify it we would run into many issues.
+You might have an existing column that you feel uniquely identify the row. For
+instance, you might think that the movie's title would uniquely identify the
+movie. However, we know that sometimes a movie's title changes during the
+production, or even uses the name of a movie that has existed in the past. So if
+we used the title to uniquely identify it we would run into many issues.
 
-Fortunately databases provide their own way of supplying a unique value for each row in the database. We call this `SERIAL` column.
+Fortunately databases provide their own way of supplying a unique value for each
+row in the database. We call this `SERIAL` column.
 
 So when creating our Movie table we will use this schema:
 
@@ -38,7 +54,9 @@ CREATE TABLE "Movies" (
 );
 ```
 
-We now have a column `Id` that the database will ensure is unique and identifies the row (`PRIMARY KEY`) and is automatically generated sequentially by the database (`SERIAL`)
+We now have a column `Id` that the database will ensure is unique and identifies
+the row (`PRIMARY KEY`) and is automatically generated sequentially by the
+database (`SERIAL`)
 
 #### Lets add some movies to our database:
 
@@ -88,7 +106,10 @@ VALUES ('Howls Moving Castle', 'Hayao Miyazaki', 2005, 'fantasy');
 
 ### Foreign Keys
 
-In order to keep track of the rating for any given movie we will add a single table, named `Ratings` that will store the name of the rating. Since we also want to uniquely identify the ratings, we'll ensure this table also has a serial primary key.
+In order to keep track of the rating for any given movie we will add a single
+table, named `Ratings` that will store the name of the rating. Since we also
+want to uniquely identify the ratings, we'll ensure this table also has a serial
+primary key.
 
 ```sql
 CREATE TABLE "Ratings" (
@@ -106,7 +127,9 @@ INSERT INTO "Ratings" ("Description") VALUES ('PG-13');
 INSERT INTO "Ratings" ("Description") VALUES ('R');
 ```
 
-Lets also add a table to keep information about our actors. For this table we want to know the full name of the actor and their birthday. We'll also create an `id` that is a `PRIMARY KEY` and is `SERIAL`
+Lets also add a table to keep information about our actors. For this table we
+want to know the full name of the actor and their birthday. We'll also create an
+`id` that is a `PRIMARY KEY` and is `SERIAL`
 
 ```sql
 CREATE TABLE "Actors" (
@@ -129,15 +152,21 @@ INSERT INTO "Actors" ("FullName", "Birthday")
 VALUES ('Martin Freeman', '1971-09-08');
 ```
 
-So now we have a way to identify each movie, rating, and actor. Next we will talk about how to relate the three sets of information together.
+So now we have a way to identify each movie, rating, and actor. Next we will
+talk about how to relate the three sets of information together.
 
 ### One to Many
 
-When we have a relationship such as the ratings for a movie, we say that this is a "One to Many" relationship. That is, a movie has one rating (e.g. the movie _Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many movies with a _G_ rating)
+When we have a relationship such as the ratings for a movie, we say that this is
+a "One to Many" relationship. That is, a movie has one rating (e.g. the movie
+_Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many
+movies with a _G_ rating)
 
-When describing our database it is often usual to have a visualization of the structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
+When describing our database it is often usual to have a visualization of the
+structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
 
-The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add in the actors soon...)
+The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add
+in the actors soon...)
 
 ```
 +----------------------------+         +-----------------------+
@@ -151,15 +180,23 @@ The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add i
 +----------------------------+
 ```
 
-Lets add a new column to our `Movies` to indicate _WHICH_ rating is associated to each row representing a movie.
+Lets add a new column to our `Movies` to indicate _WHICH_ rating is associated
+to each row representing a movie.
 
-The column we are adding is a `RatingId` that is an integer since this is the same data type as a `SERIAL` which we are going to relate to. The `NULL` indicates that we are allowed to have no value and the value to place in the column when no data is present is `NULL`. Next we indicate that this is a foreign key (we are _relating_ this table) to the `Ratings` table. We also specify the column in the other table, in this case `Id` in `Ratings`, we mean to match.
+The column we are adding is a `RatingId` that is an integer since this is the
+same data type as a `SERIAL` which we are going to relate to. The `NULL`
+indicates that we are allowed to have no value and the value to place in the
+column when no data is present is `NULL`. Next we indicate that this is a
+foreign key (we are _relating_ this table) to the `Ratings` table. We also
+specify the column in the other table, in this case `Id` in `Ratings`, we mean
+to match.
 
 ```sql
 ALTER TABLE "Movies" ADD COLUMN "RatingId" INTEGER NULL REFERENCES "Ratings" ("Id");
 ```
 
-Now our ERD looks like this. The `RatingId` from `Movies` _links_ (_joins_) us to the `Ratings` table
+Now our ERD looks like this. The `RatingId` from `Movies` _links_ (_joins_) us
+to the `Ratings` table
 
 ```
 +----------------------------+                  +-----------------------+
@@ -175,7 +212,8 @@ Now our ERD looks like this. The `RatingId` from `Movies` _links_ (_joins_) us t
 +----------------------------+
 ```
 
-Now we can specify the `RatingId` associated to each movie when we insert the movie.
+Now we can specify the `RatingId` associated to each movie when we insert the
+movie.
 
 ```sql
 UPDATE "Movies" SET "RatingId" = 2 WHERE "Id" in (10);
@@ -185,7 +223,9 @@ UPDATE "Movies" SET "RatingId" = 4 WHERE "Id" in (11, 12, 13 );
 
 ### Joining tables
 
-So now that we have these two tables, how do we _join_ them together so that we can retrieve information about movies and their ratings or get information about a rating and the associated movies.
+So now that we have these two tables, how do we _join_ them together so that we
+can retrieve information about movies and their ratings or get information about
+a rating and the associated movies.
 
 #### Query movies and also get their rating
 
@@ -216,15 +256,22 @@ JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 SELECT 3
 ```
 
-This query will give us movies and their ratings, but only for movies that have a `RatingId` that matches an `Id` from the ratings table. That is, any `movie` with a `null` value for `RatingId` (or a value that doesn't match an `id`) will not be in the results.
+This query will give us movies and their ratings, but only for movies that have
+a `RatingId` that matches an `Id` from the ratings table. That is, any `movie`
+with a `null` value for `RatingId` (or a value that doesn't match an `id`) will
+not be in the results.
 
-This default kind of join is called an `INNER JOIN` and can be seen in the diagram below
+This default kind of join is called an `INNER JOIN` and can be seen in the
+diagram below
 
 ![](https://i.stack.imgur.com/VQ5XP.png)
 
-See this [blog post](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/) for a more detailed description of the various joins.
+See this
+[blog post](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
+for a more detailed description of the various joins.
 
-If we want to see _ALL_ the `movies` and include the `ratings` table information when there is a match we modify the query to use `LEFT JOIN`
+If we want to see _ALL_ the `movies` and include the `ratings` table information
+when there is a match we modify the query to use `LEFT JOIN`
 
 #### Query all the movies and include ratings when possible
 
@@ -255,11 +302,15 @@ LEFT JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 +------+--------------------------------------------------------+-------------------+----------------+---------+------------+--------+---------------++
 ```
 
-The _left join_ indicates that we want everything from the left table, in this case `movies`, and matches from the `ratings` table. For `movies` that have no matching `ratings` row the information will be `null`
+The _left join_ indicates that we want everything from the left table, in this
+case `movies`, and matches from the `ratings` table. For `movies` that have no
+matching `ratings` row the information will be `null`
 
 ### Many to Many
 
-For the list of actors in the cast we might say "A movie has many cast members" but also "A cast member has appeared in many movies." In this case we need to relate these two tables in a different way.
+For the list of actors in the cast we might say "A movie has many cast members"
+but also "A cast member has appeared in many movies." In this case we need to
+relate these two tables in a different way.
 
 The ERD of this looks like:
 
@@ -288,9 +339,15 @@ The ERD of this looks like:
                                  +-------------------------+
 ```
 
-In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables. In this case we need a third table, commonly referred to as a _join table_ to store the relationships. In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.) We attempt to name this table based on the relationship between the two tables.
+In the case of a _many-to-many_ relationship we cannot place the foreign keys on
+either of the tables. In this case we need a third table, commonly referred to
+as a _join table_ to store the relationships. In this table, we will place two
+foreign keys, one to the left (movies) and the other to the right (to the
+actor.) We attempt to name this table based on the relationship between the two
+tables.
 
-In this case we are trying to represent the relationship between a movie and the actors. We could call this relationship `Roles`
+In this case we are trying to represent the relationship between a movie and the
+actors. We could call this relationship `Roles`
 
 ```sql
 CREATE TABLE "Roles" (
@@ -328,7 +385,9 @@ CREATE TABLE "Roles" (
 
 ```
 
-_Create cast membership for Orlando Bloom in Pirates & LOTR. The three LOTR movies are `id` 7, 8 and 9. The Pirates movie is `id` 2. Orlando Bloom's id is 1_
+_Create cast membership for Orlando Bloom in Pirates & LOTR. The three LOTR
+movies are `id` 7, 8 and 9. The Pirates movie is `id` 2. Orlando Bloom's id is
+1_
 
 _NOTE_: In the queries below, `--` is a SQL comments (like a JavaScript `//`)
 
@@ -346,7 +405,8 @@ INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (8,1);
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (9,1);
 ```
 
-_Create cast membership for Warick Davis in Harry Potter and Hitchhikers. Harry Potter's movie `id` is 3, and Warrik's actor `id` is 2_
+_Create cast membership for Warick Davis in Harry Potter and Hitchhikers. Harry
+Potter's movie `id` is 3, and Warrik's actor `id` is 2_
 
 ```sql
 -- The movie "Harry Potter and Goblet of Fire" had the actor "Warwick Davis"
@@ -356,7 +416,8 @@ INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (3,2);
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (10,2);
 ```
 
-_Create cast membership for Martin Freeman (`actor` `id` is 3) in the Hobbit (`movie` `ids` are 4, 5, and 6) & Hitchhikers (`movie` `id` 10)_
+_Create cast membership for Martin Freeman (`actor` `id` is 3) in the Hobbit
+(`movie` `ids` are 4, 5, and 6) & Hitchhikers (`movie` `id` 10)_
 
 ```sql
 -- The movie "The Hobbit: An Unexpected Journey" had the actor Martin Freeman
@@ -374,9 +435,13 @@ INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (10,3);
 
 ### Query for the casts and actors
 
-In order to tie `Movies` to `Actors` we need to join the movies first to the `Roles` and then join the `Roles` to the actors. Since the `Roles` table has relations to each of these tables, it acts as the link in the chain between the two tables.
+In order to tie `Movies` to `Actors` we need to join the movies first to the
+`Roles` and then join the `Roles` to the actors. Since the `Roles` table has
+relations to each of these tables, it acts as the link in the chain between the
+two tables.
 
-Notice for the `actors` entry Orlando Bloom there are multiple entries in `roles` since he has appeared in several of our `movies`
+Notice for the `actors` entry Orlando Bloom there are multiple entries in
+`roles` since he has appeared in several of our `movies`
 
 ```sql
 SELECT "Movies"."Title", "Actors"."FullName"
@@ -404,7 +469,11 @@ JOIN "Actors" on "Actors"."Id" = "Roles"."ActorId";
 
 ### Adding information to the join table.
 
-What if we wanted to capture the name of the character the actor played? Where would we put that attribute (column). It can't go on the `Movies` table since it isn't distinct to a movie. It can't go on the `Actors` table since it isn't unique to that either. The correct place here is to place that column on the `Roles` table.
+What if we wanted to capture the name of the character the actor played? Where
+would we put that attribute (column). It can't go on the `Movies` table since it
+isn't distinct to a movie. It can't go on the `Actors` table since it isn't
+unique to that either. The correct place here is to place that column on the
+`Roles` table.
 
 Let's call this new column `CharacterName` and add it to the `Roles` table.
 
@@ -412,7 +481,8 @@ Let's call this new column `CharacterName` and add it to the `Roles` table.
 ALTER TABLE "Roles" ADD COLUMN "CharacterName" TEXT NULL;
 ```
 
-Now that we have done that, we can add in a few character names. In order to know what rows to update, lets add the `Roles.Id` to our query above.
+Now that we have done that, we can add in a few character names. In order to
+know what rows to update, lets add the `Roles.Id` to our query above.
 
 ```sql
 SELECT "Roles"."Id", "Movies"."Title", "Actors"."FullName", "Roles"."CharacterName"
