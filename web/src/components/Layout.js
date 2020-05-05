@@ -4,6 +4,28 @@ import { Navigation } from './Navigation'
 import { SiteHeader } from './SiteHeader'
 import { SiteFooter } from './SiteFooter'
 
+function WIPBanner() {
+  return (
+    <div className="relative bg-purple-800">
+      <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+        <div className="pr-16 sm:text-center sm:px-16">
+          <p className="font-medium text-purple-300">
+            <span className="md:inline">This site is a work in progress.</span>
+            <span className="block sm:ml-2 sm:inline-block">
+              <a
+                href="https://github.com/suncoast-devs/handbook"
+                className="text-purple-100 font-bold underline"
+              >
+                You can help improve it. &rarr;
+              </a>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 export function Layout({ title, children }) {
   const mainRef = React.useRef(null)
   return (
@@ -17,6 +39,7 @@ export function Layout({ title, children }) {
         ></script>
         <body className="bg-gray-100 text-gray-900" />
       </Helmet>
+      <WIPBanner />
       <div className="h-screen flex overflow-hidden bg-gray-100">
         <Navigation />
         <div className="flex flex-col w-0 flex-1 overflow-hidden">

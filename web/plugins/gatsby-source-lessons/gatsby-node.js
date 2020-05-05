@@ -7,8 +7,10 @@ exports.sourceNodes = async (
   { actions: { createNode }, createNodeId, createContentDigest },
   { plugins, ...options }
 ) => {
+  const nodes = []
+
   async function createLessonNode(slug) {
-    const nodeId = createNodeId(`handbook-lesson-${slug}`)
+    const nodeId = createNodeId(`lesson-${slug}`)
     const path = `${options.path}/${slug}`
 
     const index = matter(await fs.readFile(`${path}/index.md`, 'utf8')).data
@@ -16,7 +18,7 @@ exports.sourceNodes = async (
     const lesson = { slug, path, ...index }
     const content = JSON.stringify(lesson)
 
-    await createNode({
+    nodes.push({
       id: nodeId,
       parent: null,
       children: [],
@@ -31,13 +33,31 @@ exports.sourceNodes = async (
     return lesson
   }
 
+  function createWarningNode(warning) {
+    const content = JSON.stringify(warning)
+    nodes.push({
+      id: createNodeId(content),
+      parent: null,
+      children: [],
+      internal: {
+        type: `Warning`,
+        content,
+        contentDigest: createContentDigest(content),
+      },
+      ...warning,
+    })
+  }
+
   const files = await fs.readdir(options.path)
-  return Promise.all(
+  await Promise.all(
     files.map(async (slug) => {
       const lesson = await createLessonNode(slug)
-      return validateLesson(lesson)
+      const warnings = await validateLesson(lesson)
+      warnings.forEach(createWarningNode)
     })
   )
+
+  return Promise.all(nodes.map((node) => createNode(node)))
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
@@ -97,31 +117,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 async function validateLesson(meta) {
   const warnings = []
 
+  function addWarning(message) {
+    warnings.push({ type: 'lesson', slug: meta.slug, message })
+  }
+
   async function validateFile(filePath) {
     try {
       const stats = await fs.stat(`${meta.path}/${filePath}`)
       if (stats.size < 128) {
-        warnings.push(
-          `The file ${filePath} appears to have insufficient content.`
+        addWarning(
+          `The file \`${filePath}\` appears to have insufficient content.`
         )
       }
     } catch (error) {
-      warnings.push(`The file ${filePath} does not exist.`)
+      addWarning(`The file \`${filePath}\` does not exist.`)
     }
   }
 
-  if (!meta.title) warnings.push('Title is missing from index.')
-  if (!meta.description) warnings.push('Description is missing from index.')
+  if (!meta.title) addWarning('Title is missing from index.')
+
   if (!meta.assigments || meta.assignments.length === 0)
-    warnings.push('No assignments.')
+    addWarning('This lesson has no assignments.')
 
   await validateFile('lecture/presentation/index.md')
+
   await validateFile('lecture/index.md')
 
-  if (warnings.length > 0) {
-    console.warn(
-      `The lesson ${meta.title} (${meta.slug}) has the following issues:\n` +
-        warnings.map((warning) => `  - ${warning}`).join('\n')
-    )
-  }
+  return warnings
 }
