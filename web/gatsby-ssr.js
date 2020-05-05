@@ -1,6 +1,6 @@
-const React = require('react')
-const { UIContextProvider } = require('./src/components/UIContext')
+import React from 'react'
+import { UIContextProvider } from './src/components/UIContext'
 
-exports.wrapRootElement = ({ element, props }) => (
+export const wrapRootElement = ({ element, props }) => (
   <UIContextProvider {...props}>{element}</UIContextProvider>
 )
