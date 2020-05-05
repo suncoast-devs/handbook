@@ -39,11 +39,11 @@ export function Layout({ title, children }) {
         ></script>
         <body className="bg-gray-100 text-gray-900" />
       </Helmet>
-      <WIPBanner />
       <div className="h-screen flex overflow-hidden bg-gray-100">
         <Navigation />
         <div className="flex flex-col w-0 flex-1 overflow-hidden">
           <SiteHeader />
+          <WIPBanner />
           <main
             className="flex-1 relative z-0 overflow-y-auto pt-6focus:outline-none"
             tabIndex={0}
