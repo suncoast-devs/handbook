@@ -13,7 +13,7 @@ and working our way up to power drill.
 ## Installation
 
 ```sh
-brew cask install visual-studio-code
+sudo snap install --classic code
 ```
 
 ## Adding command line option

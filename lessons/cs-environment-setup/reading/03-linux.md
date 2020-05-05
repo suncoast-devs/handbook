@@ -2,13 +2,17 @@
 title: Linux setup
 ---
 
-Linux:
+Before starting any installation run:
 
-- slack
-- bash/zsh
-- vs-code
-- git
-- dotnet
-- httpie
-- hub
-- postgres
+```sh
+sudo apt update
+sudo apt install snapd
+```
+
+- [Slack](/lessons/setup-linux/reading/slack)
+- [Visual Studio Code](/lessons/setup-linux/reading/vs-code)
+- [git](/lessons/setup-linux/reading/git)
+- [.NET](/lessons/setup-linux/reading/dotnet)
+- [httpie](/lessons/setup-linux/reading/httpie)
+- [hub](/lessons/setup-linux/reading/hub)
+- [postgres](/lessons/setup-linux/reading/postgres)
