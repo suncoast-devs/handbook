@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from 'gatsby-link'
 import cx from 'classnames'
-import SDGIcon from '../../images/button.svg'
+import SDGIcon from '../../../images/button.svg'
 import { Transition } from '../Transition'
-import { useUIContext } from '../UIContext'
+import { useUIContext } from '../../../context/UIContext'
 import { Menu } from './Menu'
 
 function Header() {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { useUIContext } from './UIContext'
+import { useUIContext } from '../../context/UIContext'
 
 export function SiteHeader() {
   const { openSidebar } = useUIContext()

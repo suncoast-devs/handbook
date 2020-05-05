@@ -34,7 +34,7 @@ module.exports = {
       resolve: `gatsby-plugin-alias-imports`,
       options: {
         alias: {
-          '@handbook': `${__dirname}/src/components`,
+          '@handbook': `${__dirname}/src/components/content`,
         },
         extensions: [],
       },

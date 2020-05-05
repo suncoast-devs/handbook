@@ -3,11 +3,12 @@ import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
-import { Layout } from './Layout'
-import { Markdown } from './Markdown'
+import { Layout } from '../site/Layout'
+import { Markdown } from '../site/Markdown'
+
 const shortcodes = { Link } // Provide common components here
 
-export default function PageTemplate({
+export default function LessonTemplate({
   data: {
     mdx,
     index,

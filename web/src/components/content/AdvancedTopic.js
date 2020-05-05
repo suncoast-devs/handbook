@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const AdvancedTopic = props => {
+const AdvancedTopic = (props) => {
   const [revealed, setRevealed] = useState(false)
 
   const message = props.message

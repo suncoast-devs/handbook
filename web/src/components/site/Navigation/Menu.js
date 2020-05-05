@@ -1,6 +1,6 @@
 import React from 'react'
 import { Transition } from '../Transition'
-import { useUIContext } from '../UIContext'
+import { useUIContext } from '../../../context/UIContext'
 import { ModuleMenu } from './ModuleMenu'
 import { ProgramMenu } from './ProgramMenu'
 

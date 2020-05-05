@@ -1,6 +1,6 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
-import { useUIContext } from '../UIContext'
+import { useUIContext } from '../../../context/UIContext'
 import { Heading } from './Heading'
 import { Description } from './Description'
 import { SubHeading } from './SubHeading'

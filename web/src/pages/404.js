@@ -1,9 +1,11 @@
 import React from 'react'
-import { Layout } from '../components/Layout'
+import { Layout } from '../components/site/Layout'
 
 const NotFoundPage = () => (
-  <Layout>
-    <h1>NOT FOUND</h1>
+  <Layout title="Page Not Found">
+    <p>
+      This document was moved, or maybe it never existed in the first place.
+    </p>
   </Layout>
 )
 

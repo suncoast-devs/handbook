@@ -1,10 +1,9 @@
 import React from 'react'
-
-import { Layout } from '../components/Layout'
+import { Layout } from '../components/site/Layout'
 
 const IndexPage = () => (
-  <Layout>
-    <h1>Hello, World.</h1>
+  <Layout title="Hello, World.">
+    <p>A guide for students of the Suncoast Developers Guild.</p>
   </Layout>
 )
 

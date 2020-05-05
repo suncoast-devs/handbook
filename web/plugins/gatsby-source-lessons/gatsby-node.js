@@ -107,7 +107,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   nodes.forEach((node) => {
     createPage({
       path: node.fields.path,
-      component: path.resolve(`./src/components/Page.js`),
+      component: path.resolve(`./src/components/template/LessonTemplate.js`),
       context: { id: node.id, slug: node.fields.slug },
     })
   })
