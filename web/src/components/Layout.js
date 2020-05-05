@@ -9,7 +9,7 @@ export function Layout({ title, children }) {
   return (
     <>
       <Helmet>
-        <title>{`SDG Handbook${title && ` - ` + title}`}</title>
+        <title>{`SDG Handbook${title ? ` - ` + title : ''}`}</title>
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <script
           src="https://kit.fontawesome.com/abb24df607.js"
