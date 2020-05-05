@@ -14,17 +14,6 @@ matter):
 scoop install hub
 ```
 
-## Installing
-
-Download and run
-[the installer](https://github.com/github/hub/releases/download/v2.11.2/hub-windows-amd64-2.11.2.zip).
-
-After you have downloaded the zip file, extract the folder, and run
-`install.bat`
-
-You may see the message "Windows protected your PC". If you do, simply click
-"More info" and then "Run anyway".
-
 ## Post Installation
 
 Start a new Powershell and enter the command:

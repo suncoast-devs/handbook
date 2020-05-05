@@ -7,14 +7,22 @@ to contain our code. This project will tell our computer how to organize our
 code, how to make the code ready to run (known as `compiling`) and finally how
 to run our code.
 
-## The `dotnet` command
+# The `dotnet` command
 
 We will be using the `dotnet` command frequently. This command has many ways to
 use it and we'll discover those in various other lessons. To get started with a
 `C#` project we'll use the `dotnet` command to make a `new` project. The
-simplest program we can write will interact with us, the user, by what we call
-the `console.` On Mac OS or Linux the `console` will be our `terminal/shell` and
-on Windows this will be our `Powershell` window.
+simplest program we can write will interact with the user by what we call the
+`console.` On Mac OS or Linux the `console` will be our `terminal/shell` and on
+Windows this will be our `Powershell` window.
+
+# Starting in the right place
+
+Before we can create a new project we must first change the working directory of
+our shell into the directory where we'll keep our code. We suggest you use a
+folder named `sdg` or `code` or something else that will remind you this is
+where your projects are. You'll also want to keep this directory in your home
+folder or your `Documents` folder.
 
 # Running `dotnet new console` to make a new console application
 

@@ -14,17 +14,6 @@ us.
 scoop install dotnet-sdk
 ```
 
-## Installation
-
-[Download the latest](https://dotnet.microsoft.com/download) version of the
-`SDK`. This will download an executable installation program you must run.
-
-If you are given the option, choose the one which says `.NET Core SDK` -- do
-**NOT** install the `.NET Framework`
-
-During installation, if you are presented with any choices, simply select the
-default option.
-
 ## Post Installation
 
 We will need a few tools along the way so we will make sure they are installed

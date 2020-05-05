@@ -15,12 +15,15 @@ instructions for the following tools:
 
 ### Then continue here:
 
-- [scoop](/lessons/setup-windows/reading/scoop)
+- [Scoop](/lessons/setup-windows/reading/scoop)
+- [Windows Terminal](/lessons/setup-windows/reading/windows-terminal)
 - [git](/lessons/setup-windows/reading/git)
+- [posh-git](/lessons/setup-windows/reading/posh-git)
 - [.NET](/lessons/setup-windows/reading/dotnet)
 - [httpie](/lessons/setup-windows/reading/httpie)
 - [hub](/lessons/setup-windows/reading/hub)
 - [PostgreSQL](/lessons/setup-windows/reading/postgres)
+- [Insomnia](/lessons/setup-windows/reading/insomnia)
 
 Mac:
 
