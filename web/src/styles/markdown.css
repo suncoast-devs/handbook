@@ -1,3 +1,5 @@
+/* purgecss start ignore */
+
 .markdown {
   @apply text-gray-900 leading-normal break-words;
 }
@@ -89,3 +91,5 @@
 .markdown td {
   @apply border py-1 px-3;
 }
+
+/* purgecss end ignore */
