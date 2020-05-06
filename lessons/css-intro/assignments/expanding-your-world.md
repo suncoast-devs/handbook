@@ -1,4 +1,6 @@
-# Expanding Your World
+---
+title: Expanding Your World
+---
 
 In this assignment, you will end up with a simple styled web page, published on the web.
 

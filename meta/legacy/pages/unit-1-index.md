@@ -1,4 +1,6 @@
-# unit i: fundamentals
+---
+title: unit i: fundamentals
+---
 
 During this unit, students will learn about the basic of programming and data. This includes, but is not limited to thinking algorithmically, normalizing data and object oriented programming.
 

@@ -1,4 +1,6 @@
-# Adding Maps to your Rails application
+---
+title: Adding Maps to your Rails application
+---
 
 ## Adding the required gem
 

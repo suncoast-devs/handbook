@@ -1,4 +1,6 @@
-# Adoption Expansion
+---
+title: Adoption Expansion
+---
 
 For this project, you will forking an existing repo and adding ore functionality to it. You will completing the UI as well as adding a "save for later" feature.
 

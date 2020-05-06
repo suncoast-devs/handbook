@@ -1,7 +1,9 @@
 import CodePen from '@handbook/CodePen'
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
-# Operators
+---
+title: Operators
+---
 
 Variables by themselves allow our programs to be dynamic, but in order to make our apps to be more interesting and powerful, we need operations. Operations allow developers to manipulate values and variables to calculate a new value. Most modern programming languages support the same common operations.
 

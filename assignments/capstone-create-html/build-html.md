@@ -1,4 +1,6 @@
-# Let's get visual!
+---
+title: Let's get visual!
+---
 
 With the wireframes created, we need to start breathing life into our application. The next step would be to create HTML & CSS. This is the next step because, remember, it all comes down to HTML. This is what the user sees
 

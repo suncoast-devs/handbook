@@ -1,4 +1,6 @@
-# Hello, React
+---
+title: Hello, React
+---
 
 This covers the basic intro to the Reactjs.
 

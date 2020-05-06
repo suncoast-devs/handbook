@@ -1,4 +1,6 @@
-# A Picture is Worth 1,000 Words
+---
+title: A Picture is Worth 1,000 Words
+---
 
 Get to know React Router by building yourself a small photo gallery site.
 

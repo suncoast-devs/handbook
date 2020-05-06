@@ -1,7 +1,9 @@
-import CodePen from '@handbook/CodePen'
-import AdvancedTopic from '@handbook/AdvancedTopic'
+---
+title: What is a table
+---
 
-# What is a table
+import CodePen from '@handbook/CodePen'  
+import AdvancedTopic from '@handbook/AdvancedTopic'
 
 <AdvancedTopic message='Table structuring and styling is an advanced subject'>
 A table is a structured set of data made up of of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day or the week, or the timetable for a local swimming pool.
@@ -12,7 +14,10 @@ A table is a structured set of data made up of of rows and columns (tabular data
 
 # How does a table work
 
-The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers. Look at the table below for example and find a Jovian gas giant with 62 moons. You can find the answer by associating the relevant row and column headers.
+The point of a table is that it is rigid. Information is easily interpreted by
+making visual associations between row and column headers. Look at the table
+below for example and find a Jovian gas giant with 62 moons. You can find the
+answer by associating the relevant row and column headers.
 
 ```html
 <table>
@@ -166,13 +171,18 @@ The point of a table is that it is rigid. Information is easily interpreted by m
 </table>
 ```
 
-When done correctly, even blind people can interpret tabular data in an HTML table — a successful HTML table should enhance the experience of sighted and visually impaired users alike.
+When done correctly, even blind people can interpret tabular data in an HTML
+table — a successful HTML table should enhance the experience of sighted and
+visually impaired users alike.
 
 # Table Styling
 
 <CodePen>
 
-You can also have a look at this example. One thing you'll notice is that the table does look a bit more readable there — this is because the table you see above on this page has minimal styling, whereas the this version has more significant CSS applied.
+You can also have a look at this example. One thing you'll notice is that the
+table does look a bit more readable there — this is because the table you see
+above on this page has minimal styling, whereas the this version has more
+significant CSS applied.
 
 <pre data-lang='html'>
 {`
@@ -360,27 +370,56 @@ caption {
 
 </CodePen>
 
-Be under no illusion; for tables to be effective on the web, you need to provide some styling information with CSS, as well as good solid structure with HTML. In this module we are focusing on the HTML part; to find out about the CSS part you should visit our Styling tables article after you've finished here.
+Be under no illusion; for tables to be effective on the web, you need to provide
+some styling information with CSS, as well as good solid structure with HTML. In
+this module we are focusing on the HTML part; to find out about the CSS part you
+should visit our Styling tables article after you've finished here.
 
-We won't focus on CSS in this module, but we have provided a minimal CSS stylesheet for you to use that will make your tables more readable than the default you get without any styling. You can find the stylesheet here, and you can also find an HTML template that applies the stylesheet — these together will give you a good starting point for experimenting with HTML tables.
+We won't focus on CSS in this module, but we have provided a minimal CSS
+stylesheet for you to use that will make your tables more readable than the
+default you get without any styling. You can find the stylesheet here, and you
+can also find an HTML template that applies the stylesheet — these together will
+give you a good starting point for experimenting with HTML tables.
 
 # When should you NOT use HTML tables?
 
-HTML tables should be used for tabular data — this is what they are designed for. Unfortunately, a lot of people used to use HTML tables to lay out web pages, e.g. one row to contain the header, one row to contain the content columns, one row to contain the footer, etc. This was commonly used because CSS support across browsers used to be terrible; table layouts are much less common nowadays, but you might still see them in some corners of the web.
+HTML tables should be used for tabular data — this is what they are designed
+for. Unfortunately, a lot of people used to use HTML tables to lay out web
+pages, e.g. one row to contain the header, one row to contain the content
+columns, one row to contain the footer, etc. This was commonly used because CSS
+support across browsers used to be terrible; table layouts are much less common
+nowadays, but you might still see them in some corners of the web.
 
-In short, using tables for layout rather than CSS layout techniques is a bad idea. The main reasons are as follows:
+In short, using tables for layout rather than CSS layout techniques is a bad
+idea. The main reasons are as follows:
 
-1. Layout tables reduce accessibility for visually impaired users: Screenreaders, used by blind people, interpret the tags that exist in an HTML page and read out the contents to the user. Because tables are not the right tool for layout, and the markup is more complex than with CSS layout techniques, the screenreaders' output will be confusing to their users.
-1. Tables produce tag soup: As mentioned above, table layouts generally involve more complex markup structures than proper layout techniques. This can result in the code being harder to write, maintain, and debug.
-1. Tables are not automatically responsive: When you use proper layout containers (such as `<header>`, `<section>`, `<article>`, or `<div>`), their width defaults to 100% of their parent element. Tables on the other hand are sized according to their content by default, so extra measures are needed to get table layout styling to effectively work across a variety of devices.
+1. Layout tables reduce accessibility for visually impaired users:
+   Screenreaders, used by blind people, interpret the tags that exist in an HTML
+   page and read out the contents to the user. Because tables are not the right
+   tool for layout, and the markup is more complex than with CSS layout
+   techniques, the screenreaders' output will be confusing to their users.
+1. Tables produce tag soup: As mentioned above, table layouts generally involve
+   more complex markup structures than proper layout techniques. This can result
+   in the code being harder to write, maintain, and debug.
+1. Tables are not automatically responsive: When you use proper layout
+   containers (such as `<header>`, `<section>`, `<article>`, or `<div>`), their
+   width defaults to 100% of their parent element. Tables on the other hand are
+   sized according to their content by default, so extra measures are needed to
+   get table layout styling to effectively work across a variety of devices.
 
 # Adding headers with `<th>` elements
 
 <CodePen>
 
-Now let's turn our attention to table headers — special cells that go at the start of a row or column and define the type of data that row or column contains (as an example, see the "Person" and "Age" cells in the first example shown in this article). To illustrate why they are useful, have a look at the following table example.
+Now let's turn our attention to table headers — special cells that go at the
+start of a row or column and define the type of data that row or column contains
+(as an example, see the "Person" and "Age" cells in the first example shown in
+this article). To illustrate why they are useful, have a look at the following
+table example.
 
-The problem here is that, while you can kind of make out what's going on, it is not as easy to cross reference data as it could be. If the column and row headings stood out in some way, it would be much better.
+The problem here is that, while you can kind of make out what's going on, it is
+not as easy to cross reference data as it could be. If the column and row
+headings stood out in some way, it would be much better.
 
 <pre data-lang="html">
 {`
@@ -430,7 +469,8 @@ The problem here is that, while you can kind of make out what's going on, it is 
 
 <CodePen>
 
-Let's change the code a little to make the first row a header row. We change the `<td>` to a `<th>` for _table header_
+Let's change the code a little to make the first row a header row. We change the
+`<td>` to a `<th>` for _table header_
 
 <pre data-lang='html'>
 {`
@@ -480,19 +520,30 @@ Let's change the code a little to make the first row a header row. We change the
 
 # Why are headers useful?
 
-We have already partially answered this question — it is easier to find the data you are looking for when the headers clearly stand out, and the design just generally looks better.
+We have already partially answered this question — it is easier to find the data
+you are looking for when the headers clearly stand out, and the design just
+generally looks better.
 
-Note: Table headings come with some default styling — they are bold and centered even if you don't add your own styling to the table, to help them stand out.
+Note: Table headings come with some default styling — they are bold and centered
+even if you don't add your own styling to the table, to help them stand out.
 
-Tables headers also have an added benefit — along with the scope attribute (which we'll learn about in the next article), they allow you to make tables more accessible by associating each header with all the data in the same row or column. Screenreaders are then able to read out a whole row or column of data at once, which is pretty useful.
+Tables headers also have an added benefit — along with the scope attribute
+(which we'll learn about in the next article), they allow you to make tables
+more accessible by associating each header with all the data in the same row or
+column. Screenreaders are then able to read out a whole row or column of data at
+once, which is pretty useful.
 
 ## Allowing cells to span multiple rows and columns
 
-Sometimes we want cells to span multiple rows or columns. Take the following simple example, which shows the names of common animals. In some cases, we want to show the names of the males and females next to the animal name. Sometimes we don't, and in such cases we just want the animal name to span the whole table.
+Sometimes we want cells to span multiple rows or columns. Take the following
+simple example, which shows the names of common animals. In some cases, we want
+to show the names of the males and females next to the animal name. Sometimes we
+don't, and in such cases we just want the animal name to span the whole table.
 
 <CodePen>
 
-The initial markup looks like this. But the output doesn't give us quite what we want.
+The initial markup looks like this. But the output doesn't give us quite what we
+want.
 
 <pre data-lang='html'>
 {`
@@ -528,7 +579,12 @@ The initial markup looks like this. But the output doesn't give us quite what we
 
 ---
 
-We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across two columns, and "Horse" and "Chicken" to span downwards over two rows. Fortunately, table headers and cells have the `colspan` and `rowspan` attributes, which allow us to do just those things. Both accept a unitless number value, which equals the number of rows or columns you want spanned. For example, colspan="2" makes a cell span two columns.
+We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across
+two columns, and "Horse" and "Chicken" to span downwards over two rows.
+Fortunately, table headers and cells have the `colspan` and `rowspan`
+attributes, which allow us to do just those things. Both accept a unitless
+number value, which equals the number of rows or columns you want spanned. For
+example, colspan="2" makes a cell span two columns.
 
 <CodePen>
 
@@ -570,7 +626,9 @@ Lets make that change.
 
 # Adding a caption to your table with `<caption>`
 
-You can give your table a caption by putting it inside a `<caption>` element and nesting that inside the `<table>` element. You should put it just below the opening `<table>` tag.
+You can give your table a caption by putting it inside a `<caption>` element and
+nesting that inside the `<table>` element. You should put it just below the
+opening `<table>` tag.
 
 ```html
 <table>
@@ -582,17 +640,40 @@ You can give your table a caption by putting it inside a `<caption>` element and
 </table>
 ```
 
-As you can infer from the brief example above, the caption is meant to contain a description of the table contents. This is useful for all readers wishing to get a quick idea of whether the table is useful to them as they scan the page, but particularly for blind users. Rather than have a screenreader read out the contents of many cells just to find out what the table is about, he or she can rely on a caption and then decide whether or not to read the table in greater detail.
+As you can infer from the brief example above, the caption is meant to contain a
+description of the table contents. This is useful for all readers wishing to get
+a quick idea of whether the table is useful to them as they scan the page, but
+particularly for blind users. Rather than have a screenreader read out the
+contents of many cells just to find out what the table is about, he or she can
+rely on a caption and then decide whether or not to read the table in greater
+detail.
 
 # Adding structure with `thead`, `tfoot`, and `tbody`
 
-As your tables get a bit more complex in structure, it is useful to give them more structural definition. One clear way to do this is by using `<thead>`, `<tfoot>`, and `<tbody>`, which allow you to mark up a header, footer, and body section for the table.
+As your tables get a bit more complex in structure, it is useful to give them
+more structural definition. One clear way to do this is by using `<thead>`,
+`<tfoot>`, and `<tbody>`, which allow you to mark up a header, footer, and body
+section for the table.
 
-These elements don't make the table any more accessible to screenreader users, and don't result in any visual enhancement on their own. They are however very useful for styling and layout — acting as useful hooks for adding CSS to your table. To give you some interesting examples, in the case of a long table you could make the table header and footer repeat on every printed page, and you could make the table body display on a single page and have the contents available by scrolling up and down.
+These elements don't make the table any more accessible to screenreader users,
+and don't result in any visual enhancement on their own. They are however very
+useful for styling and layout — acting as useful hooks for adding CSS to your
+table. To give you some interesting examples, in the case of a long table you
+could make the table header and footer repeat on every printed page, and you
+could make the table body display on a single page and have the contents
+available by scrolling up and down.
 
 To use them:
 
-The `<thead>` element needs to wrap the part of the table that is the header — this will commonly be the first row containing the column headings, but this is not necessarily always the case. If you are using `<col>`/`<colgroup>` element, the table header should come just below those.
-The `<tfoot>` element needs to wrap the part of the table that is the footer — this might be a final row with items in the previous rows summed, for example. You can include the table footer right at the bottom of the table as you'd expect, or just below the table header (the browser will still render it at the bottom of the table).
-The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer. It will appear below the table header or sometimes footer, depending on how you decided to structure it (see the notes above).
+The `<thead>` element needs to wrap the part of the table that is the header —
+this will commonly be the first row containing the column headings, but this is
+not necessarily always the case. If you are using `<col>`/`<colgroup>` element,
+the table header should come just below those. The `<tfoot>` element needs to
+wrap the part of the table that is the footer — this might be a final row with
+items in the previous rows summed, for example. You can include the table footer
+right at the bottom of the table as you'd expect, or just below the table header
+(the browser will still render it at the bottom of the table). The `<tbody>`
+element needs to wrap the other parts of the table content that aren't in the
+table header or footer. It will appear below the table header or sometimes
+footer, depending on how you decided to structure it (see the notes above).
 </AdvancedTopic>

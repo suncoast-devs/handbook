@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# Basics
+---
+title: Basics
+---
 
 JavaScript programs are made up from a series of instructions called `statements`. These instructions are read by the computer (the browser) from the top to the bottom and from left to right.
 

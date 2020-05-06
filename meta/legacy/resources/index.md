@@ -1,4 +1,6 @@
-# Additional Resources
+---
+title: Additional Resources
+---
 
 ## [Online Resources](/handbook/resources/online-resources)
 

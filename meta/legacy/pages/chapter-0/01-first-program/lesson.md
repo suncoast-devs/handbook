@@ -1,4 +1,6 @@
-# Intro to programming
+---
+title: Intro to programming
+---
 
 This is the intro talk after the env set up.
 

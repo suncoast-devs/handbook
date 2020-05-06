@@ -1,4 +1,6 @@
-# Your Health - Self Care for Developers
+---
+title: Your Health - Self Care for Developers
+---
 
 ## What is Self Care?
 

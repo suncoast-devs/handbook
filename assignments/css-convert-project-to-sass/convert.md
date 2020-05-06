@@ -1,4 +1,6 @@
-# Get SASSy
+---
+title: Get SASSy
+---
 
 Today you explorer the wonders of SASS and SCSS. Now, with that new knowledge, I want you head back to an old project and update the CSS to use some of the cool SASS features you learned about today.
 

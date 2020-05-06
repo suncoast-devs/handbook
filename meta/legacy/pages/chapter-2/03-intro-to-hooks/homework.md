@@ -1,4 +1,6 @@
-# Hook, line and sinker!
+---
+title: Hook, line and sinker!
+---
 
 In this assignment, you'll create an HSL(a) color picker with React, but this time using React Hooks
 

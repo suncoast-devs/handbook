@@ -1,4 +1,6 @@
-# Introduction goes here
+---
+title: Introduction goes here
+---
 
 [Learning Objectives](./objectives)
 

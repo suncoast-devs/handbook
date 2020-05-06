@@ -1,4 +1,6 @@
-# Classes and review
+---
+title: Classes and review
+---
 
 This lesson aims to introduce the basics of Class, (_not OOP_) just classes. Also, the students have been pushed far in a week, this also serves as a review of a few concepts as well
 

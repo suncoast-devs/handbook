@@ -1,4 +1,6 @@
-# JavaScript Iteration
+---
+title: JavaScript Iteration
+---
 
 Using JavaScript takes practice and the best practice is repetition. This exercise allow you time to work on the basics of JavaScript and how to apply that logic to solving problems.
 

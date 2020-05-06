@@ -1,4 +1,6 @@
-# The Care and Feeding of Junior Developers
+---
+title: The Care and Feeding of Junior Developers
+---
 
 ## Give Ownership
 

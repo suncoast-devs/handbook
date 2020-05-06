@@ -1,4 +1,6 @@
-# Store Front
+---
+title: Store Front
+---
 
 In this assignment you will build a mock shopping website in React, with React Router.
 

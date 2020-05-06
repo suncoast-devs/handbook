@@ -1,4 +1,6 @@
-# Survive distance learning
+---
+title: Survive distance learning
+---
 
 Working remotely doesn't have to be a hard and isolating experience. Here are some tips and tricks to help
 

@@ -1,4 +1,6 @@
-# It all starts with HTML
+---
+title: It all starts with HTML
+---
 
 During this week, you will be building a website for your new chain of restaurants. This will have a few pages and will serve as a playground to learn about web development.
 

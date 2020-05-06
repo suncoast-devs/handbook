@@ -1,4 +1,6 @@
-# Files and packages
+---
+title: Files and packages
+---
 
 This is our first look at using persistant storage, with files. Students should see the basics workings with files. Also, we will use our first Nuget package to help making files a little easier to use
 

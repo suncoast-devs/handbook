@@ -1,4 +1,6 @@
-# Feast and Remove!
+---
+title: Feast and Remove!
+---
 
 https://www.codewars.com/kata/the-feast-of-many-beasts/train/javascript
 

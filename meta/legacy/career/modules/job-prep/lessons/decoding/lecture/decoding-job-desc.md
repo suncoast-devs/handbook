@@ -1,4 +1,6 @@
-# Decoding Job Descriptions
+---
+title: Decoding Job Descriptions
+---
 
 ## Why are we here?
 

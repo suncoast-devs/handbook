@@ -1,4 +1,6 @@
-# Rock Paper Scissors!
+---
+title: Rock Paper Scissors!
+---
 
 Create a simple Rock-Paper-Scissors game using C# in which the player plays against a computer.
 

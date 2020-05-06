@@ -1,4 +1,6 @@
-# Calculator Fun
+---
+title: Calculator Fun
+---
 
 Practice is key to gaining the mileage needed conquer programming. A very common practice problem is to recreate a working calculator. A basic calculator is a good exercise in using state, effects and components to create a powerful and robust UI.
 

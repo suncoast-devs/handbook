@@ -1,4 +1,6 @@
-# Adding OAuth authentication to our application using [auth0](https://auth0.com)
+---
+title: Adding OAuth authentication to our application using [auth0](https://auth0.com)
+---
 
 _NOTE_ This assumes you created an `API` + `React` app using the `sdg-react` template
 

@@ -1,4 +1,6 @@
-# Additional resources for Flexbox
+---
+title: Additional resources for Flexbox
+---
 
 - [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)
 - [A Complete Guide to Flexbox - by CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

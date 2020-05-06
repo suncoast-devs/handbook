@@ -1,4 +1,6 @@
-# Lessons are cool
+---
+title: Lessons are cool
+---
 
 ## Stand up
 

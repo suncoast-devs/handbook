@@ -1,4 +1,6 @@
-# Travel Together!
+---
+title: Travel Together!
+---
 
 Your team has been contracted by the city of St Pete to build out a site about local tourism. Luckily for us, our team has a designer and has completed their mocks up of what they envision the site to look like. Your task is, in small groups (2-3) pair program and recreate the site as close as possible.
 

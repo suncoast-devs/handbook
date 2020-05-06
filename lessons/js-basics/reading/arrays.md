@@ -1,7 +1,9 @@
 import CodePen from '@handbook/CodePen'
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
-# Arrays
+---
+title: Arrays
+---
 
 An array is an ordered set of values that you refer to with a name and an index. For example, you could have an array called `employees` that contains employees' names indexed by their numerical employee number. So `employee[1]` would be employee number one, `employee[2]` employee number two, and so on.
 

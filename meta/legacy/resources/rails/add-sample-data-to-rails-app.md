@@ -1,4 +1,6 @@
-# How to add sample data to a Rails application
+---
+title: How to add sample data to a Rails application
+---
 
 Often times when developing an application we want to have sample data in our database. We *could* do this with `rails console` and using our models to create instances of models. However, this is not repeatable and we often forget how we created this sample data.
 

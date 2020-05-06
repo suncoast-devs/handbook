@@ -1,4 +1,6 @@
-# Turning In Assignments
+---
+title: Turning In Assignments
+---
 
 Assigned homework appear in your `issues` repository on GitHub. Follow these steps to turn in, and get credit for your homework.
 

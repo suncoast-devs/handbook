@@ -1,4 +1,6 @@
-# Distance Learning!
+---
+title: Distance Learning!
+---
 
 During the next few weeks, to practice social distancing, we are running the course online. This serves as documentation to guide us through this new process.
 

@@ -1,4 +1,6 @@
-# HTML text fundamentals
+---
+title: HTML text fundamentals
+---
 
 One of HTML's main jobs is to give text structure and meaning (also known as semantics) so that a browser can display it correctly. This article explains the way HTML can be used to structure a page of text by adding headings and paragraphs, emphasizing words, creating lists, and more.
 

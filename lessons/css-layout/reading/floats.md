@@ -1,8 +1,13 @@
+---
+title: Floats
+---
+
 import CodePen from '@handbook/CodePen'
 
-# Floats
-
-Floating an element changes the behavior of that element and the block level elements that follow it in normal flow. The element is moved to the left or right and removed from normal flow, and the surrounding content floats around the floated item.
+Floating an element changes the behavior of that element and the block level
+elements that follow it in normal flow. The element is moved to the left or
+right and removed from normal flow, and the surrounding content floats around
+the floated item.
 
 ## The float property has four possible values:
 
@@ -16,9 +21,13 @@ Floating an element changes the behavior of that element and the block level ele
 
 <CodePen>
 
-In the example below we float a `<div>` left, and give it a margin on the right to push the text away from the element. This gives us the effect of text wrapped around that box, and is most of what you need to know about floats as used in modern web design.
+In the example below we float a `<div>` left, and give it a margin on the right
+to push the text away from the element. This gives us the effect of text wrapped
+around that box, and is most of what you need to know about floats as used in
+modern web design.
 
-> Try removing the `float: left` and see what happens. Or change this to `float: right`
+> Try removing the `float: left` and see what happens. Or change this to
+> `float: right`
 
 <pre data-lang='html'>
 {`
@@ -62,7 +71,10 @@ p {
 
 > WOW, AMAZING, SUCH CONTROL.
 
-Floats are very powerful and for a long time they were the primary means of controlling the layout of a page. However, now that we have _Flexbox_ and _Grids_ the use of `float` is returning to it's natural use to allow some elements to float around others.
+Floats are very powerful and for a long time they were the primary means of
+controlling the layout of a page. However, now that we have _Flexbox_ and
+_Grids_ the use of `float` is returning to it's natural use to allow some
+elements to float around others.
 
 You will, on _legacy projects_ still see `float` used for layout.
 

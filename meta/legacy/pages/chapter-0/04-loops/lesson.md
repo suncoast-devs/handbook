@@ -1,4 +1,6 @@
-# Loops = For and While
+---
+title: Loops = For and While
+---
 
 Introduce students to the idea of loops. This is part 1 of 2. Part 2 is Arrays and lists
 

@@ -1,4 +1,6 @@
-# Welcome to Jurassic Park
+---
+title: Welcome to Jurassic Park
+---
 
 So far you have traveled far in your learning and will continue to explore it more in-depth in the coming weeks. Like any good craftsman, practice turns into mastery. Tonight, you will be creating a simple console application that manages a zoo full of dinosaurs.
 

@@ -1,6 +1,8 @@
 import { FullScreenCode, Notes, Split } from "mdx-deck";
 
-# What is HTML?
+---
+title: What is HTML?
+---
 
 - HTML (Hypertext Markup Language) is a markup language
 - Used to tell your browser how to structure the web pages

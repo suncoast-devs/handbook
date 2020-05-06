@@ -1,4 +1,6 @@
-# One little spark; of inspiration.
+---
+title: One little spark; of inspiration.
+---
 
 ## General Requirements:
 

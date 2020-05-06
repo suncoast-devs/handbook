@@ -1,4 +1,6 @@
-# "Challenge: Quest for the Holy Grail"
+---
+title: Challenge: Quest for the Holy Grail"
+---
 
 From Wikipedia:
 

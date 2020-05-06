@@ -1,4 +1,6 @@
-# Variables, Variables, and Variables
+---
+title: Variables, Variables, and Variables
+---
 
 # Let's get started
 

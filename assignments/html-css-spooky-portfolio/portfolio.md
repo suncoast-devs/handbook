@@ -1,8 +1,11 @@
-# TODO: update to https://colorlib.com/preview/#riddle
+---
+title: A Portfolio
+---
 
-# A Portfolio
+<!-- TODO: update to https://colorlib.com/preview/#riddle -->
 
-For your first weekend project, we're going to be starting work on a portfolio website that you can improve over the rest of your career.
+For your first weekend project, we're going to be starting work on a portfolio
+website that you can improve over the rest of your career.
 
 ![Mockup](https://raw.githubusercontent.com/tiy-tpa-fee/assignments/master/portfolio/mockup.png)
 
@@ -22,22 +25,28 @@ Also, feel free to change it from Jason's picture to a picture of yourself.
 
 ## Requirements
 
-- Initially, you should implement the design as close as possible to the mockup. Later, you might choose to fit your personality/style.
+- Initially, you should implement the design as close as possible to the mockup.
+  Later, you might choose to fit your personality/style.
 
-- **Note**: You should complete at least the tasks given for _explorer_ mode as listed below before turning in the assignment, as well as before attempting _adventure_ or _epic_ modes.
+- **Note**: You should complete at least the tasks given for _explorer_ mode as
+  listed below before turning in the assignment, as well as before attempting
+  _adventure_ or _epic_ modes.
 
 ### Explorer Mode
 
-- [ ] Recreate the page as closely as you possibly can. Use the same fonts, sizes, and colors.
+- [ ] Recreate the page as closely as you possibly can. Use the same fonts,
+      sizes, and colors.
 - [ ] Make sure the site is responsive.
 - [ ] Deploy your site
 
 ### Adventure Mode
 
-- [ ] Take the time to personalize the site with information about yourself, links to your projects, and your pictures.
+- [ ] Take the time to personalize the site with information about yourself,
+      links to your projects, and your pictures.
 - [ ] Keep it professional, but make it your own.
 
 ### Epic Mode
 
 - [ ] Go back and work on the adventure or epic mode for a past assignment.
-- [ ] Start to research [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [ ] Start to research
+      [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

@@ -1,13 +1,18 @@
-import CodePen from '@handbook/CodePen'
+---
+title: Operators
+---
+
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
-# Operators
+This section describes JavaScript's expressions and operators, including
+assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
-This section describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
+A complete and detailed list of operators and expressions is also available in
+the
+[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
-A complete and detailed list of operators and expressions is also available in the [ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
-
-JavaScript has the following types of operators. This section describes the operators and contains information about operator precedence.
+JavaScript has the following types of operators. This section describes the
+operators and contains information about operator precedence.
 
 - Assignment operators
 - Comparison operators
@@ -22,9 +27,13 @@ JavaScript has the following types of operators. This section describes the oper
 
 ## Assignment operators
 
-An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (=), which assigns the value of its right operand to its left operand. That is, x = y assigns the value of y to x.
+An assignment operator assigns a value to its left operand based on the value of
+its right operand. The simple assignment operator is equal (=), which assigns
+the value of its right operand to its left operand. That is, x = y assigns the
+value of y to x.
 
-There are also compound assignment operators that are shorthand for the operations listed in the following table:
+There are also compound assignment operators that are shorthand for the
+operations listed in the following table:
 
 | Name                            | Shorthand operator | Meaning       |
 | ------------------------------- | ------------------ | ------------- |
@@ -45,7 +54,10 @@ There are also compound assignment operators that are shorthand for the operatio
 
 **Destructuring Assignment**
 
-For more complex assignments, the destructuring assignment syntax is a JavaScript expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals.
+For more complex assignments, the destructuring assignment syntax is a
+JavaScript expression that makes it possible to extract data from arrays or
+objects using a syntax that mirrors the construction of array and object
+literals.
 
 ```js
 let numbers = ["one", "two", "three"];
@@ -61,7 +73,16 @@ let [one, two, three] = numbers;
 
 ## Comparison Operators
 
-A comparison operator compares its operands and returns a logical value based on whether the comparison is true. The operands can be numerical, string, logical, or object values. Strings are compared based on standard ordering. In most cases, if the two operands are not of the same type, JavaScript attempts to convert them to an appropriate type for the comparison. This behavior generally results in comparing the operands numerically. The sole exceptions to type conversion within comparisons involve the === and !== operators, which perform strict equality and inequality comparisons. These operators do not attempt to convert the operands to compatible types before checking equality. The following table describes the comparison operators in terms of this sample code:
+A comparison operator compares its operands and returns a logical value based on
+whether the comparison is true. The operands can be numerical, string, logical,
+or object values. Strings are compared based on standard ordering. In most
+cases, if the two operands are not of the same type, JavaScript attempts to
+convert them to an appropriate type for the comparison. This behavior generally
+results in comparing the operands numerically. The sole exceptions to type
+conversion within comparisons involve the === and !== operators, which perform
+strict equality and inequality comparisons. These operators do not attempt to
+convert the operands to compatible types before checking equality. The following
+table describes the comparison operators in terms of this sample code:
 
 ```js
 let var1 = 3;
@@ -82,14 +103,20 @@ let var2 = 4;
 
 ## Arithmetic operators
 
-An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces Infinity). For example:
+An arithmetic operator takes numerical values (either literals or variables) as
+their operands and returns a single numerical value. The standard arithmetic
+operators are addition (+), subtraction (-), multiplication (\*), and division
+(/). These operators work as they do in most other programming languages when
+used with floating point numbers (in particular, note that division by zero
+produces Infinity). For example:
 
 ```js
 1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 ```
 
-In addition to the standard arithmetic operations (+, -, \* /), JavaScript provides the arithmetic operators listed in the following table:
+In addition to the standard arithmetic operations (+, -, \* /), JavaScript
+provides the arithmetic operators listed in the following table:
 
 | Operator                       | Description                                                                                                                                                                                                                  | Example                                                                                                               |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -103,9 +130,14 @@ In addition to the standard arithmetic operations (+, -, \* /), JavaScript provi
 
 ## Bitwise operators
 
-<AdvancedTopic message={`Bitwise operators aren't used very often, but they are useful to understand`}>
+<AdvancedTopic
+message={`Bitwise operators aren't used very often, but they are useful to understand`}>
 
-A bitwise operator treats their operands as a set of 32 bits (zeros and ones), rather than as decimal, hexadecimal, or octal numbers. For example, the decimal number nine has a binary representation of `1001`. Bitwise operators perform their operations on such binary representations, but they return standard JavaScript numerical values.
+A bitwise operator treats their operands as a set of 32 bits (zeros and ones),
+rather than as decimal, hexadecimal, or octal numbers. For example, the decimal
+number nine has a binary representation of `1001`. Bitwise operators perform
+their operations on such binary representations, but they return standard
+JavaScript numerical values.
 
 The following table summarizes JavaScript's bitwise operators.
 
@@ -143,7 +175,11 @@ Bitwise shift operators
 
 ## Logical operators
 
-Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value. The logical operators are described in the following table.
+Logical operators are typically used with Boolean (logical) values; when they
+are, they return a Boolean value. However, the && and || operators actually
+return the value of one of the specified operands, so if these operators are
+used with non-Boolean values, they may return a non-Boolean value. The logical
+operators are described in the following table.
 
 | Operator           | Usage            | Description                                                                                                                                                                                      |
 | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

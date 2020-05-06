@@ -1,4 +1,6 @@
-# Sample Questions
+---
+title: Sample Questions
+---
 
 Technical interviews is a skill that requires practice. We have gathered some sample questions that we have heard are used or have been used by community members in hiring. These are not the only questions out there, but the types of questions that might be. 
 

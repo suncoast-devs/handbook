@@ -1,4 +1,6 @@
-# Build a sample site
+---
+title: Build a sample site
+---
 
 Build a simple fan page for something you like
 

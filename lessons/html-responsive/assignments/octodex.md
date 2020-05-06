@@ -1,4 +1,6 @@
-# Octodex
+---
+title: Octodex
+---
 
 GitHub has a great mascot called OctoCat. OctoCat even has its own gallery of variations, created by GitHub itself and fans, called [Octodex](https://octodex.github.com).
 

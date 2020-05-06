@@ -1,4 +1,6 @@
-# ORM Safari!
+---
+title: ORM Safari!
+---
 
 We are taking a surprise trip to the Savannah for a safari to see all sorts of exotic animals. During our time there we want to keep track of all the animals we have seen. For this, we need to create a database, as well as a small console application to help record what we see.
 

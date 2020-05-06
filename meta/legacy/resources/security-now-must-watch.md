@@ -1,4 +1,6 @@
-# How the Internet Works
+---
+title: How the Internet Works
+---
 
 ### Part One
 

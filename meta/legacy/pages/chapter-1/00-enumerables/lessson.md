@@ -1,4 +1,6 @@
-# Methods and intro to LINQ
+---
+title: Methods and intro to LINQ
+---
 
 Since this is coming off of blackjack, this lesson serves as a both a review and futhering of knowledge. At a high level, you will be rebuilding blackjack live, as well as using some new tools
 

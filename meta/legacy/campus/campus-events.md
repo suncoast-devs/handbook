@@ -1,4 +1,6 @@
-# Campus Events
+---
+title: Campus Events
+---
 
 We host various Meetups, Crash Courses, and other events on campus. This is your place to stay up to date on all events on campus along with special events off campus we feel you should know about.
 

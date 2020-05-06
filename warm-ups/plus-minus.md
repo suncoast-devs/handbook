@@ -1,3 +1,5 @@
-# "Plus Minus %"
+---
+title: Plus Minus %"
+---
 
 https://www.hackerrank.com/challenges/plus-minus/problem

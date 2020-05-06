@@ -1,4 +1,6 @@
-# The Rise of the Tamagotchi
+---
+title: The Rise of the Tamagotchi
+---
 
 To start your journey you will be creating an API that allows a user to create and care for a virtual pet, reminiscent of a [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi). The basic functionality will walk you through the 4 basic parts of a web API, create, read, update and delete. For explorer mode, keep it simple and they add features.
 

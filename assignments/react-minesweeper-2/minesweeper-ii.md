@@ -1,4 +1,6 @@
-# A mine!
+---
+title: A mine!
+---
 
 This morning we did a couple of couple of code reviews. Take these lessons and finish up your minesweeper apps.
 

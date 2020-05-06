@@ -1,7 +1,5 @@
-import CodePen from '@handbook/CodePen'
-
-# React State
-
+---
+title: React State
 ---
 
 ## React is based on `Components`
@@ -154,7 +152,10 @@ class Person extends Component {
 
 ### componentDidMount
 
-> `componentDidMount()` is invoked immediately after a component is mounted (inserted into the tree). Initialization that requires DOM nodes should go here. If you need to load data from a remote endpoint, this is a good place to instantiate the network request.
+> `componentDidMount()` is invoked immediately after a component is mounted
+> (inserted into the tree). Initialization that requires DOM nodes should go
+> here. If you need to load data from a remote endpoint, this is a good place to
+> instantiate the network request.
 
 #### source: https://reactjs.org/docs/react-component.html#componentdidmount
 

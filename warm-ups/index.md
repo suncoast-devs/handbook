@@ -1,4 +1,6 @@
-# Front End Warm-ups
+---
+title: Front End Warm-ups
+---
 
 1.  [Challenge: Map and reduce](/handbook/curriculum/front-end/warm-ups/map-and-reduce)
 2.  [Challenge: Explode](/handbook/curriculum/front-end/warm-ups/explode)

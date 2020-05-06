@@ -1,4 +1,6 @@
-# Crypto Ticker
+---
+title: Crypto Ticker
+---
 
 In this project you'll use React and a 3rd-party API as a data to create a real-time price tracker for some popular cryptocurrencies.
 

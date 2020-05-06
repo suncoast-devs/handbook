@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# Hello, React
+---
+title: Hello, React
+---
 
 ## Day One - Hello, react
 
@@ -8,7 +8,8 @@ import CodePen from '@handbook/CodePen'
 - create-react-app (ADD TIME)
 
   - tool built by developers at Facebook to help you build React applications.
-  - It saves you from time-consuming setup and configuration. Simply run create-react-app command to create and start a new react project.
+  - It saves you from time-consuming setup and configuration. Simply run
+    create-react-app command to create and start a new react project.
   - `create-react-app name-of-your-app`
   - `yarn install` then `yarn start` since we are using `yarn` not `npm`
   - `localhost:3000` (browser)
@@ -17,14 +18,17 @@ import CodePen from '@handbook/CodePen'
   - both are package managers
   - yarn is slightly better (for the moment)
 - [Components](https://reactjs.org/docs/glossary.html#components)
-  - React components are small, reusable pieces of code that return a React element to be rendered to the page
+  - React components are small, reusable pieces of code that return a React
+    element to be rendered to the page
 - Props
   - attribute of a component
-  - Most components can be customized when they are created, with different parameters. These creation parameters are called props.
+  - Most components can be customized when they are created, with different
+    parameters. These creation parameters are called props.
 - Rendering multiple components (i.e. map)
   - render method renders only one DOM element
   - DOM element can have as many children as it wants
-- `import React, { Component } from "react";` this boilerplate almost always goes on top of every react component
+- `import React, { Component } from "react";` this boilerplate almost always
+  goes on top of every react component
 
 - [react-article-demo](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
   (approx 00:39:35)
@@ -64,8 +68,7 @@ import CodePen from '@handbook/CodePen'
 
   - `<div className="all-main-content"> ... </div>`
 
-- [Props](https://reactjs.org/docs/components-and-props.html)
-  (approx 01:12:10)
+- [Props](https://reactjs.org/docs/components-and-props.html) (approx 01:12:10)
 
   ```js
   import React, { Component } from "react";
@@ -101,8 +104,11 @@ import CodePen from '@handbook/CodePen'
 
   - Article.js
 
-    - `this.props.title` will render out each title property in Articles component ("Gavin can't spell Article", "What is wrong with Gavin", "Sending Gavin back to school", "React is cool" )
-    - `this.props.content` will render out each content property in Articles component as `this.props.title` did with title property
+    - `this.props.title` will render out each title property in Articles
+      component ("Gavin can't spell Article", "What is wrong with Gavin",
+      "Sending Gavin back to school", "React is cool" )
+    - `this.props.content` will render out each content property in Articles
+      component as `this.props.title` did with title property
     - You can create unlimited different articles using Article component
 
     ```js
@@ -128,8 +134,7 @@ import CodePen from '@handbook/CodePen'
     export default Article;
     ```
 
-- Loading Props data from somewhere else
-  (approx 01:24:00)
+- Loading Props data from somewhere else (approx 01:24:00)
 
   ```js
   import React, { Component } from "react";
@@ -165,9 +170,11 @@ import CodePen from '@handbook/CodePen'
   export default Articles;
   ```
 
-- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview) review (approx 1:32:25)
+- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview)
+  review (approx 1:32:25)
 
-  - The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+  - The map() method creates a new array with the results of calling a provided
+    function on every element in the calling array.
 
   ```js
     data = [
@@ -246,5 +253,7 @@ import CodePen from '@handbook/CodePen'
 ## Today's work
 
 - Class Demo: Adventure Time (Basic)
-- Suggested Assignment Focusing on Components: [Reactified Octocats](/handbook/curriculum/front-end/react-i/assignments/reactified-octocats)
-- Suggested Assignment: [Party Like it's 1989!](/handbook/curriculum/front-end/react-i/assignments/party-like-its-1989)
+- Suggested Assignment Focusing on Components:
+  [Reactified Octocats](/handbook/curriculum/front-end/react-i/assignments/reactified-octocats)
+- Suggested Assignment:
+  [Party Like it's 1989!](/handbook/curriculum/front-end/react-i/assignments/party-like-its-1989)

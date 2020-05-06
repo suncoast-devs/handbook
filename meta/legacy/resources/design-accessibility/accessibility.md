@@ -1,4 +1,6 @@
-# Web Accessibility
+---
+title: Web Accessibility
+---
 
 ## Why is it important?
 - People with disabilities should able to easily access the web content.

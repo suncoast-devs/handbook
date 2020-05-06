@@ -1,4 +1,6 @@
-# Setup for Assignments
+---
+title: Setup for Assignments
+---
 
 During this course, you create many projects. It's essential to know how to set up a new project.
 

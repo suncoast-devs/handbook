@@ -1,4 +1,6 @@
-# Important terminology
+---
+title: Important terminology
+---
 
 The world of .NET comes with many keywords and terms to learn and understand, here we talk about the standard, most essential terms.
 

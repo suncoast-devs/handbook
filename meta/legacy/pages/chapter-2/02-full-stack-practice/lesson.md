@@ -1,4 +1,6 @@
-# Working with full stack
+---
+title: Working with full stack
+---
 
 NOTE: this lesson is planned with the fact the class did not turn in the weekend assignment, there the assumption is made that they are struggling
 

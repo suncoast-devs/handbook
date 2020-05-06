@@ -1,4 +1,6 @@
-# "Discussion: History of Web Design"
+---
+title: Discussion: History of Web Design"
+---
 
 Read [A brief history of web design for designers](http://blog.froont.com/brief-history-of-web-design-for-designers).
 

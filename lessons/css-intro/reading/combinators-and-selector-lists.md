@@ -1,4 +1,6 @@
-# Combinators and selector lists
+---
+title: Combinators and selector lists
+---
 
 Using one selector at a time is useful, but can be inefficient in some situations. CSS selectors become even more useful when you start combining them to perform fine-grained selections. CSS has several ways to select elements based on how they are related to one another.
 

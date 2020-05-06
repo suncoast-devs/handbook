@@ -1,4 +1,6 @@
-# Functions
+---
+title: Functions
+---
 
 In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the developer and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions with `rgb()`, `hsl()`, etc.
 

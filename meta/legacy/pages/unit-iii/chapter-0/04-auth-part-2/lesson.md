@@ -1,4 +1,6 @@
-# Auth in Hiking
+---
+title: Auth in Hiking
+---
 
 ## Stand up!
 

@@ -1,4 +1,6 @@
-# Full Env Set up
+---
+title: Full Env Set up
+---
 
 This is a walkthough of the all the tools, templates, and software to setup a new computer. This is targeted towards people who have been through the cohort and need to setup a new machine.
 

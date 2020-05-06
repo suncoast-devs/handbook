@@ -1,4 +1,6 @@
-# unit iii: full stack development
+---
+title: unit iii: full stack development
+---
 
 During this unit, students will practice, build and explore building full stack apps through practice and application. During this time, more advanced topics are also covered, at the discretion of the instructor.
 

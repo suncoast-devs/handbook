@@ -1,4 +1,6 @@
-# Foreign Keys - The SQL
+---
+title: Foreign Keys - The SQL
+---
 
 As we continue to explore databases and ideas, this project will help you practice model databases and relationships, as well as help you get started on your capstone project.
 

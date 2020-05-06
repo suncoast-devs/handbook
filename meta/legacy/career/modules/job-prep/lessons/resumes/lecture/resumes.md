@@ -1,4 +1,6 @@
-# Resumes 
+---
+title: Resumes 
+---
 
 ## Key areas of Information:
 

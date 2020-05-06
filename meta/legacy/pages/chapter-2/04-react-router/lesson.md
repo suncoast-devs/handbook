@@ -1,4 +1,6 @@
-# Intro to react router
+---
+title: Intro to react router
+---
 
 ## Stand up:
 

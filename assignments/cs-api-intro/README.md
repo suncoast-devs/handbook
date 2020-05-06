@@ -1,4 +1,6 @@
-# Explosion API
+---
+title: Explosion API
+---
 
 You have already solved the `explosion` and `mumbling` katas. The client loves your solution so much that they want you to turn it into an API us on the web.
 

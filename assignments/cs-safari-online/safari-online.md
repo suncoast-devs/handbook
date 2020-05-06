@@ -1,4 +1,6 @@
-# Take the Safari Online.
+---
+title: Take the Safari Online.
+---
 
 ## Let's Continue our safari adventure
 

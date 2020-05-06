@@ -1,8 +1,12 @@
+---
+title: Pseudo Elements
+---
+
 import CodePen from '@handbook/CodePen'
 
-# Pseudo Elements
-
-Pseudo-elements are very much like pseudo-classes, but they have differences. They are keywords, this time preceded by two colons `::`, that can be added to the end of selectors to select a certain part of an element.
+Pseudo-elements are very much like pseudo-classes, but they have differences.
+They are keywords, this time preceded by two colons `::`, that can be added to
+the end of selectors to select a certain part of an element.
 
 - [`::after`](https://developer.mozilla.org/en-US/docs/Web/CSS/::after)
 - [`::before`](https://developer.mozilla.org/en-US/docs/Web/CSS/::before)
@@ -15,7 +19,8 @@ Pseudo-elements are very much like pseudo-classes, but they have differences. Th
 
 <CodePen>
 
-Let's create two classes: one for boring paragraphs and one for exciting ones. We can use these classes to add pseudo-elements to the end of paragraphs.
+Let's create two classes: one for boring paragraphs and one for exciting ones.
+We can use these classes to add pseudo-elements to the end of paragraphs.
 
 <pre data-lang='html'>
 {`
@@ -45,7 +50,8 @@ Let's create two classes: one for boring paragraphs and one for exciting ones. W
 
 <CodePen>
 
-This example uses ::after, in conjunction with the attr() CSS expression and a data-descr custom data attribute, to create tooltips. No JavaScript is required!
+This example uses ::after, in conjunction with the attr() CSS expression and a
+data-descr custom data attribute, to create tooltips. No JavaScript is required!
 
 <pre data-lang='html'>
 {`

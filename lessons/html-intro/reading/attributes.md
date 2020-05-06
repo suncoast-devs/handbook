@@ -1,4 +1,6 @@
-## Attributes
+---
+title: # Attributes
+---
 
 Elements can also have attributes, which look like this:
 

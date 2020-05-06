@@ -1,4 +1,6 @@
-# React-ify Octocats
+---
+title: React-ify Octocats
+---
 
 The Octodex is a fun way to celebrate a powerful tool we use for development. In that same spirit, recreate [this site](https://octodex.github.com/)
 

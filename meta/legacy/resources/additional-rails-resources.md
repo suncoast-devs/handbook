@@ -1,4 +1,6 @@
-# Additional Rails Resources
+---
+title: Additional Rails Resources
+---
 
 ## How-to:
 

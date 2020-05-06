@@ -1,4 +1,6 @@
-# Stand up
+---
+title: Stand up
+---
 
 @channel Good Morning, to kick things off today in our virtual stand up, reply to this message with your answer:
 

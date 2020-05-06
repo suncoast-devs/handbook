@@ -1,8 +1,11 @@
+---
+title: Build a page mobile first.
+---
+
 import CodePen from '@handbook/CodePen'
 
-# Build a page mobile first.
-
-In this section we will build a page to display the members of our team and some paragraphs of text about them.
+In this section we will build a page to display the members of our team and some
+paragraphs of text about them.
 
 Here is a sketch of the site we will make:
 
@@ -12,7 +15,9 @@ Here is a sketch of the site we will make:
 
 <CodePen>
 
-We start by placing the content on the page without any concern for the HTML structure or CSS style. By getting the content on the page first we can work on structure and style in an incremental manner.
+We start by placing the content on the page without any concern for the HTML
+structure or CSS style. By getting the content on the page first we can work on
+structure and style in an incremental manner.
 
 <pre data-lang='html'>
 {`
@@ -63,9 +68,11 @@ procedural, scalar. Anomoly inversion prompt debugged generator deviation.
 
 <CodePen>
 
-The next step is to apply semantics to the HTML to give the document a structure.
+The next step is to apply semantics to the HTML to give the document a
+structure.
 
-Even applying this level of structure we can already see the design of the page emerging.
+Even applying this level of structure we can already see the design of the page
+emerging.
 
 <pre data-lang='html'>
 {`
@@ -128,7 +135,9 @@ Even applying this level of structure we can already see the design of the page 
 
 <CodePen>
 
-Now we will add styling to the page to represent the format of the page in it's narrow, mobile view. By adding a little more CSS to our page we have a closer representation of the design.
+Now we will add styling to the page to represent the format of the page in it's
+narrow, mobile view. By adding a little more CSS to our page we have a closer
+representation of the design.
 
 <pre data-lang='html'>
 {`
@@ -247,20 +256,27 @@ aside ul li a {
 
 When the page is wider lets make a number of changes:
 
-1. When wider, lets put the list of team members on the side. We'll make this happen via `flexbox`
+1. When wider, lets put the list of team members on the side. We'll make this
+   happen via `flexbox`
 2. When wider, lets replace our text at the top of the page with our logo
 
 <CodePen>
 
-To achieve this we can add CSS rules to our page that only apply under certain conditions. We do this with a new element called a `media query` -- The _media query_ works by using the `@media` directive and a conditional statement that controls when the contained CSS rules apply.
+To achieve this we can add CSS rules to our page that only apply under certain
+conditions. We do this with a new element called a `media query` -- The _media
+query_ works by using the `@media` directive and a conditional statement that
+controls when the contained CSS rules apply.
 
-See the new CSS added at the end and within the `@media all and (min-width: 800px)` block.
+See the new CSS added at the end and within the
+`@media all and (min-width: 800px)` block.
 
 To see the effect you can either:
 
 - Click the `0.5x` or `0.25x` buttons
-- or click on the codepen icon to open the sample full screen and then adjust your browser width.
-- If you click on the codepen icon, try resizing your browser to just wider and narrower than 800px and you will see the site switch between the two styles.
+- or click on the codepen icon to open the sample full screen and then adjust
+  your browser width.
+- If you click on the codepen icon, try resizing your browser to just wider and
+  narrower than 800px and you will see the site switch between the two styles.
 
 ```css
 @media condition {
@@ -271,7 +287,9 @@ To see the effect you can either:
 }
 ```
 
-When the condition is true, the CSS rules within will be active as if they were directly placed in the CSS file. When the condition is false, those CSS rules will **not** be applied to the page.
+When the condition is true, the CSS rules within will be active as if they were
+directly placed in the CSS file. When the condition is false, those CSS rules
+will **not** be applied to the page.
 
 <pre data-lang='html'>
 {`
@@ -426,9 +444,12 @@ We can also adjust the content itself under different media query conditions.
 
 <CodePen>
 
-When the page is wider lets show the team member's email addresses as well as adding an icon.
+When the page is wider lets show the team member's email addresses as well as
+adding an icon.
 
-In order to do this we will add a data-email attribute to each team member's a tag. We can then access this data from the CSS and have it displayed in an after pseudo selector.
+In order to do this we will add a data-email attribute to each team member's a
+tag. We can then access this data from the CSS and have it displayed in an after
+pseudo selector.
 
 ```css
 /* When wider than 1000 pixels, we will create an `after` element for all `a` elements in the team member list */
@@ -462,7 +483,9 @@ In order to do this we will add a data-email attribute to each team member's a t
 }
 ```
 
-To best see the results, click on the _codepen_ icon to open the page full width, then slowing shrink the width of the page to see the effect of the CSS for the `aside`.
+To best see the results, click on the _codepen_ icon to open the page full
+width, then slowing shrink the width of the page to see the effect of the CSS
+for the `aside`.
 
 <pre data-lang='html'>
 {`

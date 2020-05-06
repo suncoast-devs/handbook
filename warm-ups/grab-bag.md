@@ -1,4 +1,6 @@
-# flash project - Grab Bag
+---
+title: flash project - Grab Bag
+---
 
 Grab Bag
 

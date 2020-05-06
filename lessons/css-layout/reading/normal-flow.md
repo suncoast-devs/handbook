@@ -1,16 +1,23 @@
+---
+title: Normal Flow
+---
+
 import CodePen from '@handbook/CodePen'
 
-# Normal Flow
-
-Normal flow is how the browser lays out HTML pages by default when you do nothing to control page layout.
+Normal flow is how the browser lays out HTML pages by default when you do
+nothing to control page layout.
 
 Let's look at a quick HTML example:
 
 <CodePen>
 
-Note here how the HTML is displayed in the exact order in which it appears in the source code, with elements stacked up on top of one another — the first paragraph, followed by the unordered list, followed by the second paragraph.
+Note here how the HTML is displayed in the exact order in which it appears in
+the source code, with elements stacked up on top of one another — the first
+paragraph, followed by the unordered list, followed by the second paragraph.
 
-The elements that appear one below the other are described as block elements, in contrast to inline elements, which appear one beside the other, like the individual words in a paragraph.
+The elements that appear one below the other are described as block elements, in
+contrast to inline elements, which appear one beside the other, like the
+individual words in a paragraph.
 
 <pre data-lang='html'>
 {`
@@ -36,7 +43,11 @@ The elements that appear one below the other are described as block elements, in
 
 ---
 
-When you use CSS to create a layout, you are moving the elements away from the normal flow, but for many of the elements on your page the normal flow will create exactly the layout you need. This is why starting with a well-structured HTML document is so important, as you can then work with the way things are laid out by default rather than fighting against it.
+When you use CSS to create a layout, you are moving the elements away from the
+normal flow, but for many of the elements on your page the normal flow will
+create exactly the layout you need. This is why starting with a well-structured
+HTML document is so important, as you can then work with the way things are laid
+out by default rather than fighting against it.
 
 The methods that can change how elements are laid out in CSS are as follows:
 
@@ -51,6 +62,10 @@ The methods that can change how elements are laid out in CSS are as follows:
 
 # The Display Property
 
-Primarily what we will be covering is using the `display` property to control flow. Every element in CSS has a default `display` property which gives it a natural flow in the page. When discussing customizing a layout the two most important values are `display: flex` and `display: grid` In this lesson we will primarily cover `display: flex`
+Primarily what we will be covering is using the `display` property to control
+flow. Every element in CSS has a default `display` property which gives it a
+natural flow in the page. When discussing customizing a layout the two most
+important values are `display: flex` and `display: grid` In this lesson we will
+primarily cover `display: flex`
 
 ---

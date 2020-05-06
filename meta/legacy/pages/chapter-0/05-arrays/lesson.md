@@ -1,4 +1,6 @@
-# Arrays and Lists
+---
+title: Arrays and Lists
+---
 
 part 2 of 2, use in conjunction with loops. This will walk students through the basics of Arrays and lists in C#
 

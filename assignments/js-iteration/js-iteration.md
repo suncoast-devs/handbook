@@ -1,4 +1,6 @@
-# JavaScript Iteration
+---
+title: JavaScript Iteration
+---
 
 ## Objectives
 

@@ -1,4 +1,6 @@
-# High Level Schedule
+---
+title: High Level Schedule
+---
 
 ## Week 1
 

@@ -1,4 +1,6 @@
-# Music Madness
+---
+title: Music Madness
+---
 
 For tonight, I want you to show off what you favorite music is. You will be creating a multiple page app, using react-router.
 

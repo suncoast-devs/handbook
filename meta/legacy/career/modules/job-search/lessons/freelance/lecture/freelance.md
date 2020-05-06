@@ -1,4 +1,6 @@
-# Freelancing Resources & Pro Tips to Get Hired
+---
+title: Freelancing Resources & Pro Tips to Get Hired
+---
 
 ## What is freelance?
 

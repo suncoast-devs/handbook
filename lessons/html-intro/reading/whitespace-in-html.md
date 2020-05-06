@@ -1,4 +1,6 @@
-## Whitespace in HTML
+---
+title: # Whitespace in HTML
+---
 
 In the above examples you may have noticed that a lot of whitespace is included in the code listings — this is not necessary at all; the two following code snippets are equivalent:
 

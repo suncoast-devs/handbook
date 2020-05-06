@@ -1,4 +1,6 @@
-# Lecture topics to do
+---
+title: Lecture topics to do
+---
 
 ## Once you pick a video, send a pull request with your name added next to it
 

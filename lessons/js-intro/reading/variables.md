@@ -1,4 +1,6 @@
-# Variables
+---
+title: Variables
+---
 
 Like in most modern programming languages, in JavaScript we store information in `variables.` Variables are placeholders with meaningful names that we use to store a value so that we can refer to it later.
 

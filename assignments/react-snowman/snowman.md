@@ -1,4 +1,6 @@
-# Do you want to build a Snowman?
+---
+title: Do you want to build a Snowman?
+---
 
 In this assignment, you'll build a _less grim_ variation of a popular game:
 

@@ -1,4 +1,6 @@
-# Making decisions and using booleans
+---
+title: Making decisions and using booleans
+---
 
 Introduction to `if` statements and boolean logic
 

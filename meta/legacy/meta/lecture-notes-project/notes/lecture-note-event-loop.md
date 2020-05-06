@@ -1,4 +1,6 @@
-# Event Loop
+---
+title: Event Loop
+---
 
 JavaScript has event loops that are responsible for executing the codes repeatedly. An example life of loop could be when you put **n** sugar' spoons in your cup of coffee until your coffee is enough sweet to go back to code.
 

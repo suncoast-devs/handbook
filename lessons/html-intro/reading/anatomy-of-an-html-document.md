@@ -1,4 +1,6 @@
-# Anatomy of an HTML document
+---
+title: Anatomy of an HTML document
+---
 
 That wraps up the basics of individual HTML elements, but they aren't very useful on their own. Now we'll look at how individual elements are combined to form an entire HTML page:
 

@@ -1,4 +1,6 @@
-# Welcome to Javascript
+---
+title: Welcome to Javascript
+---
 
 (using Cohort XIV lecture notes: https://www.youtube.com/watch?v=kXCmz-GiEeg&list=PLyKTFNBDP80BROdsw5K1Evze5UJ61N7VU&index=2)
 

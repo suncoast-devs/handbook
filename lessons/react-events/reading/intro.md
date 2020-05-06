@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# React User Events and Lifecycle
+---
+title: React User Events and Lifecycle
+---
 
 #### Day Three
 
@@ -62,4 +62,5 @@ React way:
 ##### Today's work
 
 - Demo: Convert Score Board
-- Assignment: [Color Picker](/handbook/curriculum/front-end/react-i/assignments/color-picker)
+- Assignment:
+  [Color Picker](/handbook/curriculum/front-end/react-i/assignments/color-picker)

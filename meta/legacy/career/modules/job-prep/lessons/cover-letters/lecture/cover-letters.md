@@ -1,4 +1,6 @@
-# Cover Letters - Making the Connection
+---
+title: Cover Letters - Making the Connection
+---
 
 ![](./assets/inigo-montoya.png)
 

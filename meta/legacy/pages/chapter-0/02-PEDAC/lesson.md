@@ -1,4 +1,6 @@
-# PEDAC
+---
+title: PEDAC
+---
 
 This should part 1, if statements should be part 2. For this lesson, walk the student through problem solution heuristic called PEDAC.
 

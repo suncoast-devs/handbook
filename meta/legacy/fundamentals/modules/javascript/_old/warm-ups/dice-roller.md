@@ -1,4 +1,6 @@
-# "Challenge: Dice Roller"
+---
+title: Challenge: Dice Roller"
+---
 
 I have seem to have forgotten my dice set at home. Being the developers we are, lets make simple dice roller.
 

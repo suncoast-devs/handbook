@@ -1,4 +1,6 @@
-# How to stand-up
+---
+title: How to stand-up
+---
 
 Daily stand-ups are a tool in agile software development to help keep teams synced up and to help build more efficient lines of communication and keep teams from wasting time. These meetings happen at periodic intervals, usually daily, and at the same time, every time. Stand-ups are short in nature, with the whole meeting taking 5-10 minutes, ideally no more than 15 minutes. During these meetings, that every one on the team attends, each attendee answers three questions:
 

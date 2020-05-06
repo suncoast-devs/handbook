@@ -1,4 +1,6 @@
-# Stress Management
+---
+title: Stress Management
+---
 
 ## Why is it important?
 

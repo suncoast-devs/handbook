@@ -1,4 +1,6 @@
-# I wet my plants!
+---
+title: I wet my plants!
+---
 
 With the seasons changing to spring, it is time to start planting our gardens. For this assignment you will be building a app that allows users to track their gardens. This will us track what plants we have planted, how long ago they were planted and other details.
 

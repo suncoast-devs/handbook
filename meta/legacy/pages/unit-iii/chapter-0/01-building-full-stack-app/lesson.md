@@ -1,4 +1,6 @@
-# Build full stack app
+---
+title: Build full stack app
+---
 
 ## Stand up
 

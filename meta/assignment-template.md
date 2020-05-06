@@ -1,4 +1,6 @@
-# Clever Title
+---
+title: Clever Title
+---
 
 This is a narrative description of the assignment, as prose.
 
