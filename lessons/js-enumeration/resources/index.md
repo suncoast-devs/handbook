@@ -1,4 +1,6 @@
-# Additional resources
+---
+title: Additional resources
+---
 
 ## Map, Reduce, Filter
 

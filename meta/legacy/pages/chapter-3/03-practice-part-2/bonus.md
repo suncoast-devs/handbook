@@ -1,4 +1,6 @@
-# Slackbots Rollout
+---
+title: Slackbots Rollout
+---
 
 We have found APIs to be a deep and complex topic. They are usually used to drive powerful data driven web apps. For this bonus homework assignment, You will be using an API to power a Slack ap.
 

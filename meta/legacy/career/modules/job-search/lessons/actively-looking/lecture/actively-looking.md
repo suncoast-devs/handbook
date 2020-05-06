@@ -1,4 +1,6 @@
-# How to Actively Look for a Job
+---
+title: How to Actively Look for a Job
+---
 
 Applying for jobs can be a full-time job by itself. Here is a checklist that will help you feel prepared as you get ready to start applying.
 

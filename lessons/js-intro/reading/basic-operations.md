@@ -1,13 +1,20 @@
-import CodePen from '@handbook/CodePen'
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
-# Operators
+---
 
-Variables by themselves allow our programs to be dynamic, but in order to make our apps to be more interesting and powerful, we need operations. Operations allow developers to manipulate values and variables to calculate a new value. Most modern programming languages support the same common operations.
+## title: Operators
 
-This section describes JavaScript's expressions and operators, including assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
+Variables by themselves allow our programs to be dynamic, but in order to make
+our apps to be more interesting and powerful, we need operations. Operations
+allow developers to manipulate values and variables to calculate a new value.
+Most modern programming languages support the same common operations.
 
-A complete and detailed list of operators and expressions is also available in the [ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+This section describes JavaScript's expressions and operators, including
+assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
+
+A complete and detailed list of operators and expressions is also available in
+the
+[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
 JavaScript has the following types of operators.
 
@@ -22,13 +29,18 @@ JavaScript has the following types of operators.
 - Unary operators
 - Relational operators
 
-There is not need to learn them all at once, so we are going to start with only a few, and learn more over time.
+There is not need to learn them all at once, so we are going to start with only
+a few, and learn more over time.
 
 ## Assignment operators
 
-An assignment operator assigns a value to its left operand based on the value of its right operand. The simple assignment operator is equal (=), which assigns the value of its right operand to its left operand. That is, x = y assigns the value of y to x.
+An assignment operator assigns a value to its left operand based on the value of
+its right operand. The simple assignment operator is equal (=), which assigns
+the value of its right operand to its left operand. That is, x = y assigns the
+value of y to x.
 
-There are also compound assignment operators that are shorthand for the operations listed in the following table:
+There are also compound assignment operators that are shorthand for the
+operations listed in the following table:
 
 | Name                            | Shorthand operator | Meaning       |
 | ------------------------------- | ------------------ | ------------- |
@@ -49,14 +61,20 @@ There are also compound assignment operators that are shorthand for the operatio
 
 ## Arithmetic operators
 
-An arithmetic operator takes numerical values (either literals or variables) as their operands and returns a single numerical value. The standard arithmetic operators are addition (+), subtraction (-), multiplication (\*), and division (/). These operators work as they do in most other programming languages when used with floating point numbers (in particular, note that division by zero produces Infinity). For example:
+An arithmetic operator takes numerical values (either literals or variables) as
+their operands and returns a single numerical value. The standard arithmetic
+operators are addition (+), subtraction (-), multiplication (\*), and division
+(/). These operators work as they do in most other programming languages when
+used with floating point numbers (in particular, note that division by zero
+produces Infinity). For example:
 
 ```js
 1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 ```
 
-In addition to the standard arithmetic operations (+, -, \* /), JavaScript provides the arithmetic operators listed in the following table:
+In addition to the standard arithmetic operations (+, -, \* /), JavaScript
+provides the arithmetic operators listed in the following table:
 
 | Operator                       | Description                                                                                                                                                                                                                  | Example                                                                                                               |
 | ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
@@ -70,7 +88,11 @@ In addition to the standard arithmetic operations (+, -, \* /), JavaScript provi
 
 ## Logical operators
 
-Logical operators are typically used with Boolean (logical) values; when they are, they return a Boolean value. However, the && and || operators actually return the value of one of the specified operands, so if these operators are used with non-Boolean values, they may return a non-Boolean value. The logical operators are described in the following table.
+Logical operators are typically used with Boolean (logical) values; when they
+are, they return a Boolean value. However, the && and || operators actually
+return the value of one of the specified operands, so if these operators are
+used with non-Boolean values, they may return a non-Boolean value. The logical
+operators are described in the following table.
 
 | Operator           | Usage            | Description                                                                                                                                                                                      |
 | ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

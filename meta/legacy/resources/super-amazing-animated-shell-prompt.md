@@ -1,4 +1,6 @@
-# Super amazing animated gif prompt
+---
+title: Super amazing animated gif prompt
+---
 
 We all like funny animated gifs, right?
 

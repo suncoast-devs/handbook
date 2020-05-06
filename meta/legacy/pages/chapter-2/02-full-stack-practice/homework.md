@@ -1,4 +1,6 @@
-# Let's see those pets!
+---
+title: Let's see those pets!
+---
 
 Now that you have full-stack powers, you can now build apps that communicate with APIs that you have built. For this assignment, go back to your Tamagatochi Pet API project and build a React app that uses to allow the user to create and play with some pets!
 

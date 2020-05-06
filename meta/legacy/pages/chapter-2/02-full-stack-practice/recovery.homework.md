@@ -1,4 +1,6 @@
-# Recovery is key
+---
+title: Recovery is key
+---
 
 The last 4 weeks have been a marathon of training your brain with new ideas and concepts; and just like during a training routine, you need to take some recovery days. Today, you should create a blog post as well go back and revisit an old project and let your brain recovery before we take off again.
 

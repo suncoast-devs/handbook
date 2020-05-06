@@ -1,4 +1,6 @@
-# CSS Details
+---
+title: CSS Details
+---
 
 Now that we have some basic terminology, lets review the different kinds of _selectors_ we can use in our CSS _rules_
 

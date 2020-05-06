@@ -1,4 +1,6 @@
-# Update the inventory
+---
+title: Update the inventory
+---
 
 The store that had you built the API loves it so much, and it caused the store to become more successful and open up multiple locations.
 

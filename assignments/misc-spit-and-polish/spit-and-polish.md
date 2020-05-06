@@ -1,4 +1,6 @@
-# Spit and Polish
+---
+title: Spit and Polish
+---
 
 Your GitHub repository will be part of your portfolio and you will likely link to it from your portfolio.
 

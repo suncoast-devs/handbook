@@ -1,4 +1,6 @@
-# GIT Cheat Sheet
+---
+title: GIT Cheat Sheet
+---
 
 ## Basic
 

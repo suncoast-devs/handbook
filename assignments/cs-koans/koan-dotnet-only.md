@@ -1,4 +1,6 @@
-# Wax On, Wax Off
+---
+title: Wax On, Wax Off
+---
 
 > A **koan** is a riddle or puzzle that Zen Buddhists use during meditation to help them unravel greater truths about the world and about themselves. Zen masters have been testing their students with these stories, questions, or phrases for centuries.
 

@@ -1,4 +1,6 @@
-# The Shell
+---
+title: The Shell
+---
 
 Developers typically like working on the command line (shell). The shell is a [REPL](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) for running commands against the operation system directly. By running commands in this manner, developers can more efficiently use their machines to get work done. Common tasks that developers use the terminal for are:
 

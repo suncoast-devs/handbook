@@ -5,8 +5,9 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import { Layout } from '../site/Layout'
 import { Markdown } from '../site/Markdown'
+import CodePen from '../content/CodePen'
 
-const shortcodes = { Link } // Provide common components here
+const shortcodes = { Link, CodePen }
 
 export default function LessonTemplate({
   data: {

@@ -1,4 +1,6 @@
-# straight forward title
+---
+title: straight forward title
+---
 
 The elevator pitch for the lecture
 

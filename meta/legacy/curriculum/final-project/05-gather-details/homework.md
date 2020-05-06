@@ -1,4 +1,6 @@
-# student-details
+---
+title: student-details
+---
 
 With Demo Day approaching we are looking to collect your information.
 

@@ -1,4 +1,6 @@
-# intro to state
+---
+title: intro to state
+---
 
 ## stand up
 

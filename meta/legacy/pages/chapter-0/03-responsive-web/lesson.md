@@ -1,4 +1,6 @@
-# Grid and Media!
+---
+title: Grid and Media!
+---
 
 build daily kitteh using grids
 make mobile friendly with media queries

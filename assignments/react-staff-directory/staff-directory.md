@@ -1,4 +1,6 @@
-# Who works here?
+---
+title: Who works here?
+---
 
 Over the last six weeks, you have learned many concepts about front-end development. To demonstrate how far you have come, I want you to build an Employee Directory. For `Explorer Mode`, this will be a site with three pages; view all employees, add an employee, and view an employee. `Adventure Mode` adds the features to delete and updating an employee.
 

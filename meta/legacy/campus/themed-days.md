@@ -1,4 +1,6 @@
-# Theme days
+---
+title: Theme days
+---
 
 To spice things up! we are going to some themed days this week, feel free to dress up, change your background and fun!
 

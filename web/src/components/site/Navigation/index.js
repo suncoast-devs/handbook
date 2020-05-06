@@ -43,8 +43,8 @@ export function Navigation() {
               className="fixed inset-0"
               onClick={closeSidebar}
               aria-label="Close Sidebar"
-              onKeyDown={({ code }) => {
-                if (code === 32 || code === 13) {
+              onKeyDown={({ key }) => {
+                if (key === 'Enter' || key === ' ') {
                   closeSidebar()
                 }
               }}

@@ -1,4 +1,6 @@
-# Reopening a project
+---
+title: Reopening a project
+---
 
 Developers need to return to projects more often than creating new projects, but the process is very similar.
 

@@ -1,4 +1,6 @@
-# Add Heroku hosting to our rails application
+---
+title: Add Heroku hosting to our rails application
+---
 
 We are going to use [Heroku](https://heroku.com) to host our rails application.
 

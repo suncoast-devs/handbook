@@ -1,4 +1,6 @@
-# The Stack is Getting Higher
+---
+title: The Stack is Getting Higher
+---
 
 As we explore the concepts of a full-stack web app, a good way to practice is to duplicate an existing site. For this project, you will be creating a copy of a site that you know very well, StackOverflow.
 

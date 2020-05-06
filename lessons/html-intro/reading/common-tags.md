@@ -1,4 +1,6 @@
-# The most common HTML tags we see used
+---
+title: The most common HTML tags we see used
+---
 
 Here are some of the most common HTML tags we see used, their purpose, and the documentation on their usage.
 

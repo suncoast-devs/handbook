@@ -1,4 +1,6 @@
-# All Cards on Deck!
+---
+title: All Cards on Deck!
+---
 
 In this project, you will use C# to model [a deck of playing cards](https://en.wikipedia.org/wiki/standard_52-card_deck). You'll also add functionality such as shuffling and dealing.
 

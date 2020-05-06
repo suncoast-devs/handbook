@@ -1,4 +1,6 @@
-# Job Search Resources
+---
+title: Job Search Resources
+---
 
 
 ###### Where to Look

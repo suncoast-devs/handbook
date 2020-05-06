@@ -1,4 +1,6 @@
-# Intro to Git
+---
+title: Intro to Git
+---
 
 Git is a distributed source control system and is how we will be managing our projects and sharing code during the program.
 

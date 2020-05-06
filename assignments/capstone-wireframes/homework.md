@@ -1,4 +1,6 @@
-# It starts with a plan.
+---
+title: It starts with a plan.
+---
 
 We are starting the final stretch of the cohort. This means we are starting to focus on our final projects.
 

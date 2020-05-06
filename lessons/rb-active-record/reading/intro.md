@@ -1,12 +1,15 @@
-import CodePen from '@handbook/CodePen'
-
-# Intro to Active Record
+---
+title: Intro to Active Record
+---
 
 ## Pre-work
 
-To get the most of out using Ruby for databases, we should do some configuration of our `irb` sessions. This will make printing of database objects more _awesome_
+To get the most of out using Ruby for databases, we should do some configuration
+of our `irb` sessions. This will make printing of database objects more
+_awesome_
 
-To achieve this we will install a `gem` and configure our `~/.irbrc` file to configure our console with some nice features.
+To achieve this we will install a `gem` and configure our `~/.irbrc` file to
+configure our console with some nice features.
 
 - Step 1: Install `awesome_print`
 
@@ -85,7 +88,9 @@ end
 
 ## Database setup
 
-- Step 1: Make sure you have these tables created. You likely have these created if you have previously followed [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
+- Step 1: Make sure you have these tables created. You likely have these created
+  if you have previously followed
+  [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
 
 ```sql
 CREATE TABLE movies (
@@ -116,15 +121,27 @@ CREATE TABLE roles (
 );
 ```
 
-- Step 2: See [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins) for `INSERT INTO` statements to populate the database
+- Step 2: See
+  [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
+  for `INSERT INTO` statements to populate the database
 
 ## Using `bundler`
 
-[Bundler](https://bundler.io) is the main package manager for Ruby. It is like [npm](https://npmjs.org) or [yarn](yarnpkg.com) for JavaScript.
+[Bundler](https://bundler.io) is the main package manager for Ruby. It is like
+[npm](https://npmjs.org) or [yarn](yarnpkg.com) for JavaScript.
 
-In most Ruby applications we will be using Bundler for managing the dependencies of our code. Bundler is a very powerful tool that can add libraries to your code from the main repository at [rubygems](https://rubygems.org) or from Github. Bundler also allows you to require some libraries in development mode, some in test, and others in production. It also has a very powerful and flexible version requirement langauge.
+In most Ruby applications we will be using Bundler for managing the dependencies
+of our code. Bundler is a very powerful tool that can add libraries to your code
+from the main repository at [rubygems](https://rubygems.org) or from Github.
+Bundler also allows you to require some libraries in development mode, some in
+test, and others in production. It also has a very powerful and flexible version
+requirement langauge.
 
-For now we are going to use Bundler in it's [inline](https://bundler.io/v2.0/guides/bundler_in_a_single_file_ruby_script.html) mode since we'll only be dealing with a single Ruby file. Soon we will use Bundler in it's typical mode by using a [`Gemfile`](https://bundler.io/gemfile.html)
+For now we are going to use Bundler in it's
+[inline](https://bundler.io/v2.0/guides/bundler_in_a_single_file_ruby_script.html)
+mode since we'll only be dealing with a single Ruby file. Soon we will use
+Bundler in it's typical mode by using a
+[`Gemfile`](https://bundler.io/gemfile.html)
 
 ## Use bundler to require the Postgres and ActiveRecord libraries
 
@@ -144,7 +161,9 @@ require 'active_record'
 
 ## Basic Active Record Setup
 
-- NOTE: If you did not use the name `suncoast_movies`, replace `"suncoast_movies"` with the name of your database where the `movies`, `actors`, and `roles` tables were created.
+- NOTE: If you did not use the name `suncoast_movies`, replace
+  `"suncoast_movies"` with the name of your database where the `movies`,
+  `actors`, and `roles` tables were created.
 
 ```ruby
 # Tell Ruby we are going to use Bundler
@@ -255,7 +274,8 @@ p rating.movies
 
 ## Many to Many Join
 
-- We must define a model for the `Role` model that joins the `Movie` model and the `Actor` model
+- We must define a model for the `Role` model that joins the `Movie` model and
+  the `Actor` model
 
 ```ruby
 class Actor < ActiveRecord::Base
@@ -267,7 +287,8 @@ class Role < ActiveRecord::Base
 end
 ```
 
-- Now we can revise `Movie` and `Actor` to use the `Role` model as our join model, we call this `has_many :through`
+- Now we can revise `Movie` and `Actor` to use the `Role` model as our join
+  model, we call this `has_many :through`
 
 ```ruby
 class Actor < ActiveRecord::Base
@@ -293,7 +314,8 @@ p actor.movies
 
 ## Sneak peek at using this for APIs
 
-Lets get all the `Movie` objects and print the resulting array of these movies as JSON.
+Lets get all the `Movie` objects and print the resulting array of these movies
+as JSON.
 
 ```ruby
 movies = Movie.all
@@ -301,7 +323,9 @@ movies_as_a_hash = movies.as_json
 puts JSON.pretty_generate(movies_as_a_hash)
 ```
 
-The `movies.as_json` turns the collection of ActiveRecord objects into a Ruby `hash` and then `JSON.pretty_generate` formats a nice, human readable, JSON string. Finally `puts` prints the results.
+The `movies.as_json` turns the collection of ActiveRecord objects into a Ruby
+`hash` and then `JSON.pretty_generate` formats a nice, human readable, JSON
+string. Finally `puts` prints the results.
 
 If we were doing this _all at once_ this could look like:
 

@@ -1,4 +1,6 @@
-# Welcome to hooks
+---
+title: Welcome to hooks
+---
 
 ## Stand ups:
 

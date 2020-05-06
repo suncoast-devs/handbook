@@ -1,4 +1,6 @@
-# Rhythm's gonna get you
+---
+title: Rhythm's gonna get you
+---
 
 For the past few lessons we have chatted about and worked with data, for this project we will continue our journey into data and modeling a database. We are starting a record label company and we a place to store our bands, albums and songs. You will be creating a console app that stores our companies information in a database.
 

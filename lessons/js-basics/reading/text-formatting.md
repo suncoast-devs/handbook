@@ -1,9 +1,12 @@
-import CodePen from '@handbook/CodePen'
-import AdvancedTopic from '@handbook/AdvancedTopic'
+---
+title: Strings
+---
 
-# Strings
-
-JavaScript's String type is used to represent textual data. It is a set of "elements." Each element in the String occupies a position in the String. The first element is at index 0, the next at index 1, and so on. The length of a `String` is the number of elements in it. You can create strings using string literals or string objects.
+JavaScript's String type is used to represent textual data. It is a set of
+"elements." Each element in the String occupies a position in the String. The
+first element is at index 0, the next at index 1, and so on. The length of a
+`String` is the number of elements in it. You can create strings using string
+literals or string objects.
 
 ## String literals
 

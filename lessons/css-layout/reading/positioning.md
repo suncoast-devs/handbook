@@ -1,12 +1,16 @@
-import CodePen from '@handbook/CodePen'
+---
+title: Positioning
+---
 
-# Positioning
+Positioning allows you to move an element from where it would be placed when in
+normal flow to another location.
 
-Positioning allows you to move an element from where it would be placed when in normal flow to another location.
+> Positioning isn’t a method for creating your main page layouts, it is more
+> about managing and fine-tuning the position of specific items on the page.
 
-> Positioning isn’t a method for creating your main page layouts, it is more about managing and fine-tuning the position of specific items on the page.
-
-There are however useful techniques for certain layout patterns that rely on the position property. Understanding positioning also helps in understanding normal flow, and what it is to move an item out of normal flow.
+There are however useful techniques for certain layout patterns that rely on the
+position property. Understanding positioning also helps in understanding normal
+flow, and what it is to move an item out of normal flow.
 
 There are five types of positioning you should know about:
 
@@ -25,7 +29,9 @@ There are five types of positioning you should know about:
 
 <CodePen>
 
-To provide familiarity with these page layout techniques, we'll show you a couple of quick examples. Our examples will all feature the same HTML, which is as follows.
+To provide familiarity with these page layout techniques, we'll show you a
+couple of quick examples. Our examples will all feature the same HTML, which is
+as follows.
 
 <pre data-lang='html'>
 {`
@@ -58,17 +64,25 @@ p {
 
 ## Relative positioning
 
-Relative positioning allows you to offset an item from the position in normal flow it would have by default. This means you could achieve a task such as moving an icon down a bit so it lines up with a text label.
+Relative positioning allows you to offset an item from the position in normal
+flow it would have by default. This means you could achieve a task such as
+moving an icon down a bit so it lines up with a text label.
 
 <CodePen>
 
 To do this, we could add the following rule to add relative positioning.
 
-Here we give our middle paragraph a position value of relative — this doesn't do anything on its own, so we also add top and left properties. These serve to move the affected element down and to the right — this might seem like the opposite of what you were expecting, but you need to think of it as the element being pushed on its left and top sides, which result in it moving right and down.
+Here we give our middle paragraph a position value of relative — this doesn't do
+anything on its own, so we also add top and left properties. These serve to move
+the affected element down and to the right — this might seem like the opposite
+of what you were expecting, but you need to think of it as the element being
+pushed on its left and top sides, which result in it moving right and down.
 
 We will also give it a different background and border to make it stand out.
 
-> Try changing the values for `top` and `left` -- also try removing them and using values for `bottom` and `right` -- See how those change the positioning of the element.
+> Try changing the values for `top` and `left` -- also try removing them and
+> using values for `bottom` and `right` -- See how those change the positioning
+> of the element.
 
 <pre data-lang='html'>
 {`
@@ -115,11 +129,19 @@ p {
 
 <CodePen>
 
-Absolute positioning is used to completely remove an element from normal flow, and place it using offsets from the edges of a containing block.
+Absolute positioning is used to completely remove an element from normal flow,
+and place it using offsets from the edges of a containing block.
 
 We could add the following CSS rule to implement absolute positioning.
 
-This is very different! The positioned element has now been completely separated from the rest of the page layout and sits over the top of it. The other two paragraphs now sit together as if their positioned sibling doesn't exist. The `top` and `left` properties have a different effect on absolutely positioned elements than they do on relatively positioned elements. In this case the offsets have been calculated from the **top and left of the page**. It is possible to change the parent element that becomes this container and we will take a look at that later.
+This is very different! The positioned element has now been completely separated
+from the rest of the page layout and sits over the top of it. The other two
+paragraphs now sit together as if their positioned sibling doesn't exist. The
+`top` and `left` properties have a different effect on absolutely positioned
+elements than they do on relatively positioned elements. In this case the
+offsets have been calculated from the **top and left of the page**. It is
+possible to change the parent element that becomes this container and we will
+take a look at that later.
 
 <pre data-lang='html'>
 {`
@@ -166,9 +188,14 @@ p {
 
 <CodePen>
 
-Fixed positioning removes our element from document flow in the same way as absolute positioning. However, instead of the offsets being applied from the container, they are applied from the viewport. As the item remains fixed in relation to the viewport we can create effects such as a menu which remains fixed as the page scrolls beneath it.
+Fixed positioning removes our element from document flow in the same way as
+absolute positioning. However, instead of the offsets being applied from the
+container, they are applied from the viewport. As the item remains fixed in
+relation to the viewport we can create effects such as a menu which remains
+fixed as the page scrolls beneath it.
 
-For this example our HTML is three paragraphs of text, in order that we can cause the page to scroll, and a box to which we will give `position: fixed`.
+For this example our HTML is three paragraphs of text, in order that we can
+cause the page to scroll, and a box to which we will give `position: fixed`.
 
 <pre data-lang='html'>
 {`
@@ -210,7 +237,11 @@ For this example our HTML is three paragraphs of text, in order that we can caus
 
 <CodePen>
 
-Sticky positioning is the final positioning method that we have at our disposal. It mixes the default static positioning with fixed positioning. When an item has `position: sticky` it will scroll in normal flow until it hits offsets from the viewport that we have defined. At that point it becomes "stuck" as if it had `position: fixed` applied.
+Sticky positioning is the final positioning method that we have at our disposal.
+It mixes the default static positioning with fixed positioning. When an item has
+`position: sticky` it will scroll in normal flow until it hits offsets from the
+viewport that we have defined. At that point it becomes "stuck" as if it had
+`position: fixed` applied.
 
 <pre data-lang='html'>
 {`

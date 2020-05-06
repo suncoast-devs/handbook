@@ -1,4 +1,6 @@
-# Podcasts
+---
+title: Podcasts
+---
 
 ## General
 

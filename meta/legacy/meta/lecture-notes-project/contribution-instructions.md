@@ -1,4 +1,6 @@
-# Contribution Instructions
+---
+title: Contribution Instructions
+---
 
 ## 0) Fork/Clone the Repo
 

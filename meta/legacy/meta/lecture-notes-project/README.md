@@ -1,4 +1,6 @@
-# Adding lecture notes to the handbook
+---
+title: Adding lecture notes to the handbook
+---
 
 First off, thank you for helping to create a better, more solid curriculum. The effort to document what we are doing helps all parties involved: the staff, the community, the current students, and yourself.
 

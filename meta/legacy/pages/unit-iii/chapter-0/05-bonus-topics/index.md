@@ -1,4 +1,6 @@
-# chapter 1: Bonus Topics, in any order, or no order!
+---
+title: chapter 1: Bonus Topics, in any order, or no order!
+---
 
 - event loop in detail
 - Typescript

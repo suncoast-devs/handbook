@@ -1,4 +1,6 @@
-# Score Board
+---
+title: Score Board
+---
 
 For this assignment, you are creating a simple interactive scoreboard for your favorite sport.
 

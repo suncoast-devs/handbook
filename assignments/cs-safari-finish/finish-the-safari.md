@@ -1,4 +1,6 @@
-# Finish the Safari
+---
+title: Finish the Safari
+---
 
 For this assignment, you should take your safari API that was already created, and create a simple react app that consumes that API.
 

@@ -1,4 +1,6 @@
-# Cloudy with a chance of Syntax Error
+---
+title: Cloudy with a chance of Syntax Error
+---
 
 Using a popular weather API, Create a web site that allows a user to search for a location and gets that location's weather.
 

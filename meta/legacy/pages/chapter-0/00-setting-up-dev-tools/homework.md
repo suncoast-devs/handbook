@@ -1,4 +1,6 @@
-# Hello, World!
+---
+title: Hello, World!
+---
 
 Welcome to your journey as a developer. When learning a new language, a developer usually starts with creating a `hello, world` program. A `hello, world` is a simple program that allows a developer to test to see if there environment is set up and working.
 

@@ -1,4 +1,6 @@
-# "Working with Mod"
+---
+title: Working with Mod"
+---
 
 https://www.codewars.com/kata/return-the-closest-number-multiple-of-10
 

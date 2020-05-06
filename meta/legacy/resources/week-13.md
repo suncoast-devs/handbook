@@ -1,4 +1,6 @@
-# "Week 13" Survival Guide
+---
+title: Week 13" Survival Guide
+---
 
 Welcome to post-grad life! This guide should help serve as a guideline on how to approach the upcoming weeks.
 

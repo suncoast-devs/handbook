@@ -1,4 +1,6 @@
-#Code wars
+---
+title: Code wars
+---
 
 [Code Wars](https://codewars.com) is a great site to practice your problem solving in a variety of languages. This site is focused on creating clever solutions to practice solving problems in a variety of ways and languages. Code wars is a very community orientated and driven.
 

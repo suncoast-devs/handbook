@@ -1,4 +1,6 @@
-# Semantic HTML
+---
+title: Semantic HTML
+---
 
 Semantics relate to meaning in a language. In HTML we want to choose tags that convey to the browser, and to any future developer, the _purpose_ of the chosen tag.
 

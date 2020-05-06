@@ -1,4 +1,6 @@
-# Starting a full stack app
+---
+title: Starting a full stack app
+---
 
 ## Stand up
 

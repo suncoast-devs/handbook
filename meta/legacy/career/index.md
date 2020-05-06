@@ -1,4 +1,6 @@
-# Career Support
+---
+title: Career Support
+---
 
 Career Support is more than just writing your resume and applying for jobs. This section of the handbook will also help you find tools for time management, stress management, and much more.
 

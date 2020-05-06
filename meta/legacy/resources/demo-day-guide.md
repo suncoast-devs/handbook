@@ -1,4 +1,6 @@
-# Demo day tips and tricks
+---
+title: Demo day tips and tricks
+---
 
 Over the cohorts, we have found some tips and tricks to help students have a successful demo day. It boils down to 4 main points.
 

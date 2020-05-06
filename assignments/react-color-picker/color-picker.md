@@ -1,4 +1,6 @@
-# Pick a Color, any Color
+---
+title: Pick a Color, any Color
+---
 
 In this assignment, you'll create an HSL(a) color picker with React.
 

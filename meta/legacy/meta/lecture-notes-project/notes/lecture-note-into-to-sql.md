@@ -1,4 +1,6 @@
-# Hello, SQL!
+---
+title: Hello, SQL!
+---
 
 This covers the basic intro to SQL.
 

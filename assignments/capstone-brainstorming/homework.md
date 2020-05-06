@@ -1,4 +1,6 @@
-# Capstone project seed ideas
+---
+title: Capstone project seed ideas
+---
 
 ## General Requirements:
 

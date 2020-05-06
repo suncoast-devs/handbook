@@ -1,4 +1,6 @@
-# Roshambo!
+---
+title: Roshambo!
+---
 
 Create a simple Rock-Paper-Scissors game.
 

@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# Fetching Data From Remote Servers
+---
+title: Fetching Data From Remote Servers
+---
 
 - Promises, APIs, Fetch, JSON
   - [Using Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
@@ -9,7 +9,8 @@ import CodePen from '@handbook/CodePen'
     - We've been using these all along!
     - Think about our friend `forEach`
       - It expects certain input (array, method to call)
-      - It expects the method to call to take argments, of which we can choose how many to accept
+      - It expects the method to call to take argments, of which we can choose
+        how many to accept
         - element
         - index
         - array
@@ -21,8 +22,14 @@ import CodePen from '@handbook/CodePen'
         - Accessed over the network
         - Uses the `HTTP` protocol
         - Uses a specific form of data input and data response
-          - Typically [`JSON`](http://json.org/) or [`XML`](https://developer.mozilla.org/en-US/docs/XML_introduction)
-      - Third party APIs are not built into the browser by default, and you generally have to retrieve their code and information from somewhere on the Web. For example, the Twitter API allows you to do things like displaying your latest tweets on your website. It provides a special set of constructs you can use to query the Twitter service and return specific information.
+          - Typically [`JSON`](http://json.org/) or
+            [`XML`](https://developer.mozilla.org/en-US/docs/XML_introduction)
+      - Third party APIs are not built into the browser by default, and you
+        generally have to retrieve their code and information from somewhere on
+        the Web. For example, the Twitter API allows you to do things like
+        displaying your latest tweets on your website. It provides a special set
+        of constructs you can use to query the Twitter service and return
+        specific information.
 - Data for our application
   - Currently we have to create all our data
     - e.g. a deck of cards
@@ -41,9 +48,11 @@ import CodePen from '@handbook/CodePen'
     fetch("https://swapi.co/api/people");
     ```
 
-  - This will access the _Star Wars API_ and fetch a list of people in the _Star Wars_ universe
+  - This will access the _Star Wars API_ and fetch a list of people in the _Star
+    Wars_ universe
 
-  - But if we just log this response we will see something that we cannot directly use
+  - But if we just log this response we will see something that we cannot
+    directly use
 
     ```javascript
     let response = fetch('https://swapi.co/api/people')
@@ -57,7 +66,8 @@ import CodePen from '@handbook/CodePen'
 
   - We cannot use this `promise` directly, we must "resolve" the promise
   - Think of a `promise` as an _IOU_
-  - A `promise` is an _asynchronous_ _IOU_ that will a supplied function when the _IOU_ is ready to redeem.
+  - A `promise` is an _asynchronous_ _IOU_ that will a supplied function when
+    the _IOU_ is ready to redeem.
   - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
     ```javascript
@@ -81,8 +91,10 @@ import CodePen from '@handbook/CodePen'
       url: "https://swapi.co/api/people/"
     ```
 
-  - This is because the response _body_ itself must be _converted_ into a form we can use. The response from `SWAPI` is a `JSON` response
-  - Fortunately, the `response` object gives us a method to gain access to the JSON:
+  - This is because the response _body_ itself must be _converted_ into a form
+    we can use. The response from `SWAPI` is a `JSON` response
+  - Fortunately, the `response` object gives us a method to gain access to the
+    JSON:
 
     ```javascript
     fetch("https://swapi.co/api/people")
@@ -116,4 +128,5 @@ import CodePen from '@handbook/CodePen'
     }
     ```
 
-  - So our `json` object represents the response we could see in the [`SWAPI` documentation](https://swapi.co/documentation#people).
+  - So our `json` object represents the response we could see in the
+    [`SWAPI` documentation](https://swapi.co/documentation#people).

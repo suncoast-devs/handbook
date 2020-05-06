@@ -1,4 +1,6 @@
-# High level course schedule
+---
+title: High level course schedule
+---
 
 The course is broken in 3 units, each with chapters. These chapters _roughly_ correspond to weeks.
 

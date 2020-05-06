@@ -1,4 +1,6 @@
-# Score Board, Part 2
+---
+title: Score Board, Part 2
+---
 
 For this assignment, you will extending and giving your scoreboard additional features.
 

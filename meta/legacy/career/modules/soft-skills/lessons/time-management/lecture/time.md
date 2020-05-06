@@ -1,4 +1,6 @@
-# Time Management
+---
+title: Time Management
+---
 
 ## A Brief Guide to Time Management
 

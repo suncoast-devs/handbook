@@ -1,4 +1,6 @@
-# Your Portfolio, Your North Star
+---
+title: Your Portfolio, Your North Star
+---
 
 Your brand and the visual representation of your work.
 

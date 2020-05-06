@@ -1,4 +1,6 @@
-# Style Guide
+---
+title: Style Guide
+---
 
 ---
 

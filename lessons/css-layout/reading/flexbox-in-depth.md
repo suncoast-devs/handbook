@@ -1,28 +1,36 @@
-import CodePen from '@handbook/CodePen'
-
-# Flexbox
+---
+title: Flexbox
+---
 
 ## Why Flexbox?
 
-In the Web of the past the only reliable cross browser-compatible tools available for creating CSS layouts were things like floats and positioning. These are fine and they work, but in some ways they are also rather limiting and frustrating.
+In the Web of the past the only reliable cross browser-compatible tools
+available for creating CSS layouts were things like floats and positioning.
+These are fine and they work, but in some ways they are also rather limiting and
+frustrating.
 
 Positioning elements on a page often induced this feeling with web developers.
 
 ![](./assets/css-float-frustration.gif)
 
-The following simple layout requirements are either difficult or impossible to achieve with such tools, in any kind of convenient, flexible way:
+The following simple layout requirements are either difficult or impossible to
+achieve with such tools, in any kind of convenient, flexible way:
 
 - Vertically centering a block of content inside its parent.
-- Making all the children of a container take up an equal amount of the available width/height, regardless of how much width/height is available.
-- Making all columns in a multiple column layout adopt the same height even if they contain a different amount of content.
+- Making all the children of a container take up an equal amount of the
+  available width/height, regardless of how much width/height is available.
+- Making all columns in a multiple column layout adopt the same height even if
+  they contain a different amount of content.
 
-As you'll see in subsequent sections, flexbox makes a lot of layout tasks much easier.
+As you'll see in subsequent sections, flexbox makes a lot of layout tasks much
+easier.
 
 ---
 
 ## A Simple Example
 
-We are going to get you to work through a series of exercises to help you understand how flexbox works.
+We are going to get you to work through a series of exercises to help you
+understand how flexbox works.
 
 <CodePen>
 
@@ -96,9 +104,15 @@ article {
 
 <CodePen>
 
-To start with, we need to select which elements are to be laid out as flexible boxes. To do this, we set a special value of display on the **parent** element of the elements you want to affect. In this case we want to lay out the `<article>` elements, so we set this on the `<section>` (which becomes a flex container)
+To start with, we need to select which elements are to be laid out as flexible
+boxes. To do this, we set a special value of display on the **parent** element
+of the elements you want to affect. In this case we want to lay out the
+`<article>` elements, so we set this on the `<section>` (which becomes a flex
+container)
 
-> This is a key concept: we set the `display: flex` on the **parent** element of the items to layout. The `display: flex` only affects the **immediate** children of the flexed element.
+> This is a key concept: we set the `display: flex` on the **parent** element of
+> the items to layout. The `display: flex` only affects the **immediate**
+> children of the flexed element.
 
 <pre data-lang='html'>
 {`
@@ -172,7 +186,11 @@ section {
 
 ### Tada! 🎉
 
-So, this single declaration gives us everything we need — incredible, right? We have our multiple column layout with equal sized columns, and the columns are all the same height. This is because the default values given to flex items (the children of the flex container) are set up to solve common problems such as this. More on those later.
+So, this single declaration gives us everything we need — incredible, right? We
+have our multiple column layout with equal sized columns, and the columns are
+all the same height. This is because the default values given to flex items (the
+children of the flex container) are set up to solve common problems such as
+this. More on those later.
 
 ## Terminology: Understanding the flex model
 
@@ -190,17 +208,25 @@ When elements are laid out as flexible boxes, they are laid out along two axes:
 
 ## Columns vs Rows
 
-Flexbox provides a property called `flex-direction` that specifies what direction the main axis runs in (what direction the flexbox children are laid out in) — by default this is set to row, which causes them to be laid out in a row in the direction your browser's default language works in (left to right, in the case of an English browser).
+Flexbox provides a property called `flex-direction` that specifies what
+direction the main axis runs in (what direction the flexbox children are laid
+out in) — by default this is set to row, which causes them to be laid out in a
+row in the direction your browser's default language works in (left to right, in
+the case of an English browser).
 
-> Try adding the following declaration to your `<section>` rule in the previous example `flex-direction: column;`
+> Try adding the following declaration to your `<section>` rule in the previous
+> example `flex-direction: column;`
 
-You'll see that this puts the items back in a column layout, much like they were before we added any CSS. **Before you move on, delete this declaration from your example.**
+You'll see that this puts the items back in a column layout, much like they were
+before we added any CSS. **Before you move on, delete this declaration from your
+example.**
 
 ## Wrapping
 
 <CodePen>
 
-One issue that arises when you have a fixed amount of width or height in your layout is that eventually your flexbox children will overflow their container.
+One issue that arises when you have a fixed amount of width or height in your
+layout is that eventually your flexbox children will overflow their container.
 
 <pre data-lang='html'>
 {`
@@ -289,7 +315,9 @@ section {
 
 ---
 
-Here we see that the children are indeed breaking out of their container. One way in which you can fix this is to add the following declaration to your `<section>` rule.
+Here we see that the children are indeed breaking out of their container. One
+way in which you can fix this is to add the following declaration to your
+`<section>` rule.
 
 ```css
 section {
@@ -297,7 +325,8 @@ section {
 }
 ```
 
-This will tell the browser to flow the content within the `section` to the next row when it runs out of space on the current row.
+This will tell the browser to flow the content within the `section` to the next
+row when it runs out of space on the current row.
 
 We will also set this for `<article>`:
 
@@ -309,7 +338,9 @@ article {
 
 The `flex: 200px` declaration means that each will be at least 200px wide
 
-> Try adding `flex-direction: row-reverse` to the `section` — now you'll see that you still have your multiple row layout, but it starts from the opposite corner of the browser window and flows in reverse.
+> Try adding `flex-direction: row-reverse` to the `section` — now you'll see
+> that you still have your multiple row layout, but it starts from the opposite
+> corner of the browser window and flows in reverse.
 
 <CodePen>
 
@@ -407,7 +438,8 @@ section {
 
 <CodePen>
 
-You can also use flexbox features to align flex items along the main or cross axis.
+You can also use flexbox features to align flex items along the main or cross
+axis.
 
 **align-items**
 
@@ -420,7 +452,8 @@ You can also use flexbox features to align flex items along the main or cross ax
 | `flex-start, flex-end` | You can also have values like flex-start and flex-end, which will align all items at the start and end of the cross axis respectively. See align-items for the full details.                                                                                                                                                      |
 |                        |                                                                                                                                                                                                                                                                                                                                   |
 
-> Try changing `align-items` in this example to `stretch`, `flex-start`, and `flex-end`
+> Try changing `align-items` in this example to `stretch`, `flex-start`, and
+> `flex-end`
 
 **justify-content**
 
@@ -435,7 +468,8 @@ You can also use flexbox features to align flex items along the main or cross ax
 | `space-between` | There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.                     |
 |                 |                                                                                                                                                        |
 
-> Try changing `justify-content` in this example to `flex-start`, `flex-end`, `center`, `space-around` and `space-between`
+> Try changing `justify-content` in this example to `flex-start`, `flex-end`,
+> `center`, `space-around` and `space-between`
 
 <pre data-lang='html'>
 {`
@@ -487,7 +521,9 @@ div {
 
 <CodePen>
 
-Flexbox also has a feature for changing the layout order of flex items, without affecting the source order. This is another thing that is impossible to do with traditional layout methods.
+Flexbox also has a feature for changing the layout order of flex items, without
+affecting the source order. This is another thing that is impossible to do with
+traditional layout methods.
 
 We've added
 
@@ -496,11 +532,17 @@ We've added
 You'll now see that the "Smile" button has moved to the end of the main axis.
 
 - By default, all flex items have an order value of 0.
-- Flex items with higher order values set on them will appear later in the display order than items with lower order values.
-- Flex items with the same order value will appear in their source order. So if you have four items with order values of 2, 1, 1, and 0 set on them respectively, their display order would be 4th, 2nd, 3rd, then 1st.
-- The 3rd item appears after the 2nd because it has the same order value and is after it in the source order.
+- Flex items with higher order values set on them will appear later in the
+  display order than items with lower order values.
+- Flex items with the same order value will appear in their source order. So if
+  you have four items with order values of 2, 1, 1, and 0 set on them
+  respectively, their display order would be 4th, 2nd, 3rd, then 1st.
+- The 3rd item appears after the 2nd because it has the same order value and is
+  after it in the source order.
 
-You can set negative order values to make items appear earlier than items with 0 set. For example, you could make the "Blush" button appear at the start of the main axis using the following rule:
+You can set negative order values to make items appear earlier than items with 0
+set. For example, you could make the "Blush" button appear at the start of the
+main axis using the following rule:
 
 `button:last-child { order: -1; }`
 
@@ -657,7 +699,8 @@ button {
 
 ---
 
-The HTML for this is fairly simple. We've got a `<section>` element containing three `<article>`s. The third `<article>` contains three `<div>`s. :
+The HTML for this is fairly simple. We've got a `<section>` element containing
+three `<article>`s. The third `<article>` contains three `<div>`s. :
 
 ```
 section - article
@@ -675,7 +718,8 @@ section - article
 
 ---
 
-First of all, we set the children of the `<section>` to be laid out as flexible boxes.
+First of all, we set the children of the `<section>` to be laid out as flexible
+boxes.
 
 ```css
 section {
@@ -685,7 +729,10 @@ section {
 
 ---
 
-Next, we set some flex values on the `<article>`s themselves. Take special note of the 2nd rule here — we are setting the third `<article>` to have its children laid out like flex items too, but this time we are laying them out like a column.
+Next, we set some flex values on the `<article>`s themselves. Take special note
+of the 2nd rule here — we are setting the third `<article>` to have its children
+laid out like flex items too, but this time we are laying them out like a
+column.
 
 ```css
 article {
@@ -701,7 +748,11 @@ article:nth-of-type(3) {
 
 ---
 
-Next, we select the first `<div>`. We first use `flex:1 100px;` to effectively give it a minimum height of `100px`, then we set its children (the `<button>` elements) to also be laid out like flex items. Here we lay them out in a wrapping row, and align them in the center of the available space like we did in the individual button example we saw earlier.
+Next, we select the first `<div>`. We first use `flex:1 100px;` to effectively
+give it a minimum height of `100px`, then we set its children (the `<button>`
+elements) to also be laid out like flex items. Here we lay them out in a
+wrapping row, and align them in the center of the available space like we did in
+the individual button example we saw earlier.
 
 ```
 article:nth-of-type(3) div:first-child {
@@ -715,7 +766,12 @@ article:nth-of-type(3) div:first-child {
 
 ---
 
-Finally, we set some sizing on the button, but more interestingly we give it a flex value of 1 auto. This has a very interesting effect, which you'll see if you try resizing your browser window width. The buttons will take up as much space as they can and sit as many on the same line as they can, but when they can no longer fit comfortably on the same line, they'll drop down to create new lines.
+Finally, we set some sizing on the button, but more interestingly we give it a
+flex value of 1 auto. This has a very interesting effect, which you'll see if
+you try resizing your browser window width. The buttons will take up as much
+space as they can and sit as many on the same line as they can, but when they
+can no longer fit comfortably on the same line, they'll drop down to create new
+lines.
 
 ```css
 button {
@@ -730,7 +786,8 @@ button {
 
 ## Further Reading
 
-Flexbox can be a challenging concept to master. Here are some references we feel will be good to review:
+Flexbox can be a challenging concept to master. Here are some references we feel
+will be good to review:
 
 - [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)
 - [A Complete Guide to Flexbox - by CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)

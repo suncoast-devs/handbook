@@ -1,17 +1,23 @@
-import CodePen from '@handbook/CodePen'
-
-# Vocabulary
+---
+title: Vocabulary
+---
 
 At its most basic level, CSS consists of two building blocks:
 
-- **Properties**: Human-readable identifiers that indicate which stylistic features (e.g. font, width, background color) you want to change.
-- **Values**: Each specified property is given a value, which indicates how you want to change those stylistic features (e.g. what you want to change the font, width or background color to.)
+- **Properties**: Human-readable identifiers that indicate which stylistic
+  features (e.g. font, width, background color) you want to change.
+- **Values**: Each specified property is given a value, which indicates how you
+  want to change those stylistic features (e.g. what you want to change the
+  font, width or background color to.)
 
-A property paired with a value is called a _CSS declaration_. CSS declarations are put within CSS Declaration Blocks. And finally, CSS declaration blocks are paired with selectors to produce CSS Rulesets (or CSS Rules).
+A property paired with a value is called a _CSS declaration_. CSS declarations
+are put within CSS Declaration Blocks. And finally, CSS declaration blocks are
+paired with selectors to produce CSS Rulesets (or CSS Rules).
 
 <CodePen>
 
-Before getting too deep in theory and written explanation, let's look at a concrete example.
+Before getting too deep in theory and written explanation, let's look at a
+concrete example.
 
 This example uses four types of tags in the HTML, `h1`, `p`, `ul` and `li`
 

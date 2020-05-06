@@ -1,4 +1,6 @@
-# Creating a new project
+---
+title: Creating a new project
+---
 
 When creating new projects, developers tend to use tools to help scaffold new projects. These tools help create the boiler plate code that is the same for every project.
 

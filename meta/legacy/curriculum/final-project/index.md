@@ -1,4 +1,6 @@
-# Capstone Projects Rundown
+---
+title: Capstone Projects Rundown
+---
 
 ## General Requirements:
 

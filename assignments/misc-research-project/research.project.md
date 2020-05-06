@@ -1,4 +1,6 @@
-# Hello, World! - Research Project
+---
+title: Hello, World! - Research Project
+---
 
 As a developer, learning is a lifelong skill that you will continue to hone. During the last 11 weeks, you have learned many topics, but that is just the tip of the iceberg. For this project, select a topic in technology and give a short presentation about it.
 

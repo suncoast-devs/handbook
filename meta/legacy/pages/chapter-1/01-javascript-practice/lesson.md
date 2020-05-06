@@ -1,4 +1,6 @@
-# Lesson for JavaScript and DOM
+---
+title: Lesson for JavaScript and DOM
+---
 
 # Stand up
 

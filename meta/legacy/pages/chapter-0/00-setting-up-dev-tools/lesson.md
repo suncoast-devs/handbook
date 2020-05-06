@@ -1,4 +1,6 @@
-# Setting up tools
+---
+title: Setting up tools
+---
 
 Walk through setting up their dev env for C# development
 

@@ -1,4 +1,6 @@
-# CSS Declarations
+---
+title: CSS Declarations
+---
 
 Setting CSS properties to specific values is the core function of the CSS language. What is important to remember is that both properties and values are case-sensitive in CSS and that the property and value in each pair is separated by a colon (:).
 

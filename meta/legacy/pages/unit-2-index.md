@@ -1,4 +1,6 @@
-# unit ii: front end development
+---
+title: unit ii: front end development
+---
 
 During this unit, students will learn about the basic of front end development. This includes, but is not limited to, a deep dive HTML, CSS, JavaScript and React
 

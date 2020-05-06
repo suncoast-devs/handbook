@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-## Making our first web app
+---
+title: Making our first web app
+---
 
 ### Sinatra
 
@@ -17,10 +17,10 @@ import CodePen from '@handbook/CodePen'
   end
   ```
 
-- Breaking down the sinatra code
-  `require 'sinatra'` - require the sinatra library
-  `get '/' do` - defines a block of code to run whenever we `GET` the `/` URL
-  `"Hello World"` - Whatever the block returns returns becomes the body of the page
+- Breaking down the sinatra code `require 'sinatra'` - require the sinatra
+  library `get '/' do` - defines a block of code to run whenever we `GET` the
+  `/` URL `"Hello World"` - Whatever the block returns returns becomes the body
+  of the page
 
 - Lets make an _APP_
 
@@ -75,7 +75,9 @@ import CodePen from '@handbook/CodePen'
   createdb items
   ```
 
-- Then lets create a table to store our items. We'll name the column `text` to store the text of the item. We'll also add a boolean to mark if it is complete.
+- Then lets create a table to store our items. We'll name the column `text` to
+  store the text of the item. We'll also add a boolean to mark if it is
+  complete.
 
   ```sql
   CREATE TABLE items(id serial, text text, complete bool);

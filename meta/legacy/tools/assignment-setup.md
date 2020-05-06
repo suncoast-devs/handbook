@@ -1,4 +1,6 @@
-# Setup for Assignments
+---
+title: Setup for Assignments
+---
 
 This section describes the process for setting up assignments in unit i.
 

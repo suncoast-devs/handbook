@@ -1,13 +1,14 @@
-import CodePen from '@handbook/CodePen'
-
-# JavaScript Modules
+---
+title: JavaScript Modules
+---
 
 ---
 
 ## What is a module?
 
-> Any of a number of distinct but interrelated units from which a program may be built up or into which a complex activity may be analysed.
-> -- Oxford English Dictionary
+> Any of a number of distinct but interrelated units from which a program may be
+> built up or into which a complex activity may be analysed. -- Oxford English
+> Dictionary
 
 ---
 
@@ -24,15 +25,15 @@ Modules help us to:
 
 ---
 
-> Like a good author will divide a book into chapters;
-> good programmers split a program into modules.
-> -- Somebody, probably
+> Like a good author will divide a book into chapters; good programmers split a
+> program into modules. -- Somebody, probably
 
 ---
 
 ## Modules in JavaScript
 
-^ Prior to a few years ago, no support for modules existed in the JavaScript language.
+^ Prior to a few years ago, no support for modules existed in the JavaScript
+language.
 
 ---
 
@@ -44,13 +45,15 @@ Modules help us to:
 
 ## CommonJS Modules
 
-This is the most widely used method of defining modules, used in node and `npm` packages, but it doesn't work well in the browser.
+This is the most widely used method of defining modules, used in node and `npm`
+packages, but it doesn't work well in the browser.
 
 ---
 
 ## Asynchronous Module Definition (AMD)
 
-More complicated to use, but designed to work well in the browser with a loading library, e.g. `require.js`.
+More complicated to use, but designed to work well in the browser with a loading
+library, e.g. `require.js`.
 
 ---
 

@@ -1,4 +1,6 @@
-#Design Focused Resources
+---
+title: Design Focused Resources
+---
 
 ## History of Web Design
 

@@ -1,4 +1,6 @@
-# Don't lose track!
+---
+title: Don't lose track!
+---
 
 Now that we have new API skills, we want to create an API to help our favorite store keep track of their inventory. This API will be able to let users add, update, delete, and search for items.
 

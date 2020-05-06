@@ -1,4 +1,6 @@
-# Working in a full stack appp
+---
+title: Working in a full stack appp
+---
 
 ## Stand up!
 

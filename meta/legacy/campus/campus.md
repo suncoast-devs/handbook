@@ -1,4 +1,6 @@
-# Campus Information
+---
+title: Campus Information
+---
 
 ## Location
 

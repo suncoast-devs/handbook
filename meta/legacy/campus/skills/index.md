@@ -1,4 +1,6 @@
-# General Skills
+---
+title: General Skills
+---
 
 ...or as Strongbad would put it the "Skills of a Developer"
 

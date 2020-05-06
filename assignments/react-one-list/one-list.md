@@ -1,4 +1,6 @@
-# One List
+---
+title: One List
+---
 
 In this assignment, you'll build a classic todo manager.
 

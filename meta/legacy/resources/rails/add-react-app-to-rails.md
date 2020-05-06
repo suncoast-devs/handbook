@@ -1,4 +1,6 @@
-# Add a React App to Rails
+---
+title: Add a React App to Rails
+---
 
 If you are creating a Rails API, or a Rails Monolith, and you want to add a full React app within that repository, this guide will set that up.
 

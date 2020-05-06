@@ -1,4 +1,6 @@
-# Stay in and watch TV
+---
+title: Stay in and watch TV
+---
 
 This weekend, you will pair up in groups of 2 to create a "TV guide" website. This will use an API, and few pages to display what is currently showing.
 

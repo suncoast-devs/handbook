@@ -1,4 +1,6 @@
-# Intro to React Hooks 🎣
+---
+title: Intro to React Hooks 🎣
+---
 
 [React Hooks](https://reactjs.org/docs/hooks-intro.html) are an addition to the React library (as of version 16.8) which provide state-management for functional components.
 

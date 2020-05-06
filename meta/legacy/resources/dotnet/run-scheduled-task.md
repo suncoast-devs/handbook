@@ -1,4 +1,6 @@
-# Using Heroku and docker with scheduled tasks
+---
+title: Using Heroku and docker with scheduled tasks
+---
 
 This guide walks you set up a project for a scheduled task that runs a C# program every so often. The goal is set up to use a .NET console app that does your work. This app is then wrapped in a docker container, then deployed to Heroku, and using an add-on, a schedule to run the container every so often.
 

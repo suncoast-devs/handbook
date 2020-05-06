@@ -1,4 +1,6 @@
-# Title should go here
+---
+title: Title should go here
+---
 
 A brief high level overview of the topics that will be discussed
 

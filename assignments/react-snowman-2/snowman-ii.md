@@ -1,4 +1,6 @@
-# It doesn't have to be a snowman?
+---
+title: It doesn't have to be a snowman?
+---
 
 Yesterday, you started to built the game _Snowman_
 

@@ -1,4 +1,6 @@
-# Events
+---
+title: Events
+---
 
 We have talked about JavaScript by itself, but in order for us to use our scripts on the page we need to attach our functions to events that they browser fires. Our JavaScript doesn't run until the browser tells our script to. The browser gives us [`events`](https://developer.mozilla.org/en-US/docs/Web/Events) that we can listen with our JavaScript. We can now have code say "when a user does this, run this function".
 

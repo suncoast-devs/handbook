@@ -1,6 +1,12 @@
-## Empty elements
+---
+title: Empty elements
+---
 
-Not all elements follow the above pattern of opening tag, content, closing tag. Some elements consist only of a single tag, which is usually used to insert/embed something in the document at the place it is included. For example, the `<img>` element embeds an image file onto a page in the position it is included in:
+Not all elements follow the above pattern of opening tag, content, closing tag.
+Some elements consist only of a single tag, which is usually used to
+insert/embed something in the document at the place it is included. For example,
+the `<img>` element embeds an image file onto a page in the position it is
+included in:
 
 ```html
 <img

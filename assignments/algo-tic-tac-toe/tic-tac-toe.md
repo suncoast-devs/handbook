@@ -1,4 +1,6 @@
-# Implementing Tic-Tac-Toe
+---
+title: Implementing Tic-Tac-Toe
+---
 
 With a partner, create a design for a tic-tac-toe game. Practice your technical design skills (i.e. thinking about _how_ you would code this).
 

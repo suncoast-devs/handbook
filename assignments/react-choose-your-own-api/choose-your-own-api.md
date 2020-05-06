@@ -1,4 +1,6 @@
-# Choose your own API Adventure
+---
+title: Choose your own API Adventure
+---
 
 In this assignment, you'll build a front end for an API of your choice
 

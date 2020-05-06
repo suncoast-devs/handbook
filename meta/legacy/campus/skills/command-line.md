@@ -1,4 +1,6 @@
-# Command Line
+---
+title: Command Line
+---
 
 Being proficient at the command line will save you a lot of time as a developer and help automate many of the tools we use on a day-to-day basis.
 

@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# Intro to Ruby
+---
+title: Intro to Ruby
+---
 
 ## Ruby files
 
@@ -59,14 +59,16 @@ import CodePen from '@handbook/CodePen'
 - Values (and keys, though they are usually strings) can be complex
   - `person = { "name" => "Gavin Stark", "scores" => [100, 98, 42, 64] }`
   - `person["scores"]` is `[100, 98, 42, 64]`
-  - `person["scores"][2]` is `42` since `person["scores"]` is an array, and then we index the array at `2` to get the _third_ element
+  - `person["scores"][2]` is `42` since `person["scores"]` is an array, and then
+    we index the array at `2` to get the _third_ element
 
 ## Interacting with users
 
 ### Printing values
 
 - `puts` outputs information without any formatting. Good for user output
-- `p` outputs information formatted for programmer friendliness. Good for debugging.
+- `p` outputs information formatted for programmer friendliness. Good for
+  debugging.
 
 ```ruby
 name = "Gavin"
@@ -80,7 +82,8 @@ p empty_string       # Would output:   ""
 
 ### Reading values
 
-- `gets` retrieves information from input (usually the terminal from the user typing)
+- `gets` retrieves information from input (usually the terminal from the user
+  typing)
 - However, it includes a `newline` character (the _return key_ that ends a line)
 - We use `chomp` to remove it.
 
@@ -127,7 +130,8 @@ end
 
 ## Ruby Comments
 
-- Comments start with a `#` mark. With a bare `#`, anything that follows will be ignored by Ruby.
+- Comments start with a `#` mark. With a bare `#`, anything that follows will be
+  ignored by Ruby.
 
 ## Methods
 
@@ -154,7 +158,8 @@ def make_sentence(name, score)
 end
 ```
 
-- Without a `return` keyword, a method _returns_ the value of the last statement of the function.
+- Without a `return` keyword, a method _returns_ the value of the last statement
+  of the function.
 
 ```ruby
 # This method has inputs and a return
@@ -172,7 +177,8 @@ end
   - Are either of two things true (_OR_):
     - `if score > 90 || name == "Gavin"`
 
-- What if we are looking for a few options? For this, we have the `case` statement
+- What if we are looking for a few options? For this, we have the `case`
+  statement
 
   ```ruby
 

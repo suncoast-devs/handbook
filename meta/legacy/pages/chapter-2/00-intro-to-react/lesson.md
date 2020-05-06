@@ -1,4 +1,6 @@
-# Why React
+---
+title: Why React
+---
 
 ## Stand up
 

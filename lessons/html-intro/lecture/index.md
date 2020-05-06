@@ -1,4 +1,6 @@
-# Lecture Notes
+---
+title: Lecture Notes
+---
 
 [PDF](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-html/lecture/presentation/index.pdf)
 

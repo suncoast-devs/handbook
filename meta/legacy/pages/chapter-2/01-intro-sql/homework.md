@@ -1,4 +1,6 @@
-# INSERT INTO Student (knowledge) VALUES ('SQL')
+---
+title: INSERT INTO Student (knowledge) VALUES ('SQL')
+---
 
 Every application uses data in some way. This will help you set up your development environment as well as get used to querying databases.
 

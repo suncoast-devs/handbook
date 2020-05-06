@@ -1,4 +1,6 @@
-# HTML Elements We Like
+---
+title: HTML Elements We Like
+---
 
 There are many [elements available](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) in the HTML specification and it is a good idea to become familiar with as many of them as you can. However, there are a core set of elements that we will see used more often. We have gathered the list of these elements here with a description of where and how to use them.
 

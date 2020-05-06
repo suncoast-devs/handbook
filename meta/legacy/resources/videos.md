@@ -1,4 +1,6 @@
-# Videos
+---
+title: Videos
+---
 
 ## From RailsConf's _junior developer_ track
 

@@ -1,6 +1,6 @@
-import CodePen from '@handbook/CodePen'
-
-# React Assets
+---
+title: React Assets
+---
 
 ---
 
@@ -16,8 +16,10 @@ import CodePen from '@handbook/CodePen'
 
 - JavaScript
 - JSON (JavaScript Object Notation)
-  - a lightweight data-interchange format, representing javascript object in text
-  - It is easy for humans to read and write. It is easy for machines to parse and generate
+  - a lightweight data-interchange format, representing javascript object in
+    text
+  - It is easy for humans to read and write. It is easy for machines to parse
+    and generate
 - Images
 - Fonts
 - CSS

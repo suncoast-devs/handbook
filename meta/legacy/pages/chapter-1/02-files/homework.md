@@ -1,4 +1,6 @@
-# First Bank of Suncoast
+---
+title: First Bank of Suncoast
+---
 
 For this assignment, you will be creating your own personal bank account manager. You will be creating an app that will let you track both a savings account and a checking account total by performing transactions, such as withdrawals, deposits and transfers. The application will also save your information in a file so you can track your account totals over time.
 

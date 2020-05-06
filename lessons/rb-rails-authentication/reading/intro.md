@@ -1,10 +1,11 @@
-import CodePen from '@handbook/CodePen'
-
-# Simple Authentication with Bcrypt
+---
+title: Simple Authentication with Bcrypt
+---
 
 ## Steps
 
-1. Create a user model with `name`, `email` and `password_digest` with: `rails generate model user name email password_digest`
+1. Create a user model with `name`, `email` and `password_digest` with:
+   `rails generate model user name email password_digest`
 
 2. Run `rails db:migrate`
 
@@ -99,7 +100,8 @@ import CodePen from '@handbook/CodePen'
 
 8. Run `bundle install`
 
-9. Create a sessions controller to `create` (login) and `destroy` (logout) sessions.
+9. Create a sessions controller to `create` (login) and `destroy` (logout)
+   sessions.
 
    ```ruby
    # Path: app/controllers/sessions_controller.rb
@@ -178,7 +180,8 @@ import CodePen from '@handbook/CodePen'
       get '/logout' => 'sessions#destroy'
     ```
 
-12. We will add a few methods to the ApplicationController to allow us to find the current user.
+12. We will add a few methods to the ApplicationController to allow us to find
+    the current user.
 
     ```ruby
     # Path: app/controllers/application_controller.rb
@@ -204,7 +207,10 @@ import CodePen from '@handbook/CodePen'
     end
     ```
 
-13. Now we can add a `before_filter` to ensure we authorize the user. We _could_ add this to the ApplicationController but then we would have to _exclude_ this from controllers that do _not_ require login (e.g. user controller, session controller, homepage controller, etc.)
+13. Now we can add a `before_filter` to ensure we authorize the user. We _could_
+    add this to the ApplicationController but then we would have to _exclude_
+    this from controllers that do _not_ require login (e.g. user controller,
+    session controller, homepage controller, etc.)
 
     ```ruby
     # path: app/controller/widgets_controller.rb
@@ -215,7 +221,8 @@ import CodePen from '@handbook/CodePen'
     end
     ```
 
-14. We can use the `current_user` and `logged_in?` methods to customize pages, even the appliction layout file
+14. We can use the `current_user` and `logged_in?` methods to customize pages,
+    even the appliction layout file
 
     ```HTML+ERB
 

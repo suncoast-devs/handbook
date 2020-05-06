@@ -1,1 +1,3 @@
-# Enumeration in Ruby
+---
+title: Enumeration in Ruby
+---
