@@ -1,8 +1,11 @@
 theme: Next, 1
 
+<!-- prettier-ignore-start -->
+
 # Documenting what we do
 
-Hopefully our code is understandable only from reading what is there. We often, however, need to describe the process our code is following or require additional details about how our code works.
+Hopefully our code is understandable only from reading what is there. We often, however, need to describe the process our code is following or require
+additional details about how our code works.
 
 Just as with using good variable names, clarity of code comments help us. Remember that code is **written once** but **read many times**.
 
@@ -37,11 +40,11 @@ var characterCount = shipName.length;
 
 Nearly every editor has support for adding and removing comments for both single lines of text as well as blocks.
 
-In Visual Studio Code you can start a comment by typing the key combination `Control /` (or `Command /` on Mac) on any line.
+In Visual Studio Code you can start a comment with the key `Control /` (or `Command /` on Mac) on any line.
 
-This will start a new comment and you can type your text. If you press enter at the end of a comment the cursor will move to the next line with that line also being a comment.
+This will start a new comment and you can type your text. If you press enter the cursor will make a new comment line.
 
-You can toggle a set of lines to have comments, or to remove comments, by highlighting the lines and pressing the commenting key combination.
+You can toggle comments by highlighting the lines and pressing the commenting key combination.
 
 ---
 
@@ -53,6 +56,9 @@ This is natural and often done during development. We'd like you to adhere by on
 
 > Don't commit commented out code to your git repository
 
-^ The idea here is that commenting out code should be a development-time activity. Never publish/share/commit files that have commented out code.
+^ The idea here is that commenting out code should be a development-time
+activity. Never publish/share/commit files that have commented out code.
 
 ---
+
+<!-- prettier-ignore-end -->

@@ -177,5 +177,12 @@ watch : Exited
 watch : Waiting for a file to change before restarting dotnet...
 ```
 
-^ If you find yourself in a cycle of: ^ - Change code ^ - Run `dotnet run` ^ -
-See output ^ - Repeat
+^ If you find yourself in a cycle of:
+
+^ - Change code
+
+^ - Run `dotnet run`
+
+^ - See output
+
+^ - Repeat
