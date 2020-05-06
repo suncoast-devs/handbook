@@ -1,5 +1,5 @@
 ---
-title: # Block versus inline elements
+title: Block versus inline elements
 ---
 
 There are two important categories of elements in HTML which you should know

@@ -2,8 +2,6 @@
 title: Pseudo-classes
 ---
 
-import CodePen from '@handbook/CodePen'
-
 A CSS pseudo-class is a keyword added to the end of a selector, preceded by a
 colon `:`, which is used to specify that you want to style the selected element
 but only when it is in a certain state. For example, you might want to style a

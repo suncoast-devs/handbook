@@ -1,5 +1,5 @@
 ---
-title: # Nesting elements
+title: Nesting elements
 ---
 
 <CodePen>

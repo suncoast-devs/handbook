@@ -1,8 +1,6 @@
 ---
-title: # Simple Selectors
+title: Simple Selectors
 ---
-
-import CodePen from '@handbook/CodePen'
 
 <CodePen>
 

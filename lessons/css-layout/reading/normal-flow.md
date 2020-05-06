@@ -2,8 +2,6 @@
 title: Normal Flow
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Normal flow is how the browser lays out HTML pages by default when you do
 nothing to control page layout.
 

@@ -2,8 +2,6 @@
 title: Values
 ---
 
-import CodePen from '@handbook/CodePen'
-
 There are many types of CSS property values to consider, from numerical values
 to colors to functions that perform a certain action (like embedding a
 background image, or rotating an element.) Some of these rely on particular

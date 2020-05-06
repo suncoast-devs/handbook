@@ -2,8 +2,6 @@
 title: Build a page mobile first.
 ---
 
-import CodePen from '@handbook/CodePen'
-
 In this section we will build a page to display the members of our team and some
 paragraphs of text about them.
 

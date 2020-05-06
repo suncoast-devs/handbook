@@ -13,7 +13,7 @@ different paths we need `control flow`
 
 Simplest of the `control flow` statements.
 
-<br>
+<br />
 
 Basic structure:
 
@@ -148,7 +148,7 @@ if (name == "Paul") {
 
 # [fit] We can do better
 
-<br>
+<br />
 
 ## Introducing `switch`
 
@@ -198,7 +198,7 @@ switch (name)
 
 The `while` statement repeats the code inside the `{ }` braces as long as the condition supplied remains true.
 
-<br>
+<br />
 
 [.column]
 

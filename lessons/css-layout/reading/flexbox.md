@@ -2,8 +2,6 @@
 title: Flexbox
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Flexbox is the short name for the Flexible Box Layout Module, designed to make
 it easy for us to lay things out in one dimension — either as a row or as a
 column. To use flexbox, you apply `display: flex` to the parent element of the

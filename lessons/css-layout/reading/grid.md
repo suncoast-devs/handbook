@@ -2,8 +2,6 @@
 title: Grid
 ---
 
-import CodePen from '@handbook/CodePen'
-
 CSS Grid Layout is a two-dimensional way of laying out objects in a grid-like
 pattern. Much like a table, CSS Grid is composed of rows and columns. The grid,
 however, is a lot more flexible than a table, allowing developers to layout

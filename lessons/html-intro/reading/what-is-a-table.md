@@ -2,7 +2,6 @@
 title: What is a table
 ---
 
-import CodePen from '@handbook/CodePen'  
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
 <AdvancedTopic message='Table structuring and styling is an advanced subject'>

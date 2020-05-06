@@ -1,5 +1,5 @@
 ---
-title: Challenge: Click on the Golden Arches
+title: Click on the Golden Arches
 ---
 
 Recreate this amazing layout:

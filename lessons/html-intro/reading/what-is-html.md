@@ -1,8 +1,6 @@
 ---
-title: # What is HTML?
+title: What is HTML?
 ---
-
-import CodePen from '@handbook/CodePen'
 
 HTML (Hypertext Markup Language) is not a programming language; it is a markup
 language used to tell your browser how to structure the web pages you visit. It

@@ -1,5 +1,5 @@
 ---
-title: Recreate Hackernews: The database"
+title: "Recreate Hackernews: The database"
 ---
 
 Head over to [Hacker News](https://news.ycombinator.com/) and check it out.

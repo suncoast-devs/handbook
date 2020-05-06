@@ -1,5 +1,5 @@
 ---
-title: # Making our first web app
+title: Making our first web app
 ---
 
 ### Sinatra

@@ -2,8 +2,6 @@
 title: Vocabulary
 ---
 
-import CodePen from '@handbook/CodePen'
-
 At its most basic level, CSS consists of two building blocks:
 
 - **Properties**: Human-readable identifiers that indicate which stylistic

@@ -2,8 +2,6 @@
 title: Floats
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Floating an element changes the behavior of that element and the block level
 elements that follow it in normal flow. The element is moved to the left or
 right and removed from normal flow, and the surrounding content floats around

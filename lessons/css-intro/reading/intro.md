@@ -2,8 +2,6 @@
 title: Getting started with CSS
 ---
 
-import CodePen from '@handbook/CodePen'
-
 CSS is a language for specifying how documents are presented to users — how they
 are styled, laid out, etc.
 

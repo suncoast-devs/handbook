@@ -1,5 +1,5 @@
 ---
-title: # Boolean attributes
+title: Boolean attributes
 ---
 
 <CodePen>

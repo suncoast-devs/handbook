@@ -2,8 +2,6 @@
 title: Flexbox
 ---
 
-import CodePen from '@handbook/CodePen'
-
 ## Why Flexbox?
 
 In the Web of the past the only reliable cross browser-compatible tools

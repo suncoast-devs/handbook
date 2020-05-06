@@ -2,8 +2,6 @@
 title: Backgrounds
 ---
 
-import CodePen from '@handbook/CodePen'
-
 In CSS you can do a lot to style the background behind your content. We've
 already looked at some simple uses, such as basic background colors and images;
 now we'll tell the whole story, and look at some advanced features like multiple

@@ -2,8 +2,6 @@
 title: Pseudo Elements
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Pseudo-elements are very much like pseudo-classes, but they have differences.
 They are keywords, this time preceded by two colons `::`, that can be added to
 the end of selectors to select a certain part of an element.

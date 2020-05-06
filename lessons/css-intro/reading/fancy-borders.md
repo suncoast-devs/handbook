@@ -2,8 +2,6 @@
 title: Fancy Borders
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Along with the box model we can take a look at the options we have for styling
 the `border` portion of a content box.
 

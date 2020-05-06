@@ -2,8 +2,6 @@
 title: Positioning
 ---
 
-import CodePen from '@handbook/CodePen'
-
 Positioning allows you to move an element from where it would be placed when in
 normal flow to another location.
 
