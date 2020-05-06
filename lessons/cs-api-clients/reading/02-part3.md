@@ -332,7 +332,7 @@ static void ShowOneItem(Item item)
 Next up is the processing of the response JSON. We can make a method to handle
 that. Notice that since we call an `await` our method needs to be `async` and it
 returns a `Task<Item>` since we want it to return an `Item` but we wrap it in a
-`Task` so dotnet can handle the async nature.
+`Task` so .NET can handle the async nature.
 
 ```C#
 static async Task<Item> ConvertResponseToItem(HttpResponseMessage response)

@@ -1,5 +1,5 @@
 ---
-title: Building APIs in dotnet
+title: Building API Servers in C# and .NET
 ---
 
 In this lesson we will build our own API which will send and receive information

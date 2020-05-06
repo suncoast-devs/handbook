@@ -1,5 +1,5 @@
 ---
-title: Introduction to APIs with C# and dotnet
+title: Introduction to APIs with C# and .NET
 ---
 
 ## Consuming API services
@@ -75,8 +75,8 @@ etc) when a web page freezes. That does not provide a great user experience.
 
 The idea of async methods will become very common as we write code that
 interacts with remote resources such as HTTP APIs or even our own database. That
-the dotnet core team made these methods asynchronous allows us the flexibility
-to make our applications as responsive as possible.
+the .NET core team made these methods asynchronous allows us the flexibility to
+make our applications as responsive as possible.
 
 However, learning to deal with `async` methods requires an even longer detour
 than we want to take at this time. Fortunately the `C#` and `dotnet` team
@@ -154,7 +154,7 @@ namespace OneListClient
 
 Notice that `Main` has changed from `public void Main` to
 `public async System.Threading.Tasks.task Main`. We have made this method
-`async` and note that it returns a `Task`. This satisfies dotnet to allow us to
+`async` and note that it returns a `Task`. This satisfies .NET to allow us to
 use `await`. It tells the calling code, in this case our entire program run,
 that our code uses `await` and thus **Main** should be treated as asynchronous.
 The idea of returning `Task` will come more into play when we are **creating**

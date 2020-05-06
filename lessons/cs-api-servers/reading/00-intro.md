@@ -126,11 +126,11 @@ that if you send a `GET` to `/helloworld` we will get back the text
 Here is one of the first conventions we are going to see for building APIs. When
 we are building an endpoint, in this case `/helloworld` we are going to make a
 special class containing code to handle those requests. That class is known as a
-`Controller`. The purpose of a `Controller` is to indicate to dotnet which
-`URL`s this code handles and which combination of URL and VERB should be handled
-by what method.
+`Controller`. The purpose of a `Controller` is to indicate to .NET which `URL`s
+this code handles and which combination of URL and VERB should be handled by
+what method.
 
-Think of the `Controller` like a traffic officer. When requests come in, dotnet
+Think of the `Controller` like a traffic officer. When requests come in, .NET
 looks to the controllers to tell it which direction to send the request, to
 which method the request should go to. We are going to refer this as `Routing`
 
@@ -161,9 +161,9 @@ parent class of `ControllerBase`. This is because much of the common code is
 created for us and implemented in the `ControllerBase`. All of our controller
 code will have `ControllerBase` as a parent.
 
-Next up are two attributes on our controller. `[ApiController]` tells dotnet
-that this class is a controller and should be considered when looking for
-controllers to handle web requests.
+Next up are two attributes on our controller. `[ApiController]` tells .NET that
+this class is a controller and should be considered when looking for controllers
+to handle web requests.
 
 Next is `[Route("[controller]")]`. This attribute tells the _routing_ system
 which URLs this code handles. Remember that we said we were following a
@@ -227,7 +227,7 @@ If you open the `Insomnia` API testing tool, create a new request, and send a
 ![](./assets/hello-world-get.png)
 
 If we peek at the `Header` tab you will see the `Content-Type` is `text/plain`.
-This is because our API method is just returning a simple string, which dotnet
+This is because our API method is just returning a simple string, which .NET
 will represent as `text/plain`.
 
 ## Making our response more dynamic.
@@ -286,7 +286,7 @@ receive back the message `Hello, Paula. It is currently 4/28/2020 10:15:30 PM`
 
 What if we left out the query parameter and just sent
 `https://localhost:5001/helloworld`. In this case there won't be any `who` to
-supply, so dotnet will fill that value with the default value for the type, in
+supply, so .NET will fill that value with the default value for the type, in
 this case `null`. We can handle that case and put back our default text of
 `World` so we see `Hello, World`.
 
@@ -344,7 +344,7 @@ of the URL be _variable_ and tell it what we want to call that specific part of
 the URL. In this case a good name for that part is `sides`.
 
 We can modify the `[HttpGet]` with parenthesis to specify additional parts of
-the URL beyond the `/dice` base. However if we use `{}` we can tell dotnet that
+the URL beyond the `/dice` base. However if we use `{}` we can tell .NET that
 we'd match anything and whatever is supplied in the URL we want to name it. In
 this case we specify our attribute as `HttpGet("{sides}")`. We read this as "In
 the `/dice` endpoint here is the method to handle GET requests that look like
@@ -400,7 +400,7 @@ what you roll! It should be a random die roll between `1` and `6`
 
 There will be another change if you look over at the `Header` tab. The
 `Content-Type` has changed. We are now returning `application/json`. This is
-because the return type is more complicated than a simple `string` and dotnet is
+because the return type is more complicated than a simple `string` and .NET is
 automatically converting our output to JSON for us.
 
 Lets return some more complex data. Lets roll many die.
@@ -591,8 +591,8 @@ come from the URL parts or from the query string. Here `dotnet` is going to look
 at the JSON body, see that there is a structure there and match it up to the
 properties of our `Game` class.
 
-What dotnet does is _map_ the incoming fields to the properties of the class
-such as:
+What .NET does is _map_ the incoming fields to the properties of the class such
+as:
 
 ```
 {

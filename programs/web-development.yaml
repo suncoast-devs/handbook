@@ -34,8 +34,8 @@ modules:
       - misc-json
       - misc-api-intro
       # - misc-rest
-      - cs-intro-to-api
-      - cs-api-build
+      - cs-api-clients
+      - cs-api-servers
       # - cs-build-api-with-database
       # - cs-deployment-to-heroku-with-docker
       # - misc-optimizing-developer-workspace
