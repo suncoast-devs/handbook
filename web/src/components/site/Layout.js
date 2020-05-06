@@ -4,8 +4,8 @@ import { Navigation } from './Navigation'
 import { SiteHeader } from './SiteHeader'
 import { SiteFooter } from './SiteFooter'
 
-function WIPBanner() {
-  return (
+function WIPBanner({ filePath }) {
+  return filePath ? (
     <div className="relative bg-purple-800">
       <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div className="pr-16 sm:text-center sm:px-16">
@@ -13,7 +13,7 @@ function WIPBanner() {
             <span className="md:inline">This site is a work in progress.</span>
             <span className="block sm:ml-2 sm:inline-block">
               <a
-                href="https://github.com/suncoast-devs/handbook"
+                href={`https://github.com/suncoast-devs/handbook/edit/master/${filePath}`}
                 className="text-purple-100 font-bold underline"
               >
                 You can help improve it. &rarr;
@@ -23,10 +23,10 @@ function WIPBanner() {
         </div>
       </div>
     </div>
-  )
+  ) : null
 }
 
-export function Layout({ title, children }) {
+export function Layout({ title, children, filePath }) {
   const mainRef = React.useRef(null)
   return (
     <>
@@ -43,7 +43,7 @@ export function Layout({ title, children }) {
         <Navigation />
         <div className="flex flex-col w-0 flex-1 overflow-hidden">
           <SiteHeader />
-          <WIPBanner />
+          <WIPBanner filePath={filePath} />
           <main
             className="flex-1 relative z-0 overflow-y-auto pt-6focus:outline-none"
             tabIndex={0}

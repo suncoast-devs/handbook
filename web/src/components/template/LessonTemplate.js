@@ -17,12 +17,14 @@ export default function LessonTemplate({
   },
 }) {
   return (
-    <Layout title={mdx.frontmatter.title}>
+    <Layout title={mdx.frontmatter.title} filePath={mdx.fields.filePath}>
       {warnings.length > 0 && (
         <div class="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
           <div class="flex">
             <div class="flex-shrink-0 leading-5 ">
-              <i className="fad fa-exclamation-triangle"></i>
+              <Link to="/warnings">
+                <i className="fad fa-exclamation-triangle"></i>
+              </Link>
             </div>
             <div class="ml-3">
               <h3 class="text-sm leading-5 font-medium">
@@ -78,6 +80,7 @@ export const pageQuery = graphql`
       body
       fields {
         type
+        filePath
       }
       frontmatter {
         title

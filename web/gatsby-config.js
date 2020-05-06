@@ -30,6 +30,20 @@ module.exports = {
         path: `${__dirname}/../lessons`,
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `assignments`,
+    //     path: `${__dirname}/../assignments`,
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `warm-ups`,
+    //     path: `${__dirname}/../warm-ups`,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-alias-imports`,
       options: {

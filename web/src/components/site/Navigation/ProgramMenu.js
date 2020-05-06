@@ -36,13 +36,13 @@ export function ProgramMenu() {
               <Description>{program.description}</Description>
             )}
 
-            <ul className="pl-3">
+            <div className="pl-3">
               {program.modules.map((module, index) => (
                 <Item key={index} module={{ program, module }}>
                   {module.title}
                 </Item>
               ))}
-            </ul>
+            </div>
           </nav>
         )
       })}

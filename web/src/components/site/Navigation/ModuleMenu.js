@@ -30,7 +30,7 @@ export function ModuleMenu() {
         <SubHeading>{module.title}</SubHeading>
         {module.description && <Description>{module.description}</Description>}
         <Heading>Lessons</Heading>
-        <ul className="pl-3">
+        <div className="pl-3">
           {module.lessons.map((slug) => {
             const lesson = lessons.find((lesson) => lesson.slug === slug)
             return (
@@ -39,7 +39,7 @@ export function ModuleMenu() {
               </Item>
             )
           })}
-        </ul>
+        </div>
       </>
     )
   } else {

@@ -1,5 +1,6 @@
 const fs = require('fs').promises
 const path = require('path')
+const globby = require('globby')
 const matter = require('gray-matter')
 const { createFilePath } = require('gatsby-source-filesystem')
 
@@ -57,28 +58,62 @@ exports.sourceNodes = async (
     })
   )
 
+  // All markdown documents excluding files in `meta`
+  const allMdFilepaths = await globby([
+    path.join(options.path, '..', '**/*.md{,x}'),
+    '!**/meta/**',
+    '!**/node_modules/**',
+  ])
+
+  await Promise.all(
+    allMdFilepaths.map(async (mdFilePath) => {
+      const frontmatter = matter(await fs.readFile(mdFilePath, 'utf8')).data
+      if (!frontmatter.title) {
+        const filePath = path.relative(
+          path.join(options.path, '..'),
+          mdFilePath
+        )
+        createWarningNode({
+          type: 'file',
+          filePath,
+          message: `The file \`${filePath}\` is missing title frontmatter.`,
+        })
+      }
+    })
+  )
+
   return Promise.all(nodes.map((node) => createNode(node)))
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
+exports.onCreateNode = (
+  { node, actions, getNode },
+  { plugins, ...options }
+) => {
   const { createNodeField } = actions
-  if (
-    node.internal.type === 'Mdx' &&
-    /\/lessons\//.test(node.fileAbsolutePath)
-  ) {
-    // Add `slug` and `path` fields to lesson MDX files for URL generation
-    const subPath = createFilePath({ node, getNode, trailingSlash: false })
-    createNodeField({ name: 'path', node, value: `/lessons${subPath}` })
+  if (node.internal.type === 'Mdx') {
+    const filePath = path.relative(
+      path.join(options.path, '..'),
+      node.fileAbsolutePath
+    )
+    createNodeField({ name: 'filePath', node, value: filePath })
 
-    const slug = (subPath.match(/^\/([\w-]+)/) || [, 1])[1]
-    createNodeField({ name: 'slug', node, value: slug })
+    if (/\/lessons\//.test(node.fileAbsolutePath)) {
+      {
+        // Add `slug` and `path` fields to lesson MDX files for URL generation
+        const subPath = createFilePath({ node, getNode, trailingSlash: false })
+        createNodeField({ name: 'path', node, value: `/lessons${subPath}` })
 
-    const type = (Object.entries({
-      reading: /^\/[\w-]+\/reading\/[\w-]+$/,
-      lecture: /^\/[\w-]+\/lecture\/[\w-]+$/,
-      index: /^\/[\w-]+$/,
-    }).find(([k, v]) => v.test(subPath)) || [])[0]
-    createNodeField({ name: 'type', node, value: type })
+        const slug = (subPath.match(/^\/([\w-]+)/) || [, 1])[1]
+        createNodeField({ name: 'slug', node, value: slug })
+
+        const type = (Object.entries({
+          reading: /^\/[\w-]+\/reading\/[\w-]+$/,
+          lecture: /^\/[\w-]+\/lecture\/[\w-]+$/,
+          index: /^\/[\w-]+$/,
+        }).find(([k, v]) => v.test(subPath)) || [])[0]
+        createNodeField({ name: 'type', node, value: type })
+      }
+    }
   }
 }
 
