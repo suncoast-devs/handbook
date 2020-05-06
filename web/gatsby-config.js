@@ -8,6 +8,15 @@ module.exports = {
         //   posts: require.resolve('./src/components/default-post-layout.js'),
         //   default: require.resolve('./src/components/default-page-layout.js'),
         // },
+        gatsbyRemarkPlugins: [
+          `gatsby-remark-copy-linked-files`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
       },
     },
     {
@@ -63,6 +72,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-stylelint`,
+    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-yaml`,
   ],
