@@ -25,13 +25,13 @@ This kind of loop is so common that we have a special syntax for it, the
 `for loop`. The basic structure of a for loop is:
 
 ```C#
-for(INITIALIZATION; CONDITION; POST-LOOP) {
+for(INITIALIZATION; CONDITION; AFTERTHOUGHT) {
   // Loop statements
 }
 ```
 
 The code that goes in the `INITIALIZATION` often initializes a variable that
-will be used in the `CONDITION` and the `POST-LOOP`.
+will be used in the `CONDITION` and the `AFTERTHOUGHT`.
 
 ```C#
 for (var counter = 0; counter < 10; counter++) {
