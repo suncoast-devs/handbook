@@ -7,5 +7,3 @@ Take a minute to answer
 questions so the instructional staff can better know you.
 
 This helps us to see how you are progressing through the pre-work.
-
-[Next](/handbook/prework/09.1-technical-skills)
