@@ -19,7 +19,7 @@ brew cask install dotnet-sdk
 We will need a few tools along the way so we will make sure they are installed
 now:
 
-### dotnet EF Core
+### .NET EF Core
 
 In a Terminal window:
 
@@ -27,7 +27,7 @@ In a Terminal window:
 dotnet tool install --global dotnet-ef
 ```
 
-### dotnet code generator
+### .NET code generator
 
 In a Terminal window:
 

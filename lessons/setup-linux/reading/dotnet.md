@@ -25,7 +25,7 @@ export PATH=$PATH:/snap/dotnet-sdk/current
 We will need a few tools along the way so we will make sure they are installed
 now:
 
-### dotnet EF Core
+### .NET EF Core
 
 In a Terminal window:
 
@@ -33,7 +33,7 @@ In a Terminal window:
 dotnet tool install --global dotnet-ef
 ```
 
-### dotnet code generator
+### .NET code generator
 
 In a Terminal window:
 
@@ -61,7 +61,7 @@ dotnet new --install SDG.templates.Web.API
 dotnet new --install SDG.templates.Web.React
 ```
 
-### Set dotnet locally to "Development Mode"
+### Set .NET locally to "Development Mode"
 
 In a Terminal window:
 

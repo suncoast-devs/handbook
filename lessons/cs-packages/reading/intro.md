@@ -15,14 +15,14 @@ the Ruby language calls them `gems`.
 
 ## Built in packages
 
-Many language and environments, csharp and dotnet included, bundle a set of code
+Many language and environments, `C#` and .NET included, bundle a set of code
 packages into their default installation. We often refer to these as _core
 libraries_ or _core packages_. These are bits of code we can use without telling
 our projects to download _external_ libraries or packages.
 
-For instance, in dotnet, we use `Console.WriteLine` to output to the console.
-This code is available to us in the `System` library. Once we tell a csharp file
-to `using System` we can now use all the code provided by `System`.
+For instance, in .NET, we use `Console.WriteLine` to output to the console. This
+code is available to us in the `System` library. Once we tell a csharp file to
+`using System` we can now use all the code provided by `System`.
 
 To add more features we need to reach for _external libraries_
 
@@ -39,8 +39,8 @@ Console.WriteLine("Press ENTER to continue");
 ```
 
 We can add an external library of code to our project. The following command,
-when run _inside_ our dotnet project we are telling dotnet to find, download,
-and add to our project all the code for a library called `Pastel`
+when run _inside_ our .NET project we are telling .NET to find, download, and
+add to our project all the code for a library called `Pastel`
 
 ```sh
 dotnet add package Pastel

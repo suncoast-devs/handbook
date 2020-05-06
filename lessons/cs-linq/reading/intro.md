@@ -27,7 +27,7 @@ return foundEmployee;
 While this code works it is not very elegant and we would end up repeating this
 patter if we were searching employees by other attributes, say `Department`. To
 improve the ability to search and manipulate `List`s (and other kinds of
-collections as we will see later) dotnet introduces the idea of `LINQ`
+collections as we will see later) .NET introduces the idea of `LINQ`
 
 ## LINQ
 
