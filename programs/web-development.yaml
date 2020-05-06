@@ -21,6 +21,8 @@ modules:
       # - cs-guard-clauses
       # - cs-ternary
       # - exceptions
+      # - misc-SOLID
+      # - cs-dependency-injection
       - cs-methods
       - cs-classes
       - cs-linq
