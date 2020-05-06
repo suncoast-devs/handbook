@@ -39,7 +39,18 @@ export function Navigation() {
             show={isSidebarOpen}
             onExited={hideSidebar}
           >
-            <div className="fixed inset-0" onClick={closeSidebar}>
+            <div
+              className="fixed inset-0"
+              onClick={closeSidebar}
+              aria-label="Close Sidebar"
+              onKeyDown={({ code }) => {
+                if (code === 32 || code === 13) {
+                  closeSidebar()
+                }
+              }}
+              tabIndex={0}
+              role="button"
+            >
               <div className="absolute inset-0 bg-gray-600 opacity-75" />
             </div>
           </Transition>

@@ -46,7 +46,6 @@ export function Layout({ title, children, filePath }) {
           <WIPBanner filePath={filePath} />
           <main
             className="flex-1 relative z-0 overflow-y-auto pt-6focus:outline-none"
-            tabIndex={0}
             ref={mainRef}
           >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">

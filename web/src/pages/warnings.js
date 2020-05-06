@@ -42,6 +42,7 @@ export default function WarningPage({
                             )
                           case 'file':
                             return meta.filePath
+                          default:
                         }
                       })()}
                       <p>{message}</p>
