@@ -18,7 +18,7 @@ export default function LessonTemplate({
 }) {
   return (
     <Layout title={mdx.frontmatter.title} filePath={mdx.fields.filePath}>
-      {warnings.length > 0 && (
+      {warnings.length > 0 && process.env.NODE_ENV === 'development' && (
         <div class="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
           <div class="flex">
             <div class="flex-shrink-0 leading-5 ">
