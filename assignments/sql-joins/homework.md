@@ -2,76 +2,85 @@
 title: Foreign Keys - The SQL
 ---
 
-As we continue to explore databases and ideas, this project will help you practice model databases and relationships, as well as help you get started on your capstone project.
+As we continue to explore databases and ideas, this project will help you
+practice model databases and relationships.
 
-First, you will expand your CompanyDatabase to have `Departments`, `Products` and `Orders`. You will be crafting queries for these new tables.
-
-After that, this weekend is the next big push your final project, work on the HTML and CSS; As well as the database schema.
+We will be expanding on our `CompanyDatabase` from the
+[sql-intro assignment](/assignments/sql-intro). You will adding new tables and
+writing queries for these new tables.
 
 ## Objectives
 
-- Work with Foreign Keys
-- Craft Queries
-- Further your final project
-
-## Requirements
-
-- Add a few tables and foreign keys to an existing database
-- Create the Schema for your final project
-- Work on the HTML & CSS for your final project
+- Work with foreign keys
+- Craft queries that join tables
 
 ### Explorer Mode
 
-- [ ] In your Company Database, add a table named `Departments`. Give this table a few columns:
+- [ ] In your `CompanyDatabase`, add a table named `Departments` with the
+      following columns:
   - `Id` as a primary key
   - `DepartmentName` as text
   - `Building` as text
-- [ ] Add a Foreign key `DepartmentId` to your `Employee` Table
+- [ ] Add a Foreign key `DepartmentId` to your `Employees` Table. If you have
+      trouble, remove the existing employees by running
+      `truncate table "Employees"`.
 - [ ] Add tables named `Products` and `Orders`.
   - `Orders` should have the columns
-    - `OrderNumber` as string
     - `Id` as a primary key
-    - `DatePlaced` as datetime
-    - `Email` as string
-  - `Product` should have the columns
-    - `Id` as a primary key
-    - `Price` as double
-    - `Name` as string
-    - `Description` as string
-    - `NumberInStock` as int
-- [ ] In our company, 1 `Order` can have many `Products` and 1 `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the 3 tables (`Orders`, `Products` and `ProductOrders`) and foreign keys needed for this to happen
+    - `OrderNumber` as a string
+    - `DatePlaced` as a datetime
+    - `Email` as a string
+  - `Products` should have the columns
+    - `Price` as a double
+    - `Name` as a string
+    - `Description` as a string
+    - `QuantityInStock` as an integer
+- [ ] In our company, one `Order` can have many `Products` and one `Product` can
+      have many `Orders`. This will be a Many-to-Many relationship. Create the
+      necessary table `ProductOrders`, foreign keys, and the `OrderQuantity`
+      field needed for this to happen.
 
 * [ ] Create queries that can do the following:
-  - [ ] Given a department id, give me all employees in the department
-  - [ ] Given a department name, give me the phone extensions
-  - [ ] Find all orders that contain the product id of `2`
-  - [ ] Given an order id, display on the `OrderNumber`, and all the product names
-  - [ ] Inserts a new product
-  - [ ] Inserts a new order
-  - [ ] Adds a product to an order
-  - [ ] Adds a new employee to a department
-  - [ ] Updating a employee's department
-  - [ ] Removing a product from an order
 
-- [ ] Turn in the above queries as a gist
+  - [ ] Insert the following `Departments`
+
+  | Department Name | Building |
+  | --------------- | -------- |
+  | Development     | Main     |
+  | Marketing       | North    |
+
+  - [ ] Insert the following `Employees`
+
+  | FullName       | Salary | JobPosition | PhoneExtension | IsPartTime | Department Id |
+  | -------------- | ------ | ----------- | -------------- | ---------- | ------------- |
+  | Tim Smith      | 40000  | Programmer  | 123            | false      | 1             |
+  | Barbara Ramsey | 80000  | Manager     | 234            | false      | 1             |
+  | Tom Jones      | 32000  | Admin       | 456            | true       | 2             |
+
+- [ ] Insert the following `Products`
+
+  | Price | Name    | Description          | QuantityInStock |
+  | ----- | ------- | -------------------- | --------------- |
+  | 12.45 | Widget  | The Original Widget  | 100             |
+  | 99.99 | Flowbee | Perfect for haircuts | 3               |
+
+* [ ] Insert a new order with order number `O529`, placed on Jan 1st, 2020 at
+      4:55PM, by someone with the email address "person@example.com"
+* [ ] Add an order quantity of `3` for the product named `Widget` to the order
+      `O529`
+* [ ] Add an order quantity of `2` for the product named `Flowbee` to the order
+      `O529`
+* [ ] Given a department id, return all employees in the department.
+* [ ] Given a department name, return all the phone extensions.
+* [ ] Find all orders that contain the product id of `2`.
+* [ ] Remove the `Flowbee` product from order with order number `O529`.
 
 ### Adventure Mode
-
-- [ ] Model out and implement a database for your Bank app from the past weekend
 
 ### Epic Mode
 
 - [ ] Give these [SQL Koans](https://sqlkoans.com/) a try.
-- [ ] Investigate working with C# and Postgres, HINT: `entity framework core`
-- [LINQ Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/03-Linq/)
-- [EF Core notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
 
 ## Additional Resources
 
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-- [SQL Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-sql/)
-- [Join Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins/)
-
-## Recommended Practice:
-
-- For more practice, Hackerrank has a [SQL Track](https://www.hackerrank.com/domains/sql)
