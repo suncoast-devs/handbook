@@ -2,4 +2,4 @@
   base = "web/"
   command = "yarn build"
   publish = "public/"
-  ignore = "git diff --quiet HEAD^ HEAD -- . ':!meta'"
+  ignore = "git diff --quiet HEAD^ HEAD -- .. ':!meta'"
