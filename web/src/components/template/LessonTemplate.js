@@ -6,8 +6,13 @@ import { Link } from 'gatsby'
 import { Layout } from '../site/Layout'
 import { Markdown } from '../site/Markdown'
 import CodePen from '../content/CodePen'
+import { CodeBlock } from '../content/CodeBlock'
 
-const shortcodes = { Link, CodePen }
+const components = {
+  Link,
+  CodePen,
+  code: CodeBlock,
+}
 
 export default function LessonTemplate({
   data: {
@@ -20,19 +25,19 @@ export default function LessonTemplate({
   return (
     <Layout title={mdx.frontmatter.title} filePath={mdx.fields.filePath}>
       {warnings.length > 0 && process.env.NODE_ENV === 'development' && (
-        <div class="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
-          <div class="flex">
-            <div class="flex-shrink-0 leading-5 ">
+        <div className="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
+          <div className="flex">
+            <div className="flex-shrink-0 leading-5 ">
               <Link to="/warnings">
                 <i className="fad fa-exclamation-triangle"></i>
               </Link>
             </div>
-            <div class="ml-3">
-              <h3 class="text-sm leading-5 font-medium">
+            <div className="ml-3">
+              <h3 className="text-sm leading-5 font-medium">
                 The following attention is needed:
               </h3>
-              <div class="mt-2 text-sm leading-5 text-yellow-700">
-                <ul class="list-disc pl-5">
+              <div className="mt-2 text-sm leading-5 text-yellow-700">
+                <ul className="list-disc pl-5">
                   {warnings.map(({ id, message }) => (
                     <li key={id}>
                       <Markdown>{message}</Markdown>
@@ -56,6 +61,7 @@ export default function LessonTemplate({
         <nav className="py-2 px-3 flex flex-col">
           {reading.map(({ fields: { path }, frontmatter: { title } }) => (
             <Link
+              key={path}
               className="mt-1 group px-2 py-1 text-sm leading-tight font-medium text-gray-600 hover:text-gray-300 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-500 transition ease-in-out duration-150"
               activeClassName="bg-gray-200"
               to={path}
@@ -65,7 +71,7 @@ export default function LessonTemplate({
           ))}
         </nav>
       </div>
-      <MDXProvider components={shortcodes}>
+      <MDXProvider components={components}>
         <div className="markdown">
           <MDXRenderer>{mdx.body}</MDXRenderer>
         </div>

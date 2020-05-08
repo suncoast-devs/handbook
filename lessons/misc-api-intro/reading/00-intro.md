@@ -19,7 +19,7 @@ writing and _using_ APIs!
 
 Let's look at a simple example:
 
-```C#
+```csharp
 int AddTwoNumbers(int firstNumber, int secondNumber)
 {
   return firstNumber + secondNumber;
@@ -76,13 +76,13 @@ it.
 Let's run the `http` command (for `httpie`) and supply it the location of our
 API.
 
-```sh
+```shell
 http --verbose http://ron-swanson-quotes.herokuapp.com/v2/quotes
 ```
 
 Your output will be similar to the following:
 
-```sh
+```shell
 GET /v2/quotes HTTP/1.1
 Accept: */*
 Accept-Encoding: gzip, deflate
@@ -135,7 +135,7 @@ remote API returned to us. From the LESSON ON JSON, we see that this is an array
 Let's make an analogy to our understanding of methods. This API above is similar
 to a method in `C#` named:
 
-```C#
+```csharp
 List<string> GetOneQuote()
 {
   // Body of code here
@@ -144,7 +144,7 @@ List<string> GetOneQuote()
 
 and our `http` command line is like running this code with
 
-```C#
+```csharp
 GetOneQuote()
 ```
 
@@ -171,7 +171,7 @@ documentation for the Ron Swanson API we see that if we tack on `/<count>` where
 
 To use this we might do:
 
-```sh
+```shell
 http --verbose http://ron-swanson-quotes.herokuapp.com/v2/quotes/5
 ```
 

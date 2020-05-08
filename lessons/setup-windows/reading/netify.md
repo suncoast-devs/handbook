@@ -15,6 +15,6 @@ Before continuing, you **MUST** sign up for a _FREE_ account with
 From PowerShell, run the following command (the current directory does not
 matter):
 
-```sh
+```shell
 npm install --global netlify-cli
 ```

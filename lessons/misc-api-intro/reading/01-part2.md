@@ -25,13 +25,13 @@ The examples below are based on the
 This API URL will get the list of all todo items. If we run `http` to fetch data
 from the API like:
 
-```sh
+```shell
 http https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage
 ```
 
 We would see output similar to:
 
-```JSON
+```json
 [
   {
     "id": 6,
@@ -48,7 +48,7 @@ We would see output similar to:
     "user_id": 4,
     "created_at": "2016-08-17T20:42:59.666Z",
     "updated_at": "2018-10-02T16:11:59.553Z"
-  },
+  }
 ]
 ```
 
@@ -70,13 +70,13 @@ Use the URL `GET` `/items/{id}?access_token={access_token}` to retrieve a
 specific token. Notice that in the URL we put the specific TODO item's `id`
 while also providing the access token.
 
-```sh
+```shell
 http https://one-list-api.herokuapp.com/items/20?access_token=illustriousvoyage
 ```
 
 This will return the details on only item with `id` of `20`.
 
-```JSON
+```json
 {
   "id": 20,
   "text": "eat breakfast",
@@ -100,7 +100,7 @@ command line.
 
 The JSON we will send to the server should look like this:
 
-```JSON
+```json
 {
   "item": {
     "text": "New text here",
@@ -113,7 +113,7 @@ We can specify this on the command line with `httpie` by writing:
 `item:='{ "text": "New text here", "complete": false }'`. We can also specify
 the `POST` verb.
 
-```sh
+```shell
 http POST "https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage" item:='{ "text": "New text here", "complete": false }'
 ```
 
@@ -121,7 +121,7 @@ The response from this request will be the JSON representation of the newly
 created todo item. If you are also trying this, your IDs and timestamps will be
 different.
 
-```JSON
+```json
 {
   "id": 1588,
   "text": "New text here",
@@ -146,20 +146,20 @@ in the URL:
 The body of the method has the same structure as the `POST`, that is the JSON
 object containing `text` and `complete` keys.
 
-```sh
+```shell
 http PUT "https://one-list-api.herokuapp.com/items/1588?access_token=illustriousvoyage" item:='{ "text": "New text here. Updated", "complete": true }'
 ```
 
 The JSON response from this will be similar to:
 
-```JSON
+```json
 {
-    "id": 1588,
-    "text": "New text here. Updated",
-    "complete": true,
-    "user_id": 4,
-    "created_at": "2020-04-23T00:56:05.709Z",
-    "updated_at": "2020-04-23T01:03:16.815Z"
+  "id": 1588,
+  "text": "New text here. Updated",
+  "complete": true,
+  "user_id": 4,
+  "created_at": "2020-04-23T00:56:05.709Z",
+  "updated_at": "2020-04-23T01:03:16.815Z"
 }
 ```
 
@@ -176,7 +176,7 @@ the URL.
 However we do not specify a body since no additional information is needed to
 find the item and remove it.
 
-```sh
+```shell
 http DELETE "https://one-list-api.herokuapp.com/items/1588?access_token=illustriousvoyage"
 ```
 

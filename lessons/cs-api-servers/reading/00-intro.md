@@ -6,7 +6,7 @@ In other lessons we have used `dotnet new console` to create our application
 that run in the terminal. Now we will be using a different template, one that
 configures our code to interact with HTTP clients.
 
-```sh
+```shell
 dotnet new webapi -o BasicAPI
 ```
 
@@ -43,7 +43,7 @@ about each line and it's purpose.
 > NOTE: You won't have to edit this code often, but you may update it as we add
 > new libraries and capabilities to our system.
 
-```C#
+```csharp
 namespace BasicApi
 {
     public class Startup
@@ -188,7 +188,7 @@ will have meaning to us. We'll review some conventions to follow later.
 
 ## Implementing the endpoing handling method
 
-```C#
+```csharp
 public string SayHello()
 {
     return "Hello, World.";
@@ -237,7 +237,7 @@ current date and time in the greeting.
 
 We change the implemention of the method to:
 
-```C#
+```csharp
 [HttpGet]
 public string SayHello()
 {
@@ -272,7 +272,7 @@ named `who` we simply add an argument to our method and name it `who`. We make
 it a `string` so we will receive the text value of the key-value pair, `Sandy`
 in our example.
 
-```C#
+```csharp
 [HttpGet]
 public string Get(string who)
 {
@@ -290,7 +290,7 @@ supply, so .NET will fill that value with the default value for the type, in
 this case `null`. We can handle that case and put back our default text of
 `World` so we see `Hello, World`.
 
-```C#
+```csharp
 [HttpGet]
 public string Get(string who)
 {
@@ -320,7 +320,7 @@ Lets make an API for rolling die. We will start with making and endpoint
 the `dice` from `/dice` is converted to CamelCase and we tack on `Controller`)
 and inside we define a `DiceController` class.
 
-```C#
+```csharp
 using System;
 using Microsoft.AspNetCore.Mvc;
 
@@ -357,7 +357,7 @@ Previously we used `string` as the type. Here, however, we want this to be a
 number so we can define `sides` as `int`. Since we are also returning a number,
 we define the return type is `int`. We'll name our method `Roll`
 
-```C#
+```csharp
 [HttpGet("{sides}")]
 public int Roll(int sides)
 {
@@ -372,7 +372,7 @@ but to just one _smaller_ than `SOMENUMBER`. So if we want a number between `1`
 and the number of sides we use
 `var roll = randomNumberGenerator.Next(sides) + 1`
 
-```C#
+```csharp
 using System;
 using Microsoft.AspNetCore.Mvc;
 
@@ -418,7 +418,7 @@ integers, we'll return a `List<int>`. In our method we will create a new `List`
 and then populate many random rolls of the die. Finally we will return the list
 of rolls.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
@@ -469,7 +469,7 @@ What happens if no `count` is given? If for instance you use
 `https://localhost:5001/dice/20`? Oops, we get back an empty array. Luckily `C#`
 allows us to specify a default value for an argument if it is not supplied.
 
-```C#
+```csharp
 public List<int> Roll(int sides, int count = 1)`
 ```
 
@@ -502,7 +502,7 @@ The same would be true for query parameters
 Luckily we've already seen that we can use the _body_ of the request to send a
 JSON formatted string of data such as:
 
-```JSON
+```json
 {
   "name": "Ticket To Ride",
   "host": "Bill",
@@ -518,7 +518,7 @@ becomes, how will we handle this data on the backend?
 
 Let's first begin by creating our `GamesController`
 
-```C#
+```csharp
 using System;
 using Microsoft.AspNetCore.Mvc;
 
@@ -558,7 +558,7 @@ as "models" as they represent (or model) information in the real world.
 
 Here is our `Game` class:
 
-```C#
+```csharp
 public class Game
 {
     public int Id { get; set; }
@@ -622,7 +622,7 @@ and it does a similar mapping in return:
 
 So we can simply return the same `game` object as the return value.
 
-```C#
+```csharp
 [HttpPost]
 public Game Create(Game gameToCreate)
 {
@@ -644,7 +644,7 @@ public Game Create(Game gameToCreate)
 
 Our controller code is now:
 
-```C#
+```csharp
 using System;
 using Microsoft.AspNetCore.Mvc;
 
@@ -717,13 +717,13 @@ endpoint needs, and finally the newly created object. Since we haven't created
 an endpoint for fetching `Game`s, we'll supply `null` for the first two
 parameters.
 
-```C#
+```csharp
 return CreatedAtAction(null, null, gameToCreate);
 ```
 
 Now our method looks like this:
 
-```C#
+```csharp
 [HttpPost]
 public ActionResult<Game> Create(Game gameToCreate)
 {
@@ -761,7 +761,7 @@ we could not handle their request.
 The first requirement is that we have at least two players. We can add this
 statement at the beginning of our method:
 
-```C#
+```csharp
 if (gameToCreate.MinimumPlayers < 2)
 {
     return UnprocessableEntity();
@@ -780,7 +780,7 @@ And while we do get a response code that indicates we could not handle the
 request, that object returned is not very friendly. Let's improve that by
 generating a new object for the API to return.
 
-```C#
+```csharp
 if (gameToCreate.MinimumPlayers < 2)
 {
     // Make a generic object containing just a message property
@@ -796,7 +796,7 @@ JSON results.
 
 In this final version of the code we will add the remaining validation.
 
-```C#
+```csharp
 using System;
 using System.Net;
 using Microsoft.AspNetCore.Http;

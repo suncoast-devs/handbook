@@ -59,7 +59,7 @@ JavaScript expression that makes it possible to extract data from arrays or
 objects using a syntax that mirrors the construction of array and object
 literals.
 
-```js
+```javascript
 let numbers = ["one", "two", "three"];
 
 // without destructuring
@@ -84,7 +84,7 @@ strict equality and inequality comparisons. These operators do not attempt to
 convert the operands to compatible types before checking equality. The following
 table describes the comparison operators in terms of this sample code:
 
-```js
+```javascript
 let var1 = 3;
 let var2 = 4;
 ```
@@ -110,7 +110,7 @@ operators are addition (+), subtraction (-), multiplication (\*), and division
 used with floating point numbers (in particular, note that division by zero
 produces Infinity). For example:
 
-```js
+```javascript
 1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 ```

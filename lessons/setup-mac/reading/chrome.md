@@ -12,6 +12,6 @@ tools will help.
 
 ## Installation
 
-```sh
+```shell
 brew install google-chrome
 ```

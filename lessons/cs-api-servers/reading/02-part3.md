@@ -15,7 +15,7 @@ have been added to your environment in LESSON ON COMPUTER SETUP.
 
 ## Generating an app with API and database support
 
-```sh
+```shell
 dotnet new sdg-api -o GameDatabaseAPI
 ```
 
@@ -27,7 +27,7 @@ that will connect to a database as well as support API controllers.
 From our previous work we have this POCO and we defined it right in our
 controller class.
 
-```C#
+```csharp
 public class Game
 {
     public int Id { get; set; }
@@ -52,7 +52,7 @@ find it in the `Models` folder here as well.
 
 After this code:
 
-```C#
+```csharp
 public partial class DatabaseContext : DbContext
 {
 ```
@@ -60,7 +60,7 @@ public partial class DatabaseContext : DbContext
 add this statement to let the `DatabaseContext` know we want to track `Game` in
 a `Games` table:
 
-```C#
+```csharp
 public partial class DatabaseContext : DbContext
 {
     public DbSet<Game> Games { get; set; }
@@ -74,7 +74,7 @@ public partial class DatabaseContext : DbContext
 
 Since we just added a new model we need to create a migration
 
-```sh
+```shell
 dotnet ef migrations add AddGames
 ```
 
@@ -88,7 +88,7 @@ You should have at least two new files in `Migrations`, one ending in
 `_AddGames.cs`. Open that file and ensure the `Up` method has the expected
 results:
 
-```C#
+```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
@@ -121,7 +121,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 
 To _run_ the migration against our database:
 
-```sh
+```shell
 dotnet ef database update
 ```
 
@@ -134,7 +134,7 @@ properly using EF Core.
 We will create these imports and the namespace before copying over our
 `class GamesController`
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
@@ -151,7 +151,7 @@ ourselves. However, in an API application the system creates the context for us
 and **provides** it to us when a controller is _instantiated_ for each request.
 Thus we need a `constructor` method like this:
 
-```C#
+```csharp
 private readonly DatabaseContext _context;
 
 public GamesController(DatabaseContext context)
@@ -174,7 +174,7 @@ will take care of all of that.
 
 Currently our **get all the games** API code looks like this:
 
-```C#
+```csharp
 // Get all the games
 // API: GET /games
 [HttpGet]
@@ -186,7 +186,7 @@ public ActionResult<IEnumerable<Game>> GetAll()
 
 to have this get the list of games from the database:
 
-```C#
+```csharp
 // Get all the games
 // API: GET /games
 [HttpGet]
@@ -200,13 +200,13 @@ public ActionResult<IEnumerable<Game>> GetAll()
 
 Here we need only change
 
-```C#
+```csharp
 var game = GameList.FirstOrDefault(game => game.Id == id);
 ```
 
 to
 
-```C#
+```csharp
 var game = _context.Games.FirstOrDefault(game => game.Id == id);
 ```
 
@@ -215,7 +215,7 @@ var game = _context.Games.FirstOrDefault(game => game.Id == id);
 The first thing we do is remove the code for `NextId` and `GameList.Add` and
 replace them with:
 
-```C#
+```csharp
 _context.Games.Add(gameToCreate);
 _context.SaveChanges();
 ```
@@ -230,13 +230,13 @@ the existing game from the database.
 Then before we can return our `Ok(foundGame)` we must tell the database this
 object has changed:
 
-```C#
+```csharp
 _context.Entry(foundGame).State = EntityState.Modified;
 ```
 
 And then we must save changes:
 
-```C#
+```csharp
 _context.SaveChanges();
 ```
 
@@ -251,7 +251,7 @@ and follow it with `_context.SaveChanges();`
 
 ## Final code
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using GameDatabaseAPI.Models;

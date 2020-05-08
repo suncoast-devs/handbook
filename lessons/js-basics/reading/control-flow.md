@@ -13,7 +13,7 @@ Before we can discuss control flow, we need to understand the idea of a block.
 The most basic statement is a block statement that is used to group statements.
 The block is delimited by a pair of curly brackets:
 
-```js
+```javascript
 {
   statement_1
   statement_2
@@ -36,7 +36,7 @@ Use the if statement to execute a statement if a logical condition is `true`.
 Use the optional `else` clause to execute a statement if the condition is
 `false`. An if statement looks as follows:
 
-```js
+```javascript
 if (condition) {
   statement_1;
 } else {
@@ -56,7 +56,7 @@ including further nested if statements.
 You may also compound the statements using `else if` to have multiple conditions
 tested in sequence, as follows:
 
-```js
+```javascript
 if (condition_1) {
   statement_1;
 } else if (condition_2) {
@@ -73,7 +73,7 @@ evaluates to true will be executed. To execute multiple statements, group them
 within a block statement (`{ ... }`) . In general, it's good practice to always
 use block statements, especially when nesting if statements:
 
-```js
+```javascript
 if (condition) {
   statement_1_runs_if_condition_is_true;
   statement_2_runs_if_condition_is_true;
@@ -89,7 +89,7 @@ A `switch` statement allows a program to evaluate an expression and attempt to
 match the expression's value to a case label. If a match is found, the program
 executes the associated statement. A switch statement looks as follows:
 
-```js
+```javascript
 switch (expression) {
   case label_1:
     statements_1
@@ -123,7 +123,7 @@ statement. When break is encountered, the program terminates switch and executes
 the statement following switch. If break were omitted, the statement for case
 "Cherries" would also be executed.
 
-```js
+```javascript
 switch (fruittype) {
   case "Oranges":
     console.log("Oranges are $0.59 a pound.");

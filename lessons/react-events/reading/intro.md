@@ -17,7 +17,7 @@ HTML:
 
 JS:
 
-```js
+```javascript
 const handleButtonClick = (event) => {
   console.log("button was clicked");
 };
@@ -29,7 +29,7 @@ document
 
 React way:
 
-```js
+```javascript
   handleButtonClick = (event) => {
     console.log("button was clicked")
   }

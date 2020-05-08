@@ -20,7 +20,7 @@ suggests this is the part of `C#` that allows us to interact with the user.
 
 Lets start with outputting a message to our user:
 
-```C#
+```csharp
 Console.WriteLine("Welcome to my program");
 ```
 
@@ -33,7 +33,7 @@ represents a blank line of it's own.
 The following will output **two** blank lines, one for the `WriteLine` and one
 because we included a `\n`
 
-```C#
+```csharp
 Console.WriteLine("\n");
 ```
 
@@ -42,7 +42,7 @@ to output some text but leave the cursor on the current line we can `Write`
 instead of `WriteLine`. `Write` works the same way but does not move the cursor
 to the next line.
 
-```C#
+```csharp
 Console.Write("What is your name? ");
 ```
 
@@ -56,7 +56,7 @@ Next we want to read information from the console. To read information we use
 `Console.ReadLine`. This will return a `string` which we can put into a
 variable.
 
-```C#
+```csharp
 var name = Console.ReadLine();
 ```
 
@@ -65,13 +65,13 @@ place the resulting string into the variable `name`.
 
 Finally we print out the greeting with:
 
-```C#
+```csharp
 Console.WriteLine($"It is a pleasure to meet you, {name}");
 ```
 
 ## Full program
 
-```C#
+```csharp
 using System;
 
 namespace OurDotNetApp

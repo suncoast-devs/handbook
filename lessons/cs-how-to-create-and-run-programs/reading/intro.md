@@ -7,7 +7,7 @@ to contain our code. This project will tell our computer how to organize our
 code, how to make the code ready to run (known as `compiling`) and finally how
 to run our code.
 
-# The `dotnet` command
+## The `dotnet` command
 
 We will be using the `dotnet` command frequently. This command has many ways to
 use it and we'll discover those in various other lessons. To get started with a
@@ -16,7 +16,7 @@ simplest program we can write will interact with the user by what we call the
 `console.` On Mac OS or Linux the `console` will be our `terminal/shell` and on
 Windows this will be our `Powershell` window.
 
-# Starting in the right place
+## Starting in the right place
 
 Before we can create a new project we must first change the working directory of
 our shell into the directory where we'll keep our code. We suggest you use a
@@ -24,18 +24,18 @@ folder named `sdg` or `code` or something else that will remind you this is
 where your projects are. You'll also want to keep this directory in your home
 folder or your `Documents` folder.
 
-# Running `dotnet new console` to make a new console application
+### Running `dotnet new console` to make a new console application
 
 Now that we have created a directory to contain our application we can use the
 `dotnet` app to create the project:
 
-```sh
+```shell
 dotnet new console -o our-dotnet-app
 ```
 
 You should see something similar to:
 
-```
+```shell-session
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -48,11 +48,11 @@ Restore succeeded.
 And then we will make that directory our current directory by using the `cd`
 command:
 
-```sh
+```shell
 cd our-dotnet-app
 ```
 
-# What files make up our project?
+### What files make up our project?
 
 The `dotnet new console` command generates a new project for us from a
 _template_. In this case we are using the `console` template. Each template we
@@ -79,7 +79,7 @@ The second file, `Program.cs` is where we will start writing our `C#` code. The
 `.cs` file extension indicates to our code editor as well as the `dotnet` tool
 that this code is written in the `c-sharp` (or `cs`) language.
 
-# Let's run our code!
+## Let's run our code!
 
 The template `Program.cs` simply prints out the phrase `Hello World!` which is a
 common
@@ -99,7 +99,7 @@ Hello World!
 Now as we change our code and add more functionality we can return to our
 terminal/Powershell and run `dotnet run` again to see our new code in action.
 
-# Watch our code and automatically run it.
+## Watch our code and automatically run it.
 
 If you find yourself in a cycle of:
 
@@ -114,8 +114,8 @@ changes and as soon as it sees any, to run it right away.
 
 With this option our terminal/Powershell will look like:
 
-```
-dotnet watch run
+```shell-session
+$ dotnet watch run
 watch : Started
 Hello World!
 watch : Exited

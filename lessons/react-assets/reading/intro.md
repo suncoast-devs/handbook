@@ -36,13 +36,13 @@ title: React Assets
 
 ## When we import an image
 
-```js
+```javascript
 import photo from "./skywalker.png";
 ```
 
 ##### We get a string representing the path to the image to use in code
 
-```js
+```javascript
 render() {
   return (
    <ul>
@@ -58,13 +58,13 @@ render() {
 
 ## When we import a JSON file
 
-```js
+```javascript
 import octocats from `./cats.json`
 ```
 
 ##### We get a JSON object we can access and use
 
-```js
+```javascript
 render() {
   const cats = octocats.map(cat => {
     return <Octocat name={cat.name} image={cat.image}/>

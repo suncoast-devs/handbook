@@ -20,7 +20,7 @@ We've seen this with the `while` control flow:
 
 ## Do something 10 times.
 
-```C#
+```csharp
 var counter = 0;
 
 while (counter < 10) {
@@ -36,7 +36,7 @@ while (counter < 10) {
 
 # Introducing `for` loop
 
-```C#
+```csharp
 
 // Do this at the start
 //      |
@@ -55,7 +55,7 @@ for(INITIALIZATION; CONDITION; AFTERTHOUGHT) {
 
 # [fit] Revisiting printing something 10 times
 
-```C#
+```csharp
 // Start the counter at 0
 //      |
 //      |        Keep going as long as counter is less than 10
@@ -77,13 +77,13 @@ counter
 
 # Looping through an array
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 ```
 
 Let's loop through this array and print out each name.
 
-```C#
+```csharp
 // Start the index at 0
 //      |
 //      |        Keep going as long as index is less than the length of the array
@@ -108,7 +108,7 @@ Console.WriteLine("Hi, this is code after the loop");
 It is often helpful to imagine we are .NET and walk through the code and see it
 how the computer does
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -126,7 +126,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.code-highlight:1]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -152,7 +152,7 @@ name    =>  "Mark", "Paula", "Sandy"
 
 [.code-highlight:3]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -181,7 +181,7 @@ index   =>  0
 
 [.code-highlight:4]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -212,7 +212,7 @@ currentName =>  "Mark"
 
 [.code-highlight:6]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -243,7 +243,7 @@ currentName =>  "Mark"
 
 [.code-highlight:7]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -274,7 +274,7 @@ currentName =>  "Mark"
 
 [.code-highlight:3]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -305,7 +305,7 @@ index       =>  1
 
 [.code-highlight:4]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -336,7 +336,7 @@ currentName   =>  "Paula"
 
 [.code-highlight:6]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -367,7 +367,7 @@ currentName =>  "Paula"
 
 [.code-highlight:7]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -398,7 +398,7 @@ currentName =>  "Paula"
 
 [.code-highlight:3]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -429,7 +429,7 @@ index       =>  2
 
 [.code-highlight:4]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -460,7 +460,7 @@ currentName   =>  "Sandy"
 
 [.code-highlight:6]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -491,7 +491,7 @@ currentName =>  "Sandy"
 
 [.code-highlight:7]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -522,7 +522,7 @@ currentName =>  "Paula"
 
 [.code-highlight:3]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -553,7 +553,7 @@ index       =>  3
 
 [.code-highlight:9]
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" };
 
 for (var index = 0; index < names.Length; index++) {
@@ -586,7 +586,7 @@ name        =>  "Mark", "Paula", "Sandy"
 
 ## `foreach`
 
-```C#
+```csharp
 foreach (var name in names) {
   Console.WriteLine(name);
 }

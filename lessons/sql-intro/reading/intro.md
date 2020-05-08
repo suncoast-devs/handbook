@@ -165,7 +165,7 @@ Hat' (`Title`), 'Dr. Suess' (`Author`), and 'kids' (`Genre`).
 First, we need to create a database. After you have installed Postgres, use the
 command:
 
-```bash
+```shell
 createdb BookCollection
 ```
 
@@ -174,7 +174,7 @@ to create a new, empty database.
 To connect to that database and start running queries against it, use the
 command:
 
-```bash
+```shell
 psql BookCollection
 ```
 

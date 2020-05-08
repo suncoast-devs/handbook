@@ -8,7 +8,7 @@ applications. (Note: all of this is covered in the
 
 ## Creating a new rails application
 
-```sh
+```shell
 rails new NAME
 ```
 

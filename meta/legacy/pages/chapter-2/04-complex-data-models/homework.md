@@ -2,7 +2,11 @@
 title: Rhythm's gonna get you
 ---
 
-For the past few lessons we have chatted about and worked with data, for this project we will continue our journey into data and modeling a database. We are starting a record label company and we a place to store our bands, albums and songs. You will be creating a console app that stores our companies information in a database.
+For the past few lessons we have chatted about and worked with data, for this
+project we will continue our journey into data and modeling a database. We are
+starting a record label company and we a place to store our bands, albums and
+songs. You will be creating a console app that stores our companies information
+in a database.
 
 ## Objectives
 
@@ -11,19 +15,25 @@ For the past few lessons we have chatted about and worked with data, for this pr
 
 ## Requirements
 
-Create a console that allows a user to store and manage a companies bands, albums, and songs.
+Create a console that allows a user to store and manage a companies bands,
+albums, and songs.
 
-You can use the template we have been using but you can also use the one we talked about today. You can install it by using the following command:
+You can use the template we have been using but you can also use the one we
+talked about today. You can install it by using the following command:
 
-```sh
+```shell
  dotnet new --install SDG.templates.Console.Database::1.0.0
 ```
 
-Also feel free to use the package [we talked about during lecture](https://github.com/lechu445/ConsoleMenu) to help with the menu system.
+Also feel free to use the package
+[we talked about during lecture](https://github.com/lechu445/ConsoleMenu) to
+help with the menu system.
 
 ### Explorer Mode
 
-- [ ] Create a database that stores Albums, Bands, and Songs. They should have at least the following properties, use your best judgement for types. (I have left off the Foreign keys intentionally)
+- [ ] Create a database that stores Albums, Bands, and Songs. They should have
+      at least the following properties, use your best judgement for types. (I
+      have left off the Foreign keys intentionally)
 
   - [ ] Album
     - Id
@@ -65,10 +75,12 @@ Also feel free to use the package [we talked about during lecture](https://githu
 
 ### Adventure Mode
 
-- [ ] As you see, our data is not very normalized, Add the following relationships and tables
+- [ ] As you see, our data is not very normalized, Add the following
+      relationships and tables
   - [ ] A song can have many genres
   - [ ] A band can have many styles
-- [ ] Not only do you want to store band, as also band members, create a new table called `Musicians` give it a many to many relationship with a Band
+- [ ] Not only do you want to store band, as also band members, create a new
+      table called `Musicians` give it a many to many relationship with a Band
 - Add the following queries
 
   - [ ] View albums in a genre
@@ -76,8 +88,15 @@ Also feel free to use the package [we talked about during lecture](https://githu
 
 ### Epic Mode
 
-- [ ] Project structure will become more important in the next couple of weeks. Challenge yourself to have `ReadLine` and `WriteLine` only in your `Program.cs`
-- [ ] (this is a big leap, but a good one)On monday we are starting to talk about APIs. Add integrations from [Last.fm API](https://www.last.fm/api). This API has a bunch of features. Go crazy, the sky is the limit. hint: use the [Httpclient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netcore-3.1) in C#
+- [ ] Project structure will become more important in the next couple of weeks.
+      Challenge yourself to have `ReadLine` and `WriteLine` only in your
+      `Program.cs`
+- [ ] (this is a big leap, but a good one)On monday we are starting to talk
+      about APIs. Add integrations from [Last.fm API](https://www.last.fm/api).
+      This API has a bunch of features. Go crazy, the sky is the limit. hint:
+      use the
+      [Httpclient](https://docs.microsoft.com/en-us/dotnet/api/system.net.http.httpclient?view=netcore-3.1)
+      in C#
 
 ## Additional Resources
 
@@ -87,4 +106,5 @@ Also feel free to use the package [we talked about during lecture](https://githu
 
 ## Recommended Practice:
 
-- For more practice, Hackerrank has a [SQL Track](https://www.hackerrank.com/domains/sql)
+- For more practice, Hackerrank has a
+  [SQL Track](https://www.hackerrank.com/domains/sql)

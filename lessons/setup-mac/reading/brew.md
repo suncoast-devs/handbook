@@ -9,6 +9,6 @@ install many of the development tools we need during this program.
 
 Open a Terminal and run:
 
-```sh
+```shell
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```

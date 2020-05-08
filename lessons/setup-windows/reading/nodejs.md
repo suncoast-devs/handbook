@@ -10,6 +10,6 @@ require, or are written in, JavaScript with node.
 
 ## Installation
 
-```sh
+```shell
 scoop install nodejs
 ```

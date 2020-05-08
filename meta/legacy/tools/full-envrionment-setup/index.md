@@ -2,7 +2,9 @@
 title: Full Env Set up
 ---
 
-This is a walkthough of the all the tools, templates, and software to setup a new computer. This is targeted towards people who have been through the cohort and need to setup a new machine.
+This is a walkthough of the all the tools, templates, and software to setup a
+new computer. This is targeted towards people who have been through the cohort
+and need to setup a new machine.
 
 ## Tools
 
@@ -17,7 +19,7 @@ These are tool that all developers should have.
 
 The following VS Code Extensions
 
-```sh
+```shell
 code   --install-extension  2gua.rainbow-brackets
 code   --install-extension  hasanali.gitignore-templates
 code   --install-extension  ms-vsliveshare.vsliveshare
@@ -34,7 +36,7 @@ code   --install-extension  bierner.markdown-preview-github-styles
 
 The following VS Code Extensions
 
-```sh
+```shell
 
 code   --install-extension  aeschli.vscode-css-formatter
 code   --install-extension  auchenberg.vscode-browser-preview
@@ -68,7 +70,7 @@ dotnet tool install --global dotnet-ef
 
 - The following VS Code Extensions:
 
-```sh
+```shell
 code   --install-extension  jchannon.csharpextensions
 code   --install-extension  jorgeserrano.vscode-csharp-snippets
 code   --install-extension  ms-azuretools.vscode-docker

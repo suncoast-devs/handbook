@@ -9,7 +9,7 @@ idea of `loops`.
 Let's say we want to perform some statement, or statements, `10` times. We could
 do this with the `while` control flow statement as follows:
 
-```C#
+```csharp
 var counter = 0;
 
 while (counter < 10) {
@@ -24,7 +24,7 @@ while (counter < 10) {
 This kind of loop is so common that we have a special syntax for it, the
 `for loop`. The basic structure of a for loop is:
 
-```C#
+```csharp
 for(INITIALIZATION; CONDITION; AFTERTHOUGHT) {
   // Loop statements
 }
@@ -33,7 +33,7 @@ for(INITIALIZATION; CONDITION; AFTERTHOUGHT) {
 The code that goes in the `INITIALIZATION` often initializes a variable that
 will be used in the `CONDITION` and the `AFTERTHOUGHT`.
 
-```C#
+```csharp
 for (var counter = 0; counter < 10; counter++) {
   Console.WriteLine("Doing something");
 }
@@ -51,14 +51,14 @@ counter**
 The `for` loop is also helpful for processing all the elements of an `array` or
 `List`
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" , "Bill" };
 ```
 
 If we wanted to print all the individual names in the array we could write a
 loop like:
 
-```C#
+```csharp
 for (var index = 0; index < names.Length; index++) {
   var currentName = names[index];
 
@@ -73,7 +73,7 @@ the value of their length)
 
 This code works well but there is an even more succinct syntax called `foreach`
 
-```C#
+```csharp
 foreach (var name in names) {
   Console.WriteLine(name);
 }
@@ -85,14 +85,14 @@ The `foreach` method assumes we are going to work through the entire array.
 
 Fortunately the `for` loop and `foreach` loop work similarly for a `List`
 
-```C#
+```csharp
 var names = new List<string>() { "Mark", "Paula", "Sandy" , "Bill" };
 foreach (var name in names) {
   Console.WriteLine(name);
 }
 ```
 
-```C#
+```csharp
 var names = new List<string>() { "Mark", "Paula", "Sandy" , "Bill" };
 for (var index = 0; index < names.Count; index++) {
   var name = names[index];

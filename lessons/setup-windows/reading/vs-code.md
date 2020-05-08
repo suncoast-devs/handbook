@@ -12,7 +12,7 @@ and working our way up to power drill.
 
 ## Installation (via Scoop)
 
-```sh
+```shell
 scoop install vscode
 ```
 
@@ -40,7 +40,7 @@ into your Visual Studio Code
 
 ### General Extensions:
 
-```sh
+```shell
 code --install-extension 2gua.rainbow-brackets
 code --install-extension hasanali.gitignore-templates
 code --install-extension streetsidesoftware.code-spell-checker
@@ -48,7 +48,7 @@ code --install-extension streetsidesoftware.code-spell-checker
 
 ### C#/.NET Extensions:
 
-```sh
+```shell
 
 code --install-extension austincummings.razor-plus
 code --install-extension jchannon.csharpextensions
@@ -66,7 +66,7 @@ code --install-extension ScottSauber.blazorsnippets
 
 ## Front End Extensions:
 
-```sh
+```shell
 
 code --install-extension aeschli.vscode-css-formatter
 code --install-extension auchenberg.vscode-browser-preview

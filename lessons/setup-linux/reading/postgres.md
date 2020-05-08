@@ -8,22 +8,22 @@ The database engine we will be using for our back-end work.
 
 Start a Terminal and run:
 
-```sh
+```shell
 sudo apt install postgresql
 ```
 
-```sh
+```shell
 sudo apt install pgcli
 ```
 
-```sh
+```shell
 sudo -u postgres createuser --superuser $USER
 ```
 
 <!--
 #### Configure pgcli with nice defaults
 
-```sh
+```shell
 pgcli >/dev/null 2>&1
 sed -i "s/multiline_continuation_char = ''/multiline_continuation_char = '.'/g" ~/.config/pgcli/config
 sed -i "s/multi_line = False/multi_line = True/g" ~/.config/pgcli/config
@@ -37,13 +37,13 @@ sed -i "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
 
 From Terminal:
 
-```sh
+```shell
 createdb MyTestDatabase
 ```
 
 Then:
 
-```sh
+```shell
 pgcli MyTestDatabase
 ```
 

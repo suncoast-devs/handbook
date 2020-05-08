@@ -233,7 +233,7 @@ speaking, for now, and it is time for the sever to begin processing.
 
 To try this, on Mac OS or Linux you can use the `nc` utility:
 
-```sh
+```shell
 nc suncoast.io 80
 ```
 

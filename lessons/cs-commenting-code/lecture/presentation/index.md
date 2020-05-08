@@ -15,7 +15,7 @@ For this we can use **`comments`** in our code.
 
 # Commenting code in `C#`
 
-```C#
+```csharp
 // This is the name of our ship
 var shipName = "Heart of Gold";
 

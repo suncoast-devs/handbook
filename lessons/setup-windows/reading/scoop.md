@@ -9,20 +9,20 @@ installer.
 
 ## Installing
 
-```sh
+```shell
 Set-ExecutionPolicy RemoteSigned -scope CurrentUser
 
 ```
 
 Answer "Y"es to the prompt
 
-```sh
+```shell
 iwr -useb get.scoop.sh | iex
 ```
 
 Install the `extras`
 
-```sh
+```shell
 scoop install git
 scoop bucket add extras
 scoop bucket add versions
@@ -30,6 +30,6 @@ scoop bucket add versions
 
 Install vcredist
 
-```sh
+```shell
 scoop install vcredist
 ```

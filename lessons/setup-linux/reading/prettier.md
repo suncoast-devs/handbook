@@ -12,6 +12,6 @@ code.
 
 ## Installation
 
-```sh
+```shell
 npm install --global prettier
 ```

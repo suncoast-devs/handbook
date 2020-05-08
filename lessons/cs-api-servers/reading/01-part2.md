@@ -48,7 +48,7 @@ We will keep a `List<>` of `Game` objects as well as an `int` to keep track of
 the next ID to assign. The `NextID` will be incremented each time we add an item
 to the `List<>`. In this way it works similar to how a database `ID` works.
 
-```C#
+```csharp
 // A list of all the games we currently know about
 static public List<Game> GameList = new List<Game>();
 
@@ -60,7 +60,7 @@ static public int NextID = 1;
 
 The endpoint to return the full list of games is:
 
-```C#
+```csharp
 // Get all the games
 // API: GET /games
 [HttpGet]
@@ -101,7 +101,7 @@ process no further.
 Otherwise the method proceeds and we return an `Ok(game)` such that we return a
 `200` and the contents of `game`.
 
-```C#
+```csharp
 // Get a specific game by ID
 // API: GET /games/{id}
 [HttpGet("{id}")]
@@ -136,7 +136,7 @@ created `Game`.
 The rest of the method is similar to our previous implementation except for
 incrementing and using `NextID`
 
-```C#
+```csharp
 // Create a game
 // API: POST /games
 // BODY: JSON structure like
@@ -215,7 +215,7 @@ Next we validate the `gameUpdate` according to our validation rules.
 We then copy the values from `gameUpdate` to `foundGame` to save away the
 updated values. Finally we return `Ok(foundGame)` to return the updated values.
 
-```C#
+```csharp
 // Update a game
 // API: PUT /games/{id}
 // BODY: JSON structure like
@@ -295,7 +295,7 @@ seek a game with that `id`. Similarly if nothing was found we return a
 to remove the item from the list. Finally we return `Ok(foundGame)` to send a
 `200` response with the contents of the now deleted `Game`.
 
-```C#
+```csharp
 // Remove a game
 // API: DELETE /games/{id}
 [HttpDelete("{id}")]
@@ -323,7 +323,7 @@ public ActionResult<Game> Delete(int id)
 
 ## Full Code
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

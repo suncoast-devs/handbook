@@ -40,7 +40,7 @@ are a few things to notice:
    completion since it is now marked `async.
 3. The `client` variable is also moved into `ShowAllItems`.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -157,7 +157,7 @@ We'll update the menu code first. Changing
 `Console.Write("Get (A)ll todo, or Get (O)ne todo, or (Q)uit: ");` and adding a
 `case` statement to our `switch`.
 
-```C#
+```csharp
 case "O":
     Console.Write("Enter the ID of the item to show: ");
     var id = Console.ReadLine();
@@ -171,7 +171,7 @@ case "O":
 
 Then we will make a new method to handle `GetOneItem`
 
-```C#
+```csharp
 static async Task GetOneItem(string token, int id)
 ```
 
@@ -181,7 +181,7 @@ work. First it needs the list's `token`, and second it requires the _integer_
 
 The implementation of the method is:
 
-```C#
+```csharp
 static async Task GetOneItem(string token, int id)
 {
     var client = new HttpClient();
@@ -258,7 +258,7 @@ not do the requested process and I'm raising the white flag in defeat hoping
 that someone who called **me** can handle this!" We do this by wrapping the code
 in a special syntax called `try/catch`.
 
-```C#
+```csharp
 try
 {
   // Code that might THROW an EXCEPTION
@@ -279,7 +279,7 @@ To handle the case where the API returns with something other than success
 `catch` portion of the code we simply print the user an error message and end
 the method.
 
-```C#
+```csharp
 static async Task GetOneItem(string token, int id)
 {
     try
@@ -312,7 +312,7 @@ static async Task GetOneItem(string token, int id)
 
 To those following along, this is the entirety of our program so far:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -467,7 +467,7 @@ First we update our prompt:
 `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, or (Q)uit: ");`
 and add some code to our `switch` statement.
 
-```C#
+```csharp
 case "C":
     Console.Write("Enter the description of your new todo: ");
     var text = Console.ReadLine();
@@ -486,7 +486,7 @@ case "C":
 
 and finally we implement the `AddOneItem` method.
 
-```C#
+```csharp
 static async Task AddOneItem(string token, Item newItem)
 {
     var client = new HttpClient();
@@ -557,7 +557,7 @@ Press ENTER to continue
 This is a lot of code and we will be able to _reuse_ quite a bit of it on our
 next feature, the `Update`. For now here is our code so far:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -773,7 +773,7 @@ First we will change our prompt:
 `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, or (Q)uit: ");`
 and add a `case` to prompt the user:
 
-```C#
+```csharp
 case "U":
     Console.Write("Enter the ID of the item to update: ");
     var existingId = int.Parse(Console.ReadLine());
@@ -801,7 +801,7 @@ And then implement the method `UpdateOneItem`. Notice that it takes the token,
 the id, and the updatedItem. Also note there is a high similarity between this
 method and the `AddOneItem` method. We will refactor this later.
 
-```C#
+```csharp
 static async Task UpdateOneItem(string token, int id, Item updatedItem)
 {
     var client = new HttpClient();
@@ -861,7 +861,7 @@ First we will update our prompt
 `Console.Write("Get (A)ll todo, or Get (O)ne todo, (C)reate a new item, (U)pdate an item, (D)elete an item, or (Q)uit: ");`
 and add a case statement:
 
-```C#
+```csharp
 case "D":
     Console.Write("Enter the ID of the item to delete: ");
     var idToDelete = int.Parse(Console.ReadLine());
@@ -875,7 +875,7 @@ case "D":
 
 And the implementation only needs to only send the deletion request.
 
-```C#
+```csharp
 static async Task DeleteOneItem(string token, int id)
 {
     try
@@ -897,7 +897,7 @@ static async Task DeleteOneItem(string token, int id)
 
 Our code is now:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;

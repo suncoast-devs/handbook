@@ -10,10 +10,10 @@ when we start to learn to use, and to create, APIs.
 From PowerShell, run the following command (the current directory does not
 matter):
 
-```sh
+```shell
 scoop install python
 ```
 
-```sh
+```shell
 pip install httpie
 ```

@@ -17,7 +17,7 @@ Simplest of the `control flow` statements.
 
 Basic structure:
 
-```C#
+```csharp
 if (someBooleanCondition) {
   // Code to run if the condition is true
 }
@@ -29,7 +29,7 @@ if (someBooleanCondition) {
 
 Can also handle the case when the condition is false
 
-```C#
+```csharp
 if (someBooleanCondition) {
   // Code if the condition is true
 }
@@ -60,7 +60,7 @@ Examples of boolean conditions
 
 # Example
 
-```C#
+```csharp
 if (name == "Paul") {
   Console.WriteLine("Greetings!");
 } else {
@@ -80,7 +80,7 @@ Combine two conditions.
 
 Condition that is true if the score is lower than `20` **OR** greater than `90`:
 
-```C#
+```csharp
 if (score < 20 || score > 90) {
   // Some code here
 }
@@ -91,7 +91,7 @@ if (score < 20 || score > 90) {
 Condition that is true if the person is named `Paul` **AND** the score is more
 than `85`:
 
-```C#
+```csharp
 if (name == "Paul" && score > 85) {
   // Some code here
 }
@@ -132,7 +132,7 @@ better `if` statements
 
 A series of `if/else` statements can be chained.
 
-```C#
+```csharp
 if (name == "Paul") {
   Console.WriteLine("Here");
 } else if (name == "Dorothy") {
@@ -154,7 +154,7 @@ if (name == "Paul") {
 
 ---
 
-```C#
+```csharp
 switch (name)
 {
     case "Paul":
@@ -206,7 +206,7 @@ Ask the the user their name and greet them until the user enters the text `quit`
 
 [.column]
 
-```C#
+```csharp
 Console.Write("What is your name? ");
 var name = Console.ReadLine();
 

@@ -17,7 +17,8 @@ This covers the basic intro to the Reactjs.
 - create-react-app (ADD TIME)
 
   - tool built by developers at Facebook to help you build React applications.
-  - It saves you from time-consuming setup and configuration. Simply run create-react-app command to create and start a new react project.
+  - It saves you from time-consuming setup and configuration. Simply run
+    create-react-app command to create and start a new react project.
   - `create-react-app name-of-your-app`
   - `yarn install` then `yarn start` since we are using `yarn` not `npm`
   - `localhost:3000` (browser)
@@ -26,28 +27,31 @@ This covers the basic intro to the Reactjs.
   - both are package managers
   - yarn is slightly better (for the moment)
 - [Components](https://reactjs.org/docs/glossary.html#components)
-  - React components are small, reusable pieces of code that return a React element to be rendered to the page
+  - React components are small, reusable pieces of code that return a React
+    element to be rendered to the page
 - Props
   - attribute of a component
-  - Most components can be customized when they are created, with different parameters. These creation parameters are called props.
+  - Most components can be customized when they are created, with different
+    parameters. These creation parameters are called props.
 - Rendering multiple components (i.e. map)
   - render method renders only one DOM element
   - DOM element can have as many children as it wants
-- `import React, { Component } from "react";` this boilerplate almost always goes on top of every react component
+- `import React, { Component } from "react";` this boilerplate almost always
+  goes on top of every react component
 
 - [react-article-demo](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
   (approx 00:39:35)
 
-  ```js
+  ```javascript
   // all the files needed need to be imported
-  import React, { Component } from 'react'
-  import './App.css'
+  import React, { Component } from "react";
+  import "./App.css";
   // import Header component from Header.js in current directory ("./" => current directory)
-  import Header from './Header'
+  import Header from "./Header";
   // import Header component from Articles.js in current directory
-  import Header from './Articles'
+  import Header from "./Articles";
   // import Header component from Footer.js in current directory
-  import Header from './Footer'
+  import Header from "./Footer";
 
   class App extends Component {
     render() {
@@ -61,25 +65,24 @@ This covers the basic intro to the Reactjs.
           <Articles />
           <Footer />
         </div>
-      )
+      );
     }
   }
 
   // component needs to be exported so it can be available for other components to import
-  export default App
+  export default App;
   ```
 
 - to add class, use `className` (approx 01:05:20)
 
   - `<div className="all-main-content"> ... </div>`
 
-- [Props](https://reactjs.org/docs/components-and-props.html)
-  (approx 01:12:10)
+- [Props](https://reactjs.org/docs/components-and-props.html) (approx 01:12:10)
 
-  ```js
-  import React, { Component } from 'react'
+  ```javascript
+  import React, { Component } from "react";
   // import Article component from Article in current directory
-  import Article from './Article'
+  import Article from "./Article";
 
   class Articles extends Component {
     render() {
@@ -101,25 +104,28 @@ This covers the basic intro to the Reactjs.
             <Article title="React is cool" content="Hell yeah it is" />
           </main>
         </div>
-      )
+      );
     }
   }
 
-  export default Articles
+  export default Articles;
   ```
 
   - Article.js
 
-    - `this.props.title` will render out each title property in Articles component ("Gavin can't spell Article", "What is wrong with Gavin", "Sending Gavin back to school", "React is cool" )
-    - `this.props.content` will render out each content property in Articles component as `this.props.title` did with title property
+    - `this.props.title` will render out each title property in Articles
+      component ("Gavin can't spell Article", "What is wrong with Gavin",
+      "Sending Gavin back to school", "React is cool" )
+    - `this.props.content` will render out each content property in Articles
+      component as `this.props.title` did with title property
     - You can create unlimited different articles using Article component
 
-    ```js
-    import React, { Component } from 'react'
+    ```javascript
+    import React, { Component } from "react";
 
     class Article extends Component {
       render() {
-        console.log(this.props)
+        console.log(this.props);
 
         return (
           <article className="intro-article">
@@ -130,17 +136,16 @@ This covers the basic intro to the Reactjs.
             </a>
             <div className="read-more-underline" />
           </article>
-        )
+        );
       }
     }
 
-    export default Article
+    export default Article;
     ```
 
-- Loading Props data from somewhere else
-  (approx 01:24:00)
+- Loading Props data from somewhere else (approx 01:24:00)
 
-  ```js
+  ```javascript
   import React, { Component } from "react";
   import Article from "./Article";
 
@@ -174,11 +179,13 @@ This covers the basic intro to the Reactjs.
   export default Articles;
   ```
 
-- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview) review (approx 1:32:25)
+- [Array.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map#Descriptionreview)
+  review (approx 1:32:25)
 
-  - The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+  - The map() method creates a new array with the results of calling a provided
+    function on every element in the calling array.
 
-  ```js
+  ```javascript
     data = [
       {
         title: "Gavin can't spell Article",
@@ -210,9 +217,9 @@ This covers the basic intro to the Reactjs.
 
 - eventually `Articles.js` code will look like this
 
-  ```js
-  import React, { Component } from 'react'
-  import Article from './Article'
+  ```javascript
+  import React, { Component } from "react";
+  import Article from "./Article";
 
   class Articles extends Component {
     render() {
@@ -223,26 +230,26 @@ This covers the basic intro to the Reactjs.
             "Gavin can't type on a Monday . That's why. He went to a party last night",
         },
         {
-          title: 'What is wrong with Gavin',
-          content: 'Gavin is tired this morning',
+          title: "What is wrong with Gavin",
+          content: "Gavin is tired this morning",
         },
-      ]
+      ];
 
       // save new array in a variable and just refer to it in a DOM
       // (approx 1:39:10)
-      const articles = data.map(element => {
-        return <Article title={element.title} content={element.content} />
-      })
+      const articles = data.map((element) => {
+        return <Article title={element.title} content={element.content} />;
+      });
 
       return (
         <div className="all-main-content">
           <main>{articles}</main>
         </div>
-      )
+      );
     }
   }
 
-  export default Articles
+  export default Articles;
   ```
 
 ## React is declarative
@@ -255,5 +262,7 @@ This covers the basic intro to the Reactjs.
 ## Today's work
 
 - Class Demo: Adventure Time (Basic)
-- Suggested Assignment Focusing on Components: [Reactified Octocats](/handbook/curriculum/front-end/react-i/assignments/reactified-octocats)
-- Suggested Assignment: [Party Like it's 1989!](/handbook/curriculum/front-end/react-i/assignments/party-like-its-1989)
+- Suggested Assignment Focusing on Components:
+  [Reactified Octocats](/handbook/curriculum/front-end/react-i/assignments/reactified-octocats)
+- Suggested Assignment:
+  [Party Like it's 1989!](/handbook/curriculum/front-end/react-i/assignments/party-like-its-1989)

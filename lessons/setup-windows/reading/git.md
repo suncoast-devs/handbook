@@ -15,7 +15,7 @@ First, make sure you have a [GitHub](http://github.com/) account.
 
 ## Installation (via Scoop)
 
-```sh
+```shell
 scoop install git
 ```
 
@@ -34,7 +34,7 @@ name here, not a pseudonym or a `1337 haxor` name.
 > `"Replace This With Your Full Name"` use your full name, e.g., "Jane Q Public"
 > or "John Q Public".
 
-```sh
+```shell
 git config --global user.name "Replace This With Your Full Name"
 ```
 
@@ -45,11 +45,11 @@ git config --global user.name "Replace This With Your Full Name"
 > you gave to GitHub**. Github uses this to make sure it can generate this
 > awesome "activity" chart for you. ![github-activity](./github-activity.png)
 
-```sh
+```shell
 git config --global user.email "email-address-you-used-at-github@example.com"
 ```
 
-```sh
+```shell
 git config --global core.editor "code --wait"
 ```
 
@@ -58,6 +58,6 @@ git config --global core.editor "code --wait"
 Finally, we need to set up Git and GitHub to use the `https` protocol. Enter the
 following in your shell (`Powershell`):
 
-```sh
+```shell
 git config --global hub.protocol https
 ```

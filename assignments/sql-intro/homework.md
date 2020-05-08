@@ -20,7 +20,7 @@ one file, `queries.sql` in the directory which you will turn in.
 
 When you are done:
 
-```sh
+```shell
 hub create sql-intro
 git add .
 git commit -m "Queries"

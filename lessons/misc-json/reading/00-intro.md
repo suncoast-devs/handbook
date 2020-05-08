@@ -101,16 +101,10 @@ dictionary, or an `object` in JavaScript. The format of an object begins with a
 then followed by any other JSON value type (strings, numbers, booleans, null, an
 array, or another object). The object closes with a `}`.
 
-```JSON
+```json
 {
   "class-size": 5,
-  "students": [
-    "Mary",
-    "Elizabeth",
-    "Mark",
-    "Sam",
-    "Tom"
-  ],
+  "students": ["Mary", "Elizabeth", "Mark", "Sam", "Tom"],
   "full": true,
   "completed": false
 }

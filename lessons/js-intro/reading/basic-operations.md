@@ -68,7 +68,7 @@ operators are addition (+), subtraction (-), multiplication (\*), and division
 used with floating point numbers (in particular, note that division by zero
 produces Infinity). For example:
 
-```js
+```javascript
 1 / 2; // 0.5
 1 / 2 == 1.0 / 2.0; // this is true
 ```

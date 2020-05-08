@@ -12,6 +12,6 @@ App App ensures a good project folder setup and includes all the needed tools.
 From PowerShell, run the following command (the current directory does not
 matter):
 
-```sh
+```shell
 npm install --global app-app
 ```

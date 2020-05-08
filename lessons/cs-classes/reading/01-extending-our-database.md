@@ -4,7 +4,7 @@ title: Extending our database
 
 To review our `EmployeeDatabase` so far:
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -81,7 +81,7 @@ keep all these employees in a `List` and use `class`es to organize our code.
 
 The `List` we will create will look like this:
 
-```C#
+```csharp
 var employees = new List<Employee>();
 ```
 
@@ -96,7 +96,7 @@ To put an employee in our list we use the code: `employees.Add(employee)` where
 
 Now our code looks like:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -177,7 +177,7 @@ and use the existing code to ask the user for details on a new employee.
 This allows us to continuously add more employees to our list until the user
 quits
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -274,7 +274,7 @@ namespace EmployeeDatabase
 
 Let's add a menu item to show all the employees in the database.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -381,7 +381,7 @@ matching name. If we find one we update a variable named `foundEmployee` which
 otherwise will have the value `null`. Then if `foundEmployee` is `null` we tell
 the user no match was found, otherwise we show the details of `foundEmployee`.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -531,7 +531,7 @@ the data from a data file. Any time we can change one part of the system, the
 employee database, without having to change other parts of the code (the menu
 system) we have created a good _decoupling_ of our system's parts.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 

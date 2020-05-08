@@ -10,6 +10,6 @@ This will be more useful the more we dive deeper in JavaScript
 
 ## Installation
 
-```sh
+```shell
 brew install yarn
 ```

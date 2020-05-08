@@ -29,7 +29,7 @@ create your project.
 
 Using the dotnet cli, create a new project
 
-```bash
+```shell
   dotnet new console -n KurtsVideoRental
 ```
 
@@ -38,7 +38,7 @@ Using the dotnet cli, create a new project
 Before we add any project specific packages, we need to install the global tools
 to work with EF Core
 
-```bash
+```shell
   dotnet tool install --global dotnet-ef
 ```
 
@@ -51,13 +51,13 @@ database and what language.
 
 ​- How we talk to the database aka ORM (EntityFramework)
 
-```bash
+```shell
 ​ dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 
 - Which Database am I talking to?(PostgreSQL)
 
-```bash
+```shell
 ​dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 
 ```
@@ -67,7 +67,7 @@ database and what language.
 On a new project, we need to create the database. This can be done with the
 pgcli tools we have used before
 
-```bash
+```shell
 createdb MovieDb
 
 ```
@@ -77,7 +77,7 @@ createdb MovieDb
 We need to “scaffold” our ​database context​. This is the connection between the
 database and the ​ORM.
 
-```bash
+```shell
 dotnet ef dbcontext scaffold "server=localhost;database=MovieDb" Npgsql.EntityFrameworkCore.PostgreSQL -c MovieContext
 ```
 
@@ -94,7 +94,7 @@ Open your project in vs code using `code .` .
 We need to create a new file, name it `Movie.cs`. This is we are creating a POCO
 that represents our database table.
 
-```C#
+```csharp
 namespace KurtsVideoRental ​
 {
      public class Movie {
@@ -123,7 +123,7 @@ representation of our database, this is where we add our DbSet.
 
 Write this code inside the partial class’ { }.
 
-```C#
+```csharp
 public DbSet<Movie> Movies {get;set;}
 ```
 
@@ -139,7 +139,7 @@ database structure has changed. Since we have changed our database structure
 
 To create a migration, head back to the terminal and run:
 
-```bash
+```shell
   dotnet ef migrations add AddedMovieTable
 ```
 
@@ -149,7 +149,7 @@ are not applied until we update our database.
 
 Once you are happy with your POCOs and database structure, run
 
-```bash
+```shell
 dotnet ef database update
 ```
 
@@ -168,7 +168,7 @@ section).
 
 ### Create
 
-```C#
+```csharp
 // Connect to you database
 var db = new MovieContext();
 // create the new movie
@@ -183,7 +183,7 @@ db.SaveChanges();
 
 ### Read
 
-```C#
+```csharp
 var db = new MovieContext();
 var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 
@@ -191,7 +191,7 @@ var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 
 ### Update
 
-```C#
+```csharp
 var db = new MovieContext();
 var bestMovie = db.Movies.FirstOrDefault(movie => movie.Name == "Jaws");
 if (bestMovie != null){
@@ -204,7 +204,7 @@ if (bestMovie != null){
 
 ### Delete
 
-```C#
+```csharp
 var db = new MovieContext();
 var movieToDelete = db.Movies.FirstOrDefault(movie => movie.Name == "Frozen");
 if (movieToDelete != null){

@@ -132,13 +132,13 @@ and we are eventually going to represent these relationships in our `C#` code.
 Start by making a plain console application so we can prompt the user if needed
 as well as output information.
 
-```sh
+```shell
 dotnet new console -o SuncoastMovies
 ```
 
 we will also need to add the Entity Framework library to our project
 
-```sh
+```shell
 cd SuncoastMovies
 dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 ```
@@ -154,7 +154,7 @@ properties corresponding to the same names we find in our table.
 
 In our `Program.cs` we can add `class Movie` as such:
 
-```C#
+```csharp
 using System;
 
 namespace SuncoastMovies
@@ -200,7 +200,7 @@ database.
 
 Our database context looks like this:
 
-```C#
+```csharp
 // Define a database context for our Suncoast Movies database.
 // It derives from (has a parent of) DbContext so we get all the
 // abilities of a database context from EF Core.
@@ -244,7 +244,7 @@ local machine.
 
 Here is our code so far:
 
-```C#
+```csharp
 using System;
 using Microsoft.EntityFrameworkCore;
 
@@ -290,14 +290,14 @@ namespace SuncoastMovies
 
 Now we can add code to the `Main` to use our context and access our data.
 
-```C#
+```csharp
 // Get a new context which will connect to the database
 var context = new SuncoastMoviesContext();
 ```
 
 With this object we access our `Movies` property:
 
-```C#
+```csharp
 // Get a reference to our collection of movies.
 // NOTE: this doesn't yet access any of them, just gives
 //       us a variable that knows how.
@@ -310,7 +310,7 @@ table.
 
 ### Counting movies
 
-```C#
+```csharp
 var movieCount = movies.Count();
 Console.WriteLine($"There are {movieCount} movies!");
 ```
@@ -333,7 +333,7 @@ There are 14 movies!
 
 To see all of the movies, we can use a `foreach` loop:
 
-```C#
+```csharp
 foreach (var movie in movies)
 {
   Console.WriteLine($"There is a movie named {movie.title}");
@@ -364,7 +364,7 @@ There is a movie named Ity
 
 So our application now looks like this:
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -433,13 +433,13 @@ with the database.
 
 Before we can use the logger we must add another package to our application:
 
-```sh
+```shell
 dotnet add package Microsoft.Extensions.Logging.Console
 ```
 
 Then we can add this code to our `OnConfiguring` method:
 
-```C#
+```csharp
 var loggerFactory = LoggerFactory.Create(builder => builder.AddConsole());
 optionsBuilder.UseLoggerFactory(loggerFactory);
 ```
@@ -484,7 +484,7 @@ and `Actors`.
 
 Lets add a model for our ratings.
 
-```C#
+```csharp
 class Rating
 {
   public int Id { get; set; }
@@ -504,7 +504,7 @@ relate the two tables.
 We need to modify the `Movie` model to tell it how to relate to the `Rating`
 model. To do this, we'll add the following code:
 
-```C#
+```csharp
 public int RatingId { get; set; }
 public Rating Rating { get; set; }
 ```
@@ -515,7 +515,7 @@ This tells the `Movie` model that it can use the `Rating` property to return a
 Now when we access the `context.Movies` we can also tell it to fetch the related
 `Rating` via the `Include` method.
 
-```C#
+```csharp
 var movies = context.Movies.Include(movie => movie.Rating);
 ```
 
@@ -524,7 +524,7 @@ Now when we access the `movies` we are going to generate a **JOIN** to the
 
 Now we can change our loop to also show the `rating` if it has one.
 
-```C#
+```csharp
 foreach (var movie in movies)
 {
   if (movie.Rating == null)
@@ -575,7 +575,7 @@ There is a movie named It and a rating of R
 
 Here is our code so far:
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
@@ -664,7 +664,7 @@ Finally, we can add the relationships for `Role` and `Actor`.
 Notice that when adding the `Roles` relationship to the `Movie` class we add it
 as such:
 
-```C#
+```csharp
 public List<Role> Roles { get; set; }
 ```
 
@@ -672,7 +672,7 @@ We are telling the `Movie` that it has a _list_ of related `Roles`. Since we
 have setup or relationships with appropriate SQL syntax, EF Core can determine
 how to join these tables together.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -847,7 +847,7 @@ There is a movie named It and a rating of R
 
 To add a `Movie` to the record we can make a new POCO:
 
-```C#
+```csharp
 var newMovie = new Movie {
   Title = "SpaceBalls",
   PrimaryDirector = "Mel Brooks",
@@ -860,7 +860,7 @@ var newMovie = new Movie {
 Then we can add this POCO to the `Movies` context and tell the context to save
 the changes
 
-```C#
+```csharp
 context.Movies.Add(newMovie);
 context.SaveChanges();
 ```
@@ -878,7 +878,7 @@ RETURNING "Id";
 To change the name of a movie, we can find an existing record first before
 changing an attribute.
 
-```C#
+```csharp
 // Search for a movie by name. FirstOrDefault takes a function to use to compare the movies and returns the first record that matches, or if nothing matches, returns null.
 // This is the same as we used with LINQ against a List, but this time it is searching the database.
 var existingMovie = context.Movies.FirstOrDefault(movie => movie.Title == "SpaceBalls");
@@ -897,7 +897,7 @@ if (existingMovie != null) {
 
 To remove a movie we find the movie and then remove it.
 
-```C#
+```csharp
 var existingMovie = context.Movies.FirstOrDefault(movie => movie.Title == "Cujo");
 
 // If we found an existing movie.
@@ -912,7 +912,7 @@ if (existingMovie != null) {
 
 ### A whole app that can create, read, update, and delete movies:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -16,13 +16,13 @@ the movies.
 
 ### Creating our database
 
-```sh
+```shell
 createdb SuncoastMovies
 ```
 
 This is the database we will use for the rest of this discussion.
 
-```sh
+```shell
 pgcli SuncoastMovies
 ```
 

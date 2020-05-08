@@ -14,7 +14,7 @@ In this section we will refactor the code for these improvements:
 We have repeated the finding of a single `Game` in multiple places. So lets
 extract that to a single method:
 
-```C#
+```csharp
 // Find a Game with the given id, return null if not found
 protected Game FindGameById(int id)
 {
@@ -39,7 +39,7 @@ object we parse from the body.
 
 The resulting code is:
 
-```C#
+```csharp
 [HttpPut("{id}")]
 public ActionResult<Game> Update(int id, Game gameToUpdate)
 {
@@ -98,7 +98,7 @@ some requests _queueing_ and waiting. Luckily this is an easy thing to fix.
 
 Let's look at `GetAll`
 
-```C#
+```csharp
 [HttpGet]
 public ActionResult<IEnumerable<Game>> GetAll()
 {
@@ -109,7 +109,7 @@ public ActionResult<IEnumerable<Game>> GetAll()
 The first thing we will do is extract out a variable to store the games and we
 will make a call to `ToList`
 
-```C#
+```csharp
 [HttpGet]
 public ActionResult<IEnumerable<Game>> GetAll()
 {
@@ -126,7 +126,7 @@ To make this asynchronous we do a few steps:
    wait on the data.
 3. Use `await` and `ToListAsync` to the implementation.
 
-```C#
+```csharp
 [HttpGet]
 public async Task<ActionResult<IEnumerable<Game>>> GetAll()
 {
@@ -147,7 +147,7 @@ The same changes are made to other methods, including changing `SaveChanges` to
 
 Here is the code with all the changes applied.
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

@@ -25,7 +25,7 @@ represented.
 
 Let's take a look at that idea.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -118,7 +118,7 @@ us? No, we only output to the screen, so we will not have any _return value_
 
 Thus our method will look like
 
-```C#
+```csharp
 static void displayGreeting()
 {
   Console.WriteLine("----------------------------------------");
@@ -136,7 +136,7 @@ it is needed for this code to work.
 This is great, but how do we use this in our code? Let's see what the program
 looks like with all the code together.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -180,7 +180,7 @@ moment.
 
 The way you read the line:
 
-```C#
+```csharp
 DisplayGreeting();
 ```
 
@@ -221,7 +221,7 @@ it. In does, the string the user entered. So this method has a return type of
 
 Our method signature will be:
 
-```C#
+```csharp
 static string PromptForString(string prompt)
 ```
 
@@ -229,7 +229,7 @@ Now let's write the method.
 
 Since we are creating a generic version of this code:
 
-```C#
+```csharp
 Console.Write("What is your name? ");
 var name = Console.ReadLine();
 ```
@@ -238,7 +238,7 @@ it will probably look similar.
 
 In fact, the code looks like this:
 
-```C#
+```csharp
 static string PromptForString(string prompt)
 {
   Console.Write(prompt);
@@ -259,7 +259,7 @@ receive a compiler error.
 
 Now we can put this code to use.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -315,7 +315,7 @@ Let's repeat this for the prompt of integers.
 > This might be a good point to see if you can write this method before looking
 > at the rest of the lesson.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -393,7 +393,7 @@ This method behaves slightly different than `Int.Parse`. It _returns_ a boolean
 value that indicates if the value was parsed, and we place the variable we are
 assigning as an _argument_. It looks like this:
 
-```C#
+```csharp
 // This gives an exception if the user types in something *other* than a string
 var userInput = Int32.Parse(Console.ReadLine());
 
@@ -404,7 +404,7 @@ var isThisGoodInput = Int32.TryParse(Console.ReadLine(), out userInput);
 The code is a little more complex, but it allows us to do some checking. Let's
 see how this might work in our method.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -477,7 +477,7 @@ Finally, we will make a method that computes a monthly salary.
 
 > Again, give it a try on your own before reading ahead.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase

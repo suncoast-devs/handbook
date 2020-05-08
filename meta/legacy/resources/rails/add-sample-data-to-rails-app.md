@@ -2,13 +2,17 @@
 title: How to add sample data to a Rails application
 ---
 
-Often times when developing an application we want to have sample data in our database. We *could* do this with `rails console` and using our models to create instances of models. However, this is not repeatable and we often forget how we created this sample data.
+Often times when developing an application we want to have sample data in our
+database. We _could_ do this with `rails console` and using our models to create
+instances of models. However, this is not repeatable and we often forget how we
+created this sample data.
 
-An alternative is to create a `rails task` to use the same commands from `rails console` but in a repeatable way.
+An alternative is to create a `rails task` to use the same commands from
+`rails console` but in a repeatable way.
 
 ## Step 1: Create a rails task
 
-```sh
+```shell
 rails generate task sampledata load
 ```
 
@@ -25,7 +29,8 @@ end
 
 ## Step 2: Update the task
 
-Change the `"TODO"` to a descriptive entry such as `"Loads sample data into the database"`
+Change the `"TODO"` to a descriptive entry such as
+`"Loads sample data into the database"`
 
 ## Step 3: Add your sample data creation code
 
@@ -35,13 +40,15 @@ Inside the `task ... do` block add your code such as:
 restaurant = Restaurant.create!(name: "Ultimate Tacos", location: "123 Main Street")
 ```
 
-*NOTE* we are using `create!` to get an exception and stop if there is any validation error. Otherwise, we might overlook data that is not created due to validation errors.
+_NOTE_ we are using `create!` to get an exception and stop if there is any
+validation error. Otherwise, we might overlook data that is not created due to
+validation errors.
 
 ## Step 4: Run the task
 
 This will run that task and create any of the data the script creates
 
-```sh
+```shell
 rails sampledata:load
 ```
 
@@ -49,13 +56,14 @@ rails sampledata:load
 
 To clear any existing data before running your sample data load you can do this:
 
-```sh
+```shell
 rails db:schema:load
 ```
 
 ## Additional: Related Models
 
-Let's say that we have a model `Review` that relates to a `Restaurant` with a `belongs_to` relationship.
+Let's say that we have a model `Review` that relates to a `Restaurant` with a
+`belongs_to` relationship.
 
 ```ruby
 class Review < ApplicationRecord
@@ -82,13 +90,15 @@ bill.posts.create!(subject: "How to generate data in Ruby", text: "Lorem ipsum..
 
 ## Additional: Use `Faker` to generate fake data
 
-The [Faker](https://github.com/stympy/faker) library can be used to generate fake data
+The [Faker](https://github.com/stympy/faker) library can be used to generate
+fake data
 
-```sh
+```shell
 bundle add faker
 ```
 
-Now we can use code such as `Faker::StarWars.character`, or `Faker::Name.name` to generate fake data.
+Now we can use code such as `Faker::StarWars.character`, or `Faker::Name.name`
+to generate fake data.
 
 ```ruby
 restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Address.full_address)
@@ -120,5 +130,6 @@ restaurant = Restaurant.create!(name: Faker::Company.name, location: Faker::Addr
 restuarant.image.attach(filename: "pic.png", io: Down.download("https://placem.at/people?random=1"))
 ```
 
-This will use the https://placem.at service to pull a [random image](https://placem.at/people?random=1) and supply it as our restaurant image.
-
+This will use the https://placem.at service to pull a
+[random image](https://placem.at/people?random=1) and supply it as our
+restaurant image.

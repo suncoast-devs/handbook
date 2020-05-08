@@ -2,7 +2,10 @@
 title: Using Heroku and docker with scheduled tasks
 ---
 
-This guide walks you set up a project for a scheduled task that runs a C# program every so often. The goal is set up to use a .NET console app that does your work. This app is then wrapped in a docker container, then deployed to Heroku, and using an add-on, a schedule to run the container every so often.
+This guide walks you set up a project for a scheduled task that runs a C#
+program every so often. The goal is set up to use a .NET console app that does
+your work. This app is then wrapped in a docker container, then deployed to
+Heroku, and using an add-on, a schedule to run the container every so often.
 
 ## Full Sample:
 
@@ -21,23 +24,29 @@ To follow these steps, install the following:
 
 Create a new .NET console app using:
 
-```bash
+```shell
 dotnet new console -n NameOfMyCoolJob
 ```
 
-Now you should write your code. Run and test your code locally using `dotnet run` or `dotnet watch run`.
+Now you should write your code. Run and test your code locally using
+`dotnet run` or `dotnet watch run`.
 
-NOTE: Highly advised to have `Console.WriteLine(something)` in a few places to verify that things are working and running
+NOTE: Highly advised to have `Console.WriteLine(something)` in a few places to
+verify that things are working and running
 
 ## Step 2: Creating the Heroku instance
 
-Go to Heroku and create a new instance for your app. This app is a stand-alone application that is distinct from other apps. After its created, add the add-on called `Heroku Scheduler`.
+Go to Heroku and create a new instance for your app. This app is a stand-alone
+application that is distinct from other apps. After its created, add the add-on
+called `Heroku Scheduler`.
 
-Now create the job using the command: `web /bin/sh -c dotnet\ NameOfMyCoolJob.dll`. Select your interval and save.
+Now create the job using the command:
+`web /bin/sh -c dotnet\ NameOfMyCoolJob.dll`. Select your interval and save.
 
 ## Step 3: Deployment
 
-In your .NET app create two files, `dockerfile` and `deploy.sh.` The dockerfile is how you tell docker the environment to run your app.
+In your .NET app create two files, `dockerfile` and `deploy.sh.` The dockerfile
+is how you tell docker the environment to run your app.
 
 Add the following to `dockerfile.`
 
@@ -48,11 +57,13 @@ COPY . .
 CMD dotnet NameOfMyCoolJob.dll
 ```
 
-NOTE: `NameOfMyCoolJob` is a placeholder for a more meaning name for your project
+NOTE: `NameOfMyCoolJob` is a placeholder for a more meaning name for your
+project
 
-Add the following to the `deploy.sh`, note that `name-of-heroku-web-app` should be what ever you called your app you created in `Step 2`.
+Add the following to the `deploy.sh`, note that `name-of-heroku-web-app` should
+be what ever you called your app you created in `Step 2`.
 
-```bash
+```shell
 dotnet publish -c Release
 
 cp dockerfile ./bin/release/netcoreapp2.2/publish
@@ -69,7 +80,8 @@ heroku container:release web -a  name-of-heroku-web-app
 # ./deploy.sh
 ```
 
-These 6 commands are needed to deploy your app. Run these the same way you would run deploying a .NET API to Heroku.
+These 6 commands are needed to deploy your app. Run these the same way you would
+run deploying a .NET API to Heroku.
 
 ## Step 4: Verification
 

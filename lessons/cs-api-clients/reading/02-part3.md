@@ -11,7 +11,7 @@ One of the first things you will notice in the application is the repetition of
 the `https://one-list-api.herokuapp.com/items/` part of the URL. We can extract
 this to a class property and access it throughout the code.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -300,7 +300,7 @@ namespace OneListClient
 
 The next major repetition is the display of a single item in a table.
 
-```C#
+```csharp
 // Make a table to output our new item.
 var table = new ConsoleTable("ID", "Description", "Created At", "Updated At", "Completed");
 
@@ -313,7 +313,7 @@ table.Write(Format.Minimal);
 
 We can make a method to handle this
 
-```C#
+```csharp
 static void ShowOneItem(Item item)
 {
     // Make a table to output our new item.
@@ -334,7 +334,7 @@ that. Notice that since we call an `await` our method needs to be `async` and it
 returns a `Task<Item>` since we want it to return an `Item` but we wrap it in a
 `Task` so .NET can handle the async nature.
 
-```C#
+```csharp
 static async Task<Item> ConvertResponseToItem(HttpResponseMessage response)
 {
     // Get the response as a stream.
@@ -349,7 +349,7 @@ static async Task<Item> ConvertResponseToItem(HttpResponseMessage response)
 
 And now we can update the code to a pattern like:
 
-```C#
+```csharp
 var item = await ConvertResponseToItem(response);
 ```
 
@@ -360,7 +360,7 @@ this to `GetAsync` we can use our new `ConvertResponseToItem` method.
 
 This code
 
-```C#
+```csharp
 // Take the `newItem` and serialize it into JSON
 var jsonBody = JsonSerializer.Serialize(updatedItem);
 
@@ -372,7 +372,7 @@ jsonBodyAsContent.Headers.ContentType = new MediaTypeHeaderValue("application/js
 
 Is repeated in `UpdateOneItem` and `AddOneItem` so we can make a method for it
 
-```C#
+```csharp
 static HttpContent ConvertItemToHttpBody(Item item)
 {
     // Take the `newItem` and serialize it into JSON
@@ -399,7 +399,7 @@ etc. easier to read since we are only concentrating on the major elements of the
 work each of those methods needs to do. The details are contained in shared
 methods and we can peek into them when needed.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;

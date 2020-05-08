@@ -34,7 +34,7 @@ coloring the text?
 
 If we wanted `ENTER` to be in a different color below.
 
-```C#
+```csharp
 Console.WriteLine("Press ENTER to continue");
 ```
 
@@ -42,7 +42,7 @@ We can add an external library of code to our project. The following command,
 when run _inside_ our .NET project we are telling .NET to find, download, and
 add to our project all the code for a library called `Pastel`
 
-```sh
+```shell
 dotnet add package Pastel
 ```
 
@@ -52,7 +52,7 @@ code that solves a problem. `nuget` also gives us links to the project pages
 where we can find documentation. Following the project page for `Pastel` we see
 the code works like this:
 
-```C#
+```csharp
 Console.WriteLine($"Press {"ENTER".Pastel(Color.FromArgb(165, 229, 250))} to continue");
 ```
 

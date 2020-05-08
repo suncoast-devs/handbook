@@ -54,7 +54,7 @@ capability to our system and start to use it.
 In order to use _EF Core_ migrations we need to add a package to our existing
 application and then restart any `dotnet watch run`
 
-```sh
+```shell
 dotnet add package Microsoft.EntityFrameworkCore.Design
 ```
 
@@ -72,7 +72,7 @@ command we will investigate is `dotnet ef migrations add`.
 
 From the terminal we can run:
 
-```sh
+```shell
 dotnet ef migrations add InitialMigration
 ```
 
@@ -108,7 +108,7 @@ as part of the name. Lets look at the one **without** the `.Designer.cs` part.
 The structure of the file looks like this. We've left out the body of those
 methods for readability.
 
-```C#
+```csharp
 using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
@@ -140,7 +140,7 @@ the system.
 If we look inside the body of teh `Up` method we will see code similar to the
 following.
 
-```C#
+```csharp
   migrationBuilder.CreateTable(
       name: "Actors",
       columns: table => new
@@ -200,7 +200,7 @@ For now lets make sure our database is clean by running command.
 > NOTE: This will remove all of our existing rows. So if you want that data, you
 > can simply re-run the `INSERT` commands from the `sql` lessons again.
 
-```sh
+```shell
 dropdb SuncoastMovies
 createdb SuncoastMovies
 ```
@@ -209,7 +209,7 @@ Now that we know our database is empty of tables, as it would be had we started
 only from using _EF Core_ migrations, we can run the command to _apply_ the
 migrations to the database.
 
-```sh
+```shell
 dotnet ef database update
 ```
 
@@ -247,7 +247,7 @@ which migrations have been processed into the system so far.
 
 If we were to run this SQL statement:
 
-```SQL
+```sql
 select * from "__EFMigrationsHistory";
 ```
 
@@ -288,7 +288,7 @@ Lets add a boolean property to our `Actor` model to indicate if they are members
 of SAG-AFTRA. We'll call this field `ScreenActorsGuildMember`. The first step is
 to add this property to our model.
 
-```C#
+```csharp
 class Actor
 {
     public int Id { get; set; }
@@ -306,7 +306,7 @@ class Actor
 Once we have added the field to the POCO class we can run the
 `dotnet ef migrations add` command again.
 
-```sh
+```shell
 dotnet ef migrations add AddScreenActorsGuildMemberToActor
 ```
 
@@ -316,7 +316,7 @@ done, in this case adding a property/column to a model/table.
 After generating the migration we see a new file in the `Migrations` folder:
 `20200417183648_AddScreenActorsGuildMemberToActor.cs`:
 
-```C#
+```csharp
 using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SuncoastMovies.Migrations
@@ -355,7 +355,7 @@ Now that we have:
 we can run the `dotnet ef database update` command to have that column appear in
 our database.
 
-```sh
+```shell
 dotnet ef database update
 ```
 
