@@ -93,7 +93,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    index: mdx(fields: { slug: { eq: $slug }, type: { eq: "index" } }) {
+    index: mdx(fields: { slug: { eq: $slug }, type: { eq: "lesson" } }) {
       fields {
         path
       }

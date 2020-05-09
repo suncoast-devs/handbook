@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link }  from 'gatsby'
 import cx from 'classnames'
 import SDGIcon from '../../../images/button.svg'
 import { Transition } from '../Transition'
