@@ -10,7 +10,6 @@ export function ModuleItem({ children, module }) {
       onClick={() => navigateToModule(module)}
       role="button"
       onKeyDown={({ key }) => {
-        console.log({ key })
         if (key === 'Enter' || key === ' ') {
           navigateToModule(module)
         }
