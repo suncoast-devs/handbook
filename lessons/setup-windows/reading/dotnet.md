@@ -8,7 +8,7 @@ we need to download is called a `Software Development Kit`, or `SDK` for short.
 Microsoft provides a download to install and configure the `.NET Core` `SDK` for
 us.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install dotnet-sdk
@@ -61,13 +61,6 @@ In a Powershell window:
 
 ```sh
 setx ASPNETCORE_ENVIRONMENT Development
-```
-
-Mac users need to:
-
-```sh
-echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.zshrc
-echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.bash_profile
 ```
 
 ## Security

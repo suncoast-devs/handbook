@@ -13,3 +13,13 @@ require, or are written in, JavaScript with node.
 ```sh
 scoop install nodejs
 ```
+
+## Build tools
+
+Start a **PowerShell As Administrator**
+
+```sh
+npm install --global windows-build-tools
+```
+
+> NOTE: This may take quite some time to complete

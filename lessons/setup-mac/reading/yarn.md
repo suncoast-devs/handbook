@@ -11,5 +11,5 @@ This will be more useful the more we dive deeper in JavaScript
 ## Installation
 
 ```sh
-brew install yarn
+npm install --global yarn
 ```

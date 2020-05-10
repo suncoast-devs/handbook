@@ -15,4 +15,5 @@ sudo apt install snapd
 - [.NET](/lessons/setup-linux/reading/dotnet)
 - [httpie](/lessons/setup-linux/reading/httpie)
 - [hub](/lessons/setup-linux/reading/hub)
+- [Node.js](/lessons/setup-linux/reading/nodejs)
 - [postgres](/lessons/setup-linux/reading/postgres)

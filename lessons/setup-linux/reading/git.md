@@ -49,6 +49,8 @@ git config --global user.name "Replace This With Your Full Name"
 git config --global user.email "email-address-you-used-at-github@example.com"
 ```
 
+### Ensure git uses VS Code for it's editor
+
 ```sh
 git config --global core.editor "code --wait"
 ```

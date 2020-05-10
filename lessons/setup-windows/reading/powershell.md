@@ -12,6 +12,8 @@ To open `Powershell`, open your `start` menu or type \(Win + R\), then type
 `Powershell`, this searches your system and give you the option to start it,
 just like any other program.
 
+## PRO TIP
+
 Since we are going to run this often you may consider pinning it to your screen
 by right-clicking the icon in the Task Bar and selecting "Pin to taskbar"
 

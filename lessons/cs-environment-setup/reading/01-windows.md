@@ -14,4 +14,5 @@ title: Windows Setup
 - [hub](/lessons/setup-windows/reading/hub)
 - [PostgreSQL](/lessons/setup-windows/reading/postgres)
 - [Insomnia](/lessons/setup-windows/reading/insomnia)
+- [Node.js](/lessons/setup-windows/reading/nodejs)
 - [Heroku](/lessons/setup-windows/reading/heroku)

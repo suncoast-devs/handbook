@@ -12,4 +12,5 @@ title: Mac setup
 - [hub](/lessons/setup-mac/reading/hub)
 - [PostgreSQL](/lessons/setup-mac/reading/postgres)
 - [Insomnia](/lessons/setup-mac/reading/insomnia)
+- [Node.js](/lessons/setup-mac/reading/nodejs)
 - [Heroku](/lessons/setup-mac/reading/heroku)

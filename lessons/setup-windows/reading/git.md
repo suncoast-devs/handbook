@@ -13,7 +13,7 @@ will become familiar with the commands and options.
 
 First, make sure you have a [GitHub](http://github.com/) account.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install git
@@ -48,6 +48,8 @@ git config --global user.name "Replace This With Your Full Name"
 ```sh
 git config --global user.email "email-address-you-used-at-github@example.com"
 ```
+
+### Ensure git uses VS Code for it's editor
 
 ```sh
 git config --global core.editor "code --wait"

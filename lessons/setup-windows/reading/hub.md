@@ -8,7 +8,7 @@ from our terminal.
 From your terminal, run the following commands (current directory does not
 matter):
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install hub

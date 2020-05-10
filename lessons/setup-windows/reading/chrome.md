@@ -10,7 +10,7 @@ developing front end applications. Even if you do not use Chrome for your web
 browsing experience, having all of your fellow students on the same development
 tools will help.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install googlechrome

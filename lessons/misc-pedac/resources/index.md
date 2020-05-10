@@ -1,0 +1,3 @@
+- https://en.wikipedia.org/wiki/How_to_Solve_It
+- https://medium.com/launch-school/solving-coding-problems-with-pedac-29141331f93f
+- https://www.amazon.com/Problem-Solving-101-Simple-People/dp/1591842425

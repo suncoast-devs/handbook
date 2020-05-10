@@ -10,26 +10,11 @@ on so if you ever get the more powerful tools (like Visual Studio or Eclipse).
 It will not be a crutch, but a tool. This is like starting with a screwdriver,
 and working our way up to power drill.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install vscode
 ```
-
-## Installation
-
-After [downloading VS Code](https://code.visualstudio.com/Download),
-double-click the EXE file to run the installation process.
-
-During the installation process accept the default options. You can choose to
-un-check the option to launch Visual Studio Code at the end of the process.
-
-<!-- _First time setup instructions for Mac_
-
-- Make sure you are running VS Code from your applications folder, not your downloads
-- Launch VS Code
-- Use `Command Shift P` to launch the command palette
-- Type `command` to search for the entry `Shell Command: Install 'code' command in PATH` and press `ENTER` -->
 
 ## Enable Extensions
 
@@ -88,13 +73,13 @@ Within VS Code go to the `File` menu, then `Preferences`, then `Settings`
 - In the search bar enter `tab size`
 - Find the setting `Editor: Tab Size` and change this to `2`
 
-- In the search bar enter `formatOn`
+- In the search bar enter `formatOnSave`
 - Find the setting `Editor: Format on Save` and turn this _ON_
 
 ## Configure proper spacing.
 
 In VS Code Use `Control Shift P` to launch the command palette and Type
-`Open Settings JSON` and select the first match found.
+`Open Settings JSON` and select option that does _NOT_ mention "Default"
 
 This will open an editor window.
 

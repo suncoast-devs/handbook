@@ -7,7 +7,7 @@ Posh-git shows beneficial git information when we are in a repository.
 
 > This is an optional install, though recommended.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install posh-git

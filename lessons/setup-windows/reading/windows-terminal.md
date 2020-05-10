@@ -9,7 +9,7 @@ recommend this in place of running PowerShell directly.
 If you do choose to use Windows Terminal, any place that says to start a
 PowerShell you may start a new Windows Terminal tab.
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
 scoop install windows-terminal

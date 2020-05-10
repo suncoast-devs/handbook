@@ -8,8 +8,8 @@ use libraries that are written in node (JavaScript).
 We will be using this to run our scripts and as well as installing packages.
 This will be more useful the more we dive deeper in JavaScript
 
-## Installation (via Scoop)
+## Installation
 
 ```sh
-scoop install yarn
+npm install --global yarn
 ```
