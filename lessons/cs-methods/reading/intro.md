@@ -1,6 +1,4 @@
----
-title: Methods
----
+# Methods
 
 When adding functionality it is easy to continue to add more lines to existing
 code. While the computer has no issues with this it does pose a few issues for
@@ -23,7 +21,32 @@ In another lesson, we will delve deeper into a coding concept named
 there should be a _single_ place in your code where each business logic is
 represented.
 
-Let's take a look at that idea.
+## Methods: Input, Work and Output
+
+Nearly everything in programming requires at least three things:
+
+1. Input
+1. The work to do
+1. Output
+
+You will find this is true even of every day things. Take, for example, the task
+of making a peanut butter and jelly sandwich.
+
+```
+-----------------              -----------------
+|     Inputs    |              |    Work       |               --------------
+-----------------              -----------------               |   Output   |
+| Peanut Butter |              | List of steps |               --------------
+| Jelly         |    =====>    | to make the   |    ========>  | Sandwich   |
+| Bread         |              | sandwich      |               |            |
+| Knife         |              |               |               --------------
+-----------------              -----------------
+```
+
+`C#` has a specific way to define functions, but each one will always have
+input, work to do, and output.
+
+## Examples
 
 ```C#
 using System;
@@ -73,26 +96,29 @@ Every method in C# is defined by it's `signature`. Similar to your personal
 signature, this uniquely identifies the method in the system. Unlike your
 signature, a method's signature tells others how to interact with it.
 
+Thinking back to our earlier PB&J example we are likely to see at least
+**input**, **work**, and **output** components of defining a method.
+
 The components of a method are:
 
 - An optional access level, such as public or private. The default is private.
 - Optional modifiers such as abstract or sealed.
-- The return value, or `void` if the method has none.
+- The **output** known as the `return` type. The `void` type is used if the
+  method doesn't return anything.
 - The method name.
-- Any method parameters. These are _inputs_ to our method, information the
-  method needs from the code _using_ it. These are surrounded by parentheses and
-  are separated by commas. Empty parentheses indicate that the method has no
-  parameters.
+- The **input** to the method, known as `parameters`. These are the **inputs**
+  to our method, information the method needs from the code _using_ it. These
+  are surrounded by parentheses and are separated by commas. Empty parentheses
+  indicate that the method has no parameters.
+- The **work**, or `body` of the method composed of lines of code.
 
 A number of these components we won't be concerned about until we introduce the
 concept of a `class` in a separate lesson. For now we are concerned with these
 elements:
 
-- The return value, or `void` if the method has none.
+- The return type, or `void` if the method has none.
 - The method name.
 - Any method parameters.
-
-The other part of a method is the sequence of statements it contains.
 
 Let's create our first method
 
@@ -127,6 +153,20 @@ static void displayGreeting()
   Console.WriteLine();
   Console.WriteLine();
 }
+```
+
+```C#
+// static method (ignore this for the moment)
+//  |
+//  |  The return (output) type. Here there is none
+//  |  since the method isn't giving anything back
+//  |  to the code that called it.
+//  |   |
+//  |   |               The inputs, known as arguments. None in this case.
+//  |   |                   |
+//  |   |                   |
+//  v   v                   v
+static void displayGreeting()
 ```
 
 We haven't explained that odd `static` keyword hanging out in our method
@@ -172,8 +212,10 @@ namespace EmployeeDatabase
 }
 ```
 
+## Using the Method
+
 You will notice that we've replaced the lines where the five `Console.WriteLine`
-statements used to be with a single `DisplayGreeting()` statment. Notice that
+statements used to be with a single `DisplayGreeting()` statement. Notice that
 when we call the method we have to include parenthesis even if, as in this case,
 there aren't any _arguments_. We'll show an example with arguments in just a
 moment.
@@ -181,7 +223,13 @@ moment.
 The way you read the line:
 
 ```C#
-DisplayGreeting();
+//   Name of the method
+//    |
+//    |            Any input VALUES or arguments would go here
+//    |             |
+//    |             |
+//    v             v
+     DisplayGreeting();
 ```
 
 is "Call the DisplayGreeting method, providing no arguments, and expecting no
@@ -197,7 +245,7 @@ know that it will show some form of greeting to the user. In doing so I've
 reduced the amount of code the reader has to visually concern themselves with
 while retaining the meaning of the code.
 
-## Repeated ideas
+## Creating a method that accepts input and returns a value
 
 The idea of showing the user a prompt, e.g. `What is your name?` followed by
 reading some input is repeated through this code. One use is to get a `string`
@@ -222,28 +270,80 @@ it. In does, the string the user entered. So this method has a return type of
 Our method signature will be:
 
 ```C#
+// static method (ignore this for the moment)
+//  |
+//  |  The return (output) type. This says that
+//  |  we expect this method to return a single
+//  |  string to the code that called it
+//  |   |
+//  |   |               The inputs, known as arguments.
+//  |   |               In this case a single string
+//  |   |               in a variable known as `prompt`
+//  |   |                      |
+//  |   |                      |
+//  v   v                      v
 static string PromptForString(string prompt)
 ```
 
-Now let's write the method.
+### Calling a method that requires arguments and returns a value
 
-Since we are creating a generic version of this code:
+Similar to calling a method that returns no value, we still use the method's
+name.
+
+However in this case we should do something with the returned value. The most
+common case is storing this value in a new variable.
+
+Then we should supply a value for the one input the method is expecting.
+
+```C#
+// var declaration. Since C# knows this method returns a string
+// our `answer` variable will be a string. (Type inference)
+//  |
+//  |  Name of the output variable
+//  |   |
+//  |   |         Name of the method
+//  |   |          |
+//  |   |          |            Argument value
+//  |   |          |             |
+//  |   |          |             |
+//  v   v          v             v
+   var answer = PromptForString("What is your name? ");
+//        ^                        |
+//        |                        |
+//        |                        v
+//        ^     PromptForString(string prompt)
+//        ^               +--------------------+
+//        |               |                    |
+//        |               | ** WORK HAPPENS ** |
+//        +--<< output ---|                    |
+//                        +--------------------+
+//
+```
+
+Now let's write the **body** of the method.
+
+Since we are creating a generic version of this code it will probably look
+similar.
 
 ```C#
 Console.Write("What is your name? ");
 var name = Console.ReadLine();
 ```
 
-it will probably look similar.
-
 In fact, the code looks like this:
 
 ```C#
 static string PromptForString(string prompt)
 {
+  // Use the argument, whatever the user sent us.
   Console.Write(prompt);
+
+  // Get some user input
   var userInput = Console.ReadLine();
 
+  // RETURN that value as the output of this method.
+  // The value in `userInput` will go wherever the
+  // *CALLER* of the method has specified.
   return userInput
 }
 ```
@@ -303,7 +403,7 @@ namespace EmployeeDatabase
 ```
 
 Now we have removed two lines and reduced it to one. This line is also more
-clear in the intent. We declare a variable `var name` and assign it the _result_
+clear in the intent. We declare a variable `var name` and assign it the _return_
 of calling our method `PromptForString` while we see the supplied prompt
 `What is your name?`.
 
@@ -370,6 +470,8 @@ code we don't need to be concerned about **how** that code works, as long as the
 guarantees of the method signature are followed. We supply a string prompt and
 the method returns a string, in the case of `PromptForString`, or an integer, in
 the case of `PromptForInteger`.
+
+## Encapsulation
 
 The other benefit of having these methods is an idea of _"encapsulation"_. That
 is we contain within that method any needed behavior we want.
