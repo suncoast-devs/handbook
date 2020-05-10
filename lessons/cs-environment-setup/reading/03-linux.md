@@ -4,7 +4,7 @@ title: Linux setup
 
 Before starting any installation run:
 
-```sh
+```shell
 sudo apt update
 sudo apt install snapd
 ```

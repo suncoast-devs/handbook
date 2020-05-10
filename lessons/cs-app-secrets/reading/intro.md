@@ -21,7 +21,7 @@ _NOTE_: All commands must be run in the project directory
 
 First, we need to init secrets in our code base.
 
-```sh
+```shell
 dotnet user-secrets init
 ```
 
@@ -32,7 +32,7 @@ This command sets up a secrets reference to your project.
 Next, you want to add the actual values. These values are stored on your machine
 in a plain text, key-value structure.
 
-```sh
+```shell
 dotnet user-secrets set "ConnectionString" "server=localhost;database=MyApiDatabase"
 ```
 
@@ -51,7 +51,7 @@ To use DI in our code, go to the class where the configuration setting is needed
 and a constructor (or modify the existing one) to accept a parameter of
 `IConfiguration configuration`. Your constructor should look like this:
 
-```C#
+```csharp
 public DatabaseContext(IConfiguration configuration)
 {
 
@@ -61,7 +61,7 @@ public DatabaseContext(IConfiguration configuration)
 With the configuration being injected we can now access the setting we need by
 using the the bracket notation. So our full constructor should look like this:
 
-```C#
+```csharp
 public DatabaseContext(IConfiguration configuration)
 {
  this.ConnectionString = configuration["ConnectionString"];

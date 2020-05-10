@@ -40,7 +40,7 @@ output information. Like asking for a name and then greeting the user.
 
 # [fit] Outputting to the console one line at a time
 
-```C#
+```csharp
 Console.WriteLine("Welcome to my program");
 ```
 
@@ -54,7 +54,7 @@ Console.WriteLine("Welcome to my program");
 
 # [fit] Outputting a blank line
 
-```C#
+```csharp
 Console.WriteLine("");
 ```
 
@@ -71,7 +71,7 @@ In this case we leave a blank space.
 
 [.column]
 
-```C#
+```csharp
 Console.Write("What is your name? ");
 ```
 
@@ -89,7 +89,7 @@ Assign to a **`string`** variable we place on the left-hand-side.
 
 [.column]
 
-```C#
+```csharp
 var name = Console.ReadLine();
 ```
 
@@ -105,7 +105,7 @@ var name = Console.ReadLine();
 
 [.code-highlight: 1]
 
-```C#
+```csharp
 Console.Write("It is a pleasure to meet you,");
 Console.WriteLine(name);
 ```
@@ -118,7 +118,7 @@ Console.WriteLine(name);
 
 [.code-highlight: 2]
 
-```C#
+```csharp
 Console.Write("It is a pleasure to meet you,");
 Console.WriteLine(name);
 ```
@@ -136,7 +136,7 @@ Console.WriteLine(name);
 <br />
 <br />
 
-```C#
+```csharp
 var greeting = "It is a pleasure to meet you, " + name;
 Console.WriteLine(greeting);
 ```
@@ -151,7 +151,7 @@ of it.
 <br />
 <br />
 
-```C#
+```csharp
 Console.WriteLine("It is a pleasure to meet you, " + name);
 ```
 
@@ -170,7 +170,7 @@ If we our first _double quote_ with a **`$`** and the string gains magic powers.
 
 # [fit] String interpolation
 
-```C#
+```csharp
 $"It is a pleasure to meet you, {name}"
 ```
 
@@ -179,7 +179,7 @@ Anything inside the string is considered code.
 
 Whatever that code _evaluates_ to is placed at that spot in the string!
 
-```C#
+```csharp
 $"My favorite number is {6 * 7}";
 ```
 
@@ -190,7 +190,7 @@ $"My favorite number is {6 * 7}";
 <br />
 <br />
 
-```C#
+```csharp
 Console.WriteLine($"It is a pleasure to meet you, {name}");
 ```
 
@@ -198,7 +198,7 @@ Console.WriteLine($"It is a pleasure to meet you, {name}");
 
 # Full program
 
-```C#
+```csharp
 using System;
 
 namespace OurDotNetApp

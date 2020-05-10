@@ -104,7 +104,7 @@ serves as a bridge to working with a compiled language.
 
   - to add typescript to an existing react project
 
-  ```bash
+  ```shell
     yarn add typescript @types/node @types/react @types/react-dom @types/jest
   ```
 

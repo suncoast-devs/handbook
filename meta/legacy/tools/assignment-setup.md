@@ -10,7 +10,7 @@ with [commands we like](/handbook/resources/bash/commands-we-like)
 
 Open your terminal, then create and change into your project directory:
 
-```sh
+```shell
 mkdir -p ~/sdg/unit-1
 cd ~/sdg/unit-1
 ```
@@ -18,7 +18,7 @@ cd ~/sdg/unit-1
 Run the generator to create a boilerplate project, and change into that
 directory:
 
-```sh
+```shell
 app-app --alpha hello-world
 cd hello-world
 ```
@@ -26,13 +26,13 @@ cd hello-world
 Open the project folder in your editor (remember, `.` is an alias for the
 current directory):
 
-```sh
+```shell
 code .
 ```
 
 Tab back to your Terminal and start the development server:
 
-```sh
+```shell
 yarn start
 ```
 

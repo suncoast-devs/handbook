@@ -10,6 +10,6 @@ the command line helper tool.
 
 ## Installation
 
-```sh
+```shell
 scoop install heroku-cli
 ```

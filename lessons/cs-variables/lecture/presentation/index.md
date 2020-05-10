@@ -75,7 +75,7 @@ myVariable  +------------------------------------+                              
 
 # How do you make a variable?
 
-```C#
+```csharp
 string name = "Samantha";
 int score = 95;
 ```
@@ -86,7 +86,7 @@ int score = 95;
 
 [.code-highlight: 1]
 
-```C#
+```csharp
 string name = "Samantha";
 int score = 95;
 ```
@@ -95,7 +95,7 @@ int score = 95;
 
 # Breaking it down
 
-```C#
+```csharp
 // Type   Name   Value    Statement End
 //  |       |      |       |
 //  |       |      |       |
@@ -112,14 +112,14 @@ in `C#` is like the period at the end of a sentence
 
 [.code-highlight: 2]
 
-```C#
+```csharp
 string name = "Samantha";
 int score = 95;
 ```
 
 ---
 
-```C#
+```csharp
 // Type   Name   Value    Statement End
 //  |       |      |       |
 //  |       |      |       |
@@ -142,7 +142,7 @@ int score = 95;
 
 # Type Inference
 
-```C#
+```csharp
 var name = "Samantha";
 var score = 95;
 ```
@@ -200,13 +200,13 @@ be cases where we cannot.
 
 ### Integers
 
-```C#
+```csharp
 var score = 42;
 ```
 
 ### Floats
 
-```C#
+```csharp
 var total = 10f;
 var price = 10.0;
 var pi = 3.14159265;
@@ -216,7 +216,7 @@ var pi = 3.14159265;
 
 ### Decimal
 
-```C#
+```csharp
 var total = 10m;
 var price = 10.0;
 var pi = 3.14159265;
@@ -224,7 +224,7 @@ var pi = 3.14159265;
 
 ### Double
 
-```C#
+```csharp
 var total = 10.0;
 var total = 10d;
 var pi = 3.14159265
@@ -238,7 +238,7 @@ var pi = 3.14159265
 
 ### Characters
 
-```C#
+```csharp
 var piratesFavoriteLetter = 'r';
 var firstLetterOfTheEnglishAlphabet = 'a';
 var lastLetterOfTheEnglishAlphabet = 'z';
@@ -248,7 +248,7 @@ var rocketShip = '🚀';
 
 ### Strings
 
-```C#
+```csharp
 var name = "Zaphod Beeblebrox";
 ```
 
@@ -256,7 +256,7 @@ var name = "Zaphod Beeblebrox";
 
 ### Boolean
 
-```C#
+```csharp
 var theCakeIsALie = true;
 var worldIsFlat = false;
 ```
@@ -273,7 +273,7 @@ var worldIsFlat = false;
 
 [.code-highlight: 2]
 
-```C#
+```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 var howLong = sentence.length;
 ```
@@ -288,7 +288,7 @@ first ^ Result goes into variable on the left side ^ The `.` in the
 
 [.column]
 
-```C#
+```csharp
 //     variable  right-hand-side
 //        |             |
 //        v             v
@@ -297,7 +297,7 @@ first ^ Result goes into variable on the left side ^ The `.` in the
 
 [.column]
 
-```C#
+```csharp
 // variable  property
 //    |         |
 //    v         v
@@ -312,7 +312,7 @@ is. ^ In this case the `int` 44.
 
 # Results
 
-```C#
+```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 var howLong = sentence.Length;
 ```
@@ -336,7 +336,7 @@ Strings have other capabilities.
 
 [.column]
 
-```C#
+```csharp
 var firstLetter = sentence[0];
 var secondLetter = sentence[1];
 var thirdLetter = sentence[2];
@@ -376,7 +376,7 @@ var thirdLetter = sentence[2];
 
 # Not good
 
-```C#
+```csharp
 var w = 52;
 var n = "Arthur Dent";
 var i = 1;
@@ -387,7 +387,7 @@ var resp = axios.get();
 
 # Better
 
-```C#
+```csharp
 var weeksInOneYear = 52;
 var name = "Arthur Dent";
 var currentDepartmentIndex = 1;

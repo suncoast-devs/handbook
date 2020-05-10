@@ -10,7 +10,7 @@ us.
 
 ## Installation
 
-```sh
+```shell
 scoop install dotnet-sdk
 ```
 
@@ -23,7 +23,7 @@ now:
 
 In a Powershell window:
 
-```sh
+```shell
 dotnet tool install --global dotnet-ef
 ```
 
@@ -31,7 +31,7 @@ dotnet tool install --global dotnet-ef
 
 In a Powershell window:
 
-```sh
+```shell
 dotnet tool install --global dotnet-aspnet-codegenerator
 ```
 
@@ -39,19 +39,19 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 
 In a Powershell window:
 
-```sh
+```shell
 dotnet new --install SDG.templates.Console
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Console.Database
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Web.API
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Web.React
 ```
 
@@ -59,12 +59,12 @@ dotnet new --install SDG.templates.Web.React
 
 In a Powershell window:
 
-```sh
+```shell
 setx ASPNETCORE_ENVIRONMENT Development
 ```
 
 ## Security
 
-```sh
+```shell
 dotnet dev-certs https --trust
 ```

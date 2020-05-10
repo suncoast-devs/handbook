@@ -29,7 +29,7 @@ now:
 
 In a Terminal window:
 
-```sh
+```shell
 dotnet tool install --global dotnet-ef
 ```
 
@@ -37,7 +37,7 @@ dotnet tool install --global dotnet-ef
 
 In a Terminal window:
 
-```sh
+```shell
 dotnet tool install --global dotnet-aspnet-codegenerator
 ```
 
@@ -45,19 +45,19 @@ dotnet tool install --global dotnet-aspnet-codegenerator
 
 In a Terminal window:
 
-```sh
+```shell
 dotnet new --install SDG.templates.Console
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Console.Database
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Web.API
 ```
 
-```sh
+```shell
 dotnet new --install SDG.templates.Web.React
 ```
 
@@ -65,7 +65,7 @@ dotnet new --install SDG.templates.Web.React
 
 In a Terminal window:
 
-```sh
+```shell
 echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.zshrc
 echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.bash_profile
 ```
@@ -74,6 +74,6 @@ echo "export ASPNETCORE_ENVIRONMENT=Development" >> ~/.bash_profile
 
 In a Terminal window:
 
-```sh
+```shell
 dotnet dev-certs https --trust
 ```

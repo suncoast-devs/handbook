@@ -32,13 +32,13 @@ the data type of a variable when you declare it, and data types are converted
 automatically as needed during script execution. So, for example, you could
 define a variable as follows:
 
-```js
+```javascript
 let answer = 42;
 ```
 
 And later, you could assign the same variable a string value, for example:
 
-```js
+```javascript
 answer = "Thanks for all the fish...";
 ```
 
@@ -49,7 +49,7 @@ In expressions involving numeric and string values with the + operator,
 JavaScript converts numeric values to strings. For example, consider the
 following statements:
 
-```js
+```javascript
 let x = "The answer is " + 42; // "The answer is 42"
 let y = 42 + " is the answer"; // "42 is the answer"
 ```
@@ -57,7 +57,7 @@ let y = 42 + " is the answer"; // "42 is the answer"
 In statements involving other operators, JavaScript does not convert numeric
 values to strings. For example:
 
-```js
+```javascript
 "37" - 7; // 30
 "37" + 7; // "377"
 ```
@@ -101,7 +101,7 @@ quotation marks. A string must be delimited by quotation marks of the same type;
 that is, either both single quotation marks or both double quotation marks. The
 following are examples of string literals:
 
-```js
+```javascript
 "foo";
 "bar";
 "1234";
@@ -113,7 +113,7 @@ Template literals are also available. Template literals are enclosed by the
 back-tick (\`) (grave accent) character instead of double or single quotes.
 Inside the backticks we can use `${}` to evaluate statements
 
-```js
+```javascript
 let score = 56;
 let prompt = `The current score is ${score} and the next score is ${score + 1}`;
 // The current score is 56 and the next score is 57
@@ -154,7 +154,7 @@ elements, and its length is set to the number of arguments specified.
 The following example creates the coffees array with three elements and a length
 of three:
 
-```js
+```javascript
 let coffees = ["French Roast", "Colombian", "Kona"];
 ```
 
@@ -164,7 +164,7 @@ You do not have to specify all elements in an array literal. If you put two
 commas in a row, the array is created with undefined for the unspecified
 elements. The following example creates the fish array:
 
-```js
+```javascript
 let fish = ["Lion", , "Angel"];
 ```
 
@@ -192,7 +192,7 @@ The following is an example of an object literal. The first element of the
 person object defines a property, name, and assigns to it a new string,
 "Thomas"; the second element, the age property, is assigned a number, `21`
 
-```js
+```javascript
 let person = { name: "Thomas", age: 21 };
 ```
 
@@ -202,7 +202,7 @@ enclosed in quotes. Property names that are not valid identifiers also cannot be
 accessed as a dot (`.`) property, but can be accessed and set with the
 array-like notation("`[]`").
 
-```js
+```javascript
 let unusualPropertyNames = {
   '': 'An empty string',
   '!': 'Bang!'

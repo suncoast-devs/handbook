@@ -33,7 +33,7 @@ title: Hello, React
 - [react-article-demo](https://github.com/suncoast-devs/cohort-xi/tree/master/week-04/day-1/reactive-articles)
   (approx 00:39:35)
 
-  ```js
+  ```javascript
   // all the files needed need to be imported
   import React, { Component } from "react";
   import "./App.css";
@@ -70,7 +70,7 @@ title: Hello, React
 
 - [Props](https://reactjs.org/docs/components-and-props.html) (approx 01:12:10)
 
-  ```js
+  ```javascript
   import React, { Component } from "react";
   // import Article component from Article in current directory
   import Article from "./Article";
@@ -111,7 +111,7 @@ title: Hello, React
       component as `this.props.title` did with title property
     - You can create unlimited different articles using Article component
 
-    ```js
+    ```javascript
     import React, { Component } from "react";
 
     class Article extends Component {
@@ -136,7 +136,7 @@ title: Hello, React
 
 - Loading Props data from somewhere else (approx 01:24:00)
 
-  ```js
+  ```javascript
   import React, { Component } from "react";
   import Article from "./Article";
 
@@ -176,7 +176,7 @@ title: Hello, React
   - The map() method creates a new array with the results of calling a provided
     function on every element in the calling array.
 
-  ```js
+  ```javascript
     data = [
       {
         title: "Gavin can't spell Article",
@@ -208,7 +208,7 @@ title: Hello, React
 
 - eventually `Articles.js` code will look like this
 
-  ```js
+  ```javascript
   import React, { Component } from "react";
   import Article from "./Article";
 

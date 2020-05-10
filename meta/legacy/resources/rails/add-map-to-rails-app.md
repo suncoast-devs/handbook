@@ -4,11 +4,13 @@ title: Adding Maps to your Rails application
 
 ## Adding the required gem
 
-We will be using a gem named [`geocoder`](https://github.com/alexreisner/geocoder) to translate addresses into map locations.
+We will be using a gem named
+[`geocoder`](https://github.com/alexreisner/geocoder) to translate addresses
+into map locations.
 
 To add this to the project we can run:
 
-```sh
+```shell
 bundle add geocoder
 ```
 
@@ -16,17 +18,18 @@ This will add the gem to the `Gemfile` and automatically run `bundle install`
 
 ## Add needed columns to the models we will be placing on a map
 
-Let's assume the model we are working with is `Restaurant` and we'll also assume there is an `address` column.
+Let's assume the model we are working with is `Restaurant` and we'll also assume
+there is an `address` column.
 
 We will be adding columns `latitude` and `longitude` as `floats` via:
 
-```sh
+```shell
 rails generate migration AddFieldsToRestaurant latitude:float longitude:float
 ```
 
 then we will migrate the database
 
-```sh
+```shell
 rails db:migrate
 ```
 
@@ -50,19 +53,23 @@ The remaining instructions are for our React app
 
 ## Adding React Map Library
 
-We will be using the [`React Map GL`](https://www.npmjs.com/package/react-map-gl) library for mapping.
+We will be using the
+[`React Map GL`](https://www.npmjs.com/package/react-map-gl) library for
+mapping.
 
-To add this to our project, run the following command in your react project directory:
+To add this to our project, run the following command in your react project
+directory:
 
-```js
+```javascript
 yarn add react-map-gl
 ```
 
 ## Add a `<MapGL>` to our component
 
-- The state will keep track of our viewport, including the center point of the map (latitude and longitude), the zoom factor, bearing and pitch.
+- The state will keep track of our viewport, including the center point of the
+  map (latitude and longitude), the zoom factor, bearing and pitch.
 
-```js
+```javascript
 import MapGL, { Marker, NavigationControl, Popup } from 'react-map-gl'
 
 ...
@@ -97,9 +104,10 @@ render() {
 
 ## Move the map when we drag around
 
-- We will add an `_updateViewPort` method so that as we drag the map, or use the navigation control we can update the `viewport` within the `state`
+- We will add an `_updateViewPort` method so that as we drag the map, or use the
+  navigation control we can update the `viewport` within the `state`
 
-```js
+```javascript
 
   this.navStyle = {
     position: 'absolute',
@@ -131,10 +139,12 @@ render() {
 
 ## Add a marker to the map
 
-- Let's add a single marker to the map. Each marker will be represented by a pin.
-- We will add a `<Marker>` component within the `<MapGL>` component to represent this marker.
+- Let's add a single marker to the map. Each marker will be represented by a
+  pin.
+- We will add a `<Marker>` component within the `<MapGL>` component to represent
+  this marker.
 
-```js
+```javascript
 import pin from './pin.png'
 
 render() {
@@ -165,9 +175,11 @@ render() {
 
 ## Iterate over many locations
 
-- However, we typically are passed an array of things to map. So we can use the JavaScript `map` function on an array to iterate those locations and create markers for each.
+- However, we typically are passed an array of things to map. So we can use the
+  JavaScript `map` function on an array to iterate those locations and create
+  markers for each.
 
-```js
+```javascript
 render() {
   return <div className='map'>
     <MapGL
@@ -200,10 +212,12 @@ render() {
 
 ## Add a popup when clicking on a pin
 
-- We can add a click to each pin. When each pin is clicked we record _which_ location was clicked in the `popupInfo` state.
-- Our render function will be updated to add a `<Popup>` if `this.state.popupInfo` is not null
+- We can add a click to each pin. When each pin is clicked we record _which_
+  location was clicked in the `popupInfo` state.
+- Our render function will be updated to add a `<Popup>` if
+  `this.state.popupInfo` is not null
 
-```js
+```javascript
 constructor(props) {
   super(props)
   this.state = {

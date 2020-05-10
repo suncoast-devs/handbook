@@ -71,7 +71,7 @@ title: Making our first web app
 - `require 'active_record'`
 - Lets create a database:
 
-  ```sh
+  ```shell
   createdb items
   ```
 
@@ -165,7 +165,7 @@ title: Making our first web app
 
 - First install this gem:
 
-```sh
+```shell
 gem install rack-cors
 ```
 

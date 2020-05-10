@@ -27,7 +27,7 @@ should choose that option.
 
 You will know are running as administrator if your prompt is:
 
-```sh
+```shell
 PS C:\Windows\system32>
 ```
 

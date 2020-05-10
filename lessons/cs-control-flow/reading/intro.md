@@ -12,7 +12,7 @@ The first and more simple of these is the `if` statement.
 
 The if statement has this basic structure:
 
-```C#
+```csharp
 if (someBooleanCondition) {
   // Code if the condition is true
 }
@@ -20,7 +20,7 @@ if (someBooleanCondition) {
 
 We can also handle the case where the condition is false:
 
-```C#
+```csharp
 if (someBooleanCondition) {
   // Code if the condition is true
 }
@@ -48,7 +48,7 @@ see we can compare strings to other strings, and numbers to other numbers.
 
 Examples:
 
-```C#
+```csharp
 if (name == "Paul") {
   Console.WriteLine("Greetings!");
 } else {
@@ -64,7 +64,7 @@ we write an _or_ as `||` with _and_ being `&&`
 So if we wanted a condition that is true if the score is lower than `20` **OR**
 greater than `90`:
 
-```C#
+```csharp
 if (score < 20 || score > 90) {
   // Some code here
 }
@@ -73,7 +73,7 @@ if (score < 20 || score > 90) {
 What if we wanted a condition that is true if the person is named `Paul` **AND**
 the score is more than `85`:
 
-```C#
+```csharp
 if (name == "Paul" && score > 85) {
   // Some code here
 }
@@ -108,7 +108,7 @@ values and how they combine for `&&` (and) as well as `||` (or):
 
 A series of `if/else` statements can be chained.
 
-```C#
+```csharp
 if (name == "Paul") {
   Console.WriteLine("Here");
 } else if (name == "Dorothy") {
@@ -125,7 +125,7 @@ if (name == "Paul") {
 When we find ourselves comparing the same variable to a sequence of values we
 can use another kind of control flow known as a `switch` statement.
 
-```C#
+```csharp
 switch (name)
 {
     case "Paul":
@@ -159,7 +159,7 @@ condition supplied remains true.
 Lets say we want to ask the the user their name and greet them until the user
 enters the text `quit`. The code would look like this:
 
-```C#
+```csharp
 Console.Write("What is your name? ");
 var name = Console.ReadLine();
 

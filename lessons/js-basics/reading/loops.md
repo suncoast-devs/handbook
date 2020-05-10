@@ -7,7 +7,7 @@ loop as a computerized version of the game where you tell someone to take X
 steps in one direction then Y steps in another; for example, the idea "Go five
 steps to the east" could be expressed this way as a loop:
 
-```js
+```javascript
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
   console.log("Walking east one step");
@@ -33,7 +33,7 @@ The statements for loops provided in JavaScript are:
 
 A for statement looks as follows:
 
-```js
+```javascript
 for ([initialExpression]; [condition]; [incrementExpression]) {
   statement;
 }
@@ -59,7 +59,7 @@ When a for loop executes, the following occurs:
 The do...while statement repeats until a specified condition evaluates to false.
 A do...while statement looks as follows:
 
-```js
+```javascript
 do {
   statement;
 } while (condition);
@@ -77,7 +77,7 @@ execution stops and control passes to the statement following `do...while`.
 A `while` statement executes its statements as long as a specified `condition`
 evaluates to `true`. A while statement looks as follows:
 
-```js
+```javascript
 while (condition) {
   statement;
 }
@@ -96,7 +96,7 @@ statements.
 
 The following while loop iterates as long as n is less than three:
 
-```js
+```javascript
 let n = 0;
 let x = 0;
 while (n < 3) {
@@ -111,7 +111,7 @@ The `for...in` statement iterates a specified variable over all the enumerable
 properties of an object. For each distinct property, JavaScript executes the
 specified statements. A `for...in` statement looks as follows:
 
-```js
+```javascript
 for (variable in object) {
   statements;
 }
@@ -121,7 +121,7 @@ The following function takes as its argument an object and the object's name. It
 then iterates over all the object's properties and returns a string that lists
 the property names and their values.
 
-```js
+```javascript
 const car = { make: "Ford", model: "Mustang" };
 
 for (let property in car) {
@@ -143,7 +143,7 @@ The `for...of` statement creates a loop iterating over iterable objects
 (including `Array`, `Map`, `Set`, arguments object and so on), invoking a block
 with statements to be executed for the value of each distinct property.
 
-```js
+```javascript
 var numbers = [3, 5, 7];
 
 for (let number of numbers) {

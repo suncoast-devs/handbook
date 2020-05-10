@@ -11,6 +11,6 @@ PowerShell you may start a new Windows Terminal tab.
 
 ## Installation
 
-```sh
+```shell
 scoop install windows-terminal
 ```

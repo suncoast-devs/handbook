@@ -12,7 +12,7 @@ This is how we can update and interact with the HTML that is on our page.
 In order to interact with the DOM, we need to query the DOM to find the element
 we want to use. Take a look at the following code.
 
-```js
+```javascript
 const pageHeader = document.querySelector(".page-header");
 ```
 

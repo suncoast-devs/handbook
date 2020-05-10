@@ -20,7 +20,7 @@ statement) consists of the `function` keyword, followed by:
 
 For example, the following code defines a simple function named square:
 
-```js
+```javascript
 function square(number) {
   return number * number;
 }
@@ -38,7 +38,7 @@ function and specifies what to do when the function is called. Calling the
 function actually performs the specified actions with the indicated parameters.
 For example, if you define the function square, you could call it as follows:
 
-```js
+```javascript
 square(5);
 ```
 
@@ -52,7 +52,7 @@ also be created by a `function expression`. Such a function can be
 **anonymous**; it does not have to have a name. For example, the function square
 could have been defined as:
 
-```js
+```javascript
 let square = function (number) {
   return number * number;
 };
@@ -67,7 +67,7 @@ like we assign a `number` or a `string` or any other kind of value.
 In fact, in JavaScript, functions are values themselves and can be passed to
 functions just like any other value.
 
-```js
+```javascript
 function printIt(array, func) {
   for (let index = 0; index < array.length; index++) {
     const value = array[index];
@@ -119,7 +119,7 @@ function and any other variable to which the parent function has access.
 
 example:
 
-```js
+```javascript
 const PI = 3.14;
 const numbers = [1, 2, 4, 8, 16];
 

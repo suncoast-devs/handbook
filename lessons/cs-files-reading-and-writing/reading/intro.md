@@ -63,13 +63,13 @@ and then load it at the start.
 
 If you want to code-along, use this to create a new project:
 
-```sh
+```shell
 dotnet new console -o NumberTracker
 ```
 
 _Program.cs_
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 
@@ -127,7 +127,7 @@ and write CSV files. To do so we will add a new package to our application.
 In the same directory as our project (in the same directory as our _Program.cs_)
 we can add this library to our application with this command:
 
-```sh
+```shell
 dotnet add package CsvHelper
 ```
 
@@ -153,7 +153,7 @@ can process the information from our code and into the file in a flow, like
 water running in a stream. We simply need to tell it where the output goes, in
 this case a file named `numbers.csv`
 
-```C#
+```csharp
 // Create a stream for writing information into a file
 var fileWriter = new StreamWriter("numbers.csv");
 ```
@@ -168,7 +168,7 @@ Now that we have a way to send information to a file, we need some code that
 knows how to write in the CSV format. From the `CsvHelper` library we can use
 the `CsvWriter` class to do so.
 
-```C#
+```csharp
 // Create an object that can write CSV to the fileWriter
 var csvWriter = new CsvWriter(fileWriter, CultureInfo.InvariantCulture);
 ```
@@ -181,7 +181,7 @@ don't format numbers like `12000` as `12,000` or `12.000`)
 
 This object processes our list of numbers.
 
-```C#
+```csharp
 // Ask our csvWriter to write out our list of numbers
 csvWriter.WriteRecords(numbers);
 ```
@@ -189,14 +189,14 @@ csvWriter.WriteRecords(numbers);
 Finally, we have to tell the `fileWriter` we are complete and to close the file,
 ensuring all the information is saved.
 
-```C#
+```csharp
 // Tell the file we are done
 fileWriter.Close();
 ```
 
 Lets look at the code all together:
 
-```C#
+```csharp
 // Create a stream for writing information into a file
 var fileWriter = new StreamWriter("numbers.csv");
 
@@ -238,7 +238,7 @@ If the user entered a sequence of numbers: `1`, `42`, `99`, `3`, and `17` our
 
 Our code now looks like this:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -319,7 +319,7 @@ Now lets read this information from the file at the beginning of the code.
 Just as we have a `StreamWriter` we also have a `StreamReader` we can use to
 load data.
 
-```C#
+```csharp
 // Creates a stream reader to get information from our file
 var fileReader = new StreamReader("numbers.csv");
 ```
@@ -327,7 +327,7 @@ var fileReader = new StreamReader("numbers.csv");
 And as we have a `CsvWriter` we also have a `CsvReader` we can use to read the
 CSV data.
 
-```C#
+```csharp
 // Create a CSV reader to parse the stream into CSV format
 var csvReader = new CsvReader(fileReader, CultureInfo.InvariantCulture);
 
@@ -337,14 +337,14 @@ csvReader.Configuration.HasHeaderRecord = false;
 
 Finally, instead of `WriteRecords` we have a way to `ReadRecords`.
 
-```C#
+```csharp
 // Get the records from the CSV reader, as `int` and finally as a `List`
 var numbers = csvReader.GetRecords<int>().ToList();
 ```
 
 And finally close the reader
 
-```C#
+```csharp
 // Close the reader
 fileReader.Close();
 ```
@@ -352,7 +352,7 @@ fileReader.Close();
 We replace the line `var numbers = new List<int>()` with the lines above. We
 also add `using System.Linq` in order to use `ToList()`.
 
-```C#
+```csharp
 using System;
 using System.Globalization;
 using System.IO;
@@ -438,7 +438,7 @@ an error!
 
 To prevent this we can add a little logic at the top of our code:
 
-```C#
+```csharp
 // Creates a stream reader to get information from our file
 TextReader reader;
 

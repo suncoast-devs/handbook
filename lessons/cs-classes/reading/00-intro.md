@@ -19,7 +19,7 @@ From our work on methods, we had this Employee Database application. As you can
 see it can prompt a user for information, save that information, and do some
 basic calculations.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -87,7 +87,7 @@ namespace EmployeeDatabase
 What if we wanted to add information about a second employee? Certainly one
 approach would be to add a second set of variables such as:
 
-```C#
+```csharp
 var name1 = PromptForString("What is your name? ");
 int department1 = PromptForInteger("What is your department number? ");
 int salary1 = PromptForInteger("What is your yearly salary (in dollars)? ");
@@ -173,7 +173,7 @@ didn't quite know it yet!
 
 Lets make a `class` for this `Employee` structure.
 
-```C#
+```csharp
 class Employee
 {
   public string Name { get; set; }
@@ -213,7 +213,7 @@ We will add this `class` to our program, within the
 `namespace EmployeeDatabase { }` but as a sibling of the existing
 `class Program` as such:
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -312,7 +312,7 @@ copy of that information. Much like in this diagram from before
 
 If we were going to create these objects we will use the `new` keyword.
 
-```C#
+```csharp
 var firstEmployee = new Employee();
 var secondEmployee = new Employee();
 ```
@@ -321,7 +321,7 @@ When we create these new variables, the various attributes of the object will
 all be empty. For strings this means the values will be an empty string `""` and
 for integers, the values will be `0`.
 
-```C#
+```csharp
 Console.WriteLine(firstEmployee.Department); // This would output 0
 ```
 
@@ -335,7 +335,7 @@ Now that we know how to say which object and which property we want, we can use
 that syntax on the _left_ side of an assignment to change that object's
 property.
 
-```C#
+```csharp
 var firstEmployee = new Employee();
 var secondEmployee = new Employee();
 
@@ -359,7 +359,7 @@ like this:
 
 Lets fill in the rest of the properties.
 
-```C#
+```csharp
 var firstEmployee = new Employee();
 var secondEmployee = new Employee();
 
@@ -390,7 +390,7 @@ These objects would look like
 When specifying the initial values of a new object, `C#` gives us a convenient
 syntax to make our jobs easier:
 
-```C#
+```csharp
 var firstEmployee = new Employee {
   Name = "Elon Musk",
   Department = 42,
@@ -413,7 +413,7 @@ comma.
 This works well if we know the values ahead of time. Let's change our Employee
 Database code to use our new class.
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -511,7 +511,7 @@ This is where the ability to add methods that are _specific_ to a class come in
 handy. Rather than create a _property_ named `MonthlySalary` let's make a method
 instead.
 
-```C#
+```csharp
 class Employee
 {
   public string Name { get; set; }
@@ -536,7 +536,7 @@ am I and what properties (state) do I have?"
 We can add the code for `MonthlySalary` by accessing the existing `Salary`
 property!
 
-```C#
+```csharp
 class Employee
 {
   public string Name { get; set; }
@@ -551,7 +551,7 @@ class Employee
 
 If we created the following objects they would look like this:
 
-```C#
+```csharp
 var firstEmployee = new Employee {
   Name = "Elon Musk",
   Department = 42,
@@ -595,7 +595,7 @@ each object we create) and `behavior` the methods defined for the class. With
 both state and behavior we have the ability to represent real world ideas. In
 this case our modeling of a `Employee` in our Employee Database:
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -679,7 +679,7 @@ of any retired employees.
 
 We could declare a new `class` named `PartTimeEmployee` as such:
 
-```C#
+```csharp
 class PartTimeEmployee : Employee
 {
     public int MonthlySalary()
@@ -691,7 +691,7 @@ class PartTimeEmployee : Employee
 
 Now if we defined a new employee as such:
 
-```C#
+```csharp
 var thirdEmployee = new PartTimeEmployee {
     Name = "Bill Gates",
     Department = 100,

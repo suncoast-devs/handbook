@@ -56,7 +56,7 @@ validate that our users have been authenticated.
 
 // TODO: Auth Controller
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -178,7 +178,7 @@ namespace AuthExample.Controllers
 
 Startup.cs
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -275,7 +275,7 @@ namespace AuthExample
 
 Authenicated controller
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -8,7 +8,7 @@ The database engine we will be using for our back-end work.
 
 Start a PowerShell and run:
 
-```sh
+```shell
 scoop install postgresql
 ```
 
@@ -18,7 +18,7 @@ Close that PowerShell
 
 Start a PowerShell as Administrator
 
-```sh
+```shell
 pg_ctl register -N PostgreSQL
 ```
 
@@ -32,26 +32,26 @@ Reboot your computer
 
 Start a new regular PowerShell
 
-```sh
+```shell
 createuser -U postgres --superuser $USER
 ```
 
-```sh
+```shell
 scoop install python
 ```
 
-```sh
+```shell
 pip install https://download.lfd.uci.edu/pythonlibs/s2jqpv5t/setproctitle-1.1.10-cp38-cp38-win_amd64.whl
 ```
 
-```sh
+```shell
 pip install pgcli
 ```
 
 <!--
 #### Configure pgcli with nice defaults
 
-```sh
+```shell
 pgcli >/dev/null 2>&1
 sed -i "s/multiline_continuation_char = ''/multiline_continuation_char = '.'/g" ~/.config/pgcli/config
 sed -i "s/multi_line = False/multi_line = True/g" ~/.config/pgcli/config
@@ -65,13 +65,13 @@ sed -i "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
 
 From PowerShell:
 
-```sh
+```shell
 createdb MyTestDatabase
 ```
 
 Then:
 
-```sh
+```shell
 pgcli MyTestDatabase
 ```
 

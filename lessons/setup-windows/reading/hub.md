@@ -10,7 +10,7 @@ matter):
 
 ## Installation
 
-```sh
+```shell
 scoop install hub
 ```
 
@@ -18,7 +18,7 @@ scoop install hub
 
 Start a new Powershell and enter the command:
 
-```sh
+```shell
 hub api
 ```
 
@@ -28,7 +28,7 @@ you'll have to enter an authorization code.
 
 If you see output that looks similar to:
 
-```sh
+```shell
 {"current_user_url":"https://api.github.com/user","current_user_authorizations_html_url":
 ```
 

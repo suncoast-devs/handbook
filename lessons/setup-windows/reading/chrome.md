@@ -12,6 +12,6 @@ tools will help.
 
 ## Installation
 
-```sh
+```shell
 scoop install googlechrome
 ```

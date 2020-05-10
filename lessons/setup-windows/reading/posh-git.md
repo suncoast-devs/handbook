@@ -9,7 +9,7 @@ Posh-git shows beneficial git information when we are in a repository.
 
 ## Installation
 
-```sh
+```shell
 scoop install posh-git
 ```
 
@@ -17,6 +17,6 @@ Close this PowerShell and start a new one.
 
 Then execute:
 
-```sh
+```shell
 Add-PoshGitToProfile -AllHosts
 ```

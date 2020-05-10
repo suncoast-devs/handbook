@@ -11,7 +11,7 @@ installing the app.
 
 ## Installation
 
-```sh
+```shell
 sudo snap install --classic slack
 ```
 

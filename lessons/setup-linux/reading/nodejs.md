@@ -10,11 +10,11 @@ require, or are written in, JavaScript with node.
 
 ## Installation
 
-```sh
+```shell
 sudo apt install nodejs
 ```
 
-```sh
+```shell
 echo "export NPM_CONFIG_PREFIX=~/.npm-global" >> ~/.bashrc
 echo "export PATH=~/.npm-global/bin" >> ~/.bashrc
 ```

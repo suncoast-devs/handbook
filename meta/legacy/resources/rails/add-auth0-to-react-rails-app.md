@@ -1,10 +1,14 @@
 ---
-title: Adding OAuth authentication to our application using [auth0](https://auth0.com)
+title:
+  Adding OAuth authentication to our application using
+  [auth0](https://auth0.com)
 ---
 
 _NOTE_ This assumes you created an `API` only style Rails application
 
-_NOTE_ This also assumes you have [React Router](https://github.com/ReactTraining/react-router) installed in your React client
+_NOTE_ This also assumes you have
+[React Router](https://github.com/ReactTraining/react-router) installed in your
+React client
 
 ## Configuring auth0 service
 
@@ -13,7 +17,8 @@ _NOTE_ This also assumes you have [React Router](https://github.com/ReactTrainin
 - Create a new application
 - Choose an application name
 - Select `Single Page Web App` as the application type
-- Select the `settings` tab. Scroll down to `Allowed Callback URLs` and enter `http://localhost:3001/callback`
+- Select the `settings` tab. Scroll down to `Allowed Callback URLs` and enter
+  `http://localhost:3001/callback`
 - Make note of your `domain` and your `Client ID` values
 
 ## React Front End
@@ -27,7 +32,7 @@ In this section we will configure our React front end to
 
 Inside the _client_ folder (cd client)
 
-```sh
+```shell
 yarn add auth0-js
 ```
 
@@ -38,151 +43,157 @@ _NOTE_ Restart your `yarn start` if it was already running
 - In the React app create an `Auth` class in `src/auth.js`
 
 _NOTE_ Replace the value of `DOMAIN` with the domain from your `auth0` account
-_NOTE_ Replace the value of `CLIENTID` with the configured client id from your `auth0` account
-_NOTE_ Replace the value of `AFTER_LOGIN` with the React route to go to after a successful login
-_NOTE_ Replace the value of `FAILED_LOGIN` with the React route to go to after a failed login
-_NOTE_ Replace the value of `AFTER_LOGOUT` with the React route to go to after a successful logout
+_NOTE_ Replace the value of `CLIENTID` with the configured client id from your
+`auth0` account _NOTE_ Replace the value of `AFTER_LOGIN` with the React route
+to go to after a successful login _NOTE_ Replace the value of `FAILED_LOGIN`
+with the React route to go to after a failed login _NOTE_ Replace the value of
+`AFTER_LOGOUT` with the React route to go to after a successful logout
 
-```js
-import auth0 from 'auth0-js'
-import history from './history'
+```javascript
+import auth0 from "auth0-js";
+import history from "./history";
 
-const DOMAIN = 'OURDOMAIN.auth0.com'
-const CLIENTID = 'xxxxxxxxx'
-const AFTER_LOGIN = '/'
-const AFTER_LOGOUT = '/'
+const DOMAIN = "OURDOMAIN.auth0.com";
+const CLIENTID = "xxxxxxxxx";
+const AFTER_LOGIN = "/";
+const AFTER_LOGOUT = "/";
 
 class Auth {
-  userProfile
+  userProfile;
 
   auth0 = new auth0.WebAuth({
     domain: DOMAIN,
     clientID: CLIENTID,
     redirectUri: `${window.location.protocol}//${window.location.host}/callback`,
-    responseType: 'token id_token',
-    scope: 'openid email profile'
-  })
+    responseType: "token id_token",
+    scope: "openid email profile",
+  });
 
   constructor() {
-    this.login = this.login.bind(this)
-    this.logout = this.logout.bind(this)
-    this.handleAuthentication = this.handleAuthentication.bind(this)
-    this.isAuthenticated = this.isAuthenticated.bind(this)
+    this.login = this.login.bind(this);
+    this.logout = this.logout.bind(this);
+    this.handleAuthentication = this.handleAuthentication.bind(this);
+    this.isAuthenticated = this.isAuthenticated.bind(this);
   }
 
   login() {
-    this.auth0.authorize()
+    this.auth0.authorize();
   }
 
   logout() {
     // Clear Access Token and ID Token from local storage
-    localStorage.removeItem('access_token')
-    localStorage.removeItem('id_token')
-    localStorage.removeItem('expires_at')
+    localStorage.removeItem("access_token");
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
 
-    window.location = AFTER_LOGOUT
+    window.location = AFTER_LOGOUT;
   }
 
   handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        this.setSession(authResult)
+        this.setSession(authResult);
 
         if (callback) {
-          callback()
+          callback();
         }
 
-        window.location = AFTER_LOGIN
+        window.location = AFTER_LOGIN;
       } else if (err) {
-        window.location = FAILED_LOGIN
-        console.log(err)
+        window.location = FAILED_LOGIN;
+        console.log(err);
       }
-    })
+    });
   }
 
   setSession(authResult) {
     // Set the time that the Access Token will expire at
     let expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
-    )
-    localStorage.setItem('access_token', authResult.accessToken)
-    localStorage.setItem('id_token', authResult.idToken)
-    localStorage.setItem('expires_at', expiresAt)
+    );
+    localStorage.setItem("access_token", authResult.accessToken);
+    localStorage.setItem("id_token", authResult.idToken);
+    localStorage.setItem("expires_at", expiresAt);
   }
 
   isAuthenticated() {
     // Check whether the current time is past the
     // Access Token's expiry time
-    let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
-    return new Date().getTime() < expiresAt
+    let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
+    return new Date().getTime() < expiresAt;
   }
 
   getIdToken() {
-    const idToken = localStorage.getItem('id_token')
+    const idToken = localStorage.getItem("id_token");
     if (!idToken) {
-      throw new Error('No ID Token found')
+      throw new Error("No ID Token found");
     }
-    return idToken
+    return idToken;
   }
 
   getAccessToken() {
-    const accessToken = localStorage.getItem('access_token')
+    const accessToken = localStorage.getItem("access_token");
     if (!accessToken) {
-      throw new Error('No Access Token found')
+      throw new Error("No Access Token found");
     }
-    return accessToken
+    return accessToken;
   }
 
   //...
   getProfile(cb) {
-    let accessToken = this.getAccessToken()
+    let accessToken = this.getAccessToken();
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
-        this.userProfile = profile
+        this.userProfile = profile;
       }
-      cb(err, profile)
-    })
+      cb(err, profile);
+    });
   }
 
   authorizationHeader() {
-    return `Bearer ${this.getIdToken()}`
+    return `Bearer ${this.getIdToken()}`;
   }
 }
 
-const auth = new Auth()
+const auth = new Auth();
 
-export default auth
+export default auth;
 ```
 
 - Create `src/history.js`
 
-```js
-import createHistory from 'history/createBrowserHistory'
+```javascript
+import createHistory from "history/createBrowserHistory";
 
-export default createHistory()
+export default createHistory();
 ```
 
 ### Add Routes to our `<Router>` to work with login, logout, and callback
 
 - In the component that contains your `Router`, add the following
 
-```js
-import auth from './auth'
+```javascript
+import auth from "./auth";
 
-import history from './history'
+import history from "./history";
 ```
 
-We need the auth component so we can allow the user to login, logout, and access profile information. The `history` object will allow us to provide history to our Router, and to modify it as necessary.
+We need the auth component so we can allow the user to login, logout, and access
+profile information. The `history` object will allow us to provide history to
+our Router, and to modify it as necessary.
 
-Because of that we will change from using the `BrowserRouter` to a simple `Router` and provide our custom history object to it.
+Because of that we will change from using the `BrowserRouter` to a simple
+`Router` and provide our custom history object to it.
 
-- In your import, change your `BrowserRouter` to a simple `Router` (e.g. `BrowserRouter as Router` to just `Router`)
+- In your import, change your `BrowserRouter` to a simple `Router` (e.g.
+  `BrowserRouter as Router` to just `Router`)
 
-- In your `render` function where `<Router>` is found, change this to `<Router history={history}>`
+- In your `render` function where `<Router>` is found, change this to
+  `<Router history={history}>`
 
 - To your router add these routes
 
-```js
+```javascript
   <Route path="/login" render={() => auth.login()} />
   <Route
     path="/logout"
@@ -207,13 +218,18 @@ Because of that we will change from using the `BrowserRouter` to a simple `Route
   />
 ```
 
-Now we can use the `/login` and `/logout` routes to allow the user to login or logout. Additionally we can check if the user is authenticated and redirect them to the `/login` page if we need to (e.g. ensuring that some parts of our app are protected behind a login form)
+Now we can use the `/login` and `/logout` routes to allow the user to login or
+logout. Additionally we can check if the user is authenticated and redirect them
+to the `/login` page if we need to (e.g. ensuring that some parts of our app are
+protected behind a login form)
 
 ### Setup axios to provide custom Authorization headers for every request.
 
-To do this, add this code in your `App` `componentWillMount` callback. It will ensure every axios request will include the authorization header to let our backend know our identity.
+To do this, add this code in your `App` `componentWillMount` callback. It will
+ensure every axios request will include the authorization header to let our
+backend know our identity.
 
-```js
+```javascript
 
 componentWillMount() {
   if (auth.isAuthenticated()) {
@@ -224,7 +240,8 @@ componentWillMount() {
 }
 ```
 
-_NOTE_ If you are using fetch, or if you do not want to set the common headers, you must provide the `Authorization` header on every request.
+_NOTE_ If you are using fetch, or if you do not want to set the common headers,
+you must provide the `Authorization` header on every request.
 
 ## Rails Backend Setup
 
@@ -232,7 +249,7 @@ _NOTE_ If you are using fetch, or if you do not want to set the common headers, 
 
 Before we get started we need to add the following gem to our `Gemfile`:
 
-```sh
+```shell
 bundle add jwt
 ```
 
@@ -240,9 +257,12 @@ _NOTE_ You must then restart the Rails application
 
 ### Add a way to find a current user
 
-In our Rails application we need a way to access the currently active user. We will do this by adding a _private_ method to `ApplicationController` that fetches the currently authenticated user.
+In our Rails application we need a way to access the currently active user. We
+will do this by adding a _private_ method to `ApplicationController` that
+fetches the currently authenticated user.
 
-_NOTE_ In the instructions below if you called your `User` model `Profile` or such, use that class name in place of `User`
+_NOTE_ In the instructions below if you called your `User` model `Profile` or
+such, use that class name in place of `User`
 
 In the file `app/controllers/application_controller.rb`
 
@@ -265,13 +285,16 @@ In the file `app/controllers/application_controller.rb`
 
 If you have not created a model for the user yet, you should do so now.
 
-You should include the user's `name`, and their `auth_sub`. The `auth_sub` is the `OAuth` identifier for the user. It includes the service (google, facebook, twitter) and their identifier on that service. It is the column we lookup users by and is mandatory.
+You should include the user's `name`, and their `auth_sub`. The `auth_sub` is
+the `OAuth` identifier for the user. It includes the service (google, facebook,
+twitter) and their identifier on that service. It is the column we lookup users
+by and is mandatory.
 
 You may also want to add other columns such as `email`, etc.
 
 _NOTE_ If you already have a User model, do not do this step.
 
-```sh
+```shell
 rails generate model User name:string email:string auth_sub:string
 ```
 
@@ -279,14 +302,16 @@ rails generate model User name:string email:string auth_sub:string
 
 We need to add the `auth_sub` column on our `User` (or `Profile` or etc) model:
 
-```sh
+```shell
 rails generate migration AddAuthSubToUser auth_sub:string
 ```
 
-
 ### Add a method to the User (Profile, etc) class to find or create the account
 
-This code needs our `User` class to be able to find (or create) a user. So, in your `User` ActiveRecord class add the following code. _NOTE_ that inside the `do` block is where you would capture any user specific information such as `avatar`, `name`, `email`, etc.
+This code needs our `User` class to be able to find (or create) a user. So, in
+your `User` ActiveRecord class add the following code. _NOTE_ that inside the
+`do` block is where you would capture any user specific information such as
+`avatar`, `name`, `email`, etc.
 
 ```ruby
 # Add this code *within* the `class` definition
@@ -344,9 +369,11 @@ Here is an example of what is in the `payload` variable.
 
 ### Add the JWT support code
 
-Next we need a class, `JSONWebToken` in the file `app/lib/json_web_token.rb` that can parse the jwt and present a payload and header
+Next we need a class, `JSONWebToken` in the file `app/lib/json_web_token.rb`
+that can parse the jwt and present a payload and header
 
-_NOTE_ Replace the *two* instances of the text `OURDOMAIN` with the domain name you created in auth0
+_NOTE_ Replace the _two_ instances of the text `OURDOMAIN` with the domain name
+you created in auth0
 
 ```ruby
 require "net/http"

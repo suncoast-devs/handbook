@@ -92,7 +92,7 @@ Let's declare these two variables with the following statements.
 > `Program.cs` but from this point forward we'll only show the code that goes
 > inside `Main`
 
-```C#
+```csharp
 using System;
 
 namespace our_dotnet_app
@@ -145,7 +145,7 @@ making a string variable, but then we also said that we had to write `Mark`
 inside double-quotes to let the computer know this was a sequence (_string_) of
 letters. The same with the `int` for the score.
 
-```C#
+```csharp
 string name = "Mark";
 int score = 95;
 ```
@@ -162,7 +162,7 @@ keyword `var` comes into play.
 Let's look at the same statement without having to _explicitly_ (doing it
 ourselves) declare variables:
 
-```C#
+```csharp
 var name = "Mark";
 var score = 95;
 ```
@@ -211,13 +211,13 @@ seen so far:
 
 ### Integers
 
-```C#
+```csharp
 var score = 42;
 ```
 
 ### Floats
 
-```C#
+```csharp
 var total = 10f;
 var price = 10.0;
 var pi = 3.14159265;
@@ -225,7 +225,7 @@ var pi = 3.14159265;
 
 ### Decimal
 
-```C#
+```csharp
 var total = 10m;
 var price = 10.0;
 var pi = 3.14159265;
@@ -233,7 +233,7 @@ var pi = 3.14159265;
 
 ### Double
 
-```C#
+```csharp
 var total = 10.0;
 var total = 10d;
 var pi = 3.14159265
@@ -241,7 +241,7 @@ var pi = 3.14159265
 
 ### Characters
 
-```C#
+```csharp
 var piratesFavoriteLetter = 'r';
 var firstLetterOfTheEnglishAlphabet = 'a';
 var lastLetterOfTheEnglishAlphabet = 'z';
@@ -250,7 +250,7 @@ var capitalLetter = 'Q';
 
 ### Strings
 
-```C#
+```csharp
 var name = "Mark";
 ```
 
@@ -265,7 +265,7 @@ features.
 With a more complex type like a `string` we can ask it questions about itself.
 For instance, we can ask the variable how many characters are in the string.
 
-```C#
+```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 
 var howLong = sentence.length;
@@ -305,7 +305,7 @@ we want, length. In this case we get the \_int_eger `44`
 
 So after:
 
-```C#
+```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 
 var howLong = sentence.Length;
@@ -321,7 +321,7 @@ to access each letter individually.
 By using the `[]` syntax for a string we can access individual characters of the
 string.
 
-```C#
+```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 var firstLetter = sentence[0];
 var secondLetter = sentence[1];
@@ -346,7 +346,7 @@ our `var name = "Mark";` example. What if we were writing an application to keep
 track of all the names of the students on a work or sports team? We could try
 something like:
 
-```C#
+```csharp
 var name1 = "Mark";
 var name2 = "Paula";
 var name3 = "Sandy";
@@ -359,7 +359,7 @@ unused names if we removed someone from the team.
 This is a great case for using a type called an `array`. An array allows us to
 store more than one value and maintains the order of the items.
 
-```C#
+```csharp
 string[] names = { "Mark", "Paula", "Sandy" , "Bill" };
 ```
 
@@ -371,14 +371,14 @@ place them inside `{ }` braces.
 Now we can access the elements of the array much like we did the individual
 characters of the string.
 
-```C#
+```csharp
 var firstName = names[0];
 var secondName = names[1];
 ```
 
 We can also ask for the length of the array.
 
-```C#
+```csharp
 var nameCount = names.Length;
 ```
 
@@ -399,7 +399,7 @@ features.
 
 To create a list of strings with some data:
 
-```C#
+```csharp
 var names = new List<string>()  { "Mark", "Paula", "Sandy" , "Bill" };
 ```
 
@@ -417,27 +417,27 @@ Now that we have our list we can work with it.
 The `List` is still accessed with the `[]` bracket syntax and is still zero
 indexed:
 
-```C#
+```csharp
 var firstName = names[0];
 var secondName = names[0];
 ```
 
 We can find out how many elements are in the list but we must use a new syntax:
 
-```C#
+```csharp
 var numberOfNamesInList = names.Count();
 ```
 
 Finally, since these `List`s are more flexible we can **add** elements to the
 list.
 
-```C#
+```csharp
 names.Add("George");
 ```
 
 We can create `List`s of other types as well.
 
-```C#
+```csharp
 var listOfScores = new List<int>();
 listOfScores.Add(12);
 listOfScores.Add(100);
@@ -467,19 +467,19 @@ associated type will be an `int` (for the score).
 
 That definition looks like:
 
-```C#
+```csharp
 var playerScores = new Dictionary<string, int>();
 ```
 
 And we can add information like this:
 
-```C#
+```csharp
 playerScores.Add("Robbie Lakeman", 1247700);
 ```
 
 We can look up information with the same `[]` bracket syntax.
 
-```C#
+```csharp
 var score = playerScores["Robbie Lakeman"];
 ```
 
@@ -491,7 +491,7 @@ of errors.
 
 - For loops
 
-```C#
+```csharp
 
 for(var i = 0; i < 10; i++){
   Console.WriteLine(i);
@@ -502,7 +502,7 @@ for(var i = 0; i < 10; i++){
 - Foreach loops
 - works on arrays, lists, dictionaries, or any `IEnumerable`
 
-```C#
+```csharp
 for (var score in scores)
 {
   Console.WriteLine(score);
@@ -519,14 +519,14 @@ for (var score in scores)
 
 - Generic Method declaration
 
-```C#
+```csharp
 public ReturnType Name(Param1Type Param1, Param2Type Param2)
 {
   // method body
 }
 ```
 
-```C#
+```csharp
 // This method has no inputs or return
 public void PrintHello()
 {
@@ -561,7 +561,7 @@ public string MakeSentence(string name, int score) => $"{name} has a score of {s
     - `if (score > 90 || name == "Gavin")`
 - What if we are looking for a few options we have the `switch` statement
 
-```C#
+```csharp
 
 int caseSwitch = new Random().Next(0,2);
 

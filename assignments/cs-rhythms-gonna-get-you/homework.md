@@ -20,7 +20,7 @@ database.
 Create a console that allows a user to store and manage the company's bands,
 albums, and songs.
 
-```sh
+```shell
 dotnet new --install SDG.templates.Console.Database
 ```
 

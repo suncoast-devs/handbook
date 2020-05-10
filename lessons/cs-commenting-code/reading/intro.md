@@ -21,7 +21,7 @@ out.
 
 ### Single Line Comments
 
-```C#
+```csharp
 // These are comments in C# code
 //
 // The double slash beings a comment that lasts for the remainder of the line.
@@ -34,7 +34,7 @@ var name = "Mark"; // Comments can start anywhere on a line
 If you are writing a long paragraph of comments you may not want to begin each
 line with `//` -- in this case we can use a `multi line comment`
 
-```C#
+```csharp
 /*
    This is a long comment.
 

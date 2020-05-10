@@ -7,7 +7,7 @@ Looking back at the code we used for managing `Employee`s in our _Employee
 Database_ example from (LINK TO cs-classes lesson) we wrote code to search for
 an employee by it's name in our `List<Employee>` collection.
 
-```C#
+```csharp
 // to null which will indicate no match found
 Employee foundEmployee = null;
 
@@ -41,7 +41,7 @@ give our `List` some new capabilities.
 Before we can talk about LINQ we must learn a new language feature, the
 expression. So far we have seen methods such as this:
 
-```C#
+```csharp
 int Double(int value)
 {
     return value * 2;
@@ -51,7 +51,7 @@ int Double(int value)
 This method accepts an integer and returns an integer with twice the value.
 However, there is another way to express this idea.
 
-```C#
+```csharp
 Func<int, int> Double = value => value * 2;
 ```
 
@@ -74,7 +74,7 @@ We can write `lambda` expressions to do all kinds of things. For instance we
 could write a `lambda` expression to see if a particular `Employee` has a given
 name:
 
-```C#
+```csharp
 Func<Employee, string, bool> EmployeeHasName = (employee, name) => employee.Name == name;
 ```
 
@@ -88,7 +88,7 @@ it self returns a `bool` since that is what we would get if we evaluated
 
 We could use this _function_ as:
 
-```C#
+```csharp
 if (EmployeeHasName(employee, "Bob"))
 {
     Console.WriteLine("Yup, that is Bob!");
@@ -103,7 +103,7 @@ passed to other methods.
 Lets return to our lambda example of using the `Double`. Suppose we had a list
 such as:
 
-```C#
+```csharp
 var scores = new List<int> { 42, 100, 98, 15 };
 ```
 
@@ -113,7 +113,7 @@ just that!
 
 We would write code such as:
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -158,7 +158,7 @@ expression does. Every new value is then added to a new `List` and returned.
 Whoa! That is exactly what our code above is doing! Let's simplify this code by
 using our new `Select` capability.
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -195,7 +195,7 @@ etc. is all neatly captured by our friend `Select`. But it can be even better!
 Since `Double` is simply `score => score * 2` we can put that code directly into
 `Select()` and our code becomes:
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using System.Collections.Generic;
@@ -227,7 +227,7 @@ can use to do all kinds of processing. Maybe we need another variable that
 stores all the scores if we had just done a little better and scored one more
 point each.
 
-```C#
+```csharp
 var slightlyBetterScores = scores.Select(score => score + 1);
 ```
 
@@ -248,7 +248,7 @@ skill we will re-use quite often in our `C#` programming.
 We will be using this class as an example for exploring the various methods
 `LINQ` supplies.
 
-```C#
+```csharp
 public class Movie {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -264,7 +264,7 @@ public class Movie {
 
 They `List` we will be using is
 
-```C#
+```csharp
 var movies = new List<Movie>();
 ```
 
@@ -285,7 +285,7 @@ We have seen an example of `Select` already. To define `Select`:
 
 Example:
 
-```C#
+```csharp
 // Make a list of strings when each string contins the year it's corresponding Movie was released, a comma, and the title of the Movie.
 var yearAndMovie = movies.Select(movie => $"{movie.ReleaseDate.Year}, {movie.Title} ");
 ```
@@ -298,7 +298,7 @@ list, keeping only _some_ of the items from the original list.
 > Makes a new list, of _equal or smaller_ size by running an expression against
 > every item, keeping only items when the expression returns `true`.
 
-```C#
+```csharp
 // Make a new list containing only the movies that that have over 100 Screenings
 var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 ```
@@ -314,7 +314,7 @@ and processes it down into a single value. Thus why it is often called `reduce`.
 
 A good example is to be able to take a list and turn it into a total
 
-```C#
+```csharp
 // Find the total revenue for all movies
 var totalRevenue = movies.Aggregate(0, (currentTotal, movie) => currentTotal + movie.TotalRevenue);
 ```
@@ -330,7 +330,7 @@ for every element in the list.
 > Returns _a boolean_ if the expression evaluates to `true` for every element in
 > the list.
 
-```C#
+```csharp
 // Figure out if all the movies are old movies, before 1965
 var areAllOldMovies = movies.All(movie => movie.ReleasedDate.Year < 1965);
 ```
@@ -340,7 +340,7 @@ var areAllOldMovies = movies.All(movie => movie.ReleasedDate.Year < 1965);
 > Returns _a boolean_ if there is even a single element in the list that causes
 > the expression to return `true`
 
-```C#
+```csharp
 // Figure out if there is even a single old movie (before 1965) in our list
 var areAnyOldMovies = movies.Any(movie => movie.ReleasedDate.Year > 1965);
 ```
@@ -350,7 +350,7 @@ var areAnyOldMovies = movies.Any(movie => movie.ReleasedDate.Year > 1965);
 > Returns _an integer_ of items count of elements for which the expression
 > returns `true`.
 
-```C#
+```csharp
 // Get count of movies that cost more than $10 to see.
 var moviesThatCostMoreThanTenDollars = movies.Count(movie => movie.PricePerTicket > 10);
 ```
@@ -360,7 +360,7 @@ var moviesThatCostMoreThanTenDollars = movies.Count(movie => movie.PricePerTicke
 > Returns _a single element of the list_ which is the first item for which the
 > expression returns `true`. If no item is found, an _exception_ is thrown.
 
-```C#
+```csharp
 // Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't we'll get an exception/error
 var favoriteMovie = movies.First(movie => movie.Title == "Jaws");
 ```
@@ -371,7 +371,7 @@ var favoriteMovie = movies.First(movie => movie.Title == "Jaws");
 > the expression returns `true`. If no item is found, the default value for that
 > type is returned.
 
-```C#
+```csharp
 // Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't we'll get a value of `null` for `favoriteMovie`
 var favoriteMovie = movies.FirstOrDefault(movie => movie.Title == "Jaws");
 ```
@@ -383,7 +383,7 @@ var favoriteMovie = movies.FirstOrDefault(movie => movie.Title == "Jaws");
 > `First` is that `Single` will also also crash if there are multiple items that
 > that expression meets true for.
 
-```C#
+```csharp
 // Our favorite movie is Jaws, lets get that movie from the list, but only if there is just the one movie with that name anywhere in the list.
 var favoriteMovie = movies.Single(movie => movie.Title == "Jaws");
 ```
@@ -394,7 +394,7 @@ var favoriteMovie = movies.Single(movie => movie.Title == "Jaws");
 > type if there is no match. Will still cause an exception if there are multiple
 > items for which the expression is `true` for.
 
-```C#
+```csharp
 // Our favorite movie is Jaws, lets get that movie from the list -- or `null` if it isn't there. But only if there is just the one movie with that name anywhere in the list.
 var favoriteMovie = movies.SingleOfDefault(movie => movie.Title == "Jaws");
 ```
@@ -404,7 +404,7 @@ var favoriteMovie = movies.SingleOfDefault(movie => movie.Title == "Jaws");
 > Returns the _last item_ such that the expression returns `true`. If no item is
 > found, an exception is thrown.
 
-```C#
+```csharp
 // Get the last item in the list that costs more than 10
 var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTicket > 10);
 ```
@@ -414,7 +414,7 @@ var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTick
 > Returns the _last item_ such that the expression returns `true`. If no item is
 > found, the default value for the type is returned
 
-```C#
+```csharp
 // Get the last item in the list that costs more than 10. If no movie costs more than 10, then `lastMovieCostingMoreThanTenDollars` will be `null`
 var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTicket > 10);
 ```
@@ -424,7 +424,7 @@ var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTick
 > Returns all the distinct items in a list. This is commonly use in conjunction
 > with a `Select`
 
-```C#
+```csharp
 // Make a list of all the distinct movie titles. That is, if two movies have the same title, the title only appears once.
 var titles = movies.Select(movie => movie.Title).Distinct();
 ```
@@ -434,7 +434,7 @@ var titles = movies.Select(movie => movie.Title).Distinct();
 > Returns the highest value in the collection, but not the actual item. Useful
 > for getting numbers.
 
-```C#
+```csharp
 // Of all the values of `Budget` for all the movies, return the largest one.
 var biggestBudget = movies.Max(movie => movie.Budget);
 ```
@@ -444,7 +444,7 @@ var biggestBudget = movies.Max(movie => movie.Budget);
 > Returns the smallest value in the collection, but not the actual item. Useful
 > for getting numbers.
 
-```C#
+```csharp
 // Of all the values of `Budget` for all the movies, return the smallest one.
 var smallestBudget = movies.Min(movie => movie.Budget);
 ```
@@ -454,7 +454,7 @@ var smallestBudget = movies.Min(movie => movie.Budget);
 > Returns the sum of the property that was returned by the expressions. Useful
 > for getting totals.
 
-```C#
+```csharp
 // Get tht total of all revenue for all movies
 var totalOfAllRevenue = movies.Sum(movie => movie.TotalRevenue);
 ```
@@ -463,7 +463,7 @@ var totalOfAllRevenue = movies.Sum(movie => movie.TotalRevenue);
 
 > Returns a list of _a specific number of_ items from the list.
 
-```C#
+```csharp
 // Make a new list of the first 8 movies from the list
 var first8 = movies.Take(8);
 ```
@@ -472,7 +472,7 @@ var first8 = movies.Take(8);
 
 > Returns a _part of the list_ that begins after skipping a number of items.
 
-```C#
+```csharp
 // Return a list of all the movies after skipping the first three
 var afterTheFirst3 = movies.Skip(3);
 ```
@@ -482,7 +482,7 @@ var afterTheFirst3 = movies.Skip(3);
 > Returns a new list _of equal size_ in a sorted order based on the property
 > returned by the expression.
 
-```C#
+```csharp
 // Makes a new list with all the movies ordered by their title
 var alphabetically = movies.OrderBy(movie => movie.Title);
 ```
@@ -491,7 +491,7 @@ var alphabetically = movies.OrderBy(movie => movie.Title);
 
 > Used only after an `OrderBy` and is used to resolve any `OrderBy` ties
 
-```C#
+```csharp
 // Makes a new list sorted by alphabetically by title, then by release year if they have the same Title
 var sorted = movies.OrderBy(movie => movie.Title).ThenBy(movie => move.DateReleased);
 ```
@@ -501,7 +501,7 @@ var sorted = movies.OrderBy(movie => movie.Title).ThenBy(movie => move.DateRelea
 > Removes all items that the expression returns `true`, returning a new list _of
 > equal or smaller size_
 
-```C#
+```csharp
 // Return a list of all movies, except for, you know, that one, the one with the title we don't speak of.
 var didntHappen = movies.RemoveAll(movie => movie.Title == "Star Wars: Episode I – The Phantom Menace");
 ```

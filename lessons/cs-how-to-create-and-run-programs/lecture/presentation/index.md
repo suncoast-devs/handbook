@@ -42,7 +42,7 @@ in our _home_ directory</sub>
 
 <br />
 
-```sh
+```shell
 cd sdg
 ```
 
@@ -55,7 +55,7 @@ cd sdg
 <br />
 <br />
 
-```bash
+```shell
 dotnet new console -o our-dotnet-app
 ```
 
@@ -63,7 +63,7 @@ dotnet new console -o our-dotnet-app
 
 # [fit] What does this do?
 
-```bash
+```shell
 
 # command  action   template   output  project-name
 #   |        |         |         |          |
@@ -80,7 +80,7 @@ We need to _change directory_ into the newly created directory
 <br />
 <br />
 
-```sh
+```shell
 cd our-dotnet-app
 ```
 
@@ -93,7 +93,7 @@ Now we can open our project in our editor!
 <br />
 <br />
 
-```sh
+```shell
 code .
 ```
 
@@ -133,7 +133,7 @@ we will use the **`dotnet run`** command.
 
 <br />
 
-```sh
+```shell
 dotnet run
 ```
 

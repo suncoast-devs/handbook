@@ -12,7 +12,7 @@ title: React State
 
 ## `props` are read only values passed into a component from a parent
 
-```js
+```javascript
 class Card extends React.Component {
   render() {
     return (
@@ -62,7 +62,7 @@ class Deck extends React.Component {
 
 - where there is `constructor(props)` there will be `super(props)`
 
-```js
+```javascript
 class Person extends React.Component {
   constructor(props) {
     super(props);
@@ -89,7 +89,7 @@ class Person extends React.Component {
 
 ### Using state to send props to a child component
 
-```js
+```javascript
 class Person extends React.Component {
   constructor(props) {
     super(props);
@@ -121,7 +121,7 @@ class Person extends React.Component {
 - `setState()` update state after the initial state setup
   - setState function in React works asynchronously
 
-```js
+```javascript
 class Person extends Component {
   constructor(props) {
     super(props);
@@ -163,7 +163,7 @@ class Person extends Component {
 
 ## Full Source
 
-```js
+```javascript
 class Clock extends React.Component {
   constructor(props) {
     super(props);

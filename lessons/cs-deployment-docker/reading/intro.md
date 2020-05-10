@@ -32,7 +32,7 @@ This file takes our current code, builds it into a container, and then runs in a
 separate container. This file describes how to build an image that builds and
 runs our .NET Core application.
 
-```dockerfile
+```docker
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 

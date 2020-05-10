@@ -22,7 +22,7 @@ help power the modern internet.
 
 We will generate a console application with:
 
-```sh
+```shell
 dotnet new console --name OneListClient
 ```
 
@@ -30,7 +30,7 @@ Initially this application contains just the
 `Console.WriteLine("Hello World!");` code so we will remove that and add this
 code:
 
-```C#
+```csharp
 var client = new HttpClient();
 ```
 
@@ -95,7 +95,7 @@ seem unresponsive.
 
 Let's add code to fetch a list of todo items from `One List`
 
-```C#
+```csharp
 using System;
 using System.Net.Http;
 
@@ -132,7 +132,7 @@ If you place your cursor on the error and press `Control .` (Windows) or
 `Command .` (Mac) you will see the _Quick Fix_ suggestion `Make method async`.
 Doing so turns the code into:
 
-```C#
+```csharp
 using System;
 using System.Net.Http;
 
@@ -166,7 +166,7 @@ helpful when we learn to write our own APIs.
 One last refactor is to take the long `System.Threading.Tasks.Task` and make it
 just `Task` and then add a `using System.Threading.Tasks;` to our code.
 
-```C#
+```csharp
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -190,8 +190,33 @@ namespace OneListClient
 Go ahead and run this code to see an output similar to (but perhaps different if
 there are more, less, or different tasks in the API at the moment)
 
-```JSON
-[{"id":1590,"user_id":143,"text":"Write some documentation about Insomnia","complete":false,"created_at":"2020-04-24T19:32:43.653Z","updated_at":"2020-04-24T19:32:43.653Z"},{"id":1591,"user_id":143,"text":"Write more about how awesome APIs are","complete":false,"created_at":"2020-04-24T19:37:21.547Z","updated_at":"2020-04-24T19:37:21.547Z"},{"id":1592,"user_id":143,"text":"Write more about the PEDAC process of problem solving.","complete":true,"created_at":"2020-04-24T19:37:46.305Z","updated_at":"2020-04-24T19:37:46.305Z"}]
+```json
+[
+  {
+    "id": 1590,
+    "user_id": 143,
+    "text": "Write some documentation about Insomnia",
+    "complete": false,
+    "created_at": "2020-04-24T19:32:43.653Z",
+    "updated_at": "2020-04-24T19:32:43.653Z"
+  },
+  {
+    "id": 1591,
+    "user_id": 143,
+    "text": "Write more about how awesome APIs are",
+    "complete": false,
+    "created_at": "2020-04-24T19:37:21.547Z",
+    "updated_at": "2020-04-24T19:37:21.547Z"
+  },
+  {
+    "id": 1592,
+    "user_id": 143,
+    "text": "Write more about the PEDAC process of problem solving.",
+    "complete": true,
+    "created_at": "2020-04-24T19:37:46.305Z",
+    "updated_at": "2020-04-24T19:37:46.305Z"
+  }
+]
 ```
 
 Notice that this JSON, even though it is not formatted nicely with extra
@@ -249,7 +274,7 @@ updated_at: string
 We would like to deal with each of the entries as a familiar object, a POCO
 (Plain Old Csharp Object). So we can define a `class` to represent these items:
 
-```C#
+```csharp
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -284,7 +309,7 @@ the keys of our JSON object**. This is a **CRITICAL** point because it is this
 pattern the _deserializer_ will use to know where to put the data. For instance
 if we were to receive this data in the response:
 
-```JSON
+```json
 {
   "id": 6,
   "text": "Finish Assignment",
@@ -337,7 +362,7 @@ that the JSON data, inside the `responseAsStream` should be processed as a
 
 This gives us a `List<Item>` that we can iterate.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -396,7 +421,7 @@ try to _convert_ (the technical term is _coerce_) the string format into a
 [ISO8601](https://en.wikipedia.org/wiki/ISO_8601) format and `DateTime` knows
 how to deal with it.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -448,7 +473,7 @@ The task Write more about the PEDAC process of problem solving. was created on 4
 The `False` is not friendly so lets improve that. We can add another custom
 property which contains logic for it's `get` implementation:
 
-```C#
+```csharp
 public string CompletedStatus
 {
     get
@@ -461,7 +486,7 @@ public string CompletedStatus
 
 And we can use it as such:
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -544,7 +569,7 @@ follows.
 Applying `JsonPropertyName` to all of our `Item` properties allows us to use
 `C#` style properties.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -610,7 +635,7 @@ Wow, we have a great little app that can fetch todo items from our API. It
 deserves a little bit of extra styling. First let's put the output in a nice
 table format. To do this we will add an external library to our app:
 
-```sh
+```shell
 dotnet add package ConsoleTables
 ```
 
@@ -619,7 +644,7 @@ The
 shows us how to create a table with headers, add rows, and output the table
 itself.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -713,7 +738,7 @@ can access the 0th (first) element: `var token=args[0]` and then use string
 interpolation to generate our URL:
 `var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";`
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -782,7 +807,7 @@ namespace OneListClient
 }
 ```
 
-```sh
+```shell
 dotnet run sdg-handbook
 ```
 
@@ -800,7 +825,7 @@ dotnet run sdg-handbook
 
 However, what would happen if the user forgot to supply a name?
 
-```sh
+```shell
 dotnet run
 ```
 
@@ -811,7 +836,7 @@ Unhandled exception. System.IndexOutOfRangeException: Index was outside the boun
 Uh oh, let's handle that in the code by prompting the user if there is nothing
 in the `args` array.
 
-```C#
+```csharp
 using System;
 using System.Collections.Generic;
 using System.Net.Http;

@@ -10,6 +10,6 @@ when we start to learn to use, and to create, APIs.
 From Terminal, run the following command (the current directory does not
 matter):
 
-```sh
+```shell
 sudo apt install httpie
 ```

@@ -12,7 +12,7 @@ literals or string objects.
 
 You can create simple strings using either single or double quotes:
 
-```js
+```javascript
 "foo";
 "bar";
 ```

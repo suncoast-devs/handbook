@@ -23,7 +23,7 @@ title: How does the web work
     - This way new DNS entries can be updated
   - How to use `dig`, a tool to look up DNS
 
-    ```sh
+    ```shell
     dig gstark.com
     dig suncoast.io
     dig amazon.com

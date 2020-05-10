@@ -13,7 +13,7 @@ configure our console with some nice features.
 
 - Step 1: Install `awesome_print`
 
-```sh
+```shell
 gem install awesome_print
 ```
 
@@ -21,7 +21,7 @@ gem install awesome_print
 
 If not `code`, use your favorite editor
 
-```sh
+```shell
 code ~/.irbrc
 ```
 
