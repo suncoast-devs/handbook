@@ -109,7 +109,7 @@ exports.onCreateNode = (
         const type = (Object.entries({
           reading: /^\/[\w-]+\/reading\/[\w-]+$/,
           lecture: /^\/[\w-]+\/lecture\/[\w-]+$/,
-          index: /^\/[\w-]+$/,
+          lesson: /^\/[\w-]+$/,
         }).find(([k, v]) => v.test(subPath)) || [])[0]
         createNodeField({ name: 'type', node, value: type })
       }

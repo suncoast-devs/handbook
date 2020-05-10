@@ -1,8 +1,8 @@
-import AdvancedTopic from '@handbook/AdvancedTopic'
-
+---
+title: Arrays
 ---
 
-## title: Arrays
+import AdvancedTopic from '@handbook/AdvancedTopic'
 
 An array is an ordered set of values that you refer to with a name and an index.
 For example, you could have an array called `employees` that contains employees'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import { useUIContext } from '../../../context/UIContext'
 
 export function ModuleItem({ children, module }) {
@@ -10,7 +10,6 @@ export function ModuleItem({ children, module }) {
       onClick={() => navigateToModule(module)}
       role="button"
       onKeyDown={({ key }) => {
-        console.log({ key })
         if (key === 'Enter' || key === ' ') {
           navigateToModule(module)
         }
