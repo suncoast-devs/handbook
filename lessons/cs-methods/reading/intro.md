@@ -1,4 +1,6 @@
-# Methods
+---
+title: Creating Methods in C#
+---
 
 When adding functionality it is easy to continue to add more lines to existing
 code. While the computer has no issues with this it does pose a few issues for

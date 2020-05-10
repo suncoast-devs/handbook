@@ -1,3 +1,4 @@
 ---
-title: Methods
+title: Creating Methods in C#
 ---
+
