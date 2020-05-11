@@ -12,6 +12,7 @@ modules:
     lessons:
       - cs-environment-setup
       - cs-how-to-create-and-run-programs
+      - misc-turning-in-assignments
       - cs-variables
       - cs-commenting-code
       - cs-interacting-with-the-console
