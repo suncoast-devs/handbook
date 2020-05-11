@@ -16,6 +16,11 @@ project exists.
 
 ### Step 0: Create a git repository.
 
+> **REMINDER** It is **critical** to make sure you are **in** the directory
+> where your project code is before starting these steps. Use the `pwd` or `ls`
+> commands to ensure you are in the directory where your code is. If you are
+> not, then use `cd` to go to that directory.
+
 You may have done this when you created your project. The tools we provide offer
 the option to create a `git` and `github` repository for you. If you chose that
 option you may skip this step.
@@ -27,8 +32,8 @@ should follow these steps.
 
 How?
 
-0. Tell `git` to manage this directory. `git init`
-1. Tell `hub` to create a github repository for this directory. `hub create`
+0. Tell `git` to manage this directory: `git init`
+1. Tell `hub` to create a github repository for this directory: `hub create`
 
 This will create a git repository, both locally and on Github.
 
