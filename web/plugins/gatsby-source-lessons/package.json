@@ -1,7 +1,0 @@
-{
-  "name": "gatsby-source-lessons",
-  "private": true,
-  "dependencies": {
-    "globby": "^11.0.0"
-  }
-}
