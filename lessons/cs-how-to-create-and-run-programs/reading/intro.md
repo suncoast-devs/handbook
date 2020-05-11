@@ -34,23 +34,56 @@ Now that we have created a directory to contain our application we can use the
 cd sdg
 
 # Create a new .NET console project named `our-dotnet-app`
-dotnet new console -o our-dotnet-app
+dotnet new sdg-console -o our-dotnet-app
 ```
 
-You should see something similar to, but not exactly:
+This command has a few parts.
 
-```shell-session
-The template "Console Application" was created successfully.
+```shell
+# dotnet command
+# |
+# |
+# |      Option to say we are making a new project
+# |      |
+# |      |
+# |      |   Name of the template to use for this project.
+# |      |   We will be using several different templates along the way
+# |      |   |
+# |      |   |           Option to tell dotnet what directory to create to store our project
+# |      |   |           |
+# |      |   |           |
+# |      |   |           |  Name of the directory to put our project
+# |      |   |           |  |
+# |      |   |           |  |
+# v      v   v           v  v
+  dotnet new sdg-console -o our-dotnet-app
+```
 
+When you run this command you will be prompted with a question:
+
+```shell
 Processing post-creation actions...
-Running 'dotnet restore' on /Users/sdg-student/sdg/our-dotnet-app/our-dotnet-app.csproj...
-  Restore completed in 190.3 ms for /Users/sdg-student/sdg/our-dotnet-app/our-dotnet-app.csproj.
-
-Restore succeeded.
+Template is configured to run the following action:
+Description: Creates a github repository for you
+Manual instructions:
+Actual command: bash -c "git init; hub create; git add .; git commit -m 'Initial Commit'; git push -u origin master"
+Do you want to run this action (Y|N)?
 ```
 
-And then we will make that directory our current directory by using the `cd`
-command:
+This question is asking if you want to create a Github code repository for this
+application. If you are creating a project for an assignment or you wish to keep
+a record of this code, answer with a `Y` and you will see:
+
+```shell
+Running command 'bash -c "git init; hub create; git add .; git commit -m 'Initial Commit'; git push -u origin master"'...
+Command succeeded.
+```
+
+Our project is created along with a Github repository if we wish.
+
+The project is in a directory with the same name we provided after the `-o` in
+our original command. Now we will make that directory our current directory by
+using the `cd` command:
 
 ```shell
 cd our-dotnet-app
