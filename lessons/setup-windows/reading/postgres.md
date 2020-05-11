@@ -16,17 +16,21 @@ Close that PowerShell
 
 ---
 
-Start a PowerShell as Administrator
+Start a **PowerShell as Administrator**.
+
+- This next command tells PostgreSQL to start on boot
 
 ```shell
 pg_ctl register -N PostgreSQL
 ```
 
-Close that PowerShell
+- This next command starts PostgreSQL right away.
 
----
+```shell
+net start PostgreSQL
+```
 
-Reboot your computer
+**CLOSE** the administrator PowerShell.
 
 ---
 
