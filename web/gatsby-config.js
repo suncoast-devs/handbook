@@ -1,5 +1,5 @@
 const queries = require('./src/utils/algolia')
-require("dotenv").config()
+require('dotenv').config()
 
 module.exports = {
   plugins: [
@@ -37,18 +37,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-lessons`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/../lessons`,
+        name: `assignments`,
+        path: `${__dirname}/../assignments`,
       },
     },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `assignments`,
-    //     path: `${__dirname}/../assignments`,
-    //   },
-    // },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {

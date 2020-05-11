@@ -19,11 +19,7 @@ const Hits = connectHits(({ hits, query }) => {
           <h3 className="font-bold">Search Results</h3>
           <ClearRefinements clearsQuery />
         </header>
-        <main
-          className="bg-gray-50 rounded-b-md max-h-96 overflow-y-scroll"
-          role="grid"
-          tabIndex={-1}
-        >
+        <main className="bg-gray-50 rounded-b-md max-h-96 overflow-y-scroll">
           {hits.length === 0 && (
             <div className="p-2 text-orange-700 font-semibold">
               Nothing found for &ldquo;{query}.&rdquo;
@@ -32,14 +28,8 @@ const Hits = connectHits(({ hits, query }) => {
           {hits.map((hit) => (
             <article
               key={hit.objectID}
-              tabIndex={0}
-              role="gridcell"
+              role="presentation"
               onClick={() => navigateTo(hit.path)}
-              onKeyDown={({ key }) => {
-                if (key === 'Enter' || key === ' ') {
-                  navigateTo(hit.path)
-                }
-              }}
               className="border-t border-gray-200 p-2 hover:bg-white focus:bg-white focus:outline-none focus:placeholder-gray-400 hover:shadow-outline-blue focus:shadow-outline-blue cursor-pointer"
             >
               <h4 class="font-bold text-gray-700">
