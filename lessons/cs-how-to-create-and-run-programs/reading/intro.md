@@ -29,11 +29,15 @@ folder or your `Documents` folder.
 Now that we have created a directory to contain our application we can use the
 `dotnet` app to create the project:
 
-```shell
+```shell-session
+# You will use the directory you choose to organize your SDG code.
+cd sdg
+
+# Create a new .NET console project named `our-dotnet-app`
 dotnet new console -o our-dotnet-app
 ```
 
-You should see something similar to:
+You should see something similar to, but not exactly:
 
 ```shell-session
 The template "Console Application" was created successfully.
@@ -62,6 +66,10 @@ we can get started writing code.
 
 Let's see what startup files appear in our folder:
 
+> NOTE: You can do this one of two ways. **1:** You can start your editor with:
+> `code .` **2:** You can use the command line tool `ls` to list the contents of
+> the folder.
+
 ```
 .
 ├── Program.cs
@@ -70,10 +78,14 @@ Let's see what startup files appear in our folder:
 
 We may also see an `obj` folder but we will ignore that for a moment.
 
+#### Project File (.csproj)
+
 There are two files in our folder. The first, `our-dotnet-app.csproj` is a file
 that `dotnet` wrote for us. It contains details about the project itself such as
 which version of `dotnet` our program needs. For the most part, we are _not
 going to modify this file_
+
+#### Code (Program.cs)
 
 The second file, `Program.cs` is where we will start writing our `C#` code. The
 `.cs` file extension indicates to our code editor as well as the `dotnet` tool
@@ -88,7 +100,9 @@ common
 To get `dotnet` to run our program and see if the phrase appears on our screen
 we will use the `dotnet run` command.
 
-`dotnet run`
+```shell-session
+dotnet run
+```
 
 We should see the following output on the screen if our program ran correctly:
 
@@ -108,9 +122,9 @@ If you find yourself in a cycle of:
 - See output
 - Repeat
 
-you can use an alternative to `dotnet run` called `dotnet watch run`. By using
+you can use an alternative to `dotnet run` named `dotnet watch run`. By using
 this version of the command we are telling `dotnet` to watch our code for any
-changes and as soon as it sees any, to run it right away.
+changes and to re-run our code as soon as it sees any.
 
 With this option our terminal/Powershell will look like:
 
@@ -129,3 +143,7 @@ Now our working cycle can be:
 - Repeat
 
 This leaves us in our code editor more often and allows us to focus.
+
+# Congratulations
+
+We are all setup to begin writing programs in `C#` and `.NET`!
