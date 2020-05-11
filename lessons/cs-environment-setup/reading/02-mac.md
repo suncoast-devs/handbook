@@ -4,6 +4,7 @@ title: Mac setup
 
 - [Slack](/lessons/setup-mac/reading/slack)
 - [Github](/lessons/setup-mac/reading/github)
+- [Code Folder](/lessons/setup-mac/reading/code-folder)
 - [Homebrew](/lessons/setup-mac/reading/brew)
 - [Visual Studio Code](/lessons/setup-mac/reading/vs-code)
 - [Terminal](/lessons/setup-mac/reading/terminal)
