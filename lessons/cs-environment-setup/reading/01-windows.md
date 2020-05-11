@@ -3,6 +3,7 @@ title: Windows Setup
 ---
 
 - [Slack](/lessons/setup-windows/reading/slack)
+- [Github](/lessons/setup-windows/reading/github)
 - [PowerShell](/lessons/setup-windows/reading/powershell)
 - [Scoop](/lessons/setup-windows/reading/scoop)
 - [Visual Studio Code](/lessons/setup-windows/reading/vs-code)

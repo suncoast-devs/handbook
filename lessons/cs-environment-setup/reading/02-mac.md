@@ -3,6 +3,7 @@ title: Mac setup
 ---
 
 - [Slack](/lessons/setup-mac/reading/slack)
+- [Github](/lessons/setup-mac/reading/github)
 - [Homebrew](/lessons/setup-mac/reading/brew)
 - [Visual Studio Code](/lessons/setup-mac/reading/vs-code)
 - [Terminal](/lessons/setup-mac/reading/terminal)

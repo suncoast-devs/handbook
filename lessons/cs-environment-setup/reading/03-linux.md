@@ -10,6 +10,7 @@ sudo apt install snapd
 ```
 
 - [Slack](/lessons/setup-linux/reading/slack)
+- [Github](/lessons/setup-linux/reading/github)
 - [Visual Studio Code](/lessons/setup-linux/reading/vs-code)
 - [git](/lessons/setup-linux/reading/git)
 - [.NET](/lessons/setup-linux/reading/dotnet)
