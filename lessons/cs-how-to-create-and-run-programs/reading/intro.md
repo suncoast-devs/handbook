@@ -7,6 +7,11 @@ to contain our code. This project will tell our computer how to organize our
 code, how to make the code ready to run (known as `compiling`) and finally how
 to run our code.
 
+## Before getting started
+
+Ensure you have [setup your environment](/lessons/cs-environment-setup)
+including a step on selecting and creating a location to keep your projects.
+
 ## The `dotnet` command
 
 We will be using the `dotnet` command frequently. This command has many ways to
@@ -22,42 +27,41 @@ Before we can create a new project we must first change the working directory of
 our shell into the directory where we'll keep our code. We suggest you use a
 folder named `sdg` or `code` or something else that will remind you this is
 where your projects are. You'll also want to keep this directory in your home
-folder or your `Documents` folder.
+folder, your `Desktop`, or your `Documents` folder. You will find instructions
+in [the setup lesson](/lessons/cs-environment-setup) on how to create these.
 
 ### Running `dotnet new console` to make a new console application
 
 Now that we have created a directory to contain our application we can use the
 `dotnet` app to create the project:
 
-```shell-session
-# You will use the directory you choose to organize your SDG code.
-cd sdg
+- If your folder is named `sdg` and you keep it in your _home directory_
 
-# Create a new .NET console project named `our-dotnet-app`
+```shell-session
+cd ~/sdg
+```
+
+- **OR** if your folder is named `sdg` and you keep it in your _Documents_
+  folder.
+
+```shell-session
+cd ~/Documents/sdg
+```
+
+- **OR** if your folder is named `sdg` and you keep it in your _Desktop_ folder.
+
+```shell-session
+cd ~/Desktop/sdg
+```
+
+Now that we are in the correct location we can run this command to generate our
+first new project.
+
+```shell-session
 dotnet new sdg-console -o our-dotnet-app
 ```
 
-This command has a few parts.
-
-```shell
-# dotnet command
-# |
-# |
-# |      Option to say we are making a new project
-# |      |
-# |      |
-# |      |   Name of the template to use for this project.
-# |      |   We will be using several different templates along the way
-# |      |   |
-# |      |   |           Option to tell dotnet what directory to create to store our project
-# |      |   |           |
-# |      |   |           |
-# |      |   |           |  Name of the directory to put our project
-# |      |   |           |  |
-# |      |   |           |  |
-# v      v   v           v  v
-  dotnet new sdg-console -o our-dotnet-app
-```
+## dotnet new may prompt you during setup
 
 When you run this command you will be prompted with a question:
 
@@ -77,6 +81,29 @@ a record of this code, answer with a `Y` and you will see:
 ```shell
 Running command 'bash -c "git init; hub create; git add .; git commit -m 'Initial Commit'; git push -u origin master"'...
 Command succeeded.
+```
+
+This command has a few parts. The following is an example breakdown of the
+command.
+
+```shell
+# dotnet command
+# |
+# |
+# |      Option to say we are making a new project
+# |      |
+# |      |
+# |      |   Name of the template to use for this project.
+# |      |   We will be using several different templates along the way
+# |      |   |
+# |      |   |           Option to tell dotnet what directory to create to store our project
+# |      |   |           |
+# |      |   |           |
+# |      |   |           |  Name of the directory to put our project
+# |      |   |           |  |
+# |      |   |           |  |
+# v      v   v           v  v
+  dotnet new sdg-console -o our-dotnet-app
 ```
 
 Our project is created along with a Github repository if we wish.
