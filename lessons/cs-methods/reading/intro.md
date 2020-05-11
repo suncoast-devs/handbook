@@ -103,20 +103,22 @@ Thinking back to our earlier PB&J example we are likely to see at least
 
 The components of a method are:
 
-- An optional access level, such as public or private. The default is private.
-- Optional modifiers such as abstract or sealed.
-- The **output** known as the `return` type. The `void` type is used if the
-  method doesn't return anything.
 - The method name.
 - The **input** to the method, known as `parameters`. These are the **inputs**
   to our method, information the method needs from the code _using_ it. These
   are surrounded by parentheses and are separated by commas. Empty parentheses
   indicate that the method has no parameters.
 - The **work**, or `body` of the method composed of lines of code.
+- The **output** known as the `return` type. The `void` type is used if the
+  method doesn't return anything.
 
-A number of these components we won't be concerned about until we introduce the
-concept of a `class` in a separate lesson. For now we are concerned with these
-elements:
+In the future, when we discuss `classes` we will also learn that methods also
+define:
+
+- An optional access level, such as public or private. The default is private.
+- Optional modifiers such as abstract or sealed.
+
+For now we are concerned with these elements:
 
 - The return type, or `void` if the method has none.
 - The method name.
@@ -337,7 +339,7 @@ In fact, the code looks like this:
 ```csharp
 static string PromptForString(string prompt)
 {
-  // Use the argument, whatever the user sent us.
+  // Use the argument, whatever the caller sent us.
   Console.Write(prompt);
 
   // Get some user input
@@ -346,7 +348,7 @@ static string PromptForString(string prompt)
   // RETURN that value as the output of this method.
   // The value in `userInput` will go wherever the
   // *CALLER* of the method has specified.
-  return userInput
+  return userInput;
 }
 ```
 
@@ -424,7 +426,6 @@ namespace EmployeeDatabase
 {
   class Program
   {
-
     static void DisplayGreeting()
     {
       Console.WriteLine("----------------------------------------");
