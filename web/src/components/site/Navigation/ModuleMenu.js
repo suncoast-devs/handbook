@@ -10,7 +10,7 @@ export function ModuleMenu() {
   const {
     allLesson: { nodes: lessons },
   } = useStaticQuery(graphql`
-    query LessonQuery {
+    query LessonMenuQuery {
       allLesson {
         nodes {
           slug

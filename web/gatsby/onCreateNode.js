@@ -27,5 +27,17 @@ module.exports = ({ node, actions, getNode }) => {
         createNodeField({ name: 'type', node, value: type })
       }
     }
+
+    if (/\/assignments\//.test(node.fileAbsolutePath)) {
+      {
+        // Add `slug` and `path` fields to lesson MDX files for URL generation
+        const subPath = createFilePath({ node, getNode, trailingSlash: false })
+        createNodeField({ name: 'path', node, value: `/assignments${subPath}` })
+
+        const slug = (subPath.match(/^\/([\w-]+)/) || [, 1])[1]
+        createNodeField({ name: 'slug', node, value: slug })
+        createNodeField({ name: 'type', node, value: 'assignment' })
+      }
+    }
   }
 }

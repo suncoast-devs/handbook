@@ -1,15 +1,26 @@
 const path = require('path')
+const LessonTemplate = path.resolve(
+  `./src/components/template/LessonTemplate.js`
+)
+const AssignmentTemplate = path.resolve(
+  `./src/components/template/AssignmentTemplate.js`
+)
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
   const result = await graphql(`
     query {
-      allMdx(filter: { fileAbsolutePath: { regex: "/\\\\/lessons\\\\//" } }) {
+      allMdx(
+        filter: {
+          fileAbsolutePath: { regex: "/\\\\/lessons|assignments\\\\//" }
+        }
+      ) {
         nodes {
           id
           fields {
             path
             slug
+            type
           }
         }
       }
@@ -25,7 +36,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
   nodes.forEach((node) => {
     createPage({
       path: node.fields.path,
-      component: path.resolve(`./src/components/template/LessonTemplate.js`),
+      component:
+        {
+          lesson: LessonTemplate,
+          assignment: AssignmentTemplate,
+        }[node.fields.type] || LessonTemplate,
       context: { id: node.id, slug: node.fields.slug },
     })
   })
