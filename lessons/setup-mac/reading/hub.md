@@ -19,17 +19,12 @@ brew install hub
 Start a new Powershell and enter the command:
 
 ```shell
-hub api
+hub api | grep -q "current_user_url" && echo "Connected" || echo "Not Connected"
 ```
 
 This will ask for your `github.com username`, supply your username or email
 address. Enter your `github.com` password. If you have two-factor auth enabled,
 you'll have to enter an authorization code.
 
-If you see output that looks similar to:
-
-```shell
-{"current_user_url":"https://api.github.com/user","current_user_authorizations_html_url":
-```
-
-Then you have setup `hub` correctly
+If you see `Connected` then you have logged into your github account. Otherwise
+you will see "Not Connected"
