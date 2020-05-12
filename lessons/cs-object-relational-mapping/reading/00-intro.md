@@ -1056,10 +1056,10 @@ namespace SuncoastMovies
             var genre = Console.ReadLine();
 
             Console.Write("In what year was the movie released: ");
-            var yearReleased = Int32.Parse(Console.ReadLine());
+            var yearReleased = int.Parse(Console.ReadLine());
 
             Console.Write("What is the ID of the movie rating: ");
-            var ratingID = Int32.Parse(Console.ReadLine());
+            var ratingID = int.Parse(Console.ReadLine());
 
             var newMovie = new Movie
             {

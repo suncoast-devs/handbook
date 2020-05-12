@@ -69,10 +69,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      var department = Int32.Parse(Console.ReadLine());
+      var department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      var salary = Int32.Parse(Console.ReadLine());
+      var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
       Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
@@ -205,10 +205,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      int department = Int32.Parse(Console.ReadLine());
+      int department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      int salary = Int32.Parse(Console.ReadLine());
+      int salary = int.Parse(Console.ReadLine());
 
       Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
     }
@@ -395,10 +395,10 @@ namespace EmployeeDatabase
       var name = PromptForString("What is your name? ");
 
       Console.Write("What is your department number? ");
-      int department = Int32.Parse(Console.ReadLine());
+      int department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      int salary = Int32.Parse(Console.ReadLine());
+      int salary = int.Parse(Console.ReadLine());
 
       Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
     }
@@ -446,7 +446,7 @@ namespace EmployeeDatabase
     static int PromptForInteger(string prompt)
     {
       Console.Write(prompt);
-      var userInput = Int32.Parse(Console.ReadLine());
+      var userInput = int.Parse(Console.ReadLine());
 
       return userInput;
     }
@@ -491,7 +491,7 @@ agree that it isn't a very nice
 By having _one_ method where this is, we can improve the experience for both the
 department _and_ salary prompts by making a single change.
 
-In `C#` the `Int32.Parse` method will cause this exception if the supplied value
+In `C#` the `int.Parse` method will cause this exception if the supplied value
 cannot be converted. There is another method named `Int32.TryParse` we can use.
 
 This method behaves slightly different than `Int.Parse`. It _returns_ a boolean
@@ -500,7 +500,7 @@ assigning as an _argument_. It looks like this:
 
 ```csharp
 // This gives an exception if the user types in something *other* than a string
-var userInput = Int32.Parse(Console.ReadLine());
+var userInput = int.Parse(Console.ReadLine());
 
 int userInput;
 var isThisGoodInput = Int32.TryParse(Console.ReadLine(), out userInput);

@@ -45,7 +45,7 @@ All your code should place inside the `static void Main(string args[])`
 
   - Converting String Input Into Numbers
 
-    - Convert each `string` above to a `double` using [Double.parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.parse?view=netcore-3.1). Save the first value in a variable named `firstOperand` and the second value in a variable named `secondOperand`.
+    - Convert each `string` above to a `double` using [double.Parse](https://docs.microsoft.com/en-us/dotnet/api/system.double.Parse?view=netcore-3.1). Save the first value in a variable named `firstOperand` and the second value in a variable named `secondOperand`.
 
   - Doing Math
 
