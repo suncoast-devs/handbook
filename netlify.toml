@@ -3,3 +3,6 @@
   command = "yarn build"
   publish = "public/"
   ignore = "git diff --quiet HEAD^ HEAD -- .. ':!meta'"
+
+[[plugins]]
+  package = "netlify-plugin-gatsby-cache"
