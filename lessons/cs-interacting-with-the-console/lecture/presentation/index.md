@@ -1,15 +1,14 @@
 theme: Next, 1
 
+<!-- prettier-ignore-start -->
+
 # Interacting with the console
 
-- Computers, and thus software, are good at accepting input, processing it, and
-  producing new information.
+- Computers, and thus software, are good at accepting input, processing it, and producing new information.
 - The applications we write in this program will certainly fit that pattern.
-- With our first programs we'd like to interact with the user directly in our
-  shell.
+- With our first programs we'd like to interact with the user directly in our shell.
 
-^ In other lessons we will learn to interact with the user via an API and via a
-web page.
+^ In other lessons we will learn to interact with the user via an API and via a web page.
 
 ---
 
@@ -28,9 +27,7 @@ output information. Like asking for a name and then greeting the user.
 
 # [fit] Sending information to the console
 
-- Interactions with the console use the `Console` class. In a different lesson
-  we will cover classes. <sub>For now know that a class can be a collection of
-  code.</sub>
+- Interactions with the console use the `Console` class. In a different lesson we will cover classes. <sub>For now know that a class can be a collection of code.</sub>
 - We will use a few different statements:
   - **`Console.WriteLine()`**
   - **`Console.Write()`**
@@ -47,8 +44,7 @@ Console.WriteLine("Welcome to my program");
 <br />
 <br />
 
-> This will output one line to the console and move the cursor to the next line.
-> Further output will be on it's own line.
+> This will output one line to the console and move the cursor to the next line. Further output will be on it's own line.
 
 ---
 
@@ -145,8 +141,7 @@ Console.WriteLine(greeting);
 
 ## [fit] Avoid writing the variable
 
-Since we create the **`greeting`** variable just to use it once we can get rid
-of it.
+Since we create the **`greeting`** variable just to use it once we can get rid of it.
 
 <br />
 <br />
@@ -159,8 +154,7 @@ Console.WriteLine("It is a pleasure to meet you, " + name);
 
 ## [fit] Avoid the `+` string addition
 
-This pattern of using a variable along with a string is so common `C#` gives us
-a way to do this right inside the string!
+This pattern of using a variable along with a string is so common `C#` gives us a way to do this right inside the string!
 
 ### String interpolation
 
@@ -174,8 +168,7 @@ If we our first _double quote_ with a **`$`** and the string gains magic powers.
 $"It is a pleasure to meet you, {name}"
 ```
 
-Inside a string with the **`$`** powers we can place `{}` inside the string.
-Anything inside the string is considered code.
+Inside a string with the **`$`** powers we can place `{}` inside the string. Anything inside the string is considered code.
 
 Whatever that code _evaluates_ to is placed at that spot in the string!
 
@@ -218,3 +211,5 @@ namespace OurDotNetApp
   }
 }
 ```
+
+<!-- prettier-ignore-end -->

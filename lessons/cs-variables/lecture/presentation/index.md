@@ -1,5 +1,7 @@
 theme: Next, 1
 
+<!-- prettier-ignore-start -->
+
 # [fit] Computers
 
 ## ... are machines that accept input, manipulate data, and produce output.
@@ -49,8 +51,7 @@ myVariable  +------------------------------------+                              
 - The kinds (_types_) of information we can store in variables
 - If the value of a variable, once assigned, can be changed
 - The syntax for declaring a variable
-- If the kind (_type_) of information stored in a variable can change once
-  assigned
+- If the kind (_type_) of information stored in a variable can change once assigned
 
 ---
 
@@ -58,18 +59,15 @@ myVariable  +------------------------------------+                              
 
 - Must _declare_ our variables before we can use them.
 - Must tell `C#` what kind of information the variable will store.
-- From our example _*`myVariable`*_ stores a series of letters and spaces and
-  _*`myOtherVariable`*_ stores a number.
+- From our example _*`myVariable`*_ stores a series of letters and spaces and _*`myOtherVariable`*_ stores a number.
 - These represent the variables _*`type`*_.
 
 ---
 
 # Our first `C#` types
 
-- A sequence of letters, numbers, digits, emoji <sub>🚀</sub>, spaces, etc. is
-  called a _*`string`*_
-- A whole number (without any decimal places) is called an `int` (short for
-  _*integer*_)
+- A sequence of letters, numbers, digits, emoji <sub>🚀</sub>, spaces, etc. is called a _*`string`*_
+- A whole number (without any decimal places) is called an **`int`** (short for _*integer*_)
 
 ---
 
@@ -187,8 +185,7 @@ be cases where we cannot.
 
 # Non-numeric primitive types
 
-- **char** : represents a unicode character, a single letter, or an emoji. This
-  is what `strings` are made of.
+- **char** : represents a unicode character, a single letter, or an emoji. This is what `strings` are made of.
 - **bool** : `true` or `false`
 - **byte** : represents a raw chunk of data (values from `0` to `255`)
 
@@ -319,8 +316,7 @@ var howLong = sentence.Length;
 
 <br />
 
-> The `howLong` variable will know it is an _*`int`*_, and it's contents will be
-> _*`44`*_
+> The `howLong` variable will know it is an _*`int`*_, and it's contents will be _*`44`*_
 
 ---
 
@@ -367,8 +363,8 @@ var thirdLetter = sentence[2];
 - Remember that code is **written once** but **read many** times.
 - You may be the one reading it later.
 
-> Always code as if the developer who ends up maintaining your code knows where
-> you live. Code for readability. -- A wise developer
+> Always code as if the developer who ends up maintaining your code knows where you live. Code for readability.
+-- A wise developer
 
 ---
 
@@ -398,3 +394,5 @@ var response = axios.get();
 descriptive variable names and avoid one letter variables and abbreviations.
 
 ---
+
+<!-- prettier-ignore-end -->

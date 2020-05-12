@@ -4,8 +4,7 @@ theme: Next, 1
 
 # Documenting what we do
 
-Hopefully our code is understandable only from reading what is there. We often, however, need to describe the process our code is following or require
-additional details about how our code works.
+Hopefully our code is understandable only from reading what is there. We often, however, need to describe the process our code is following or require additional details about how our code works.
 
 Just as with using good variable names, clarity of code comments help us. Remember that code is **written once** but **read many times**.
 
