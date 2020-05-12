@@ -110,7 +110,7 @@ namespace NumberTracker
         else
         {
           // Parse the number and add it to the list of numbers
-          var number = Int32.Parse(input);
+          var number = int.Parse(input);
           numbers.Add(number);
         }
       }
@@ -291,7 +291,7 @@ namespace NumberTracker
         else
         {
           // Parse the number and add it to the list of numbers
-          var number = Int32.Parse(input);
+          var number = int.Parse(input);
           numbers.Add(number);
         }
       }
@@ -408,7 +408,7 @@ namespace NumberTracker
         else
         {
           // Parse the number and add it to the list of numbers
-          var number = Int32.Parse(input);
+          var number = int.Parse(input);
           numbers.Add(number);
         }
       }

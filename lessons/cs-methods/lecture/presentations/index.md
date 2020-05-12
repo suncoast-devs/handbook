@@ -91,10 +91,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      var department = Int32.Parse(Console.ReadLine());
+      var department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      var salary = Int32.Parse(Console.ReadLine());
+      var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
       Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
@@ -132,10 +132,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      var department = Int32.Parse(Console.ReadLine());
+      var department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      var salary = Int32.Parse(Console.ReadLine());
+      var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
       Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
@@ -175,10 +175,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      var department = Int32.Parse(Console.ReadLine());
+      var department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      var salary = Int32.Parse(Console.ReadLine());
+      var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
       Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
@@ -217,10 +217,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      var department = Int32.Parse(Console.ReadLine());
+      var department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      var salary = Int32.Parse(Console.ReadLine());
+      var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
       Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
@@ -368,10 +368,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      int department = Int32.Parse(Console.ReadLine());
+      int department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      int salary = Int32.Parse(Console.ReadLine());
+      int salary = int.Parse(Console.ReadLine());
 
       Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
     }
@@ -414,10 +414,10 @@ namespace EmployeeDatabase
       var name = Console.ReadLine();
 
       Console.Write("What is your department number? ");
-      int department = Int32.Parse(Console.ReadLine());
+      int department = int.Parse(Console.ReadLine());
 
       Console.Write("What is your yearly salary (in dollars)? ");
-      int salary = Int32.Parse(Console.ReadLine());
+      int salary = int.Parse(Console.ReadLine());
 
       Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
     }
@@ -636,10 +636,10 @@ static void Main(string[] args)
   var name = PromptForString("What is your name? ");
 
   Console.Write("What is your department number? ");
-  int department = Int32.Parse(Console.ReadLine());
+  int department = int.Parse(Console.ReadLine());
 
   Console.Write("What is your yearly salary (in dollars)? ");
-  int salary = Int32.Parse(Console.ReadLine());
+  int salary = int.Parse(Console.ReadLine());
 
   Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
 }
@@ -686,7 +686,7 @@ static string PromptForString(string prompt)
 static int PromptForInteger(string prompt)
 {
   Console.Write(prompt);
-  var userInput = Int32.Parse(Console.ReadLine());
+  var userInput = int.Parse(Console.ReadLine());
 
   return userInput;
 }
