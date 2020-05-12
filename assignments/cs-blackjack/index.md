@@ -2,6 +2,8 @@
 title: Blackjack
 ---
 
+<!-- prettier-ignore-start -->
+
 In this project, you are creating a playable game of
 [Blackjack](https://en.wikipedia.org/wiki/Blackjack). If you haven't played this
 game ever, or in a while, grab a deck of cards and play a few games.
@@ -59,3 +61,5 @@ General Rules:
 - [ ] Add a betting system that carries between rounds.
 - [ ] Allow the player to "Double down" or "Surrender."
 - [ ] Add more players.
+
+<!-- prettier-ignore-end -->
