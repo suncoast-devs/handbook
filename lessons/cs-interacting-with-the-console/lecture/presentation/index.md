@@ -158,7 +158,7 @@ This pattern of using a variable along with a string is so common `C#` gives us 
 
 ### String interpolation
 
-If we our first _double quote_ with a **`$`** and the string gains magic powers.
+If we put a **`$`** before our first _double quote_ the string gains **magic powers**.
 
 ---
 
