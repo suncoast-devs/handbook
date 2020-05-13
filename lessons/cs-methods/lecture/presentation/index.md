@@ -37,23 +37,16 @@ Theme: Next,1
 ---
 
 ```
------------------              -----------------
-|     Inputs    |              |    Work       |               --------------
------------------              -----------------               |   Output   |
-| Peanut Butter |              | List of steps |               --------------
++---------------+              +---------------+
+|     Inputs    |              |    Work       |               +------------+
++---------------+              +---------------+               |   Output   |
+| Peanut Butter |              | List of steps |               +------------+
 | Jelly         |    =====>    | to make the   |    ========>  | Sandwich   |
 | Bread         |              | sandwich      |               |            |
-| Knife         |              |               |               --------------
------------------              -----------------
+| Knife         |              |               |               +------------+
++---------------+              +---------------+
 
 ```
-
-^ [^1]
-^ [^2]
-
-[^1]: sudo make me a sandwich
-
-[^2]: https://xkcd.com/149/
 
 ---
 
@@ -191,7 +184,7 @@ namespace EmployeeDatabase
 
 [.column]
 
-# [fit] Business Logic
+# Business Logic
 - Computing monthly salary
 
 [.column]
@@ -479,7 +472,6 @@ In doing so we've **reduced the amount of code** the reader has to visually conc
 
 # Our method signature will be:
 
-- 
 ```csharp
 // static method (ignore this for the moment)
 //  |
@@ -719,7 +711,7 @@ Let's try to run this code and type something **other** than a number for a depa
 
 # Different way to parse.
 
-## Int32.TryParse
+## int.TryParse
 
 This method behaves slightly different than `Int.Parse`. It _returns_ a boolean value that indicates if the value was parsed, and we place the variable we are assigning as an _argument_. It looks like this:
 
@@ -727,7 +719,7 @@ This method behaves slightly different than `Int.Parse`. It _returns_ a boolean 
 
 ```csharp
 int userInput;
-var isThisGoodInput = Int32.TryParse(Console.ReadLine(), out userInput);
+var isThisGoodInput = int.TryParse(Console.ReadLine(), out userInput);
 ```
 
 <br/>
@@ -744,7 +736,7 @@ static int PromptForInteger(string prompt)
     Console.Write(prompt);
 
     int userInput;
-    var isThisGoodInput = Int32.TryParse(Console.ReadLine(), out userInput);
+    var isThisGoodInput = int.TryParse(Console.ReadLine(), out userInput);
 
     if (isThisGoodInput)
     {
