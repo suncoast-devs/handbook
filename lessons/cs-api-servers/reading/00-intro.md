@@ -2,7 +2,7 @@
 title: Introducing a new dotnet template
 ---
 
-In other lessons we have used `dotnet new console` to create our application
+In other lessons we have used `dotnet new sdg-console` to create our application
 that run in the terminal. Now we will be using a different template, one that
 configures our code to interact with HTTP clients.
 

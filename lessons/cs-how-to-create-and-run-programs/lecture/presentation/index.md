@@ -56,7 +56,7 @@ cd sdg
 <br />
 
 ```shell
-dotnet new console -o our-dotnet-app
+dotnet new sdg-console -o our-dotnet-app
 ```
 
 ---
