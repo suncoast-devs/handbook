@@ -49,25 +49,14 @@ export function CodeBlock({ children, className }) {
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
           <div className="relative">
-            <div
-              className={cx(
-                'absolute flex items-center right-2 top-1 transition ease-in-out duration-150 uppercase font-light font-sans tracking-tigher',
-                copied
-                  ? 'text-green-300 opacity-100'
-                  : 'text-gray-300 hover:opacity-100 opacity-50'
-              )}
-            >
-              {
-                <span
-                  className={cx(
-                    'text-xs mr-2',
-                    copied ? 'opacity-100' : 'opacity-0'
-                  )}
-                >
-                  copied!
-                </span>
-              }
-              <button onClick={() => copyText()}>
+            <div className="absolute left-0 top-2 -ml-3 flex items-center uppercase font-light font-sans tracking-tigher text-gray-300">
+              <button
+                onClick={() => copyText()}
+                className={cx(
+                  'bg-gray-700 px-1 rounded transition ease-in-out duration-150 shadow-md',
+                  copied ? 'text-green-100 bg-green-700' : 'text-gray-300'
+                )}
+              >
                 <i className="fad fa-copy"></i>
               </button>
             </div>
