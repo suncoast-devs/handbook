@@ -3,6 +3,8 @@ import cx from 'classnames'
 import Highlight from 'prism-react-renderer'
 import { default as theme } from 'prism-react-renderer/themes/dracula'
 
+import 'prismjs'
+
 import PrismCore from 'prismjs/components/prism-core'
 
 import 'prismjs/components/prism-clike'

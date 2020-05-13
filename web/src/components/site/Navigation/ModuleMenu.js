@@ -8,13 +8,18 @@ import { LessonItem as Item } from './Item'
 
 export function ModuleMenu() {
   const {
-    allLesson: { nodes: lessons },
+    allMdx: { nodes: lessons },
   } = useStaticQuery(graphql`
     query LessonMenuQuery {
-      allLesson {
+      allMdx(filter: { fields: { type: { eq: "lesson" } } }) {
         nodes {
-          slug
-          title
+          frontmatter {
+            title
+          }
+          fields {
+            slug
+            path
+          }
         }
       }
     }
@@ -32,10 +37,10 @@ export function ModuleMenu() {
         <Heading>Lessons</Heading>
         <div className="pl-3">
           {module.lessons.map((slug) => {
-            const lesson = lessons.find((lesson) => lesson.slug === slug)
+            const lesson = lessons.find((lesson) => lesson.fields.slug === slug)
             return (
-              <Item key={slug} lesson={`/lessons/${slug}`}>
-                {lesson.title}
+              <Item key={slug} lesson={lesson.fields.path}>
+                {lesson.frontmatter.title}
               </Item>
             )
           })}
