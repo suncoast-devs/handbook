@@ -30,7 +30,7 @@ All your code should place inside the `static void Main(string args[])`
 
     - Create a variable (use your best judgment for type) that stores the `numberOfCupsOfCoffee` that you drink every day.
     - Create a variable (use your best judgment for type) called `fullName` and set it equal to your full name.
-    - Create a variable (use your best judgment for type) call `today` and set it equal to today's date.
+    - Create a variable (use your best judgment for type) called `today` and set it equal to today's date.
     - Use `Console.WriteLine` and your variables, `numberOfCupsOfCoffee`, `fullName`, and `today`, to output all three on one line.
 
   - Practice Getting Input From the User
@@ -65,7 +65,7 @@ All your code should place inside the `static void Main(string args[])`
 
 ### Epic Mode
 
-- [ ] Move all of your code to separate file and invoke it from the `Main` method.
+- [ ] Move all of your code to separate method (in the sam) and invoke it from the `Main` method.
 
 ## Additional Resources
 
