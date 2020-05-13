@@ -133,7 +133,7 @@ Start by making a plain console application so we can prompt the user if needed
 as well as output information.
 
 ```shell
-dotnet new console -o SuncoastMovies
+dotnet new sdg-console -o SuncoastMovies
 ```
 
 we will also need to add the Entity Framework library to our project

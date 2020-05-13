@@ -23,7 +23,7 @@ help power the modern internet.
 We will generate a console application with:
 
 ```shell
-dotnet new console --name OneListClient
+dotnet new sdg-console --name OneListClient
 ```
 
 Initially this application contains just the

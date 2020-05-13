@@ -30,7 +30,7 @@ where your projects are. You'll also want to keep this directory in your home
 folder, your `Desktop`, or your `Documents` folder. You will find instructions
 in [the setup lesson](/lessons/cs-environment-setup) on how to create these.
 
-### Running `dotnet new console` to make a new console application
+### Running `dotnet new sdg-console` to make a new console application
 
 Now that we have created a directory to contain our application we can use the
 `dotnet` app to create the project:
@@ -118,7 +118,7 @@ cd our-dotnet-app
 
 ### What files make up our project?
 
-The `dotnet new console` command generates a new project for us from a
+The `dotnet new sdg-console` command generates a new project for us from a
 _template_. In this case we are using the `console` template. Each template we
 use with the `dotnet new` command will generate a different set of startup files
 for us. These files give us a place to start as well as configure our tools so

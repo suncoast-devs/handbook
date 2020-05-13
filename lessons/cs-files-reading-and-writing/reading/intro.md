@@ -64,7 +64,7 @@ and then load it at the start.
 If you want to code-along, use this to create a new project:
 
 ```shell
-dotnet new console -o NumberTracker
+dotnet new sdg-console -o NumberTracker
 ```
 
 _Program.cs_
