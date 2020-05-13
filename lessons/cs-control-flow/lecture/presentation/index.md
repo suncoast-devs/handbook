@@ -4,8 +4,7 @@ theme: Next, 1
 
 # Control Flow
 
-Sequential lines of code are evaluated in a row To make decisions and take
-different paths we need `control flow`
+Sequential lines of code are evaluated in a row To make decisions and take different paths we need `control flow`
 
 ---
 
@@ -38,8 +37,7 @@ else {
 }
 ```
 
-^ The part `someBooleanCondition` can be a `bool`ean variable or a condition
-that evaluates to a boolean value.
+^ The part `someBooleanCondition` can be a `bool`ean variable or a condition that evaluates to a boolean value.
 
 ---
 
@@ -88,8 +86,7 @@ if (score < 20 || score > 90) {
 
 [.column]
 
-Condition that is true if the person is named `Paul` **AND** the score is more
-than `85`:
+Condition that is true if the person is named `Paul` **AND** the score is more than `85`:
 
 ```csharp
 if (name == "Paul" && score > 85) {
@@ -123,8 +120,7 @@ if (name == "Paul" && score > 85) {
 | F   | T   | T      |
 | F   | F   | F      |
 
-^ Don't memorize these, but if you can remember them it will help you write
-better `if` statements
+^ Don't memorize these, but if you can remember them it will help you write better `if` statements
 
 ---
 
