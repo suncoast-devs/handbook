@@ -7,10 +7,6 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md'],
-        // defaultLayouts: {
-        //   posts: require.resolve('./src/components/default-post-layout.js'),
-        //   default: require.resolve('./src/components/default-page-layout.js'),
-        // },
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           {
@@ -22,34 +18,13 @@ module.exports = {
         ],
       },
     },
-    {
+    ...['assignments', 'lessons', 'programs', 'warm-ups'].map((name) => ({
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `programs`,
-        path: `${__dirname}/../programs`,
+        name: name,
+        path: `${__dirname}/../${name}`,
       },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `lessons`,
-        path: `${__dirname}/../lessons`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `assignments`,
-        path: `${__dirname}/../assignments`,
-      },
-    },
-    // {
-    //   resolve: `gatsby-source-filesystem`,
-    //   options: {
-    //     name: `warm-ups`,
-    //     path: `${__dirname}/../warm-ups`,
-    //   },
-    // },
+    })),
     {
       resolve: `gatsby-plugin-algolia`,
       options: {
@@ -74,6 +49,13 @@ module.exports = {
         modules: ['@mdx-deck'],
       },
     },
+    ...['assignments', 'lessons', 'programs', 'warm-ups'].map((name) => ({
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: name,
+        path: `${__dirname}/../${name}`,
+      },
+    })),
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
