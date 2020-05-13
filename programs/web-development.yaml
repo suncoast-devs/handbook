@@ -16,6 +16,7 @@ modules:
       - cs-variables
       - cs-commenting-code
       - cs-interacting-with-the-console
+      - cs-arrays
       - cs-control-flow
       - cs-loops
       - cs-what-is-null
