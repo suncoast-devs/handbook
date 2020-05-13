@@ -195,8 +195,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Make `currentName` equal to whatever is at the index given by `index`. Well
-`index` is `0` so that makes `currentName` equal to `"Mark"`
+Make `currentName` equal to whatever is at the index given by `index`. Well `index` is `0` so that makes `currentName` equal to `"Mark"`
 
 [.code-highlight:3]
 
@@ -226,8 +225,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Call the method `Console.WriteLine` and provide it the value in `currentName`
-which is currently `"Mark"`
+Call the method `Console.WriteLine` and provide it the value in `currentName` which is currently `"Mark"`
 
 [.code-highlight:3]
 
@@ -257,8 +255,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-End of the loop, so do the afterthought step of `index++`, turning the value of `0`
-to `1`
+End of the loop, so do the afterthought step of `index++`, turning the value of `0` to `1`
 
 [.code-highlight:2]
 
@@ -288,9 +285,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that
-variable. Time to do the comparison. Is `index` (`1`) less than `names.length`
-(`3`). Yes, so do the loop again.
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`1`) less than `names.Length` (`3`). Yes, so do the loop again.
 
 [.code-highlight:2]
 
@@ -319,8 +314,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Make `currentName` equal to whatever is at the index given by `index`. Well
-`index` is `1` so that makes `currentName` equal to `"Paula"`
+Make `currentName` equal to whatever is at the index given by `index`. Well `index` is `1` so that makes `currentName` equal to `"Paula"`
 
 [.code-highlight:3]
 
@@ -412,9 +406,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that
-variable. Time to do the comparison. Is `index` (`2`) less than `names.length`
-(`3`). Yes, so do the loop again.
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`2`) less than `names.Length` (`3`). Yes, so do the loop again.
 
 [.code-highlight:2]
 
@@ -443,8 +435,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Make `currentName` equal to whatever is at the index given by `index`. Well
-`index` is `2` so that makes `currentName` equal to `"Sandy"`
+Make `currentName` equal to whatever is at the index given by `index`. Well `index` is `2` so that makes `currentName` equal to `"Sandy"`
 
 [.code-highlight:3]
 
@@ -474,8 +465,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Call the method `Console.WriteLine` and provide it the value in `currentName`
-which is currently `"Sandy"`
+Call the method `Console.WriteLine` and provide it the value in `currentName` which is currently `"Sandy"`
 
 [.code-highlight:3]
 
@@ -505,8 +495,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-End of the loop, so do the afterthought step of `index++`, turning the value of `2`
-to `3`
+End of the loop, so do the afterthought step of `index++`, turning the value of `2` to `3`
 
 [.code-highlight:2]
 
@@ -536,9 +525,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that
-variable. Time to do the comparison. Is `index` (`3`) less than `names.length`
-(`3`). No! So we leave the loop, moving to the code **AFTER** the loop
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`3`) less than `names.Length` (`3`). No! So we leave the loop, moving to the code **AFTER** the loop
 
 [.code-highlight:2]
 
@@ -567,8 +554,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-We are now out of the loop, and since `index` was defined inside the loop we
-forget about that variable as well.
+We are now out of the loop, and since `index` was defined inside the loop we forget about that variable as well.
 
 ```
 name        =>  "Mark", "Paula", "Sandy"
