@@ -74,9 +74,9 @@ namespace EmployeeDatabase
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
 
@@ -90,7 +90,7 @@ namespace EmployeeDatabase
       var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
-      Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
+      Console.WriteLine($"Hello, {name} you make {salaryPerMonth} a month.");
     }
   }
 }
@@ -115,9 +115,9 @@ namespace EmployeeDatabase
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
 
@@ -131,7 +131,7 @@ namespace EmployeeDatabase
       var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
-      Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
+      Console.WriteLine($"You make {salaryPerMonth} a month.");
     }
   }
 }
@@ -158,9 +158,9 @@ namespace EmployeeDatabase
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
 
@@ -174,7 +174,7 @@ namespace EmployeeDatabase
       var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
-      Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
+      Console.WriteLine($"You make {salaryPerMonth} a month.");
     }
   }
 }
@@ -200,9 +200,9 @@ namespace EmployeeDatabase
   {
     static void Main(string[] args)
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
 
@@ -216,7 +216,7 @@ namespace EmployeeDatabase
       var salary = int.Parse(Console.ReadLine());
 
       var salaryPerMonth = salary / 12;
-      Console.WriteLine($"Hello, {name} you make {salaryPerMonth} dollars per month.");
+      Console.WriteLine($"You make {salaryPerMonth} a month.");
     }
   }
 }
@@ -294,7 +294,7 @@ In this case, no. We **do** output to the console, but we don't send anything ba
 //  |   |                   |
 //  |   |                   |
 //  v   v                   v
-static void displayGreeting()
+static void DisplayGreeting()
 ```
 
 ---
@@ -312,16 +312,16 @@ static void displayGreeting()
 //  |   |                   |
 //  |   |                   |
 //  v   v                   v
-static void displayGreeting()
+static void DisplayGreeting()
 {
     //
     //    Body of the method
     //      |
     //      |
     //      v
-    Console.WriteLine("----------------------------------------");
-    Console.WriteLine("    Welcome to Our Employee Database    ");
-    Console.WriteLine("----------------------------------------");
+    Console.WriteLine("--------------------------------");
+    Console.WriteLine("Welcome to Our Employee Database");
+    Console.WriteLine("--------------------------------");
     Console.WriteLine();
     Console.WriteLine();
 }
@@ -346,9 +346,9 @@ namespace EmployeeDatabase
 
     static void DisplayGreeting()
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
     }
@@ -366,7 +366,7 @@ namespace EmployeeDatabase
       Console.Write("What is your yearly salary (in dollars)? ");
       int salary = int.Parse(Console.ReadLine());
 
-      Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
+      Console.WriteLine($"You make {salary / 12} dollars a month.");
     }
   }
 }
@@ -392,9 +392,9 @@ namespace EmployeeDatabase
 
     static void DisplayGreeting()
     {
-      Console.WriteLine("----------------------------------------");
-      Console.WriteLine("    Welcome to Our Employee Database    ");
-      Console.WriteLine("----------------------------------------");
+      Console.WriteLine("--------------------------------");
+      Console.WriteLine("Welcome to Our Employee Database");
+      Console.WriteLine("--------------------------------");
       Console.WriteLine();
       Console.WriteLine();
     }
@@ -412,7 +412,7 @@ namespace EmployeeDatabase
       Console.Write("What is your yearly salary (in dollars)? ");
       int salary = int.Parse(Console.ReadLine());
 
-      Console.WriteLine($"Hello, {name} you make {salary / 12} dollars per month.");
+      Console.WriteLine($"You make {salary / 12} dollars a month.");
     }
   }
 }
