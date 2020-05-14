@@ -2,9 +2,15 @@ theme: Next, 1
 
 <!-- prettier-ignore-start -->
 
+# [fit] Control Flow
+
+---
+
 # Control Flow
 
-Sequential lines of code are evaluated in a row To make decisions and take different paths we need `control flow`
+Sequential lines of code are evaluated in a row.
+
+To make decisions and take different paths we need `control flow`
 
 ---
 
