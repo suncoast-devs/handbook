@@ -2,6 +2,10 @@ theme: Next, 1
 
 <!-- prettier-ignore-start -->
 
+# [fit] Interacting with the console
+
+---
+
 # Interacting with the console
 
 - Computers, and thus software, are good at accepting input, processing it, and producing new information.
