@@ -149,7 +149,7 @@ have their own, specific, values for each of these attributes.
 +---------------+-----------+       +------------------------------+
 | ATTRIBUTE     |   VALUE   |       | ATTRIBUTE     |   VALUE      |
 +---------------+-----------+       +---------------+--------------+
-| name          | Elon Musk |       | name          | Grace Hooper |
+| name          | Elon Musk |       | name          | Grace Hopper |
 | department    | 42        |       | department    | 100          |
 | salary        | 120000    |       | salary        | 240000       |
 | monthlySalary | 10000     |       | monthlySalary | 20000        |
@@ -205,7 +205,7 @@ We can *instantiate* employees.
 +---------------------------+       +------------------------------+
 |      Employee Object      |       |        Employee Object       |
 +---------------+-----------+       +---------------+--------------+
-| name          | Elon Musk |       | name          | Grace Hooper |
+| name          | Elon Musk |       | name          | Grace Hopper |
 | department    | 42        |       | department    | 100          |
 | salary        | 120000    |       | salary        | 240000       |
 | monthlySalary | 10000     |       | monthlySalary | 20000        |
@@ -239,7 +239,7 @@ secondEmployee.Name = "Grace Hopper";
 +-----------------------------+       +--------------------------------+
 |      firstEmployee          |       |        secondEmployee          |
 +---------------+-------------+       +---------------+----------------+
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 0           |       | Department    | 0              |
 | Salary        | 0           |       | Salary        | 0              |
 | MonthlySalary | 0           |       | MonthlySalary | 0              |
@@ -273,7 +273,7 @@ secondEmployee.MonthlySalary = 20000;
 +-----------------------------+       +--------------------------------+
 |      firstEmployee          |       |        secondEmployee          |
 +---------------+-------------+       +---------------+----------------+
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 42          |       | Department    | 100            |
 | Salary        | 120000      |       | Salary        | 240000         |
 | MonthlySalary | 10000       |       | MonthlySalary | 20000          |
@@ -368,7 +368,7 @@ var secondEmployee = new Employee {
 +-----------------------------+       +--------------------------------+
 |      firstEmployee          |       |        secondEmployee          |
 +---------------+-------------+       +---------------+----------------+
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 42          |       | Department    | 100            |
 | Salary        | 120000      |       | Salary        | 240000         |
 | MonthlySalary | METHOD      |       | MonthlySalary | METHOD         |

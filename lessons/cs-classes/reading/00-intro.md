@@ -134,7 +134,7 @@ have their own, specific, values for each of these attributes.
 ----------------------------|       -------------------------------|
 | ATTRIBUTE     |   VALUE   |       | ATTRIBUTE     |   VALUE      |
 -----------------------------       --------------------------------
-| name          | Elon Musk |       | name          | Grace Hooper |
+| name          | Elon Musk |       | name          | Grace Hopper |
 | department    | 42        |       | department    | 100          |
 | salary        | 120000    |       | salary        | 240000       |
 | monthlySalary | 10000     |       | monthlySalary | 20000        |
@@ -300,14 +300,14 @@ our case, each `Employee` _object_ will have a `Name`, a `Department`, a
 copy of that information. Much like in this diagram from before
 
 ```
------------------------------       --------------------------------
-|      Employee Object        |       |        Employee Object         |
-----------------------------|       -------------------------------|
-| name          | Elon Musk |       | name          | Grace Hooper |
++---------------------------+       +------------------------------+
+|      Employee Object      |       |        Employee Object       |
++---------------+-----------+       +---------------+--------------+
+| name          | Elon Musk |       | name          | Grace Hopper |
 | department    | 42        |       | department    | 100          |
 | salary        | 120000    |       | salary        | 240000       |
 | monthlySalary | 10000     |       | monthlySalary | 20000        |
------------------------------       --------------------------------
++---------------+-----------+       +---------------+--------------+
 ```
 
 If we were going to create these objects we will use the `new` keyword.
@@ -347,14 +347,14 @@ If we were to look at our objects in the computer's memory now they would look
 like this:
 
 ```
--------------------------------       ----------------------------------
++-----------------------------+       +--------------------------------+
 |      firstEmployee          |       |        secondEmployee          |
-------------------------------|       ---------------------------------|
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
++---------------+-------------+       +---------------+----------------+
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 0           |       | Department    | 0              |
 | Salary        | 0           |       | Salary        | 0              |
 | MonthlySalary | 0           |       | MonthlySalary | 0              |
--------------------------------       ----------------------------------
++---------------+-------------+       +---------------+----------------=
 ```
 
 Lets fill in the rest of the properties.
@@ -377,14 +377,14 @@ secondEmployee.MonthlySalary = 20000;
 These objects would look like
 
 ```
--------------------------------       ----------------------------------
-|      firstEmployee            |       |        secondEmployee            |
-------------------------------|       ---------------------------------|
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
++-----------------------------+       +--------------------------------+
+|      firstEmployee          |       |        secondEmployee          |
++---------------+-------------+       +---------------+----------------+
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 42          |       | Department    | 100            |
 | Salary        | 120000      |       | Salary        | 240000         |
 | MonthlySalary | 10000       |       | MonthlySalary | 20000          |
--------------------------------       ----------------------------------
++---------------+-------------+       +---------------+----------------+
 ```
 
 When specifying the initial values of a new object, `C#` gives us a convenient
@@ -566,14 +566,14 @@ var secondEmployee = new Employee {
 ```
 
 ```
--------------------------------       ----------------------------------
++-----------------------------+       +--------------------------------+
 |      firstEmployee          |       |        secondEmployee          |
-------------------------------|       ---------------------------------|
-| Name          | "Elon Musk" |       | Name          | "Grace Hooper" |
++---------------+-------------+       +---------------+----------------+
+| Name          | "Elon Musk" |       | Name          | "Grace Hopper" |
 | Department    | 42          |       | Department    | 100            |
 | Salary        | 120000      |       | Salary        | 240000         |
 | MonthlySalary | METHOD      |       | MonthlySalary | METHOD         |
--------------------------------       ----------------------------------
++---------------+-------------+       +---------------+----------------+
 ```
 
 So now each instance of this class, our objects, have individual values for
@@ -677,10 +677,10 @@ For instance in our system perhaps we have active employees and retired
 employees. In this case perhaps we want to return a `0` for the `MonthlySalary`
 of any retired employees.
 
-We could declare a new `class` named `PartTimeEmployee` as such:
+We could declare a new `class` named `RetiredEmployee` as such:
 
 ```csharp
-class PartTimeEmployee : Employee
+class RetiredEmployee : Employee
 {
     public int MonthlySalary()
     {
@@ -692,7 +692,7 @@ class PartTimeEmployee : Employee
 Now if we defined a new employee as such:
 
 ```csharp
-var thirdEmployee = new PartTimeEmployee {
+var thirdEmployee = new RetiredEmployee {
     Name = "Bill Gates",
     Department = 100,
     Salary = 120,
