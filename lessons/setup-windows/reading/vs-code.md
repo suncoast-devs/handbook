@@ -34,7 +34,7 @@ code --install-extension streetsidesoftware.code-spell-checker
 ### C#/.NET Extensions:
 
 ```shell
-
+code --install-extension ms-dotnettools.csharp
 code --install-extension austincummings.razor-plus
 code --install-extension jchannon.csharpextensions
 code --install-extension jorgeserrano.vscode-csharp-snippets
