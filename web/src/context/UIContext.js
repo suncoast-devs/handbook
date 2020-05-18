@@ -3,6 +3,7 @@ import React from 'react'
 export const UIContext = React.createContext()
 
 function reducer(state, action) {
+  console.log({ state, action })
   switch (action.type) {
     case 'openSidebar': {
       return { ...state, isSidebarOpen: true, isSidebarHidden: false }
@@ -20,6 +21,22 @@ function reducer(state, action) {
       return { ...state, currentNavTarget: action.payload }
     }
 
+    case 'addAssignmentTag': {
+      return {
+        ...state,
+        assignmentTags: [...state.assignmentTags, action.payload],
+      }
+    }
+
+    case 'removeAssignmentTag': {
+      return {
+        ...state,
+        assignmentTags: state.assignmentTags.filter(
+          (tag) => tag !== action.payload
+        ),
+      }
+    }
+
     default: {
       throw new Error(`Unhandled action type: ${action.type}`)
     }
@@ -31,6 +48,7 @@ export function UIContextProvider({ children }) {
     isSidebarOpen: false,
     isSidebarHidden: true,
     currentNavTarget: null,
+    assignmentTags: [],
   })
   /* TODO: in `resetNavigation`, wait to unset currentNavTarget after
      transition, so it doesn't blink out when navigating back to the
@@ -45,6 +63,10 @@ export function UIContextProvider({ children }) {
           dispatch({ type: 'navigateToTarget', payload: module }),
         resetNavigation: () =>
           dispatch({ type: 'navigateToTarget', payload: null }),
+        toggleAssignmentTag: (tag) =>
+          state.assignmentTags.includes(tag)
+            ? dispatch({ type: 'removeAssignmentTag', payload: tag })
+            : dispatch({ type: 'addAssignmentTag', payload: tag }),
         ...state,
       }}
     >

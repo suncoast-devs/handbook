@@ -23,7 +23,11 @@ export default function PageTemplate({
   },
 }) {
   return (
-    <Layout title={mdx.frontmatter.title} filePath={mdx.fields.filePath}>
+    <Layout
+      title={mdx.frontmatter.title}
+      relativePath={mdx.fields.filePath}
+      absolutePath={mdx.fileAbsolutePath}
+    >
       {warnings.length > 0 && process.env.NODE_ENV === 'development' && (
         <div className="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
           <div className="flex">
@@ -83,10 +87,11 @@ export default function PageTemplate({
 }
 
 export const pageQuery = graphql`
-  query LessonQuery($id: String, $slug: String) {
+  query PageQuery($id: String, $slug: String) {
     mdx(id: { eq: $id }) {
       id
       body
+      fileAbsolutePath
       fields {
         type
         filePath

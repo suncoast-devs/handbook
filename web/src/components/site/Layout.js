@@ -4,16 +4,16 @@ import { Navigation } from './Navigation'
 import { SiteHeader } from './SiteHeader'
 import { SiteFooter } from './SiteFooter'
 
-function WIPBanner({ filePath }) {
-  return filePath ? (
-    <div className="relative bg-purple-800">
+function WIPBanner({ relativePath, absolutePath }) {
+  return relativePath ? (
+    <div className="relative bg-purple-800 flex items-center">
       <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
         <div className="pr-16 sm:text-center sm:px-16">
           <p className="font-medium text-purple-300">
-            <span className="md:inline">This site is a work in progress.</span>
+            <span className="md:inline">This page is a work in progress.</span>
             <span className="block sm:ml-2 sm:inline-block">
               <a
-                href={`https://github.com/suncoast-devs/handbook/edit/master/${filePath}`}
+                href={`https://github.com/suncoast-devs/handbook/edit/master/${relativePath}`}
                 className="text-purple-100 font-bold underline"
               >
                 You can help improve it. &rarr;
@@ -22,11 +22,18 @@ function WIPBanner({ filePath }) {
           </p>
         </div>
       </div>
+      {process.env.NODE_ENV === 'development' && (
+        <div className="text-purple-200 px-4 text-xl hover:text-white">
+          <a href={`vscode://file/${absolutePath}`} title="Open in VS Code">
+            <i className="fad fa-file-code"></i>
+          </a>
+        </div>
+      )}
     </div>
   ) : null
 }
 
-export function Layout({ title, children, filePath }) {
+export function Layout({ title, children, relativePath, absolutePath }) {
   const mainRef = React.useRef(null)
   return (
     <>
@@ -43,7 +50,7 @@ export function Layout({ title, children, filePath }) {
         <Navigation />
         <div className="flex flex-col w-0 flex-1 overflow-hidden">
           <SiteHeader />
-          <WIPBanner filePath={filePath} />
+          <WIPBanner relativePath={relativePath} absolutePath={absolutePath} />
           <main
             className="flex-1 relative z-0 overflow-y-auto pt-6focus:outline-none"
             ref={mainRef}
