@@ -1,5 +1,6 @@
 ---
 title: INSERT INTO Student (knowledge) VALUES ('SQL')
+tags: ["sql"]
 ---
 
 Every application uses data in some way. In many of our applications we will be

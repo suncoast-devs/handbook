@@ -1,10 +1,14 @@
 ---
 title: It all starts with HTML
+tags: ["html"]
 ---
 
-During this week, you will be building a website for your new chain of restaurants. This will have a few pages and will serve as a playground to learn about web development.
+During this week, you will be building a website for your new chain of
+restaurants. This will have a few pages and will serve as a playground to learn
+about web development.
 
-All web pages have to start somewhere, and this site is no different. To start off, you will be laying the groundwork for the days to come.
+All web pages have to start somewhere, and this site is no different. To start
+off, you will be laying the groundwork for the days to come.
 
 To start, you will need to start with the HTML and content.
 
@@ -12,14 +16,17 @@ To start, you will need to start with the HTML and content.
 
 ### Requirements
 
-- Name your restaurant and decide what type of food you will be selling. This is just a starting point, do not get too hung on this.
+- Name your restaurant and decide what type of food you will be selling. This is
+  just a starting point, do not get too hung on this.
 - Create the Content for your page
 - Craft semantic HTML for your landing page.
 
 ### Explorer Mode
 
-- [ ] Read through these [notes](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-html/reading/intro)
-- [ ] Decided on the details for your restaurant. This should include, but not limited to :
+- [ ] Read through these
+      [notes](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-html/reading/intro)
+- [ ] Decided on the details for your restaurant. This should include, but not
+      limited to :
   - [ ] Name
   - [ ] Type of Cuisine
   - [ ] Location(s)
@@ -31,19 +38,23 @@ To start, you will need to start with the HTML and content.
 - [ ] Your website should minimally have
   - [ ] a navbar
   - [ ] a ["hero"](https://www.sitepoint.com/exploring-hero-section/) section
-  - [ ] at least 3 sections about the restaurant, get creative here. Specials, events and locations would be a good start here.
+  - [ ] at least 3 sections about the restaurant, get creative here. Specials,
+        events and locations would be a good start here.
   - [ ] contact information
   - [ ] a footer
 - [ ] Push your code to GitHub
 - [ ] Deploy your site.
 
-**NOTE**: Remember, this is all about content, do not worry about making your website look nice, we will do that later.
+**NOTE**: Remember, this is all about content, do not worry about making your
+website look nice, we will do that later.
 
 ### Adventure Mode
 
 - [ ] [Read about CSS](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/reading/intro)
 - [ ] [Read more about CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS).
-- [ ] Create a simple [wire frame](https://en.wikipedia.org/wiki/Website_wireframe) for your finished site.
+- [ ] Create a simple
+      [wire frame](https://en.wikipedia.org/wiki/Website_wireframe) for your
+      finished site.
 - [ ] Start to add some basic CSS to your site to match your wire frame.
 
 ### Additional Resources

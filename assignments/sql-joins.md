@@ -1,5 +1,6 @@
 ---
 title: Foreign Keys - The SQL
+tags: ["sql"]
 ---
 
 As we continue to explore databases and ideas, this project will help you
