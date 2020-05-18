@@ -1,5 +1,5 @@
 ---
-title: CSS Layout test"
+title: CSS Layout test
 ---
 
 CSS Warm up!
@@ -10,7 +10,8 @@ http://florianmarkl.com/
 
 ## Explorer
 
-- Only worry about the boxes and their positioning, do not worry about the rotating the text, at first
+- Only worry about the boxes and their positioning, do not worry about the
+  rotating the text, at first
 - pay attention to how it (doesn't) change when the browser is smaller
 
 ## Adventure

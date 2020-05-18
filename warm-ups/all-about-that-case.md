@@ -1,9 +1,7 @@
 ---
-title: All about that Case"
+title: All about that Case
 ---
 
-Start here:
-https://www.hackerrank.com/challenges/camelcase/problem
+Start here: https://www.hackerrank.com/challenges/camelcase/problem
 
-Try this:
-https://www.hackerrank.com/challenges/staircase/problem
+Try this: https://www.hackerrank.com/challenges/staircase/problem

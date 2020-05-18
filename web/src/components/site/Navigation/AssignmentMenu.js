@@ -2,22 +2,24 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { useUIContext } from '../../../context/UIContext'
 import { Heading } from './Heading'
-import { Description } from './Description'
 import { SubHeading } from './SubHeading'
 import { LinkItem as Item } from './Item'
 
-export function ModuleMenu() {
+export function AssignmentMenu() {
   const {
-    allMdx: { nodes: lessons },
+    allMdx: { nodes: assignments },
   } = useStaticQuery(graphql`
-    query LessonMenuQuery {
-      allMdx(filter: { fields: { type: { eq: "lesson" } } }) {
+    query AssignmentMenuQuery {
+      allMdx(
+        filter: { fields: { type: { eq: "assignment" } } }
+        sort: { fields: frontmatter___title, order: ASC }
+      ) {
         nodes {
+          id
           frontmatter {
             title
           }
           fields {
-            slug
             path
           }
         }
@@ -26,21 +28,17 @@ export function ModuleMenu() {
   `)
   const { resetNavigation, currentNavTarget } = useUIContext()
   if (currentNavTarget) {
-    const { program, module } = currentNavTarget
     return (
       <>
         <Heading onClick={resetNavigation} icon="fas fa-caret-left">
-          {program.title}
+          All Programs
         </Heading>
-        <SubHeading>{module.title}</SubHeading>
-        {module.description && <Description>{module.description}</Description>}
-        <Heading>Lessons</Heading>
+        <SubHeading>Assignments</SubHeading>
         <div className="pl-3">
-          {module.lessons.map((slug) => {
-            const lesson = lessons.find((lesson) => lesson.fields.slug === slug)
+          {assignments.map((assignment) => {
             return (
-              <Item key={slug} to={lesson.fields.path}>
-                {lesson.frontmatter.title}
+              <Item key={assignment.id} to={assignment.fields.path}>
+                {assignment.frontmatter.title}
               </Item>
             )
           })}

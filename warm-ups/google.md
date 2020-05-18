@@ -1,5 +1,5 @@
 ---
-title: Google It!"
+title: Google It!
 ---
 
 Take time this morning to replicate the
