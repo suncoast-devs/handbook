@@ -19,16 +19,19 @@ full of dinosaurs.
 
 ### Explorer Mode
 
-- [ ] Create a class to represent your dinosaurs, which has the following
-      properties
+- [ ] Create a class to represent your dinosaurs. The class should have the
+      following properties
 
   - [ ] `Name`
-  - [ ] `DietType` - This will be carnivore or herbivore
+  - [ ] `DietType` - This will be "carnivore" or "herbivore"
   - [ ] `WhenAcquired` - This will be defaulted to the current time when the
         dinosaur is created
   - [ ] `Weight` - How heavy the dinosaur is in pounds.
   - [ ] `EnclosureNumber` - the number of the pen the dinosaur is currently in
 
+- [ ] Add a method `Description` to your class to print out a description of the
+      dinosaur to include all of it's properties. Create an output format of
+      your choosing.
 - [ ] Your dinosaurs will be stored in a `List<Dinosaur>`.
 - [ ] When the console application runs, it should let the user choose one of
       the following actions:
@@ -52,6 +55,12 @@ full of dinosaurs.
 
 ### Adventure Mode
 
+- [ ] Add an option to view the Dinosaurs acquired after a given date (to be
+      given by the user).
+- [ ] Add an option to view all the Dinosaurs in a given enclosure number.
+
 ### Epic Mode
 
-## Additional Resources
+- [ ] Learn how to read and write from a file. At the start of the program load
+      all the dinosaurs from a file. When the program ends write out all the
+      dinosaurs to the same file.
