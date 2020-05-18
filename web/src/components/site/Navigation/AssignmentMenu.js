@@ -55,8 +55,8 @@ export function AssignmentMenu() {
                 className={cx(
                   'inline-flex items-center mx-1 px-2.5 py-0.5 rounded-full text-xs font-medium leading-4',
                   assignmentTags.includes(tag)
-                    ? 'bg-blue-300 text-gray-200'
-                    : 'bg-gray-300 text-gray-700'
+                    ? 'bg-blue-500 text-gray-200'
+                    : 'bg-gray-300 text-gray-700 hover:bg-blue-200'
                 )}
               >
                 {tag}
