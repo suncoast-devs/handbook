@@ -68,8 +68,8 @@ export function AssignmentMenu() {
             .filter(
               (assignment) =>
                 assignmentTags.length === 0 ||
-                assignment.frontmatter.tags.some((c) =>
-                  assignmentTags.includes(c)
+                assignmentTags.every((c) =>
+                  assignment.frontmatter.tags.includes(c)
                 )
             )
             .map((assignment) => {

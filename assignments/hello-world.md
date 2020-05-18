@@ -1,6 +1,6 @@
 ---
 title: Hello, World!
-tags: ["cs-sharp", "console"]
+tags: ["c-sharp", "console"]
 ---
 
 Welcome to your journey as a developer. When learning a new language, a

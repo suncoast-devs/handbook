@@ -58,7 +58,7 @@ export function ProgramMenu() {
             Assignments
           </Heading>
           <Heading
-            icon="far fa-laptop-code"
+            icon="far fa-dumbbell"
             onClick={() => navigateToTarget({ menu: 'warm-ups' })}
           >
             Warm Ups
