@@ -3,32 +3,6 @@ title:
   LINQ -- Improving our ability to search and manipulate collections of data
 ---
 
-Looking back at the code we used for managing `Employee`s in our _Employee
-Database_ example from (LINK TO cs-classes lesson) we wrote code to search for
-an employee by it's name in our `List<Employee>` collection.
-
-```csharp
-// to null which will indicate no match found
-Employee foundEmployee = null;
-
-// Go through all the employees
-foreach(var employee in employees) {
-    // If the name matches
-    if (employee.Name == name) {
-        // ... then store this employee in the foundEmployee variable
-        foundEmployee = employee;
-    }
-}
-
-// Return what we found (the employee or null)
-return foundEmployee;
-```
-
-While this code works it is not very elegant and we would end up repeating this
-patter if we were searching employees by other attributes, say `Department`. To
-improve the ability to search and manipulate `List`s (and other kinds of
-collections as we will see later) .NET introduces the idea of `LINQ`
-
 ## LINQ
 
 LINQ stands for `L`anguage `IN`tegrated `Q`uery. It is a set of methods our
@@ -449,7 +423,7 @@ var biggestBudget = movies.Max(movie => movie.Budget);
 var smallestBudget = movies.Min(movie => movie.Budget);
 ```
 
-### Min
+### Sum
 
 > Returns the sum of the property that was returned by the expressions. Useful
 > for getting totals.
