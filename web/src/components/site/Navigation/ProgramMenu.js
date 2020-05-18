@@ -49,18 +49,22 @@ export function ProgramMenu() {
           </nav>
         )
       })}
-      <Heading
-        icon="far fa-laptop-code"
-        onClick={() => navigateToTarget({ menu: 'assignments' })}
-      >
-        Assignments
-      </Heading>
-      <Heading
-        icon="far fa-laptop-code"
-        onClick={() => navigateToTarget({ menu: 'warm-ups' })}
-      >
-        Warm Ups
-      </Heading>
+      {process.env.NODE_ENV === 'development' && (
+        <>
+          <Heading
+            icon="far fa-laptop-code"
+            onClick={() => navigateToTarget({ menu: 'assignments' })}
+          >
+            Assignments
+          </Heading>
+          <Heading
+            icon="far fa-laptop-code"
+            onClick={() => navigateToTarget({ menu: 'warm-ups' })}
+          >
+            Warm Ups
+          </Heading>
+        </>
+      )}
     </>
   )
 }
