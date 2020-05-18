@@ -39,7 +39,6 @@ modules:
       - misc-api-intro
       # - misc-rest
       - cs-api-clients
-      - cs-api-servers
       # - cs-build-api-with-database
       # - cs-deployment-to-heroku-with-docker
       # - misc-optimizing-developer-workspace
@@ -57,7 +56,7 @@ modules:
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
-      - cs-api-build
+      - cs-api-servers
       - auth0-intro
       - cs-deployment-docker
 position: 0

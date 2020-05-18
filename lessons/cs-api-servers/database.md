@@ -1,5 +1,6 @@
 ---
 title: Full Database + API GameNight application
+order: 2
 ---
 
 In this section we will expand on our previous code to build a complete

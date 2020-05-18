@@ -1,5 +1,6 @@
 ---
 title: Additional Resources
+order: 4
 ---
 
 - Documentation about

@@ -1,5 +1,5 @@
 ---
-title: Introduction to APIs with C# and dotnet (continued)
+title: Building API Clients in C# and .NET (Continued)
 ---
 
 ## Regarding API "IDs"

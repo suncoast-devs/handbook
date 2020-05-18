@@ -1,5 +1,6 @@
 ---
 title: Refactors
+order: 3
 ---
 
 In this section we will refactor the code for these improvements:

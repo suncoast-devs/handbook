@@ -17,11 +17,12 @@ const components = {
 export default function PageTemplate({
   data: {
     mdx,
-    index,
+    lecture,
     reading: { nodes: reading },
     allWarning: { nodes: warnings },
   },
 }) {
+  console.log({ mdx, lecture, reading })
   return (
     <Layout
       title={mdx.frontmatter.title}
@@ -59,9 +60,14 @@ export default function PageTemplate({
         <div className="bg-white overflow-hidden shadow rounded-lg mb-6">
           <div className="border-b bg-gray-50 border-gray-200 py-2 px-5 flex items-center justify-between">
             <h4 className="font-bold">Reading</h4>
-            <Link className="uppercase text-gray-500" to={index.fields.path}>
-              <i className="far fa-house"></i>
-            </Link>
+            {lecture && (
+              <Link
+                className="uppercase text-gray-500"
+                to={lecture.fields.path}
+              >
+                <i className="far fa-projector"></i>
+              </Link>
+            )}
           </div>
           <nav className="py-2 px-3 flex flex-col">
             {reading.map(({ fields: { path }, frontmatter: { title } }) => (
@@ -93,6 +99,7 @@ export const pageQuery = graphql`
       body
       fileAbsolutePath
       fields {
+        slug
         type
         filePath
       }
@@ -100,17 +107,20 @@ export const pageQuery = graphql`
         title
       }
     }
-    index: mdx(fields: { slug: { eq: $slug }, type: { eq: "lesson" } }) {
+    lecture: mdx(fields: { type: { eq: "lecture" }, slug: { eq: $slug } }) {
+      id
       fields {
         path
       }
-      frontmatter {
-        title
-      }
     }
     reading: allMdx(
-      filter: { fields: { slug: { eq: $slug }, type: { eq: "reading" } } }
-      sort: { fields: fileAbsolutePath, order: ASC }
+      filter: {
+        fields: { slug: { eq: $slug }, type: { in: ["lesson", "reading"] } }
+      }
+      sort: {
+        fields: [fields___type, frontmatter___order, fileAbsolutePath]
+        order: ASC
+      }
     ) {
       nodes {
         id

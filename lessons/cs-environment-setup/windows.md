@@ -1,5 +1,6 @@
 ---
 title: Windows Setup
+order: 1
 ---
 
 - [Slack](/lessons/setup-windows/reading/slack)

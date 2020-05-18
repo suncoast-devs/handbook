@@ -38,9 +38,13 @@ export function ModuleMenu() {
         <div className="pl-3">
           {module.lessons.map((slug) => {
             const lesson = lessons.find((lesson) => lesson.fields.slug === slug)
-            return (
+            return lesson ? (
               <Item key={slug} to={lesson.fields.path}>
                 {lesson.frontmatter.title}
+              </Item>
+            ) : (
+              <Item key={slug}>
+                <span className="text-red-400">MISSING LESSON: {slug}</span>
               </Item>
             )
           })}

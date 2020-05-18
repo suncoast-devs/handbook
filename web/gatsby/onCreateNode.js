@@ -23,10 +23,11 @@ module.exports = ({ node, actions, getNode }) => {
           name: 'type',
           node,
           value: (Object.entries({
-            reading: /^\/[\w-]+\/reading\/[\w-]+$/,
-            lecture: /^\/[\w-]+\/lecture\/[\w-]+$/,
-            lesson: /^\/[\w-]+$/,
-          }).find(([k, v]) => v.test(subPath)) || [])[0],
+            // TODO: This should be better...
+            lesson: /index\.md/,
+            lecture: /lecture\.md/,
+            reading: /^/,
+          }).find(([_, v]) => v.test(filePath)) || [])[0],
         })
         break
       case 'assignments':

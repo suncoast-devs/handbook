@@ -32,9 +32,7 @@ module.exports = async function (slug) {
   if (!index.assigments || meta.assignments.length === 0)
     addWarning('This lesson has no assignments.')
 
-  await validateFile('lecture/presentation/index.md')
-
-  await validateFile('lecture/index.md')
+  await validateFile('lecture.md')
 
   return warnings
 }

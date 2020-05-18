@@ -1,5 +1,6 @@
 ---
-title: Linux setup
+title: Linux Setup
+order: 3
 ---
 
 Before starting any installation run:

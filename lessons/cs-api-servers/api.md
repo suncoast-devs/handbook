@@ -1,5 +1,6 @@
 ---
 title: Making a full fledged CRUD API for our games
+order: 1
 ---
 
 We are going to make an API that has the ability to `CRUD` (Create, Read,

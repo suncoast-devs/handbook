@@ -1,5 +1,6 @@
 ---
-title: Mac setup
+title: Mac Setup
+order: 2
 ---
 
 - [Slack](/lessons/setup-mac/reading/slack)
