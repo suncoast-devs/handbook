@@ -1,5 +1,5 @@
 ---
-title: Explode"
+title: Explode
 ---
 
 https://www.codewars.com/kata/digits-explosion

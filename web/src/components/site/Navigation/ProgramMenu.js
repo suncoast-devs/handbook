@@ -4,8 +4,11 @@ import { Heading } from './Heading'
 import { Description } from './Description'
 import { SubHeading } from './SubHeading'
 import { ModuleItem as Item } from './Item'
+import { useUIContext } from '../../../context/UIContext'
 
 export function ProgramMenu() {
+  const { navigateToTarget } = useUIContext()
+
   const {
     allProgramsYaml: { nodes: programs },
   } = useStaticQuery(graphql`
@@ -46,6 +49,18 @@ export function ProgramMenu() {
           </nav>
         )
       })}
+      <Heading
+        icon="far fa-laptop-code"
+        onClick={() => navigateToTarget({ menu: 'assignments' })}
+      >
+        Assignments
+      </Heading>
+      <Heading
+        icon="far fa-laptop-code"
+        onClick={() => navigateToTarget({ menu: 'warm-ups' })}
+      >
+        Warm Ups
+      </Heading>
     </>
   )
 }

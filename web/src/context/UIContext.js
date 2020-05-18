@@ -16,8 +16,8 @@ function reducer(state, action) {
       return { ...state, isSidebarHidden: true }
     }
 
-    case 'navigateToModule': {
-      return { ...state, currentNavModule: action.payload }
+    case 'navigateToTarget': {
+      return { ...state, currentNavTarget: action.payload }
     }
 
     default: {
@@ -30,9 +30,9 @@ export function UIContextProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, {
     isSidebarOpen: false,
     isSidebarHidden: true,
-    currentNavModule: null,
+    currentNavTarget: null,
   })
-  /* TODO: in `resetNavigation`, wait to unset currentNavModule after
+  /* TODO: in `resetNavigation`, wait to unset currentNavTarget after
      transition, so it doesn't blink out when navigating back to the
      program menu. See Menu.js */
   return (
@@ -41,10 +41,10 @@ export function UIContextProvider({ children }) {
         openSidebar: () => dispatch({ type: 'openSidebar' }),
         closeSidebar: () => dispatch({ type: 'closeSidebar' }),
         hideSidebar: () => dispatch({ type: 'hideSidebar' }),
-        navigateToModule: (module) =>
-          dispatch({ type: 'navigateToModule', payload: module }),
+        navigateToTarget: (module) =>
+          dispatch({ type: 'navigateToTarget', payload: module }),
         resetNavigation: () =>
-          dispatch({ type: 'navigateToModule', payload: null }),
+          dispatch({ type: 'navigateToTarget', payload: null }),
         ...state,
       }}
     >
