@@ -235,10 +235,10 @@ namespace EmployeeDatabase
       // Our list of employees
       var employees = new List<Employee>();
 
+      DisplayGreeting();
+
       // Should we keep showing the menu?
       var keepGoing = true;
-
-      DisplayGreeting();
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
