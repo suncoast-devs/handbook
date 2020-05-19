@@ -1,8 +1,15 @@
 ---
-title: Extending our database
+title: Using C# Classes to Create a Database
 ---
 
-To review our `EmployeeDatabase` so far:
+In this lesson we will be using `class`es and `List<>` to create an example
+database to manage employees. We will create a menu system that will allow us to
+`C`reate, `R`ead, `U`update, and `D`elete employees from this `List`
+
+# Reviewing the code we will start with.
+
+This is the code we will start with. It defines an `Employee` class and contains
+code to input the details of a single employee.
 
 ```csharp
 using System;
