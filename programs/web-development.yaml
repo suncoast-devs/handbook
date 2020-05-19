@@ -28,6 +28,7 @@ modules:
       - cs-methods
       - cs-classes
       - cs-linq
+      - cs-classes-simple-database
       - cs-files-reading-and-writing
       - cs-packages
       - sql-erd
