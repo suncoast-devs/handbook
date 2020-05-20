@@ -28,6 +28,7 @@ Challenges we like:
 |  7  | Shortest Word                    |    https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9     |     C#     |
 |  6  | supermarket queue                |    https://www.codewars.com/kata/57b06f90e298a7b53d000a86     |     C#     |
 |  -  | -                                |                               -                               |     -      |
+|     |                                  |   https://www.codewars.com/kata/515e188a311df01cba000003/train/javascript | JS and C# |
 |  8  | Even or Odd                      |    https://www.codewars.com/kata/53da3dbb4a5168369a0000fe     |     C#     |
 |  7  | List filtering                   |    https://www.codewars.com/kata/53dbd5315a3c69eed20002dd     |     C#     |
 |  6  | IP Validation                    |    https://www.codewars.com/kata/515decfd9dcfc23bb6000006     |     C#     |
