@@ -1,6 +1,6 @@
 ---
 title: All Cards on Deck! (JavaScript)
-tags: ["javascript", "algorithms", "enumuration"]
+tags: ["javascript", "algorithms", "enumeration"]
 ---
 
 In this project, you will use JavaScript to model

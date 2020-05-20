@@ -1,6 +1,6 @@
 ---
 title: All Cards on Deck! (C#)
-tags: ["c-sharp", "algorithms", "enumuration"]
+tags: ["c-sharp", "algorithms", "enumeration"]
 ---
 
 <!-- prettier-ignore-start -->

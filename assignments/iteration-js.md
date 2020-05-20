@@ -1,6 +1,6 @@
 ---
 title: Iteration in JavaScript
-tags: ["javascript", "enumuration"]
+tags: ["javascript", "enumeration"]
 ---
 
 ## Objectives

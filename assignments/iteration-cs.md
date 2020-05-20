@@ -1,6 +1,6 @@
 ---
 title: Iteration in C#
-tags: ["c-sharp", "enumuration"]
+tags: ["c-sharp", "enumeration"]
 ---
 
 Learning programming takes practice and the best practice is repetition. This
