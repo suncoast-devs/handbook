@@ -3,8 +3,8 @@ title: Welcome to Jurassic Park
 tags: ["c-sharp", "console", "enumeration", "oop", "linq"]
 ---
 
-In this assignment you will be creating a console application that manages a zoo
-full of dinosaurs.
+In this assignment, you will be creating a console application that manages a
+zoo full of dinosaurs.
 
 ## Objectives
 
@@ -25,14 +25,14 @@ full of dinosaurs.
 
   - [ ] `Name`
   - [ ] `DietType` - This will be "carnivore" or "herbivore"
-  - [ ] `WhenAcquired` - This will be defaulted to the current time when the
-        dinosaur is created
+  - [ ] `WhenAcquired` - This will default to the current time when the dinosaur
+        is created
   - [ ] `Weight` - How heavy the dinosaur is in pounds.
   - [ ] `EnclosureNumber` - the number of the pen the dinosaur is currently in
 
 - [ ] Add a method `Description` to your class to print out a description of the
-      dinosaur to include all of it's properties. Create an output format of
-      your choosing.
+      dinosaur to include all of its properties. Create an output format of your
+      choosing.
 - [ ] Your dinosaurs will be stored in a `List<Dinosaur>`.
 - [ ] When the console application runs, it should let the user choose one of
       the following actions:
