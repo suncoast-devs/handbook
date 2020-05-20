@@ -4,7 +4,7 @@ tags: ["c-sharp", "enumeration"]
 ---
 
 Learning programming takes practice and the best practice is repetition. This
-exercise allow you time to work on the basics of .NET and how to apply that
+exercise will allow you time to work on the basics of .NET and how to apply that
 logic to solving problems.
 
 ## Objectives
@@ -37,17 +37,10 @@ After completing this assignment, you should be able to:
 - No linter warnings
 - Turn in the homework using the URL to your repository on GitHub.
 
-## Adventure Mode
-
-- Do the same with the Koans at
-  [https://github.com/suncoast-devs/DotNetCoreKoans](https://github.com/suncoast-devs/DotNetCoreKoans)
-- Do the same with the Function-Junction Koans at
-  [https://github.com/suncoast-devs/FunctionJunctionDotNet](https://github.com/suncoast-devs/FunctionJunctionDotNet)
-
 ## Additional Resources
 
-Reference the documentation on DevDocs to find what kind of helpful functions
-might already be in JavaScript.
+Reference the documentation to find what kind of helpful functions might already
+be in C#.
 
 - [String Functions](https://www.c-sharpcorner.com/blogs/some-string-functions-of-c-sharp).
 - [Official LINQ](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/linq/)
