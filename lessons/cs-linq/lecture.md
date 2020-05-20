@@ -84,9 +84,9 @@ if (EmployeeHasName(employee, "Bob"))
 
 ---
 
-## Using LINQ and lambdas.
+## Using LINQ and expressions.
 
-Lets return to our lambda example of using the `MultiplyBy2`. Suppose we had a list such as:
+Lets return to our expression example of using the `MultiplyBy2`. Suppose we had a list such as:
 
 ```csharp
 var scores = new List<int> { 42, 100, 98, 15 };
@@ -131,7 +131,7 @@ foreach(var score in scores) {
 
 `LINQ` provides a method named `Select`.
 
-What `Select` does is go through each entry in our list, and using a `lambda expression` convert each element to a new value based on what that expression does.
+What `Select` does is go through each entry in our list, and using an `expression` convert each element to a new value based on what that expression does.
 
 Every new value is then added to a new `List` and returned.
 
@@ -498,7 +498,7 @@ The `Aggregate` method, often called `reduce` in other languages, takes the list
 
 ```csharp
 // Find the total revenue for all movies
-var totalRevenue = movies.Aggregate(0,
+var totalRevenue = movies.Aggregate(0.0,
    (currentTotal, movie) => currentTotal + movie.TotalRevenue);
 ```
 
@@ -530,7 +530,7 @@ var areAllOldMovies = movies.All(
 // Figure out if there is even
 // a single old movie (before 1965) in our list
 var areAnyOldMovies = movies.Any(
-      movie => movie.ReleasedDate.Year > 1965);
+      movie => movie.ReleasedDate.Year < 1965);
 ```
 
 ---
@@ -562,7 +562,7 @@ var moviesThatCostMoreThanTenDollars =
 // it is there. If it isn't we'll
 // get an exception/error
 var favoriteMovie = movies.First(
-      movie => movie.Title == "Jaws");
+      movie => movie.Name == "Jaws");
 ```
 
 ---
@@ -571,9 +571,8 @@ var favoriteMovie = movies.First(
 
 [.column]
 
+- First
 - FirstOrDefault
-- Single
-- SingleOrDefault
 - Last
 - LastOrDefault
 - Distinct
