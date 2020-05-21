@@ -147,7 +147,7 @@ feature after the saving is working.
 
 Before we can write to the file we have to tell the code what file we want to
 write to. For this we will use a new object named `StreamWriter`. The purpose of
-the `StreamWriter` is to accept information and send it to a destination. Since
+the `StreamWriter` is to accept information and sends it to a destination. Since
 eventually we may be writing a large amount of information the `StreamWriter`
 can process the information from our code and into the file in a flow, like
 water running in a stream. We simply need to tell it where the output goes, in
@@ -341,6 +341,8 @@ Finally, instead of `WriteRecords` we have a way to `ReadRecords`.
 // Get the records from the CSV reader, as `int` and finally as a `List`
 var numbers = csvReader.GetRecords<int>().ToList();
 ```
+
+> NOTE: To use `ToList()` here we must add `using System.Linq` to our code.
 
 And finally close the reader
 

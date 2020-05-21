@@ -10,13 +10,13 @@ sudo apt update
 sudo apt install snapd
 ```
 
-- [Slack](/lessons/setup-linux/reading/slack)
-- [Github](/lessons/setup-linux/reading/github)
-- [Code Folder](/lessons/setup-linux/reading/code-folder)
-- [Visual Studio Code](/lessons/setup-linux/reading/vs-code)
-- [git](/lessons/setup-linux/reading/git)
-- [.NET](/lessons/setup-linux/reading/dotnet)
-- [httpie](/lessons/setup-linux/reading/httpie)
-- [hub](/lessons/setup-linux/reading/hub)
-- [Node.js](/lessons/setup-linux/reading/nodejs)
-- [postgres](/lessons/setup-linux/reading/postgres)
+- [Slack](/lessons/setup-linux/slack)
+- [Github](/lessons/setup-linux/github)
+- [Code Folder](/lessons/setup-linux/code-folder)
+- [Visual Studio Code](/lessons/setup-linux/vs-code)
+- [git](/lessons/setup-linux/git)
+- [.NET](/lessons/setup-linux/dotnet)
+- [httpie](/lessons/setup-linux/httpie)
+- [hub](/lessons/setup-linux/hub)
+- [Node.js](/lessons/setup-linux/nodejs)
+- [postgres](/lessons/setup-linux/postgres)

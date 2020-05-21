@@ -24,7 +24,7 @@ To start, you will need to start with the HTML and content.
 ### Explorer Mode
 
 - [ ] Read through these
-      [notes](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-html/reading/intro)
+      [notes](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-html/intro)
 - [ ] Decided on the details for your restaurant. This should include, but not
       limited to :
   - [ ] Name
@@ -50,7 +50,7 @@ website look nice, we will do that later.
 
 ### Adventure Mode
 
-- [ ] [Read about CSS](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/reading/intro)
+- [ ] [Read about CSS](https://suncoast.io/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/intro)
 - [ ] [Read more about CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS).
 - [ ] Create a simple
       [wire frame](https://en.wikipedia.org/wiki/Website_wireframe) for your
