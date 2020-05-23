@@ -3,71 +3,46 @@ title: Cover Letters
 order: 5
 ---
 
-![](./assets/inigo-montoya.png)
+When you are determining if you should write a cover letter, it helps to think about the purpose of the letter. Your cover letter serves as an introduction to you as a professional and enables you to briefly summarise why you are the right person for the job. Think of a cover letter as a written elevator pitch; you have limited time to grab their attention while sharing the right amount of information. 
 
-#### Look for the Narrative
+Cover letters are a great way to show that you understand the environment and culture of the company and industry and prove that you’ve got what they are looking for. 
 
-- Decode a job listing to find the narrative
-    - What problem do they solve?
-    - What does their website say about them?
-- Make that the context of your cover letter
-    - Understand the story
-    - Identify with it
-    - How you add value?
+So how do you go about writing a cover letter?
 
-#### Not There, Find It
+## Write in the Company’s “Voice”
+To learn about the company, you should start with the company website, LinkedIn account, blog, social media outlets, and any articles about the organization. Getting to know the company can help you understand what the company is trying to do so that you can understand their goals, identify with them, and show how you can add value.
 
-- Use the company’s webpage
-- Check LinkedIn
-- Do they have a blog?
-- The more you research a company the better you are prepared to write your cover letter
+## Make it Personal
+It is easy to create a template for your cover letters to save time, but there is nothing worse than sending a letter that shows you know nothing about the company or worse, you forget to change the company name you list. 
+   
+## Start Strong
+Use your first sentence to grab the attention of the person reading it. Communicate how you can help to solve the problems, identify your skills, experience, and achievements. Whatever you do, avoid saying, “I’m applying for the role of XXX.”
 
-#### Keys to a good cover letter
+## Identify how you found out about the opportunity
+If you have a connection that thought you would be a good fit for the position, be sure to mention them. Having a connection can help break move the process along faster.
 
-##### Don’t Regurgitate Your Resume
-- Use your cover letter to describe additional details that you weren’t able to squeeze onto the single page of your resume: “By resolving invoice disputes, I gained a deep analytical knowledge—but more importantly, I learned how to interact calmly and diplomatically with angry customers.” 
-- A cover letter gives you the freedom to use full sentences—instead of bullet points—so use them to expand upon your resume points and tell the story of why you’re the perfect fit for the company
+## Customize the subject line 
+If the job position mentions a code or specific wording, you should use the subject line is where you include it. Otherwise, be sure to mention the position title.
 
-##### Clearly Show What You’re Capable Of
-- Beyond explaining what you’ve done in the past, show hiring managers what you can do in the future. 
-- Describe your skills and how they can be used for the position
+## Use keywords mentioned in the job description
+Talk about the skills that you have that relate to the position and how you can impact it. Don’t just throw keywords in without a purpose in the hope that your application gets picked up in any applicant tracking software (ATS) – it is possible to overuse keywords.
 
-##### Not Necessarily Your Education
-- At the end of the day, what hiring managers care about most is your work experience (and yes, that can be volunteer or internship experience, too)and what you can walk through the door and deliver on Day 1.
+## Don’t Regurgitate Your Resume
+Use your cover letter to describe additional details that you weren’t able to squeeze onto the single page of your resume. A cover letter gives you the freedom to use full sentences—instead of bullet points—so use them to expand upon your resume points and tell the story of why you’re the perfect fit for the company
 
-##### Don’t Apologize for Skills You Don’t Have
-- Instead of drawing attention to your weaknesses, turn it around to focus on the skills you do have and how they are a benefit
+## Don’t Let Your Fear of Bragging Get in the Way
+Imagine you’re someone else writing a letter about yourself. Think from the perspective of a friend, mentor, or previous employer—someone who would only sing your praises—and then write the letter from her point of view
 
-##### Highlight the Right Experiences
-- Not sure what skills and experiences you should be featuring? 
-- Look through the job description for keywords you can highlight from your experience.
+## Have Someone Gut Check It
+Have a friend take a look at your cover letter, and ask him or her two questions: 
+- Does this sell me as the best person for the job?
+- Does it get you excited? 
 
-##### Tell a Story
-- What brings you to this company?
-- Highlight what you found in their Narrative
+If the answer to either is “no,” or even slight hesitation, go back for another pass.
 
-##### Think Custom, Not Canned
-- Most companies want to see that you’re truly excited about the position and company, which means creating a custom letter for each position you apply for.
+## Proofread and ask two people to review it
+Having extra eyes on it can help catch any errors or typos you may have missed (Hint: [Grammarly](https://www.grammarly.com/) should be your best friend)
 
-##### Write in the Company’s “Voice”
-- Cover letters are a great way to show that you understand the environment and culture of the company and industry and prove that you’ve got what they are looking for.
-- We’ve mentioned this before, know their Narrative
-
-##### Don’t Let Your Fear of Bragging Get in the Way
-- Imagine you’re someone else writing a letter about yourself. Think from the perspective of a friend, mentor, or previous employer—someone who would only sing your praises—and then write the letter from her point of view
-
-##### Have Someone Gut Check It
-- Have a friend take a look at your cover letter, and ask him or her two questions: 
-    - Does this sell me as the best person for the job?
-    - Does it get you excited? 
-- If the answer to either is “no,” or even slight hesitation, go back for another pass.
-
-##### Proofread and ask two people to review it
-- Having extra eyes on it will help catch any errors or typos you may have missed (Hint: [Grammarly](https://www.grammarly.com/) should be your best friend)
-
-#### Resources
-
-- [Mock Job Descriptions](https://docs.google.com/document/d/e/2PACX-1vTAUdgkKCLK7MgA-rbHOwNxWmUipr6_aSw2_uxL2Rn_f9zetpPoGbY-tEtceWqdM2h5GvqJnZUzF2N-/pub)
-
-- [Access the slide presentation](./assets/cover-letters.pdf)
+Need more help writing a Cover Letter: 
 - [How to write a cover letter](https://www.skillgigs.com/blog/how-to-write-a-cover-letter/)
+- [Why cover letters are still important, and how to write one](https://social.hays.com/2019/06/14/why-cover-letters-important-how-to-write/)
