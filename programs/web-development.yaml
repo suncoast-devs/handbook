@@ -63,6 +63,9 @@ modules:
   - career-support:
     title: Career Support
     lessons:
+      - soft-skills
+      - career-prep
+      - career-looking
       - misc-keys-to-student-success
 
 position: 0
