@@ -33,7 +33,7 @@ So why does it matter if you are sending it to a recruiter?
 
 ## Templates
 
-Templates of any kind exist to make your life easier. Resumes templates are perfect for helping you organize your information while making it look attractive. Whether using Microsoft Word, Google Docs, or Apple Pages, there are default resume templates for you to choose. Need something more custom? A quick Google search for "free resume templates" can bring you a variety of options, you can also purchase templates if you want a specific look.
+Templates of any kind exist to make your life easier. Resumes templates are perfect for helping you organize your information while making it look attractive. Whether using Microsoft Word, Google Docs, or Apple Pages, there are default resume templates for you to choose from when you get started. Need something more custom? A quick Google search for "free resume templates" can bring you a variety of options, you can also purchase templates if you want a specific look.
 
 So are there any downfalls to using a template?
 
