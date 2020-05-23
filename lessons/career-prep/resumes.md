@@ -100,7 +100,9 @@ So what information should you include?
 
 ***Note:*** The projects that you complete as a student at SDG can be listed as experience if you choose not to have a separate Projects section.
 
-Need more examples on how to list your Professional Experience: [How to write your professional experience section](https://www.indeed.com/career-advice/resumes-cover-letters/listing-professional-experience-on-your-resume)
+Need more examples on how to list your Professional Experience: 
+- [How to write your professional experience section](https://www.indeed.com/career-advice/resumes-cover-letters/listing-professional-experience-on-your-resume)
+- [Should you use a chronological or functional resume?](https://www.monster.com/career-advice/article/chronological-resume-or-functional-resume)
 
 ## Education
 If you have a limited educational background, don't panic. Lucky for you in the development community, many organizations and teams need skill and a good fit over someone with a specific degree.
@@ -115,3 +117,36 @@ So what information should you include:
 - Graduation year (if applicable)
 - GPA (Note: You may not want to include this if it's not above 3.4)
 - Relevant honors or academic recognition, coursework, activities or other achievements obtained during your education
+
+Need more examples on how to list your Education: [How to List Education on a Resume
+](https://www.indeed.com/career-advice/resumes-cover-letters/how-to-list-education-on-a-resume)
+
+## Bonus - Volunteering
+
+Listing volunteering and community service programs that you are involved in can help employers know what passions you have outside of work. Adding your volunteering is not mandatory, so if you are running out of space, leave it off but be sure to talks about them during each interview.
+
+Need more examples on how to list Volunteering on your Resume: [How to List Volunteer Work on Your Resume](https://www.indeed.com/career-advice/resumes-cover-letters/listing-volunteer-work-on-a-resume-with-example)
+
+## Resume Lenght: One-page vs. Two page
+
+So you have written your resume, formatted it to your liking, and now realize that it takes up multiple pages. The length of your resume depends on the amount of information you need to share.
+
+> "In a survey of employers, 66% said an entry-level resume should be one page Meanwhile, 77% said seasoned workers should have at least a 2-page resume, and maybe longer. Shockingly, 39% of experienced workers say their resumes are only one page long." - [zety.com](https://zety.com/blog/two-page-resume)
+
+### One page
+
+One page resumes are easier to read, which is why so many people think resumes should be limited to one page. When you think about it, resume readers have to look at a large number of resumes daily, so having less information to scan makes sense. So how do you know if a one-page resume is right for you?
+- Are you an entry-level worker?
+- Are you a recent graduate?
+- Are you making a career change?
+- Do you only have a few years of work experience? 
+- If you answered yes to any of these questions, a one-page resume would work for you.
+
+### Two pages
+What should you do if your level of experience requires you to have more than one page for your resume? First, start by taking a close look at the experience you are listing. If you are going back to positions and experience that can be supported better by newer experience, it is ok to start eliminating unneeded positions. A general rule of thumb is that the applicant should be able to fit 10 years of work experience onto each page of their resume.
+
+Something to keep in mind: the second page of your resume may not get as much attention as the first page, and it can even be separated if someone prints them out. You want to make sure that the first page contains your most vital information to make an impact on the reader.
+
+Need more information to help you decide the right length for your resume:
+- [The one-page resume vs. the two-page resume](https://www.monster.com/career-advice/article/one-page-or-two-page-resume)
+- [2 Page Resume: Will It Crush Your Chances?](https://zety.com/blog/two-page-resume)
