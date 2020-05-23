@@ -1,7 +1,28 @@
 ---
-title: Resumes 
-order: 3
+title: Building your Resume  
+order: 4
 ---
+
+So you are ready to start jumping into the job search. The first stop on your journey to your next job is your resume. So what information do you need to have on your resume?
+
+# Contact information
+Giving employers and recruiters a method for contacting you is vital. You want to make sure you give more than one outreach method and links where they can see your work.
+
+### Your Name
+Use your full professional name; this is the name that goes on your file, and it is used when verifying information about you.
+
+### Email
+
+
+
+
+
+
+
+
+
+
+
 
 ## Key areas of Information:
 
@@ -76,7 +97,6 @@ order: 3
 - Grab a hiring manager's attention right from the beginning, remembering you have only 25 few seconds to make a good impression
 - Spend time developing a summary that immediately gets their attention, and accurately and powerfully describes you as a solution to their problems
 
-- [Access the slide presentation](./assets/resumes.pdf)
 
 ## Alumni Resume Examples
 
@@ -87,4 +107,5 @@ order: 3
 
 ## Additional Resources:
 - [How to write a killer Software Engineering résumé – freeCodeCamp.org](https://medium.freecodecamp.org/writing-a-killer-software-engineering-resume-b11c91ef699d)
+- [10 Resume Writing Tips to Help You Land a Job](https://www.indeed.com/career-advice/resumes-cover-letters/10-resume-writing-tips)
 

@@ -2,6 +2,8 @@
 title: Preparing for Your Job Hunt
 ---
 
+# Summary
+
 Looking for a job is a full-time job. Whether you are starting a new career or pursuing that next position, it is essential to have all of your information up to date and highlighting your skills.
 
 So where do you begin and what should you focus on?

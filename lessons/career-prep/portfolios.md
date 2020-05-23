@@ -1,6 +1,6 @@
 ---
 title: Portfolios
-order: 5
+order: 6
 ---
 
 Your brand and the visual representation of your work.
