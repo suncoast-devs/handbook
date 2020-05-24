@@ -1,6 +1,6 @@
 ---
 title: Time Management
-order: 3
+order: 2
 ---
 
 ## A Brief Guide to Time Management

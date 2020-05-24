@@ -1,5 +1,5 @@
 ---
-title: Your Health - Self-Care for Developers
+title: Self-Care and Stress Management
 order: 1
 ---
 
@@ -92,12 +92,70 @@ So how do you prevent computer-related injuries?
 ## Have Fun
 Development doesn't have to be all work and no play. Simple things like customizing your terminal, buying a colorful keyboard, or decorating your office space can go a long way.
 
-## Seek a Professional
-Sometimes taking care of yourself requires assistance. Seeking professional help does not mean you can't handle it yourself. Counselors are there to listen, provide support, and offer feedback when you need it most. Another added benefit is you have someone that is there to listen to you and only you.
+## Manage your stress
+> "Stress wreaks havoc on your emotional equilibrium, as well as your physical health. It narrows your ability to think clearly, function effectively, and enjoy life. It may seem like there's nothing you can do about stress." -- [Help Guide](https://www.helpguide.org/articles/stress/stress-management.htm)
+
+Stress Management can help you break the hold stress has on your life so that you can be happier, healthier, and more productive. So how do you combat stress?
+
+### Identify the sources of stress
+
+Easy to see stressor examples might be changing jobs, moving, relationship changes, or attending an intensive learning program. It helps to start by identifying the real source of your stress by looking closely at your habits, attitude, and excuses:
+- Do you explain away stress as temporary, * "I just have a million things going on right now, "* even though you can't remember the last time you took a breather?
+- Do you define stress as an integral part of your work or home life * "Things are always crazy around here"* or as a part of your personality * "I have a lot of nervous energy, that's all"*?
+- Do you blame your stress on other people or outside events, or view it as entirely usual and unexceptional?
+
+### Avoid, Alter, Adapt & Accept
+- Source: [https://www.helpguide.org/articles/stress/stress-management.htm/](https://www.helpguide.org/articles/stress/stress-management.htm/)
+
+#### Avoid unnecessary stress
+Learn how to say NO. As work life and home life become more complicated, it is easy to take on too much. Learn to distinguish between the "shoulds" and the "musts" and ask for help prioritizing if you are not sure of the difference.
+
+Avoid people and situations that stress you out. It is ok to step back and away when you need time. Take control of your environment by limiting your exposure and allowing yourself to regroup.
+
+Pare down your to-do list. Use your time management skills to take a look at what you need to do right now and focus on those. It is ok to postpone less important tasks for another day.
+
+#### Alter the situation
+If something or someone is bothering you, it is essential to express how you feel. Create open communication where you can share your concerns openly and respectfully. Part of that conversation should include compromise, working on a team means finding balance among differing opinions.
+
+Create a balanced schedule, while you are pairing down your to-do list take a look to see how you can add in things that you enjoy. Make sure to schedule some time for your family, social activities, and solitary pursuits.
+
+#### Adapt to the stressor
+Reframe the problem. Trying to view stressful situations from a more positive perspective can be difficult, but in the big picture, small stresses can lead to individual growth and learning.
+
+Adjust your standards; sometimes, we expect perfection. In the world of development, our code appears broken until it works. Trying to come to terms with that can be difficult when you expect to get it right the first time.
+
+Practice gratitude. Take a moment to reflect on all the things you appreciate in your life, including your positive qualities and gifts. Celebrating your successes, no matter how small, can also help combat stress.
+
+#### Accept things you cannot change
+Don't try to control the uncontrollable. Being a developer often means we face things we cannot control regularly. New features, projects getting canceled, and bugs that cause something to break are just the tip of the iceberg. Rather than stressing out over them, focus on the things you can control, such as how you choose to react to problems.
+
+Look for the upside. When facing challenges, try to look at them as opportunities for personal growth. When your choices contribute to a stressful situation, take the time to reflect on them, and learn from your mistakes. Learn to forgive yourself for the mistakes you made; take your mistakes as an opportunity to learn and grow to become a better developer.
+
+Share your feelings. Sometimes the most significant stress relief can come from talking through your problems. Whether you speak to a friend or a counselor having a sounding board for your worries, challenges, and feelings can bring comfort and clarity. 
+
+When you need extra support, seek a professional. Sometimes taking care of yourself requires assistance. Seeking professional help does not mean you can't handle it yourself. Counselors are there to listen, provide support, and offer feedback when you need it most. Another added benefit is you have someone that is there to listen to you and only you.
 
 ## Resources
+
+### Self-care
+
 - [Student Assistance Program](https://suncoast.io/sap-poster-548b6fa2bc9ebe7b5d534bae85fd34ab.pdf)
 - [Self Care for Developers](https://dev.to/amandasopkin/self-care-for-developers-51a0)
 - [Selfcare.tech](https://selfcare.tech/)
 - [Physical self-care for software developers](https://www.elegantthemes.com/blog/editorial/physical-self-care-for-software-developers-and-web-designers)
 - [Mental self-care for software developers](https://www.elegantthemes.com/blog/editorial/mental-self-care-for-software-developers-and-web-designers)
+
+
+### Resources on Stress and Stress Management
+
+- [How to manage stress](https://www.mind.org.uk/information-support/types-of-mental-health-problems/stress/signs-of-stress/#.W7Y1BJNKhQK)
+- [Stress Symptoms, Signs, and Causes](https://www.helpguide.org/articles/stress/stress-symptoms-signs-and-causes.htm)
+- [Is My Stress Level Too High?](https://www.webmd.com/balance/stress-management/stress-level-too-high#1)
+
+### YouTube Videos
+- [Stress Management Strategies: Ways to Unwind](https://www.youtube.com/watch?v=0fL-pn80s-c)
+- [Managing Stress - Brainsmart - BBC](https://www.youtube.com/watch?v=hnpQrMqDoqE)
+- [How to make stress your friend](https://www.ted.com/talks/kelly_mcgonigal_how_to_make_stress_your_friend?language=en)
+- [Yoga For Stress Management](https://www.youtube.com/watch?v=_zbtKeeAa-Y)
+
+

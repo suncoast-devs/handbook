@@ -1,6 +1,6 @@
 ---
 title: The Care and Feeding of Junior Developers
-order: 5
+order: 4
 ---
 
 ## Give Ownership
