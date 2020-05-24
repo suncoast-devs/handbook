@@ -1,5 +1,5 @@
 ---
-title: Portfolios
+title: Portfolios & Templates
 order: 6
 ---
 
