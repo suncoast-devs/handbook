@@ -1,5 +1,5 @@
 ---
-title: Your Health - Self Care for Developers
+title: Your Health - Self-Care for Developers
 ---
 Whether you are a student learning to write clean code, a full-time developer working with a team, or a freelancer starting controlling the projects you work on, it is essential to make sure you are taking care of your health. As our lives become more complicated, balancing work, family, friends, and other responsibilities, we forget about taking care of our own basic needs.
 
