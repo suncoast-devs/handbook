@@ -1,5 +1,6 @@
 ---
 title: Stress Management
+order: 2
 ---
 
 ## Why is it important?

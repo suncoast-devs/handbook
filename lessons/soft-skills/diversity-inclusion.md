@@ -1,5 +1,6 @@
 ---
 title: Diversity & Inclusion
+order: 4
 ---
 Suncoast Developers Guild is committed to fostering a diverse and inclusive environment.
 
