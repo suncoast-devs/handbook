@@ -3,8 +3,7 @@ title: Job Search Resources
 order: 3
 ---
 
-
-###### Where to Look
+## Where to Look
 - [Ruby on Rails Jobs](https://www.rubyonrails.jobs/)
 - [Tampa Tech Jobs](https://tampabaytechjobs.com/seeking/)
 - [Indeed](https://www.indeed.com/)
@@ -17,7 +16,7 @@ order: 3
 - [CareerBuilder](https://www.careerbuilder.com/)
 - [Regional Engineering Jobs](https://www.rengineeringjobs.com/)
 
-###### Local Recruiters
+## Local Recruiters
 - [Jesus Vidaurri](https://www.linkedin.com/in/jesus-vidaurri-214ab061/)
 - [Andrew Reynolds](https://www.linkedin.com/in/andrewreynolds22/)
 - [Maggie Emons](https://www.linkedin.com/in/margaretemons/)
