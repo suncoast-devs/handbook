@@ -82,7 +82,7 @@ concept of `ACID` (which stands for
 - Durability - This ensures that once data is written to the database, the
   database does not lose the information in the case of a database, computer, or
   system crash. For instance, once a database says that a row is updated, a
-  power loss to the system should not lose the data that was updated.
+  power loss to the system should not loose the data that was updated.
 
 ### SQL vs NoSQL
 
@@ -117,8 +117,8 @@ Tables are the containers for our data. Usually, a database has multiple tables,
 one for each "thing" we are storing.
 
 For instance, let's imagine we are designing and building a system to manage
-books for a library. We could create a database named `BookCollection` and in
-that database, there would be one table, called `Books`.
+books for a library. We could create a database named `Library` and in that
+database, there would be one table, called `Books`.
 
 Into this `Books` table, we would design columns that represent the specific
 data about books we wish to track. Each row in the `Books` table would represent
@@ -166,7 +166,7 @@ First, we need to create a database. After you have installed Postgres, use the
 command:
 
 ```shell
-createdb BookCollection
+createdb Library
 ```
 
 to create a new, empty database.
@@ -175,7 +175,7 @@ To connect to that database and start running queries against it, use the
 command:
 
 ```shell
-psql BookCollection
+psql Library
 ```
 
 As with most things in programming, there are tools to help make developers
@@ -204,11 +204,11 @@ Let's start by creating the table with only the `Title`, `PrimaryAuthor`, and
 the `YearPublished` columns for our `Books`
 
 ```sql
-CREATE TABLE Books (
-  Title           TEXT NOT NULL,
-  PrimaryAuthor  TEXT,
-  YearPublished  INT,
-  Id SERIAL PRIMARY KEY
+CREATE TABLE "Books" (
+  "Title"           TEXT NOT NULL,
+  "PrimaryAuthor"  TEXT,
+  "YearPublished"  INT,
+  "Id" SERIAL PRIMARY KEY
 );
 ```
 
@@ -222,7 +222,7 @@ table. We will make it a small text field since genre descriptions are typically
 short.
 
 ```sql
-ALTER TABLE Books ADD COLUMN Genre VARCHAR(15);
+ALTER TABLE "Books" ADD COLUMN "Genre" VARCHAR(15);
 ```
 
 Now our table has four columns. You might be wondering what value the `Genre`
@@ -239,8 +239,8 @@ To create a new row in our database, we need to use `INSERT`. A `INSERT`
 statement looks like this:
 
 ```sql
-INSERT INTO TableName (columnA, columnB, columnC)
-VALUES ('columnAValue', 'columnBValue', 'columnCValue')
+INSERT INTO "TableName" ("ColumnA", "ColumnB", "ColumnC")
+VALUES ('columnAValue', 'columnBValue', 'columnCValue');
 ```
 
 The insert statement has several components. The first is `table_name` to tell
@@ -252,40 +252,40 @@ stated.
 Example `INSERT` Statements:
 
 ```sql
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('Night of the Living Dummy', 'R. L. Stine', 1993, 'horror');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('A Shocker on Shock Street', 'R. L. Stine', 1995, 'horror');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('The Lost World', 'Michael Crichton', 1995, 'sci-fi');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('Harry Potter and Goblet of Fire', 'J.K. Rowling', 2000, 'fantasy');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('The Hobbit', 'J.R.R. Tolkien', 1937, 'fantasy');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('The Lord of the Rings: The Return of the King', 'J.R.R. Tolkien', 1955, 'fantasy');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('The Lord of the Rings: The Fellowship of the Ring', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('The Lord of the Rings: The Two Towers', 'J.R.R. Tolkien', 1954, 'fantasy');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('Hitchhikers Guide to the Galaxy', 'Douglas Adams', 1979, 'sci-fi');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('Cujo', 'Stephen King', 1981, 'horror');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('It', 'Stephen King', 1986, 'horror');
 
-INSERT INTO Books (Title,  PrimaryAuthor, YearPublished, Genre)
+INSERT INTO "Books" ("Title",  "PrimaryAuthor", "YearPublished", "Genre")
 VALUES ('Howls Moving Castle', 'Diana Wynne Jones', 1986, 'fantasy');
 ```
 
@@ -297,7 +297,7 @@ Notice that we supplied the title, primary_author, year, and genre in the
 `SELECT` statements allow us to query and return a new view of the data.
 
 ```sql
-SELECT * FROM Books;
+SELECT * FROM "Books";
 ```
 
 This query will give us back all the columns (`*`) from all the rows in the
@@ -308,7 +308,7 @@ Often we do not want _all_ the columns from the table so we can specify specific
 columns.
 
 ```sql
-SELECT Title FROM Books;
+SELECT "Title" FROM "Books";
 ```
 
 While this will still return all the rows, we will only see the `Title` column
@@ -318,7 +318,7 @@ We can use the `WHERE` clause to help filter down our table to only see rows
 that satisfy the conditions supplied. For example:
 
 ```sql
-SELECT Title, PrimaryAuthor FROM Books WHERE Genre = 'horror';
+SELECT "Title", "PrimaryAuthor" FROM 'Books" WHERE "Genre" = 'horror';
 ```
 
 This query only returns the `Title` and `PrimaryAuthor` of books that have a
@@ -327,13 +327,13 @@ genre of `horror`
 More examples:
 
 ```sql
-SELECT * FROM Books;
+SELECT * FROM "Books";
 
-SELECT Title, PrimaryAuthor from Books;
-SELECT Title, PrimaryAuthor from Books where Genre = 'horror';
-SELECT Title, PrimaryAuthor from Books where Genre = 'fantasy' OR Genre = 'sci-fi';
-SELECT Title, PrimaryAuthor from Books where Genre = 'horror' ORDER BY Title;
-SELECT Title, PrimaryAuthor from Books where Title LIKE 'The Lord of the Rings%' ORDER BY Title;
+SELECT "Title", "PrimaryAuthor" from "Books";
+SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror';
+SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'fantasy' OR "Genre" = 'sci-fi';
+SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror' ORDER BY "Title";
+SELECT "Title", "PrimaryAuthor" from "Books" where "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
 ```
 
 #### UPDATE
@@ -342,9 +342,9 @@ To change data in our database, we use an `UPDATE` statement. The general
 structure of an `UPDATE` is:
 
 ```sql
-UPDATE TableName
-SET ColumnA = 'new value'
-WHERE ColumnB = 'some value'
+UPDATE "TableName"
+SET "ColumnA" = 'new value'
+WHERE "ColumnB" = 'some value'
 ```
 
 The above update statement will update all rows that have
@@ -359,7 +359,7 @@ multiple conditions and combine them with `AND` and `OR`
 Example:
 
 ```sql
-UPDATE Books SET genre = 'children horror' WHERE PrimaryAuthor = 'R. L. Stine';
+UPDATE "Books" SET "Genre" = 'children horror' WHERE "PrimaryAuthor" = 'R. L. Stine';
 ```
 
 #### DELETE
@@ -369,7 +369,7 @@ To remove one or many rows, we can use the `DELETE` statement.
 Example:
 
 ```sql
-DELETE FROM Books WHERE YearPublished = 1995;
+DELETE FROM "Books" WHERE "YearPublished" = 1995;
 ```
 
 This will delete all the books with a `YearPublished` of 1995.

@@ -69,18 +69,18 @@ things like "the student's name", "the student's age", "the student's birthday",
 ```
 
 You'll notice that all the attributes are singular named and store a single
-value. If we had an attribute of an entity, say multiple phone numbers for a
-`Teacher` we'd create another entity to track those.
+value. If we had multiple-value attribute of an entity, say multiple phone
+numbers for a `Teacher`, we'd create another entity to track those.
 
 In addition to the names of the attributes we may also capture the type of data
 the attribute represents. `Name` for instance would be text while `Age` is a
 number, and `Birthday` is a date. These data types will become column types
-eventually in our databse.
+eventually in our database.
 
 ### Relationships
 
 After identifying the entities and their attributes we can identify the
-relationships
+relationships.
 
 ```
 +-------------+                     +--------------+                   +-----------+
