@@ -1,5 +1,6 @@
 ---
 title: Freelancing Resources & Pro Tips to Get Hired
+order: 5
 ---
 
 ## What is freelance?
