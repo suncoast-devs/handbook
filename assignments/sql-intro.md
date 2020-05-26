@@ -14,25 +14,21 @@ using SQL databases.
 
 ## Setup
 
-Create a new directory named `sql-intro` for this homework. You will be creating
-one file, `queries.sql` in the directory which you will turn in.
-
-## Turning in the project.
-
-When you are done:
-
-```shell
-hub create sql-intro
-git add .
-git commit -m "Queries"
-git push
-```
+1. Fork [this repository](https://github.com/suncoast-devs/sql-intro) to your
+   own account.
+2. Change into your project's directory.
+3. Clone your repository:
+   `git clone https://github.com/YOUR_NAME_HERE/sql-intro`
+4. Change into your newly cloned project's directory: `cd sql-intro`
+5. `code .`
+6. All your SQL queries should be placed inside the `queries.sql` file.
 
 ### Explorer Mode
 
-- [ ] Create a database: `CompanyDatabase`
+- [ ] Create a database: `CompanyDatabase`.
 - [ ] Create a table: `Employees` with the following columns. Use your best
-      judgement for data types.
+      judgment for data types. Copy the query you used to create this table and
+      paste it into `queries.sql`.
 
   - `FullName`
   - `Salary`
@@ -40,22 +36,42 @@ git push
   - `PhoneExtension`
   - `IsPartTime`
 
-- [ ] Create a file named `queries.sql` to store the queries you create.
-- [ ] Create queries that can do the following:
+- [ ] Create a few employees. Review the requirements below to see some examples
+      of the values you may need. For instance, you may need employees of
+      certain job positions, employees with certain names, etc. Add enough data
+      (maybe 10 rows) such that you can validate your queries. _Copy the queries
+      you used to create your data into `queries.sql`_
+- [ ] Create queries that can do the following. **Each query** should be
+      attempted in your database. When it works, copy the query to
+      `queries.sql`. You may optionally copy and paste the query output to your
+      queries.sql if you wish.
 
   - [ ] Select all columns for all employees.
-  - [ ] Select only the full names and phone extensions for only full time
+  - [ ] Select only the full names and phone extensions for only full-time
         employees.
-  - [ ] Insert a new part time employee, as a software developer, with a salary
-        of 450.
+  - [ ] Insert a new part-time employee, as a software developer, with a salary
+        of 450. Make up values for the other columns.
   - [ ] Update all employees that are cooks to have a salary of 500.
   - [ ] Delete all employees that have the full name of "Lazy Larry".
-  - [ ] Add a column to the table: `ParkingSpotNumber` as a string that can
-        store up to 10 characters.
+  - [ ] Add a column to the table: `ParkingSpot` as textual information that can
+        store _up to_ 10 characters.
 
 ### Adventure Mode
 
+- [ ] Add queries to `queries.sql` that show how to:
+  - [ ] Recreate your database and tables and use `NOT NULL` for columns you
+        feel are required.
+  - [ ] Add a primary key named `Id` to your table.
+
 ### Epic Mode
+
+- [ ] Add queries to `queries.sql` that show how to:
+  - [ ] Create a second table: `Departments` that has these columns:
+    - `Name`
+    - `BuildingNumber`
+  - [ ] Create a column on the `Employees` table named `DepartmentId` to relate
+        to the `Departments` table. Make it a foreign key.
+  - [ ] Insert employees and related departments.
 
 ## Additional Resources
 

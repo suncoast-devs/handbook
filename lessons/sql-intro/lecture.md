@@ -6,8 +6,7 @@ theme: Next, 1
 
 ---
 
-SQL (Structured Query Language) is a descriptive computer language designed for
-updating, retrieving, and calculating data in table-based databases.
+SQL (Structured Query Language) is a descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.
 
 > Mozilla Developer Network
 
@@ -37,8 +36,7 @@ updating, retrieving, and calculating data in table-based databases.
 
 # [fit] Atomicity
 
-Updates to the database allow for multiple changes to be requested at once and
-either all of them fail, or all of them succeed
+Updates to the database allow for multiple changes to be requested at once and either all of them fail, or all of them succeed
 
 ^ For instance, if our application is a banking application and we want to
 withdraw \$10 from Andy's account and add it to Barbara's account, we might
@@ -383,11 +381,11 @@ books.
 ```sql
 SELECT * FROM "Books";
 
-SELECT "Title", "PrimaryAuthor" from "Books";
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror';
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'fantasy' OR "Genre" = 'sci-fi';
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror' ORDER BY "Title";
-SELECT "Title", "PrimaryAuthor" from "Books" where "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
+SELECT "Title", "PrimaryAuthor" FROM "Books";
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'fantasy' OR "Genre" = 'sci-fi';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror' ORDER BY "Title";
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
 ```
 
 ---
@@ -402,14 +400,13 @@ SET "ColumnA" = 'new value'
 WHERE "ColumnB" = 'some value'
 ```
 
-The above update statement will update all rows that have `ColumnB = 'some value` and change `ColumnA` to contain `new value`.
+The above update statement will update all rows that have `ColumnB = 'some value'` and change `ColumnA` to contain `'new value'`.
 
 ---
 
 # NOTE
 
-The same syntax for `WHERE` clauses from `SELECT` apply here. We can use
-multiple conditions and combine them with `AND` and `OR`
+The same syntax for `WHERE` clauses from `SELECT` apply here. We can use multiple conditions and combine them with `AND` and `OR`
 
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be updated.
 

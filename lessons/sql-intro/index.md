@@ -318,7 +318,7 @@ We can use the `WHERE` clause to help filter down our table to only see rows
 that satisfy the conditions supplied. For example:
 
 ```sql
-SELECT "Title", "PrimaryAuthor" FROM 'Books" WHERE "Genre" = 'horror';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror';
 ```
 
 This query only returns the `Title` and `PrimaryAuthor` of books that have a
@@ -329,11 +329,11 @@ More examples:
 ```sql
 SELECT * FROM "Books";
 
-SELECT "Title", "PrimaryAuthor" from "Books";
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror';
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'fantasy' OR "Genre" = 'sci-fi';
-SELECT "Title", "PrimaryAuthor" from "Books" where "Genre" = 'horror' ORDER BY "Title";
-SELECT "Title", "PrimaryAuthor" from "Books" where "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
+SELECT "Title", "PrimaryAuthor" FROM "Books";
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'fantasy' OR "Genre" = 'sci-fi';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror' ORDER BY "Title";
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
 ```
 
 #### UPDATE
