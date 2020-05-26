@@ -84,7 +84,7 @@ Here are some portfolio template resources to help you get started:
 While templates are a fantastic tool, you should remember that you are not the only one using that template. Take a look at these examples that use the same template.
 
 Example 1
-- [Venel - Cohort 2](http://venelrene.github.io/)
+- [Venel - Cohort 1](http://venelrene.github.io/)
 - [Michelle - Cohort XII](http://michelleyenny.surge.sh/)
 
 Example 2
