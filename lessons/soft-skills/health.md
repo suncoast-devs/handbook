@@ -13,10 +13,10 @@ Self-care is being purposeful in ensuring that you have your needs met, both phy
 
 Practicing self-care is as much about taking care of your mind as your body. 
 
- ### Watch what you eat
+## Watch what you eat
 Fuel your body so it can work effectively by eating healthy meals and snacks. Also, you shouldn't skip meals because you are "too busy" or "just need to finish this last thing."  Keeping your body fueled helps your mind work more effectively, and no one likes to code hangry.
 
-### Exercise / Take a break
+## Exercise / Take a break
 Exercising doesn't mean you have to head to the gym, do a 5 mile run or sweat for hours. Even a short walk around the block can help. The goal should be to step away from your computer, give your brain a break, and allow your body to move. Moving helps avoid back pain, mental frustration, and breaks the monotony of the day.
 
 Check out some of these exercise options to get you moving:
@@ -25,7 +25,7 @@ Check out some of these exercise options to get you moving:
 - [The 15 Best Living Room Exercises](https://www.fatherly.com/health-science/easy-workout-quick-workout/)
 - [10 Simple Morning Exercises to Make You Feel Great All Day](https://www.lifehack.org/articles/lifestyle/10-simple-morning-exercises-that-will-make-you-feel-great-all-day.html)
 
-### Stay hydrated
+## Stay hydrated
 Keeping your body hydrated goes hand in hand with eating. "Drinking fluids is crucial to staying healthy and maintaining the function of every system in your body, including your heart, brain, and muscles." -- [Harvard Medical School](https://www.health.harvard.edu/staying-healthy/the-importance-of-staying-hydrated). It's easy to think you are hydrating because you are drinking something liquid, but a large amount of soda/pop or coffee doesn't always give your body what it needs.
 
 Drinking water isn't always a high priority, sometimes checking out other ways to get the hydration we need can make staying hydrated easier. [The 5 Best Ways to Rehydrate Quickly](https://www.healthline.com/nutrition/how-to-rehydrate):
@@ -60,9 +60,10 @@ So how do you help maintain the health of your eyes?
 
 **[F.lux](https://justgetflux.com/)** is a program that adjusts a display's color temperature according to location and time of day, offering functional respite for the eyes. F.lux reduces eye strain during night-time use, helping to minimize the disruption of sleep patterns.
 
-**Get your eyes checked** Having your eyes checked on a scheduled basis will help identify problems early
+**Get your eyes checked** 
+Having your eyes checked on a scheduled basis will help identify problems early
 
-## Hand Care
+### Hand Care
 Sitting at a desk and working all day can strain your muscles and joints.
 
 So how do you prevent computer-related injuries?
