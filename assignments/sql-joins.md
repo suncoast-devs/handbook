@@ -7,8 +7,13 @@ As we continue to explore databases and ideas, this project will help you
 practice model databases and relationships.
 
 We will be expanding on our `CompanyDatabase` from the
-[sql-intro assignment](/assignments/sql-intro). You will adding new tables and
-writing queries for these new tables.
+[sql-intro assignment](/assignments/sql-intro). You will be adding new tables
+and be writing queries for these new tables.
+
+Reuse the same repository from that assignment for this assignment. Add the new
+queries _below_ the queries from that assignment such that the one repository
+will have both sets of queries. Use the same repository URL to turn in tonight's
+homework.
 
 ## Objectives
 
@@ -38,8 +43,8 @@ writing queries for these new tables.
     - `QuantityInStock` as an integer
 - [ ] In our company, one `Order` can have many `Products` and one `Product` can
       have many `Orders`. This will be a Many-to-Many relationship. Create the
-      necessary table `ProductOrders`, foreign keys, and the `OrderQuantity`
-      field needed for this to happen.
+      necessary table `ProductOrders`, foreign keys, and the
+      `OrderQuantity`field needed for this to happen.
 
 * [ ] Create queries that can do the following:
 
@@ -65,16 +70,16 @@ writing queries for these new tables.
   | 12.45 | Widget  | The Original Widget  | 100             |
   | 99.99 | Flowbee | Perfect for haircuts | 3               |
 
-* [ ] Insert a new order with order number `O529`, placed on Jan 1st, 2020 at
+* [ ] Insert a new order with order number `X529`, placed on Jan 1st, 2020 at
       4:55PM, by someone with the email address "person@example.com"
 * [ ] Add an order quantity of `3` for the product named `Widget` to the order
-      `O529`
+      `X529`
 * [ ] Add an order quantity of `2` for the product named `Flowbee` to the order
-      `O529`
+      `X529`
 * [ ] Given a department id, return all employees in the department.
 * [ ] Given a department name, return all the phone extensions.
 * [ ] Find all orders that contain the product id of `2`.
-* [ ] Remove the `Flowbee` product from order with order number `O529`.
+* [ ] Remove the `Flowbee` product from order with order number `X529`.
 
 ### Adventure Mode
 
