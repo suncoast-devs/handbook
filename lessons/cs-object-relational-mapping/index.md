@@ -77,22 +77,14 @@ This will allow us to setup relationships between our database tables and our
 `C#` classes, which we will refer to as `POCO`s -- Plain Old C-sharp Objects.
 
 By introducing a few concepts we will be able to use the familiar `LINQ`
-statements we have learned
-
-<!-- TODO: Insert link to that lesson -->
-
-to be able to create, read, update, and delete rows of data. The _Entity
-Framework Core_ (EF Core, or EF) has a number of classes as well as helper tools
-to make our lives easier. In this next section we will introduce the basics we
-need to get started.
+statements to create, read, update, and delete rows of data. The _Entity
+Framework Core_ (EF Core, or EF) has a number of classes and helper tools to
+make our lives easier. In this next section we will introduce the basics we need
+to get started.
 
 ## Lets use an existing database
 
-In our lesson on SQL Joins
-
-<!-- TODO: Insert link to that lesson -->
-
-we had a database setup that looks like this:
+In our lesson on SQL Joins we had a database setup that looks like this:
 
 ```
 +--------------------------------+           +---------------------------+
