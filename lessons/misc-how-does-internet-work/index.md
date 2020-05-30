@@ -22,7 +22,7 @@ certainly the most common.
 
 Once the browser realizes you wish to visit `handbook.suncoast.io` it must
 figure out how to address the server. The internet itself does not deal in terms
-of names like `handbook.sucoast.io` but in terms of a numerical addresses in the
+of names like `handbook.sucoast.io` but in terms of a numerical address in the
 form `1.2.3.4` or `192.168.145.241`. The `host names` (e.g.
 `handbook.suncoast.io`) are a convenience to users to not have to deal with
 remembering the address a service is located at, and also allows the owner of
@@ -30,39 +30,38 @@ the service to move it without having to tell people the new address. These
 addresses are an `IP Address` (Internet Protocol Address).
 
 So how does the browser know to find the `IP Address` of `handbook.suncoast.io`?
-It uses a service known as `DNS` (`Domain Name Services`). In every client you
-have defined a preset list of `IP Addresses` that are equip to perform a
-translation of a domain name like `handbook.suncoast.io` into it's address
-`104.248.50.87`. The `DNS` process allows your computer to quickly translate the
-address.
+It uses a service known as `DNS` (`Domain Name Services`). Every client has a
+defined list of `IP Addresses` that are equipped to perform a translation of a
+domain name like `handbook.suncoast.io` into its address `104.248.50.87`. The
+`DNS` process allows your computer to quickly translate the address.
 
 How does this work?
 
 The first address that your computer might have is that of your local router. In
-this case your browser sends a request to that address asking for the address of
-`handbook.suncoast.io`. If your router has recently _resolved_ (turned the name
-into an address) it will return that information to your browser. However, every
-request for a translation from a name into an address comes with a `TTL` (Time
-To Live), an amount of seconds that the information can be safely stored and
-reused. So if that time has expired your router must ask for fresh information,
-the same as if it had never requested the information in the first place. Your
-router will then look at it's own list of DNS addresses. Typically this these
-addresses belong to your ISP, but you may have also setup to use DNS services
-from a company like Google, Cloudflare, OpenDNS or other organizations that run
-"Public DNS Servers." Your router will send a request to it's DNS service on
-your behalf and await a result. That DNS service does a lookup in much the same
-way. For instance, if it has recently answered the same request, say your
-neighbor also looked up `handbook.suncoast.io` it will return that _cached_
-result. If that has expired, or it hasn't ever looked up that address it will
-then try to determine the "authoritative answer" to the request.
+this case, your browser sends a request to that address asking for the address
+of `handbook.suncoast.io`. If your router has recently _resolved_ (turned the
+name into an address) it will return that information to your browser. However,
+every request for a translation from a name into an address comes with a `TTL`
+(Time To Live), a number of seconds that the information can be safely stored
+and reused. So if that time has expired your router must ask for fresh
+information, the same as if it had never requested the information in the first
+place. Your router will then look at its own list of DNS addresses. Typically
+this these addresses belong to your ISP, but you may have also set up to use DNS
+services from a company like Google, Cloudflare, OpenDNS or other organizations
+that run "Public DNS Servers." Your router will send a request to it's DNS
+service on your behalf and await a result. That DNS service does a lookup in
+much the same way. For instance, if it has recently answered the same request,
+say your neighbor also looked up `handbook.suncoast.io` it will return that
+_cached_ result. If that has expired, or it hasn't ever looked up that address
+it will then try to determine the "authoritative answer" to the request.
 
 The first thing it needs to do is find out where this _authoritative answer_
-lives. It does so by looking at the `Top Level Domain` or `TLD`. In this case
+lives. It does so by looking at the `Top Level Domain` or `TLD`. In this case,
 the TLD is `.io`, but these can also be `.com` and `.org`, etc. The DNS server
 then asks the TLD server "What servers know about `suncoast.io`?" Notice it only
 cares about `suncoast.io` since it really wants to ask the owner of
 `suncoast.io` about the `handbook` part. The TLD server will respond with the
-DNS servers responsible for `suncoast.io` that were setup when the domain was
+DNS servers responsible for `suncoast.io` that were set up when the domain was
 _registered_.
 
 These servers are then asked for the details of `handbook.suncoast.io` and the
@@ -81,16 +80,16 @@ we encounter is, itself, a deep and fascinating subject.
 
 ## Let's take a look at a few DNS examples
 
-Your computer may come with a tool named `dig` to look up DNS entries. If not
-you may have a tool named `nslooup`.
+Your computer may come with a tool named `dig` to lookup DNS entries. If not you
+may have a tool named `nslooup`.
 
-Lets look up `handbook.suncoast.io`
+Let's lookup `handbook.suncoast.io`
 
 ```shell
 dig handbook.suncoast.io
 ```
 
-In addition to other details you will get something similar to the following.
+In addition to other details, you will get something similar to the following.
 NOTE, your address may differ from `162.243.166.170`
 
 ```
@@ -110,7 +109,7 @@ Try using `dig` (or `nslookup`) to query `amazon.com`
 dig amazon.com
 ```
 
-In addition to other details you will get something similar to the following.
+In addition to other details, you will get something similar to the following.
 NOTE, your address may differ from those below
 
 ```
@@ -154,7 +153,7 @@ The `CNAME` means canonical name, or that `new-fp-shed.wg1.b.yahoo.com` is the
 real name of `yahoo.com`. Then that name is resolved and we see that there are
 **4** addresses for that name.
 
-DNS makes for a remarkably dynamic and resilient service.
+DNS makes for remarkably dynamic and resilient service.
 
 ## Making Connections
 
@@ -169,7 +168,7 @@ services like `pop3` and `smtp` which deal with email as well as services like
 `postgres`, our database.
 
 Each of these `services` will be _listening_ for a connection from a client on a
-particular `port number`. If you think of the `IP Address` like a street address
+particular `port number`. If you think of the `IP Address` as a street address
 of an office building, you can think of the `port number` as which room in the
 building the service is in.
 
@@ -186,14 +185,14 @@ we can _receive_ information in return.
 
 ## How do we connect to one of these ports?
 
-Lets try connecting like the browser does.
+Let's try connecting like the browser does.
 
-For this we will be using a tool named `telnet`.
+For this, we will be using a tool named `netcat`.
 
-On Mac OS install it with: `brew install telnet` On Linux it is likely already
-installed. On Windows install it with: `pkgmgr /iu:TelnetClient`
+On Mac OS install it with: `brew install nc` On Linux it is likely
+`sudo apt install netcat`. On Windows: `scoop install netcat`
 
-To connect: `telnet gstark.com 80`
+To connect: `nc gstark.com 80`
 
 Now that we are connected, how do we talk? We use the `http` protocol that is
 [well documented.](https://tools.ietf.org/html/rfc2616)
@@ -227,3 +226,9 @@ What are other HTTP headers?
   - `curl`
   - `http` (httpie)
   - `Insomnia`
+
+# Resources
+
+- This is a nice
+  [visualization](https://www.verisign.com/en_US/website-presence/online/how-dns-works/index.xhtml)
+  of the DNS process.
