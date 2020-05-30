@@ -145,7 +145,7 @@ The purpose of the database context is to tell our code what models in the datab
 ```csharp
 class SuncoastMoviesContext : DbContext
 {
-  public DbSet<Movie> movies { get; set; }
+  public DbSet<Movie> Movies { get; set; }
 
   protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
   {
@@ -234,7 +234,7 @@ To see all of the movies, we can use a `foreach` loop:
 ```csharp
 foreach (var movie in movies)
 {
-  Console.WriteLine($"There is a movie named {movie.title}");
+  Console.WriteLine($"There is a movie named {movie.Title}");
 }
 ```
 

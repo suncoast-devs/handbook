@@ -199,7 +199,7 @@ Our database context looks like this:
 class SuncoastMoviesContext : DbContext
 {
   // Define a movies property that is a DbSet.
-  public DbSet<Movie> movies { get; set; }
+  public DbSet<Movie> Movies { get; set; }
 
   // Define a method required by EF that will configure our connection
   // to the database.
