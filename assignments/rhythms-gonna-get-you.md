@@ -14,20 +14,22 @@ You are creating a console app that stores our information in a database.
 - Practice working with SQL
 - Practice working with ORMs (EF Core)
 
-## Requirements
+## Setup
 
 Create a console that allows a user to store and manage the company's bands,
 albums, and (eventually) songs.
 
-```shell
-dotnet new --install SDG.templates.Console.Database
-```
+## Top Tips
+
+Although in reality an album could be done by more than one band, our system
+will just have an album involving **one** band. That is, an album belongs to one
+band.
 
 ### Explorer Mode
 
-- [ ] Create a database that stores `Albums`, and `Bands`. They should
-      have the following properties, use your best judgment for types. (We will
-      add foreign keys in the next step)
+- [ ] Create a database that stores `Albums`, and `Bands`. They should have the
+      following properties, use your best judgment for types. (We will add
+      foreign keys in the next step)
 
   - [ ] Album
     - Id
@@ -35,6 +37,7 @@ dotnet new --install SDG.templates.Console.Database
     - IsExplicit
     - ReleaseDate
   - [ ] Band
+
     - Id
     - Name
     - CountryOfOrigin
@@ -47,7 +50,7 @@ dotnet new --install SDG.templates.Console.Database
 
   - Add foreign keys to fulfill the following
 
-    - [ ] One Band has many Albums
+    - [ ] A Band has many Albums. An Album belongs to one Band.
 
   - [ ] Create an interface to let the user:
 
@@ -63,7 +66,10 @@ dotnet new --install SDG.templates.Console.Database
 
 ### Adventure Mode
 
-- [ ] Add the ability for an album to have many songs
+- [ ] Add the ability for an album to have many songs. **NOTE** a song will only
+      belong to a single album. Even if the same-named song appears on different
+      albums we'd have a second entry for it.
+
   - [ ] Song
 
     - Id
@@ -71,6 +77,7 @@ dotnet new --install SDG.templates.Console.Database
     - Lyrics
     - Length
     - Genre
+
 - [ ] Track the individual members of a band. Create a new table called
       `Musicians` and give it a many to many relationships with a Band
 - Add the following queries
@@ -78,6 +85,9 @@ dotnet new --install SDG.templates.Console.Database
   - [ ] View all members of a band
 
 ### Epic Mode
+
+- Add another entity that you feel would benefit the system. Update your ERD,
+  tables and user interface to support it.
 
 ## Additional Resources
 
