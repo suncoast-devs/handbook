@@ -3,7 +3,7 @@ title: Introduction to APIs
 ---
 
 Whenever two pieces of code communicate they do so with a prescribed format. The
-things the two pieces of code need to communicate are:
+two pieces of code need to agree on:
 
 - What is the input that needs to be sent?
 - What is the format of the input?
@@ -43,7 +43,7 @@ our own application, or even on our own computer!
 
 ## Remote APIs
 
-The most interesting use of APIs are when we can use an existing API that we do
+The most interesting use of APIs is when we can use an existing API that we do
 not need to incorporate directly into our code. These APIs are typically hosted
 on other computers, maintained by others, and provided to us for free or with a
 cost. We will typically access these APIs over the internet and thus the answer
@@ -52,7 +52,7 @@ to our five questions gets slightly more complicated.
 ## Using our first simple API
 
 I'm a fan of the TV Show _"Parks and Recreation"_ and the character _Ron
-Swanson._ He is known for his funny sayings and expressions. Luckily for me
+Swanson._ He is known for his funny sayings and expressions. Luckily for me,
 there is an API on the internet that can show me funny quotes of his. The
 project's [homepage](https://github.com/jamesseanwright/ron-swanson-quotes)
 describes how the API works. We'll be looking at all the different options, but
@@ -63,8 +63,9 @@ quote.
 - What is the format of the input? `None`
 - What is the name/location/identity of the code to be run?
   `http://ron-swanson-quotes.herokuapp.com/v2/quotes`
-- What is the output that will be returned? `A list of quotes from Ron`
-- What is the format of the output? `A JSON array of strings`
+- What is the output that will be returned?
+  `A list containing a single quote from Ron`
+- What is the format of the output? `A JSON array (of length 1) of strings`
 
 Soon we will learn how to access APIs via the command line, however, for now we
 will use a few tools that allow us to interact with APIs directly.
@@ -111,7 +112,7 @@ X-Powered-By: Express
 Let's break down all of the information that the `http` command output. All the
 lines before the first blank lines represent the _headers_ that the tool sent to
 the server. When earlier we said that there was no information the _API_
-required, there are still inputs that the web server needs. For instance, the
+required, there are still inputs that the webserver needs. For instance, the
 first line `GET /v2/quotes HTTP/1.1` indicates which URL on the server we are
 looking for and what version of HTTP we are speaking. Also included is the
 `Host` to indicate which host we are speaking to. There is more detail about how
@@ -160,7 +161,7 @@ If we need to send the API input there are several ways of doing so. We will
 investigate some here and visit the rest when we discuss how to create, update,
 and delete data.
 
-The first way is to provide the input as part of the URL itself. Looking at the
+The first way is to provide input as part of the URL itself. Looking at the
 documentation for the Ron Swanson API we see that if we tack on `/<count>` where
 `<count>` is a number we can receive more than one quote.
 
@@ -213,7 +214,7 @@ the parameter is `API`. This is how Google knows which term you are searching
 for. Try it now. Put `https://google.com?q=Breakfast` in your browser URL bar
 and press enter. You'll see google will have identified your search query!
 
-The Ron Swanson API does not use this mode for specifying it's inputs but if it
+The Ron Swanson API does not use this mode for specifying its inputs but if it
 had, those queries would look like this:
 
 `http://ron-swanson-quotes.herokupapp.com/v2/quotes?count=5`
@@ -232,7 +233,7 @@ requests fit that style:
 - Give me 12 Ron Swanson quotes
 - Give me any Ron Swanson quotes where he mentions work
 
-However it would _not_ fit a style of:
+However, it would _not_ fit a style of:
 
 - Here is a new Ron Swanson quote I want you to keep around.
 - Please remove the 4th Ron Swanson quote.
@@ -241,3 +242,12 @@ However it would _not_ fit a style of:
 
 All of those requests modify information and thus a `GET` request is not
 sufficient. Luckily there are other verbs we can use.
+
+# PUT, POST, DELETE
+
+These are the next most common verbs. They are typically used to CREATE, UPDATE,
+and DELETE information.
+
+If we need to supply additional information, say to a `POST` request to create
+data, we will put the information in the `body` of the request. We will see some
+examples when we try a few APIs that allow us to create and modify data.

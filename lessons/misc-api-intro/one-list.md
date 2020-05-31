@@ -27,7 +27,7 @@ This API URL will get the list of all todo items. If we run `http` to fetch data
 from the API like:
 
 ```shell
-http https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage
+http "https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage"
 ```
 
 We would see output similar to:
@@ -72,7 +72,7 @@ specific token. Notice that in the URL we put the specific TODO item's `id`
 while also providing the access token.
 
 ```shell
-http https://one-list-api.herokuapp.com/items/20?access_token=illustriousvoyage
+http "https://one-list-api.herokuapp.com/items/20?access_token=illustriousvoyage"
 ```
 
 This will return the details on only item with `id` of `20`.
@@ -199,7 +199,7 @@ to our _API questions_
 Generally these answers are:
 
 - What is the input that needs to be sent?
-  `Any URL parameters, like {id} and query parameters like {access_token} as well as the body of the request`
+  `Any URL parameters, like {id} and query parameters like {access_token} as well as the body of the request if required`
 - What is the format of the input? `The body will be in JSON format`
 - What is the name/location/identity of the code to be run?
   `This will be the URL and the specific verb to use`
