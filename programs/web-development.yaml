@@ -60,6 +60,10 @@ modules:
       - cs-api-servers
       - auth0-intro
       - cs-deployment-docker
+  - quick-reference:
+    title: Quick Reference Guides
+    lessons:
+      - misc-quick-reference
   - career-support:
     title: Career Support
     lessons:
