@@ -48,7 +48,7 @@ https://handbook.suncoast.io
 
 - Once the browser realizes you wish to visit `handbook.suncoast.io` it must figure out how to address the server.
 
-- The internet itself does not deal in terms of names like `handbook.sucoast.io` but in terms of a numerical address in the form `1.2.3.4` or `192.168.145.241`.
+- The internet itself does not deal in terms of names like `handbook.suncoast.io` but in terms of a numerical address in the form `1.2.3.4` or `192.168.145.241`.
 
 ---
 
@@ -182,7 +182,7 @@ Now that we are connected, how do we talk? We use the `http` protocol that is [w
 
 ```
 GET / HTTP/1.1
-Host: gstark.com
+Host: handbook.suncoast.io
 
 ```
 
