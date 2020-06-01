@@ -44,15 +44,15 @@ request is made, and see how data is returned from an API
 - [ ] For one response, show a screenshot with the "Header" tab displayed.
 - [ ] For this response, find a few headers and describe what they do. NOTE: If
       the header starts with `X-` it is a _custom_ header and likely is
-      documented by your API. Other headers are more standard and can be more
-      easily google searched.
+      documented by your API. Other headers are more standard and can be google
+      searched.
 
 ## Adventure Mode
 
 Read the documentation on this API: https://one-list-api.herokuapp.com/
 
-Choose an access token for yourself equal to your first and last name. For
-example `jane-doe` or `ron-swanson`.
+Choose your access token from your first and last name. For example `jane-doe`
+or `ron-swanson`.
 
 - [ ] Use `Insomnia` to insert 6 items in the list associated with your access
       token. Attach screenshots of the request and results screen.
@@ -65,5 +65,5 @@ example `jane-doe` or `ron-swanson`.
 
 - [ ] Investigate using C#'s `HttpClient` class to make requests to any of the
       APIs you used in Adventure mode.
-- [ ] Create a console app that makes such a requests and prints the results.
-      Submit the URL to the github repository of this console app.
+- [ ] Create a console app that makes requests and prints the results. Submit
+      the URL to the Github repository of this console app.
