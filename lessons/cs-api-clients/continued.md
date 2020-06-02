@@ -160,7 +160,7 @@ We'll update the menu code first. Changing
 ```csharp
 case "O":
     Console.Write("Enter the ID of the item to show: ");
-    var id = Console.ReadLine();
+    var id = int.Parse(Console.ReadLine());
 
     await GetOneItem(token, id);
 

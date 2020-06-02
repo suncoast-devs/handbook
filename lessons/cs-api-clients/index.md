@@ -4,7 +4,7 @@ title: Building API Clients in C# and .NET
 
 ## Consuming API services
 
-In THIS LESSON (link to misc-api-intro) we discussed the idea of an API which
+In [this lesson](/lessons/misc-api-intro) we discussed the idea of an API which
 operates over the internet via HTTP.
 
 In this lesson we will build a console application that will interact with the
