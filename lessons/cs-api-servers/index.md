@@ -655,7 +655,7 @@ Our controller code is now:
 using System;
 using Microsoft.AspNetCore.Mvc;
 
-    namespace BasicApi.Controllers
+namespace BasicApi.Controllers
 {
     public class Game
     {
