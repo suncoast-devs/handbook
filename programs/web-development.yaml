@@ -40,8 +40,7 @@ modules:
       - misc-api-intro
       # - misc-rest
       - cs-api-clients
-      # - cs-build-api-with-database
-      # - cs-deployment-to-heroku-with-docker
+      - cs-api-servers
       # - misc-optimizing-developer-workspace
       # - cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
