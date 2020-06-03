@@ -25,7 +25,7 @@ request is made, and see how data is returned from an API
 | API                                                      | Documentation                                  |
 | -------------------------------------------------------- | ---------------------------------------------- |
 | Dogs                                                     | https://dog.ceo/dog-api/                       |
-| Studio Ghibli https://ghibliapi.herokuapp.com/#tag/Films |
+| Studio Ghibli                                            | https://ghibliapi.herokuapp.com/#tag/Films     |
 | Open Brewery                                             | https://www.openbrewerydb.org/                 |
 | Recipes                                                  | http://www.recipepuppy.com/about/api/          |
 | Deck of Cards!                                           | http://deckofcardsapi.com/                     |
@@ -35,6 +35,7 @@ request is made, and see how data is returned from an API
 | Quotes                                                   | https://pprathameshmore.github.io/QuoteGarden/ |
 | SpaceX                                                   | https://docs.spacexdata.com/?version=latest    |
 | Jokes                                                    | https://github.com/15Dkatz/official_joke_api   |
+| Star Wars API                                            | https://swapi.dev                              |
 
 - [ ] After choosing your API **read** the documentation.
 - [ ] Use the `Insomnia` tool to make a few queries of the API.
