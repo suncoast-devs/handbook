@@ -17,12 +17,12 @@ theme: Next,1
 We will generate a console application with:
 
 ```shell
-dotnet new sdg-console --name OneListClient
+dotnet new sdg-console -o OneListClient
 ```
 
 ---
 
-# Create an instance of `HttpClient` 
+# Create an instance of `HttpClient`
 
 ```csharp
 var client = new HttpClient();
