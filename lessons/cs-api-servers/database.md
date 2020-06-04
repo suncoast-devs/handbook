@@ -10,7 +10,7 @@ thanks to LINQ.
 
 If you have not yet followed the [lesson on SQL](/lessons/sql-intro),
 [lesson on SQL joins](/lessons/sql-joins), and the
-[lesson on EF Core](/lessons/cs-object-relational-mappint) we suggest you study
+[lesson on EF Core](/lessons/cs-object-relational-mapping) we suggest you study
 that lesson
 
 For this application we are going to use a new template. This template should
