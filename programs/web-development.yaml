@@ -58,7 +58,6 @@ modules:
     lessons:
       - cs-api-servers
       - auth0-intro
-      - cs-deployment-docker
   - quick-reference:
     title: Quick Reference Guides
     lessons:
