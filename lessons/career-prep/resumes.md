@@ -150,3 +150,13 @@ Something to keep in mind: the second page of your resume may not get as much at
 Need more information to help you decide the right length for your resume:
 - [The one-page resume vs. the two-page resume](https://www.monster.com/career-advice/article/one-page-or-two-page-resume)
 - [2 Page Resume: Will It Crush Your Chances?](https://zety.com/blog/two-page-resume)
+
+## Alum Resume Examples
+
+Need more examples on how to list your Professional Experience: [How to write your professional experience section](https://www.indeed.com/career-advice/resumes-cover-letters/listing-professional-experience-on-your-resume)
+
+- [Example Resume 1](https://drive.google.com/file/d/1hfkcv64Pv-k4QkZe2DrgvtY2rE_tQcS8/view?usp=sharing)
+- [Example Resume 2](https://drive.google.com/file/d/1hul1Ps_Yl21qHGlIbwdxtXXpiVsL5nyN/view?usp=sharing)
+- [Example Resume 3](https://drive.google.com/file/d/1FKU63YX5qc1G9KSuBE4s-NEgeZA3gtwb/view?usp=sharing)
+- [Example Resume 4](https://drive.google.com/file/d/1Zg9KwEK2HoM6w1UbzpEw9c44m2BcUzn6/view?usp=sharing)
+
