@@ -11,7 +11,7 @@ text.
 
 > Strings are surrounded by double quotes: `"`
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild";
 
 var description = "Code School in St Petersburg, FL";
@@ -23,7 +23,7 @@ var description = "Code School in St Petersburg, FL";
 
 We can append two strings using the `+` operator.
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild";
 
 var description = "Code School in St Petersburg, FL";
@@ -39,7 +39,7 @@ interpolated string.
 
 > Note: Interpolated strings start with a `$`
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild";
 
 var description = "Code School in St Petersburg, FL";
@@ -53,7 +53,7 @@ var mathProblem = $"What do you get when you multiply six by 9: {6 * 9}"
 
 We can get the length of a string by using the length property.
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild";
 
 var nameLength = name.Length;
@@ -66,7 +66,7 @@ Console.WriteLine(nameLength);
 
 We can iterate over a string and assess each character with a foreach loop.
 
-```C#
+```csharp
 var name = "Mary";
 
 foreach (var character in name)
@@ -74,16 +74,17 @@ foreach (var character in name)
   Console.WriteLine(character);
 }
 
-// Output: 
+// Output:
 // M
 // a
 // r
 // y
 ```
 
-Alternatively, we can use the string length to use a for loop and access each character by its index.
+Alternatively, we can use the string length to use a for loop and access each
+character by its index.
 
-```C#
+```csharp
 var name = "Mary";
 
 for (var index = 0; index < name.Length; index++)
@@ -100,9 +101,10 @@ for (var index = 0; index < name.Length; index++)
 
 ### Splitting a string
 
-We can split a string into an array of strings using the Split method. The first parameter will be the character you want to split the string on.
+We can split a string into an array of strings using the Split method. The first
+parameter will be the character you want to split the string on.
 
-```C#
+```csharp
 var sentence = "Today is a beautiful day";
 
 var words = sentence.Split(' ');
@@ -115,7 +117,7 @@ var words = sentence.Split(' ');
 
 We can replace parts of strings with new values by using the replace method.
 
-```C#
+```csharp
 var sentence = "Today is a beautiful day";
 
 sentence.Replace("beautiful", "sunny");
@@ -128,7 +130,7 @@ sentence.Replace("beautiful", "sunny");
 
 We can reverse the order of characters in a string by using the reverse method.
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild".
 
 var reverseName = name.Reverse();
@@ -139,9 +141,10 @@ var reverseName = name.Reverse();
 
 ### Changing the case of a string
 
-We can make all characters in a string upper case or lowercase with the ToUpper and ToLower methods.
+We can make all characters in a string upper case or lowercase with the ToUpper
+and ToLower methods.
 
-```C#
+```csharp
 var name = "Suncoast Developers Guild";
 
 var upperName = name.ToUpper();
@@ -157,9 +160,10 @@ var lowerName = name.ToLower();
 
 We can get part of a string by using the substring method.
 
-NOTE: The first number in the method is the starting index, the second number is how many characters to return.
+NOTE: The first number in the method is the starting index, the second number is
+how many characters to return.
 
-```C#
+```csharp
 var movie = "The Avengers: Endgame";
 
 var subtitle = movie.Substring(14, 7);
@@ -170,9 +174,10 @@ var subtitle = movie.Substring(14, 7);
 
 ### Does a string contain another string
 
-We can check to see if one string is contained in another string by using the contains method.
+We can check to see if one string is contained in another string by using the
+contains method.
 
-```C# 
+```csharp
 var movieDescription = "Thanos attempts to gather all infinity stones to end the Avengers for good.";
 
 var containsInfinity = movieDescription.Contains("infinity");
@@ -186,9 +191,10 @@ var containsHulk = movieDescription.Contains("Hulk");
 
 ### EndsWith
 
-We can check if a string ends with a certain substring by using the EndsWith method.
+We can check if a string ends with a certain substring by using the EndsWith
+method.
 
-```C#
+```csharp
 var headline = "Fundraising night was a huge success!";
 
 var endsWithExclamation = headline.EndsWith("!");
@@ -199,9 +205,10 @@ var endsWithExclamation = headline.EndsWith("!");
 
 ### StartsWith
 
-We can also check if a string starts with a certain substring by using StartsWith method.
+We can also check if a string starts with a certain substring by using
+StartsWith method.
 
-```C#
+```csharp
 var greeting = "Welcome to our home!"
 
 var beginsWithHello = greeting.BeginsWith("Hello");
@@ -214,7 +221,7 @@ var beginsWithHello = greeting.BeginsWith("Hello");
 
 We can join an array of strings back into a single string using the Join method.
 
-```C#
+```csharp
 var studentNames = new string[5] {"Marcus", "Emily", "Jason", "Steve", "Julia"};
 
 var studentString = studentNames.Join(", ");
@@ -225,11 +232,12 @@ var studentString = studentNames.Join(", ");
 
 ### Pad + Trim
 
-You can add and remove characters to the beginning and end of strings with PadLeft, PadRight and Trim methods.
+You can add and remove characters to the beginning and end of strings with
+PadLeft, PadRight and Trim methods.
 
 NOTE: Trim will automatically trim the left and right sides of a string.
 
-```C#
+```csharp
 var museumName = "Salvador Dali Museum";
 
 var paddedName = museumName.PadLeft(3, '*');

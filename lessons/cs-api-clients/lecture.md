@@ -42,7 +42,7 @@ The first we will review is a method that makes a `GET` request to a server and 
 
 # GetStringAsync
 
-```C#
+```csharp
 var responseAsString = client.GetStringAsync(
   "https://one-list-api.herokuapp.com/items?access_token=sdg-handbook"
 );
@@ -74,7 +74,7 @@ If you place your cursor on the error and press `Control .` (Windows) or `Comman
 
 ---
 
-```C#
+```csharp
 static async System.Threading.Tasks.Task Main(string[] args)
 {
     var client = new HttpClient();
@@ -152,7 +152,7 @@ updated_at: string
 
 ---
 
-```C#
+```csharp
 class Item
 {
     public int id { get; set; }
@@ -211,7 +211,7 @@ By using a `stream` the _deserializer_ can process data a little at a time in ca
 
 # Modify the code
 
-```C#
+```csharp
 var responseAsStream = await client.GetStreamAsync(
   "https://one-list-api.herokuapp.com/items?access_token=sdg-handbook"
 );
@@ -219,7 +219,7 @@ var responseAsStream = await client.GetStreamAsync(
 
 And then we need to supply this `stream` to the _deserializer_
 
-```C#
+```csharp
 var items =
  await JsonSerializer.DeserializeAsync<List<Item>>(
    responseAsStream
@@ -230,7 +230,7 @@ var items =
 
 # Walk the code
 
-```C#
+```csharp
 //
 // Wait for the async
 // |
@@ -247,7 +247,7 @@ var items =
 
 ---
 
-```C#
+```csharp
 // For each item in our deserialized List of Item
 foreach (var item in items)
 {
@@ -277,7 +277,7 @@ Luckily for us that string is in a very specific format called an [ISO8601](http
 
 The `False` is not friendly so lets improve that. We can add another custom property which contains logic for it's `get` implementation:
 
-```C#
+```csharp
 public string CompletedStatus
 {
     get
@@ -291,7 +291,7 @@ public string CompletedStatus
 
 # Use C# style property names
 
-```C#
+```csharp
 class Item
 {
     [JsonPropertyName("id")]
@@ -322,7 +322,7 @@ The [documentation for ConsoleTables](https://github.com/khalidabuhakmeh/Console
 
 ---
 
-```C#
+```csharp
 var table = new ConsoleTable(
   "Description",
   "Created At",
@@ -358,7 +358,7 @@ So we can use this to get the name of the list we want to process.
 
 Since this is an array we can access the 0th (first) element: `var token=args[0]` and then use string interpolation to generate our URL:
 
-```C#
+```csharp
 var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 ```
 
@@ -366,7 +366,7 @@ var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
 # What if we don't supply a token?
 
-```C#
+```csharp
 var token = "";
 
 if (args.Length == 0)
