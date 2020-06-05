@@ -59,7 +59,7 @@ var name = "Suncoast Developers Guild";
 var nameLength = name.Length;
 
 Console.WriteLine(nameLength);
-//Output: 25;
+// Output: 25
 ```
 
 ### Iterating the characters in a string
@@ -74,11 +74,11 @@ foreach (var character in name)
   Console.WriteLine(character);
 }
 
-//Output: 
-//M
-//a
-//r
-//y
+// Output: 
+// M
+// a
+// r
+// y
 ```
 
 Alternatively, we can use the string length to use a for loop and access each character by its index.
@@ -86,16 +86,16 @@ Alternatively, we can use the string length to use a for loop and access each ch
 ```C#
 var name = "Mary";
 
-for (var i = 0; i < name.Length; i++)
+for (var index = 0; index < name.Length; index++)
 {
-  Console.WriteLine(name[i]);
+  Console.WriteLine(name[index]);
 }
 
-//Output:
-//M
-//a
-//r
-//y
+// Output:
+// M
+// a
+// r
+// y
 ```
 
 ### Splitting a string
@@ -105,9 +105,10 @@ We can split a string into an array of strings using the Split method. The first
 ```C#
 var sentence = "Today is a beautiful day";
 
-var words = sentence.Split(" ");
+var words = sentence.Split(' ');
 
-//words = ['Today', 'is', 'a', 'beautiful', 'day'];
+// The effect would be:
+// words = ['Today', 'is', 'a', 'beautiful', 'day'];
 ```
 
 ### Replacing text in a string
@@ -119,7 +120,8 @@ var sentence = "Today is a beautiful day";
 
 sentence.Replace("beautiful", "sunny");
 
-//sentence = "Today is a sunny day";
+// The effect would be:
+// sentence = "Today is a sunny day";
 ```
 
 ### Reversing a string
@@ -131,7 +133,8 @@ var name = "Suncoast Developers Guild".
 
 var reverseName = name.Reverse();
 
-//reverseName = "dliuG srepoleveD tsaocnuS";
+// The effect would be:
+// reverseName = "dliuG srepoleveD tsaocnuS";
 ```
 
 ### Changing the case of a string
@@ -145,8 +148,9 @@ var upperName = name.ToUpper();
 
 var lowerName = name.ToLower();
 
-//upperName = "SUNCOAST DEVELOPERS GUILD";
-//lowerName = "suncoast developers guild";
+// The effects would be:
+// upperName = "SUNCOAST DEVELOPERS GUILD";
+// lowerName = "suncoast developers guild";
 ```
 
 ### Getting a sub-string
@@ -160,7 +164,8 @@ var movie = "The Avengers: Endgame";
 
 var subtitle = movie.Substring(14, 7);
 
-//subtitle = "Endgame";
+// The effect would be:
+// subtitle = "Endgame";
 ```
 
 ### Does a string contain another string
@@ -174,8 +179,9 @@ var containsInfinity = movieDescription.Contains("infinity");
 
 var containsHulk = movieDescription.Contains("Hulk");
 
-//containsInfinity = true;
-//containsHulk = false;
+// The effects would be:
+// containsInfinity = true;
+// containsHulk = false;
 ```
 
 ### EndsWith
@@ -187,7 +193,8 @@ var headline = "Fundraising night was a huge success!";
 
 var endsWithExclamation = headline.EndsWith("!");
 
-//endsWithExclamation = true;
+// The effect would be:
+// endsWithExclamation = true;
 ```
 
 ### StartsWith
@@ -199,7 +206,8 @@ var greeting = "Welcome to our home!"
 
 var beginsWithHello = greeting.BeginsWith("Hello");
 
-//beginsWithHello = false;
+// The effect would be:
+// beginsWithHello = false;
 ```
 
 ### Join
@@ -211,7 +219,8 @@ var studentNames = new string[5] {"Marcus", "Emily", "Jason", "Steve", "Julia"};
 
 var studentString = studentNames.Join(", ");
 
-//studentString = "Marcus, Emily, Jason, Steve, Julia";
+// The effect would be:
+// studentString = "Marcus, Emily, Jason, Steve, Julia";
 ```
 
 ### Pad + Trim
@@ -225,13 +234,16 @@ var museumName = "Salvador Dali Museum";
 
 var paddedName = museumName.PadLeft(3, '*');
 
-//paddedName = "***Salvador Dali Museum";
+// The effect would be:
+// paddedName = "***Salvador Dali Museum";
 
 paddedName = paddedName.PadRight(3, '*');
 
-//paddedName = "***Salvador Dali Museum***";
+// The effect would be:
+// paddedName = "***Salvador Dali Museum***";
 
 var trimmedName = paddedName.Trim('*');
 
-//trimmedName = "Salvador Dali Museum";
+// The effect would be:
+// trimmedName = "Salvador Dali Museum";
 ```
