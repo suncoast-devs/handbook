@@ -1,5 +1,6 @@
 ---
 title: Empty elements
+order: 5
 ---
 
 Not all elements follow the above pattern of opening tag, content, closing tag.

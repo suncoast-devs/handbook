@@ -1,5 +1,6 @@
 ---
 title: What is a table
+order: 12
 ---
 
 A table is a structured set of data made up of of rows and columns (tabular

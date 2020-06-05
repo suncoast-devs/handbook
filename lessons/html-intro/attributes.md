@@ -1,5 +1,6 @@
 ---
 title: Attributes
+order: 6
 ---
 
 Elements can also have attributes, which look like this:

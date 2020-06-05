@@ -1,5 +1,6 @@
 ---
 title: Whitespace in HTML
+order: 9
 ---
 
 In the above examples you may have noticed that a lot of whitespace is included
