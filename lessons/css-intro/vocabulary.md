@@ -1,5 +1,6 @@
 ---
 title: Vocabulary
+order: 2
 ---
 
 At its most basic level, CSS consists of two building blocks:

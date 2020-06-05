@@ -2,6 +2,7 @@
 title: Intro to CSS
 assignments:
   - expanding-your-world
+order: 1
 ---
 
 CSS is what allows us to make a webpage look the way we want it to.

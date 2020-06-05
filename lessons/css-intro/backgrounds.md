@@ -1,5 +1,6 @@
 ---
 title: Backgrounds
+order: 13
 ---
 
 In CSS you can do a lot to style the background behind your content. We've

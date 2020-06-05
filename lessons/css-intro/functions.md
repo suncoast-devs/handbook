@@ -1,10 +1,17 @@
 ---
 title: Functions
+order: 10
 ---
 
-In programming, a function is a reusable section of code that can be run multiple times to complete a repetitive task with minimum effort on the part of both the developer and the computer. Functions are usually associated with languages like JavaScript, Python, or C++, but they do exist in CSS too, as property values. We've already seen functions with `rgb()`, `hsl()`, etc.
+In programming, a function is a reusable section of code that can be run
+multiple times to complete a repetitive task with minimum effort on the part of
+both the developer and the computer. Functions are usually associated with
+languages like JavaScript, Python, or C++, but they do exist in CSS too, as
+property values. We've already seen functions with `rgb()`, `hsl()`, etc.
 
-But you'll see functions in other places too — anytime you see a name with parenthesis after it, containing one or more values separated by commas, you are dealing with a function. For example:
+But you'll see functions in other places too — anytime you see a name with
+parenthesis after it, containing one or more values separated by commas, you are
+dealing with a function. For example:
 
 ```css
 div {
@@ -21,4 +28,6 @@ div {
 }
 ```
 
-One of the more common CSS functions is the [`url()`](https://developer.mozilla.org/en-US/docs/Web/CSS/url) function notation, which returns a file; generally an image as seen above.
+One of the more common CSS functions is the
+[`url()`](https://developer.mozilla.org/en-US/docs/Web/CSS/url) function
+notation, which returns a file; generally an image as seen above.
