@@ -49,50 +49,201 @@ var message = $"{name} is a {description}";
 var mathProblem = $"What do you get when you multiply six by 9: {6 * 9}"
 ```
 
----
-
 ### String length
 
----
+We can get the length of a string by using the length property.
+
+```C#
+var name = "Suncoast Developers Guild";
+
+var nameLength = name.Length;
+
+Console.WriteLine(nameLength);
+// Output: 25
+```
 
 ### Iterating the characters in a string
 
----
+We can iterate over a string and assess each character with a foreach loop.
+
+```C#
+var name = "Mary";
+
+foreach (var character in name)
+{
+  Console.WriteLine(character);
+}
+
+// Output: 
+// M
+// a
+// r
+// y
+```
+
+Alternatively, we can use the string length to use a for loop and access each character by its index.
+
+```C#
+var name = "Mary";
+
+for (var index = 0; index < name.Length; index++)
+{
+  Console.WriteLine(name[index]);
+}
+
+// Output:
+// M
+// a
+// r
+// y
+```
 
 ### Splitting a string
 
----
+We can split a string into an array of strings using the Split method. The first parameter will be the character you want to split the string on.
+
+```C#
+var sentence = "Today is a beautiful day";
+
+var words = sentence.Split(' ');
+
+// The effect would be:
+// words = ['Today', 'is', 'a', 'beautiful', 'day'];
+```
 
 ### Replacing text in a string
 
----
+We can replace parts of strings with new values by using the replace method.
+
+```C#
+var sentence = "Today is a beautiful day";
+
+sentence.Replace("beautiful", "sunny");
+
+// The effect would be:
+// sentence = "Today is a sunny day";
+```
 
 ### Reversing a string
 
----
+We can reverse the order of characters in a string by using the reverse method.
+
+```C#
+var name = "Suncoast Developers Guild".
+
+var reverseName = name.Reverse();
+
+// The effect would be:
+// reverseName = "dliuG srepoleveD tsaocnuS";
+```
 
 ### Changing the case of a string
 
----
+We can make all characters in a string upper case or lowercase with the ToUpper and ToLower methods.
+
+```C#
+var name = "Suncoast Developers Guild";
+
+var upperName = name.ToUpper();
+
+var lowerName = name.ToLower();
+
+// The effects would be:
+// upperName = "SUNCOAST DEVELOPERS GUILD";
+// lowerName = "suncoast developers guild";
+```
 
 ### Getting a sub-string
 
----
+We can get part of a string by using the substring method.
+
+NOTE: The first number in the method is the starting index, the second number is how many characters to return.
+
+```C#
+var movie = "The Avengers: Endgame";
+
+var subtitle = movie.Substring(14, 7);
+
+// The effect would be:
+// subtitle = "Endgame";
+```
 
 ### Does a string contain another string
 
----
+We can check to see if one string is contained in another string by using the contains method.
+
+```C# 
+var movieDescription = "Thanos attempts to gather all infinity stones to end the Avengers for good.";
+
+var containsInfinity = movieDescription.Contains("infinity");
+
+var containsHulk = movieDescription.Contains("Hulk");
+
+// The effects would be:
+// containsInfinity = true;
+// containsHulk = false;
+```
 
 ### EndsWith
 
----
+We can check if a string ends with a certain substring by using the EndsWith method.
+
+```C#
+var headline = "Fundraising night was a huge success!";
+
+var endsWithExclamation = headline.EndsWith("!");
+
+// The effect would be:
+// endsWithExclamation = true;
+```
 
 ### StartsWith
 
----
+We can also check if a string starts with a certain substring by using StartsWith method.
+
+```C#
+var greeting = "Welcome to our home!"
+
+var beginsWithHello = greeting.BeginsWith("Hello");
+
+// The effect would be:
+// beginsWithHello = false;
+```
 
 ### Join
 
----
+We can join an array of strings back into a single string using the Join method.
+
+```C#
+var studentNames = new string[5] {"Marcus", "Emily", "Jason", "Steve", "Julia"};
+
+var studentString = studentNames.Join(", ");
+
+// The effect would be:
+// studentString = "Marcus, Emily, Jason, Steve, Julia";
+```
 
 ### Pad + Trim
+
+You can add and remove characters to the beginning and end of strings with PadLeft, PadRight and Trim methods.
+
+NOTE: Trim will automatically trim the left and right sides of a string.
+
+```C#
+var museumName = "Salvador Dali Museum";
+
+var paddedName = museumName.PadLeft(3, '*');
+
+// The effect would be:
+// paddedName = "***Salvador Dali Museum";
+
+paddedName = paddedName.PadRight(3, '*');
+
+// The effect would be:
+// paddedName = "***Salvador Dali Museum***";
+
+var trimmedName = paddedName.Trim('*');
+
+// The effect would be:
+// trimmedName = "Salvador Dali Museum";
+```
