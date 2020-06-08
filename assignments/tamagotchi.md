@@ -36,9 +36,9 @@ Your API should have the following endpoints
       The pets `Birthday` should **default** to the current datetime,
       `HungerLevel` **defaults** to 0 and `HappinessLevel` **defaults** to 0.
 - [ ] `POST /pets/{id}/playtimes`, should find the pet by id and add 5 to its
-      happiness level and 3 to its hungry level.
+      happiness level and add 3 to its hungry level.
 - [ ] `POST /pets/{id}/feedings`, should find the pet by id and subtract 5 from
-      its hungry level and 3 from its happiness level.
+      its hungry level and add 3 to its happiness level.
 - [ ] `POST /pets/{id}/scoldings`, should find the pet by id and subtract 5 from
       its happiness level.
 - [ ] `DELETE /pets/{id}`, should delete a pet from the database by Id
