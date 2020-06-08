@@ -81,6 +81,8 @@ foreach (var character in name)
 // y
 ```
 
+#### Using a `for` loop
+
 Alternatively, we can use the string length to use a for loop and access each
 character by its index.
 
@@ -97,6 +99,28 @@ for (var index = 0; index < name.Length; index++)
 // a
 // r
 // y
+```
+
+#### Using `LINQ`
+
+If you add `using System.Linq` to your code you may use LINQ to iterate through
+a string. All of the methods for LINQ are available to you and it treats the
+string as a sequence of characters. In this example we use the ability for LINQ
+to `Select` (transform) a sequence (in this case characters) into a new list. We
+also use the ability to have the index provided as well.
+
+```csharp
+var name = "Mary";
+
+var newList = name.Select((character, index) => $"The character at index {index} is {character}");
+
+// The value of newList is:
+// [
+//   "The character at index 0 is M",
+//   "The character at index 1 is a",
+//   "The character at index 2 is r",
+//   "The character at index 3 is y"
+// ]
 ```
 
 ### Splitting a string
