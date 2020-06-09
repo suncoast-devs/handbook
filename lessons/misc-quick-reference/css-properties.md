@@ -235,7 +235,7 @@ If you click any property's you will see the
 
 ---
 
-### [:link](https://developer.mozilla.org/en-US/docs/Web/CSS/:link), [:visited](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited), [:focused](https://developer.mozilla.org/en-US/docs/Web/CSS/:focused), [:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover), [:active](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
+### [:link](https://developer.mozilla.org/en-US/docs/Web/CSS/:link), [:visited](https://developer.mozilla.org/en-US/docs/Web/CSS/:visited), [:focus](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus), [:hover](https://developer.mozilla.org/en-US/docs/Web/CSS/:hover), [:active](https://developer.mozilla.org/en-US/docs/Web/CSS/:active)
 
 > pseudo-classes representing the various states of a link (`<a>`) elements
 
