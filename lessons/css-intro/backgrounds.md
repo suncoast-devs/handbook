@@ -3,10 +3,7 @@ title: Backgrounds
 order: 13
 ---
 
-In CSS you can do a lot to style the background behind your content. We've
-already looked at some simple uses, such as basic background colors and images;
-now we'll tell the whole story, and look at some advanced features like multiple
-background images and color gradients.
+In CSS you can do a lot to style the background behind your content.
 
 ## What exactly is a background?
 
@@ -17,8 +14,7 @@ The background doesn't sit underneath the margin — the margin doesn't count as
 part of the element's area, but rather the area outside the element.
 
 There are many other different properties you can use to manipulate the
-element's background, some of which we have already seen a number of times in
-our course already:
+element's background.
 
 | property                                                                                          | description                                                                                                                       |
 | ------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
