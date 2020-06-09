@@ -67,3 +67,7 @@ common ones; block, inline, and inline-block.
   goes onto the 2nd line of text while keeping the shape of a box as there is
   not enough space for it on the first line, whereas inline box does break on
   multiple lines if there is not enough space — it loses the shape of a box.
+
+The Mozilla Developer's Network has a great article
+[on the box model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model)
+which goes into more depth.
