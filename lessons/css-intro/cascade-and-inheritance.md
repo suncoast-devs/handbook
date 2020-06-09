@@ -39,7 +39,7 @@ certain declaration will always win over all others: `!important`.
 It is useful to know that !important exists so that you know what it is when you
 come across it in other people's code. However, we strongly recommend that you
 never use it unless you absolutely have to. One situation in which you may have
-to use it is when you are working on a syste where you can't edit the core CSS
+to use it is when you are working on a system where you can't edit the core CSS
 modules, and you really want to override a style that can't be overridden in any
 other way. But really, don't use it if you can avoid it, because !important
 changes the way the cascade normally works, so it can make debugging CSS
