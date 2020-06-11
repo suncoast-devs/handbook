@@ -49,9 +49,8 @@ modules:
       # - environment-setup
       - html-intro
       - css-intro
-      # - grids
-      # - flexbox
-      # - responsive
+      - css-layout
+      - css-responsive
       - react-intro
   - full-stack-development:
     title: Full-stack Application Development
