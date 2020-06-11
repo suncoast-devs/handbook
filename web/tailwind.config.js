@@ -9,7 +9,9 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    visibility: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   plugins: [
     require('@tailwindcss/ui')({
       layout: 'sidebar',
