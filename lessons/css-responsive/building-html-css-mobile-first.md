@@ -261,7 +261,7 @@ To see the effect you can either:
   narrower than 800px and you will see the site switch between the two styles.
 
 ```css
-@media condition {
+@media all and (min-width: 800px) {
   /* rules here */
   p {
     font-size: 3rem;
