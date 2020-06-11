@@ -10,6 +10,22 @@ module.exports = {
         gatsbyRemarkPlugins: [
           `gatsby-remark-copy-linked-files`,
           {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              className: `float-right group-hover:visible invisible`,
+              elements: ['h1', 'h2'],
+            },
+          },
+          {
+            resolve: `gatsby-remark-classes`,
+            options: {
+              classMap: {
+                'heading[depth=1]': 'group',
+                'heading[depth=2]': 'group',
+              },
+            },
+          },
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
