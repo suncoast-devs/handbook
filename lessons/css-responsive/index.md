@@ -40,6 +40,5 @@ functionality need to change greatly for different devices, it may not be such a
 good approach. Also, taking an existing site and adding responsiveness to it, to
 make it mobile/tablet friendly, can be a lot more effort than just creating a
 separate mobile site or app, especially if it is a sprawling enterprise site.
-Read more about responsive design advantages and disadvantages.
 
 ---
