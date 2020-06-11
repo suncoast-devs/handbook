@@ -1,5 +1,6 @@
 ---
 title: Introduction to Responsive Web
+order: 1
 ---
 
 Now that we can create a semantic web page, style it with CSS, and control it's

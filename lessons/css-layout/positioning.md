@@ -1,5 +1,6 @@
 ---
 title: Positioning
+order: 6
 ---
 
 Positioning allows you to move an element from where it would be placed when in

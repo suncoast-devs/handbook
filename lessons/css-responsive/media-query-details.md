@@ -1,5 +1,6 @@
 ---
 title: Media Query Details
+order: 5
 ---
 
 The `@media` rule allows us to define additional CSS to apply based on a
@@ -15,7 +16,7 @@ this is `only` for this type or for all other types (`not`)
 
 The types are:
 
-|        |                                                                                     |
+| Type   | Description                                                                         |
 | ------ | ----------------------------------------------------------------------------------- |
 | screen | Suitable for all devices.                                                           |
 | print  | Intended for paged material and documents viewed on a screen in print preview mode. |
@@ -52,7 +53,7 @@ The types are:
 The remaining portion of the condition concerns the media features. Primarily we
 work with device width, but a number of other features are useful.
 
-|              |                                              |
+| Feature      | Description                                  |
 | ------------ | -------------------------------------------- |
 | width        | Width of the viewport                        |
 | height       | Height of the viewport                       |

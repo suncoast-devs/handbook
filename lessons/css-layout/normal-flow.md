@@ -1,5 +1,6 @@
 ---
 title: Normal Flow
+order: 2
 ---
 
 Normal flow is how the browser lays out HTML pages by default when you do
