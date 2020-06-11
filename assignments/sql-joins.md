@@ -37,6 +37,7 @@ homework.
     - `DatePlaced` as a datetime
     - `Email` as a string
   - `Products` should have the columns
+    - `Id` as a primary key
     - `Price` as a double
     - `Name` as a string
     - `Description` as a string
