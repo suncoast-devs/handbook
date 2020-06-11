@@ -5,7 +5,7 @@ module.exports = {
     content: ['./src/**/*.html', './src/**/*.js'],
     options: {
       // These are used by the markdown autolink-headers
-      whitelist: ['group', 'float-right', 'invisible', 'group-hover'],
+      whitelist: ['group', 'float-right', 'invisible', 'group-hover:visible'],
     },
   },
   theme: {
