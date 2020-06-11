@@ -26,7 +26,7 @@ Theme: Next,1
 ---
 
 
-![fit](http://images5.aplus.com/uc-up/0b2f1590-9758-4c30-85e2-a0daf8718afe/0b2f1590-9758-4c30-85e2-a0daf8718afe.inline_yes)
+![fit](./assets/pbj.gif)
 
 # Input - Work - Output
 
