@@ -57,7 +57,7 @@ structure.
 Even applying this level of structure we can already see the design of the page
 emerging.
 
-````html
+```html
 <header>
   Welcome to our site
 </header>
@@ -113,66 +113,13 @@ emerging.
     </p>
   </main>
 </section>
+```
 
---- ## Apply CSS for the mobile view Now we will add styling to the page to
-represent the format of the page in it's narrow, mobile view. By adding a little
-more CSS to our page we have a closer representation of the design. ```html
-<header>
-  Welcome to our site
-</header>
-<section>
-  <aside>
-    <h3>Super team:</h3>
-    <ul>
-      <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
-      <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
-      <li>
-        <a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
-      </li>
-    </ul>
-  </aside>
+## Apply CSS for the mobile view
 
-  <main>
-    <p>
-      Remote, hyperlinked broadband network patch, broadband. Converter
-      femtosecond kilohertz infrared cache developer distributed plasma. Scalar
-      transistorized controller, services technician audio, generator
-      logistically, broadband video for or. Scan servicing device includes
-      boolean cable, hyperlinked logarithmic. Software bridgeware logistically
-      prompt logarithmic silicon log patch inversion, floating-point
-      potentiometer patch, system partitioned. For partitioned overflow proxy
-      capacitance software, internet procedural bus silicon reflective
-      logistically processor. Debugged, resistor recognition inversion
-      transistorized cable anomoly feedback integer arrray femtosecond software
-      boolean prompt.
-    </p>
-    <p>
-      Logarithmic transistorized gigabyte backbone connectivity recursive,
-      converter. Connectivity ethernet fragmentation, cascading technician
-      infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-      adaptive bus pc technician solution ethernet connectivity, deviation proxy
-      interface hyperlinked metafile messaging bypass. Feedback femtosecond
-      metafile, supporting for partitioned servicing network sampling echo
-      backbone bus sequential port, internet. Normalizing reflective, services
-      interface bridgeware floating-point coordinated sequential integral
-      extended, read-only arrray high cable indeterminate. Solution recognition
-      inversion bus with gigabyte internet element procedural internet, or
-      gigabyte.
-    </p>
-    <p>
-      Echo ethernet floating-point analog in computer plasma indeterminate
-      integral interface inversion element. Network, device arrray coordinated
-      log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-      digital recognition proxy broadband prompt led bus bus. Metafile
-      reflective, proxy pulse recursive disk servicing mainframe transistorized
-      boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-      system interface overflow backbone. Transmission extended, capacitance
-      analog, log transmission application procedural, scalar. Anomoly inversion
-      prompt debugged generator deviation.
-    </p>
-  </main>
-</section>
-````
+Now we will add styling to the page to represent the format of the page in it's
+narrow, mobile view. By adding a little more CSS to our page we have a closer
+representation of the design.
 
 ```css
 /* Set the base font size. This is the size represented by 1rem so other rem sizes will be a multiple of this. */
@@ -450,7 +397,7 @@ pseudo selector.
   }
 }
 
-/* When wider than 700 pxels but less than 1000px we will add the word `Email:` before the team member name */
+/* When wider than 700 pixels but less than 1000px we will add the word `Email:` before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
     content: "Email: ";
