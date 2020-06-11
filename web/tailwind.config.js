@@ -1,7 +1,13 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  purge: ['./src/**/*.html', './src/**/*.js'],
+  purge: {
+    content: ['./src/**/*.html', './src/**/*.js'],
+    options: {
+      // These are used by the markdown autolink-headers
+      whitelist: ['group', 'float-right', 'invisible', 'group-hover'],
+    },
+  },
   theme: {
     extend: {
       fontFamily: {
