@@ -22,8 +22,8 @@ operating system
 Follow [this guide](/lessons/cs-how-to-crete-and-run-programs) to review how to
 create and run `C#` applications.
 
-Follow [this guide](/lessons/misc-turning-in-assignments) to review how to turn
-in your assignments.
+Follow [this guide](/lessons/misc-quick-reference/turning-in-assignments) to
+review how to turn in your assignments.
 
 ### Explorer Mode
 
