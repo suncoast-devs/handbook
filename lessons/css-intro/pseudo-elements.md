@@ -1,5 +1,6 @@
 ---
 title: Pseudo Elements
+order: 7
 ---
 
 Pseudo-elements are very much like pseudo-classes, but they have differences.

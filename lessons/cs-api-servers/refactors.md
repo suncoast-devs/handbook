@@ -24,9 +24,9 @@ protected Game FindGameById(int id)
 ```
 
 Then in all the places where we were calling `FirstOrDefault` we can change to
-use our new method. This code would be `var foundGame = await FindGameById(id);`
+use our new method. This code would be `var foundGame = FindGameById(id);`
 
-This change can be made in all of the functions that use this patter.
+This change can be made in all of the functions that use this pattern.
 
 ## Updating the Update method
 

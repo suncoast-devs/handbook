@@ -1,5 +1,6 @@
 ---
 title: Floats
+order: 5
 ---
 
 Floating an element changes the behavior of that element and the block level

@@ -104,7 +104,7 @@ We can do that by defining a `class` named `Movie` (singular) and give it proper
 
 In our `Movie.cs` we can add `class Movie` as such:
 
-```C#
+```csharp
 using System;
 
 namespace SuncoastMovies
@@ -279,7 +279,7 @@ class Rating
 
 # [fit] Add the model to the context
 
-```C#
+```csharp
 public DbSet<Rating> Ratings { get; set; }
 ```
 
@@ -329,7 +329,7 @@ foreach (var movie in movies)
 
 Finally, we can add the relationships for `Role` and `Actor`.
 
-```C#
+```csharp
 class Movie
 {
   public int Id { get; set; }
@@ -349,7 +349,7 @@ class Movie
 
 # Add in other relationships.
 
-```C#
+```csharp
 class Role
 {
   public int Id { get; set; }
@@ -367,7 +367,7 @@ class Role
 ---
 
 
-```C#
+```csharp
 foreach (var movie in movies)
 {
   if (movie.Rating == null)
@@ -408,7 +408,7 @@ var newMovie = new Movie {
 
 Then we can add this POCO to the `Movies` context and tell the context to save the changes
 
-```C#
+```csharp
 context.Movies.Add(newMovie);
 context.SaveChanges();
 ```

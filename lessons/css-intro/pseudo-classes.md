@@ -1,5 +1,6 @@
 ---
 title: Pseudo-classes
+order: 6
 ---
 
 A CSS pseudo-class is a keyword added to the end of a selector, preceded by a

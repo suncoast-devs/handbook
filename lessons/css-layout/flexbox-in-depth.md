@@ -1,5 +1,6 @@
 ---
-title: Flexbox
+title: Flexbox In Depth
+order: 7
 ---
 
 ## Why Flexbox?

@@ -1,5 +1,6 @@
 ---
 title: Build a page mobile first.
+order: 4
 ---
 
 In this section we will build a page to display the members of our team and some
@@ -11,60 +12,44 @@ Here is a sketch of the site we will make:
 
 ---
 
-<CodePen>
-
 We start by placing the content on the page without any concern for the HTML
 structure or CSS style. By getting the content on the page first we can work on
 structure and style in an incremental manner.
 
-<pre data-lang='html'>
-{`
-Welcome to our site.
-
-Super Team.
-
-Ada Lovelace
-Alan Turing
-Margaret Hamilton
-
-Remote, hyperlinked broadband network patch, broadband. Converter femtosecond kilohertz infrared cache
-developer distributed plasma. Scalar transistorized controller, services technician audio, generator
-logistically, broadband video for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
-Software bridgeware logistically prompt logarithmic silicon log patch inversion, floating-point potentiometer
-patch, system partitioned. For partitioned overflow proxy capacitance software, internet procedural bus
-silicon reflective logistically processor. Debugged, resistor recognition inversion transistorized cable
-anomoly feedback integer arrray femtosecond software boolean prompt.
-
-Logarithmic transistorized gigabyte backbone connectivity recursive, converter. Connectivity ethernet
-fragmentation, cascading technician infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-adaptive bus pc technician solution ethernet connectivity, deviation proxy interface hyperlinked metafile
-messaging bypass. Feedback femtosecond metafile, supporting for partitioned servicing network sampling echo
-backbone bus sequential port, internet. Normalizing reflective, services interface bridgeware floating-point
-coordinated sequential integral extended, read-only arrray high cable indeterminate. Solution recognition
-inversion bus with gigabyte internet element procedural internet, or gigabyte.
-
-Echo ethernet floating-point analog in computer plasma indeterminate integral interface inversion element.
-Network, device arrray coordinated log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-digital recognition proxy broadband prompt led bus bus. Metafile reflective, proxy pulse recursive disk
-servicing mainframe transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-system interface overflow backbone. Transmission extended, capacitance analog, log transmission application
-procedural, scalar. Anomoly inversion prompt debugged generator deviation.
-`}
-</pre>
-
-<pre data-lang='css'>
-{`
-
-`}
-</pre>
-
-</CodePen>
+```html
+Welcome to our site. Super Team. Ada Lovelace Alan Turing Margaret Hamilton
+Remote, hyperlinked broadband network patch, broadband. Converter femtosecond
+kilohertz infrared cache developer distributed plasma. Scalar transistorized
+controller, services technician audio, generator logistically, broadband video
+for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
+Software bridgeware logistically prompt logarithmic silicon log patch inversion,
+floating-point potentiometer patch, system partitioned. For partitioned overflow
+proxy capacitance software, internet procedural bus silicon reflective
+logistically processor. Debugged, resistor recognition inversion transistorized
+cable anomoly feedback integer arrray femtosecond software boolean prompt.
+Logarithmic transistorized gigabyte backbone connectivity recursive, converter.
+Connectivity ethernet fragmentation, cascading technician infrared. Silicon
+femtosecond internet, backbone femtosecond bypass. Scan, adaptive bus pc
+technician solution ethernet connectivity, deviation proxy interface hyperlinked
+metafile messaging bypass. Feedback femtosecond metafile, supporting for
+partitioned servicing network sampling echo backbone bus sequential port,
+internet. Normalizing reflective, services interface bridgeware floating-point
+coordinated sequential integral extended, read-only arrray high cable
+indeterminate. Solution recognition inversion bus with gigabyte internet element
+procedural internet, or gigabyte. Echo ethernet floating-point analog in
+computer plasma indeterminate integral interface inversion element. Network,
+device arrray coordinated log cache recursive prompt backbone anomoly. Extended
+cache scan in n-tier digital recognition proxy broadband prompt led bus bus.
+Metafile reflective, proxy pulse recursive disk servicing mainframe
+transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable
+inversion system interface overflow backbone. Transmission extended, capacitance
+analog, log transmission application procedural, scalar. Anomoly inversion
+prompt debugged generator deviation.
+```
 
 ---
 
 ## Apply semantics to the HTML
-
-<CodePen>
 
 The next step is to apply semantics to the HTML to give the document a
 structure.
@@ -72,8 +57,7 @@ structure.
 Even applying this level of structure we can already see the design of the page
 emerging.
 
-<pre data-lang='html'>
-{`
+```html
 <header>
   Welcome to our site
 </header>
@@ -83,115 +67,67 @@ emerging.
     <ul>
       <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
       <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
-      <li><a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a></li>
+      <li>
+        <a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
+      </li>
     </ul>
   </aside>
 
   <main>
     <p>
-      Remote, hyperlinked broadband network patch, broadband. Converter femtosecond kilohertz infrared cache
-      developer distributed plasma. Scalar transistorized controller, services technician audio, generator
-      logistically, broadband video for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
-      Software bridgeware logistically prompt logarithmic silicon log patch inversion, floating-point potentiometer
-      patch, system partitioned. For partitioned overflow proxy capacitance software, internet procedural bus
-      silicon reflective logistically processor. Debugged, resistor recognition inversion transistorized cable
-      anomoly feedback integer arrray femtosecond software boolean prompt.
+      Remote, hyperlinked broadband network patch, broadband. Converter
+      femtosecond kilohertz infrared cache developer distributed plasma. Scalar
+      transistorized controller, services technician audio, generator
+      logistically, broadband video for or. Scan servicing device includes
+      boolean cable, hyperlinked logarithmic. Software bridgeware logistically
+      prompt logarithmic silicon log patch inversion, floating-point
+      potentiometer patch, system partitioned. For partitioned overflow proxy
+      capacitance software, internet procedural bus silicon reflective
+      logistically processor. Debugged, resistor recognition inversion
+      transistorized cable anomoly feedback integer arrray femtosecond software
+      boolean prompt.
     </p>
     <p>
-      Logarithmic transistorized gigabyte backbone connectivity recursive, converter. Connectivity ethernet
-      fragmentation, cascading technician infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-      adaptive bus pc technician solution ethernet connectivity, deviation proxy interface hyperlinked metafile
-      messaging bypass. Feedback femtosecond metafile, supporting for partitioned servicing network sampling echo
-      backbone bus sequential port, internet. Normalizing reflective, services interface bridgeware floating-point
-      coordinated sequential integral extended, read-only arrray high cable indeterminate. Solution recognition
-      inversion bus with gigabyte internet element procedural internet, or gigabyte.
+      Logarithmic transistorized gigabyte backbone connectivity recursive,
+      converter. Connectivity ethernet fragmentation, cascading technician
+      infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
+      adaptive bus pc technician solution ethernet connectivity, deviation proxy
+      interface hyperlinked metafile messaging bypass. Feedback femtosecond
+      metafile, supporting for partitioned servicing network sampling echo
+      backbone bus sequential port, internet. Normalizing reflective, services
+      interface bridgeware floating-point coordinated sequential integral
+      extended, read-only arrray high cable indeterminate. Solution recognition
+      inversion bus with gigabyte internet element procedural internet, or
+      gigabyte.
     </p>
     <p>
-      Echo ethernet floating-point analog in computer plasma indeterminate integral interface inversion element.
-      Network, device arrray coordinated log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-      digital recognition proxy broadband prompt led bus bus. Metafile reflective, proxy pulse recursive disk
-      servicing mainframe transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-      system interface overflow backbone. Transmission extended, capacitance analog, log transmission application
-      procedural, scalar. Anomoly inversion prompt debugged generator deviation.
+      Echo ethernet floating-point analog in computer plasma indeterminate
+      integral interface inversion element. Network, device arrray coordinated
+      log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
+      digital recognition proxy broadband prompt led bus bus. Metafile
+      reflective, proxy pulse recursive disk servicing mainframe transistorized
+      boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
+      system interface overflow backbone. Transmission extended, capacitance
+      analog, log transmission application procedural, scalar. Anomoly inversion
+      prompt debugged generator deviation.
     </p>
   </main>
 </section>
-`}
-</pre>
-
-<pre data-lang='css'>
-{`
-
-`}
-</pre>
-
-</CodePen>
-
----
+```
 
 ## Apply CSS for the mobile view
-
-<CodePen>
 
 Now we will add styling to the page to represent the format of the page in it's
 narrow, mobile view. By adding a little more CSS to our page we have a closer
 representation of the design.
 
-<pre data-lang='html'>
-{`
-<header>
-  Welcome to our site
-</header>
-<section>
-  <aside>
-    <h3>Super team:</h3>
-    <ul>
-      <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
-      <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
-      <li><a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a></li>
-    </ul>
-  </aside>
-
-  <main>
-    <p>
-      Remote, hyperlinked broadband network patch, broadband. Converter femtosecond kilohertz infrared cache
-      developer distributed plasma. Scalar transistorized controller, services technician audio, generator
-      logistically, broadband video for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
-      Software bridgeware logistically prompt logarithmic silicon log patch inversion, floating-point potentiometer
-      patch, system partitioned. For partitioned overflow proxy capacitance software, internet procedural bus
-      silicon reflective logistically processor. Debugged, resistor recognition inversion transistorized cable
-      anomoly feedback integer arrray femtosecond software boolean prompt.
-    </p>
-    <p>
-      Logarithmic transistorized gigabyte backbone connectivity recursive, converter. Connectivity ethernet
-      fragmentation, cascading technician infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-      adaptive bus pc technician solution ethernet connectivity, deviation proxy interface hyperlinked metafile
-      messaging bypass. Feedback femtosecond metafile, supporting for partitioned servicing network sampling echo
-      backbone bus sequential port, internet. Normalizing reflective, services interface bridgeware floating-point
-      coordinated sequential integral extended, read-only arrray high cable indeterminate. Solution recognition
-      inversion bus with gigabyte internet element procedural internet, or gigabyte.
-    </p>
-    <p>
-      Echo ethernet floating-point analog in computer plasma indeterminate integral interface inversion element.
-      Network, device arrray coordinated log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-      digital recognition proxy broadband prompt led bus bus. Metafile reflective, proxy pulse recursive disk
-      servicing mainframe transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-      system interface overflow backbone. Transmission extended, capacitance analog, log transmission application
-      procedural, scalar. Anomoly inversion prompt debugged generator deviation.
-    </p>
-  </main>
-</section>
-`}
-</pre>
-
-<pre data-lang='css'>
-{`
+```css
 /* Set the base font size. This is the size represented by 1rem so other rem sizes will be a multiple of this. */
 :root {
   font-size: 14px;
 }
 
-/* Remove all defautl browser margin and padding so we can control that ourselves */
+/* Remove all default browser margin and padding so we can control that ourselves */
 * {
   margin: 0;
   padding: 0;
@@ -243,10 +179,7 @@ aside ul li a {
   text-decoration: none;
   padding: 3px 0;
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ---
 
@@ -257,8 +190,6 @@ When the page is wider lets make a number of changes:
 1. When wider, lets put the list of team members on the side. We'll make this
    happen via `flexbox`
 2. When wider, lets replace our text at the top of the page with our logo
-
-<CodePen>
 
 To achieve this we can add CSS rules to our page that only apply under certain
 conditions. We do this with a new element called a `media query` -- The _media
@@ -277,7 +208,7 @@ To see the effect you can either:
   narrower than 800px and you will see the site switch between the two styles.
 
 ```css
-@media condition {
+@media all and (min-width: 800px) {
   /* rules here */
   p {
     font-size: 3rem;
@@ -289,8 +220,7 @@ When the condition is true, the CSS rules within will be active as if they were
 directly placed in the CSS file. When the condition is false, those CSS rules
 will **not** be applied to the page.
 
-<pre data-lang='html'>
-{`
+```html
 <header>
   Welcome to our site
 </header>
@@ -300,50 +230,61 @@ will **not** be applied to the page.
     <ul>
       <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
       <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
-      <li><a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a></li>
+      <li>
+        <a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
+      </li>
     </ul>
   </aside>
 
   <main>
     <p>
-      Remote, hyperlinked broadband network patch, broadband. Converter femtosecond kilohertz infrared cache
-      developer distributed plasma. Scalar transistorized controller, services technician audio, generator
-      logistically, broadband video for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
-      Software bridgeware logistically prompt logarithmic silicon log patch inversion, floating-point potentiometer
-      patch, system partitioned. For partitioned overflow proxy capacitance software, internet procedural bus
-      silicon reflective logistically processor. Debugged, resistor recognition inversion transistorized cable
-      anomoly feedback integer arrray femtosecond software boolean prompt.
+      Remote, hyperlinked broadband network patch, broadband. Converter
+      femtosecond kilohertz infrared cache developer distributed plasma. Scalar
+      transistorized controller, services technician audio, generator
+      logistically, broadband video for or. Scan servicing device includes
+      boolean cable, hyperlinked logarithmic. Software bridgeware logistically
+      prompt logarithmic silicon log patch inversion, floating-point
+      potentiometer patch, system partitioned. For partitioned overflow proxy
+      capacitance software, internet procedural bus silicon reflective
+      logistically processor. Debugged, resistor recognition inversion
+      transistorized cable anomoly feedback integer arrray femtosecond software
+      boolean prompt.
     </p>
     <p>
-      Logarithmic transistorized gigabyte backbone connectivity recursive, converter. Connectivity ethernet
-      fragmentation, cascading technician infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-      adaptive bus pc technician solution ethernet connectivity, deviation proxy interface hyperlinked metafile
-      messaging bypass. Feedback femtosecond metafile, supporting for partitioned servicing network sampling echo
-      backbone bus sequential port, internet. Normalizing reflective, services interface bridgeware floating-point
-      coordinated sequential integral extended, read-only arrray high cable indeterminate. Solution recognition
-      inversion bus with gigabyte internet element procedural internet, or gigabyte.
+      Logarithmic transistorized gigabyte backbone connectivity recursive,
+      converter. Connectivity ethernet fragmentation, cascading technician
+      infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
+      adaptive bus pc technician solution ethernet connectivity, deviation proxy
+      interface hyperlinked metafile messaging bypass. Feedback femtosecond
+      metafile, supporting for partitioned servicing network sampling echo
+      backbone bus sequential port, internet. Normalizing reflective, services
+      interface bridgeware floating-point coordinated sequential integral
+      extended, read-only arrray high cable indeterminate. Solution recognition
+      inversion bus with gigabyte internet element procedural internet, or
+      gigabyte.
     </p>
     <p>
-      Echo ethernet floating-point analog in computer plasma indeterminate integral interface inversion element.
-      Network, device arrray coordinated log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-      digital recognition proxy broadband prompt led bus bus. Metafile reflective, proxy pulse recursive disk
-      servicing mainframe transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-      system interface overflow backbone. Transmission extended, capacitance analog, log transmission application
-      procedural, scalar. Anomoly inversion prompt debugged generator deviation.
+      Echo ethernet floating-point analog in computer plasma indeterminate
+      integral interface inversion element. Network, device arrray coordinated
+      log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
+      digital recognition proxy broadband prompt led bus bus. Metafile
+      reflective, proxy pulse recursive disk servicing mainframe transistorized
+      boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
+      system interface overflow backbone. Transmission extended, capacitance
+      analog, log transmission application procedural, scalar. Anomoly inversion
+      prompt debugged generator deviation.
     </p>
   </main>
 </section>
-`}
-</pre>
+```
 
-<pre data-lang='css'>
-{`
+```css
 /* Set the base font size. This is the size represented by 1rem so other rem sizes will be a multiple of this. */
 :root {
   font-size: 14px;
 }
 
-/* Remove all defautl browser margin and padding so we can control that ourselves */
+/* Remove all default browser margin and padding so we can control that ourselves */
 * {
   margin: 0;
   padding: 0;
@@ -429,18 +370,13 @@ aside ul li a {
     width: 65%;
   }
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ---
 
 ## Content changes
 
 We can also adjust the content itself under different media query conditions.
-
-<CodePen>
 
 When the page is wider lets show the team member's email addresses as well as
 adding an icon.
@@ -461,7 +397,7 @@ pseudo selector.
   }
 }
 
-/* When wider than 700 pxels but less than 1000px we will add the word `Email:` before the team member name */
+/* When wider than 700 pixels but less than 1000px we will add the word `Email:` before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
     content: "Email: ";
@@ -485,8 +421,7 @@ To best see the results, click on the _codepen_ icon to open the page full
 width, then slowing shrink the width of the page to see the effect of the CSS
 for the `aside`.
 
-<pre data-lang='html'>
-{`
+```html
 <header>
   Welcome to our site
 </header>
@@ -495,53 +430,79 @@ for the `aside`.
     <h3>Super team:</h3>
     <ul>
       <!--- The data-email attribute is added so we can access it via CSS --->
-      <li><a data-email="ada-lovelace@example.com" href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
-      <li><a data-email="alan-turing@example.com" href="mailto:alan-turing@example.com">Alan Turing</a></li>
-      <li><a data-email="margaret-hamilton@example.com" href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
+      <li>
+        <a
+          data-email="ada-lovelace@example.com"
+          href="mailto:ada-lovelace@example.com"
+          >Ada Lovelace</a
+        >
+      </li>
+      <li>
+        <a
+          data-email="alan-turing@example.com"
+          href="mailto:alan-turing@example.com"
+          >Alan Turing</a
+        >
+      </li>
+      <li>
+        <a
+          data-email="margaret-hamilton@example.com"
+          href="mailto:margret-hamilton@example.com"
+          >Margaret Hamilton</a
+        >
       </li>
     </ul>
   </aside>
 
   <main>
     <p>
-      Remote, hyperlinked broadband network patch, broadband. Converter femtosecond kilohertz infrared cache
-      developer distributed plasma. Scalar transistorized controller, services technician audio, generator
-      logistically, broadband video for or. Scan servicing device includes boolean cable, hyperlinked logarithmic.
-      Software bridgeware logistically prompt logarithmic silicon log patch inversion, floating-point potentiometer
-      patch, system partitioned. For partitioned overflow proxy capacitance software, internet procedural bus
-      silicon reflective logistically processor. Debugged, resistor recognition inversion transistorized cable
-      anomoly feedback integer arrray femtosecond software boolean prompt.
+      Remote, hyperlinked broadband network patch, broadband. Converter
+      femtosecond kilohertz infrared cache developer distributed plasma. Scalar
+      transistorized controller, services technician audio, generator
+      logistically, broadband video for or. Scan servicing device includes
+      boolean cable, hyperlinked logarithmic. Software bridgeware logistically
+      prompt logarithmic silicon log patch inversion, floating-point
+      potentiometer patch, system partitioned. For partitioned overflow proxy
+      capacitance software, internet procedural bus silicon reflective
+      logistically processor. Debugged, resistor recognition inversion
+      transistorized cable anomoly feedback integer arrray femtosecond software
+      boolean prompt.
     </p>
     <p>
-      Logarithmic transistorized gigabyte backbone connectivity recursive, converter. Connectivity ethernet
-      fragmentation, cascading technician infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
-      adaptive bus pc technician solution ethernet connectivity, deviation proxy interface hyperlinked metafile
-      messaging bypass. Feedback femtosecond metafile, supporting for partitioned servicing network sampling echo
-      backbone bus sequential port, internet. Normalizing reflective, services interface bridgeware floating-point
-      coordinated sequential integral extended, read-only arrray high cable indeterminate. Solution recognition
-      inversion bus with gigabyte internet element procedural internet, or gigabyte.
+      Logarithmic transistorized gigabyte backbone connectivity recursive,
+      converter. Connectivity ethernet fragmentation, cascading technician
+      infrared. Silicon femtosecond internet, backbone femtosecond bypass. Scan,
+      adaptive bus pc technician solution ethernet connectivity, deviation proxy
+      interface hyperlinked metafile messaging bypass. Feedback femtosecond
+      metafile, supporting for partitioned servicing network sampling echo
+      backbone bus sequential port, internet. Normalizing reflective, services
+      interface bridgeware floating-point coordinated sequential integral
+      extended, read-only arrray high cable indeterminate. Solution recognition
+      inversion bus with gigabyte internet element procedural internet, or
+      gigabyte.
     </p>
     <p>
-      Echo ethernet floating-point analog in computer plasma indeterminate integral interface inversion element.
-      Network, device arrray coordinated log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
-      digital recognition proxy broadband prompt led bus bus. Metafile reflective, proxy pulse recursive disk
-      servicing mainframe transistorized boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
-      system interface overflow backbone. Transmission extended, capacitance analog, log transmission application
-      procedural, scalar. Anomoly inversion prompt debugged generator deviation.
+      Echo ethernet floating-point analog in computer plasma indeterminate
+      integral interface inversion element. Network, device arrray coordinated
+      log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
+      digital recognition proxy broadband prompt led bus bus. Metafile
+      reflective, proxy pulse recursive disk servicing mainframe transistorized
+      boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
+      system interface overflow backbone. Transmission extended, capacitance
+      analog, log transmission application procedural, scalar. Anomoly inversion
+      prompt debugged generator deviation.
     </p>
   </main>
 </section>
-`}
-</pre>
+```
 
-<pre data-lang='css'>
-{`
+```css
 /* Set the base font size. This is the size represented by 1rem so other rem sizes will be a multiple of this. */
 :root {
   font-size: 14px;
 }
 
-/* Remove all defautl browser margin and padding so we can control that ourselves */
+/* Remove all default browser margin and padding so we can control that ourselves */
 * {
   margin: 0;
   padding: 0;
@@ -632,7 +593,7 @@ aside ul li a {
 /* The content for this will be fetched from the data-email attribute */
 @media all and (min-width: 1001px) {
   aside ul li a:after {
-    content: ' (' attr(data-email) ')';
+    content: " (" attr(data-email) ")";
     font-size: 11px;
     font-style: italic;
     color: #666;
@@ -642,7 +603,7 @@ aside ul li a {
 /* When wider than 700 pixels but less than 1000px we will add the word Email before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
-    content: 'Email: ';
+    content: "Email: ";
     font-style: italic;
     color: #666;
   }
@@ -657,9 +618,6 @@ aside ul li a {
       left center no-repeat;
   }
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ---

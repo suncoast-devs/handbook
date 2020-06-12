@@ -341,7 +341,7 @@ SELECT "Title" FROM "Books";
 
 # `C#`
 
-```C#
+```csharp
 books.Select(book => book.Title);
 ```
 
@@ -370,7 +370,7 @@ SELECT "Title", "PrimaryAuthor" FROM 'Books" WHERE "Genre" = 'horror';
 
 `C#`
 
-```C#
+```csharp
 books.
    Where(book => book.Genre == "horror").
    Select(book => book.Title);

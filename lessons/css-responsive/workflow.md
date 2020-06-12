@@ -1,5 +1,6 @@
 ---
 title: Workflow
+order: 3
 ---
 
 When getting started on a new application it is useful to start with a sketch of

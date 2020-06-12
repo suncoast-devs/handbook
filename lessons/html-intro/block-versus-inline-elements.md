@@ -1,5 +1,6 @@
 ---
 title: Block versus inline elements
+order: 4
 ---
 
 There are two important categories of elements in HTML which you should know

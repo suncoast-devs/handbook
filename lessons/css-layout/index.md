@@ -1,5 +1,6 @@
 ---
 title: CSS Layouts
+order: 1
 ---
 
 Moving beyond CSS for styling, this lesson covers several CSS features to allow

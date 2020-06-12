@@ -1,5 +1,6 @@
 ---
 title: Media Query Details
+order: 5
 ---
 
 The `@media` rule allows us to define additional CSS to apply based on a
@@ -15,7 +16,7 @@ this is `only` for this type or for all other types (`not`)
 
 The types are:
 
-|        |                                                                                     |
+| Type   | Description                                                                         |
 | ------ | ----------------------------------------------------------------------------------- |
 | screen | Suitable for all devices.                                                           |
 | print  | Intended for paged material and documents viewed on a screen in print preview mode. |
@@ -52,16 +53,18 @@ The types are:
 The remaining portion of the condition concerns the media features. Primarily we
 work with device width, but a number of other features are useful.
 
-|              |                                              |
+| Feature      | Description                                  |
 | ------------ | -------------------------------------------- |
 | width        | Width of the viewport                        |
 | height       | Height of the viewport                       |
 | aspect-ratio | Width-to-height aspect ratio of the viewport |
 | orientation  | Orientation of the viewport                  |
 | resolution   | Pixel density of the output device           |
-| scan         | Scanning process of the output device        |
-| grid         | Does the device use a grid or bitmap screen? |
-|              |                                              |
+
+There are even more features to use.
+[This article](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) has a
+good list of other, less frequently used, features that are available. It will
+also indicate if these features are widely supported yet.
 
 **examples**
 

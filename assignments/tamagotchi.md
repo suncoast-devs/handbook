@@ -29,19 +29,19 @@ and delete.
 
 Your API should have the following endpoints
 
-- [ ] `GET /api/pets`, should return all pets in your database.
-- [ ] `GET /api/pets/{id}`, should return the pet with the corresponding id.
-- [ ] `POST /api/pets`, should create a new pet. The body of the request should
-      contain the name of the pet. The pets `Birthday` should default to the
-      current datetime, `HungerLevel` defaults to 0 and `HappinessLevel`
-      defaults to 0.
-- [ ] `POST /api/pets/{id}/playtimes`, should find the pet by id and add 5 to
-      its happiness level and 3 to its hungry level.
-- [ ] `POST /api/pets/{id}/feedings`, should find the pet by id and subtract 5
-      from its hungry level and 3 from its happiness level.
-- [ ] `POST /api/pets/{id}/scoldings`, should find the pet by id and subtract 5
-      from its happiness level.
-- [ ] `DELETE /api/pets/{id}`, should delete a pet from the database by Id
+- [ ] `GET /pets`, should return all pets in your database.
+- [ ] `GET /pets/{id}`, should return the pet with the corresponding id.
+- [ ] `POST /pets`, should create a new pet. The body of the request should
+      contain a JSON object with a key of "name" and a value of the pet's name.
+      The pets `Birthday` should **default** to the current datetime,
+      `HungerLevel` **defaults** to 0 and `HappinessLevel` **defaults** to 0.
+- [ ] `POST /pets/{id}/playtimes`, should find the pet by id and add 5 to its
+      happiness level and add 3 to its hungry level.
+- [ ] `POST /pets/{id}/feedings`, should find the pet by id and subtract 5 from
+      its hungry level and add 3 to its happiness level.
+- [ ] `POST /pets/{id}/scoldings`, should find the pet by id and subtract 5 from
+      its happiness level.
+- [ ] `DELETE /pets/{id}`, should delete a pet from the database by Id
 
 ### Adventure Mode
 
@@ -52,8 +52,7 @@ Add the following features to your API
   property named `IsDead` to your `Pets` that has logic such that if the
   `LastInteractedWithDate` is over 3 days old, the property returns `true`
   otherwise `false`.
-- Add a query parameter go `GET /api/pets` that only returns Pets that are
-  alive.
+- Add a query parameter go `GET /pets` that only returns Pets that are alive.
 
 ### Epic mode
 
@@ -68,4 +67,4 @@ Create a console app that interacts with your API that:
 ## Resources
 
 - [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1)
-- [Web API docs](https://dotnet.microsoft.com/apps/aspnet/apis)
+- [Web API docs](https://dotnet.microsoft.com/apps/aspnets)

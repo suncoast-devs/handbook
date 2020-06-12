@@ -489,6 +489,7 @@ namespace BasicApi.Controllers
 
             // Copy over the values. If this was a database we would
             // use EF Core to update the record
+            foundGame.Name = gameUpdate.Name;
             foundGame.Host = gameUpdate.Host;
             foundGame.Address = gameUpdate.Address;
             foundGame.When = gameUpdate.When;

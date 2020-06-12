@@ -1,11 +1,19 @@
 ---
-title: What is a table
+title: Tables
+order: 12
 ---
 
-import AdvancedTopic from '@handbook/AdvancedTopic'
+A very common task in HTML is structuring tabular data, and it has a number of
+elements and attributes for just this purpose. Coupled with a little CSS for
+styling, HTML makes it easy to display tables of information on the web such as
+your school lesson plan, the timetable at your local swimming pool, or
+statistics about your favorite dinosaurs or football team. This module takes you
+through all you need to know about structuring tabular data using HTML.
 
-<AdvancedTopic message='Table structuring and styling is an advanced subject'>
-A table is a structured set of data made up of of rows and columns (tabular data). A table allows you to quickly and easily look up values that indicate some kind of connection between different types of data, for example a person and their age, or a day or the week, or the timetable for a local swimming pool.
+A table is a structured set of data made up of of rows and columns (tabular
+data). A table allows you to quickly and easily look up values that indicate
+some kind of connection between different types of data, for example a person
+and their age, or a day or the week, or the timetable for a local swimming pool.
 
 ![](https://mdn.mozillademos.org/files/14583/numbers-table.png)
 
@@ -173,212 +181,6 @@ answer by associating the relevant row and column headers.
 When done correctly, even blind people can interpret tabular data in an HTML
 table — a successful HTML table should enhance the experience of sighted and
 visually impaired users alike.
-
-# Table Styling
-
-<CodePen>
-
-You can also have a look at this example. One thing you'll notice is that the
-table does look a bit more readable there — this is because the table you see
-above on this page has minimal styling, whereas the this version has more
-significant CSS applied.
-
-<pre data-lang='html'>
-{`
-    <h1>Planets data</h1>
-
-    <table>
-      <caption>Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
-      <colgroup>
-        <col span="2">
-        <col style="border: 2px solid black">
-      </colgroup>
-      <thead>
-        <tr>
-          <td colspan="2"></td>
-          <th scope="col">Name</th>
-          <th scope="col">Mass (10<sup>24</sup>kg)</th>
-          <th scope="col">Diameter (km)</th>
-          <th scope="col">Density (kg/m<sup>3</sup>)</th>
-          <th scope="col">Gravity (m/s<sup>2</sup>)</th>
-          <th scope="col">Length of day (hours)</th>
-          <th scope="col">Distance from Sun (10<sup>6</sup>km)</th>
-          <th scope="col">Mean temperature (°C)</th>
-          <th scope="col">Number of moons</th>
-          <th scope="col">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th rowspan="4" colspan="2" scope="rowgroup">Terrestial planets</th>
-          <th scope="row">Mercury</th>
-          <td>0.330</td>
-          <td>4,879</td>
-          <td>5427</td>
-          <td>3.7</td>
-          <td>4222.6</td>
-          <td>57.9</td>
-          <td>167</td>
-          <td>0</td>
-          <td>Closest to the Sun</td>
-        </tr>
-        <tr>
-          <th scope="row">Venus</th>
-          <td>4.87</td>
-          <td>12,104</td>
-          <td>5243</td>
-          <td>8.9</td>
-          <td>2802.0</td>
-          <td>108.2</td>
-          <td>464</td>
-          <td>0</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">Earth</th>
-          <td>5.97</td>
-          <td>12,756</td>
-          <td>5514</td>
-          <td>9.8</td>
-          <td>24.0</td>
-          <td>149.6</td>
-          <td>15</td>
-          <td>1</td>
-          <td>Our world</td>
-        </tr>
-        <tr>
-          <th scope="row">Mars</th>
-          <td>0.642</td>
-          <td>6,792</td>
-          <td>3933</td>
-          <td>3.7</td>
-          <td>24.7</td>
-          <td>227.9</td>
-          <td>-65</td>
-          <td>2</td>
-          <td>The red planet</td>
-        </tr>
-        <tr>
-          <th rowspan="4" scope="rowgroup">Jovian planets</th>
-          <th rowspan="2" scope="rowgroup">Gas giants</th>
-          <th scope="row">Jupiter</th>
-          <td>1898</td>
-          <td>142,984</td>
-          <td>1326</td>
-          <td>23.1</td>
-          <td>9.9</td>
-          <td>778.6</td>
-          <td>-110</td>
-          <td>67</td>
-          <td>The largest planet</td>
-        </tr>
-        <tr>
-          <th scope="row">Saturn</th>
-          <td>568</td>
-          <td>120,536</td>
-          <td>687</td>
-          <td>9.0</td>
-          <td>10.7</td>
-          <td>1433.5</td>
-          <td>-140</td>
-          <td>62</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th rowspan="2" scope="rowgroup">Ice giants</th>
-          <th scope="row">Uranus</th>
-          <td>86.8</td>
-          <td>51,118</td>
-          <td>1271</td>
-          <td>8.7</td>
-          <td>17.2</td>
-          <td>2872.5</td>
-          <td>-195</td>
-          <td>27</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th scope="row">Neptune</th>
-          <td>102</td>
-          <td>49,528</td>
-          <td>1638</td>
-          <td>11.0</td>
-          <td>16.1</td>
-          <td>4495.1</td>
-          <td>-200</td>
-          <td>14</td>
-          <td></td>
-        </tr>
-        <tr>
-          <th colspan="2" scope="rowgroup">Dwarf planets</th>
-          <th scope="row">Pluto</th>
-          <td>0.0146</td>
-          <td>2,370</td>
-          <td>2095</td>
-          <td>0.7</td>
-          <td>153.3</td>
-          <td>5906.4</td>
-          <td>-225</td>
-          <td>5</td>
-          <td>Declassified as a planet in 2006, but this <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
-        </tr>
-      </tbody>
-`}
-</pre>
-
-<pre data-lang='css'>
-{`
-html {
-  font-family: sans-serif;
-}
-
-table {
-  border-collapse: collapse;
-  border: 2px solid rgb(200,200,200);
-  letter-spacing: 1px;
-  font-size: 0.8rem;
-}
-
-td, th {
-  border: 1px solid rgb(190,190,190);
-  padding: 10px 20px;
-}
-
-th {
-  background-color: rgb(235,235,235);
-}
-
-td {
-  text-align: center;
-}
-
-tr:nth-child(even) td {
-  background-color: rgb(250,250,250);
-}
-
-tr:nth-child(odd) td {
-  background-color: rgb(245,245,245);
-}
-
-caption {
-  padding: 10px;
-}
-
-`}
-</pre>
-
-</CodePen>
-
-Be under no illusion; for tables to be effective on the web, you need to provide
-some styling information with CSS, as well as good solid structure with HTML. In
-this module we are focusing on the HTML part; to find out about the CSS part you
-should visit our Styling tables article after you've finished here.
-
-We won't focus on CSS in this module, but we have provided a minimal CSS
-stylesheet for you to use that will make your tables more readable than the
-default you get without any styling. You can find the stylesheet here, and you
-can also find an HTML template that applies the stylesheet — these together will
-give you a good starting point for experimenting with HTML tables.
 
 # When should you NOT use HTML tables?
 
@@ -581,7 +383,7 @@ want.
 We need a way to get "Animals", "Hippopotamus", and "Crocodile" to span across
 two columns, and "Horse" and "Chicken" to span downwards over two rows.
 Fortunately, table headers and cells have the `colspan` and `rowspan`
-attributes, which allow us to do just those things. Both accept a unitless
+attributes, which allow us to do just those things. Both accept a unit-less
 number value, which equals the number of rows or columns you want spanned. For
 example, colspan="2" makes a cell span two columns.
 
@@ -675,4 +477,3 @@ right at the bottom of the table as you'd expect, or just below the table header
 element needs to wrap the other parts of the table content that aren't in the
 table header or footer. It will appear below the table header or sometimes
 footer, depending on how you decided to structure it (see the notes above).
-</AdvancedTopic>

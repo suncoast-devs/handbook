@@ -1,5 +1,6 @@
 ---
 title: Fancy Borders
+order: 14
 ---
 
 Along with the box model we can take a look at the options we have for styling

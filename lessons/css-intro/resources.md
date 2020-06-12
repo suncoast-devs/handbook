@@ -2,5 +2,5 @@
 title: Additional Resources
 ---
 
-- Here are some
-  [popular CSS properties](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/resources/css-properties-we-like)
+- Here is a [quick reference](/lessons/misc-quick-reference/css-properties) to
+  some typical CSS properties.

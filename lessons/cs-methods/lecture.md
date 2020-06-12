@@ -26,7 +26,7 @@ Theme: Next,1
 ---
 
 
-![fit](http://images5.aplus.com/uc-up/0b2f1590-9758-4c30-85e2-a0daf8718afe/0b2f1590-9758-4c30-85e2-a0daf8718afe.inline_yes)
+![fit](./assets/pbj.gif)
 
 # Input - Work - Output
 
@@ -65,7 +65,7 @@ Theme: Next,1
 
 ---
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -106,7 +106,7 @@ namespace EmployeeDatabase
 
 [.code-highlight: 9-13]
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -149,7 +149,7 @@ namespace EmployeeDatabase
 
 [.code-highlight: 15-16, 17-19, 21-23]
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase
@@ -191,7 +191,7 @@ namespace EmployeeDatabase
 
 [.code-highlight: 24]
 
-```C#
+```csharp
 using System;
 
 namespace EmployeeDatabase

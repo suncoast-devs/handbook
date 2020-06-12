@@ -1,5 +1,6 @@
 ---
 title: Values
+order: 9
 ---
 
 There are many types of CSS property values to consider, from numerical values

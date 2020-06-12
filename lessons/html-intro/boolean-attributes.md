@@ -1,5 +1,6 @@
 ---
 title: Boolean attributes
+order: 7
 ---
 
 <CodePen>

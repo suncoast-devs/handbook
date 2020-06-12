@@ -22,7 +22,7 @@ certainly the most common.
 
 Once the browser realizes you wish to visit `handbook.suncoast.io` it must
 figure out how to address the server. The internet itself does not deal in terms
-of names like `handbook.sucoast.io` but in terms of a numerical address in the
+of names like `handbook.suncoast.io` but in terms of a numerical address in the
 form `1.2.3.4` or `192.168.145.241`. The `host names` (e.g.
 `handbook.suncoast.io`) are a convenience to users to not have to deal with
 remembering the address a service is located at, and also allows the owner of
@@ -189,10 +189,10 @@ Let's try connecting like the browser does.
 
 For this, we will be using a tool named `netcat`.
 
-On Mac OS install it with: `brew install nc` On Linux it is likely
+On Mac OS install it with: `brew install netcat` On Linux it is likely
 `sudo apt install netcat`. On Windows: `scoop install netcat`
 
-To connect: `nc gstark.com 80`
+To connect: `nc handbook.suncoast.io 80`
 
 Now that we are connected, how do we talk? We use the `http` protocol that is
 [well documented.](https://tools.ietf.org/html/rfc2616)
@@ -203,7 +203,7 @@ Now that we are connected, how do we talk? We use the `http` protocol that is
 
 ```
 GET / HTTP/1.1
-Host: gstark.com
+Host: handbook.suncoast.io
 
 ```
 

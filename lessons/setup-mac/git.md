@@ -49,6 +49,16 @@ git config --global user.name "Replace This With Your Full Name"
 git config --global user.email "email-address-you-used-at-github@example.com"
 ```
 
+### Tell Git your Github username
+
+Replace GITHUBNAME here with your github _LOGIN / USER_ name. You can get this
+from the Github API by clicking on your user icon in the upper right hand
+corner. It will say "Signed in as GITHUBUSERNAME"
+
+```shell
+git config --global github.user GITHUBNAME
+```
+
 ### Ensure git uses VS Code for it's editor
 
 ```shell

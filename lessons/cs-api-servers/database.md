@@ -8,11 +8,14 @@ Database + API application. Quite a lot of the previous code will be used here
 since managing a `List<>` is very similar to managing a `DbSet` from EF Core
 thanks to LINQ.
 
-If you have not yet followed the LESSON ON SQL, LESSON ON SQL JOINS, and the
-LESSON ON EF CORE we suggest you study that lesson
+If you have not yet followed the [lesson on SQL](/lessons/sql-intro),
+[lesson on SQL joins](/lessons/sql-joins), and the
+[lesson on EF Core](/lessons/cs-object-relational-mapping) we suggest you study
+that lesson
 
 For this application we are going to use a new template. This template should
-have been added to your environment in LESSON ON COMPUTER SETUP.
+have been added to your environment in the
+[lesson on computer setup](/lessons/cs-environment-setup).
 
 ## Generating an app with API and database support
 

@@ -12,7 +12,6 @@ modules:
     lessons:
       - cs-environment-setup
       - cs-how-to-create-and-run-programs
-      - misc-turning-in-assignments
       - cs-variables
       - cs-commenting-code
       - cs-interacting-with-the-console
@@ -40,8 +39,7 @@ modules:
       - misc-api-intro
       # - misc-rest
       - cs-api-clients
-      # - cs-build-api-with-database
-      # - cs-deployment-to-heroku-with-docker
+      - cs-api-servers
       # - misc-optimizing-developer-workspace
       # - cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
@@ -50,16 +48,18 @@ modules:
       # - environment-setup
       - html-intro
       - css-intro
-      # - grids
-      # - flexbox
-      # - responsive
+      - css-layout
+      - css-responsive
       - react-intro
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
       - cs-api-servers
       - auth0-intro
-      - cs-deployment-docker
+  - quick-reference:
+    title: Quick Reference Guides
+    lessons:
+      - misc-quick-reference
   - career-support:
     title: Career Support
     lessons:

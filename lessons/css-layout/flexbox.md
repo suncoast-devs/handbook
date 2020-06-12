@@ -1,5 +1,6 @@
 ---
 title: Flexbox
+order: 3
 ---
 
 Flexbox is the short name for the Flexible Box Layout Module, designed to make
