@@ -1,5 +1,6 @@
 ---
 title: Variables
+order: 3
 ---
 
 Like in most modern programming languages, in JavaScript we store information in
@@ -214,4 +215,4 @@ The Boolean type has two literal values: `true` and `false`.
 
 ---
 
-Now we have data, we need ways to manipulate the varibles
+Now we have data, we need ways to manipulate the variables

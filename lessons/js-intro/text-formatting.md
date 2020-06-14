@@ -1,5 +1,6 @@
 ---
 title: Strings
+order: 7
 ---
 
 JavaScript's String type is used to represent textual data. It is a set of

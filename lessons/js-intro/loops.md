@@ -1,5 +1,6 @@
 ---
 title: Loops and iteration
+order: 12
 ---
 
 Loops offer a quick and easy way to do something repeatedly. You can think of a

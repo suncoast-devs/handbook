@@ -1,5 +1,6 @@
 ---
 title: Events
+order: 10
 ---
 
 We have talked about JavaScript by itself, but in order for us to use our

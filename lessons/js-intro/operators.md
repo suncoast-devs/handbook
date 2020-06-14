@@ -1,5 +1,6 @@
 ---
 title: Operators
+order: 6
 ---
 
 import AdvancedTopic from '@handbook/AdvancedTopic'

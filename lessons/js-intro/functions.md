@@ -1,5 +1,6 @@
 ---
 title: Functions
+order: 5
 ---
 
 Functions are one of the fundamental building blocks in JavaScript. A function

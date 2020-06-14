@@ -1,18 +1,19 @@
 ---
 title: Welcome to JavaScript
+order: 1
 ---
 
 # Learning Objectives
 
-- What is JavaScript
-- How does JavaScript fit in the web
-- What is a line of code
-- Basic JavaScript operations
-- Basic JavaScript types (strings and numbers)
-- What are variables and how to use them
-- What is a function
-- What is the DOM
-- How to listen to events
+- What is JavaScript?
+- How does JavaScript fit in the web?
+- What is a line of code?
+- Basic JavaScript operations.
+- Basic JavaScript types (strings and numbers).
+- What are variables and how to use them.
+- What is a function?
+- What is the DOM?
+- How to listen to events?
 
 ## JavaScript
 
@@ -22,7 +23,7 @@ server side versions of JavaScript such as [Node.js](https://nodejs.org) which
 allow you to add more functionality to a website than simply downloading files
 (such as realtime collaboration between multiple computers).
 
-In this module we will discuss client (browser) side JavaScript.
+In this lesson we will discuss client (browser) side JavaScript.
 
 Client-side JavaScript extends the core language by supplying objects to control
 a browser and its Document Object Model (DOM). For example, client-side

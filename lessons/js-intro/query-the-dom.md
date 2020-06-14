@@ -1,5 +1,6 @@
 ---
 title: Interacting with the DOM
+order: 11
 ---
 
 Not only do we use JavaScript to code our logic, but we also use JavaScript to

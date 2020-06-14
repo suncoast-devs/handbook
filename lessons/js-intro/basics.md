@@ -1,5 +1,6 @@
 ---
 title: The Basics
+order: 2
 ---
 
 JavaScript programs are made up from a series of instructions called

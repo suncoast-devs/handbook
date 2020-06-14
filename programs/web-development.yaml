@@ -50,7 +50,8 @@ modules:
       - css-intro
       - css-layout
       - css-responsive
-      - react-intro
+      - js-intro
+      # - react-intro
   - full-stack-development:
     title: Full-stack Application Development
     lessons:

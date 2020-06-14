@@ -1,5 +1,6 @@
 ---
 title: Arrays
+order: 8
 ---
 
 import AdvancedTopic from '@handbook/AdvancedTopic'
