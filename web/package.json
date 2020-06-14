@@ -36,7 +36,8 @@
     "rehype-react": "^5.0.1",
     "remark-rehype": "^6.0.0",
     "tailwindcss": "^1.4.6",
-    "unified": "^9.0.0"
+    "unified": "^9.0.0",
+    "yarn": "^1.22.4"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
