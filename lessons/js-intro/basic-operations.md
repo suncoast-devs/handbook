@@ -1,7 +1,3 @@
-import AdvancedTopic from '@handbook/AdvancedTopic'
-
----
-
 ## title: Operators
 
 Variables by themselves allow our programs to be dynamic, but in order to make
@@ -14,7 +10,7 @@ assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
 A complete and detailed list of operators and expressions is also available in
 the
-[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+[MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
 
 JavaScript has the following types of operators.
 

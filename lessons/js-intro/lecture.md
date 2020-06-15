@@ -108,8 +108,7 @@ Standard to use `camelCase` for our variable names.
 
 # Our style
 
-`undeclared global` variables are highly discouraged as they can often lead to
-unexpected behavior.
+`undeclared global` variables are highly discouraged as they can often lead to unexpected behavior.
 
 In our coding we will always use `var`, `let`, or `const`.
 
@@ -143,7 +142,7 @@ answer = answer + 1
 They **can** be re-assigned later in the code.
 
 ```javascript
-const score = 98
+let score = 98
 ```
 
 ```javascript
@@ -214,8 +213,8 @@ JavaScript is far more forgiving when converting types.
 Valid in `JavaScript` but not allowed in a language like `C#`
 
 ```javascript
-let x = "The answer is " + 42; // "The answer is 42"
-let y = 42 + " is the answer"; // "42 is the answer"
+let x = "The answer is " + 42 // "The answer is 42"
+let y = 42 + " is the answer" // "42 is the answer"
 ```
 
 ---
@@ -231,8 +230,8 @@ let y = 42 + " is the answer"; // "42 is the answer"
 In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
 ```javascript
-"37" - 7; // 30
-"37" + 7; // "377"
+"37" - 7 // 30
+"37" + 7 // "377"
 ```
 
 ---
@@ -271,9 +270,9 @@ We can control the flow of the code with a conditional statement:
 
 ```javascript
 if (condition) {
-  statement_1;
+  statement_1
 } else {
-  statement_2;
+  statement_2
 }
 ```
 
@@ -377,7 +376,7 @@ See [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equal
 
 ```javascript
 for(let index = 0; index < 20; index++) {
-  console.log(`The index is ${index});
+  console.log(`The index is ${index})
 }
 ```
 
@@ -481,10 +480,10 @@ While the function declaration above is syntactically a statement, functions can
 
 ```javascript
 const square = function(number) {
-  return number * number;
+  return number * number
 }
 
-const answer = square(4); // answer gets the value 16
+const answer = square(4) // answer gets the value 16
 ```
 
 ---
@@ -557,18 +556,18 @@ A function defined inside another function can also access all variables defined
 ---
 
 ```javascript
-const PI = 3.14;
-const numbers = [1, 2, 4, 8, 16];
+const PI = 3.14
+const numbers = [1, 2, 4, 8, 16]
 
 function pies() {
   // Inside this function we can "see" the variables `PI` and `numbers`
   // because we are *INSIDE* the scope where they were defined
   for (let index = 0; index < numbers.length; index++) {
-    const number = numbers[index];
+    const number = numbers[index]
 
-    const area = PI * number * number;
+    const area = PI * number * number
 
-    console.log(`The area of a circle with radius ${number} is ${area}`);
+    console.log(`The area of a circle with radius ${number} is ${area}`)
   }
 
   // Here we *cannot* see the variable `area` since we are *OUTSIDE* the scope
