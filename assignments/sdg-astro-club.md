@@ -1,6 +1,6 @@
 ---
 title: Prove yourself, warrior!
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 You have grown very quickly to have worked with and master HTML, CSS,
@@ -23,19 +23,19 @@ For this assignment, you will be reproducing a website.
 
 ### Explorer Mode
 
-- [ ] Reproduce [this site](http://sdg-astro-club.surge.sh) exactly _ [ ] Should
-      be 100% responsive _ [ ] Should pull from
-      https://sdg-astro-api.herokuapp.com/index.html API using JavaScript _ [ ]
-      Should display a countdown timer to next astronomical event. This timer
-      should countdown until hitting zero _ [ ] The carousel should change
-      automatically every 10 seconds
-
-- [ ] All code should be: _ [ ] readable properly indented _ [ ] variables,
-      class names, and functions should be reasonably named _ [ ] proper style
-      guides should be followed _ [ ] commented
+- [ ] Reproduce [this site](http://sdg-astro-club.surge.sh) exactly
+- [ ] Should be 100% responsive
+- [ ] Should pull from https://sdg-astro-api.herokuapp.com/index.html API using JavaScript
+- [ ] Should display a countdown timer to next astronomical event. This timer should countdown until hitting zero
+- [ ] The carousel should change automatically every 10 seconds
+- [ ] All code should be:
+  - [ ] readable properly indented
+  - [ ] variables, class names, and functions should be reasonably named
+  - [ ] proper style guides should be followed
+  - [ ] commented
 
 ## Additional Resources
 
 - [MDN](https://developer.mozilla.org/en-US/)
 - [this site](http://sdg-astro-club.surge.sh)
-- API is here: https://sdg-astro-api.herokuapp.com/index.html.
+- API is [here](https://sdg-astro-api.herokuapp.com/index.html)
