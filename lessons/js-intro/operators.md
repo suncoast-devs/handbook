@@ -61,15 +61,15 @@ objects using a syntax that mirrors the construction of array and object
 literals.
 
 ```javascript
-let numbers = ["one", "two", "three"];
+let numbers = ['one', 'two', 'three']
 
 // without destructuring
-let one = numbers[0];
-let two = numbers[1];
-let three = numbers[2];
+let one = numbers[0]
+let two = numbers[1]
+let three = numbers[2]
 
 // with destructuring
-let [one, two, three] = numbers;
+let [one, two, three] = numbers
 ```
 
 ## Comparison Operators
@@ -86,8 +86,8 @@ convert the operands to compatible types before checking equality. The following
 table describes the comparison operators in terms of this sample code:
 
 ```javascript
-let var1 = 3;
-let var2 = 4;
+let var1 = 3
+let var2 = 4
 ```
 
 | Operator                     | Description                                                                                         | Examples returning true                      |
@@ -112,8 +112,8 @@ used with floating point numbers (in particular, note that division by zero
 produces Infinity). For example:
 
 ```javascript
-1 / 2; // 0.5
-1 / 2 == 1.0 / 2.0; // this is true
+1 / 2 // 0.5
+1 / 2 == 1.0 / 2.0 // this is true
 ```
 
 In addition to the standard arithmetic operations (+, -, \* /), JavaScript
@@ -182,10 +182,10 @@ return the value of one of the specified operands, so if these operators are
 used with non-Boolean values, they may return a non-Boolean value. The logical
 operators are described in the following table.
 
-| Operator           | Usage            | Description                                                                                                                                                                                      |
-| ------------------ | ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Logical AND (`&&`) | `expr1 && expr2` | Returns `expr1` if it can be converted to `false`; otherwise, returns `expr2`. Thus, when used with Boolean values, `&&` returns `true` if both operands are `true`; otherwise, returns `false`. |
-| Logical OR (`||`)  | expr1            |                                                                                                                                                                                                  | expr2 | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values, |  | returns true if either operand is true; if both are false, returns false. |
-| Logical NOT (`!`)  | `!expr`          | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
+| Operator                   | Usage                       | Description                                                                                                                                                                                      |
+| -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Logical AND <pre>&&</pre>  | <pre>expr1 && expr2</pre>   | Returns `expr1` if it can be converted to `false`; otherwise, returns `expr2`. Thus, when used with Boolean values, `&&` returns `true` if both operands are `true`; otherwise, returns `false`. |
+| Logical OR <pre>\|\|</pre> | <pre>expr1 \|\| expr2</pre> | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values,                                                                                     |  | returns true if either operand is true; if both are false, returns false. |
+| Logical NOT <pre>!</pre>   | <pre>!expr</pre>            | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
 
 ---
