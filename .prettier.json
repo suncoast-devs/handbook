@@ -1,0 +1,24 @@
+{
+  "endOfLine": "lf",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "arrowParens": "avoid",
+  "semi": false,
+
+  "overrides": [
+    {
+      "files": "lessons/*/lecture.md",
+      "options": {
+        "printWidth": 5000
+      }
+    },
+    {
+      "files": "assignments/*.md",
+      "options": {
+        "printWidth": 5000
+      }
+    }
+  ]
+}
