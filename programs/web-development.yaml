@@ -53,6 +53,7 @@ modules:
       - js-intro
       - js-enumeration
       - js-dom
+      - js-event-loop
       # - react-intro
   - full-stack-development:
     title: Full-stack Application Development

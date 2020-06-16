@@ -27,34 +27,18 @@ To attach a function to an event, we use an
 like this:
 
 ```javascript
-document.addEventListener("load", function () {
-  console.log("loaded");
-});
+document.addEventListener('load', function () {
+  console.log('loaded')
+})
 
-document.addEventListener("click", function () {
-  console.log("click");
-});
+document.addEventListener('click', function () {
+  console.log('click')
+})
 ```
 
 > [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 > represents any web page loaded in the browser and serves as an entry point
 > into the web page's content, which is the DOM
-
-## Global event handlers
-
-If you think this feels a little verbose, you're not alone. Many of the
-[most common event types](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers)
-are available as element properties. This way we can set properties like
-`onload` or `onclick` like this:
-
-```javascript
-document.onload = function () {
-  console.log("loaded!");
-};
-document.onclick = function () {
-  console.log("clicked!");
-};
-```
 
 ## Listening to events on elements
 
@@ -63,16 +47,124 @@ To do this, we first need to get a reference to the button. We can use the
 [`querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector)
 method of the browser-provided
 [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document) global
-variable to get that reference. Then we can set our `displayMatches` function to
+variable to get that reference. Then we can set a `displayMatches` function to
 be the button's `onclick` handler.
 
 ```javascript
-const button = document.querySelector(".submit");
-button.onclick = displayMatches;
+function displayMatches() {
+  console.log("Some button with the class 'submit' was clicked")
+}
+
+const button = document.querySelector('.submit')
+button.addEventListener('click', displayMatches)
 ```
 
-You can also combine the two statements together like this:
+## Receiving details about an event
+
+When the event happens it would be good to know details about the event itself.
+
+When our event happens, the browser calls the function specified by the event listener and gives us a _parameter_ which contains details about the event. We'll name that argument `event` by convention.
+
+From this `event` object we can find out many details of what happened. One of the properties of the `event` object is the `target`. This is the actual element that was involved in the event.
+
+Lets console log the target. If we were to look at this in the developer tools we could see all the details of the element itself.
 
 ```javascript
-document.querySelector(".submit").onclick = displayMatches;
+function displayMatches(event) {
+  console.log(event.target)
+  console.log("Some button with the class 'submit' was clicked")
+}
+
+const button = document.querySelector('.submit')
+button.addEventListener('click', displayMatches)
 ```
+
+Let's extend our usage to another kind of element, an input, and another event, the `input` event.
+
+```html
+<div>
+  <p>...</p>
+  <input type="text" />
+</div>
+```
+
+Lets setup an event listener to wait for the input to change. We will supply a callback function that will get the current contents of the input box and change the `<p>` tag to the contents of the input.
+
+```javascript
+const inputElement = document.querySelector('input')
+const paragraphElement = document.querySelector('p')
+
+const updateParagraph = event => {
+  const currentInputValue = event.target.value
+
+  paragraphElement.innerText = currentInputValue
+}
+
+inputElement.addEventListener('input', updateParagraph)
+```
+
+If we type something in the text input field we will see the `<p>` element change with it.
+
+We could apply other transformations to the `currentInputValue` like capitalizing everything, or excluding all the vowels, etc.
+
+### Event bubbling
+
+What if we wanted to have multiple inputs such that changing any of them causes the `<p>` tag to update.
+
+A first attempt might be:
+
+```html
+<div>
+  <p>...</p>
+  <input type="text" />
+  <input type="text" />
+  <input type="text" />
+  <input type="text" />
+</div>
+```
+
+```javascript
+// Get **ALL** the input elements
+const inputElements = document.querySelectorAll('input')
+const paragraphElement = document.querySelector('p')
+
+const updateParagraph = event => {
+  const currentInputValue = event.target.value
+
+  paragraphElement.innerText = currentInputValue
+}
+
+// Attach event listeners to each one
+inputElements.forEach(element => element.addEventListener('input', updateParagraph))
+```
+
+We can use the fact that HTML is a nested structure to our advantage. When an event, such as input, occurs on an element it will propagate **up** the hierarchy of the document until it has no further parents. Some listener along the way can stop this process by calling `event.stopPropagation()` on the event object itself.
+
+Since the `div` is the parent of all the `inputs` we can put our listener there!
+
+```html
+<div>
+  <p>...</p>
+  <input type="text" />
+  <input type="text" />
+  <input type="text" />
+  <input type="text" />
+</div>
+```
+
+```javascript
+// Get **ALL** the input elements
+const divElement = document.querySelector('div')
+const paragraphElement = document.querySelector('p')
+
+const updateParagraph = event => {
+  const currentInputValue = event.target.value
+
+  paragraphElement.innerText = currentInputValue
+}
+
+// Attach event listeners to each one
+divElement.addEventListener('input', updateParagraph)
+```
+
+It is helpful that that event that causes the event (input, click, etc) does _not_ have to be the same event that is listening. This fact can come in handy for situations like a large form with many inputs where a single handler can work for all of them.

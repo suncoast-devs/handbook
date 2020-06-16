@@ -68,7 +68,7 @@ Take a look at the following code.
 //    |            |        |             CSS Selector we are looking for
 //    |            |        |             |
 //    v            v        v             v
-const pageHeader = document.querySelector(".page-header");
+const pageHeader = document.querySelector('.page-header')
 ```
 
 This code goes to the `document` and finds the first element that has the class
@@ -90,7 +90,7 @@ as specific as the CSS selectors we have previously learned.
 > `querySelectorAll`
 
 ```javascript
-const headers = document.querySelectorAll("h1");
+const headers = document.querySelectorAll('h1')
 ```
 
 In this case `headers` is a `NodeList` of `HTMLElement`. We cannot do everything
@@ -98,10 +98,10 @@ we can with an array with a `NodeList` but `forEach` will allow us to iterate
 through the list of elements.
 
 ```javascript
-const headers = document.querySelectorAll("h1");
-headers.forEach((header) => {
+const headers = document.querySelectorAll('h1')
+headers.forEach(header => {
   // Do something with the header
-});
+})
 ```
 
 ### Adjusting properties on elements
@@ -113,21 +113,19 @@ For instance, if we wanted to change the text content of the `h1` elements we
 found with `querySelector` or `querySelectorAll` we could.
 
 ```javascript
-const header = document.querySelector("h1");
+const header = document.querySelector('h1')
 
 // Make sure it isn't null
 if (header) {
   // Change the content of the element
-  header.textContent = "This is different text";
+  header.textContent = 'This is different text'
 
   // Add a new class to the list of classes this element
   //  has, which might change what CSS rules apply to it!
-  header.classList.add("highlighted");
+  header.classList.add('highlighted')
 }
 ```
 
 There is a long list of properties of elements we can read/adjust. However, we
 will not spend a lot of time at this low level of programming so we won't take
 time to review them all.
-
---
