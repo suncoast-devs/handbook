@@ -1,6 +1,6 @@
 ---
 title: Function Junction
-tags: ["javascript", "algorithms"]
+tags: ["javascript", "enumeration", "algorithms"]
 ---
 
 Using JavaScript takes practice and the best practice is repetition. This
@@ -41,6 +41,17 @@ After completing this assignment, you should be able to:
 
 - Do the same with the JavaScript Koans at
   [https://github.com/suncoast-devs/koans/blob/master/koans.js](https://github.com/suncoast-devs/koans/blob/master/koans.js)
+
+## Epic Mode
+
+- Using the `forEach` looping method and no other looping or enumeration helper,
+  write your **own version** of the following methods, except name yours `_map`,
+  `_filter`, etc.
+  - `map`
+  - `filter`
+  - `reduce`
+  - `every`
+  - `some`
 
 ## Additional Resources
 

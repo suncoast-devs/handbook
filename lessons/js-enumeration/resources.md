@@ -1,7 +1,9 @@
 ---
 title: Additional resources
+order: 2
 ---
 
 ## Map, Reduce, Filter
 
-- A [Good video](https://www.youtube.com/watch?v=UXiYii0Y7Nw) explaining `map, filter, and reduce`.
+- This is a very [good video](https://www.youtube.com/watch?v=UXiYii0Y7Nw) from
+  an alumni that visually explains `map, filter, and reduce`.

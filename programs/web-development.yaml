@@ -51,6 +51,8 @@ modules:
       - css-layout
       - css-responsive
       - js-intro
+      - js-enumeration
+      - js-dom
       # - react-intro
   - full-stack-development:
     title: Full-stack Application Development
