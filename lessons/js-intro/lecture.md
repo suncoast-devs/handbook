@@ -96,13 +96,13 @@ Standard to use `camelCase` for our variable names.
 
 **Four** ways to declare a variable
 
-| Method                  | Description                                                                                |
-| ----------------- | ------------------------------------------------------------------------------- |
-| `var`             | Declares a variable function or globally scoped, optionally initializing it to a value.                     |
-| `let`             | Declares a block-scoped, local variable, optionally initializing it to a value. |
-| `const`           | Declares a block-scoped, read-only named constant.                              |
-| undeclared global | Without var, let, or const, we create a global variable                         |
-|                   |                                                                                 |
+| Method            | Description                                                                             |
+| ----------------- | --------------------------------------------------------------------------------------- |
+| `var`             | Declares a variable function or globally scoped, optionally initializing it to a value. |
+| `let`             | Declares a block-scoped, local variable, optionally initializing it to a value.         |
+| `const`           | Declares a block-scoped, read-only named constant.                                      |
+| undeclared global | Without var, let, or const, we create a global variable                                 |
+|                   |                                                                                         |
 
 ---
 
@@ -133,6 +133,7 @@ Not allowed, will be an error:
 ```javascript
 answer = answer + 1
 ```
+
 ---
 
 # Let
@@ -156,19 +157,20 @@ score = score + 1
 `let` and `const` are considered `block` scope.
 
 That is they are valid and accessible inside the current block. A block is:
-- A pair of `{  }` which we will see for functions and statements such as `if`, `while`, etc.
+
+- A pair of `{ }` which we will see for functions and statements such as `if`, `while`, etc.
 - The source file they are in if there is no current block.
 
 ---
 
 # Undefined variables
 
-After declaring a variable but before assigning it a value, the variable will contain a special, but confusing, value known as `undefined` 
+After declaring a variable but before assigning it a value, the variable will contain a special, but confusing, value known as `undefined`
 
 ```javascript
-let name          // name contains 'undefined'
+let name // name contains 'undefined'
 
-name = "Jane"     // name now contains the value 'Jane'
+name = 'Jane' // name now contains the value 'Jane'
 ```
 
 ---
@@ -201,7 +203,7 @@ let answer = 42
 And later, you could assign the same variable a string value, for example:
 
 ```javascript
-answer = "Thanks for all the fish..."
+answer = 'Thanks for all the fish...'
 ```
 
 ---
@@ -213,8 +215,8 @@ JavaScript is far more forgiving when converting types.
 Valid in `JavaScript` but not allowed in a language like `C#`
 
 ```javascript
-let x = "The answer is " + 42 // "The answer is 42"
-let y = 42 + " is the answer" // "42 is the answer"
+let x = 'The answer is ' + 42 // "The answer is 42"
+let y = 42 + ' is the answer' // "42 is the answer"
 ```
 
 ---
@@ -230,8 +232,8 @@ let y = 42 + " is the answer" // "42 is the answer"
 In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
 
 ```javascript
-"37" - 7 // 30
-"37" + 7 // "377"
+'37' - 7 // 30
+'37' + 7 // "377"
 ```
 
 ---
@@ -297,7 +299,6 @@ if (score > 97) {
 }
 
 if (score == 98) {
-
 }
 ```
 
@@ -325,7 +326,7 @@ It first sees if the values can be converted to a _common type_ and then be comp
 
 ```javascript
 const answer = 42
-const message = "42"
+const message = '42'
 
 if (answer == message) {
   // Yup! this will be *TRUE*
@@ -351,10 +352,10 @@ if (answer == message) {
 
 # In JavaScript
 
-| | |
-| --- | --- |
-|`== ` | _Abstract Equality Comparison_ |
-|`===` | _Strict Equality Comparison_ |
+|       |                                |
+| ----- | ------------------------------ |
+| `==`  | _Abstract Equality Comparison_ |
+| `===` | _Strict Equality Comparison_   |
 
 ---
 
@@ -368,7 +369,7 @@ There are some exceptions and we'll discuss them along the way.
 
 # Want more?
 
-See [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) 
+See [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 ---
 
@@ -419,16 +420,16 @@ The following code defines a simple function named square:
 
 ```javascript
 // Function keyword
-// | 
+// |
 // |        name of method
 // |        |
 // |        |      list of arguments
 // |        |      |
 // |        |      |
 // v        v      v
-   function square(number) {
-     return number * number
-   }
+function square(number) {
+  return number * number
+}
 ```
 
 ---
@@ -479,7 +480,7 @@ const answer = square(5)
 While the function declaration above is syntactically a statement, functions can also be created by a `function expression`.
 
 ```javascript
-const square = function(number) {
+const square = function (number) {
   return number * number
 }
 
