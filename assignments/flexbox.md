@@ -1,6 +1,6 @@
 ---
 title: Flexbox
-tags: ["css", "flexbox", "grids"]
+tags: ['css', 'flexbox', 'grids']
 ---
 
 Now that we have learned the power of flexbox we will apply it to the sites we
@@ -24,7 +24,7 @@ simplify our HTML and CSS.
 - [ ] Recreate the page 'The Daily Kitteh' using flexbox and grids as closely as
       you possibly can. Use similar fonts, sizes, and colors. Feel free to use
       any cat photo you wish, just respect the relative size of the photo.
-  - ![daily kitteh](https://raw.githubusercontent.com/suncoast-devs/handbook/a2f0c05d3914a8f16611da03a18dbe92cd821a92/curriculum/fundamentals/modules/html-css/lessons/css-layout/assignments/assets/daily-kitteh.png)
+  - ![daily kitteh](https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/daily-kitteh.png)
 
 ## Adventure Mode
 
@@ -32,7 +32,7 @@ simplify our HTML and CSS.
       free to use flexbox, or grids, or both if needed. **NOTE**: See your
       instructor for sample HTML that you will then style, making no changes to
       the HTML itself.
-      ![flexbox article layout](https://raw.githubusercontent.com/suncoast-devs/handbook/a2f0c05d3914a8f16611da03a18dbe92cd821a92/curriculum/fundamentals/modules/html-css/lessons/css-layout/assignments/assets/flexbox-article-layout.png)
+      ![flexbox article layout](https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/flexbox-article-layout.png)
 
 ## Additional Resources
 
