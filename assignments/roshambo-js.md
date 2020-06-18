@@ -31,27 +31,27 @@ See the wikipedia page about
 - Write out in English, ALL the steps the application needs to take
   - For example "When user one clicks on Rock, remember that user one chooses
     Rock"
-- Start adding JavaScript to make your program to do the steps you described
-  above
 
 ### Explorer Mode
 
-- [ ] As a user I should be able to see three buttons for each player.
-- [ ] As a user, I should be able to pick an option for each player.
-- [ ] As a user, after each player makes their selection, I should be told who
+#### Part 1
+
+> NOTE: Complete part 1 before moving on to part 2
+
+- [ ] As a user I should be able to see three buttons for each player: Rock, Paper, Scissors
+- [ ] As a user, I should be able to pick what to throw.
+- [ ] After both players makes their selection, I should be told who
       won and the game should be over.
 
-### Adventure Mode
+#### Part 2
 
-- [ ] Create a `vs computer` mode, that picks a selection.
-- [ ] Modify your `vs computer` mode to follow a specific strategy (your choice)
-- [ ] Make your computer AI unbeatable
-- [ ] Give the user a choice to player against the various computer levels or
-      another player
+- [ ] You have heard about _Rock, Paper, Scissors_, but have you tried
+      [_Rock, Paper, Scissors, Lizard, Spock_](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)?
+      Modify your game to allow the extra options!
 - [ ] Have fun with the CSS by adding colors, animations and effects to make the
       game more enjoyable
 
-### Epic Mode
+### Adventure Mode
 
 - [ ] Your game is currently only 1 vs 1, add the ability to add more computer
       or users players to the game
