@@ -1,5 +1,7 @@
 ---
 title: Introduction to joins
+assignments:
+  - sql-joins
 ---
 
 ## Relational Databases and Data Normalization

@@ -5,9 +5,8 @@ tags: ['javascript', 'enumeration']
 
 ## Objectives
 
-After completing this assignment, you should be able to:
-
-- Demonstrate understanding of iteration/enumeration
+- After completing this assignment, you should be able to:
+  - Demonstrate understanding of iteration/enumeration
 
 ## Instructions
 

@@ -1,5 +1,7 @@
 ---
 title: Commenting Our Code
+assignments:
+  - cs-variables
 ---
 
 When writing code we often need to add details about the code that aren't

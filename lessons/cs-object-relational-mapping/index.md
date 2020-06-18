@@ -1,5 +1,7 @@
 ---
 title: Object Relational Mapping (ORM)
+assignments:
+  - cs-rhythms-gonna-get-you
 ---
 
 When we first learned how to save data we started with reading and writing to

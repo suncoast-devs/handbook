@@ -1,5 +1,7 @@
 ---
 title: Creating Methods in C#
+assignments:
+  - cs-all-cards-on-deck
 ---
 
 When adding functionality it is easy to continue to add more lines to existing

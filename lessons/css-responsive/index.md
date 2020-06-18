@@ -1,5 +1,9 @@
 ---
 title: Introduction to Responsive Web
+assignments:
+  - octodex
+tags:
+  - mdn-content
 order: 1
 ---
 

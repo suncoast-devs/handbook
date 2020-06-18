@@ -1,5 +1,7 @@
 ---
 title: Introduction to APIs
+assignments:
+  - api-intro
 ---
 
 Whenever two pieces of code communicate they do so with a prescribed format. The

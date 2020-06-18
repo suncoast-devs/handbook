@@ -1,5 +1,7 @@
 ---
 title: Object-Oriented Programing in C#
+assignments:
+  - cs-blackjack
 ---
 
 ## State + Behavior

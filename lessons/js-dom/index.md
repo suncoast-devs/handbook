@@ -1,5 +1,9 @@
 ---
 title: JavaScript and the DOM
+assignment:
+  - scoreboard
+tags:
+  - mdn-content
 ---
 
 In this lesson we will learn how to use JavaScript code to interact with our web

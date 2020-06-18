@@ -1,5 +1,9 @@
 ---
 title: Welcome to JavaScript
+assignments:
+  - variables-js
+tags:
+  - mdn-content
 order: 1
 ---
 

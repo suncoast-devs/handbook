@@ -1,5 +1,9 @@
 ---
 title: Intro to HTML
+assignments:
+  - hello-html
+tags:
+  - mdn-content
 ---
 
 HTML is the most basic structure of a webpage. All other languages, frameworks,

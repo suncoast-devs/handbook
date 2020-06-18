@@ -1,5 +1,7 @@
 ---
 title: Reading and Writing Files in C#
+assignments:
+  - cs-first-bank-of-suncoast
 ---
 
 So far we have seen how to input, manage, and output data in our programs.

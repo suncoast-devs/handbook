@@ -1,5 +1,7 @@
 ---
 title: Looping
+assignments:
+  - cs-all-cards-on-deck
 ---
 
 Often in programming, we need to perform a task repeatedly, or we need to

@@ -1,5 +1,8 @@
 ---
 title: LINQ
+assignments:
+  - cs-enumeration
+  - cs-jurrasic-park
 ---
 
 ## LINQ: Improving our ability to search and manipulate collections of data

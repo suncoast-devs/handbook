@@ -1,5 +1,7 @@
 ---
 title: State maps to User Interface
+assignment:
+  - roshambo-js
 ---
 
 In [the lesson on using JavaScript to modify the DOM](/lessons/js-dom) we

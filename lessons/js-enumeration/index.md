@@ -1,5 +1,9 @@
 ---
 title: Enumeration in JavaScript
+assignments:
+  - iteration-js
+tags:
+  - mdn-content
 ---
 
 In our [introductory lesson](/lessons/js-intro) we covered

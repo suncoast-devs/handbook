@@ -1,5 +1,7 @@
 ---
 title: Control Flow in C#
+assignments:
+  - cs-all-cards-on-deck
 ---
 
 If we just write lines of code one after another in our code we would have no

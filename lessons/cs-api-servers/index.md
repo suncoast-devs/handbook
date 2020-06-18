@@ -1,5 +1,8 @@
 ---
 title: Building API Servers in C# and .NET
+assignments:
+  - cs-explosion-api
+  - cs-tamagotchi
 ---
 
 In this lesson we will build our own API which will send and receive information

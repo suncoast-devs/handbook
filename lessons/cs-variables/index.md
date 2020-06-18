@@ -1,5 +1,7 @@
 ---
 title: Variables in C#
+assignments:
+  - cs-variables
 ---
 
 ## Learning Objectives

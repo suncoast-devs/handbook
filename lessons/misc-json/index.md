@@ -1,5 +1,9 @@
 ---
 title: JavaScript Object Notation (or JSON)
+assignments:
+  - api-intro
+tags:
+  - mdn-content
 ---
 
 ## How to represent data to exchange on the Internet

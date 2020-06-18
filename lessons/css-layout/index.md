@@ -1,5 +1,9 @@
 ---
 title: CSS Layouts
+assignments:
+  - flexbox
+tags:
+  - mdn-content
 order: 1
 ---
 

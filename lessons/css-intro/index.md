@@ -2,6 +2,8 @@
 title: Intro to CSS
 assignments:
   - expanding-your-world
+tags:
+  - mdn-content
 order: 1
 ---
 

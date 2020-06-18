@@ -1,5 +1,7 @@
 ---
 title: Building API Clients in C# and .NET
+assignments:
+  - api-client
 ---
 
 ## Consuming API services

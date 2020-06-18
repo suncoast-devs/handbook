@@ -1,5 +1,7 @@
 ---
 title: Interacting with the Console
+assignments:
+  - cs-variables
 ---
 
 When writing applications that interacts with a user the simplest method is

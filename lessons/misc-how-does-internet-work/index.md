@@ -1,5 +1,7 @@
 ---
 title: How does the web work
+assignments:
+  - api-intro
 ---
 
 # How does the web work?

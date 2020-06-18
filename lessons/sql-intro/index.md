@@ -1,5 +1,7 @@
 ---
 title: Intro to SQL
+assignments:
+  - sql-intro
 ---
 
 ## Introduction to what is SQL
