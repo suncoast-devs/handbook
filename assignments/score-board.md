@@ -31,8 +31,8 @@ For this assignment, you are creating a simple interactive scoreboard for your f
 
 - [ ] Add an `if` statement to stop each team's score from going below 0.
 - [ ] Add an `if` statement to stop each team's score from going above 21
-- [ ] When a team gets 21 points, disable the buttons and display a message to the user of who won
-- [ ] Add a `reset` button that resets the scoreboard back to each team having 0 points and re-enables the buttons
+- [ ] When a team gets 21 points, display a message to the user of who won
+- [ ] Add a `reset` button that resets the scoreboard back to each team having 0 points
 
 ### Adventure Mode
 
