@@ -1,6 +1,6 @@
 ---
 title: Octodex
-tags: ["html", "css", "responsive-web-design", "flexbox"]
+tags: ['html', 'css', 'responsive-web-design', 'flexbox']
 ---
 
 GitHub has a great mascot called Octocat. Octocat even has its own gallery of
@@ -29,6 +29,7 @@ sizes and padding amounts.
 ### Explorer Mode
 
 - [ ] Use `app-app` with `alpha` and name your project `Octodex`
+- [ ] Feel free to start with this [template HTML](https://raw.githubusercontent.com/suncoast-devs/octodex-template/master/public/index.html)
 - [ ] Recreate the page as closely as you possibly can. Use the same fonts,
       sizes, and colors. Use your browser's developers tool to determine the
       colors and fonts.
