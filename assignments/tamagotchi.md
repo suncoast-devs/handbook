@@ -1,6 +1,6 @@
 ---
 title: The Rise of the Tamagotchi
-tags: ["c-sharp", "console", "api", "ef-core", "dotnet"]
+tags: ['c-sharp', 'console', 'api', 'ef-core', 'dotnet']
 ---
 
 To start your journey you will be creating an API that allows a user to create
@@ -19,29 +19,35 @@ and delete.
 
 - Create and new `sdg-api` that has the following features
 
-- Create a database with one table named `Pets`.
+- Create a database with a table named `Pets`.
   - Should use a POCO called `Pet` with the following columns:
-    - Id (int)
+    - Id (int - automatic primary key)
     - Name (string)
     - Birthday (DateTime)
     - HungerLevel (int)
     - HappinessLevel (int)
+- Create a table named `Playtimes` that has the following columns:
+  - Id (int - automatic primary key)
+  - When (DateTime)
+  - PetId (int - foreign key to Pet)
+- Create a table named `Feedings` that has the following columns:
+  - Id (int - automatic primary key)
+  - When (DateTime)
+  - PetId (int - foreign key to Pet)
+- Create a table named `Scoldings` that has the following columns:
+  - Id (int - automatic primary key)
+  - When (DateTime)
+  - PetId (int - foreign key to Pet)
 
 Your API should have the following endpoints
 
 - [ ] `GET /pets`, should return all pets in your database.
 - [ ] `GET /pets/{id}`, should return the pet with the corresponding id.
-- [ ] `POST /pets`, should create a new pet. The body of the request should
-      contain a JSON object with a key of "name" and a value of the pet's name.
-      The pets `Birthday` should **default** to the current datetime,
-      `HungerLevel` **defaults** to 0 and `HappinessLevel` **defaults** to 0.
-- [ ] `POST /pets/{id}/playtimes`, should find the pet by id and add 5 to its
-      happiness level and add 3 to its hungry level.
-- [ ] `POST /pets/{id}/feedings`, should find the pet by id and subtract 5 from
-      its hungry level and add 3 to its happiness level.
-- [ ] `POST /pets/{id}/scoldings`, should find the pet by id and subtract 5 from
-      its happiness level.
+- [ ] `POST /pets`, should create a new pet. The body of the request should contain a JSON object with a key of "name" and a value of the pet's name. The pets `Birthday` should **default** to the current datetime, `HungerLevel` **defaults** to 0 and `HappinessLevel` **defaults** to 0.
 - [ ] `DELETE /pets/{id}`, should delete a pet from the database by Id
+- [ ] `POST /pets/{id}/playtimes`, should find the pet by id and add 5 to its happiness level and add 3 to its hungry level. It should also create a new `Playtime` for this pet and the current time.
+- [ ] `POST /pets/{id}/feedings`, should find the pet by id and subtract 5 from its hungry level and add 3 to its happiness level. It should also create a new `Feeding` for this pet and the current time.
+- [ ] `POST /pets/{id}/scoldings`, should find the pet by id and subtract 5 from its happiness level. It should also create a new `Scolding` for this pet and the current time.
 
 ### Adventure Mode
 
