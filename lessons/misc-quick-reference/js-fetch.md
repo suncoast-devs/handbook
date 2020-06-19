@@ -6,3 +6,56 @@ note:
   such as `content-type` and `authorization`. Show how to use `.then` to receive
   JSON in return. Also show how to use `fetch` with `await`
 ---
+
+The Fetch API provides an interface for fetching resources, primarily across the
+network.
+
+## Basic usage:
+
+```javascript
+fetch('https://restcountries.eu/rest/v2/all')
+  .then(response => {
+    return response.json()
+  })
+  .then(json => {
+    console.log(json)
+  })
+```
+
+## Basic usage with async/await
+
+```javascript
+async function countries() {
+  const response = await fetch('https://restcountries.eu/rest/v2/all')
+  const json = await response.json()
+  console.log(json)
+}
+```
+
+## Using a specific http verb (e.g. `POST`)
+
+```javascript
+async function createOneListItem() {
+  const response = await fetch(
+    // URL
+    'https://one-list.herokuapp.com?access_token=illustriousvoyage',
+
+    // Options
+    {
+      // This is a POST request
+      method: 'POST',
+
+      // We are sending JSON
+      headers: { 'content-type': 'application/json' },
+
+      // The body of the message is the object, but turned into a string in JSON format
+      body: JSON.stringify({
+        item: { text: 'Learn about Regular Expressions!' },
+      }),
+    }
+  )
+
+  // Process the response
+  const json = response.json()
+}
+```
