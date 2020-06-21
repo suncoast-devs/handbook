@@ -29,6 +29,18 @@ tags: ['javascript', 'enumeration']
 
 - Using the `forEach` looping method and no other looping or enumeration helper, write your **own version** of the following methods, except name yours `_map`,
   `_filter`, etc.
+  - Your method must accept an array and a callback function.
+  - Example for your `_map`:
+  ```js
+  const numbers = [1,2,3,4,5]
+
+  const doubled = _map(numbers, function(number) { return number * 2 })
+  // doubled needs to be [2,4,6,8,10]
+
+  const increased = _map(numbers, function(number) { return number + 2 })
+  // increated needs to be [2,3,4,5,6]
+  ```
+
   - `map`
   - `filter`
   - `reduce`
