@@ -2,9 +2,14 @@
 title: Code wars
 ---
 
-[Code Wars](https://codewars.com) is a great site to practice your problem solving in a variety of languages. This site is focused on creating clever solutions to practice solving problems in a variety of ways and languages. Code wars is a very community orientated and driven.
+[Code Wars](https://codewars.com) is a great site to practice your problem
+solving in a variety of languages. This site is focused on creating clever
+solutions to practice solving problems in a variety of ways and languages. Code
+wars is a very community orientated and driven.
 
-The site is organized into challenges that have a `kyu` . This `kyu` is a community driven estimate to how hard a given challenge is. `8 kyu` is the easiest and a great place to start for beginners.
+The site is organized into challenges that have a `kyu` . This `kyu` is a
+community driven estimate to how hard a given challenge is. `8 kyu` is the
+easiest and a great place to start for beginners.
 
 // Coming soon: a path to enlightenment using code wars
 
@@ -78,3 +83,66 @@ Challenges we like:
 |  8  | Remove First and Last Character                      | https://www.codewars.com/kata/remove-first-and-last-character |   javascript    |
 |  7  | Ones and Zeros                                       |         https://www.codewars.com/kata/ones-and-zeros          |       C#        |
 |  7  | Exes and Ohs                                         |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |   javascript    |
+
+https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/javascript
+https://www.codewars.com/kata/5b6c220fa0a661fbf200005d/train/javascript
+https://www.codewars.com/kata/53d6387b83db278202000802/train/javascript
+https://www.codewars.com/kata/55960bbb182094bc4800007b/train/javascript
+https://www.codewars.com/kata/57d237f25dc38ede6e00026b
+https://www.codewars.com/kata/5769b3802ae6f8e4890009d2/train/javascript
+https://www.codewars.com/kata/5709bdd2f088096786000008
+https://www.codewars.com/kata/5672a98bdbdd995fad00000f
+https://www.codewars.com/kata/572059afc2f4612825000d8a
+https://www.codewars.com/kata/5556282156230d0e5e000089/train/javascript
+https://www.codewars.com/kata/5813d19765d81c592200001a/train/javascript
+https://www.codewars.com/kata/556196a6091a7e7f58000018/train/csharp
+https://www.codewars.com/kata/56453a12fcee9a6c4700009c/train/csharp
+https://www.codewars.com/kata/59342039eb450e39970000a6
+https://www.codewars.com/kata/5b4e779c578c6a898e0005c5/train/csharp
+
+LINQ practice: https://www.codewars.com/kata/57a2013acf1fa5bfc4000921
+
+Algorithm practice: https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097
+
+LINQ and algorithm practice:
+https://www.codewars.com/kata/558fc85d8fd1938afb000014
+
+https://www.codewars.com/kata/5168bb5dfe9a00b126000018
+https://www.codewars.com/kata/57eae20f5500ad98e50002c5
+https://www.codewars.com/kata/57f36495c0bb25ecf50000e7
+
+https://www.codewars.com/kata/577bd026df78c19bca0002c0/train/csharp
+https://www.codewars.com/kata/57eadb7ecd143f4c9c0000a3
+
+https://www.codewars.com/kata/53369039d7ab3ac506000467/train/csharp
+https://www.codewars.com/kata/554b4ac871d6813a03000035
+https://www.codewars.com/kata/5467e4d82edf8bbf40000155
+
+String methods: https://www.codewars.com/kata/57a0e5c372292dd76d000d7e
+
+Collections: https://www.codewars.com/kata/53da6d8d112bd1a0dc00008b/train/csharp
+
+More strings: https://www.codewars.com/kata/56747fd5cb988479af000028
+
+More strings, more difficult:
+https://www.codewars.com/kata/554e4a2f232cdd87d9000038
+
+https://www.codewars.com/kata/568dc014440f03b13900001d/train/csharp
+
+https://www.codewars.com/kata/590ba881fe13cfdcc20001b4/train/sql
+https://www.codewars.com/kata/5809b9ef88b750ab180001ec
+https://www.codewars.com/kata/580918e24a85b05ad000010c/train/sql
+https://www.codewars.com/kata/5802e32dd8c944e562000020/train/sql
+
+Codewars, one or more of these:
+https://www.codewars.com/kata/5910b0d378cc2ba91400000b/train/sql
+https://www.codewars.com/kata/590a95eede09f87472000213/train/sql
+https://www.codewars.com/kata/593ed37c93350098d600001d/train/sql
+
+https://www.codewars.com/kata/55d24f55d7dd296eb9000030
+https://www.codewars.com/kata/5701800886306a876a001031/csharp
+
+https://www.codewars.com/kata/volume-of-a-cuboid
+https://www.codewars.com/kata/58cb43f4256836ed95000f97
+https://www.codewars.com/kata/5715eaedb436cf5606000381
+https://www.codewars.com/kata/56dec885c54a926dcd001095
