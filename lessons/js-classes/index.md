@@ -4,7 +4,7 @@ title: JavaScript classes
 
 # JavaScript as an Object Prototype language
 
-Before 2015, JavaScript was an object based language that did not have the
+Before 2015, JavaScript was an object-based language that did not have the
 concept of `classes`. What JavaScript did have was the idea of a `prototype`. An
 object's `prototype` was the collection of methods that the object could do.
 
@@ -40,9 +40,10 @@ roxy.eat()
 rover.bark()
 ```
 
-However defining instance data on these objects wasn't always easy and the
+However, defining instance data on these objects wasn't always easy and the
 format for defining object prototypes was very unfamiliar to developers coming
-from class-based object oriented languages like `Java`, `C#`, `Ruby` and others.
+from class-based object-oriented languages like `Java`, `C#`, `Ruby`, and
+others.
 
 # Enter `class`
 
@@ -52,7 +53,7 @@ the same, this new syntax is a form of
 [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar). That is, a new
 syntax that exists only to make an existing feature easier to use.
 
-Lets redefine our `Dog`
+Let's redefine our `Dog`
 
 ```javascript
 class Dog {
@@ -75,8 +76,8 @@ would.
 Programmers of languages such as `C#` might recognize these as property
 definitions.
 
-Within a class declaration we can identify new properties of objects created
-from this class. For instance we can give these dogs a name property by:
+Within a class declaration, we can identify new properties of objects created
+from this class. For instance, we can give these dogs a name property by:
 
 ```javascript
 class Dog {
@@ -166,8 +167,8 @@ jack.bark()
 
 ## Constructors in subclasses and super
 
-In a subclass we may also implement a constructor. If so we may want to call the
-_parent_ class constructor as well. We can do that via the `super` method.
+In a subclass, we may also implement a constructor. If so we may want to call
+the _parent_ class constructor as well. We can do that via the `super` method.
 
 ```javascript
 class LoudDog extends Dog {
@@ -224,14 +225,14 @@ class Dog {
 
 This `greet` method works exactly like the other methods of the class, except
 for one small difference we don't yet see. That is, the value of `this` is
-handled slightly differently. In the case of the arrow function the `this` value
-is **always** the instance of the object itself. However, for our normally
+handled slightly differently. In the case of the arrow function, the `this`
+value is **always** the instance of the object itself. However, for our normally
 defined methods like `bark` and `eat` it isn't the case. The subtle difference
-here won't make a big impact to us until we get to dealing with things like
+here won't make a big impact on us until we get to dealing with things like
 event callback functions in [React](/lessons/react-intro) so we'll hold off any
 further discussion of the concept of `this`.
 
-If you are very curious about the subject, and it is an often discussed
+If you are very curious about the subject of `this`, an often discussed and
 confusing feature of the language, you can read
 [this excellent MDN article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 on the matter.
