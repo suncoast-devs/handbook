@@ -56,7 +56,7 @@ modules:
       - js-event-loop
       - js-ui-as-state
       - js-fetch
-      # - react-intro
+      - react-intro
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
