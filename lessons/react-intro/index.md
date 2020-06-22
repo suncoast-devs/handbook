@@ -2,11 +2,31 @@
 title: Hello, React
 ---
 
+# React
+
+> <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" width="40px" style="display: inline; margin-right: 0.5rem"/>
+> A JavaScript library for building user interfaces
+
 React is the primary front end library/framework we will focus on for this
 course.
 
 It was developed by Facebook around 2011/2012 and was released as an
 [open source](https://en.wikipedia.org/wiki/Open_source) project in 2013.
+
+From React's Homepage:
+
+> React makes it painless to create interactive UIs. Design simple views for
+> each state in your application, and React will efficiently update and render
+> just the right components when your data changes.
+
+> Build encapsulated components that manage their own state, then compose them
+> to make complex UIs.
+
+> We don’t make assumptions about the rest of your technology stack, so you can
+> develop new features in React without rewriting existing code.
+
+These are strong claims. Let's dive in and begin to see how React delivers on
+these promises.
 
 # Components
 
@@ -441,7 +461,7 @@ we would for regular HTML elements.
 />
 <NewsArticle
   title="SDG Standardizes on React"
-  body="ReactJS is the best library for learning front end Web"
+  body="React is the best library for learning front end Web"
 />
 ```
 
@@ -546,12 +566,12 @@ eventually come from.
   {
     "id": 100,
     "title": "SDG Standardizes on React",
-    "body": "ReactJS is the best library for learning front end Web"
+    "body": "React is the best library for learning front end Web"
   },
   {
     "id": 101,
     "title": "This data comes from JSON!",
-    "body": "ReactJS works with data using tools we already know!"
+    "body": "React works with data using tools we already know!"
   }
 ]
 ```
@@ -673,12 +693,12 @@ second.
   {
     "id": 100,
     "title": "SDG Standardizes ...",
-    "body": "ReactJS is the ..."
+    "body": "React is the ..."
   },
   {
     "id": 101,
     "title": "This data ...",
-    "body": "ReactJS works ..."
+    "body": "React works ..."
   }
 ]
 ```
@@ -688,8 +708,8 @@ second.
 [
   <NewsArticle title="SDG Announces ..." body="SDG announces ..." />,
   <NewsArticle title="Student Graduation ..." body="Our next cohort ..." />,
-  <NewsArticle title="SDG Standardizes ..." body="ReactJS is the ..." />,
-  <NewsArticle title="This data ..." body="ReactJS works ..." />,
+  <NewsArticle title="SDG Standardizes ..." body="React is the ..." />,
+  <NewsArticle title="This data ..." body="React works ..." />,
 ]
 ```
 
@@ -725,7 +745,7 @@ export default App
 > element as if we had hard coded it.
 
 There is one other thing we need to do. If you look in your console you will see
-a message about each element needing a `key`. There is another ReactJS rule that
+a message about each element needing a `key`. There is another React rule that
 is important to know.
 
 > RULE: Each component that is rendered dynamically from an array of data must
