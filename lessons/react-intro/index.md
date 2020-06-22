@@ -19,8 +19,8 @@ From React's Homepage:
 > each state in your application, and React will efficiently update and render
 > just the right components when your data changes.
 
-> Build encapsulated components that manage their own state, then compose them
-> to make complex UIs.
+> Build encapsulated components that manage their state, then compose them to
+> make complex UIs.
 
 > We don’t make assumptions about the rest of your technology stack, so you can
 > develop new features in React without rewriting existing code.
@@ -30,19 +30,19 @@ these promises.
 
 # Components
 
-One of the main idea of React is the concept of composing your web application
+One of the main ideas of React is the concept of composing your web application
 from components. A component in React is a combination of state and behavior
 that serve to render elements to the DOM.
 
 When learning HTML and CSS we decomposed our user interface into blocks and
-groups of elements for the purpose of organizing and then styling the content of
-the page. The same is true of React Components. We can now also look at our
-pages as collections of React Components. Each of these components can be reused
-which will help us reduce code.
+groups of elements to organize and then style the content of the page. The same
+is true of React Components. We can now also look at our pages as collections of
+React Components. Each of these components can be reused which will help us
+reduce code.
 
 ## Class versus Function components
 
-We will begin by looking at `class` based React Components. In a future lesson
+We will begin by looking at `class` based React Components. In a future lesson,
 we will be looking at `function` based components. These are the two current
 ways to create React Components. `class` components were introduced first and
 you will see most documentation relate to this style. However, the React team,
@@ -126,7 +126,7 @@ We will start writing our code in our `App.jsx` file.
 
 You may have noticed that we define our React Components in files that end in
 `.jsx` instead of `.js`. The `.jsx` extension allows our editors and our code
-management tools to know we are using the `JSX` extensions. Browsers to not
+management tools to know we are using the `JSX` extensions. Browsers do not
 understand `JSX` by default so a
 [transpile](https://en.wikipedia.org/wiki/Source-to-source_compiler) step takes
 place automatically. This step turns our `JSX` into plain `JavaScript` that a
@@ -134,8 +134,8 @@ browser **can** understand.
 
 # Build a simple React application
 
-Let's generate a new `app-app` project using the `gamma` stack that will setup a
-new React project.
+Let's generate a new `app-app` project using the `gamma` stack that will set up
+a new React project.
 
 ```shell
 app-app --gamma ReactArticles
@@ -175,7 +175,7 @@ can help simplify our code.
 ## Start with `hard coded` content
 
 Much like how we started with HTML, we want to get the content onto the page.
-Let's open up our main component, the `App` component and put this static
+Let's open up our main component, the `App` component, and put this static
 content on the page.
 
 ```javascript
@@ -223,7 +223,7 @@ export default App
 You may have noticed we used `className=` everywhere in the code instead of
 `class=`. This is because `JSX` uses the `DOM` names for properties whereas
 `HTML` uses a more generic name. In the `DOM` it is the `className` property
-that `class=` becomes. So we will be using `className` for our classnames in
+that `class=` becomes. So we will be using `className` for our class names in
 JSX.
 
 Don't worry, our `console` will warn us of these types of errors when we make
@@ -308,7 +308,7 @@ import React from 'react'
 This line tells the script we are going to use `React` and it activates the
 `JSX` template process.
 
-Next we will make our component:
+Next, we will make our component:
 
 ```javascript
 export class NewsArticle extends React.Component {}
@@ -317,7 +317,7 @@ export class NewsArticle extends React.Component {}
 the `export` at the beginning of that line, tells JavaScript we wish to share
 this class outside of the file. We'll use that fact in just a moment.
 
-an we will ensure it has a `render()` method.
+And we will ensure it has a `render()` method.
 
 ```javascript
 export class NewsArticle extends React.Component {
@@ -344,7 +344,7 @@ folder. Notice we do not add the extension. The `import` system is smart and can
 tell we mean the `jsx` version. If there were multiple files with the same
 extension we'd have to be more clear.
 
-Finally we can add this element to our `render()` method. Let's insert it right
+Finally, we can add this element to our `render()` method. Let's insert it right
 inside the `<main>`
 
 ```html
@@ -392,9 +392,9 @@ export class NewsArticle extends React.Component {
 ```
 
 You should notice that our app now has **THREE** articles. The first comes from
-our `<NewsArticle/>` and the other two from the hard coded elements.
+our `<NewsArticle/>` and the other two from the hardcoded elements.
 
-Let's remove the other two hard coded `<article>`s leaving only our
+Let's remove the other two hardcoded `<article>`s leaving only our
 `<NewsArticle/>`
 
 ```javascript
@@ -416,8 +416,8 @@ class App extends Component {
 export default App
 ```
 
-We should only see the one article listed. Note if we repeat the
-`<NewsArticle/>` we can have as many of the `<article>` structure as we want.
+We should only see one article listed. If we repeat the `<NewsArticle/>` we can
+have as many of the `<article>` structure as we want.
 
 ```javascript
 import React, { Component } from 'react'
@@ -468,19 +468,19 @@ we would for regular HTML elements.
 Here we are asking to render three `<NewsArticle/>` components and provide each
 a different set of `properties` or in React terms: `props`
 
-This is great, however our `<NewsArticle>` still shows the hard coded data.
+This is great, however, our `<NewsArticle>` still shows the hardcoded data.
 
 ## Using props in a component
 
 When React places our component on the page and calls the `render()` method to
 generate the elements, it makes the supplied `props` available in a variable
-named `this.props` -- the `this.props` is an object who's keys are the names of
+named `this.props` -- the `this.props` is an object whose keys are the names of
 the properties. In our case this is `this.props.title` and `this.props.body` --
 the corresponding values are supplied as well.
 
-We can use these in our component by using an _interpolation_ method with in
-JSX. This is much like string interpolation in plain JavaScript but the syntax
-is slightly different:
+We can use these in our component by using an _interpolation_ method within JSX.
+This is much like string interpolation in plain JavaScript but the syntax is
+slightly different:
 
 ```javascript
 import React from 'react'
@@ -500,8 +500,8 @@ export class NewsArticle extends React.Component {
 }
 ```
 
-Now when each of these components are rendered on the page, the unique values
-for `this.props` are available and we now have a component that is:
+Now when each of these components is rendered on the page, the unique values for
+`this.props` are available and we now have a component that is:
 
 - **reusable**
 - **customizable**
@@ -509,7 +509,7 @@ for `this.props` are available and we now have a component that is:
 # Driving our application from data
 
 This is great, and we have an application that can render any number of articles
-we want. However we still must manually code these in our main application.
+we want. However, we still must manually code these in our main application.
 
 ```javascript
 import React, { Component } from 'react'
@@ -541,12 +541,12 @@ class App extends Component {
 export default App
 ```
 
-It would be nice to render this from data.
+It would be nice to render this from the data.
 
 ## Importing JSON data
 
 Let's start by making a JSON file named `articles.json` in the directory along
-with `App.jsx` -- in this file we will describe, in JSON, an array of articles
+with `App.jsx` -- In this file, we will describe, in JSON, an array of articles
 we want to render. We will also give each article an `id` as if it came from an
 API since that is likely the most common case for where this data will
 eventually come from.
@@ -610,7 +610,7 @@ export default App
 ```
 
 The line `import articles from './articles'` will read the JSON file and make
-it's contents available as the variable `articles`! No parsing required! This is
+its contents available as the variable `articles`! No parsing required! This is
 because the environment comes with a **`loader`** for JSON files and it knows
 how to read and parse them for us!
 
@@ -666,10 +666,10 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-Remembering from our [lesson on JavaScript iteration](/lessons/js-iteration) we
-can use `map` to turn an array of one type of element (say a JavaScript object
-in this case) into an array of another type of element, (<NewsArticle/> in this
-case)
+In our [lesson on JavaScript iteration](/lessons/js-iteration] we can
+demonstrated that `map` can turn an array of one type of element (say a
+JavaScript object in this case) into an array of another type of element,
+(<NewsArticle/> in this case)
 
 So what is happening here is a transformation from the first array to the
 second.
@@ -716,7 +716,7 @@ second.
 </div>
 
 Since we now have an array of the `<NewsArticle/>` we can simply place them
-where we want them in place of the hard coded data.
+where we want them in place of the hardcoded data.
 
 ```javascript
 import React, { Component } from 'react'
@@ -742,7 +742,7 @@ export default App
 
 > NOTE: We don't even have to do anything special with the array to get it to
 > output since JSX already knows how to deal with arrays, it just outputs each
-> element as if we had hard coded it.
+> element as if we had hardcoded it.
 
 There is one other thing we need to do. If you look in your console you will see
 a message about each element needing a `key`. There is another React rule that
@@ -779,8 +779,8 @@ export default App
 ```
 
 The `key` prop is a special property and is used by React only. We don't use it
-with our `NewsArticle` component. In a later lesson we will learn why this `key`
-is so important.
+with our `NewsArticle` component. In a later lesson, we will learn why this
+`key` is so important.
 
 ## Conclusion
 
@@ -788,6 +788,6 @@ We now have an application that allows us to add more articles to this listing.
 If we add new data to our `JSON` file and reload the application it _reacts_ to
 the new data by rendering more information.
 
-In the following lessons we will learn how to load data from a remote API, how
+In the following lessons, we will learn how to load data from a remote API, how
 to respond to events, how to update data dynamically, and how to add different
 "pages" to our application and give it the ability to navigate between them.
