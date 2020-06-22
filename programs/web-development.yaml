@@ -56,6 +56,7 @@ modules:
       - js-event-loop
       - js-ui-as-state
       - js-classes
+      - js-modules
       - react-intro
       - js-fetch
   - full-stack-development:
