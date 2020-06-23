@@ -1,6 +1,6 @@
 ---
 title: Rhythm's gonna get you
-tags: ["c-sharp", "console", "sql", "ef-core"]
+tags: ['c-sharp', 'console', 'sql', 'ef-core']
 ---
 
 # Rhythm's gonna get you
@@ -52,7 +52,7 @@ band.
 
     - [ ] A Band has many Albums. An Album belongs to one Band.
 
-  - [ ] Create an interface to let the user:
+  - [ ] Create a menu system that shows the following options to the user until they choose to quit your program
 
     - [ ] Add a new band
     - [ ] View all the bands
@@ -63,6 +63,7 @@ band.
     - [ ] View all albums ordered by ReleaseDate
     - [ ] View all bands that are signed
     - [ ] View all bands that are not signed
+    - [ ] Quit the program
 
 ### Adventure Mode
 
