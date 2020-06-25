@@ -15,7 +15,7 @@ tags: ['javascript', 'enumeration']
 3. Clone your repository: `hub clone js-iteration`
 4. Change into your project's directory: `cd js-iteration`
 5. Install the dependencies: `yarn install` (or just `yarn` for short)
-6. Open in your editor]
+6. Open in your editor: `code .`
 7. Start the test runner: `yarn test`
 8. Open `src/functions.test.js` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
