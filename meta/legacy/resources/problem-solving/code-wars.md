@@ -84,6 +84,7 @@ Challenges we like:
 |  7  | Ones and Zeros                                       |         https://www.codewars.com/kata/ones-and-zeros          |       C#        |
 |  7  | Exes and Ohs                                         |    https://www.codewars.com/kata/55908aad6620c066bc00002a     |   javascript    |
 
+https://www.codewars.com/kata/5569b10074fe4a6715000054/train/javascript
 https://www.codewars.com/kata/5808dcb8f0ed42ae34000031/train/javascript
 https://www.codewars.com/kata/5b6c220fa0a661fbf200005d/train/javascript
 https://www.codewars.com/kata/53d6387b83db278202000802/train/javascript
@@ -146,3 +147,4 @@ https://www.codewars.com/kata/volume-of-a-cuboid
 https://www.codewars.com/kata/58cb43f4256836ed95000f97
 https://www.codewars.com/kata/5715eaedb436cf5606000381
 https://www.codewars.com/kata/56dec885c54a926dcd001095
+
