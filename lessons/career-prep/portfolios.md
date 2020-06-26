@@ -62,6 +62,10 @@ Here are some portfolio template resources to help you get started:
 - [Skillcrush](https://skillcrush.com/blog/free-portfolio-templates/)
 - [Colorlib](https://colorlib.com/wp/cat/portfolio/)
 - [Free CSS](https://www.free-css.com/template-categories/portfolio)
+- [ThemeForest](https://themeforest.net/tags/portfolio)
+- [WebThemez](https://webthemez.com/portfolio-template/)
+= [Bootstrapdash](https://www.bootstrapdash.com/bootstrap-portfolio-templates/)
+
  It's better to use a template than attempt to be a designer and fail.  
 
 ## Need some inspiration - check out these portfolios
