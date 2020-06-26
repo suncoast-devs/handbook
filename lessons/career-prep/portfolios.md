@@ -64,7 +64,7 @@ Here are some portfolio template resources to help you get started:
 - [Free CSS](https://www.free-css.com/template-categories/portfolio)
 - [ThemeForest](https://themeforest.net/tags/portfolio)
 - [WebThemez](https://webthemez.com/portfolio-template/)
-= [Bootstrapdash](https://www.bootstrapdash.com/bootstrap-portfolio-templates/)
+- [Bootstrapdash](https://www.bootstrapdash.com/bootstrap-portfolio-templates/)
 
  It's better to use a template than attempt to be a designer and fail.  
 
