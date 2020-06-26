@@ -58,10 +58,10 @@ When styling, start with mobile-first then check how it looks on tablet and desk
 If you are not a designer, the best option is to find a template that works for you.
 
 Here are some portfolio template resources to help you get started:
-[Start Bootstrap](https://startbootstrap.com/themes/portfolio-resume/)
-[Skillcrush](https://skillcrush.com/blog/free-portfolio-templates/)
-[Colorlib](https://colorlib.com/wp/cat/portfolio/)
-[Free CSS](https://www.free-css.com/template-categories/portfolio)
+- [Start Bootstrap](https://startbootstrap.com/themes/portfolio-resume/)
+- [Skillcrush](https://skillcrush.com/blog/free-portfolio-templates/)
+- [Colorlib](https://colorlib.com/wp/cat/portfolio/)
+- [Free CSS](https://www.free-css.com/template-categories/portfolio)
  It's better to use a template than attempt to be a designer and fail.  
 
 ## Need some inspiration - check out these portfolios
