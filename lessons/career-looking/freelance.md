@@ -1,6 +1,6 @@
 ---
 title: Freelancing Resources & Pro Tips to Get Hired
-order: 5
+order: 6
 ---
 
 ## What is freelance?
@@ -49,8 +49,7 @@ How will you communicate?
 
 ## Frustration
 
-The prevention of the progress, success, or fulfillment
-of something
+The prevention of the progress, success, or fulfillment of something
 
 ### Customer Service is Essential
 
@@ -96,9 +95,8 @@ Freelance & full-time
 
 ### Informational Interview
 
-A meeting in which a potential job seeker seeks advice on
-their career, the industry, and the corporate culture of a
-potential future workplace
+A meeting in which a potential job seeker seeks advice on their career, the
+industry, and the corporate culture of a potential future workplace
 
 ### Preparation for the Interview
 
@@ -124,8 +122,8 @@ potential future workplace
 
 ### Every Interview is Valuable
 
-Give it your best effort 100% of the time. You never know
-where it could lead you
+Give it your best effort 100% of the time. You never know where it could lead
+you
 
 ## Be Confident. Be True. Be You.
 
