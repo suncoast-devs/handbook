@@ -32,7 +32,7 @@ order: 2
 
 - Add cards to your Trello board and move them under Applied
 - Move card to Ready for Rec when you need a letter of recommendation
-- Tag @katherinesdg with a comment saying "Ready for Rec"
+- Tag your Campus Director with a comment saying "Ready for Rec"
 
 ## Alums Looking
 

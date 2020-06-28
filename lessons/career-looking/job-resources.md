@@ -16,3 +16,30 @@ order: 4
 - [Simply Hired](https://www.simplyhired.com/)
 - [CareerBuilder](https://www.careerbuilder.com/)
 - [Regional Engineering Jobs](https://www.rengineeringjobs.com/)
+
+## Internships
+
+Some local companies may have Internship opportunities available.
+
+Here is an example list of companies that have advertised development/ tech
+internships in the past through their own websites, job search sites or
+[Internships.com](https://www.internships.com/)\*:
+
+- [VASTEC](https://www.vastec.com/)
+- [Star2Star](https://www.star2star.com/)
+- [Equitus Corporation](https://equitus.us/)
+- [Valley IT Solutions](https://valleyit.com/)
+- [WYNRIGHT](https://www.wynright.com/)
+- [General Dynamics](https://www.gd.com/)
+- [Miva](https://www.miva.com/)
+- [Fat Dog Spirits](http://www.fatdogspirits.com/)
+- [Tampa's Lowry Park Zoo](https://zootampa.org/)
+- [180bytwo](https://180bytwo.com/)
+- [Cyber Ninjas](https://www.cyberninjas.com/)
+- [Novetta](https://www.novetta.com/)
+- [Gallagher Website Design](https://www.gallagherwebsitedesign.com/)
+- [Manpower Group](https://www.manpowergroup.com/)
+
+\*There is no guarantee that an opportunity will be available at this time, this
+is an informational list only. SDG grads _do not_ receive priority treatment for
+any opportunities.
