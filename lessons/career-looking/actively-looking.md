@@ -81,15 +81,15 @@ first or next position.
   <summary>Step 4: Post your Resume on Job Boards</summary>
   <ul>
     <li><a href="https://www.indeed.com/">Indeed</a></li>
-    <li><a href="www.dice.com">Dice</a></li>
-    <li><a href="www.monster.com">Monster</a></li>
-    <li><a href="www.careerbuilder.com">CareerBuilder</a></li>
-    <li><a href="www.ziprecruiter.com">ZipRecruiter</a></li>
+    <li><a href="https://www.dice.com">Dice</a></li>
+    <li><a href="https://www.monster.com">Monster</a></li>
+    <li><a href="https://www.careerbuilder.com">CareerBuilder</a></li>
+    <li><a href="https://www.ziprecruiter.com">ZipRecruiter</a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Step 5: Upload Resume to <a href="www.linkedin.com">LinkedIn</a></summary>
+  <summary>Step 5: Upload Resume to <a href="https://www.linkedin.com">LinkedIn</a></summary>
   <ul>
     <li><a href="https://www.linkedin.com/help/linkedin/answer/161/upload-your-resume-to-linkedin?lang=en">Upload Your Resume to LinkedIn</a></li>
     <li><a href="https://www.zipjob.com/blog/upload-resume-linkedin/">How to Upload Your Resume on LinkedIn in 2020 (+ Examples)</a></li>
@@ -126,7 +126,7 @@ first or next position.
 <details>
   <summary>Step 9: Track your Applications</summary>
   <ul>
-    <li>Use <a href="www.trello.com"> Trello</a> or another method to track your job
+    <li>Use <a href="https://www.trello.com"> Trello</a> or another method to track your job
   applications</li>
     <ul>
       <li>Recent grads using Career Support MUST use Trello to ping Katherine for
