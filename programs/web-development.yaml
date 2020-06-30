@@ -58,7 +58,9 @@ modules:
       - js-classes
       - js-modules
       - react-intro
+      # react-events
       - js-fetch
+      - react-hooks
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
