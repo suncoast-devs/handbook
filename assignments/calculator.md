@@ -14,7 +14,7 @@ Practice is key to gaining the mileage needed to conquer programming. A very com
 
 Create a simple calculator that allows the user to add, multiply, subtract, and divide two numbers. Here is a sample UI:
 
-![Calculator](https://daveceddia.com/images/calculator@2x.png)
+![Calculator](https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/calculator.png)
 
 ## Notes
 
