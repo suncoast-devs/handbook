@@ -1,5 +1,5 @@
 ---
-title: Control FLow
+title: Control Flow
 order: 4
 ---
 
@@ -39,9 +39,9 @@ Use the optional `else` clause to execute a statement if the condition is
 
 ```javascript
 if (condition) {
-  statement_1;
+  statement_1
 } else {
-  statement_2;
+  statement_2
 }
 ```
 
@@ -59,13 +59,13 @@ tested in sequence, as follows:
 
 ```javascript
 if (condition_1) {
-  statement_1;
+  statement_1
 } else if (condition_2) {
-  statement_2;
+  statement_2
 } else if (condition_n) {
-  statement_n;
+  statement_n
 } else {
-  statement_last;
+  statement_last
 }
 ```
 
@@ -76,11 +76,11 @@ use block statements, especially when nesting if statements:
 
 ```javascript
 if (condition) {
-  statement_1_runs_if_condition_is_true;
-  statement_2_runs_if_condition_is_true;
+  statement_1_runs_if_condition_is_true
+  statement_2_runs_if_condition_is_true
 } else {
-  statement_3_runs_if_condition_is_false;
-  statement_4_runs_if_condition_is_false;
+  statement_3_runs_if_condition_is_false
+  statement_4_runs_if_condition_is_false
 }
 ```
 
@@ -126,28 +126,28 @@ the statement following switch. If break were omitted, the statement for case
 
 ```javascript
 switch (fruittype) {
-  case "Oranges":
-    console.log("Oranges are $0.59 a pound.");
-    break;
-  case "Apples":
-    console.log("Apples are $0.32 a pound.");
-    break;
-  case "Bananas":
-    console.log("Bananas are $0.48 a pound.");
-    break;
-  case "Cherries":
-    console.log("Cherries are $3.00 a pound.");
-    break;
-  case "Mangoes":
-    console.log("Mangoes are $0.56 a pound.");
-    break;
-  case "Papayas":
-    console.log("Mangoes and papayas are $2.79 a pound.");
-    break;
+  case 'Oranges':
+    console.log('Oranges are $0.59 a pound.')
+    break
+  case 'Apples':
+    console.log('Apples are $0.32 a pound.')
+    break
+  case 'Bananas':
+    console.log('Bananas are $0.48 a pound.')
+    break
+  case 'Cherries':
+    console.log('Cherries are $3.00 a pound.')
+    break
+  case 'Mangoes':
+    console.log('Mangoes are $0.56 a pound.')
+    break
+  case 'Papayas':
+    console.log('Mangoes and papayas are $2.79 a pound.')
+    break
   default:
-    console.log("Sorry, we are out of " + fruittype + ".");
+    console.log('Sorry, we are out of ' + fruittype + '.')
 }
-console.log("Is there anything else you'd like?");
+console.log("Is there anything else you'd like?")
 ```
 
 ---
