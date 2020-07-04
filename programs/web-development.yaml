@@ -76,6 +76,7 @@ modules:
       - soft-skills
       - career-prep
       - career-looking
+      - career-coding
       - misc-keys-to-student-success
 
 position: 0
