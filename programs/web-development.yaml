@@ -7,6 +7,7 @@ modules:
     title: Program Pre-work
     lessons:
       - prework
+      - misc-keys-to-student-success
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
@@ -77,6 +78,5 @@ modules:
       - career-prep
       - career-looking
       - career-coding
-      - misc-keys-to-student-success
 
 position: 0
