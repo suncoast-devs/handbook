@@ -221,7 +221,8 @@ skill we will re-use quite often in our `C#` programming.
 
 ## References
 
-See this [quick reference guide](/lessons/misc-quick-reference/cs-linq) to LINQ.
+See this [quick reference guide](/lessons/misc-quick-reference/cs-linq) for an
+overview of the frequently used enumeration methods with examples.
 
 Here is
 [a list](https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable?view=netcore-3.1)

@@ -571,6 +571,7 @@ var favoriteMovie = movies.First(
 
 [.column]
 
+- FindIndex
 - First
 - FirstOrDefault
 - Last

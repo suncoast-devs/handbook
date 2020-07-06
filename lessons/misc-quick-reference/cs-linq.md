@@ -43,8 +43,16 @@ We have seen an example of `Select` already. To define `Select`:
 Example:
 
 ```csharp
-// Make a list of strings when each string contins the year it's corresponding Movie was released, a comma, and the title of the Movie.
+// Make a list of strings when each string contains the year it's corresponding Movie was released, a comma, and the title of the Movie.
 var yearAndMovie = movies.Select(movie => $"{movie.ReleaseDate.Year}, {movie.Name} ");
+```
+
+> Select, and many of the methods listed here, have a form where the expression
+> can accept a second argument, the index of the element.
+
+```csharp
+// Make a list of strings when each string contains the year it's corresponding Movie was released, a comma, the title of the Movie, and the index in the original list.
+var yearAndMovie = movies.Select((movie, index) => $"{movie.ReleaseDate.Year}, {movie.Name}, at index {index} ");
 ```
 
 ### Where
@@ -78,6 +86,16 @@ var totalRevenue = movies.Aggregate(0, (currentTotal, movie) => currentTotal + m
 
 > NOTE: Aggregate is one of the most difficult of these methods to understand.
 > Don't worry if you don't get how it works.
+
+### FindIndex
+
+The `FindIndex` statement allows us to detect the first element of a collection
+and return the `index` of that element when found. If no match is found,
+`FindIndex` returns the value `-1`
+
+```csharp
+var indexOfFirstMovieHavingOverOneHundredScreenings = movies.FindIndex(movie => movie.Screenings >= 100);
+```
 
 ### All
 
