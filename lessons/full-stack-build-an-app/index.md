@@ -17,6 +17,7 @@ a [React](/lessons/react-intro) application that will
 [fetch data](/lessons/js-fetch) from our API and support multiple pages with
 [React Router](https://reactrouter.com/)
 
+
 ---
 
 # Getting Started
@@ -83,6 +84,7 @@ amount of time.
 
 > No code is easier to develop and executes more efficiently than code you never
 > have to write.
+
 
 ## Home Page Wireframe
 
@@ -152,6 +154,14 @@ It generates a full React application in the directory `ClientApp` and ensures
 it is connected to the full C# backend application found in the rest of the
 directories.
 
+## Generate the app
+
+From your command line in the **main directory** of your application.
+
+```shell
+dotnet new sdg-react -o TacoTuesday
+```
+
 ## `ClientApp` uses `npm` and not `yarn`
 
 When adding third party libraries to our front end, we will be using `npm` and
@@ -167,14 +177,6 @@ You can run both the _backend_ and the _front end_ from a **single** command of
 
 ```shell
 dotnet watch run
-```
-
-From your command line in the **main directory** of your application.
-
-## Generate the app
-
-```shell
-dotnet new sdg-react -o TacoTuesday
 ```
 
 # Create Static HTML and CSS
