@@ -52,7 +52,7 @@ code --install-extension ms-azuretools.vscode-docker
 <!--
 # These are not found
 ```
-code --install-extension ms-vscode.csharp
+code --install-extension ms-dotnettools.csharp
 code --install-extension ScottSauber.blazorsnippets
 
 ``` -->
@@ -71,62 +71,46 @@ code --install-extension hasanali.gitignore-templates
 code --install-extension skyran.js-jsx-snippets
 code --install-extension xabikos.ReactSnippets
 code --install-extension Zignd.html-css-class-completion
+code --install-extension formulahendry.auto-rename-tag
 
 ```
 
-## Required VS Code Configuration
+## Configure Visual Studio Code
 
-Within VS Code go to the `File` menu, then `Preferences`, then `Settings`
-
-- In the search bar enter `tab size`
-- Find the setting `Editor: Tab Size` and change this to `2`
-
-- In the search bar enter `formatOnSave`
-- Find the setting `Editor: Format on Save` and turn this _ON_
-
-## Configure proper spacing.
-
-In VS Code Use `Control Shift P` to launch the command palette and Type
-`Open Settings JSON` and select option that does _NOT_ mention "Default"
+In VS Code Use `Control Shift P` to launch the command palette and type
+`Open Settings JSON` and select option that does _NOT_ mention "Default" or
+"Workspace"
 
 This will open an editor window.
 
-At the top of the file and just after the first `{` paste the following:
+If this file contains:
 
 ```
-  "[csharp]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
-  },
-```
-
-## Additional Tips and Tricks
-
-In VS Code Use `Command Shift P` to launch the command palette and Type
-`Configure User Snippets`
-
-- Look for the `csharp` option and select it.
-- Copy the following below and paste underneath the commented section within the
-  `{}`.
-
-```json
-"Print to console": {
-	"prefix": "write",
-	"body": [
-		"Console.WriteLine($\"$1\");",
-		"$2"
-	],
-	"description": "Log output to console"
-},
-"Read from Console": {
-	"prefix": "read",
-	"body": [
-		"Console.ReadLine().ToLower();",
-		"$1"
-	],
-	"description": "Read input from user, set to lower"
+{
 }
 ```
 
-- This allows you to more efficiently create `Console.WriteLine($" ");` and
-  `Console.ReadLine().ToLower();`
+or
+
+```
+{}
+```
+
+You may proceed with the next step. If it contains anything else **STOP** and
+ask for assistance.
+
+Replace the contents of this file with:
+
+```
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "javascript.implicitProjectConfig.checkJs": true,
+  "[csharp]": {
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4
+  }
+}
+```
+
+Save this file and close the tab.
