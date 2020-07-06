@@ -66,6 +66,7 @@ modules:
     title: Full-stack Application Development
     lessons:
       - cs-api-servers
+      - full-stack-build-an-app
       - auth0-intro
   - quick-reference:
     title: Quick Reference Guides

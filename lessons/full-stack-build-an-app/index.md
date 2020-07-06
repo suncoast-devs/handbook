@@ -17,7 +17,6 @@ a [React](/lessons/react-intro) application that will
 [fetch data](/lessons/js-fetch) from our API and support multiple pages with
 [React Router](https://reactrouter.com/)
 
-
 ---
 
 # Getting Started
@@ -85,7 +84,6 @@ amount of time.
 > No code is easier to develop and executes more efficiently than code you never
 > have to write.
 
-
 ## Home Page Wireframe
 
 ![wireframe](./assets/taco-tuesday-home-screen.png)
@@ -115,6 +113,7 @@ and
 ```text
 Review
 ------
+Summary
 Body
 Creation Timestamp
 Restaurant
@@ -264,13 +263,13 @@ need. (eg. getting the restaurant ID for a `<RestaurantDetails>` component)
 
 <!-- https://github.com/gstark/TacoTuesday/commit/ac137ad972bcbb7732807096bf845dba3db1a391 -->
 
-[ClientApp/src/App.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/App.jsx)
-[ClientApp/src/custom.css](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/custom.css)
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/Restaurants.jsx)
-[ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/AddRestaurant.jsx)
-[ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/ShowRestaurant.jsx)
-[ClientApp/src/components/Header.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/components/Header.jsx)
-[ClientApp/src/components/](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/components/NavBar.jsx)
+- [ClientApp/src/App.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/App.jsx)
+- [ClientApp/src/custom.scss](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/custom.scss)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/AddRestaurant.jsx)
+- [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/pages/ShowRestaurant.jsx)
+- [ClientApp/src/components/Header.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/components/Header.jsx)
+- [ClientApp/src/components/](https://raw.githubusercontent.com/gstark/TacoTuesday/ac137ad972bcbb7732807096bf845dba3db1a391/ClientApp/src/components/NavBar.jsx)
 
 And at this point, we can navigate around the application but only with static
 information.
@@ -393,12 +392,12 @@ psql TacoTuesdayDatabase --file=Models/seeds.sql
 > NOTE: Your Migrations files will have different filenames with distinct
 > timestamps
 
-[Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/Restaurant.cs)
-[Models/DatabaseContext.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/DatabaseContext.cs)
-[Migrations/20200705195609_CreateRestaurant.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/20200705195609_CreateRestaurant.Designer.cs)
-[Migrations/20200705195609_CreateRestaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/20200705195609_CreateRestaurant.cs)
-[Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/DatabaseContextModelSnapshot.cs)
-[Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/seeds.sql)
+- [Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/Restaurant.cs)
+- [Models/DatabaseContext.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/DatabaseContext.cs)
+- [Migrations/20200705195609_CreateRestaurant.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/20200705195609_CreateRestaurant.Designer.cs)
+- [Migrations/20200705195609_CreateRestaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/20200705195609_CreateRestaurant.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Migrations/DatabaseContextModelSnapshot.cs)
+- [Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/4822b4cca25bae2d078202e5ca726190d6395123/Models/seeds.sql)
 
 ---
 
@@ -418,7 +417,7 @@ all, of the things we need our controller to do.
 To use this controller we will run this command line:
 
 ```shell
-dotnet aspnet-codegenerator controller -name RestaurantsController --useAsyncActions -api --model Restaurant --dataContext DatabaseContext --relativeFolderPath Controllers
+dotnet aspnet-codegenerator controller --model Restaurant -name RestaurantsController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
 ```
 
 Here we are telling the `codegenerator` to create a controller named
@@ -427,6 +426,9 @@ are generating an `api` style controller (as opposed to one that renders its own
 HTML views), that the model used with this controller is `Restaurant`, our
 database context class is named `DatabaseContext` and our controller folder is
 `Controllers`
+
+If we were generating a controller for a different model we would change the
+`--name` and the `--model` arguments. All the others would remain the same.
 
 When done we will have a `RestaurantsController.cs` file with a controller that
 has the following routes:
@@ -506,7 +508,7 @@ anything to do with our backend API resources.
 
 ## Files Updated
 
-[Controllers/RestaurantsController](https://raw.githubusercontent.com/gstark/TacoTuesday/3bafd4231a8114a456577cd745c0510b58c3d261/Controllers/RestaurantsController.cs)
+- [Controllers/RestaurantsController](https://raw.githubusercontent.com/gstark/TacoTuesday/3bafd4231a8114a456577cd745c0510b58c3d261/Controllers/RestaurantsController.cs)
 
 ## Get a list of restaurants
 
@@ -568,7 +570,7 @@ This should render an _empty_ list of restaurants at first.
 
 ## Files Updated
 
-[ClientApp/src/pages/Restaurants](https://raw.githubusercontent.com/gstark/TacoTuesday/5b0f50e1af09c3bb332eaf8390e6b6d18a12fe28/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/Restaurants](https://raw.githubusercontent.com/gstark/TacoTuesday/5b0f50e1af09c3bb332eaf8390e6b6d18a12fe28/ClientApp/src/pages/Restaurants.jsx)
 
 ## Fetching data
 
@@ -603,7 +605,7 @@ restaurants on our home page.
 
 ## Files Updated
 
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/518ef34e375b6989b667da16ad68da681ed2ec17/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/518ef34e375b6989b667da16ad68da681ed2ec17/ClientApp/src/pages/Restaurants.jsx)
 
 ## Refactor
 
@@ -638,9 +640,9 @@ function RestaurantList() {
 }
 ```
 
-## Files Changed
+## Files Updated
 
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/6500b761dc09d9064af4529621f6fb937f9f7dd8/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/6500b761dc09d9064af4529621f6fb937f9f7dd8/ClientApp/src/pages/Restaurants.jsx)
 
 # Representations of Resources
 
@@ -787,10 +789,10 @@ const handleClickSearch = () => {
 }
 ```
 
-## Files Changed
+## Files Updated
 
-[Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/f7ad38c6da8f2d71efcee2d88e33fa648363c563/Controllers/RestaurantsController.cs)
-[ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/f7ad38c6da8f2d71efcee2d88e33fa648363c563/ClientApp/src/components/NavBar.jsx)
+- [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/f7ad38c6da8f2d71efcee2d88e33fa648363c563/Controllers/RestaurantsController.cs)
+- [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/f7ad38c6da8f2d71efcee2d88e33fa648363c563/ClientApp/src/components/NavBar.jsx)
 
 ---
 
@@ -936,11 +938,11 @@ Now our search works.
 
 > WHEW!
 
-## Files changed
+## Files Updated
 
-[ClientApp/src/App.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/App.jsx)
-[ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/components/NavBar.jsx)
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/App.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/App.jsx)
+- [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/components/NavBar.jsx)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/4f61820cb80731c1124d5bcaceb0dd1115b608da/ClientApp/src/pages/Restaurants.jsx)
 
 ---
 
@@ -1094,7 +1096,7 @@ list.
 
 ## Files Updated
 
-[ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/master/ClientApp/src/pages/AddRestaurant.jsx)
+- [ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/master/ClientApp/src/pages/AddRestaurant.jsx)
 
 # Handling validation
 
@@ -1252,13 +1254,13 @@ with a red border and adding the error text next to the field.
 We'll leave this as an exercise for the reader. Also, you may want to look into
 some popular React forms libraries that add these capabilities for you.
 
-## Files Changed
+## Files Updated
 
-[Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/35f2cb19b1dad1896ad587968771410d20e41faa/Models/Restaurant.cs)
-[ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/master/ClientApp/src/pages/AddRestaurant.jsx)
-[Migrations/20200706004409_AddRestaurantRequiredFields.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/20200706004409_AddRestaurantRequiredFields.Designer.cs)
-[Migrations/20200706004409_AddRestaurantRequiredFields.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/20200706004409_AddRestaurantRequiredFields.cs)
-[Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/DatabaseContextModelSnapshot.cs)
+- [Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/35f2cb19b1dad1896ad587968771410d20e41faa/Models/Restaurant.cs)
+- [ClientApp/src/pages/AddRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/master/ClientApp/src/pages/AddRestaurant.jsx)
+- [Migrations/20200706004409_AddRestaurantRequiredFields.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/20200706004409_AddRestaurantRequiredFields.Designer.cs)
+- [Migrations/20200706004409_AddRestaurantRequiredFields.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/20200706004409_AddRestaurantRequiredFields.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Migrations/DatabaseContextModelSnapshot.cs)
 
 ---
 
@@ -1439,11 +1441,11 @@ With this structure we:
 
 ## Files Updated
 
-[Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Models/Restaurant.cs)
-[Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs)
-[Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs)
-[Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/DatabaseContextModelSnapshot.cs)
-[Controllers/RestaurantVotesController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Controllers/RestaurantVotesController.cs)
+- [Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Models/Restaurant.cs)
+- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs)
+- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/DatabaseContextModelSnapshot.cs)
+- [Controllers/RestaurantVotesController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Controllers/RestaurantVotesController.cs)
 
 ---
 
@@ -1645,10 +1647,10 @@ And now when we click an up/downvote we do not get a reordering of the
 restaurants and the visual effect is that we are just incrementing the counter
 as we should.
 
-## Files Changed
+## Files Updated
 
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/066e831b0dfe119282dae8ea9a74c9001cadfdc4/ClientApp/src/pages/Restaurants.jsx)
-[Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Controllers/RestaurantsController.cs)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/066e831b0dfe119282dae8ea9a74c9001cadfdc4/ClientApp/src/pages/Restaurants.jsx)
+- [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Controllers/RestaurantsController.cs)
 
 ---
 
@@ -1737,10 +1739,10 @@ tools would warn us that this is not advised and direct us to this style.
 Now we should be able to navigate around and see the various restaurants in the
 system.
 
-## Files Changed
+## Files Updated
 
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/436c4ed6499d951b200acf096348ac22e12a8f9f/ClientApp/src/pages/Restaurants.jsx)
-[ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/436c4ed6499d951b200acf096348ac22e12a8f9f/ClientApp/src/pages/ShowRestaurant.jsx)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/436c4ed6499d951b200acf096348ac22e12a8f9f/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/436c4ed6499d951b200acf096348ac22e12a8f9f/ClientApp/src/pages/ShowRestaurant.jsx)
 
 ---
 
@@ -1802,14 +1804,14 @@ public List<Review> Reviews { get; set}
 This will allow us to _navigate_ in code from a single restaurant to the list of
 associated reviews.
 
-## Files Changed
+## Files Updated
 
-[Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/Restaurant.cs)
-[Models/Review.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/Review.cs)
-[Models/DatabaseContext.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/DatabaseContext.cs)
-[Migrations/20200706111326_AddReviews.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/20200706111326_AddReviews.Designer.cs)
-[Migrations/20200706111326_AddReviews.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/20200706111326_AddReviews.cs)
-[Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/DatabaseContextModelSnapshot.cs)
+- [Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/Restaurant.cs)
+- [Models/Review.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/Review.cs)
+- [Models/DatabaseContext.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Models/DatabaseContext.cs)
+- [Migrations/20200706111326_AddReviews.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/20200706111326_AddReviews.Designer.cs)
+- [Migrations/20200706111326_AddReviews.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/20200706111326_AddReviews.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/6ce8a68e7f3fc9b0631cd98725dce7aff4723119/Migrations/DatabaseContextModelSnapshot.cs)
 
 ## Restaurant API should return their associated reviews
 
@@ -1904,9 +1906,9 @@ zero reviews.
 
 We should see one restaurant that has two reviews (based on our seed data)
 
-## Files Changed
+## Files Updated
 
-[ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/Restaurants.jsx)
-[ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/ShowRestaurant.jsx)
-[Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/Controllers/RestaurantsController.cs)
-[Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Models/seeds.sql)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/Restaurants.jsx)
+- [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/ShowRestaurant.jsx)
+- [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/Controllers/RestaurantsController.cs)
+- [Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Models/seeds.sql)
