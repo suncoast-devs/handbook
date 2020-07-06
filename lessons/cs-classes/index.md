@@ -685,6 +685,64 @@ namespace EmployeeDatabase
 }
 ```
 
+## Default values
+
+We can also define a property to have a default value. If we wanted our
+`Employee` to track the date their information was cerated, we could add a
+`CreatedAt` property. However, the developer would have to remember to give it a
+valid value each time we used `new Employee`
+
+We can address this by defining a default value, in this case the value of
+`DateTime.now` which will be the current time when the object is created.
+
+We could default other properties such as `Salary`, or `Department` as long as
+the default value we give is compatible with the data type.
+
+```csharp
+class Employee
+{
+  public string Name { get; set; }
+  public int Department { get; set; }
+  public DateTime CreatedAt { get; set; } = DateTime.now;
+  public int Salary { get; set; }
+  public int MonthlySalary()
+  {
+    return Salary / 12;
+  }
+}
+```
+
+## Contructors
+
+Another way to initialize an instance of an object is using a _special_ method
+called a `constructor`. This method has the same name as the class itself and is
+used any time we call for a new instance of the object.
+
+For instance, to default the `CreatedAt` property we could have also used this
+code:
+
+```csharp
+class Employee
+{
+  public Employee()
+  {
+    this.CreatedAt = DateTime.now;
+  }
+
+  public string Name { get; set; }
+  public int Department { get; set; }
+  public DateTime CreatedAt { get; set; }
+  public int Salary { get; set; }
+  public int MonthlySalary()
+  {
+    return Salary / 12;
+  }
+}
+```
+
+Constructors are more flexible than just assigning a default value, we can have
+any necessary _initialization_ code required.
+
 ## Inheritance
 
 Often in modeling the real world we encounter different types of data that are
