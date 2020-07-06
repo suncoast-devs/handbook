@@ -96,7 +96,7 @@ From these wireframes, we can start to collect the details of the entities our
 system needs to represent. From the user stories and wireframe we can see we may
 have the following entities:
 
-```
+```text
 Restaurant
 ----------
 Name
@@ -110,7 +110,7 @@ Review Count?
 
 and
 
-```
+```text
 Review
 ------
 Body
@@ -120,7 +120,7 @@ Restaurant
 
 and we would describe the relationships between these two entities as:
 
-```
+```text
 Restaurants have many Reviews
 Review belongs to one Restaurant
 ```
