@@ -712,7 +712,7 @@ class Employee
 }
 ```
 
-## Contructors
+## Constructors
 
 Another way to initialize an instance of an object is using a _special_ method
 called a `constructor`. This method has the same name as the class itself and is
