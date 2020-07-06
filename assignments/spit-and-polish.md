@@ -1,13 +1,11 @@
 ---
 title: Spit and Polish
-tags: ["recovery"]
+tags: ['recovery']
 ---
 
-Your GitHub repository will be part of your portfolio and you will likely link
-to it from your portfolio.
+Your GitHub repository will be part of your portfolio and you will likely link to it from your portfolio.
 
-Creating a clean looking README is as important for a project as having nice
-clean code.
+Creating a clean looking README is as important for a project as having nice clean code.
 
 Here are some examples of great READMEs:
 
@@ -24,19 +22,15 @@ Here are some example of great student READMEs:
 
 ## Objectives
 
-- Create quality readmes
+- Create quality READMEs
 
 ### Explorer Mode
 
 - [ ] Choose several (at least three) repositories to update the READMEs
 - [ ] Include a description, in your own words, of what the assignment was
-- [ ] Include a list of technologies (and links to the homepage for each) you
-      used
+- [ ] Include a list of technologies (and links to the homepage for each) you used
 - [ ] Include a link to the project in production (surge, etc.)
-- [ ] Include a screenshot or an animated gif (see
-      [Kap](https://github.com/wulkano/kap), [Recordit](http://recordit.co/), or
-      [Licecap](https://www.cockos.com/licecap/))
+- [ ] Include a screenshot or an animated gif (see [Kap](https://github.com/wulkano/kap), [Recordit](http://recordit.co/), or [Licecap](https://www.cockos.com/licecap/))
 - Optional:
   - [ ] Include an aspect you are particularly proud of
-  - [ ] Include a snippet of code you are proud of (see GitHub Markdown on how
-        to format code snippets)
+  - [ ] Include a snippet of code you are proud of (see GitHub Markdown on how to format code snippets)
