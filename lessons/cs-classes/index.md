@@ -287,9 +287,24 @@ namespace EmployeeDatabase
 }
 ```
 
-Now that we have this `class` definition, let's use it inside our application.
+## Allowing properties to be `null`
+
+As is, the properties of our object cannot be `null`, that is they must have
+_some_ value, even if for a string this is an empty string `""` and for a number
+it might be `0`.
+
+However, by adding a `?` to the end of the data type we can indicate that the
+property is allowed to be `null`.
+
+This is also true of variables we declare outside of a class as well.
+
+For more information, and examples, see
+[this article](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)
+for details.
 
 ## Creating and using classes: Objects
+
+Now that we have this `class` definition, let's use it inside our application.
 
 We can think of the `class` we created as a template used to create new
 _instances_ of itself. That is, it can create new variables who's type is a
