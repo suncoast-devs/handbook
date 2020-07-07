@@ -2115,3 +2115,55 @@ example of how to perform this type of logic.
 - [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/src/pages/ShowRestaurant.jsx)
 - [ClientApp/package-lock.json](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/package-lock.json)
 - [ClientApp/package.json](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/package.json)
+
+---
+
+# Customize the navigation bar
+
+Notice that the "Add" and "Search" part of the navigation bar appears on every
+page. These elements should really only be visible on the home page since that
+is where we present the list of restaurants.
+
+The `NavBar` is a child component of the `<App>` so we could use `<Route>` there
+to render custom versions of `NavBar` depending on the route. However, there is
+a better way. We can use `<Route/>` anywhere in the application to selectively
+control what elements are on the page. We can do this as long as a `<Router>`
+appears in a parent component. Since our `index.js` has a `<Router>` around the
+entire application we can, essentially, use a `<Route>` anywhere.
+
+In our `NavBar` component it is the `<form>` element we want to selectively
+reveal based on the route. We can surround this element with a
+`<Route exact path="/"></Route>` and this `<form>` element will only show on the
+home page.
+
+```javascript
+<Route exact path="/">
+  <form className="form-inline my-2 my-lg-0">
+    <Link className="btn btn-success mr-2" to="/restaurants/add">
+      + Add
+    </Link>
+    <input
+      className="form-control mr-sm-2"
+      type="search"
+      placeholder="Search"
+      aria-label="Search"
+      value={filterText}
+      onChange={event => setFilterText(event.target.value)}
+    />
+    <span
+      className="btn btn-outline-success my-2 my-sm-0"
+      onClick={handleClickSearch}
+    >
+      Search
+    </span>
+  </form>
+</Route>
+```
+
+This is one of the benefits we get from using react-router. Anywhere in our
+application where content on the page is dependent on the URL we can use
+`<Route>` and `<Switch>` to our advantage.
+
+## Files Updated
+
+- [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/09d495cd303dfb8b83021a4a3a2df808900107d5/ClientApp/src/components/NavBar.jsx)
