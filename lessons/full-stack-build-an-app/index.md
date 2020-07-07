@@ -646,11 +646,11 @@ function RestaurantList() {
 
 # Adding a search feature to our API
 
-Given our discussion of APIs and resources, let's consider adding a `search`
-feature to our API to satisfy the `search / filter` UI from our navigation bar.
+Let's consider adding a `search` feature to our API to satisfy the
+`search / filter` UI from our navigation bar.
 
 We could add another endpoint such as `GET /api/Restaurants/search`, but we
-already have an endpoint that represents the resource we want: _the list of
+already have an endpoint that represents what we want: _the list of
 restaurants_, we just want a **variant** of that list.
 
 In this case, we can use the `query parameter` feature of HTTP to our advantage,
@@ -692,10 +692,15 @@ const [filterText, setFilterText] = useState('')
 
 Then we will update the `<input>` tag
 
-```html
-<input className="form-control mr-sm-2" type="search" placeholder="Search"
-aria-label="Search" value={filterText} onChange={event =>
-setFilterText(event.target.value)} />
+```javascript
+<input
+  className="form-control mr-sm-2"
+  type="search"
+  placeholder="Search"
+  aria-label="Search"
+  value={filterText}
+  onChange={event => setFilterText(event.target.value)}
+/>
 ```
 
 And add a click handler for the `Search` button itself
@@ -2170,3 +2175,26 @@ application where content on the page is dependent on the URL we can use
 ## Files Updated
 
 - [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/09d495cd303dfb8b83021a4a3a2df808900107d5/ClientApp/src/components/NavBar.jsx)
+
+<!-- Whats next
+
+  User accounts
+    - User controller
+      - CREATE => creates user
+    - Idea of a session controller
+      - CREATE => login
+      - DELETE => logout
+    - JWT tokens
+
+    - See cohort-17/week-08/AuthExample
+    - See refactored cohort-17/week-08/HikeFinder
+
+  Maps
+    - Geolocating API
+    - Background jobs????
+    - Lat/Lng
+    - Mapping component
+
+  Image Upload -- see cohort-17/week-08/FileExample
+
+ -->
