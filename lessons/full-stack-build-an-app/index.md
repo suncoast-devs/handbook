@@ -1912,3 +1912,206 @@ We should see one restaurant that has two reviews (based on our seed data)
 - [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/ShowRestaurant.jsx)
 - [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/Controllers/RestaurantsController.cs)
 - [Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Models/seeds.sql)
+
+---
+
+# Create a review
+
+Similar to how we created the new restaurant we will use a state variable to
+track the values in the form and then POST them to the API.
+
+## Create a controller
+
+First we must create a controller for the reviews. We will use the code
+generator again to make this controller.
+
+```shell
+dotnet aspnet-codegenerator controller --model Review -name ReviewsController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
+```
+
+This will create _Controllers/ReviewsController.cs_ with code to create, read,
+update, and delete reviews.
+
+Looking at this controller and our user interface we see that we do not need to
+get a listing of all reviews, nor do we need to access a single review, nor do
+we need to update or delte reviews. Thus we should only keep the one endpoint,
+the `POST /api/Reviews` to create a new review. Remove all the methods other
+than `PostReview`
+
+## Update the user interface
+
+We will add a state to track the fields of the review.
+
+```javascript
+const [newReview, setNewReview] = useState({
+  body: '',
+  summary: '',
+  restaurantId: id,
+})
+```
+
+Notice that we include, by default, the related restaurant id. This will be
+required by the API to know which restaurant this review is associated to.
+
+We will also have to change `const id = params.id` to
+`const id = parseInt(params.id)` to ensure that the `id` value is an integer,
+since the backend API will demand this.
+
+Then we will create a method to track the changes of the various fields:
+
+```javascript
+const handleNewReviewFieldChange = event => {
+  const id = event.target.id
+  const value = event.target.value
+
+  setNewReview({ ...newReview, [id]: value })
+}
+```
+
+Lastly ensure that all the `input` and `textArea` fields are updated with the
+values from `newReview`, the `onChange` event, and a correct `id` attribute.
+
+```javascript
+<input
+  type="text"
+  className="form-control"
+  id="summary"
+  aria-describedby="summaryHelp"
+  value={newReview.summary}
+  onChange={handleNewReviewFieldChange}
+/>
+```
+
+and
+
+```javascript
+<textarea
+  className="form-control"
+  id="body"
+  value={newReview.body}
+  onChange={handleNewReviewFieldChange}
+/>
+```
+
+Finally create a method to handle the form submit
+
+```javascript
+const handleNewReviewSubmit = event => {
+  event.preventDefault()
+
+  fetch(`/api/Reviews`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(newReview),
+  })
+    .then(response => response.json)
+    .then(apiResponse => {
+      fetchRestaurant()
+    })
+}
+```
+
+and
+
+```javascript
+<form onSubmit={handleNewReviewFieldChange}>
+```
+
+Then we will move `fetchRestaurant` from outside of the `useEffect` method so
+both the `useEffect` and `handleNewReviewSubmit` can access it.
+
+However, you'll notice that our form is not clearing after we create the new
+restaurant. We need to clear out the new restaurant fields. We'll add one more
+`setNewRestaurant` after the `fetchNewRestaurant` in `handleNewReviewSubmit`
+
+```javascript
+const handleNewReviewSubmit = event => {
+  event.preventDefault()
+
+  fetch(`/api/Reviews`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(newReview),
+  })
+    .then(response => response.json)
+    .then(apiResponse => {
+      fetchRestaurant()
+      setNewReview({ ...newReview, body: '', summary: '' })
+    })
+}
+```
+
+## Files Updated
+
+- [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/30a8065a328cbc8c23bfd0e3c36ec1b1a46c4c91/ClientApp/src/pages/ShowRestaurant.jsx)
+- [Controllers/ReviewsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/30a8065a328cbc8c23bfd0e3c36ec1b1a46c4c91/Controllers/ReviewsController.cs)
+
+---
+
+# Formatting dates
+
+You may have noticed that the dates displayed for a review are not very user
+friendly. We are getting values such as `2020-07-06T22:34:42.721481`. Let's look
+at a way we can format these dates.
+
+There are two popular libraries for formatting dates:
+[date-fns](https://date-fns.org/) and [moment](https://momentjs.com/). In this
+application we'll use `date-fns` to format dates.
+
+In order to add the javascript library we need to:
+
+- Stop `dotnet watch run`
+- `cd ClientApp`
+- `npm install date-fns --save`
+- `cd ..`
+- `dotnet watch run`
+
+The [format](https://date-fns.org/v2.14.0/docs/format) function from `date-fns`
+has many configuration options.
+
+First we will import the format function:
+
+```javascript
+import format from 'date-fns/format'
+```
+
+We would like a format such as: "Monday, July 6th, 2020 at 10:50 PM". To
+generate this we need to review the documentation for all the tokens to apply in
+the format.
+
+- `EEEE` day of the week
+- `MMMM` month
+- `do` day of the week
+- `yyyy` calendar year
+- `h` hour
+- `mm` minute
+- `aaa` AM or PM
+
+So our format string is:
+
+```javascript
+const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
+```
+
+Then to use this, we need to convert `review.createdAt` to a `Date` object and
+pass that and the format string to the `format` function from `date-fns`
+
+```javascript
+<span className="float-right">
+  {format(new Date(review.createdAt), dateFormat)}
+</span>
+```
+
+Another nice option might to use a relative time (e.g. `20 days ago`) if the
+review is recent (perhaps in the last month) and the long descriptive time if it
+is older than that.
+
+Look into `date-fns` method
+[differenceInDays](https://date-fns.org/v2.14.0/docs/differenceInDays) as an
+example of how to perform this type of logic.
+
+## Files Updated
+
+- [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/src/pages/ShowRestaurant.jsx)
+- [ClientApp/package-lock.json](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/package-lock.json)
+- [ClientApp/package.json](https://raw.githubusercontent.com/gstark/TacoTuesday/ad9ee5ac3e46601776fa6874c3c5877bce77f244/ClientApp/package.json)
