@@ -1501,11 +1501,9 @@ const handleUpvote = () => {
   fetch(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
+  }).then(() => {
+    console.log('Need to reload the restaurants')
   })
-    .then(response => response.json())
-    .then(() => {
-      console.log('Need to reload the restaurants')
-    })
 }
 
 const handleDownvote = () => {
@@ -1514,11 +1512,9 @@ const handleDownvote = () => {
   fetch(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
+  }).then(() => {
+    console.log('Need to reload the restaurants')
   })
-    .then(response => response.json())
-    .then(() => {
-      console.log('Need to reload the restaurants')
-    })
 }
 ```
 
