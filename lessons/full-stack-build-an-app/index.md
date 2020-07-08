@@ -2172,11 +2172,390 @@ application where content on the page is dependent on the URL we can use
 
 - [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/09d495cd303dfb8b83021a4a3a2df808900107d5/ClientApp/src/components/NavBar.jsx)
 
+---
+
+# User accounts
+
+In order to keep track of upvotes, downvotes, and who created what restaurants
+and reviews we will need to add the idea of users and login/logout features.
+
+We will create a user model and the associated controller to manage them. Then
+we will make user interface components for creating accounts and for logging in.
+
+## User Model
+
+To begin we will create a user model that stores information about the user.
+Each user will have the following attributes:
+
+- Id
+- Full Name
+- Email Address
+- Password
+
+However, it is an unwise choice to store **unencrypted** passwords in our
+database. Thus we will not store the raw password, but a **hashed** password.
+
+### Hashing Passwords
+
+The idea of a hashed password relies on the idea of a "one way function", that
+is a function that is fast and easy to compute in one direction, but difficult
+to compute in the other.
+
+Let's take a look at the idea of a "two way function". A simple example would be
+`double`, a function that takes a number and multiplies it by two. If I give you
+the input of this function, say `42`, you can quickly and reliably compute the
+output, `84`. However, if I give you an output, say `246`, it is trivial for you
+to figure out what a corresponding input would be, `123`. This would be true no
+matter how large the numbers get. Given `24686850904684` you can quickly figure
+out what the corresponding input is.
+
+A classic example of a one way function is the prime factorization function.
+Given two prime numbers, say `17` and `5`, it is easy to multiply them together
+and get `85`. Given a number like `85` it isn't too hard to figure out which two
+prime numbers multiply together to get that number. However, this isn't true as
+the number gets larger. However, if I give you the number `682654107378822049`
+it isn't so trivial to compute the two numbers that are its prime factors (the
+answer is `982451653` and `694847533` by the way)
+
+For something like a password we will use the idea of a `hashing function`. A
+`hashing function` attempts to take an input value and compute a fixed size and
+_mostly_ unique value. Small changes in the input should make a large and
+unpredictable changes in the output.
+
+A popular hashing function is `SHA256`. If we take the text `dotnet` and process
+it with this algorithm we get back out the result:
+`3831fff4af76125e90081ac7eb855a1bcce0733045f9d26cd620466e0d4acf97`. However if
+we take the text `ditnet`, just one letter different we get
+`fb89fe75f8be03f17435f563121e940360cd9fcfcbd3f8978b59c160fdaca711`
+
+Given a result of a `SHA256` hash it is _very_ difficult to work out what text
+generated it.
+
+We will be using the built-in `dotnet` hashing algorithm that is based on
+[`PBKDF2`](https://en.wikipedia.org/wiki/PBKDF2), a very strong password hashing
+algorithm.
+
+## Defining our model
+
+For our model we will want to treat the `Id`, `FullName`, and `Email` as we have
+other fields. However, for the password we will be creating and storing a
+`HashedPassword` in the database. This field should **never** be exposed in any
+API so we will mark it as `JsonIgnore` so that it is never serialized.
+
+We also wish to be able to _assign_ a plain text password to a user. The
+assigning of this plain text password should have the effect of hashing that
+value and storing it in the `HashedPassword` property. We will also need a way
+to validate a user password.
+
+```csharp
+using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.Identity;
+
+namespace TacoTuesday.Models
+{
+    public class User
+    {
+        public int Id { get; set; }
+        j
+        [Required]
+        public string FullName { get; set; }
+
+        [Required]
+        public string Email { get; set; }
+
+        [JsonIgnore]
+        public string HashedPassword { get; set; }
+
+        // Define a property for being able to _set_ a password
+        public string Password
+        {
+            // Define only the `set` aspect of the property
+            set
+            {
+                // When set, use the PasswordHasher to encrypt the password
+                // and store the result in our HashedPassword
+                this.HashedPassword = new PasswordHasher<User>().HashPassword(this, value);
+            }
+        }
+
+        // Add a method that can validate this user's password
+        public bool IsValidPassword(string password)
+        {
+            // Look to see if this password, and the user's hashed password can match
+            var passwordVerification = new PasswordHasher<User>().VerifyHashedPassword(this, this.HashedPassword, password);
+
+            // Return True if the verification was a success
+            return passwordVerification == PasswordVerificationResult.Success;
+        }
+    }
+}
+```
+
+We will also mark the `FullName` and the `Email` as required since we'll use the
+email as the login and we want to be able to address the user by name.
+
+This class uses a custom `setter` for the `Password` which will allow us to set
+it from the API. That setter simply hashes the password and assigns the user's
+`HashedPassword` property (which will be stored in the database)
+
+We also have a method `IsValidPassword` that can identify if we have a valid
+password.
+
+## Generating a migration
+
+Add the `Users` to the `DatabaseContext` class:
+
+```csharp
+// Tell the context about the User collection/table
+public DbSet<User> Users { get; set; }
+```
+
+Add the migration:
+
+```shell
+dotnet ef migrations add AddUser
+```
+
+After validating the migration looks good, run it:
+
+```shell
+dotnet ef database update
+```
+
+## Files Updated
+
+- [Models/User.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/024098fac176fa19494177ed7002e35eaf9fb590/Models/User.cs)
+- [Models/DatabaseContext.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/024098fac176fa19494177ed7002e35eaf9fb590/Models/DatabaseContext.cs)
+- [Migrations/20200708004113_AddUser.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/024098fac176fa19494177ed7002e35eaf9fb590/Migrations/20200708004113_AddUser.cs)
+- [Migrations/20200708004113_AddUser.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/024098fac176fa19494177ed7002e35eaf9fb590/Migrations/20200708004113_AddUser.Designer.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/024098fac176fa19494177ed7002e35eaf9fb590/Migrations/DatabaseContextModelSnapshot.cs)
+
+# Add a controller to create new Users
+
+Lets use the code generator to make a new controller for managing users.
+However, we will only be keeping the `POST` action to create a new user. Later
+on we may add user management features where we need to add back in other
+commands like `DELETE` and `PUT`. We also certainly do not want to expose any
+`GET` actions where someone could list all of our users!
+
+```shell
+dotnet aspnet-codegenerator controller --model User -name UsersController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
+```
+
+This is the only `Http` method we will leave in the file:
+
+```csharp
+[HttpPost]
+public async Task<ActionResult<User>> PostUser(User user)
+{
+    // Indicate to the database context we want to add this new record
+    _context.Users.Add(user);
+    await _context.SaveChangesAsync();
+
+    // Return a response that indicates the object was created (status code `201`) and some additional
+    // headers with details of the newly created object.
+    return CreatedAtAction("GetUser", new { id = user.Id }, user);
+}
+```
+
+j
+
+# Add a user interface for creating a user
+
+Similar to our interface for adding a restaurant we'll make a signup page.
+
+Create the `Signup.jsx` file in the `pages` directory:
+
+```javascript
+import React, { useState } from 'react'
+import { useHistory } from 'react-router'
+
+export function SignUp() {
+  const history = useHistory()
+
+  const [errorMessage, setErrorMessage] = useState()
+
+  const [newUser, setNewUser] = useState({
+    fullName: '',
+    email: '',
+    password: '',
+  })
+
+  const handleFieldChange = event => {
+    const value = event.target.value
+    const fieldName = event.target.id
+
+    const updatedUser = { ...newUser, [fieldName]: value }
+
+    setNewUser(updatedUser)
+  }
+
+  const handleFormSubmit = event => {
+    event.preventDefault()
+
+    fetch('/api/Users', {
+      method: 'POST',
+      headers: { 'content-type': 'application/json' },
+      body: JSON.stringify(newUser),
+    })
+      .then(response => response.json())
+      .then(apiResponse => {
+        if (apiResponse.status === 400) {
+          setErrorMessage(Object.values(apiResponse.errors).join(' '))
+        } else {
+          history.push('/')
+        }
+      })
+  }
+
+  return (
+    <div className="card">
+      <div className="card-header">Create an Account</div>
+      <div className="card-body">
+        {errorMessage && (
+          <div className="alert alert-danger" role="alert">
+            {errorMessage}
+          </div>
+        )}
+        <form onSubmit={handleFormSubmit}>
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name</label>
+            <input
+              type="text"
+              className="form-control"
+              id="fullName"
+              value={newUser.fullName}
+              onChange={handleFieldChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              className="form-control"
+              id="email"
+              value={newUser.email}
+              onChange={handleFieldChange}
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              value={newUser.password}
+              onChange={handleFieldChange}
+            />
+          </div>
+
+          <button type="submit" className="btn btn-primary">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  )
+}
+```
+
+We will also add a route in `App.jsx`
+
+```javascript
+<Route path="/signup">
+  <SignUp />
+</Route>
+```
+
+And we will also add a button to our `<NavBar>`
+
+```javascript
+<Link className="btn btn-success mr-2" to="/signup">
+  Signup
+</Link>
+```
+
+And with this we have the ability for users to sign up to our app!
+
+## Avoid duplicate email addresses
+
+<!-- To make the email unique we can add a _unique index_ on the field. Indexes are a
+database optimization technique that allows the database to have fast access to
+looking up information based on a specific column. We automatically get an index
+on our `Id` column to make those lookups fast. Most of the databases we've
+worked with so far haven't been so large that indexes have been needed to make
+them fast. However, we are going to use them here.
+
+When creating an index we specify the columns involved. This makes lookups for
+values in those columns fast. Of course creating an index takes up more space in
+our database and it also makes **inserting** data slower since it needs to
+insert data into our table and additionally update the index information as
+well.
+
+One of the aspects we can make of an index is to specify that for the column, or
+columns, involved that the values be **unique**.
+
+To create our unique index we will add some code to our `DatabaseContext` model.
+
+```csharp
+protected override void OnModelCreating(ModelBuilder modelBuilder)
+{
+   modelBuilder.Entity<User>() .HasIndex(user => user.Email) .IsUnique();
+}
+```
+
+Then we will generate a migration:
+
+```shell
+dotnet ef migrations add AddUserEmailIndex
+```
+
+Then run the migration:
+
+```shell
+dotnet ef database update
+``` -->
+
+To make the email unique we can add logic to our `POST` method in our
+`UsersController`. We can check for a user with the same email address and
+return an error if there is already a match.
+
+```csharp
+var alreadyHaveUserWithTheEmail = _context.Users.Any(existingUser => existingUser.Email.ToLower() == user.Email.ToLower());
+if (alreadyHaveUserWithTheEmail)
+{
+    // Make a custom error response
+    var response = new
+    {
+        status = 400,
+        errors = new List<string>() { "This account already exists!" }
+    };
+
+    // Return our error with the custom response
+    return BadRequest(response);
+}
+```
+
+Since we are generating the same style error that validation errors do we will
+get a nice error in the UI when someome attempts to use an email address that
+exists.
+
+## Files Updated
+
+- [ClientApp/src/App.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/1cd82cd8af0ab6b4005779e0c42e893e363799ff/ClientApp/src/App.jsx)
+- [ClientApp/src/components/NavBar.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/1cd82cd8af0ab6b4005779e0c42e893e363799ff/ClientApp/src/components/NavBar.jsx)
+- [ClientApp/src/pages/SignUp.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/1cd82cd8af0ab6b4005779e0c42e893e363799ff/ClientApp/src/pages/SignUp.jsx)
+- [Controllers/UsersController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/1cd82cd8af0ab6b4005779e0c42e893e363799ff/Controllers/UsersController.cs)
+
+---
+
+# Add the ability to LOGIN
+
 <!-- Whats next
 
   User accounts
-    - User controller
-      - CREATE => creates user
     - Idea of a session controller
       - CREATE => login
       - DELETE => logout
