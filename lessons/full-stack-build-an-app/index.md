@@ -1783,7 +1783,7 @@ method _private_ so that it cannot be set via the API.
 
 ```csharp
 using System;
-j
+
 namespace TacoTuesday.Models
 {
     public class Review
@@ -2276,7 +2276,7 @@ namespace TacoTuesday.Models
     public class User
     {
         public int Id { get; set; }
-        j
+
         [Required]
         public string FullName { get; set; }
 
@@ -2377,8 +2377,6 @@ public async Task<ActionResult<User>> PostUser(User user)
     return CreatedAtAction("GetUser", new { id = user.Id }, user);
 }
 ```
-
-j
 
 # Add a user interface for creating a user
 
@@ -2794,7 +2792,7 @@ address as the received user.
 Next it uses the `IsValidPassword` method we wrote in the `User` class to detect
 if the password matches.
 
-If we found a user `foundUser != null` **AND** the password mwatches we will
+If we found a user `foundUser != null` **AND** the password watches we will
 generate a response that looks like this:
 
 ```json
