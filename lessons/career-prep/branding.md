@@ -83,6 +83,9 @@ This section of your LinkedIn profile comprises all the influencers and companie
 ### Customize Your URL
 If you are using the default URL that LinkedIn assigned your profile when you create it, you see something like this, linkedin.com/pub/yourname-298903g8. By customizing the URL, you can remove the random numbers assigned and make your LinkedIn profile look professional while making it easier to find. Let's be honest; **linkedin.com/in/their-name** looks better than **linkedin.com/pub/yourname-298903g8**.
 
+### Resources for getting attention using LinkedIn
+- [Video Resources from Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/LinkedIn_Profiles.aspx)
+
 ## Social Media Platforms
 
 You don't have to use every online platform out there just because you are a developer. When you use an online platform, your goal should be to share what you are working on, gain knowledge, and highlight your interests. If you don't plan to be active on a platform, it is better not to have it than to have no activity.

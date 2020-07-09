@@ -160,3 +160,7 @@ Need more examples on how to list your Professional Experience: [How to write yo
 - [Example Resume 3](https://drive.google.com/file/d/1FKU63YX5qc1G9KSuBE4s-NEgeZA3gtwb/view?usp=sharing)
 - [Example Resume 4](https://drive.google.com/file/d/1Zg9KwEK2HoM6w1UbzpEw9c44m2BcUzn6/view?usp=sharing)
 
+## Additional Resources
+
+- [Resumes Videos from Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/Resumes_CoverLetters.aspx)
+

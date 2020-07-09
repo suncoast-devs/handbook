@@ -2,6 +2,10 @@
 title: Job Search Resources
 order: 4
 ---
+## Videos and Other Resource
+
+- [Job Search Resources and Tips - Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/JobSearchResources_Tips.aspx)
+
 
 ## Where to Look
 

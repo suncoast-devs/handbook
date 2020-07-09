@@ -337,3 +337,7 @@ news or during negotiations.
     </li>
   </ul>
 </details>
+
+### Resources about Interviews and Thank You Notes
+
+- [Interviews and Thank You Letters from Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/Interviews_ThankYou.aspx)
