@@ -3177,8 +3177,14 @@ services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(
 });
 ```
 
+Then, also in `Startup.cs` add this line of code just after `app.UseRouting()`:
+
+```csharp
+app.UseAuthorization();
+```
+
 Now we can a helper method to our controller just after the last method of the
-controller:
+controller in `RestaurantsController.cs`
 
 ```csharp
 // Private helper method to get the JWT claim related to the user ID
@@ -3189,32 +3195,25 @@ private int GetCurrentUserId()
 }
 ```
 
-We can then use these for logic in our methods to help ensure we have user IDs
+We can then use this in our PostRestaurant method to help ensure we have user IDs
 assigned.
 
-Add this code to the beginning of the `PostRestaurant` method.
+To require a user to be logged in (have a valid JWT) add this line before the `PostRestaurant` method:
 
 ```csharp
-// If the user is not logged in, we will return a custom 401 Not Authorized message
-if (!IsUserLoggedIn())
-{
-    // Make a custom error response
-    var response = new
-    {
-        status = 400,
-        errors = new List<string>() { $"You must be logged in" }
-    };
+[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+```
 
-    // Return our error with the custom response
-    return Unauthorized(response);
-}
+To assign a user to the restaurant, we will add this code to the _beginning_ of the
+`PostRestaurant` implementation:
 
+```csharp
 // Set the UserID to the current user id, this overrides anything the user specifies.
 restaurant.UserId = GetCurrentUserId();
 ```
 
 Finally, lets send our authorization header token when making the request in
-`AddRestuarant.jsx`j:
+`AddRestuarant.jsx`:
 
 ```csharp
 headers: { 'content-type': 'application/json', ...authHeader() },
@@ -3281,6 +3280,13 @@ namespace TacoTuesday.Models
 }
 ```
 
+Add the `RestaurantVotes` to the `DatabaseContext.cs`:
+
+```csharp
+// Tell the context about the RestaurantVotes collection/table
+public DbSet<RestaurantVote> RestaurantVotes { get; set; }
+```
+
 Then generate a migration and update the database:
 
 ```shell
@@ -3295,13 +3301,27 @@ Then we can update the `RestaurantVotes` controller to:
 - Create the vote record
 - Increment the restaurant vote totals
 
+Add this code just after the `HttpPost` method in `RestaurantVotesController.cs`:
+
+```csharp
+// Private helper method to get the JWT claim related to the user ID
+private int GetCurrentUserId()
+{
+    // Get the User Id from the claim and then parse it as an integer.
+    return int.Parse(User.Claims.FirstOrDefault(claim => claim.Type == "Id").Value);
+}
+```
+
 Add this above the method definition:
 
 ```csharp
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 ```
 
-Add this to the beginning of the method defintion:
+Add this to the beginning of the method implementation. The `AnyAsync` query will
+attempt to detect an existing vote for this restaurant belonging to the user
+that is making the request. If one is found, a `400` Bad Request is returned and
+we do not complete the rest of the method.
 
 ```csharp
 // If there is already an existing vote, return a bad request
