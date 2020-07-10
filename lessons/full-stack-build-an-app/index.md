@@ -160,7 +160,7 @@ perhaps filtered by a phrase.
 
 # Build a new app
 
-For this full stack application we'll be using the last of the SDG `dotnet`
+For this full-stack application, we'll be using the last of the SDG `dotnet`
 templates, `sdg-react`. This app includes:
 
 - [API Server](/lessons/cs-api-servers)
@@ -205,7 +205,7 @@ our application.
 
 In a React application, this may mean creating individual components for each of
 the main wireframe drawings. In this process, we will use fake, but realistic
-data. For a field like _name_ use a realistic name of about the length, you'd
+data. For a field like a _name_ use a realistic name of about the length, you'd
 expect. For _address_ fields use addresses of well-known locations that look
 realistic. For _description_ fields use **lorem ipsum** data of about the length
 you'd expect someone to generate.
@@ -213,8 +213,8 @@ you'd expect someone to generate.
 By creating a pass at HTML and CSS for each of these pages we are achieving
 several important steps:
 
-1. Validating our design so far. Did our wireframe transfer to a visual design?
-   Do we see all the places we need data and is it accounted for in our ERD?
+1. Validating our design so far. Did our wireframe transfer to visual design? Do
+   we see all the places we need data and is it accounted for in our ERD?
 2. We can review a more realistic user interface with our stakeholders and
    users.
 3. If we add some simple navigation we can deploy this application and ask users
@@ -260,16 +260,16 @@ When you have enough of a page designed, start extracting parts of the page into
 various components. At first, define them in the same file, but then use the
 excellent `refactor` feature of `VS Code` to move the component to a dedicated
 file. This will ensure all the correct `import` and `export` settings are
-created and simplifies the details of the syntax. You can also drag the
-component to the correct folder and `VS Code` will ensure the `import`
-statements are correctly updated.
+created and simplify the details of the syntax. You can also drag the component
+to the correct folder and `VS Code` will ensure the `import` statements are
+correctly updated.
 
 ## Start with a mobile view
 
 Start with the wireframes in their mobile view. This, again, helps keep away
 feature creep and ensures you are only including the most critical features. It
 also helps ensure that you have a good mobile design since it is likely that
-many of the visitors of your site will be on narrow viewport devices such as
+many of the visitors to your site will be on narrow viewport devices such as
 phones and tablets.
 
 ## Use react-router to make each page
@@ -388,7 +388,7 @@ Use `pgcli` or any other database tool to insert some sample data.
 One way to accomplish this is to create a seeding sql script.
 
 Create a file `seeds.sql` and, using the following as an example, create your
-own sample data.
+sample data.
 
 Save this file in the `Models` directory.
 
@@ -424,7 +424,7 @@ psql TacoTuesdayDatabase --file=Models/seeds.sql
 # Creating our initial controller to serve a list of restaurants
 
 Now that we have migrations, a database, and some sample data, let's create a
-controller to generate endpoints to: `Create`, `Read`, `Update`, and `Delete`
+controller to generate endpoints for: `Create`, `Read`, `Update`, and `Delete`
 restaurants. This will give us the `C R U D` style interface we will use from
 our front end.
 
@@ -442,9 +442,9 @@ dotnet aspnet-codegenerator controller --model Restaurant -name RestaurantsContr
 
 Here we are telling the `codegenerator` to create a controller named
 `RestaurantsController`, that we wish to use `async` controller actions, that we
-are generating an `api` style controller (as opposed to one that renders its own
-HTML views), that the model used with this controller is `Restaurant`, our
-database context class is named `DatabaseContext` and our controller folder is
+are generating an `api` style controller (as opposed to one that renders HTML
+views), that the model used with this controller is `Restaurant`, our database
+context class is named `DatabaseContext` and our controller folder is
 `Controllers`
 
 If we were generating a controller for a different model we would change the
@@ -543,7 +543,7 @@ page
 
 # Returning to the UI to populate the list of restaurants
 
-From our statically defined home page we will extract a component to render the
+From our statically defined home page, we will extract a component to render the
 list of restaurants if we haven't already.
 
 That component might look something like:
@@ -568,9 +568,9 @@ function Restaurants() {
 
 > NOTE: we initialize this to an empty array since the list of restaurants from
 > the API will be an array of restaurant objects. We want our default state to
-> represent "no data" so an empty array is the correct choice.
+> represent "no data" so an empty array is a correct choice.
 
-Next we will change our static list of a few sample restaurants to use
+Next, we will change our static list of a few sample restaurants to use
 `restaurants.map(restaurant =>` to generate the list dynamically
 
 ```javascript
@@ -629,7 +629,7 @@ restaurants on our home page.
 
 ## Refactor
 
-At this point we can refactor the code for a single restaurant into its own
+At this point, we can refactor the code for a single restaurant into its own
 component.
 
 ```javascript
@@ -688,7 +688,7 @@ named `filter` if present, otherwise the variable `filter` will be `null`.
 
 We can use this to our advantage in the implementation. If the `filter` variable
 is `null` we simply return the list of all restaurants from the context.
-Otherwise, we add a `Where` method to only include those `restaurant` where the
+Otherwise, we add a `Where` method to only include the `restaurant` where the
 `Name` property contains the phrase in the `filter` variable.
 
 ```csharp
@@ -901,14 +901,14 @@ Now our search works.
 
 # Implement "Add"
 
-Let's turn our attention to the `AddRestaurant` component and the how we will
-use the endpoint `POST /api/Restaurants` to create a new restaurant.
+Let's turn our attention to the `AddRestaurant` component and how we will use
+the endpoint `POST /api/Restaurants` to create a new restaurant.
 
 ## Track state for each input field
 
 For each input field, we will need to track the data in the input form. Since
-there are fields for `Name`, `Description`, `Address` and `Telephone` we will
-need state for all of these.
+there are fields for `Name`, `Description`, `Address`, and `Telephone` we will
+need a `state` for all of these.
 
 Typically we would create separate state variables for each of the input fields.
 However, all of these are related to a restaurant. Let's look at the JSON we
@@ -969,7 +969,7 @@ key/value pair in the object we are creating. In essence this "copies" the
 values to the new object. Then we add in the `address` field with its new value.
 This has the effect of **overriding** any `address` key/value pair that was
 already spread into the new object. In the end, we have a **copy** of the
-existing `newRestaurant` object but with a new value for `address`
+existing `newRestaurant` object but with a new value for the `address`
 
 This pattern will repeat for the other form fields:
 
@@ -1128,7 +1128,7 @@ dotnet ef database update
 ```
 
 > NOTE: If any of your data rows **DO** have `NULL` in these columns the
-> migration run will fail. You will have to add data to those rows, or remove
+> migration run will fail. You will have to add data to those rows or remove
 > those rows before the migration will execute properly.
 
 ## Handling errors in the user interface
@@ -1224,7 +1224,7 @@ To add the upvotes and downvotes we will add two new properties to our
 
 These fields, however, are a little different than the others. While we do want
 users of the API to be able to see these fields when creating, or even updating,
-a restaurants details we do not want the API to allow direct changing of these
+a restaurant's details we do not want the API to allow direct changing of these
 fields.
 
 We will create a `set;` accessor for these fields. However, we will mark them as
@@ -1304,18 +1304,18 @@ network via an API. In this case we have two resources:
 
 and
 
-`A specific restaurant given by its identifier`
+`A specific restaurant`
 
 When we ask for a resource we specify a few things:
 
 - The resource itself
 - The format we wish the data in
-- The action we wish to preform on the resource
+- The action we wish to perform on the resource
 
 In our API the `format we wish the data in` will always be JSON. We'll come back
 to this in a moment.
 
-Lets take the case of a single restaurant. There are _three_ endpoints in our
+Let's take the case of a single restaurant. There are _three_ endpoints in our
 API. `GET /api/Restaurants/{id}`, `PUT /api/Restaurants/{id}`, and
 `DELETE /api/Restaurants/{id}`. In this case `/api/Restaurants/{id}` refer to
 the resource itself: _the specific restaurant given by its identifier_ and the
@@ -1334,7 +1334,7 @@ would specify the same URL of `GET /api/Restaurants/{id}` but include an
 version of this resource.
 
 The _list of restaurants_ is also a **resource** that can be managed. For
-instance `GET /api/Restaurants` retrieves that resource, the list itself.
+instance, `GET /api/Restaurants` retrieves that resource, the list itself.
 Whereas `POST /api/Restaurants` serves to **add** a restaurant to that list.
 Here there is a single resource with different verbs to represent the action we
 can take.
@@ -1386,8 +1386,8 @@ special features to a restaurant. When you step back and look at your domain as
 a set of resources, even if some don't map directly to tables, you can start to
 see the benefit of the `REST` style.
 
-For now we will use this as a chance to experiment with having a controller that
-represents an abstract resource.
+For now, we will use this as a chance to experiment with having a controller
+that represents an abstract resource.
 
 ## Create a `RestaurantVotesController`
 
@@ -1561,7 +1561,7 @@ const handleVote = (id, type) => {
 }
 ```
 
-Next we will change the code to extract the method that reloads the restaurants
+Next, we will change the code to extract the method that reloads the restaurants
 so we can call it from this method **and** the `useEfffect`
 
 ```javascript
@@ -1651,8 +1651,8 @@ We will change the `button` code slightly
 This is great. We can now up and down vote restaurants. However, you may notice
 that the _order_ of the restaurants is not consistent. This is because the API
 does not specify a sorting order and we get the records back in whatever order
-the database wants. Clearly, we do not want to leave this up to the database.
-Let's add a sort order by the restaurant name.
+the database wants. We do not want to leave this up to the database. Let's add a
+sort order by the restaurant name.
 
 Update the code in `GetRestaurants` to have this instead:
 
@@ -1695,7 +1695,7 @@ Inside any component that is rendered due to a `<Route>` match, we can add
 `const params = useParams()` to get a variable, `params`, that will tell us the
 matching parameters in the `path=` part of the route.
 
-In this case we want the `:id` from `<Route path="/restaurants/:id">` so we can
+In this case, we want the `:id` from `<Route path="/restaurants/:id">` so we can
 add this to the beginning of the method:
 
 ```javascript
@@ -1703,7 +1703,7 @@ const params = useParams()
 const id = params.id
 ```
 
-With this we can add a method that fetches the restaurant and stores it in
+With this, we can add a method that fetches the restaurant and stores it in the
 state.
 
 First, we will define the state variable:
@@ -1839,8 +1839,8 @@ associated reviews.
 
 ## Restaurant API should return their associated reviews
 
-On the main listing we want the **count** of reviews and on an individual
-restaurant page we want the list of all reviews.
+On the main listing, we want the **count** of reviews and on an individual
+restaurant page, we want the list of all reviews.
 
 To achieve these, we will use the `Include` method of EF Core to incorporate
 this data into our API response.
@@ -1946,7 +1946,7 @@ track the values in the form and then POST them to the API.
 
 ## Create a controller
 
-First we must create a controller for the reviews. We will use the code
+First, we must create a controller for the reviews. We will use the code
 generator again to make this controller.
 
 ```shell
@@ -1958,7 +1958,7 @@ update, and delete reviews.
 
 Looking at this controller and our user interface we see that we do not need to
 get a listing of all reviews, nor do we need to access a single review, nor do
-we need to update or delte reviews. Thus we should only keep the one endpoint,
+we need to update or delete reviews. Thus we should only keep the one endpoint,
 the `POST /api/Reviews` to create a new review. Remove all the methods other
 than `PostReview`
 
@@ -1978,7 +1978,7 @@ Notice that we include, by default, the related restaurant id. This will be
 required by the API to know which restaurant this review is associated to.
 
 We will also have to change `const id = params.id` to
-`const id = parseInt(params.id)` to ensure that the `id` value is an integer,
+`const id = parseInt(params.id)` to ensure that the `id` value is an integer
 since the backend API will demand this.
 
 Then we will create a method to track the changes of the various fields:
@@ -2044,7 +2044,7 @@ and
 Then we will move `fetchRestaurant` from outside of the `useEffect` method so
 both the `useEffect` and `handleNewReviewSubmit` can access it.
 
-However, you'll notice that our form is not clearing after we create the new
+However, you'll notice that our form is not clearing after we create a new
 restaurant. We need to clear out the new restaurant fields. We'll add one more
 `setNewRestaurant` after the `fetchNewRestaurant` in `handleNewReviewSubmit`
 
@@ -2080,7 +2080,7 @@ at a way we can format these dates.
 
 There are two popular libraries for formatting dates:
 [date-fns](https://date-fns.org/) and [moment](https://momentjs.com/). In this
-application we'll use `date-fns` to format dates.
+application, we'll use `date-fns` to format dates.
 
 In order to add the javascript library we need to:
 
@@ -2155,7 +2155,7 @@ control what elements are on the page. We can do this as long as a `<Router>`
 appears in a parent component. Since our `index.js` has a `<Router>` around the
 entire application we can, essentially, use a `<Route>` anywhere.
 
-In our `NavBar` component it is the `<form>` element we want to selectively
+In our `NavBar` component, it is the `<form>` element we want to selectively
 reveal based on the route. We can surround this element with a
 `<Route exact path="/"></Route>` and this `<form>` element will only show on the
 home page.
@@ -2217,30 +2217,30 @@ database. Thus we will not store the raw password, but a **hashed** password.
 
 ### Hashing Passwords
 
-The idea of a hashed password relies on the idea of a "one way function", that
+The idea of a hashed password relies on the idea of a "one-way function", that
 is a function that is fast and easy to compute in one direction, but difficult
 to compute in the other.
 
-Let's take a look at the idea of a "two way function". A simple example would be
+Let's take a look at the idea of a "two-way function". A simple example would be
 `double`, a function that takes a number and multiplies it by two. If I give you
 the input of this function, say `42`, you can quickly and reliably compute the
-output, `84`. However, if I give you an output, say `246`, it is trivial for you
-to figure out what a corresponding input would be, `123`. This would be true no
+output, `84`. However, if I give you output, say `246`, it is trivial for you to
+figure out what a corresponding input would be, `123`. This would be true no
 matter how large the numbers get. Given `24686850904684` you can quickly figure
 out what the corresponding input is.
 
-A classic example of a one way function is the prime factorization function.
+A classic example of a one-way function is the prime factorization function.
 Given two prime numbers, say `17` and `5`, it is easy to multiply them together
-and get `85`. Given a number like `85` it isn't too hard to figure out which two
-prime numbers multiply together to get that number. However, this isn't true as
-the number gets larger. However, if I give you the number `682654107378822049`
-it isn't so trivial to compute the two numbers that are its prime factors (the
-answer is `982451653` and `694847533` by the way)
+and get `85`. Given a number like `85`, it isn't too hard to figure out which
+two prime numbers multiply together to get that number. However, this isn't true
+as the number gets larger. However, if I give you the number
+`682654107378822049` it isn't so trivial to compute the two numbers that are its
+prime factors (the answer is `982451653` and `694847533` by the way)
 
-For something like a password we will use the idea of a `hashing function`. A
+For something like a password, we will use the idea of a `hashing function`. A
 `hashing function` attempts to take an input value and compute a fixed size and
 _mostly_ unique value. Small changes in the input should make a large and
-unpredictable changes in the output.
+unpredictable change in the output.
 
 A popular hashing function is `SHA256`. If we take the text `dotnet` and process
 it with this algorithm we get back out the result:
@@ -2257,8 +2257,8 @@ algorithm.
 
 ## Defining our model
 
-For our model we will want to treat the `Id`, `FullName`, and `Email` as we have
-other fields. However, for the password we will be creating and storing a
+For our model, we will want to treat the `Id`, `FullName`, and `Email` as we
+have other fields. However, for the password, we will be creating and storing a
 `HashedPassword` in the database. This field should **never** be exposed in any
 API so we will mark it as `JsonIgnore` so that it is never serialized.
 
@@ -2352,9 +2352,9 @@ dotnet ef database update
 
 # Add a controller to create new Users
 
-Lets use the code generator to make a new controller for managing users.
+Let's use the code generator to make a new controller for managing users.
 However, we will only be keeping the `POST` action to create a new user. Later
-on we may add user management features where we need to add back in other
+on, we may add user management features where we need to add back in other
 commands like `DELETE` and `PUT`. We also certainly do not want to expose any
 `GET` actions where someone could list all of our users!
 
@@ -2557,7 +2557,7 @@ if (alreadyHaveUserWithTheEmail)
 ```
 
 Since we are generating the same style error that validation errors do we will
-get a nice error in the UI when someome attempts to use an email address that
+get a nice error in the UI when someone attempts to use an email address that
 exists.
 
 ## Files Updated
@@ -2571,26 +2571,26 @@ exists.
 
 # Add the ability to Login
 
-In order for our users to login we need to present the user with a form where
-they can provide their username and password. This data then needs to be
-processed by the backend to validate the information is correct and then inform
-the client of the success or failure.
+For our users to login, we need to present the user with a form where they can
+provide their username and password. This data then needs to be processed by the
+backend to validate the information is correct and then inform the client of the
+success or failure.
 
 We also need some way for the client to tell the server with every API request
 it subsequently makes that the user was logged in and who they are. It would not
 be a good idea to _store_ the user's password and include that with every
 request. We want to handle the user's unencrypted password as little as
-possible. In order to do this the client and the server communicate with a
-system known as JavaScript Web Tokens, or JWTs. (some pronouce this as
-Jay-Double-U-Tees and others as `joots` to rhyme with `scoots`)
+possible. To do this the client and the server communicate with a system known
+as JavaScript Web Tokens or JWTs. (some pronounce this as Jay-Double-U-Tees and
+others as `joots` to rhyme with `scoots`)
 
 The idea of a JWT is an encoded and cryptographically **signed** bit of data
 that the server can hand back to the client which means "If you hand me back
-this data exactly, I'll recognize you as the user it specifies"). In order to do
-this the server needs a way to format, "sign", and then encode the respose.
+this data exactly, I'll recognize you as the user it specifies"). To do this the
+server needs a way to format, "sign", and then encode the response.
 
 JWTs can store any information we wish, though we should keep them small since
-it does add overhead to each API request they are included with. Typicall we
+it does add overhead to each API request they are included with. Typically we
 store some details from the user to include, but not be limited to, their user
 id. We may also store their names and email.
 
@@ -2603,15 +2603,15 @@ eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjEiLCJGdWxsTmFtZSI6IkdhdmluIFN0YXJ
 ```
 
 Pretty indecipherable, right? Fortunately, there are easily decoded by our
-computers. In fact the website `jwt.io` has a decoder right on their home page.
-Try copying the above text and pasting it into their _Debugger_
+computers. The website `jwt.io` has a decoder right on their home page. Try
+copying the above text and pasting it into their _Debugger_
 
 What you will see is this:
 
 ![jwt](./assets/jwt.png)
 
 On the left side is our original JWT. However, you will notice that it has
-become color coded. Each of the colors of the text represent what part of the
+become color-coded. Each of the colors of the text represents what part of the
 JWT it represents.
 
 There are three parts to a JWT:
@@ -2627,27 +2627,27 @@ properly decode the rest of the token.
 Next comes the `payload`. This is the part we, as developers, can specify data
 within. Each of these elements, though decoded as JSON are called `claims`. The
 first _three_ claims here, `Id`, `FullName`, and `Email` were generated by code
-(which we about to write) and represent the details of a logged in user. The
-next three represent details about the token itself. Each of these are
-`timestamps` encoded as numbers. `nbf` is a claim that stands for `Not Before`,
-meaning that the token is not valid for any time _earlier_ than the given
-timestamp. The claim `exp` which stats for `Expiration` and represents the time
-when this token is no longer valid. Finally `iat` is a claim that indicates when
-the token was issued.
+(which we about to write) and represent the details of a logged-in user. The
+next three represent details about the token itself. Each of these is encoded as
+numbers. `nbf` is a claim that stands for `Not Before`, meaning that the token
+is not valid for any time _earlier_ than the given timestamp. The claim `exp`
+which stats for `Expiration` and represents the time when this token is no
+longer valid. Finally, `iat` is a claim that indicates when the token was
+issued.
 
 The final section is the _signature_ of the token. It uses cryptographic
 functions to add data to the token using a server's _secret key_. This data
 represents a _hash_ of the other parts of the token. If anyone were to change
 even a single character of the other parts of the message, say changing the `Id`
 from `1` to `2` they would **not** be able to resign that message with valid
-data. They lack the server's secret key. In this way the data can easily decoded
-by anyone, but cannot be changed/updated by anyone other than the server itself.
-Thus it is important not to put **secret** information in the payload since JWT
-tokens are not **encrypted**.
+data. They lack the server's secret key. In this way, the data can easily be
+decoded by anyone, but cannot be changed/updated by anyone other than the server
+itself. Thus it is important not to put **secret** information in the payload
+since JWT tokens are not **encrypted**.
 
 When a user logs in we will have our server generate a new JWT token and return
 this to the client. The client can simply store this token and provide it back
-to the sever with any API request that needs to be done by an _authenticated_
+to the server with any API request that needs to be done by an _authenticated_
 user. We do this by specifying a special `header` value that includes this
 token.
 
@@ -2688,31 +2688,32 @@ namespace TacoTuesday.Controllers
 
 You will notice a few things different than our traditional controller.
 
-In addition to storing the `_context` with our `DatabaseContext` we are also
+In addition to storing the `_context` with our `DatabaseContext`, we are also
 storing a variable with a `JWT_KEY`. This is the secret key we will use to sign
 the JWT tokens.
 
 This token is passed to us when the controller is constructed, just as the
-context is. It is avaialble to us from an `config` variable that is supplied by
+context is. It is available to us from a `config` variable that is supplied by
 the framework.
 
-From this `config` variable we can ask for the `["JWK_KEY"]` and store that in
+From this `config` variable, we can ask for the `["JWK_KEY"]` and store that in
 our variable.
 
 This is another example of
 [`Dependency Injection`](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.1).
 The use of
 [`Dependency Injection`](https://en.wikipedia.org/wiki/Dependency_injection)
-allows the framwork to provide information to our code, like our controller,
+allows the framework to provide information to our code, like our controller,
 without us having to know details of how that information is managed or
-accessed. In this case a configuration object is supplied. In development this
-will be managed in local configuration files. In production it will be managed
-by our hosting provider. In either case we are not concerned with those details.
-We only need to accept this `config` variable and extract the data we need.
+accessed. In this case, a configuration object is supplied. In development, this
+will be managed in local configuration files. In production, it will be managed
+by our hosting provider. In either case, we are not concerned with those
+details. We only need to accept this `config` variable and extract the data we
+need.
 
-## Creating our own JWT_KEY for development
+## Creating our JWT_KEY for development
 
-To setup our development mode for storing this secret `JWT_KEY` we need to
+To set up our development mode for storing this secret `JWT_KEY` we need to
 initialize support for `user secrets` by running this command:
 
 ```shell
@@ -2722,13 +2723,13 @@ dotnet user-secrets init
 This creates a file outside our project to store secret information. This way
 the data is not stored in our repository for others to see.
 
-Next we will tell the secrets file a value for our `JWT_KEY`
+Next, we will tell the secrets to store `JWT_KEY`
 
 ```shell
-dotnet user-secrets set "JWT_KEY" "Long set of Random Letters and Numbers like: iExEUNxxv9zylIuT2VMrsMsQEKjjKs1XrYFntsafKgQs90HndTX0yw8xLhFHk9O"
+dotnet user-secrets set "JWT_KEY" "Long set of Random Letters and Numbers like iExEUNxxv9zylIuT2VMrsMsQEKjjKs1XrYFntsafKgQs90HndTX0yw8xLhFHk9O"
 ```
 
-The `JWT_KEY` should be a relatively long set of random characaters. This is
+The `JWT_KEY` should be a relatively long set of random characters. This is
 called _high entropy_ implying that it will be very hard for someone to guess
 this secret. A good website to generate these kinds of secrets is:
 [Gibson Research Corporation's Password Page](https://www.grc.com/passwords.htm)
@@ -2789,8 +2790,8 @@ public class LoginUser
 The `POST` method attempts to find an existing user that has the same email
 address as the received user.
 
-Next it uses the `IsValidPassword` method we wrote in the `User` class to detect
-if the password matches.
+Next, it uses the `IsValidPassword` method we wrote in the `User` class to
+detect if the password matches.
 
 If we found a user `foundUser != null` **AND** the password watches we will
 generate a response that looks like this:
@@ -2807,8 +2808,7 @@ The `token` part of this object is created using
 is provided by SDG to generate JWT tokens for your users. If you are interested
 in how the code works, it is documented within.
 
-In order to use the `TokenGenerator` code we need to add a dependency to our
-project:
+To use the `TokenGenerator` code we need to add a dependency to our project:
 
 ```shell
 dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
@@ -2817,7 +2817,7 @@ dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer
 We also include the `user` object in the response. This is so the client has a
 simple way to access this data.
 
-This custom object is then returned as the payload of the successfull API
+This custom object is then returned as the payload of the successful API
 response.
 
 If either the `foundUser` is `null` or the password does not match, we return an
@@ -2826,9 +2826,9 @@ error message object which the form can process and display to the user.
 ## Give it a try!
 
 To test if this works we can use both the `POST /api/Users` and
-`POST /api/Sessions` endpoints from Insomnia. First we can create a user, then
+`POST /api/Sessions` endpoints from Insomnia. First, we can create a user, then
 we can try the same `email` and `password` to the `Sessions` endpoint and see if
-we get back a valid response. Try an invalid password, or an email address that
+we get back a valid response. Try an invalid password or an email address that
 doesn't correspond to an account to see the error messages.
 
 Next up we'll connect the user interface to these controllers.
@@ -3129,7 +3129,7 @@ const handleLogout = () => {
 # Storing the user that created a restaurant and review
 
 If we want to store the user that created a restaurant or a review, we need to
-add some details to the models. Specifically we will need to store the `UserId`
+add some details to the models. Specifically, we will need to store the `UserId`
 value in both of these models.
 
 Add the following to both `Restaurant` and `Review`
@@ -3153,7 +3153,7 @@ dotnet ef database update
 ## Storing the related user
 
 We _could_ have the client send their `Id` along with the request to create a
-restuarant and review. However, the current user id is not data we want to trust
+restaurant and review. However, the current user id is not data we want to trust
 to the API. Since anyone could change that value when sending a request we want
 the **server** to be in control of associating that data. Thus we want to
 provide the two controllers with a way to determine the id of the current user.
@@ -3195,17 +3195,18 @@ private int GetCurrentUserId()
 }
 ```
 
-We can then use this in our PostRestaurant method to help ensure we have user IDs
-assigned.
+We can then use this in our PostRestaurant method to help ensure we have user
+IDs assigned.
 
-To require a user to be logged in (have a valid JWT) add this line before the `PostRestaurant` method:
+To require a user to be logged in (have a valid JWT) add this line before the
+`PostRestaurant` method:
 
 ```csharp
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 ```
 
-To assign a user to the restaurant, we will add this code to the _beginning_ of the
-`PostRestaurant` implementation:
+To assign a user to the restaurant, we will add this code to the _beginning_ of
+the `PostRestaurant` implementation:
 
 ```csharp
 // Set the UserID to the current user id, this overrides anything the user specifies.
@@ -3261,10 +3262,10 @@ Then we will make similar updates in the `ReviewsControler` and
 
 # Restrict Upvote and Downvote
 
-Let's add tracking of who performed up and down voting. This will allow us to
+Let's add tracking of who performed up and downvoting. This will allow us to
 only allow a user to record a single vote.
 
-First we will add a model for `RestaurantVote` which will now create a real
+First, we will add a model for `RestaurantVote` which will now create a real
 database entity for the _resource_ we made earlier.
 
 ```csharp
@@ -3298,10 +3299,11 @@ Then we can update the `RestaurantVotes` controller to:
 
 - Ensure we are an authenticated user
 - Check to see if we have already registered a vote
-- Create the vote record
+- Create the voting record
 - Increment the restaurant vote totals
 
-Add this code just after the `HttpPost` method in `RestaurantVotesController.cs`:
+Add this code just after the `HttpPost` method in
+`RestaurantVotesController.cs`:
 
 ```csharp
 // Private helper method to get the JWT claim related to the user ID
@@ -3318,10 +3320,10 @@ Add this above the method definition:
 [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
 ```
 
-Add this to the beginning of the method implementation. The `AnyAsync` query will
-attempt to detect an existing vote for this restaurant belonging to the user
-that is making the request. If one is found, a `400` Bad Request is returned and
-we do not complete the rest of the method.
+Add this to the beginning of the method implementation. The `AnyAsync` query
+will attempt to detect an existing vote for this restaurant belonging to the
+user that is making the request. If one is found, a `400` Bad Request is
+returned and we do not complete the rest of the method.
 
 ```csharp
 // If there is already an existing vote, return a bad request
