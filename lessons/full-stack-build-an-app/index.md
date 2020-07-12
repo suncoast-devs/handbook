@@ -231,7 +231,7 @@ the extra bits by:
 
 1. Updating `App.jsx` to:
 
-```javascript
+```jsx
 import React from 'react'
 
 import './custom.scss'
@@ -632,7 +632,7 @@ restaurants on our home page.
 At this point, we can refactor the code for a single restaurant into its own
 component.
 
-```javascript
+```jsx
 function SingleRestaurantFromList(props) {
   return (
     ...
@@ -712,7 +712,7 @@ const [filterText, setFilterText] = useState('')
 
 Then we will update the `<input>` tag
 
-```javascript
+```jsx
 <input
   className="form-control mr-sm-2"
   type="search"
@@ -1482,33 +1482,30 @@ With this structure we:
 First, let's update the user interface to display the current up and downvote
 numbers
 
-```javascript
-;<span className="mr-2" role="img" aria-label="upvote">
+```text
+<span className="mr-2" role="img" aria-label="upvote">
   👍🏻
 </span>
-{
-  restaurant.upvoteCount
-}
+{restaurant.upvoteCount}
 ```
 
 and
 
-```javascript
+```text
 <span className="mr-2" role="img" aria-label="downvote">
   👎🏻
-</span>{' '}
-{restaurant.downvoteCount}
+</span>{restaurant.downvoteCount}
 ```
 
 Then we will add click handlers for the buttons themselves
 
-```javascript
+```jsx
 <button className="btn btn-success btn-sm" onClick={handleUpvote}>
 ```
 
 and
 
-```javascript
+```jsx
 <button className="btn btn-success btn-sm" onClick={handleDownvote}>
 ```
 
@@ -1597,7 +1594,7 @@ const handleVote = (id, type) => {
 Now we can pass the `handleVote` method to the `SingleRestaurantFromList`
 component when it is used.
 
-```javascript
+```jsx
 <SingleRestaurantFromList
   key={restaurant.id}
   restaurant={restaurant}
@@ -1607,7 +1604,7 @@ component when it is used.
 
 And we can change the buttons to use it appropriately
 
-```javascript
+```jsx
 <button
   className="btn btn-success btn-sm"
   onClick={() => props.handleVote(restaurant.id, 'upvote')}
@@ -1628,7 +1625,7 @@ Again we have to augment the `button` with code to stop a normal behavior.
 
 We will change the `button` code slightly
 
-```javascript
+```jsx
 <button
   className="btn btn-success btn-sm"
   onClick={event => {
@@ -1885,7 +1882,7 @@ psql TacoTuesdayDatabase --file=Models/seeds.sql
 
 We can now use that to count these in the user interface in `Restaurants.jsx`
 
-```javascript
+```jsx
 <small>{restaurant.reviews.length} Reviews</small>
 ```
 
@@ -1907,7 +1904,7 @@ Updating the JSX for showing the list of reviews we use `map` to loop over the
 important). We also only generate this part of the JSX if there are more than
 zero reviews.
 
-```javascript
+```jsx
 <div className="row mb-5">
   {restaurant.reviews.length > 0 && (
     <div className="col-12">
@@ -1995,7 +1992,7 @@ const handleNewReviewFieldChange = event => {
 Lastly ensure that all the `input` and `textArea` fields are updated with the
 values from `newReview`, the `onChange` event, and a correct `id` attribute.
 
-```javascript
+```jsx
 <input
   type="text"
   className="form-control"
@@ -2008,7 +2005,7 @@ values from `newReview`, the `onChange` event, and a correct `id` attribute.
 
 and
 
-```javascript
+```jsx
 <textarea
   className="form-control"
   id="body"
@@ -2037,7 +2034,7 @@ const handleNewReviewSubmit = event => {
 
 and
 
-```javascript
+```jsx
 <form onSubmit={handleNewReviewFieldChange}>
 ```
 
@@ -2120,7 +2117,7 @@ const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 Then to use this, we need to convert `review.createdAt` to a `Date` object and
 pass that and the format string to the `format` function from `date-fns`
 
-```javascript
+```jsx
 <span className="float-right">
   {format(new Date(review.createdAt), dateFormat)}
 </span>
@@ -2160,7 +2157,7 @@ reveal based on the route. We can surround this element with a
 `<Route exact path="/"></Route>` and this `<form>` element will only show on the
 home page.
 
-```javascript
+```jsx
 <Route exact path="/">
   <form className="form-inline my-2 my-lg-0">
     <Link className="btn btn-success mr-2" to="/restaurants/add">
@@ -2384,7 +2381,7 @@ Similar to our interface for adding a restaurant we'll make a signup page.
 
 Create the `Signup.jsx` file in the `pages` directory:
 
-```javascript
+```jsx
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 
@@ -2481,7 +2478,7 @@ export function SignUp() {
 
 We will also add a route in `App.jsx`
 
-```javascript
+```jsx
 <Route path="/signup">
   <SignUp />
 </Route>
@@ -2489,7 +2486,7 @@ We will also add a route in `App.jsx`
 
 And we will also add a button to our `<NavBar>`
 
-```javascript
+```jsx
 <Link className="btn btn-success mr-2" to="/signup">
   Signup
 </Link>
@@ -2846,7 +2843,7 @@ Next up we'll connect the user interface to these controllers.
 
 Let's add a page to represent the login interface: `Signin.jsx`
 
-```javascript
+```jsx
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
 import { recordAuthentication } from './auth'
@@ -3068,7 +3065,7 @@ const authFromStorage = () => {
 Let's upate the sign in and sign up buttons/links to only display if the user is
 **not logged in**
 
-```javascript
+```jsx
 {
   isLoggedIn() || (
     <Link className="btn btn-success mr-2" to="/signin">
@@ -3095,7 +3092,7 @@ only shows the links if the user is **not** logged in.
 
 Next we can add a `Sign out` button after the form:
 
-```javascript
+```jsx
 {
   isLoggedIn() && (
     <span className="btn btn-success" onClick={handleLogout}>
@@ -3109,7 +3106,7 @@ This only shows the logout button if the user **is logged in**.
 
 We will also add a method to handle the logout:
 
-```javascript
+```jsx
 const handleLogout = () => {
   logout()
 
@@ -3216,13 +3213,13 @@ restaurant.UserId = GetCurrentUserId();
 Finally, lets send our authorization header token when making the request in
 `AddRestuarant.jsx`:
 
-```csharp
+```javascript
 headers: { 'content-type': 'application/json', ...authHeader() },
 ```
 
 And update our logic to handle `401` not authorized
 
-```csharp
+```javascript
 fetch('/api/Restaurants', {
   method: 'POST',
   headers: { 'content-type': 'application/json', ...authHeader() },
@@ -3733,6 +3730,7 @@ from our API.
 - [ClientApp/package-lock.json](https://raw.githubusercontent.com/gstark/TacoTuesday/385b003aa796ff38c8635c833a2d63bf3045107e/ClientApp/package-lock.json)
 
 <!-- Whats next
+
 
   Image Upload -- see cohort-17/week-08/FileExample
 
