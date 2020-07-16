@@ -13,3 +13,11 @@ require, or are written in, JavaScript with node.
 ```shell
 brew install nodejs
 ```
+
+## Useful node tools
+
+This tool is useful for removing files and directories
+
+```shell
+npm install --global rimraf
+```

@@ -18,3 +18,11 @@ sudo apt install nodejs
 echo "export NPM_CONFIG_PREFIX=~/.npm-global" >> ~/.bashrc
 echo "export PATH=~/.npm-global/bin" >> ~/.bashrc
 ```
+
+## Useful node tools
+
+This tool is useful for removing files and directories
+
+```shell
+npm install --global rimraf
+```
