@@ -62,14 +62,14 @@ browser side-by-side and give the browser a narrow but tall aspect ratio. This
 will also give your editor maximum space for you to code in.
 
 The second is to use your browser's development tools to set the view into a
-mobile size. In Chrome we do this by engaging `Developer Tools` and clicking
-this icon:
+mobile size. In your browser we do this by engaging `Developer Tools` and
+clicking this icon:
 
 ![mobile view](./assets/mobile-view.png)
 
 Once this view is engaged, we can select several options to change the mobile
 view of our web page. For instance, the _Suncoast Developers Guild_ website
-looks like this when in Chrome's mobile view:
+looks like this when in the browser's mobile view:
 
 ![mobile view page](./assets/mobile-view-page.png)
 
