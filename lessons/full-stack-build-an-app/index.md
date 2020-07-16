@@ -3422,9 +3422,9 @@ Let's get ready for our geocoding practice by adding columns to our
 `Restaurants` table to store these values.
 
 ```csharp
-public float Latitude { get; set; }
+public double Latitude { get; set; }
 
-public float Longitude { get; set; }
+public double Longitude { get; set; }
 ```
 
 Then we will generate a migration for these columns and update the database
