@@ -1,6 +1,6 @@
 ---
 title: Cloudy with a Chance of Syntax Errors
-tags: ["javascript", "api"]
+tags: ['javascript', 'api']
 ---
 
 Using a popular weather API, Create a web site that allows a user to search for
@@ -26,6 +26,12 @@ a location and gets that location's weather.
     `https://api.openweathermap.org/data/2.5/weather?q=Tampa` becomes
     `https://api.openweathermap.org/data/2.5/weather?q=Tampa&appid=cbb5b6537cd4a6eccd9aee04ffffffff`
   - NOTE: It will take about 10 to 30 minutes for your API key to be active
+
+### Setup
+
+```
+app-app --beta WeatherFrontEnd
+```
 
 ### Explorer Mode
 

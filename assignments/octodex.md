@@ -26,6 +26,12 @@ sizes and padding amounts.
   especially if you've never touch HTML or CSS before, this can be
   extraordinarily difficult and will take a lot of practice and mileage.
 
+### Setup
+
+```shell
+app-app --beta Octodex
+```
+
 ### Explorer Mode
 
 - [ ] Use `app-app` with `alpha` and name your project `Octodex`

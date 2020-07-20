@@ -1,6 +1,6 @@
 ---
 title: ORM Safari! Part II
-tags: ["c-sharp", "api", "sql", "orm", "ef-core", "dotnet"]
+tags: ['c-sharp', 'api', 'sql', 'orm', 'ef-core', 'dotnet']
 ---
 
 ## Let's Continue our safari adventure
@@ -21,6 +21,12 @@ we have seen. For this, we need to create an API to help record what we see.
 
 For .NET Students, install the `sdg-api` template using the command
 `dotnet new -i SDG.templates.Web.API`
+
+### Setup
+
+```shell
+dotnet new sdg-console-database -o SafariApi
+```
 
 ### Explorer Mode
 

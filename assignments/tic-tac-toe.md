@@ -1,6 +1,6 @@
 ---
 title: Implementing Tic-Tac-Toe
-tags: ["algorithms"]
+tags: ['algorithms']
 ---
 
 With a partner, create a design for a tic-tac-toe game. Practice your technical

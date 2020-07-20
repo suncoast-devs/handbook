@@ -1,6 +1,6 @@
 ---
 title: Who works here?
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 Over the last six weeks, you have learned many concepts about front-end
@@ -24,6 +24,12 @@ the features to delete and updating an employee.
   to use the API.
 - Create a relatively unique name for your company. You will use this as your
   company key when calling the endpoints of the API
+
+### Setup
+
+```shell
+app-app --delta-hooks EmployeeDirectoryFrontEnd
+```
 
 ### Explorer Mode
 

@@ -1,6 +1,6 @@
 ---
 title: Store Front
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 In this assignment you will build a mock shopping website in React, with React
@@ -15,6 +15,12 @@ Router.
 
 In this assignment you will build a mock e-commerce website. Take time to think
 about the component structure of the page, and create reusable components.
+
+### Setup
+
+```shell
+app-app --delta-hooks StoreFront
+```
 
 ### Explorer Mode
 

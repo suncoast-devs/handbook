@@ -28,13 +28,7 @@ An example of the movie object is
   "backdrop_path": "/aQ2ZbNqIaecoQsryNe33UmDtms.jpg",
   "original_language": "en",
   "original_title": "The Princess Bride",
-  "genre_ids": [
-    12,
-    35,
-    14,
-    10749,
-    10751
-  ],
+  "genre_ids": [12, 35, 14, 10749, 10751],
   "title": "The Princess Bride",
   "vote_average": 7.6,
   "overview": "In this enchantingly cracked fairy tale, the beautiful Princess Buttercup and the dashing Westley must overcome staggering odds to find happiness amid six-fingered swordsmen, murderous princes, Sicilians and rodents of unusual size. But even death can't stop these true lovebirds from triumphing.",
@@ -56,13 +50,18 @@ https://image.tmdb.org/t/p/w185/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg
 
 > NOTE: in place of `w185` you can also use `w92`, `w154`, `w185`, `w342`, `w500`, `w780`, or `original` for different image widths based on your design's need.
 
-
 ## Objectives
 
 - Work with API data
 - Understand and use React components
 - Understand and use "props" in React
 - Use `map` to render a collection of components in React
+
+### Setup
+
+```shell
+app-app --gamma-hooks PartyLitIts1989
+```
 
 ### Explorer Mode
 

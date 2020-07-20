@@ -1,6 +1,6 @@
 ---
 title: One List
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 In this assignment, you'll build a classic todo manager.
@@ -21,6 +21,12 @@ We're going to build todo manager. The user should be able to:
 - Delete todo items
 
 Read the [documentation](https://one-list-api.herokuapp.com)
+
+### Setup
+
+```shell
+app-app --gamma-hooks OneListFrontEnd
+```
 
 ### Explorer Mode
 

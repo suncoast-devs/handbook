@@ -1,6 +1,6 @@
 ---
 title: Introduction to APIs
-tags: ["api"]
+tags: ['api']
 ---
 
 <!-- prettier-ignore-start -->
@@ -14,6 +14,12 @@ request is made, and see how data is returned from an API
 - Understand how an API request is sent.
 - Understand the request and response for an API.
 
+### Setup
+
+```shell
+dotnet new sdg-console -o ApiIntro
+```
+
 ### Explorer Mode
 
 - [] Choose one of the APIs from
@@ -22,20 +28,20 @@ request is made, and see how data is returned from an API
   more difficult to use when first learning. I have also selected some sample
   APIs that will be good choices:
 
-| API                                                      | Documentation                                  |
-| -------------------------------------------------------- | ---------------------------------------------- |
-| Dogs                                                     | https://dog.ceo/dog-api/                       |
-| Studio Ghibli                                            | https://ghibliapi.herokuapp.com/#tag/Films     |
-| Open Brewery                                             | https://www.openbrewerydb.org/                 |
-| Recipes                                                  | http://www.recipepuppy.com/about/api/          |
-| Deck of Cards!                                           | http://deckofcardsapi.com/                     |
-| Geocode                                                  | https://geocode.xyz/api                        |
-| Jobs                                                     | https://jobs.github.com/api                    |
-| Lyrics                                                   | https://lyricsovh.docs.apiary.io/#reference    |
-| Quotes                                                   | https://pprathameshmore.github.io/QuoteGarden/ |
-| SpaceX                                                   | https://docs.spacexdata.com/?version=latest    |
-| Jokes                                                    | https://github.com/15Dkatz/official_joke_api   |
-| Star Wars API                                            | https://swapi.dev                              |
+| API            | Documentation                                  |
+| -------------- | ---------------------------------------------- |
+| Dogs           | https://dog.ceo/dog-api/                       |
+| Studio Ghibli  | https://ghibliapi.herokuapp.com/#tag/Films     |
+| Open Brewery   | https://www.openbrewerydb.org/                 |
+| Recipes        | http://www.recipepuppy.com/about/api/          |
+| Deck of Cards! | http://deckofcardsapi.com/                     |
+| Geocode        | https://geocode.xyz/api                        |
+| Jobs           | https://jobs.github.com/api                    |
+| Lyrics         | https://lyricsovh.docs.apiary.io/#reference    |
+| Quotes         | https://pprathameshmore.github.io/QuoteGarden/ |
+| SpaceX         | https://docs.spacexdata.com/?version=latest    |
+| Jokes          | https://github.com/15Dkatz/official_joke_api   |
+| Star Wars API  | https://swapi.dev                              |
 
 - [ ] After choosing your API **read** the documentation.
 - [ ] Use the `Insomnia` tool to make a few queries of the API.

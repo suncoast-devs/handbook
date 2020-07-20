@@ -1,6 +1,6 @@
 ---
 title: Explosion API
-tags: ["c-sharp", "dotnet", "api"]
+tags: ['c-sharp', 'dotnet', 'api']
 ---
 
 ## Objectives
@@ -16,6 +16,12 @@ tags: ["c-sharp", "dotnet", "api"]
   - Mumbling
     [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling)
 - TOP TIP: Digits Explosion is probably the easier algorithm to create.
+
+### Setup
+
+```shell
+dotnet new sdg-api -o ExplosionAPI
+```
 
 ### Explorer Mode
 

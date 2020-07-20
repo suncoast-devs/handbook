@@ -15,6 +15,12 @@ and delete.
 - Practice creating ASP.NET Web API endpoints.
 - Practice EF Core.
 
+### Setup
+
+```shell
+dotnet new sdg-api -o TamagotchiAPI
+```
+
 ### Explorer Mode
 
 - Create and new `sdg-api` that has the following features

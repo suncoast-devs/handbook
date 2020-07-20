@@ -1,6 +1,6 @@
 ---
 title: Stay in and watch TV
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 This weekend, you will pair up in groups of 2 to create a "TV guide" website.
@@ -22,6 +22,12 @@ This will use an API, and few pages to display what is currently showing.
 - Each group will be working on one repository, decide in each group who's
   account it goes under
 - Use React Router to create the pages.
+
+### Setup
+
+```shell
+app-app --delta-hooks StayInAndWatchTV
+```
 
 ### Explorer Mode
 

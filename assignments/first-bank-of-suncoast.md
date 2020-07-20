@@ -1,6 +1,6 @@
 ---
 title: First Bank of Suncoast
-tags: ["c-sharp", "console", "oop", "linq"]
+tags: ['c-sharp', 'console', 'oop', 'linq']
 ---
 
 For this assignment, you will be creating your own personal bank account
@@ -32,6 +32,12 @@ to consider. When computed from this list of transactions, their balance is 2.
 
 The transactions will be saved in a file, using a `JSON` or `CSV` format to
 record the data.
+
+## Setup
+
+```shell
+dotnet new sdg-console -o FirstBankOfSuncoast
+```
 
 ### Explorer Mode
 

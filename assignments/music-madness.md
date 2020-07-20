@@ -16,6 +16,12 @@ For tonight, I want you to show off what you favorite music is. You will be crea
   - One landing
   - One page for your each of your top three favorite bands.
 
+### Setup
+
+```shell
+app-app --delta-hooks MusicMadness
+```
+
 ### Explorer Mode
 
 - [ ] Add `react-router-dom` to your project.

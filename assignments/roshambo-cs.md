@@ -1,6 +1,6 @@
 ---
 title: Roshambo! (Rock Paper Scissors)
-tags: ["c-sharp", "console", "algorithms"]
+tags: ['c-sharp', 'console', 'algorithms']
 ---
 
 Create a simple Rock-Paper-Scissors game using C# in which the player plays
@@ -27,6 +27,12 @@ See the Wikipedia page about
   while)
 - Write out **ALL** the steps the application needs to take in English
 - The more you plan out your process, the better things will go.
+
+### Setup
+
+```shell
+dotnet new sdg-console -o RoshamboCS
+```
 
 ### Explorer Mode
 

@@ -17,6 +17,12 @@ For the data, you will use the API [available here](https://ratesapi.io/)
 
 - Use [this API documentation](https://ratesapi.io/documentation/) to build a page that allows for conversion between multiple currencies
 
+### Setup
+
+```shell
+app-app --gamma-hooks CurrencyConverter
+```
+
 ### Explorer Mode
 
 - [ ] Create a page that loads and shows the current currency conversion rates.

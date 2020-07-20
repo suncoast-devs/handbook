@@ -1,6 +1,6 @@
 ---
 title: Party Thyme
-tags: ["c-sharp", "console", "dotnet", "sql"]
+tags: ['c-sharp', 'console', 'dotnet', 'sql']
 ---
 
 With the seasons changing to springtime, it is time to start planting our
@@ -22,6 +22,12 @@ ago they were planted and other details.
 ## Resources
 
 - [EF Core Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
+
+### Setup
+
+```shell
+dotnet new sdg-console-database -o PartyThme
+```
 
 ### Explorer Mode
 

@@ -1,6 +1,6 @@
 ---
 title: Variables, Variables, and Variables
-tags: ["javascript", "console"]
+tags: ['javascript', 'console']
 ---
 
 # Let's get started
@@ -19,6 +19,12 @@ will be making a program that demonstrates some JavaScript fundamentals.
 Create your project using `app-app` with the `beta` stack
 
 Remove all the code inside `main.js` and start with a fresh and empty file.
+
+### Setup
+
+```
+app-app --beta VariablesJS
+```
 
 ### Explorer Mode
 

@@ -1,6 +1,6 @@
 ---
 title: It all starts with HTML
-tags: ["html"]
+tags: ['html']
 ---
 
 During this week, you will be building a website for your new chain of
@@ -20,6 +20,12 @@ To start, you will need to start with the HTML and content.
   just a starting point, do not get too hung on this.
 - Create the Content for your page
 - Craft semantic HTML for your landing page.
+
+### Setup
+
+```shell
+app-app --alpha StartsWithHTML
+```
 
 ### Explorer Mode
 

@@ -1,6 +1,6 @@
 ---
 title: All Cards on Deck! (JavaScript)
-tags: ["javascript", "algorithms", "enumeration"]
+tags: ['javascript', 'algorithms', 'enumeration']
 ---
 
 In this project, you will use JavaScript to model
@@ -48,6 +48,12 @@ for i from n - 1 down to 1 do:
   swap items[i] with items[j]
 ```
 
+### Setup
+
+```shell
+app-app --alpha AllCardsOnDeckJS
+```
+
 ### Explorer Mode
 
 - [ ] The deck should be randomly shuffled when the page is loaded.
@@ -71,7 +77,7 @@ for i from n - 1 down to 1 do:
 This snippet will give you a random integer, `z` between `0` and `n`:
 
 ```javascript
-const z = Math.floor(Math.random() * n);
+const z = Math.floor(Math.random() * n)
 ```
 
 Let's break this down from the inside out:

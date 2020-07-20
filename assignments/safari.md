@@ -1,6 +1,6 @@
 ---
 title: ORM Safari! Part I
-tags: ["c-sharp", "console", "sql", "orm", "ef-core", "dotnet"]
+tags: ['c-sharp', 'console', 'sql', 'orm', 'ef-core', 'dotnet']
 ---
 
 We are taking a surprise trip to the Savannah for a safari to see all sorts of
@@ -19,6 +19,12 @@ application to help record what we see.
 _NOTE_: The Additional Resources section below is _very_ helpful. Consider
 reading this after reading _Explorer_ mode. Then make a plan for the assignment
 for digging in and writing code.
+
+### Setup
+
+```shell
+dotnet new sdg-console-database -o SafariConsole
+```
 
 ### Explorer Mode
 

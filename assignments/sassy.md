@@ -1,6 +1,6 @@
 ---
 title: Get SASSy
-tags: ["css", "sass"]
+tags: ['css', 'sass']
 ---
 
 Today you explorer the wonders of SASS and SCSS. Now, with that new knowledge, I
@@ -17,6 +17,12 @@ Starting from any past assignment with non-trivial styling, update the CSS to
 SASS (or SCSS, your preference).
 
 Remember the addition of `node-sass` to the project's dependencies.
+
+### Setup
+
+```shell
+app-app --delta-hooks Sassy
+```
 
 ### Explorer Mode
 

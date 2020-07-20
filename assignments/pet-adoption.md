@@ -1,6 +1,6 @@
 ---
 title: Adoption Expansion
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 For this project, you will forking an existing repo and adding ore functionality

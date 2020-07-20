@@ -17,6 +17,12 @@ You'll identify the main `Component`s on the page and create React components fo
 
 - Understand and use "props" in React
 
+### Setup
+
+```shell
+app-app --gamma Reactocats
+```
+
 ### Explorer Mode
 
 - [ ] Create your React app using `app-app` `GAMMA`

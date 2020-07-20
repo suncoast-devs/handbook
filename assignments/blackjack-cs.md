@@ -1,6 +1,6 @@
 ---
 title: Blackjack (C#)
-tags: ["c-sharp", "console", "algorithms"]
+tags: ['c-sharp', 'console', 'algorithms']
 ---
 
 <!-- prettier-ignore-start -->
@@ -21,6 +21,12 @@ game ever, or in a while, grab a deck of cards and play a few games.
 Create a single-player blackjack game that plays against the house, i.e., a
 human player and computer dealer. You are free to create the user interface
 however you want, **but keep it simple for Explorer Mode**.
+
+### Setup
+
+```shell
+dotnet new sdg-console -o BlackJackCS
+```
 
 ### Explorer Mode
 

@@ -25,6 +25,12 @@ Although in reality an album could be done by more than one band, our system
 will just have an album involving **one** band. That is, an album belongs to one
 band.
 
+### Setup
+
+```shell
+dotnet new sdg-console-database -o RhythmsGonnaGetYou
+```
+
 ### Explorer Mode
 
 - [ ] Create a database that stores `Albums`, and `Bands`. They should have the

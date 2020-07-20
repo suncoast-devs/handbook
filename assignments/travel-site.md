@@ -1,6 +1,6 @@
 ---
 title: Travel Together!
-tags: ["html", "css"]
+tags: ['html', 'css']
 ---
 
 Your team has been contracted by the city of St Pete to build out a site about
@@ -24,6 +24,12 @@ more comfortable with CSS.
 - recreate this website
 - We will meet periodically to discuss progress, topics, and ideas. Keep an eye
   on slack.
+
+### Setup
+
+```shell
+app-app --beta TravelSite
+```
 
 ### Explorer Mode
 

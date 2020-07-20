@@ -1,6 +1,6 @@
 ---
 title: Hello, World!
-tags: ["c-sharp", "console"]
+tags: ['c-sharp', 'console']
 ---
 
 Welcome to your journey as a developer. When learning a new language, a
@@ -24,6 +24,12 @@ create and run `C#` applications.
 
 Follow [this guide](/lessons/misc-quick-reference/turning-in-assignments) to
 review how to turn in your assignments.
+
+### Setup
+
+```shell
+dotnet new sdg-console -o HelloDotNet
+```
 
 ### Explorer Mode
 

@@ -1,6 +1,6 @@
 ---
 title: OOP! It's Raining
-tags: ["javascript", "oop"]
+tags: ['javascript', 'oop']
 ---
 
 Yesterday you created a simple weather viewer. Today, we discussed a new topic,

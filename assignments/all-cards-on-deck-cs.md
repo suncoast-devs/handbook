@@ -1,6 +1,6 @@
 ---
 title: All Cards on Deck! (C#)
-tags: ["c-sharp", "algorithms", "enumeration"]
+tags: ['c-sharp', 'algorithms', 'enumeration']
 ---
 
 <!-- prettier-ignore-start -->
@@ -54,6 +54,12 @@ for rightIndex from n - 1 down to 1 do:
 ```
 
 _hint:_ understand the algorithm before you try to implement it.
+
+### Setup
+
+```shell
+dotnet new sdg-console -o AllCardsOnDeckCS
+```
 
 ### Explorer Mode
 

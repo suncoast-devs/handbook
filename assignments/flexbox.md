@@ -17,6 +17,12 @@ simplify our HTML and CSS.
 
 ## Requirements
 
+### Setup
+
+```shell
+app-app --alpha TheDailyKitteh
+```
+
 ### Explorer Mode
 
 - [ ] Recommended: Go through the Flexbox Froggy and Grid Garden resources at

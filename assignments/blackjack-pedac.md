@@ -1,6 +1,6 @@
 ---
 title: Blackjack PEDA (but no C)
-tags: ["algorithms", "pedac"]
+tags: ['algorithms', 'pedac']
 ---
 
 In this project, you are creating a playable game of

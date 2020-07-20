@@ -1,6 +1,6 @@
 ---
 title: Hook, line and sinker!
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 In this assignment, you'll create an HSL(a) color picker with React, but this
@@ -72,6 +72,12 @@ example:
 </div>
 ```
 
+### Setup
+
+```shell
+app-app --gamma-hooks ColorPickerHooks
+```
+
 ### Explorer Mode
 
 - [ ] Represent the three values, `hue`, `saturation`, and `lightness` with
@@ -97,5 +103,4 @@ example:
 - [Inline styles in React](https://reactjs.org/docs/dom-elements.html#style)
 - [`hsl()` and `hsla()`][1] on MDN
 
-[1]:
-  https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla()
+[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla()

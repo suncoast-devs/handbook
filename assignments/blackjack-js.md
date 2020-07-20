@@ -1,6 +1,6 @@
 ---
 title: Blackjack (JavaScript)
-tags: ["javascript", "algorithms"]
+tags: ['javascript', 'algorithms']
 ---
 
 In this project you will create a playable game of
@@ -41,6 +41,12 @@ General Rules:
   your project's `images` folder
 - Note that the names of the images are of the form _face_ of _suit_.svg
   (without the spaces)
+
+### Setup
+
+```shell
+dotnet new sdg-console -o BlackJackJS
+```
 
 ### Explorer Mode
 

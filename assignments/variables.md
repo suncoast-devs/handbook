@@ -1,6 +1,6 @@
 ---
 title: Variables, Variables, and Variables
-tags: ["c-sharp", "console"]
+tags: ['c-sharp', 'console']
 ---
 
 <!-- prettier-ignore-start -->
@@ -22,6 +22,12 @@ Make sure you have followed the [setup instructions](/lessons/cs-environment-set
 Follow [this guide](/lessons/cs-how-to-crete-and-run-programs) to review how to create and run `C#` applications
 
 All your code should place inside the `static void Main(string args[])`
+
+### Setup
+
+```shell
+dotnet new sdg-console VariablesCS
+```
 
 ### Explorer Mode
 

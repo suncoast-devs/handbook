@@ -21,6 +21,12 @@ For this assignment, you will be reproducing a website.
 - Reproduce this[http://sdg-astro-club.surge.sh] website. The data is live at
   https://sdg-astro-api.herokuapp.com/index.html.
 
+### Setup
+
+```shell
+app-app --delta-hooks AstroClub
+```
+
 ### Explorer Mode
 
 - [ ] Reproduce [this site](http://sdg-astro-club.surge.sh) exactly

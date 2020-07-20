@@ -1,6 +1,6 @@
 ---
 title: I wet my plants!
-tags: ["c-sharp", "console", "sql"]
+tags: ['c-sharp', 'console', 'sql']
 ---
 
 With the seasons changing to spring, it is time to start planting our gardens.
@@ -22,6 +22,12 @@ planted and other details.
 ## Resources
 
 - [EF Core Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
+
+### Setup
+
+```shell
+dotnet new sdg-console-database -o WetMyPlants
+```
 
 ### Explorer Mode
 

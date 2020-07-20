@@ -73,6 +73,12 @@ Save this as a JSON file in your project and import it.
 
 If you hot-link photos from the internet, be sure to include a valid link back to the source.
 
+### Setup
+
+```shell
+app-app --delta-hooks PhotoGallery
+```
+
 ### Explorer Mode
 
 - [ ] You should have at least 4 components: `App`, `CategoryList`, `PhotoList`, `PhotoDetail`.

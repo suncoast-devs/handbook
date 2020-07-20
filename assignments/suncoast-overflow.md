@@ -22,6 +22,12 @@ Here are the user stories for this application:
 - [ ] As a user I should be able to upvote or downvote a question.
 - [ ] As a user I should be able to upvote or downvote an answer.
 
+### Setup
+
+```shell
+dotnet new sdg-react -o SuncoastOverflow
+```
+
 ### Day 1
 
 ### Explorer Mode

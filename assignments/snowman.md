@@ -1,6 +1,6 @@
 ---
 title: Do you want to build a Snowman?
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 In this assignment, you'll build a _less grim_ variation of a popular game:
@@ -22,6 +22,12 @@ project:
 1.  [Word List](./assets/words.json)
 2.  [Snowman Images](./assets/snowman.zip) (Unzip these before adding to your
     project)
+
+### Setup
+
+```shell
+app-app --gamma-hooks Snowman
+```
 
 ### Explorer Mode
 

@@ -49,6 +49,12 @@ const currentColor = `hsl(50,8%,20%)`
 </div>
 ```
 
+### Setup
+
+```shell
+app-app ColorPicker
+```
+
 ### Explorer Mode
 
 - [ ] Represent the three values, `hue`, `saturation`, and `lightness` in your state.

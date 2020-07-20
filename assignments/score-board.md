@@ -16,6 +16,12 @@ For this assignment, you are creating a simple interactive scoreboard for your f
   - [HTML](https://raw.githubusercontent.com/suncoast-devs/scoreboard-template/master/index.html)
   - [CSS](https://raw.githubusercontent.com/suncoast-devs/scoreboard-template/master/screen.css)
 
+### Setup
+
+```shell
+app-app --beta Scoreboard
+```
+
 ### Explorer Mode
 
 ### Part 1:

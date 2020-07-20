@@ -28,6 +28,12 @@ Here's an example implementation of this assignment:
 
 ![](./assets/bomb-sniffer.gif)
 
+### Setup
+
+```shell
+app-app --gamma-hooks Minesweeper
+```
+
 ### Explorer Mode
 
 - [ ] Create a new game when the page loads, and render it on the screen, this look as close to gif as possible.

@@ -1,6 +1,6 @@
 ---
 title: Crypto Ticker
-tags: ["javascript", "react"]
+tags: ['javascript', 'react']
 ---
 
 In this project you'll use React and a 3rd-party API as a data to create a
@@ -29,6 +29,12 @@ for each currency, you can get the URL for the logo of a coin like this:
 
 ```
 https://s2.coinmarketcap.com/static/img/coins/16x16/${coin.id}.png
+```
+
+### Setup
+
+```shell
+app-app --gamma-hooks ColorPickerHooks
 ```
 
 ### Explorer Mode

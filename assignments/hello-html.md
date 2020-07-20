@@ -1,6 +1,6 @@
 ---
 title: Hello, HTML.
-tags: ["html"]
+tags: ['html']
 ---
 
 In your first assignment, you will end up with a web page, no matter how simple,
@@ -20,6 +20,12 @@ website and learning your new tools.
 ## Requirements
 
 - Do not implement any CSS for this project.
+
+### Setup
+
+```shell
+app-app --alpha HelloHTML
+```
 
 ### Explorer Mode
 

@@ -26,6 +26,12 @@ See the Wikipedia page about
   - For example "When user one clicks on Rock, remember that user one chooses
     Rock"
 
+### Setup
+
+```shell
+app-app --beta RoshamboJS
+```
+
 ### Explorer Mode
 
 #### Part 1

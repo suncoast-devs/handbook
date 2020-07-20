@@ -1,6 +1,6 @@
 ---
 title: Welcome to Jurassic Park
-tags: ["c-sharp", "console", "enumeration", "oop", "linq"]
+tags: ['c-sharp', 'console', 'enumeration', 'oop', 'linq']
 ---
 
 In this assignment, you will be creating a console application that manages a
@@ -17,6 +17,12 @@ zoo full of dinosaurs.
 ## Requirements
 
 - Create a simple console application that manages the dinosaurs in your zoo.
+
+### Setup
+
+```shell
+dotnet new sdg-console -o JurasicPark
+```
 
 ### Explorer Mode
 

@@ -20,6 +20,12 @@ Create a simple calculator that allows the user to add, multiply, subtract, and 
 
 - Take this in small steps just like we did in class. Start with the HTML, then CSS, then with basic functionality.
 
+### Setup
+
+```shell
+app-app ReactCalculator
+```
+
 ### Explorer Mode
 
 - [ ] Implement something similar to the example UI using HTML and CSS inside a React app
