@@ -89,7 +89,7 @@ order: 4
 - [PowerToFly](http://powertofly.com/jobs) 
 - [Developers for Hire](http://developersforhire.com)
 - [Codepen job board](https://codepen.io/jobs)
-- [oblist.app](http://joblist.app)
+- [Joblist.app](http://joblist.app)
 - [Fullstack Job](http://fullstackjob.com)
 - [Authentic jobs](http://authenticjobs.com)
 - [Jobspresso](http://jobspresso.co) 
