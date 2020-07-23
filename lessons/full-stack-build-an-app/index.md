@@ -3463,7 +3463,7 @@ Where `"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"` is the key
 you generated at Microsoft.
 
 > NOTE: If you are going to deploy this with Heroku, you'll need to run
-> `heroku config:set BING_MAPS_KEY "xxxx"` with your specific key in place of
+> `heroku config:set BING_MAPS_KEY="xxxx"` with your specific key in place of
 > `xxxx` at least once before you deploy.
 
 To acecss the key from the controller:
@@ -3719,7 +3719,7 @@ Now we have a zoomable, draggable, and clickable map that represents data pulled
 from our API.
 
 > NOTE: If you are going to deploy this with Heroku, you'll need to run
-> `heroku config:set REACT_APP_MAPBOX_TOKEN "xxxx"` with your specific key in
+> `heroku config:set REACT_APP_MAPBOX_TOKEN="xxxx"` with your specific key in
 > place of `xxxx` at least once before you deploy.
 
 ## Files Updated
