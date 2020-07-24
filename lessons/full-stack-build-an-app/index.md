@@ -2731,6 +2731,10 @@ called _high entropy_ implying that it will be very hard for someone to guess
 this secret. A good website to generate these kinds of secrets is:
 [Gibson Research Corporation's Password Page](https://www.grc.com/passwords.htm)
 
+> NOTE: If you are going to deploy this with Heroku, you'll need to run
+> `heroku config:set JWT_KEY="xxxx"` with your specific key in place of `xxxx`
+> at least once before you deploy.
+
 ## Returning to the controller
 
 Now that we have generated this JWT secret we can implement the `POST` method
