@@ -404,7 +404,7 @@ INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone") VALUES
 You can run this with the command line:
 
 ```shell
-psql TacoTuesdayDatabase --file=Models/seeds.sql
+psql --file=Models/seeds.sql TacoTuesdayDatabase
 ```
 
 ## Files Updated
@@ -1875,7 +1875,7 @@ INSERT INTO "Reviews" ("RestaurantId", "CreatedAt", "Summary", "Body") VALUES (1
 ```
 
 ```shell
-psql TacoTuesdayDatabase --file=Models/seeds.sql
+psql --file=Models/seeds.sql TacoTuesdayDatabase
 ```
 
 ## Updating the interface to return the list of reviews
