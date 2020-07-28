@@ -989,10 +989,10 @@ const handleDescription = event => {
 However, if you notice we added a field `id` to each of the inputs that have the
 name of the field. We were careful to name these after the object's properties.
 Thus we can use this to create a **single** handle method that is reused amongst
-all the `onChange` events:
+all the `onChange` events for string based state:
 
 ```javascript
-const handleFieldChange = event => {
+const handleStringFieldChange = event => {
   const value = event.target.value
   const fieldName = event.target.id
 
@@ -1001,6 +1001,9 @@ const handleFieldChange = event => {
   setNewRestaurant(updatedRestaurant)
 }
 ```
+
+> NOTE: If we have integer state we would need an equivalent
+> `handleIntegerFieldChange` method.
 
 Finally, let's handle the case of submitting the form. Instead of adding an
 `onClick` method to the button, we will add an `onSubmit` for the `<form>`. This
@@ -2396,7 +2399,7 @@ export function SignUp() {
     password: '',
   })
 
-  const handleFieldChange = event => {
+  const handleStringFieldChange = event => {
     const value = event.target.value
     const fieldName = event.target.id
 
@@ -2440,7 +2443,7 @@ export function SignUp() {
               className="form-control"
               id="fullName"
               value={newUser.fullName}
-              onChange={handleFieldChange}
+              onChange={handleStringFieldChange}
             />
           </div>
 
@@ -2451,7 +2454,7 @@ export function SignUp() {
               className="form-control"
               id="email"
               value={newUser.email}
-              onChange={handleFieldChange}
+              onChange={handleStringFieldChange}
             />
           </div>
 
@@ -2462,7 +2465,7 @@ export function SignUp() {
               className="form-control"
               id="password"
               value={newUser.password}
-              onChange={handleFieldChange}
+              onChange={handleStringFieldChange}
             />
           </div>
 
@@ -2862,7 +2865,7 @@ export function SignIn() {
     password: '',
   })
 
-  const handleFieldChange = event => {
+  const handleStringFieldChange = event => {
     const value = event.target.value
     const fieldName = event.target.id
 
@@ -2907,7 +2910,7 @@ export function SignIn() {
               className="form-control"
               id="email"
               value={loginUser.email}
-              onChange={handleFieldChange}
+              onChange={handleStringFieldChange}
             />
           </div>
 
@@ -2918,7 +2921,7 @@ export function SignIn() {
               className="form-control"
               id="password"
               value={loginUser.password}
-              onChange={handleFieldChange}
+              onChange={handleStringFieldChange}
             />
           </div>
 
