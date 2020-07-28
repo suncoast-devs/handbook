@@ -139,3 +139,5 @@ Resources:
 ### Additional Resources
 
 - [Guide to Understanding the Technical Interview (With Tips and Examples)](https://www.indeed.com/career-advice/interviewing/technical-interview)
+
+_Special thank you to [Dylan Attal - COhort XII](https://www.linkedin.com/in/dylanattal/) and [Nick Weber - Cohort XV](https://www.linkedin.com/in/nicholasryanweber/) for providing the information used for this page
