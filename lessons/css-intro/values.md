@@ -109,8 +109,6 @@ width. This can be compared to boxes that have their width set to a certain unit
 value (like `px` or `em`), which will always stay the same length, even if their
 parent container's width changes.
 
-<CodePen>
-
 Here we are giving both divs some margin, height, font-size, border and color.
 Then we are giving the first div and second div different background-colors so
 we can easily tell them apart. We are also setting the first div's width to
@@ -122,17 +120,14 @@ that it will always remain 75% as wide as its parent. In this case, the div's
 parent is the `body` element, which by default is 100% of the width of the
 viewport.
 
-<pre data-lang='html'>
-{`
+```html
 <div>
   <div class="boxes">Fixed width layout with pixels</div>
   <div class="boxes">Liquid layout with percentages</div>
 </div>
-`}
-</pre>
+```
 
-<pre data-lang='css'>
-{`
+```css
 div .boxes {
   margin: 10px;
   color: white;
@@ -149,10 +144,7 @@ div .boxes {
   background-color: blue;
   width: 75%;
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ## Colors
 
@@ -178,28 +170,23 @@ p {
 
 ### Hexadecimal colors
 
-<CodePen>
-
 The next ubiquitous color system is hexadecimal colors, or hex codes. Each hex
-value consists of a hash/pound symbol (#) followed by six hexadecimal numbers,
-each of which can take a value between 0 and f (which represents 15) — so
-0123456789abcdef. Each pair of values represents one of the channels — red,
-green and blue — and allows us to specify any of the 256 available values for
+value consists of a hash/pound symbol (`#`) followed by six hexadecimal numbers,
+each of which can take a value between `0` and `f` (which represents `15`) — so
+`0123456789abcdef`. Each pair of values represents one of the channels — red,
+green and blue — and allows us to specify any of the `256` available values for
 each `(16 x 16 = 256.)`
 
 > _NOTE_: If you want to learn more about hexadecimals and colors then
 > [this video](https://www.youtube.com/watch?v=6cJd7eyYBFs) is a good resource.
 
-<pre data-lang='html'>
-{`
+```html
 <p>This paragraph has a red background</p>
 <p>This paragraph has a blue background</p>
 <p>This paragraph has a kind of pinky lilac background</p>
-`}
-</pre>
+```
 
-<pre data-lang='css'>
-{`
+```css
 /* equivalent to the red keyword */
 p:nth-child(1) {
   background-color: #ff0000;
@@ -214,10 +201,7 @@ p:nth-child(2) {
 p:nth-child(3) {
   background-color: #e0b0ff;
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ### RGB
 
@@ -235,16 +219,14 @@ green and blue values, the `hsl()` function accepts hue, saturation, and
 lightness values, which are used to distinguish between the 16.7 million colors,
 but in a different way:
 
-<CodePen>
-
-- hue: the base shade of the color. This takes a value between 0 and 360,
+- hue: the base shade of the color. This takes a value between `0` and `360`,
   presenting the angles round a color wheel.
-- saturation: how saturated is the color? This takes a value from 0-100%, where
-  0 is no color (it will appear as a shade of grey), and 100% is full color
-  saturation
-- lightness: how light or bright is the color? This takes a value from 0-100%,
-  where 0 is no light (it will appear completely black) and 100% is full light
-  (it will appear completely white)
+- saturation: how saturated is the color? This takes a value from `0-100%`,
+  where `0` is no color (it will appear as a shade of grey), and `100%` is full
+  color saturation
+- lightness: how light or bright is the color? This takes a value from `0-100%`,
+  where `0` is no light (it will appear completely black) and `100%` is full
+  light (it will appear completely white)
 
 The HSL color model is intuitive to designers that are used to working with such
 color models. By keeping the hue, and saturation the same, we can lower the
@@ -252,16 +234,13 @@ level and find a set of shades to go together in a monochrome color scheme.
 
 Let's rewrite our example:
 
-<pre data-lang='html'>
-{`
+```html
 <p>This paragraph has a red background</p>
 <p>This paragraph has a blue background</p>
 <p>This paragraph has a kind of pinky lilac background</p>
-`}
-</pre>
+```
 
-<pre data-lang='css'>
-{`
+```css
 /* equivalent to the red keyword */
 p:nth-child(1) {
   background-color: hsl(0, 100%, 50%);
@@ -276,10 +255,7 @@ p:nth-child(2) {
 p:nth-child(3) {
   background-color: hsl(276, 100%, 85%);
 }
-`}
-</pre>
-
-</CodePen>
+```
 
 ### RGBA and HSLA
 
@@ -302,3 +278,16 @@ There is another way to specify transparency via CSS — the opacity property.
 Instead of setting the transparency of a particular color, this sets the
 transparency of all selected elements and their children. Again, let's study an
 example so we can see the difference.
+
+```css
+/* Red with RGBA, only the background will be half transparent */
+p:nth-child(1) {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+/* Red with opacity, the box will be all half transparent including the text in it*/
+p:nth-child(2) {
+  background-color: rgb(255, 0, 0);
+  opacity: 0.5;
+}
+```
