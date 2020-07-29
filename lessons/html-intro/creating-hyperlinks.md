@@ -1,6 +1,8 @@
 ---
 title: Creating hyperlinks
 order: 11
+tags:
+  - mdn-content
 ---
 
 Hyperlinks are really important — they are what makes the Web a web. This

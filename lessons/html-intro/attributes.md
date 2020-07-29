@@ -1,6 +1,8 @@
 ---
 title: Attributes
 order: 6
+tags:
+  - mdn-content
 ---
 
 Elements can also have attributes, which look like this:

@@ -1,6 +1,8 @@
 ---
 title: Anatomy of an HTML document
 order: 8
+tags:
+  - mdn-content
 ---
 
 That wraps up the basics of individual HTML elements, but they aren't very

@@ -1,6 +1,8 @@
 ---
 title: What is HTML?
 order: 2
+tags:
+  - mdn-content
 ---
 
 HTML (Hypertext Markup Language) is not a programming language; it is a markup

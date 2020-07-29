@@ -1,6 +1,8 @@
 ---
 title: Boolean attributes
 order: 7
+tags:
+  - mdn-content
 ---
 
 <CodePen>

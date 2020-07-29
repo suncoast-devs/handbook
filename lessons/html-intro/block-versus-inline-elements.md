@@ -1,6 +1,8 @@
 ---
 title: Block versus inline elements
 order: 4
+tags:
+  - mdn-content
 ---
 
 There are two important categories of elements in HTML which you should know

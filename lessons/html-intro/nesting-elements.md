@@ -1,6 +1,8 @@
 ---
 title: Nesting elements
 order: 3
+tags:
+  - mdn-content
 ---
 
 <CodePen>

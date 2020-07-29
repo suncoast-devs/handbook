@@ -1,6 +1,8 @@
 ---
 title: HTML text fundamentals
 order: 11
+tags:
+  - mdn-content
 ---
 
 One of HTML's main jobs is to give text structure and meaning (also known as

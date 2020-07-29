@@ -1,6 +1,8 @@
 ---
 title: What’s in the head? Metadata in HTML
 order: 10
+tags:
+  - mdn-content
 ---
 
 The head of an HTML document is the part that is not displayed in the web

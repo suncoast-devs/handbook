@@ -1,6 +1,8 @@
 ---
 title: The most common HTML tags we see used
 order: 14
+tags:
+  - mdn-content
 ---
 
 Here are some of the most common HTML tags we see used, their purpose, and the

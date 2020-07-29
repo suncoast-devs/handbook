@@ -1,6 +1,8 @@
 ---
 title: Semantic HTML
 order: 13
+tags:
+  - mdn-content
 ---
 
 Semantics relate to meaning in a language. In HTML we want to choose tags that

@@ -1,6 +1,8 @@
 ---
 title: Images
 order: 12
+tags:
+  - mdn-content
 ---
 
 A common element on a web page is an image. Given that their exchange rate is
