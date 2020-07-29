@@ -74,6 +74,7 @@ _Program.cs_
 ```csharp
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace NumberTracker
 {
@@ -98,6 +99,7 @@ namespace NumberTracker
         {
           Console.WriteLine(number);
         }
+        Console.WriteLine($"Our list has: {numbers.Count()} entries");
         Console.WriteLine("------------------");
 
         // Ask for a new number or the word quit to end
@@ -243,6 +245,7 @@ Our code now looks like this:
 ```csharp
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Globalization;
 using System.IO;
 using CsvHelper;
