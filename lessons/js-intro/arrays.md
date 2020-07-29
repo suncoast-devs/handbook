@@ -30,12 +30,12 @@ To create an array with non-zero length, but without any items, either of the
 following can be used:
 
 ```javascript
-let array = new Array(arrayLength);
-let array = Array(arrayLength);
+let array = new Array(arrayLength)
+let array = Array(arrayLength)
 
 // This has exactly the same effect
-let array = [];
-array.length = arrayLength;
+let array = []
+array.length = arrayLength
 ```
 
 ## Populating an array
@@ -43,17 +43,17 @@ array.length = arrayLength;
 You can populate an array by assigning values to its elements. For example,
 
 ```javascript
-let employee = [];
-employee[0] = "Casey Jones";
-employee[1] = "Phil Lesh";
-employee[2] = "August West";
+let employees = []
+employees[0] = 'Casey Jones'
+employees[1] = 'Phil Lesh'
+employees[2] = 'August West'
 ```
 
 You can also populate an array when you create it:
 
 ```javascript
-let myArray = new Array("Hello", myVar, 3.14159);
-let myArray = ["Mango", "Apple", "Orange"];
+let myArray = new Array('Hello', myVar, 3.14159)
+let myArray = ['Mango', 'Apple', 'Orange']
 ```
 
 ## Referring to array elements
@@ -62,7 +62,7 @@ You refer to an array's elements by using the element's ordinal number. For
 example, suppose you define the following array:
 
 ```javascript
-let myArray = ["Wind", "Rain", "Fire"];
+let myArray = ['Wind', 'Rain', 'Fire']
 ```
 
 You then refer to the first element of the array as `myArray[0]` and the second
@@ -76,27 +76,27 @@ A common operation is to iterate over the values of an array, processing each
 one in some way. The simplest way to do this is as follows:
 
 ```javascript
-let colors = ["red", "green", "blue"];
+let colors = ['red', 'green', 'blue']
 for (let index = 0; index < colors.length; index++) {
-  console.log(colors[index]);
+  console.log(colors[index])
 }
 ```
 
 The `forEach()` method provides another way of iterating over an array:
 
 ```javascript
-let colors = ["red", "green", "blue"];
+let colors = ['red', 'green', 'blue']
 colors.forEach(function (color) {
-  console.log(color);
-});
+  console.log(color)
+})
 ```
 
 Alternatively, You can shorten the code for the forEach parameter with Arrow
 Functions:
 
 ```javascript
-let colors = ["red", "green", "blue"];
-colors.forEach((color) => console.log(color));
+let colors = ['red', 'green', 'blue']
+colors.forEach(color => console.log(color))
 ```
 
 > This syntax is more compact, doesn't require maintaining an `index`, and is
@@ -107,10 +107,10 @@ Notice that we do not have an index. If we **do** want an index we can add that
 as a second argument in our arrow function
 
 ```javascript
-let colors = ["red", "green", "blue"];
+let colors = ['red', 'green', 'blue']
 colors.forEach((color, index) =>
   console.log(`The color at position ${index} is ${color}`)
-);
+)
 ```
 
 For more details on how to manipulate arrays, including adding and removing

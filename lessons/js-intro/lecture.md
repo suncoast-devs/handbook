@@ -249,6 +249,127 @@ const message = `Congratulations, ${answer} is correct. You have ${score} points
 
 ---
 
+# Arrays
+
+JavaScript also has an array type. JavaScript arrays are more flexible than C#'s and are more akin to `List<>` in their flexibility. JavaScript arrays also differ from `C#` arrays in that they can store values of different types.
+
+There are three ways to declare an array:
+
+```javascript
+let array = new Array(element0, element1, ..., elementN);
+let array = Array(element0, element1, ..., elementN);
+let array = [element0, element1, ..., elementN];
+```
+
+---
+
+# Arrays
+
+The `new Array` and `Array()` styles are confusing since they have a second form that creates an array with a sequence of empty elements
+
+```javascript
+let arrayWithSevenEmptyElements = new Array(7)
+let arrayWithSevenEmptyElements = Array(7)
+```
+
+For this reason we typically use the `literal` form.
+
+---
+
+# Array literals
+
+```javascript
+let people = ['Betty', 'Wilma', 'Fred', 'Barny']
+let scores = [100, 42, 50, 98]
+let collection = ['Betty', 98, 'Fred', 12, 42]
+```
+
+---
+
+# Populating an array
+
+We can also use the `[]` operator to assign values to specific elements of an array.
+
+```javascript
+let employees = []
+employees[0] = 'Casey Jones'
+employees[1] = 'Phil Lesh'
+employees[2] = 'August West'
+```
+
+---
+
+# Populating an array
+
+We can set elements of an array even if they are not next to each other. JavaScript will fill in the elements inbetween with empty items
+
+[.column]
+
+```javascript
+let employees = []
+employees[0] = 'Casey Jones'
+employees[12] = 'Phil Lesh'
+employees[42] = 'August West'
+```
+
+[.column]
+
+```javascript
+[
+  'Casey Jones',
+  <11 empty items>,
+  'Phil Lesh',
+  <29 empty items>,
+  'August West'
+]
+```
+
+---
+
+# Iterating arrays
+
+A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
+
+```javascript
+let colors = ['red', 'green', 'blue']
+for (let index = 0; index < colors.length; index++) {
+  console.log(colors[index])
+}
+```
+
+---
+
+# Iterating arrays
+
+The `forEach()` method provides another way of iterating over an array:
+
+```javascript
+let colors = ['red', 'green', 'blue']
+colors.forEach(function (color) {
+  console.log(color)
+})
+```
+
+---
+
+# Iterating arrays with arrow functions
+
+Alternatively, You can shorten the code for the forEach parameter with Arrow
+Functions:
+
+```javascript
+let colors = ['red', 'green', 'blue']
+colors.forEach(color => console.log(color))
+```
+
+---
+
+# More about iterating
+
+For more details on how to manipulate arrays, including adding and removing elements, see the [quick reference guide](/lessons/misc-quick-reference/js-arrays) on arrays.
+
+---
+
 # Control flow
 
 Control flow in JavaScript is nearly identical to `C#` in that our code is comprised of a sequential set of statements that comprises a block of code:
