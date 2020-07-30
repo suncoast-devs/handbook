@@ -65,6 +65,13 @@ heroku pg:pull DATABASE_URL my-database-name-goes-here-instead-of-this
 > your local database. This would be the name you give to `pgcli` or `psql`
 > locally.
 
+So if your local database is called `SuperAwesomeAppDatabase` your command would
+be:
+
+```shell
+heroku pg:pull DATABASE_URL SuperAwesomeAppDatabase
+```
+
 ## Push a copy of your local database to Heroku
 
 Perhaps you have spent a lot of time perfecting your database locally, and now
@@ -83,6 +90,11 @@ heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 > NOTE: replace `my-database-name-goes-here-instead-of-this` with the name of
 > your local database. This would be the name you give to `pgcli` or `psql`
 > locally.
+
+```shell
+heroku pg:reset
+heroku pg:push SuperAwesomeAppDatabase DATABASE_URL
+```
 
 ## See all the configuration values on Heroku
 
