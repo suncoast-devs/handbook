@@ -8,10 +8,13 @@ modules:
     lessons:
       - prework
       - misc-keys-to-student-success
+  - setup:
+    title: Environment Setup
+    lessons:
+      - setup-all
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
-      - cs-environment-setup
       - cs-how-to-create-and-run-programs
       - cs-variables
       - cs-commenting-code

@@ -20,3 +20,7 @@ order: 1
 - [Insomnia](/lessons/setup-windows/insomnia)
 - [Node.js](/lessons/setup-windows/nodejs)
 - [Heroku](/lessons/setup-windows/heroku)
+- [app-app](/lessons/setup-windows/app-app)
+- [netlify](/lessons/setup-windows/netlify)
+- [prettier](/lessons/setup-windows/prettier)
+- [Firefox](/lessons/setup-windows/firefox)

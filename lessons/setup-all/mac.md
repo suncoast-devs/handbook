@@ -18,3 +18,7 @@ order: 2
 - [Insomnia](/lessons/setup-mac/insomnia)
 - [Node.js](/lessons/setup-mac/nodejs)
 - [Heroku](/lessons/setup-mac/heroku)
+- [app-app](/lessons/setup-mac/app-app)
+- [netlify](/lessons/setup-mac/netlify)
+- [prettier](/lessons/setup-mac/prettier)
+- [Firefox](/lessons/setup-mac/firefox)

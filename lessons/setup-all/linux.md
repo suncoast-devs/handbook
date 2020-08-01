@@ -22,3 +22,7 @@ sudo apt install snapd
 - [hub](/lessons/setup-linux/hub)
 - [Node.js](/lessons/setup-linux/nodejs)
 - [postgres](/lessons/setup-linux/postgres)
+- [app-app](/lessons/setup-linux/app-app)
+- [netlify](/lessons/setup-linux/netlify)
+- [prettier](/lessons/setup-linux/prettier)
+- [Firefox](/lessons/setup-linux/firefox)
