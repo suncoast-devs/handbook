@@ -128,7 +128,7 @@ CREATE TABLE roles (
 ## Using `bundler`
 
 [Bundler](https://bundler.io) is the main package manager for Ruby. It is like
-[npm](https://npmjs.org) or [yarn](yarnpkg.com) for JavaScript.
+[npm](https://npmjs.org).
 
 In most Ruby applications we will be using Bundler for managing the dependencies
 of our code. Bundler is a very powerful tool that can add libraries to your code

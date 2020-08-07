@@ -230,19 +230,6 @@ You need to use npm to install new tools in the command line from time to time.
 Generally, you need to run this command when dealing with project setups or to
 use new tools
 
-### yarn
-
-> yarn [command][parameters]
-
-- What does it do?
-
-Yarn is a package manager for node just like `npm`. Usually web projects use one
-tool or the other.
-
-- When do use yarn?
-
-We will be using `yarn` when creating front end applications.
-
 ### app-app
 
 > app-app _project-name_

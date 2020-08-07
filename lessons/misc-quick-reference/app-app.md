@@ -75,11 +75,11 @@ We suggest that you begin by typing:
 
   cd put-your-application-name-here-instead-of-this
   code .
-  yarn start
+  npm start
 ```
 
 The suggestions at the end state that you need to `cd` into the project
-directory app-app created. The next two lines `code .` and `yarn start` will
+directory app-app created. The next two lines `code .` and `npm start` will
 start your code editor and then start the project by running the code and
 opening a browser.
 

@@ -61,7 +61,7 @@ To add this to our project, run the following command in your react project
 directory:
 
 ```javascript
-yarn add react-map-gl
+npm install --save react-map-gl
 ```
 
 ## Add a `<MapGL>` to our component

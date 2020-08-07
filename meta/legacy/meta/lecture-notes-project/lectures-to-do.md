@@ -25,7 +25,7 @@ Feel free to pick the video from your cohort, or a different cohort
 |             intro to css              |            |             |
 |               flex box                |            |             |
 |             media queries             |            |             |
-|        javascript and the DOM         |A Leaders   |             |
+|        javascript and the DOM         | A Leaders  |             |
 |    if statements and boolean logic    |            |             |
 |                 loops                 |            |             |
 |                Arrays                 |            |             |
@@ -42,7 +42,6 @@ Feel free to pick the video from your cohort, or a different cohort
 |           what is react            |            |             |
 |     react components and props     |            |             |
 |     react components and state     |            |             |
-|        using yarn packages         |            |             |
 | understanding the react life cycle |            |             |
 |       using apis with react        |            |             |
 |            using hooks             |            |             |

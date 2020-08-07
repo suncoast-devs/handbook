@@ -1,6 +1,6 @@
 ---
 title: Function Junction
-tags: ["javascript", "enumeration", "algorithms"]
+tags: ['javascript', 'enumeration', 'algorithms']
 ---
 
 Using JavaScript takes practice and the best practice is repetition. This
@@ -20,9 +20,9 @@ After completing this assignment, you should be able to:
 2. Change into your projects directory:
 3. Clone your repository: `hub clone function-junction`
 4. Change into your project's directory: `cd function-junction``
-5. Install the dependencies: `yarn install` (or just `yarn` for short)
+5. Install the dependencies: `npm install`
 6. Open in your editor
-7. Start the test runner: `yarn test`
+7. Start the test runner: `npm test`
 8. Open `src/functions.test.js` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
 10. Turn in the URL to your GitHub repo.

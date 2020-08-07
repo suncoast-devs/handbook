@@ -1,6 +1,6 @@
 ---
 title: unit i katas
-tags: ["javascript", "koans"]
+tags: ['javascript', 'koans']
 ---
 
 ## Objectives
@@ -17,9 +17,9 @@ After completing this assignment, you should be able to:
 2.  Change into your training directory
 3.  Clone your repository: `hub clone unit-i-katas`
 4.  Change into your project's directory: `cd unit-i-katas`
-5.  Install the dependencies: `yarn install` (or just `yarn` for short)
+5.  Install the dependencies: `npm install --save`
 6.  Open in Code: `code .`
-7.  Start the test runner: `yarn start`
+7.  Start the test runner: `npm start`
 8.  Feel free to split screen your work, except now you should split-screen your
     editor and your TERMINAL
 9.  In your editor, open `src/functions.test.js` and work on each function until

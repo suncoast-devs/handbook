@@ -33,7 +33,7 @@ code .
 Tab back to your Terminal and start the development server:
 
 ```shell
-yarn start
+npm start
 ```
 
 This should automatically happen, but if it doesn't; navigate to

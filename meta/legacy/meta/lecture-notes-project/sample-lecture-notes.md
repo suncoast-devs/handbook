@@ -20,12 +20,9 @@ This covers the basic intro to the Reactjs.
   - It saves you from time-consuming setup and configuration. Simply run
     create-react-app command to create and start a new react project.
   - `create-react-app name-of-your-app`
-  - `yarn install` then `yarn start` since we are using `yarn` not `npm`
+  - `npm install` then `npm start`
   - `localhost:3000` (browser)
 
-- [npm](https://www.npmjs.com/) vs [yarn](https://yarnpkg.com/en/)
-  - both are package managers
-  - yarn is slightly better (for the moment)
 - [Components](https://reactjs.org/docs/glossary.html#components)
   - React components are small, reusable pieces of code that return a React
     element to be rendered to the page
@@ -44,14 +41,14 @@ This covers the basic intro to the Reactjs.
 
   ```javascript
   // all the files needed need to be imported
-  import React, { Component } from "react";
-  import "./App.css";
+  import React, { Component } from 'react'
+  import './App.css'
   // import Header component from Header.js in current directory ("./" => current directory)
-  import Header from "./Header";
+  import Header from './Header'
   // import Header component from Articles.js in current directory
-  import Header from "./Articles";
+  import Header from './Articles'
   // import Header component from Footer.js in current directory
-  import Header from "./Footer";
+  import Header from './Footer'
 
   class App extends Component {
     render() {
@@ -65,12 +62,12 @@ This covers the basic intro to the Reactjs.
           <Articles />
           <Footer />
         </div>
-      );
+      )
     }
   }
 
   // component needs to be exported so it can be available for other components to import
-  export default App;
+  export default App
   ```
 
 - to add class, use `className` (approx 01:05:20)
@@ -80,9 +77,9 @@ This covers the basic intro to the Reactjs.
 - [Props](https://reactjs.org/docs/components-and-props.html) (approx 01:12:10)
 
   ```javascript
-  import React, { Component } from "react";
+  import React, { Component } from 'react'
   // import Article component from Article in current directory
-  import Article from "./Article";
+  import Article from './Article'
 
   class Articles extends Component {
     render() {
@@ -104,11 +101,11 @@ This covers the basic intro to the Reactjs.
             <Article title="React is cool" content="Hell yeah it is" />
           </main>
         </div>
-      );
+      )
     }
   }
 
-  export default Articles;
+  export default Articles
   ```
 
   - Article.js
@@ -121,11 +118,11 @@ This covers the basic intro to the Reactjs.
     - You can create unlimited different articles using Article component
 
     ```javascript
-    import React, { Component } from "react";
+    import React, { Component } from 'react'
 
     class Article extends Component {
       render() {
-        console.log(this.props);
+        console.log(this.props)
 
         return (
           <article className="intro-article">
@@ -136,11 +133,11 @@ This covers the basic intro to the Reactjs.
             </a>
             <div className="read-more-underline" />
           </article>
-        );
+        )
       }
     }
 
-    export default Article;
+    export default Article
     ```
 
 - Loading Props data from somewhere else (approx 01:24:00)
@@ -218,8 +215,8 @@ This covers the basic intro to the Reactjs.
 - eventually `Articles.js` code will look like this
 
   ```javascript
-  import React, { Component } from "react";
-  import Article from "./Article";
+  import React, { Component } from 'react'
+  import Article from './Article'
 
   class Articles extends Component {
     render() {
@@ -230,26 +227,26 @@ This covers the basic intro to the Reactjs.
             "Gavin can't type on a Monday . That's why. He went to a party last night",
         },
         {
-          title: "What is wrong with Gavin",
-          content: "Gavin is tired this morning",
+          title: 'What is wrong with Gavin',
+          content: 'Gavin is tired this morning',
         },
-      ];
+      ]
 
       // save new array in a variable and just refer to it in a DOM
       // (approx 1:39:10)
-      const articles = data.map((element) => {
-        return <Article title={element.title} content={element.content} />;
-      });
+      const articles = data.map(element => {
+        return <Article title={element.title} content={element.content} />
+      })
 
       return (
         <div className="all-main-content">
           <main>{articles}</main>
         </div>
-      );
+      )
     }
   }
 
-  export default Articles;
+  export default Articles
   ```
 
 ## React is declarative

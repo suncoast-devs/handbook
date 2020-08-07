@@ -47,4 +47,4 @@ _TIP_: for Explorer mode focus on getting the router set up and linking up the p
 ## Additional Resources
 
 - [npm react-router-dom](https://www.npmjs.com/package/react-router-dom)
-- `yarn add react-router-dom`
+- `npm install --save react-router-dom`

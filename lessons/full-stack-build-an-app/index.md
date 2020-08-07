@@ -181,11 +181,9 @@ From your command line in the **main directory** of your application.
 dotnet new sdg-react -o TacoTuesday
 ```
 
-## `ClientApp` uses `npm` and not `yarn`
+## `ClientApp` uses `npm`
 
-When adding third party libraries to our front end, we will be using `npm` and
-not `yarn` since the `dotnet` integration does not support the `yarn` package
-manager.
+When adding third party libraries to our front end, we will be using `npm`.
 
 You must also run those commands **from the ClientApp folder**. So before any
 `npm install` commands you must first `cd ClientApp`

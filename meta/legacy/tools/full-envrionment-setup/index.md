@@ -31,7 +31,6 @@ code   --install-extension  bierner.markdown-preview-github-styles
 ## Front end
 
 - app-app
-- yarn
 - Netlify
 
 The following VS Code Extensions

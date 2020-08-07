@@ -34,16 +34,10 @@ In this section we will configure our React front end to
 Inside the _client_ folder (cd client)
 
 ```shell
-yarn add auth0-js
+npm install --save auth0-js
 ```
 
-or
-
-```shell
-npm install auth0-js
-```
-
-_NOTE_ Restart your `yarn start` if it was already running
+_NOTE_ Restart your `npm start` if it was already running
 
 ### Create a class to interact with the Auth0 API
 
@@ -54,121 +48,121 @@ _NOTE_ Replace the value of `CLIENTID` with the configured client id from your
 `auth0` account
 
 ```javascript
-import auth0 from "auth0-js";
-import history from "./history";
+import auth0 from 'auth0-js'
+import history from './history'
 
-const DOMAIN = "OURAPP.auth0.com";
-const CLIENTID = "xxxxxxxxx";
+const DOMAIN = 'OURAPP.auth0.com'
+const CLIENTID = 'xxxxxxxxx'
 
 class Auth {
-  userProfile;
+  userProfile
 
   auth0 = new auth0.WebAuth({
     domain: DOMAIN,
     clientID: CLIENTID,
     redirectUri: `${window.location.protocol}//${window.location.host}/callback`,
-    responseType: "token id_token",
-    scope: "openid email profile",
-  });
+    responseType: 'token id_token',
+    scope: 'openid email profile',
+  })
 
   constructor() {
-    this.login = this.login.bind(this);
-    this.logout = this.logout.bind(this);
-    this.handleAuthentication = this.handleAuthentication.bind(this);
-    this.isAuthenticated = this.isAuthenticated.bind(this);
+    this.login = this.login.bind(this)
+    this.logout = this.logout.bind(this)
+    this.handleAuthentication = this.handleAuthentication.bind(this)
+    this.isAuthenticated = this.isAuthenticated.bind(this)
   }
 
   login() {
-    this.auth0.authorize();
+    this.auth0.authorize()
   }
 
   logout() {
     // Clear Access Token and ID Token from local storage
-    localStorage.removeItem("access_token");
-    localStorage.removeItem("id_token");
-    localStorage.removeItem("expires_at");
+    localStorage.removeItem('access_token')
+    localStorage.removeItem('id_token')
+    localStorage.removeItem('expires_at')
     // navigate to the home route
-    history.replace("/");
+    history.replace('/')
   }
 
   handleAuthentication(callback) {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        this.setSession(authResult);
+        this.setSession(authResult)
 
         if (callback) {
-          callback();
+          callback()
         }
 
-        history.replace("/");
+        history.replace('/')
       } else if (err) {
-        history.replace("/");
-        console.log(err);
+        history.replace('/')
+        console.log(err)
       }
-    });
+    })
   }
 
   setSession(authResult) {
     // Set the time that the Access Token will expire at
     let expiresAt = JSON.stringify(
       authResult.expiresIn * 1000 + new Date().getTime()
-    );
-    localStorage.setItem("access_token", authResult.accessToken);
-    localStorage.setItem("id_token", authResult.idToken);
-    localStorage.setItem("expires_at", expiresAt);
+    )
+    localStorage.setItem('access_token', authResult.accessToken)
+    localStorage.setItem('id_token', authResult.idToken)
+    localStorage.setItem('expires_at', expiresAt)
   }
 
   isAuthenticated() {
     // Check whether the current time is past the
     // Access Token's expiry time
-    let expiresAt = JSON.parse(localStorage.getItem("expires_at"));
-    return new Date().getTime() < expiresAt;
+    let expiresAt = JSON.parse(localStorage.getItem('expires_at'))
+    return new Date().getTime() < expiresAt
   }
 
   getIdToken() {
-    const idToken = localStorage.getItem("id_token");
+    const idToken = localStorage.getItem('id_token')
     if (!idToken) {
-      throw new Error("No ID Token found");
+      throw new Error('No ID Token found')
     }
-    return idToken;
+    return idToken
   }
 
   getAccessToken() {
-    const accessToken = localStorage.getItem("access_token");
+    const accessToken = localStorage.getItem('access_token')
     if (!accessToken) {
-      throw new Error("No Access Token found");
+      throw new Error('No Access Token found')
     }
-    return accessToken;
+    return accessToken
   }
 
   //...
   getProfile(cb) {
-    let accessToken = this.getAccessToken();
+    let accessToken = this.getAccessToken()
     this.auth0.client.userInfo(accessToken, (err, profile) => {
       if (profile) {
-        this.userProfile = profile;
+        this.userProfile = profile
       }
-      cb(err, profile);
-    });
+      cb(err, profile)
+    })
   }
 
   authorizationHeader() {
-    return `Bearer ${this.getIdToken()}`;
+    return `Bearer ${this.getIdToken()}`
   }
 }
 
-const auth = new Auth();
+const auth = new Auth()
 
-export default auth;
+export default auth
 ```
 
 - Create `src/history.js`
 - Insert the following lines
 
 ```javascript
-import { createBrowserHistory } from "history";
+import { createBrowserHistory } from 'history'
 
-export default createBrowserHistory();
+export default createBrowserHistory()
 ```
 
 ### Add Routes to our `<Router>` to work with login, logout, and callback
@@ -178,7 +172,7 @@ We want to add some new routes to our app.
 - In `App.js` add
 
 ```javascript
-import auth from "./auth";
+import auth from './auth'
 ```
 
 - To your router add these routes
@@ -215,13 +209,13 @@ protected behind a login form) _NOTE_ Make sure if you are using axios to
 include the import statement as well as uncommenting lines 193 & 194
 
 ```javascript
-import axios from "axios";
+import axios from 'axios'
 ```
 
 Now go to `index.js` and add
 
 ```javascript
-import history from "./history";
+import history from './history'
 ```
 
 We need the auth component so we can allow the user to login, logout, and access

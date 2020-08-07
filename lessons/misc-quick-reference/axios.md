@@ -15,13 +15,7 @@ dependencies to your project.
 ### npm
 
 ```shell
-npm install axios
-```
-
-### yarn
-
-```shell
-yarn add axios
+npm install --save axios
 ```
 
 ## Simple `get` interface.
