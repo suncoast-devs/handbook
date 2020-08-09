@@ -13,3 +13,9 @@ the command line helper tool.
 ```shell
 brew install heroku
 ```
+
+## Setup
+
+```shell
+heroku login
+```

@@ -13,3 +13,9 @@ the command line helper tool.
 ```shell
 scoop install heroku-cli
 ```
+
+## Setup
+
+```shell
+heroku login
+```

@@ -23,13 +23,6 @@ page and you want it to have a professional feel.
 ## Uploading a profile photo
 
 **Use a good headshot photo** - Use the best photo you have of you that shows
-mostly your face. We recommend this because you want other developers, hiring
-managers, and companies to start recognizing you. Use your best photo. If you
-need a professional photo let us know and we can help.
-
-## Creating a repository
-
-You will need to create at least **ONE** repository for managing your homework
-assignments.
-
-This repository should be named `assignments`
+your face. We recommend this because you want other developers, hiring managers,
+and companies to start recognizing you. Use your best photo. If you need a
+professional photo let us know and we can help.

@@ -99,7 +99,7 @@ or
 You may proceed with the next step. If it contains anything else **STOP** and
 ask for assistance.
 
-Replace the contents of this file with:
+**Replace** the contents of this file with:
 
 ```
 {

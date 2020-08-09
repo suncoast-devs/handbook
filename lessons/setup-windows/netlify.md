@@ -18,3 +18,9 @@ matter):
 ```shell
 npm install --global netlify-cli
 ```
+
+## Setup
+
+```shell
+netlify login
+```

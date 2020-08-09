@@ -31,6 +31,13 @@ scoop bucket add versions
 
 ## Install vcredist
 
+This installation will take time and may prompt you for "User Account Control"
+permissions during the installation.
+
 ```shell
 scoop install vcredist
+```
+
+```shell
+scoop install extras/vcredist2019
 ```

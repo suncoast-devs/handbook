@@ -14,6 +14,14 @@ require, or are written in, JavaScript with node.
 scoop install nodejs
 ```
 
+## Useful node tools
+
+This tool is useful for removing files and directories
+
+```shell
+npm install --global rimraf
+```
+
 ## Build tools
 
 Start a **PowerShell As Administrator**
@@ -22,12 +30,4 @@ Start a **PowerShell As Administrator**
 npm install --global windows-build-tools
 ```
 
-> NOTE: This may take quite some time to complete
-
-## Useful node tools
-
-This tool is useful for removing files and directories
-
-```shell
-npm install --global rimraf
-```
+> NOTE: This may take a long time to complete
