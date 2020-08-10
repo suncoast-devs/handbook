@@ -4,15 +4,14 @@ theme: Next, 1
 
 ---
 
-Before we can write code in `C#` we must create a project.
+# Projects
 
-Each project will be in it's own directory.
+- Before we can write code in `C#` we must create a project.
 
-<sub>We should create these projects in an organized parent folder such as `sdg`
-in our _home_ directory</sub>
+- Each project will be in it's own directory.
 
-<br />
-<br />
+- We should create these projects in an organized parent folder such as `sdg` in our _home_ directory
+
 <br />
 
 `.NET` provides a tool for creating new projects!
@@ -35,12 +34,18 @@ in our _home_ directory</sub>
 
 # [fit] Being in the right place <sub>at the right time</sub>
 
-- In your shell change to the directory where you are going to keep your
-  projects.
-- For most of you, this can be an `sdg` folder in your home directory. Or
-  similar inside of your `Documents` folder.
+- In your shell change to the directory where you are going to keep your projects.
+- Good options:
+  - **`sdg`** directory in home folder
+  - **`sdg`** directory on your desktop
+  - **`sdg`** directory in your Documents folder
+  - Or name the directory `code` or `school` or `dev`, but do keep all your projects together in a folder
 
 <br />
+
+---
+
+# Example:
 
 ```shell
 cd sdg
@@ -105,7 +110,7 @@ code .
 
 ---
 
-# `dotnet new` creates initial files for us
+# [fit] `dotnet new` creates initial files for us
 
 Let's see what files appear in our folder.
 
@@ -125,11 +130,9 @@ _not going to modify this file_
 
 # Run the code
 
-The template `Program.cs` simply prints out the phrase `Hello World!` which is a
-common first learning task in a new language.
+The template `Program.cs` prints out the phrase `Hello World!` which is a common first learning task in a new language.
 
-To get `dotnet` to run our program and see if the phrase appears on our screen
-we will use the **`dotnet run`** command.
+To get `dotnet` to run our program and see if the phrase appears on our screen we will use the **`dotnet run`** command.
 
 <br />
 
@@ -141,7 +144,7 @@ dotnet run
 
 # Output
 
-We should see the following output on the screen if our program ran correctly:
+We should see the following output on the screen if everything is correct:
 
 <br />
 
@@ -151,15 +154,13 @@ Hello World!
 
 <br />
 
-Now as we change our code and add more functionality we can return to our
-terminal/Powershell and run `dotnet run` again to see our new code in action.
+Now as we change our code and add more functionality we can return to our terminal/Powershell and run `dotnet run` again to see our new code in action.
 
 ---
 
 # Run our code automatically
 
-We can also use the **`dotnet`** command to keep track of our code and run it
-every time we save our code!
+We can also use the **`dotnet`** command to keep track of our code and run it every time we save our code!
 
 <br />
 
