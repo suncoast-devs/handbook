@@ -2,13 +2,9 @@
 title: Visual Studio Code
 ---
 
-Developers can be fiercely opinionated about which code editing environment is
-better. Here at SDG, we require using Visual Studio Code.
-
-VS Code is a extendable lightweight editor that allows us to see what is going
-on so if you ever get the more powerful tools (like Visual Studio or Eclipse).
-It will not be a crutch, but a tool. This is like starting with a screwdriver,
-and working our way up to power drill.
+Developers debate about which code editing environment is better. Here at SDG,
+we require using Visual Studio Code. VS Code is a extendable lightweight editor
+that is still full featured and supports useful plugins.
 
 ## Installation
 
