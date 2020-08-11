@@ -35,4 +35,4 @@ dotnet new sdg-console -o HelloDotNet
 
 - [ ] Create a new app.
 - [ ] In the `static void Main`, Change `Welcome to C#`, to
-      `Hello, World, my is [your name]`
+      `Hello, World, my name is [your name]`
