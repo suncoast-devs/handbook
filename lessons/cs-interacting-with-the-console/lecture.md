@@ -22,7 +22,7 @@ theme: Next, 1
 
 [.column]
 
-![inline scale](../../interacting.gif)
+![inline scale](assets/interacting.gif)
 
 ^ We'd like our programs to be able to input information and then be able to
 output information. Like asking for a name and then greeting the user.
