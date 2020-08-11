@@ -195,7 +195,7 @@ types.
 
 - The common _numeric_ primitives are:
 
-  - **int** : a whole number from -2,147,483,648 to 2,147,483,64
+  - **int** : a whole number from -2,147,483,648 to 2,147,483,647
   - **long** : a whole number from -9,223,372,036,854,775,808 to
     9,223,372,036,854,775,807
   - **double** : a 64 bit floating point value that has an approximate precision
