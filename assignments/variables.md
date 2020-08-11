@@ -3,11 +3,9 @@ title: Variables, Variables, and Variables
 tags: ['c-sharp', 'console']
 ---
 
-<!-- prettier-ignore-start -->
-
 # Let's get started
 
-Today, we are starting our journey into development. This journey has to start somewhere. For this assignment, you will be making a program that demonstrates some programming fundamentals. 
+Today, we are starting our journey into development. This journey has to start somewhere. For this assignment, you will be making a program that demonstrates some programming fundamentals.
 
 ## Objectives
 
@@ -26,7 +24,7 @@ All your code should place inside the `static void Main(string args[])`
 ### Setup
 
 ```shell
-dotnet new sdg-console VariablesCS
+dotnet new sdg-console -o VariablesCS
 ```
 
 ### Explorer Mode
@@ -81,5 +79,3 @@ dotnet new sdg-console VariablesCS
 ## Reading Material
 
 - [Microsoft intro to C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
-
-<!-- prettier-ignore-end -->
