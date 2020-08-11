@@ -61,7 +61,7 @@ cd sdg
 <br />
 
 ```shell
-dotnet new sdg-console -o our-dotnet-app
+dotnet new sdg-console -o OurDotnetApp
 ```
 
 ---
@@ -73,7 +73,7 @@ dotnet new sdg-console -o our-dotnet-app
 # command  action   template   output  project-name
 #   |        |         |         |          |
 #   v        v         v         v          v
-  dotnet    new     console     -o     our-dotnet-app
+  dotnet    new    sdg-console  -o     OurDotnetApp
 ```
 
 ---
@@ -86,7 +86,7 @@ We need to _change directory_ into the newly created directory
 <br />
 
 ```shell
-cd our-dotnet-app
+cd OurDotnetApp
 ```
 
 ---
@@ -116,12 +116,12 @@ Let's see what files appear in our folder.
 
 ```
 ├── Program.cs
-└── our-dotnet-app.csproj
+└── OurDotnetApp.csproj
 ```
 
 We may also see an **`obj`** folder but we will ignore that for a moment.
 
-^ There are two files in our folder. The first, `our-dotnet-app.csproj` is a
+^ There are two files in our folder. The first, `OurDotnetApp.csproj` is a
 file that `dotnet` wrote for us. It contains details about the project itself
 such as which version of `dotnet` our program needs. For the most part, we are
 _not going to modify this file_
@@ -130,7 +130,7 @@ _not going to modify this file_
 
 # Run the code
 
-The template `Program.cs` prints out the phrase `Hello World!` which is a common first learning task in a new language.
+The template `Program.cs` prints out the phrase `Welcome to C#`.
 
 To get `dotnet` to run our program and see if the phrase appears on our screen we will use the **`dotnet run`** command.
 
@@ -149,7 +149,7 @@ We should see the following output on the screen if everything is correct:
 <br />
 
 ```
-Hello World!
+Welcome to C#
 ```
 
 <br />
@@ -173,7 +173,7 @@ dotnet watch run
 ```
 dotnet watch run
 watch : Started
-Hello World!
+Welcome to C#
 watch : Exited
 watch : Waiting for a file to change before restarting dotnet...
 ```

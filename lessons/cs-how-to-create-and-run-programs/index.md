@@ -63,7 +63,7 @@ Now that we are in the correct location we can run this command to generate our
 first new project.
 
 ```shell-session
-dotnet new sdg-console -o our-dotnet-app
+dotnet new sdg-console -o OurDotnetApp
 ```
 
 ## dotnet new may prompt you during setup
@@ -108,7 +108,7 @@ command.
 # |      |   |           |  |
 # |      |   |           |  |
 # v      v   v           v  v
-  dotnet new sdg-console -o our-dotnet-app
+  dotnet new sdg-console -o OurDotnetApp
 ```
 
 Our project is created along with a Github repository if we wish.
@@ -118,7 +118,7 @@ our original command. Now we will make that directory our current directory by
 using the `cd` command:
 
 ```shell
-cd our-dotnet-app
+cd OurDotnetApp
 ```
 
 ### What files make up our project?
@@ -138,14 +138,14 @@ Let's see what startup files appear in our folder:
 ```
 .
 ├── Program.cs
-└── our-dotnet-app.csproj
+└── OurDotnetApp.csproj
 ```
 
 We may also see an `obj` folder but we will ignore that for a moment.
 
 #### Project File (.csproj)
 
-There are two files in our folder. The first, `our-dotnet-app.csproj` is a file
+There are two files in our folder. The first, `OurDotnetApp.csproj` is a file
 that `dotnet` wrote for us. It contains details about the project itself such as
 which version of `dotnet` our program needs. For the most part, we are _not
 going to modify this file_
@@ -158,9 +158,7 @@ that this code is written in the `c-sharp` (or `cs`) language.
 
 ## Let's run our code!
 
-The template `Program.cs` simply prints out the phrase `Hello World!` which is a
-common
-[first learning task in a new language.](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)
+The template `Program.cs` simply prints out the phrase `Welcome to C#`.
 
 To get `dotnet` to run our program and see if the phrase appears on our screen
 we will use the `dotnet run` command.
@@ -172,7 +170,7 @@ dotnet run
 We should see the following output on the screen if our program ran correctly:
 
 ```
-Hello World!
+Welcome to C#
 ```
 
 Now as we change our code and add more functionality we can return to our
@@ -196,7 +194,7 @@ With this option our terminal/Powershell will look like:
 ```shell-session
 $ dotnet watch run
 watch : Started
-Hello World!
+Welcome to C#!
 watch : Exited
 watch : Waiting for a file to change before restarting dotnet...
 ```
