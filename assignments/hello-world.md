@@ -19,7 +19,7 @@ Make sure you have followed the
 [setup instructions](/lessons/cs-environment-setup) for your computer's
 operating system
 
-Follow [this guide](/lessons/cs-how-to-crete-and-run-programs) to review how to
+Follow [this guide](/lessons/cs-how-to-create-and-run-programs) to review how to
 create and run `C#` applications.
 
 Follow [this guide](/lessons/misc-quick-reference/turning-in-assignments) to
