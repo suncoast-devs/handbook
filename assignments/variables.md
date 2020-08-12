@@ -70,7 +70,7 @@ dotnet new sdg-console -o VariablesCS
 
 ### Epic Mode
 
-- [ ] Move all of your code to separate method (in the sam) and invoke it from the `Main` method.
+- [ ] Move all of your code to separate method (but keep it in the same file) and invoke it from the `Main` method.
 
 ## Additional Resources
 
