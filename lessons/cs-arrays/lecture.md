@@ -74,8 +74,7 @@ var nameCount = names.Length;
 # [fit] Unfortunately `array`s come with some limitations:
 
 - Once an array is created, it's size cannot change
-- If we access an index that does not exist our program will crash. For example
-  `names[42]` will cause our program to have an exception and stop.
+- If we access an index that does not exist our program will crash. For example `names[42]` will cause our program to have an exception and stop.
 - Arrays can only store data of the same type
 
 ---
@@ -136,7 +135,7 @@ The `List` is still accessed with the `[]` bracket syntax and is still zero inde
 
 ```csharp
 var firstName = names[0];
-var secondName = names[0];
+var secondName = names[1];
 ```
 
 ---
