@@ -3,7 +3,6 @@ import React from 'react'
 export const UIContext = React.createContext()
 
 function reducer(state, action) {
-  console.log({ state, action })
   switch (action.type) {
     case 'openSidebar': {
       return { ...state, isSidebarOpen: true, isSidebarHidden: false }

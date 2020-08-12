@@ -72,21 +72,6 @@ module.exports = async ({ graphql, actions, reporter }) => {
           )
         }
 
-        // [Object: null prototype] {
-        //   mdx: [Object: null prototype] {
-        //     id: '05be3706-0f91-5e45-b88d-210167bc5940'
-        //   },
-        //   lecture: null,
-        //   reading: [Object: null prototype] {
-        //     nodes: [
-        //       [Object: null prototype],
-        //       [Object: null prototype],
-        //       [Object: null prototype],
-        //       [Object: null prototype]
-        //     ]
-        //   }
-        // }
-
         const { lesson, lecture, reading } = mdxResults.data
 
         const lessonContext = {
