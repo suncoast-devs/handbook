@@ -3,8 +3,6 @@ title: All Cards on Deck! (C#)
 tags: ['c-sharp', 'algorithms', 'enumeration']
 ---
 
-<!-- prettier-ignore-start -->
-
 In this project, you will use C# to model [a deck of playing cards](https://en.wikipedia.org/wiki/standard_52-card_deck). You'll also add functionality such as shuffling and dealing.
 
 ### Shuffling Cards
@@ -82,4 +80,3 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 
 - [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
 
-<!-- prettier-ignore-end -->
