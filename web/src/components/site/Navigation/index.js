@@ -17,7 +17,7 @@ function Header() {
   )
 }
 
-export function Navigation() {
+export function Navigation({ program, module }) {
   const {
     closeSidebar,
     hideSidebar,
@@ -85,7 +85,7 @@ export function Navigation() {
       <div className="hidden md:flex md:flex-shrink-0 print:invisible">
         <div className="flex flex-col w-96">
           <Header />
-          <Menu />
+          <Menu program={program} module={module} />
         </div>
       </div>
     </>

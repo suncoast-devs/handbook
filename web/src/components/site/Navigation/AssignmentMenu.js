@@ -27,9 +27,6 @@ export function AssignmentMenu() {
             title
             tags
           }
-          fields {
-            path
-          }
         }
       }
     }
@@ -38,9 +35,7 @@ export function AssignmentMenu() {
   if (currentNavTarget) {
     return (
       <>
-        <Heading onClick={resetNavigation} icon="fas fa-caret-left">
-          All Programs
-        </Heading>
+        <Heading icon="fas fa-caret-left">All Programs</Heading>
         <SubHeading>Assignments</SubHeading>
         <nav className="px-5">
           {assignments
@@ -74,7 +69,7 @@ export function AssignmentMenu() {
             )
             .map((assignment) => {
               return (
-                <Item key={assignment.id} to={assignment.fields.path}>
+                <Item key={assignment.id} to={null}>
                   {assignment.frontmatter.title}
                 </Item>
               )

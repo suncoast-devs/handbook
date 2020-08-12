@@ -17,10 +17,6 @@ function reducer(state, action) {
       return { ...state, isSidebarHidden: true }
     }
 
-    case 'navigateToTarget': {
-      return { ...state, currentNavTarget: action.payload }
-    }
-
     case 'addAssignmentTag': {
       return {
         ...state,
@@ -47,22 +43,14 @@ export function UIContextProvider({ children }) {
   const [state, dispatch] = React.useReducer(reducer, {
     isSidebarOpen: false,
     isSidebarHidden: true,
-    currentNavTarget: null,
     assignmentTags: [],
   })
-  /* TODO: in `resetNavigation`, wait to unset currentNavTarget after
-     transition, so it doesn't blink out when navigating back to the
-     program menu. See Menu.js */
   return (
     <UIContext.Provider
       value={{
         openSidebar: () => dispatch({ type: 'openSidebar' }),
         closeSidebar: () => dispatch({ type: 'closeSidebar' }),
         hideSidebar: () => dispatch({ type: 'hideSidebar' }),
-        navigateToTarget: (module) =>
-          dispatch({ type: 'navigateToTarget', payload: module }),
-        resetNavigation: () =>
-          dispatch({ type: 'navigateToTarget', payload: null }),
         toggleAssignmentTag: (tag) =>
           state.assignmentTags.includes(tag)
             ? dispatch({ type: 'removeAssignmentTag', payload: tag })

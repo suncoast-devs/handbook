@@ -14,20 +14,23 @@ const components = {
   code: CodeBlock,
 }
 
-export default function PageTemplate({
+export default function LessonTemplate({
+  pageContext: { program, module, slug },
   data: {
     mdx,
     lecture,
+    lesson,
     reading: { nodes: reading },
     allWarning: { nodes: warnings },
   },
 }) {
-  console.log({ mdx, lecture, reading })
   return (
     <Layout
       title={mdx.frontmatter.title}
       relativePath={mdx.fields.filePath}
       absolutePath={mdx.fileAbsolutePath}
+      program={program}
+      module={module}
     >
       {warnings.length > 0 && process.env.NODE_ENV === 'development' && (
         <div className="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800 print:hidden">
@@ -63,23 +66,35 @@ export default function PageTemplate({
             {lecture && (
               <Link
                 className="uppercase text-gray-500"
-                to={lecture.fields.path}
+                to={`/${program}/${module}/${slug}/lecture`}
               >
                 <i className="far fa-projector"></i>
               </Link>
             )}
           </div>
           <nav className="py-2 px-3 flex flex-col">
-            {reading.map(({ fields: { path }, frontmatter: { title } }) => (
+            {lesson && (
               <Link
-                key={path}
+                key={lesson.id}
                 className="mt-1 group px-2 py-1 text-sm leading-tight font-medium text-gray-600 hover:text-gray-300 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-500 transition ease-in-out duration-150"
                 activeClassName="bg-gray-200"
-                to={path}
+                to={`/${program}/${module}/${slug}`}
               >
-                {title || 'MISSING TITLE'}
+                {lesson.frontmatter.title || 'MISSING TITLE'}
               </Link>
-            ))}
+            )}
+            {reading.map(
+              ({ id, fields: { baseName }, frontmatter: { title } }) => (
+                <Link
+                  key={id}
+                  className="mt-1 group px-2 py-1 text-sm leading-tight font-medium text-gray-600 hover:text-gray-300 rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-500 transition ease-in-out duration-150"
+                  activeClassName="bg-gray-200"
+                  to={`/${program}/${module}/${slug}/${baseName}`}
+                >
+                  {title || 'MISSING TITLE'}
+                </Link>
+              )
+            )}
           </nav>
         </div>
       )}
@@ -93,7 +108,7 @@ export default function PageTemplate({
 }
 
 export const pageQuery = graphql`
-  query PageQuery($id: String, $slug: String) {
+  query LessonTemplateQuery($id: String, $slug: String) {
     mdx(id: { eq: $id }) {
       id
       body
@@ -107,28 +122,26 @@ export const pageQuery = graphql`
         title
       }
     }
-    lecture: mdx(fields: { type: { eq: "lecture" }, slug: { eq: $slug } }) {
+    lecture: mdx(fields: { slug: { eq: $slug }, type: { eq: "lecture" } }) {
       id
-      fields {
-        path
+    }
+    lesson: mdx(fields: { slug: { eq: $slug }, type: { eq: "lesson" } }) {
+      id
+      frontmatter {
+        title
       }
     }
     reading: allMdx(
-      filter: {
-        fields: { slug: { eq: $slug }, type: { in: ["lesson", "reading"] } }
-      }
-      sort: {
-        fields: [fields___type, frontmatter___order, fileAbsolutePath]
-        order: ASC
-      }
+      filter: { fields: { slug: { eq: $slug }, type: { eq: "reading" } } }
+      sort: { fields: [frontmatter___order, fileAbsolutePath], order: ASC }
     ) {
       nodes {
         id
-        fields {
-          path
-        }
         frontmatter {
           title
+        }
+        fields {
+          baseName
         }
       }
     }

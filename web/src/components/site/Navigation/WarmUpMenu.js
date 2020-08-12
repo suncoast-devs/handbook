@@ -19,9 +19,6 @@ export function WarmUpMenu() {
           frontmatter {
             title
           }
-          fields {
-            path
-          }
         }
       }
     }
@@ -37,7 +34,7 @@ export function WarmUpMenu() {
         <div className="pl-3">
           {warmUps.map((warmUp) => {
             return (
-              <Item key={warmUp.id} to={warmUp.fields.path}>
+              <Item key={warmUp.id} to={null}>
                 {warmUp.frontmatter.title}
               </Item>
             )

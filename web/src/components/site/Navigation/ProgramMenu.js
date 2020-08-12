@@ -3,12 +3,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { Heading } from './Heading'
 import { Description } from './Description'
 import { SubHeading } from './SubHeading'
-import { ModuleItem as Item } from './Item'
-import { useUIContext } from '../../../context/UIContext'
+import { LinkItem as Item } from './Item'
 
 export function ProgramMenu() {
-  const { navigateToTarget } = useUIContext()
-
   const {
     allProgramsYaml: { nodes: programs },
   } = useStaticQuery(graphql`
@@ -16,8 +13,10 @@ export function ProgramMenu() {
       allProgramsYaml(sort: { fields: position, order: ASC }) {
         nodes {
           title
+          slug
           modules {
             title
+            slug
             description
             lessons
           }
@@ -41,7 +40,7 @@ export function ProgramMenu() {
 
             <div className="pl-3">
               {program.modules.map((module, index) => (
-                <Item key={index} module={{ program, module }}>
+                <Item key={index} to={`/${program.slug}/${module.slug}`}>
                   {module.title}
                 </Item>
               ))}
@@ -49,22 +48,6 @@ export function ProgramMenu() {
           </nav>
         )
       })}
-      {process.env.NODE_ENV === 'development' && (
-        <>
-          <Heading
-            icon="far fa-laptop-code"
-            onClick={() => navigateToTarget({ menu: 'assignments' })}
-          >
-            Assignments
-          </Heading>
-          <Heading
-            icon="far fa-dumbbell"
-            onClick={() => navigateToTarget({ menu: 'warm-ups' })}
-          >
-            Warm Ups
-          </Heading>
-        </>
-      )}
     </>
   )
 }
