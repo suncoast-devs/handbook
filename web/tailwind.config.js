@@ -10,6 +10,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens: {
+        'print': {'raw': 'print'},
+      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
