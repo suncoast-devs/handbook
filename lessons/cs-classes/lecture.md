@@ -176,7 +176,7 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
 //
 // class keyword
 // |
-// |    Name of class (CamelCase)
+// |    Name of class (PascalCase)
 // |    |
 // v    v
   class Employee
