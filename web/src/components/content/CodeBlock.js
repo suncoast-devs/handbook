@@ -48,12 +48,12 @@ export function CodeBlock({ children, className }) {
     <Highlight Prism={PrismCore} code={code} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
-          <div className="relative">
+          <div className="relative" style={{ pageBreakInside: 'avoid' }}>
             <div className="absolute right-2 top-2 flex items-center uppercase font-light font-sans tracking-tigher text-gray-300">
               <button
                 onClick={() => copyText()}
                 className={cx(
-                  'bg-gray-700 px-1 rounded transition ease-in-out duration-150 shadow-md hover:text-gray-100 hover:bg-cool-gray-600',
+                  'bg-gray-700 px-1 rounded transition ease-in-out duration-150 shadow-md hover:text-gray-100 hover:bg-cool-gray-600 print:hidden',
                   copied
                     ? 'text-green-100 bg-green-600 hover:bg-green-600'
                     : 'text-gray-300'

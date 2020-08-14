@@ -30,7 +30,7 @@ export default function PageTemplate({
       absolutePath={mdx.fileAbsolutePath}
     >
       {warnings.length > 0 && process.env.NODE_ENV === 'development' && (
-        <div className="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800">
+        <div className="rounded-md bg-yellow-50 p-4 mb-4 shadow text-yellow-800 print:hidden">
           <div className="flex">
             <div className="flex-shrink-0 leading-5 ">
               <Link to="/warnings">
@@ -57,7 +57,7 @@ export default function PageTemplate({
 
       {/* TODO: Make this panel nav responsive */}
       {['lesson', 'reading'].includes(mdx.fields.type) && (
-        <div className="bg-white overflow-hidden shadow rounded-lg mb-6">
+        <div className="bg-white overflow-hidden shadow rounded-lg mb-6 print:hidden">
           <div className="border-b bg-gray-50 border-gray-200 py-2 px-5 flex items-center justify-between">
             <h4 className="font-bold">Reading</h4>
             {lecture && (

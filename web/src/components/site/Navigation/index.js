@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link }  from 'gatsby'
+import { Link } from 'gatsby'
 import cx from 'classnames'
 import SDGIcon from '../../../images/button.svg'
 import { Transition } from '../Transition'
@@ -27,7 +27,9 @@ export function Navigation() {
 
   return (
     <>
-      <div className={cx({ hidden: isSidebarHidden }, 'md:hidden')}>
+      <div
+        className={cx({ hidden: isSidebarHidden }, 'md:hidden print:invisible')}
+      >
         <div className="fixed inset-0 flex z-40">
           <Transition
             enter="transition-opacity ease-linear duration-300"
@@ -80,7 +82,7 @@ export function Navigation() {
           <div className="flex-shrink-0 w-14"></div>
         </div>
       </div>
-      <div className="hidden md:flex md:flex-shrink-0">
+      <div className="hidden md:flex md:flex-shrink-0 print:invisible">
         <div className="flex flex-col w-96">
           <Header />
           <Menu />
