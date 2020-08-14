@@ -50,8 +50,8 @@ export function SiteFooter({ main }) {
     >
       <footer
         className={cx(
-          'h-16 flex items-center justify-center bg-white text-gray-500 shadow bottom-0 left-0 right-0',
-          position > 0 ? 'sticky print:relative' : 'absolute print:relative'
+          'h-16 flex items-center justify-center bg-white text-gray-500 shadow bottom-0 left-0 right-0 print:relative',
+          position > 0 ? 'sticky' : 'absolute'
         )}
       >
         &copy; 2017 - {new Date().getFullYear()}; Built with &hearts; in St.
