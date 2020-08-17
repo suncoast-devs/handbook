@@ -27,3 +27,6 @@ below contains suggestions for sources of music that are good for coding:
 - [Frank Turner mix] (https://www.youtube.com/watch?v=F1L5zJ2afLs&list=RDEMpYCbowAVqZBg5xdSMML86A&start_radio=1)
   if you are looking for something that moves a little faster
   care of [Amanda Leaders](https://https://github.com/alsleaders)
+- [Rainy Days in Tokyo] (https://www.youtube.com/watch?v=ivNIpLdzh7M)
+  I like this one because when it ends I stand up, take a break, and get some water.
+  care of [Amanda Leaders](https://https://github.com/alsleaders)
