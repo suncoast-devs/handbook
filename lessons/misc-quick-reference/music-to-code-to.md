@@ -22,3 +22,8 @@ below contains suggestions for sources of music that are good for coding:
   [Jason Perry](https://github.com/ambetha)
 - [Ambient music mixed with public domain nasa recordings](https://somafm.com/missioncontrol/)
   care of [Jason Perry](https://github.com/ambethia)
+- [The Best of Classical Music] (https://www.youtube.com/watch?v=5VB1RvyfISM)
+  care of [Amanda Leaders](https://https://github.com/alsleaders)
+- [Frank Turner mix] (https://www.youtube.com/watch?v=F1L5zJ2afLs&list=RDEMpYCbowAVqZBg5xdSMML86A&start_radio=1)
+  if you are looking for something that moves a little faster
+  care of [Amanda Leaders](https://https://github.com/alsleaders)
