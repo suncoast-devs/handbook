@@ -41,8 +41,8 @@ for rightIndex from n - 1 down to 1 do:
 
   Now swap the values at rightIndex and leftIndex by doing this:
     leftCard = the value from deck[rightIndex]
-    rightChard = the value from deck[leftIndex]
-    deck[rightIndex] = rightChard
+    rightCard = the value from deck[leftIndex]
+    deck[rightIndex] = rightCard
     deck[leftIndex] = leftCard
 ```
 
@@ -52,7 +52,7 @@ _hint:_ understand the algorithm before you try to implement it.
 
 As we have seen, computers do _exactly_ what we tell them to do. Thus, computers are bad at generating truly random numbers. Randomness is a deep and complex topic, but it's worth pointing out that most random numbers we use in computing are what we call "[pseudorandom](https://en.wikipedia.org/wiki/pseudorandomness)". That is, they generate numbers that appear to be random such that _guessing_ the next random number the computer's fixed algorithm is going to generate is very difficult. This makes it _good enough_ for most purposes. For this assignment, you will read about, then implement, a popular algorithm that shuffles a list using C#'s built-in `Random.Next()` function as a pseudorandom number generator.
 
-> Hint: Here is an example of code that gives us a random number greater than `0` and less than `956`.
+> Hint: Here is an example of code that gives us a random number greater, or equal to `0` and less than `956`.
 
 ```csharp
 var randomNumberGenerator = new Random();
@@ -87,4 +87,3 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 ## Resources
 
 - [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
-
