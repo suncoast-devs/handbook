@@ -34,16 +34,16 @@ You should implement the [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/
 If we were going to write an _algorithm_ for this we would write something like:
 
 ```
-make n = number of cards in our deck
+numberOfCards = length of our deck
 
-for rightIndex from n - 1 down to 1 do:
-  leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex
+for rightIndex from numberOfCards - 1 down to 1 do:
+  leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. See the section "How do we get a random integer")
 
   Now swap the values at rightIndex and leftIndex by doing this:
-    leftCard = the value from deck[rightIndex]
-    rightCard = the value from deck[leftIndex]
-    deck[rightIndex] = rightCard
-    deck[leftIndex] = leftCard
+    leftCard = the value from deck[leftIndex]
+    rightCard = the value from deck[rightIndex]
+    deck[rightIndex] = leftCard
+    deck[leftIndex] = rightCard
 ```
 
 _hint:_ understand the algorithm before you try to implement it.
@@ -59,7 +59,7 @@ var randomNumberGenerator = new Random();
 var randomNumber = randomNumberGenerator.Next(956);
 ```
 
-When using this code you could replace the specific value `956` with `rightIndex` like in the algorithm
+When using this code you could replace the specific value `956` with `rightIndex` like in the algorithm.
 
 ### Setup
 
