@@ -556,7 +556,10 @@ Console.WriteLine($"There are {popularMovies.Count()} popular movies");
 ## Combine where and select to get the names of the movies with more than 100 screeenings
 
 ```csharp
-var popularMovieNames = movies.Where(movie => movie.Screenings >= 100).Select(movie => movie.Name);
+var popularMovies = movies.Where(movie => movie.Screenings >= 100);
+var popularMovieNames = popularMovies.Select(movie => movie.Name);
+
+var popularMoviesNamesInOneLine = movies.Where(movie => movie.Screenings >= 100).Select(movie => movie.Name);
 ```
 
 ## How many movies had less than 100 screenings

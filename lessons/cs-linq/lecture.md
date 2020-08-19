@@ -775,6 +775,20 @@ var movies = new List<Movie>();
 
 > Makes a new list, of `equal size`, by running an expression on every item in the list and using that value when filling the new list.
 
+```csharp
+var movieNames = movies.Select(movie => movie.Name);
+```
+
+---
+
+# Select with an index
+
+> We can get both the current element and its index in the list as we work through the list
+
+```csharp
+var movieNames = movies.Select((movie, index) => $"The movie named {movie.Name} is at position {index}");
+```
+
 ---
 
 # Where
@@ -790,6 +804,17 @@ The `Where` statement is like a filter. We use it when we want to make a new lis
 // the movies that that have over 100 Screenings
 var popularMovies =
    movies.Where(movie => movie.Screenings >= 100);
+```
+
+---
+
+# Combine Where and Select
+
+```csharp
+var popularMovies = movies.Where(movie => movie.Screenings >= 100);
+var popularMovieNames = popularMovies.Select(movie => movie.Name);
+
+var popularMoviesNamesInOneLine = movies.Where(movie => movie.Screenings >= 100).Select(movie => movie.Name);
 ```
 
 ---
