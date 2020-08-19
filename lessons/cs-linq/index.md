@@ -530,6 +530,18 @@ count:
 Console.WriteLine($"There are {movies.Count()} total movies");
 ```
 
+## Turn the list of movies into a list of their names
+
+```csharp
+var movieNames = movies.Select(movie => movie.Name);
+```
+
+We can also use the index of the item in the list as well.
+
+```csharp
+var movieNames = movies.Select((movie, index) => $"The movie named {movie.Name} is at position {index}");
+```
+
 ## How many movies had more than 100 or more screenings?
 
 First we use the `Where` LINQ statement to generate a _new_ `List<Movie>`
@@ -539,6 +551,12 @@ Then we use `Count` on **that** `List<Movie>` to show the total.
 ```csharp
 var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 Console.WriteLine($"There are {popularMovies.Count()} popular movies");
+```
+
+## Combine where and select to get the names of the movies with more than 100 screeenings
+
+```csharp
+var popularMovieNames = movies.Where(movie => movie.Screenings >= 100).Select(movie => movie.Name);
 ```
 
 ## How many movies had less than 100 screenings
