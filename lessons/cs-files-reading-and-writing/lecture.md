@@ -78,7 +78,7 @@ The structure of a simple CSV file looks similar to this:
 
 ```
 "Elon Musk",42,120000
-"Grace Hopper",100,24000
+"Grace Hopper",100,240000
 ```
 
 ---
