@@ -36,8 +36,8 @@ dotnet new sdg-console -o FirstBankOfSuncoast
 - [ ] The application should load past transactions from a file when it first starts.
 - [ ] As a user I should be able to see the list of transactions that are `savings`.
 - [ ] As a user I should be able to see the list of transactions that are `checking`.
-- [ ] Never allow withdrawing or depositing more money than is available. That is, we cannot allow our `checking` or `savings` balances to go negative.
-- [ ] When prompting for an amount to deposit or withdraw always ensure the amount is positive. The value we store in the `Transaction` shall be positive as well. (e.g. a `Transaction` that is a withdraw of \$25 both inputs and records a positive `25`)
+- [ ] Never allow withdrawing more money than is available. That is, we cannot allow our `checking` or `savings` balances to go negative.
+- [ ] When prompting for an amount to deposit or withdraw always ensure the amount is positive. The value we store in the `Transaction` shall be positive as well. (e.g. a `Transaction` that is a withdraw of 25 both inputs and records a positive `25`)
 - [ ] As a user I should have a menu option to make a deposit transaction for `savings`.
 - [ ] As a user I should have a menu option to make a deposit transaction for `checking`.
 - [ ] As a user I should have a menu option to make a withdraw transaction for `savings`.
