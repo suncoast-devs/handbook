@@ -24,6 +24,29 @@ brew install git
 After the installation, re-open Terminal. We need to run a few commands to
 configuration git correctly.
 
+### Default branch name
+
+When working in `git` as a source control resource we work in `branches` of
+code. Branches are series of changes to code for a particular purpose. The
+default branch for a new git project has been `master`. SDG believes
+master-slave is an oppressive metaphor and we empathize with those hurt by the
+use of that term.
+
+Git allows for a mechanism to change the default name of this branch. We suggest
+changing this to something like `trunk` (to continue to the tree metaphor) or
+`main` (since the first two letters match and help with auto-complete if you are
+used to typing `master`)
+
+Read more from
+[the IETF](https://tools.ietf.org/id/draft-knodel-terminology-00.html),
+[the git project](https://github.blog/2020-07-27-highlights-from-git-2-28/#introducing-init-defaultbranch),
+and from
+[the software conservatory](https://sfconservancy.org/news/2020/jun/23/gitbranchname/)
+
+```shell
+git config --global init.defaultBranch trunk
+```
+
 ### Tell Git your Name
 
 Every line of code you save with `git` will be attributed to you. `git` will
