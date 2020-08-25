@@ -439,4 +439,11 @@ This might cause a **bad day**
 
 ---
 
+# References
+
+Here are some useful postgres database references about SQL
+
+- [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
+
 <!-- prettier-ignore-end -->
