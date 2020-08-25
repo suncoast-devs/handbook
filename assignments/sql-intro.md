@@ -18,7 +18,7 @@ using SQL databases.
    own account.
 2. Change into your project's directory.
 3. Clone your repository:
-   `git clone https://github.com/YOUR_NAME_HERE/sql-intro`
+   `hub clone sql-intro`
 4. Change into your newly cloned project's directory: `cd sql-intro`
 5. `code .`
 6. All your SQL queries should be placed inside the `queries.sql` file.

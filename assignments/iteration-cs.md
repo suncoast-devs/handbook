@@ -1,6 +1,6 @@
 ---
 title: Iteration in C#
-tags: ["c-sharp", "enumeration"]
+tags: ['c-sharp', 'enumeration']
 ---
 
 Learning programming takes practice and the best practice is repetition. This
@@ -19,7 +19,7 @@ After completing this assignment, you should be able to:
    your own account.
 2. Change into your projects directory:
 3. Clone your repository:
-   `git clone https://github.com/YOUR_NAME_HERE/net-iteration`
+   `hub clone net-iteration`
 4. Change into your project's directory: `cd net-iteration`
 5. Install the dependencies: `dotnet restore`
 6. Open in your editor: `code .`
