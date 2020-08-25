@@ -177,7 +177,7 @@ To connect to that database and start running queries against it, use the
 command:
 
 ```shell
-psql Library
+pgcli Library
 ```
 
 As with most things in programming, there are tools to help make developers
