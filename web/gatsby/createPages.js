@@ -1,4 +1,5 @@
 const path = require('path')
+import { urlForLesson } from '../src/utils'
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -19,13 +20,6 @@ module.exports = async ({ graphql, actions, reporter }) => {
   if (allProgramsResult.errors) {
     reporter.panicOnBuild('🚨  ERROR: Loading "allProgramsYaml" query')
   }
-
-  const { nodes: programs } = allProgramsResult.data.allProgramsYaml
-  programs.forEach((program) => {
-    program.modules.forEach((module) => {
-      module.lessons.forEach((lessonSlug) => {})
-    })
-  })
 
   for (const program of programs) {
     for (const module of program.modules) {
@@ -80,9 +74,11 @@ module.exports = async ({ graphql, actions, reporter }) => {
           slug,
         }
 
+        const lessonPath = urlForLesson(slug, module.slug, program.slug)
+
         if (lesson) {
           await createPage({
-            path: `/${program.slug}/${module.slug}/${slug}`,
+            path: lessonPath,
             component: path.resolve(`./src/components/site/LessonTemplate.js`),
             context: {
               id: lesson.id,
@@ -93,7 +89,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
         if (lecture) {
           await createPage({
-            path: `/${program.slug}/${module.slug}/${slug}/lecture`,
+            path: `${lessonPath}/lecture`,
             component: path.resolve(`./src/components/site/LessonTemplate.js`),
             context: {
               id: lecture.id,
@@ -104,7 +100,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
 
         for (const readingPage of reading.nodes) {
           await createPage({
-            path: `/${program.slug}/${module.slug}/${slug}/${readingPage.fields.baseName}`,
+            path: `${lessonPath}/${readingPage.fields.baseName}`,
             component: path.resolve(`./src/components/site/LessonTemplate.js`),
             context: {
               id: readingPage.id,

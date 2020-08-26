@@ -14,7 +14,7 @@ to run our code.
 
 ## Before getting started
 
-Ensure you have [setup your environment](/lessons/cs-environment-setup)
+Ensure you have [setup your environment](lesson://cs-environment-setup)
 including a step on selecting and creating a location to keep your projects.
 
 ## The `dotnet` command

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 import { Layout } from '../components/site/Layout'
 
 export default function WarningPage({
@@ -35,9 +35,7 @@ export default function WarningPage({
                           case 'lesson':
                             return (
                               <h3 className="font-bold text-blue-500">
-                                <Link to={`/lessons/${meta.slug}`}>
-                                  {meta.slug}
-                                </Link>
+                                {meta.slug}
                               </h3>
                             )
                           case 'file':

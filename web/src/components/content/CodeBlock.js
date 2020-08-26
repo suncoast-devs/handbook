@@ -1,36 +1,22 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
-import Highlight from 'prism-react-renderer'
+import Highlight, { defaultProps } from 'prism-react-renderer'
 import { default as theme } from 'prism-react-renderer/themes/dracula'
 
-import 'prismjs'
-
-import PrismCore from 'prismjs/components/prism-core'
-
-import 'prismjs/components/prism-clike'
-import 'prismjs/components/prism-markup'
-
-import 'prismjs/components/prism-csharp'
-import 'prismjs/components/prism-css'
-import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-css-extras'
-import 'prismjs/components/prism-docker'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/components/prism-jsx'
-import 'prismjs/components/prism-js-extras'
-import 'prismjs/components/prism-json'
-import 'prismjs/components/prism-sql'
-import 'prismjs/components/prism-tsx'
-import 'prismjs/components/prism-typescript'
-import 'prismjs/components/prism-powershell'
-import 'prismjs/components/prism-ruby'
-import 'prismjs/components/prism-shell-session'
-// import 'prismjs/components/prism-markdown'
-// import 'prismjs/components/prism-http'
-// import 'prismjs/components/prism-regex'
-// import 'prismjs/components/prism-git'
-
+// Require additional languages not included by prism-react-renderer
+// https://github.com/FormidableLabs/prism-react-renderer/blob/master/src/vendor/prism/includeLangs.js
 // See https://prismjs.com/#supported-languages to add additional langages.
+
+import Prism from 'prism-react-renderer/prism'
+;(typeof global !== 'undefined' ? global : window).Prism = Prism
+
+require('prismjs/components/prism-csharp')
+require('prismjs/components/prism-docker')
+require('prismjs/components/prism-powershell')
+require('prismjs/components/prism-ruby')
+require('prismjs/components/prism-shell-session')
+require('prismjs/components/prism-http')
+require('prismjs/components/prism-regex')
 
 export function CodeBlock({ children, className }) {
   const language = className?.replace(/language-/, '')
@@ -45,7 +31,7 @@ export function CodeBlock({ children, className }) {
   }
 
   return (
-    <Highlight Prism={PrismCore} code={code} language={language} theme={theme}>
+    <Highlight {...defaultProps} code={code} language={language} theme={theme}>
       {({ className, style, tokens, getLineProps, getTokenProps }) => {
         return (
           <div className="relative" style={{ pageBreakInside: 'avoid' }}>
