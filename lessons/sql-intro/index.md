@@ -126,7 +126,7 @@ Into this `Books` table, we would design columns that represent the specific
 data about books we wish to track. Each row in the `Books` table would represent
 a unique book in our collection.
 
-### Columns
+### String Columns
 
 Columns are the part of the table that defines the structure (what we often call
 the `schema`) of the data we are storing. This is where we define the attributes
@@ -135,9 +135,9 @@ defines and restricts what type of data we can place into each column.
 
 In our `Books` table, we will want to store specific details, such as the title,
 the primary author, the year published, and the genre of the book. We will name
-these columns `Title`, `PrimaryAuthor`, `YearPublished`, and `Genre`. In a
-language such as JavaScript, Ruby, or C# we would naturally define each of these
-as a `string` -- In a database, we have a few choices for the data type:
+these columns `Title`, `PrimaryAuthor`, and `Genre`. In a language such as
+JavaScript, Ruby, or C# we would naturally define each of these as a `string` --
+In a database, we have a few choices for the data type:
 
 - `char(N)` - The `N` represents the largest number of characters this column
   can store. If we supply _less_ than `N` characters the rest of the column will
@@ -150,6 +150,71 @@ as a `string` -- In a database, we have a few choices for the data type:
   megabytes, or gigabytes of text.
 
 In our case, `varchar` or `text` make the most sense for our columns.
+
+### Numeric Columns
+
+For a column like `YearPublished` we can use a numeric type.
+
+There are several types of numeric types and they may vary based on the specific
+database engine you are using.
+
+For us Postgres provides the types smallint, integer, and bigint store whole
+numbers.
+
+The type integer is the common choice, as it offers the best balance between
+range, storage size, and performance. The smallint type is generally only used
+if disk space is at a premium. The bigint type is designed to be used when the
+range of the integer type is insufficient.
+
+### Boolean Types
+
+Sometimes a column simply needs to record a true or false value. For a book
+perhaps we want to know if it was a best seller. We could make this column a
+'boolean' column with this syntax in our list of columns:
+
+```
+"BestSeller" boolean
+```
+
+### Date
+
+If we wanted to know the date of publication rather than the year, an `INT`
+column would no longer be appropriate. In Postgres we would define such a column
+as a `DATE`
+
+```
+"DatePublished" DATE
+```
+
+The format for inputting dates varies. You can see the full list in the
+[Postgres documentation on dates and times](https://www.postgresql.org/docs/current/datatype-datetime.html)
+but the simplest version is `YYYY-MM-DD` such as `2020-07-04`
+
+```sql
+INSERT INTO "Books" ("DatePublished") VALUES ("2020-07-04");
+```
+
+### Date and Time
+
+If we wanted to know the exact time a book was published we weould also need the
+time component.
+
+For this we would use the `timestamp` column type.
+
+```
+"PublishedAt" TIMESTAMP
+```
+
+And we would insert values like this:
+
+```sql
+INSERT INTO "Books" ("PublishedAt") VALUES ("2020-07-04 10:23:54");
+```
+
+We should note here that having a specific time also involves dealing with time
+zones, which is beyond the scope of this introduction.
+
+### Other Types
 
 Check out the
 [Postgres docs on types](https://www.postgresql.org/docs/current/datatype.html)
