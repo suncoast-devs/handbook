@@ -6,7 +6,7 @@ assignments:
 
 ## Consuming API services
 
-In [this lesson](/lessons/misc-api-intro) we discussed the idea of an API which
+In [this lesson](lesson://misc-api-intro) we discussed the idea of an API which
 operates over the internet via HTTP.
 
 In this lesson we will build a console application that will interact with the

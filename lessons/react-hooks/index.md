@@ -6,7 +6,7 @@ import { CounterWithName } from './CounterWithName'
 
 # React Hooks
 
-We have [already seen how React functions](/lessons/react-intro) using `class`
+We have [already seen how React functions](lesson://react-intro) using `class`
 based components. In this lesson we will talk about a relatively new approach
 for creating React components. This new approach is often called `hooks`
 
@@ -202,7 +202,7 @@ However, all of these approaches had drawbacks.
 We have seen some of the
 [React Lifecycle](https://reactjs.org/docs/state-and-lifecycle.html) when we
 used `componentDidMount` to find a place to perform tasks such as
-[loading data into state from an API](/lessons/react-state)
+[loading data into state from an API](lesson://react-state)
 
 However, there are many other lifecycle methods that can be used. On large
 projects classes would become loaded with extra code to handle many different

@@ -81,4 +81,10 @@ modules:
       - career-prep
       - career-looking
       - career-coding
+  - slug: resources
+    title: Additional Resources
+    lessons:
+      - setup-mac
+      - setup-windows
+      - setup-linux
 position: 0

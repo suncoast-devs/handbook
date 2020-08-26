@@ -27,12 +27,14 @@ function AutoLink({ href, children, ...props }) {
           let linkedProgram = program
           let linkedModule = module
           const currentModuleLessons = programMap[program][module]
+          const [linkedLessonSlug] = linkedLesson.split(/[^\w-]/)
           // This lesson is not in the current program and module.
-          if (!currentModuleLessons.includes(linkedLesson)) {
+
+          if (!currentModuleLessons.includes(linkedLessonSlug)) {
             // Look for the first module in this program that includes this lesson.
             const [otherModule] =
               Object.entries(programMap[program]).find(([, l]) => {
-                return l.includes(linkedLesson)
+                return l.includes(linkedLessonSlug)
               }) || []
             if (otherModule) {
               linkedModule = otherModule
@@ -42,7 +44,7 @@ function AutoLink({ href, children, ...props }) {
                 programMap
               )) {
                 for (const [module, lessons] of Object.entries(modules)) {
-                  if (lessons.includes(linkedLesson)) {
+                  if (lessons.includes(linkedLessonSlug)) {
                     linkedProgram = program
                     linkedModule = module
                     break loop

@@ -4,7 +4,7 @@ assignment:
   - roshambo-js
 ---
 
-In [the lesson on using JavaScript to modify the DOM](/lessons/js-dom) we
+In [the lesson on using JavaScript to modify the DOM](lesson://js-dom) we
 discussed how to use JavaScript to find and manipulate user interface elements.
 Two examples of this are _toggle the state of an element each time we click it_
 and _update a counter when a separate button is clicked_. In each of these cases
