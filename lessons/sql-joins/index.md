@@ -325,6 +325,7 @@ The ERD of this looks like:
 |    PrimaryDirector     TEXT    +-----------+                           |
 |    YearReleased        INT     |           +---------------------------+
 |    Genre               TEXT    |
+|    RatingId            INT     |
 |                                |
 +------------+-------------------+
              |
@@ -368,6 +369,7 @@ CREATE TABLE "Roles" (
 |    PrimaryDirector     TEXT    <----------->                           |
 |    YearReleased        INT     |           +---------------------------+
 |    Genre               TEXT    |
+|    RatingId            INT     |
 |                                |
 +-------------^------------------+
               | one
@@ -380,8 +382,8 @@ CREATE TABLE "Roles" (
       |        Roles          |               |          Actors         |
       |                       | many      one |                         |
       |   Id       SERIAL     <--------------->    Id          SERIAL   |
-      |                       |               |    FullName    TEXT     |
-      |                       |               |    Birthday    DATE     |
+      |   MovieId  INT        |               |    FullName    TEXT     |
+      |   RatingId INT        |               |    Birthday    DATE     |
       |                       |               |                         |
       +-----------------------+               +-------------------------+
 
@@ -534,7 +536,7 @@ UPDATE "Roles" set "CharacterName" = 'Arthur Dent' where "Id" = 10;
 
 Let's see what our query looks like now:
 
-````
+```
 +------+--------------------------------------------------------+----------------+-----------------+
 | Id   | Title                                                  | FullName       | CharacterName   |
 |------+--------------------------------------------------------+----------------+-----------------|
@@ -553,7 +555,5 @@ Let's see what our query looks like now:
 
 ### Resources
 
+- [pgcli/psql CheatSheet](https://tomcam.github.io/postgres/)
 - [SQL Joins Explained](http://www.sql-join.com)
-
-
-````

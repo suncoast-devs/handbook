@@ -61,6 +61,7 @@ using SQL databases.
 
 ## Additional Resources
 
+- [pgcli/psql CheatSheet](https://tomcam.github.io/postgres/)
 - [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
 - [Hint for a useful data type](https://www.postgresql.org/docs/current/datatype-boolean.html)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)

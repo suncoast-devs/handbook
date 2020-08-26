@@ -1,7 +1,5 @@
 theme: Next, 1
 
-<!-- prettier-ignore-start -->
-
 # [fit] SQL Joins
 
 ---
@@ -225,7 +223,7 @@ LEFT JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 
 ---
 
-# Many to One
+# Many to Many
 
 ```
 +--------------------------------+           +---------------------------+
@@ -236,6 +234,7 @@ LEFT JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 |    PrimaryDirector     TEXT    +-----------+                           |
 |    YearReleased        INT     |           +---------------------------+
 |    Genre               TEXT    |
+|    RatingId            INT     |
 |                                |
 +------------+-------------------+
              |
@@ -280,6 +279,7 @@ CREATE TABLE "Roles" (
 |    PrimaryDirector     TEXT    <----------->                           |
 |    YearReleased        INT     |           +---------------------------+
 |    Genre               TEXT    |
+|    RatingId            INT     |
 |                                |
 +-------------^------------------+
               | one
@@ -292,8 +292,8 @@ CREATE TABLE "Roles" (
       |        Roles          |               |          Actors         |
       |                       | many      one |                         |
       |   Id       SERIAL     <--------------->    Id          SERIAL   |
-      |                       |               |    FullName    TEXT     |
-      |                       |               |    Birthday    DATE     |
+      |   MovieId  INT        |               |    FullName    TEXT     |
+      |   ActorId  INT        |               |    Birthday    DATE     |
       |                       |               |                         |
       +-----------------------+               +-------------------------+
 
@@ -355,7 +355,6 @@ UPDATE "Roles" set "CharacterName" = 'Will Turner' where "Id" in (1);
 UPDATE "Roles" set "CharacterName" = 'Legolas' where "Id" in (2,3,4);
 ```
 
-
 ---
 
 # [fit] Rerun the query
@@ -370,11 +369,3 @@ JOIN "Actors" on "Actors"."Id" = "Roles"."ActorId";
 ---
 
 ## If we started with a more detailed ERD we could have avoided the alter table statements for adding our relationships
-
-
-
-
-
-
-
-<!-- prettier-ignore-end -->

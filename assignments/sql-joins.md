@@ -1,19 +1,13 @@
 ---
 title: Foreign Keys - The SQL
-tags: ["sql"]
+tags: ['sql']
 ---
 
-As we continue to explore databases and ideas, this project will help you
-practice model databases and relationships.
+As we continue to explore databases and ideas, this project will help you practice model databases and relationships.
 
-We will be expanding on our `CompanyDatabase` from the
-[sql-intro assignment](/assignments/sql-intro). You will be adding new tables
-and be writing queries for these new tables.
+We will be expanding on our `CompanyDatabase` from the [sql-intro assignment](/assignments/sql-intro). You will be adding new tables and be writing queries for these new tables.
 
-Reuse the same repository from that assignment for this assignment. Add the new
-queries _below_ the queries from that assignment such that the one repository
-will have both sets of queries. Use the same repository URL to turn in tonight's
-homework.
+Reuse the same repository from that assignment for this assignment. Add the new queries _below_ the queries from that assignment such that the one repository will have both sets of queries. Use the same repository URL to turn in tonight's homework.
 
 ## Objectives
 
@@ -27,25 +21,20 @@ homework.
   - `Id` as a primary key
   - `DepartmentName` as text
   - `Building` as text
-- [ ] Add a Foreign key `DepartmentId` to your `Employees` Table. If you have
-      trouble, remove the existing employees by running
-      `truncate table "Employees"`.
+- [ ] Add a Foreign key `DepartmentId` to your `Employees` Table. If you have trouble, remove the existing employees by running `truncate table "Employees"`.
 - [ ] Add tables named `Products` and `Orders`.
-  - `Orders` should have the columns
-    - `Id` as a primary key
-    - `OrderNumber` as a string
-    - `DatePlaced` as a datetime
-    - `Email` as a string
   - `Products` should have the columns
     - `Id` as a primary key
     - `Price` as a double
     - `Name` as a string
     - `Description` as a string
     - `QuantityInStock` as an integer
-- [ ] In our company, one `Order` can have many `Products` and one `Product` can
-      have many `Orders`. This will be a Many-to-Many relationship. Create the
-      necessary table `ProductOrders`, foreign keys, and the
-      `OrderQuantity`field needed for this to happen.
+  - `Orders` should have the columns
+    - `Id` as a primary key
+    - `OrderNumber` as a string
+    - `DatePlaced` as a datetime
+    - `Email` as a string
+- [ ] In our company, one `Order` can have many `Products` and one `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the necessary table `ProductOrders`, foreign keys, and the `OrderQuantity` field needed for this to happen.
 
 * [ ] Create queries that can do the following:
 
@@ -71,18 +60,17 @@ homework.
   | 12.45 | Widget  | The Original Widget  | 100             |
   | 99.99 | Flowbee | Perfect for haircuts | 3               |
 
-* [ ] Insert a new order with order number `X529`, placed on Jan 1st, 2020 at
-      4:55PM, by someone with the email address "person@example.com"
-* [ ] Add an order quantity of `3` for the product named `Widget` to the order
-      `X529`
-* [ ] Add an order quantity of `2` for the product named `Flowbee` to the order
-      `X529`
+* [ ] Insert a new order with order number `X529`, placed on Jan 1st, 2020 at 4:55PM, by someone with the email address "person@example.com"
+* [ ] Add an order quantity of `3` for the product named `Widget` to the order `X529`
+* [ ] Add an order quantity of `2` for the product named `Flowbee` to the order `X529`
 * [ ] Given a department id, return all employees in the department.
 * [ ] Given a department name, return all the phone extensions.
 * [ ] Find all orders that contain the product id of `2`.
 * [ ] Remove the `Flowbee` product from order with order number `X529`.
 
 ### Adventure Mode
+
+None
 
 ### Epic Mode
 
