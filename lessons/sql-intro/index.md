@@ -272,10 +272,10 @@ the `YearPublished` columns for our `Books`
 
 ```sql
 CREATE TABLE "Books" (
-  "Title"           TEXT NOT NULL,
+  "Title"          TEXT NOT NULL,
   "PrimaryAuthor"  TEXT,
   "YearPublished"  INT,
-  "Id" SERIAL PRIMARY KEY
+  "Id"             SERIAL PRIMARY KEY
 );
 ```
 
