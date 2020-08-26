@@ -203,6 +203,17 @@ JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 
 ---
 
+# [fit] Query for all movies that are "R", adding a WHERE clause
+
+```sql
+SELECT *
+FROM "Movies"
+JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
+WHERE "Ratings"."Description" = 'R'
+```
+
+---
+
 - This query will give us movies and their ratings.
 - But only for movies that have a `RatingId` that matches an `Id` from the ratings table.
 - That is, any `movie` with a `null` value for `RatingId` (or a value that doesn't match an `id`) will not be in the results.

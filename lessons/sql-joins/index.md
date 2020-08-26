@@ -275,6 +275,29 @@ for a more detailed description of the various joins.
 If we want to see _ALL_ the `movies` and include the `ratings` table information
 when there is a match we modify the query to use `LEFT JOIN`
 
+#### Query for all movies that are "R", adding a WHERE clause
+
+We can still add a `WHERE` clause when using a `JOIN` but now we specify the
+table and column we want to filter by. We do this since we have more than one
+table involved.
+
+```sql
+SELECT *
+FROM "Movies"
+JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
+WHERE "Ratings"."Description" = 'R'
+```
+
+```
++------+--------------------------------------------------------+-------------------+----------------+---------+------------+------+---------------+
+| Id   | Title                                                  | PrimaryDirector   | YearReleased   | Genre   | RatingId   | Id   | Description   |
+|------+--------------------------------------------------------+-------------------+----------------+---------+------------+------+---------------|
+| 11   | Cujo                                                   | Lewis Teague      | 1983           | horror  | 4          | 4    | R             |
+| 12   | It                                                     | Andrés Muschietti | 2017           | horror  | 4          | 4    | R             |
+| 13   | It                                                     | Tommy Lee Wallace | 1990           | horror  | 4          | 4    | R             |
++------+--------------------------------------------------------+-------------------+----------------+---------+------------+------+---------------+
+```
+
 #### Query all the movies and include ratings when possible
 
 ```sql
