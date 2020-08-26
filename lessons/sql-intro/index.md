@@ -381,3 +381,8 @@ syntax to filter which rows will be deleted.
 
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be
 > deleted.
+
+## Additional Resources
+
+- [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
