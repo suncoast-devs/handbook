@@ -25,15 +25,15 @@ Reuse the same repository from that assignment for this assignment. Add the new 
 - [ ] Add tables named `Products` and `Orders`.
   - `Products` should have the columns
     - `Id` as a primary key
-    - `Price` as a double
-    - `Name` as a string
-    - `Description` as a string
-    - `QuantityInStock` as an integer
+    - `Price` as a data type that can store a number with decimal places (e.g. 45.12)
+    - `Name` as textual data
+    - `Description` as textual data
+    - `QuantityInStock` as a data type that can store a number WITHOUT decimal places (e.g. 42)
   - `Orders` should have the columns
     - `Id` as a primary key
-    - `OrderNumber` as a string
-    - `DatePlaced` as a datetime
-    - `Email` as a string
+    - `OrderNumber` as textual data
+    - `DatePlaced` as a data type that can store a date (with Year, Month, and Day) -- or one with hours, minutes, and seconds. Student's choice.
+    - `Email` as textual data
 - [ ] In our company, one `Order` can have many `Products` and one `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the necessary table `ProductOrders`, foreign keys, and the `OrderQuantity` field needed for this to happen.
 
 * [ ] Create queries that can do the following:
