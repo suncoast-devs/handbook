@@ -247,6 +247,16 @@ CREATE TABLE "Books" (
 
 ---
 
+# Other types
+
+| Type | Description |
+| --- | --- |
+| BOOLEAN | Stores a `true` or `false` value |
+| DATE| Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data |
+| TIMESTAMP| Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data |
+
+---
+
 ### ALTER TABLE
 
 The structure of our tables is not set in stone.
@@ -438,5 +448,12 @@ As with the `UPDATE` statement the `DELETE` statement can use the same `WHERE` s
 This might cause a **bad day**
 
 ---
+
+# References
+
+Here are some useful postgres database references about SQL
+
+- [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 
 <!-- prettier-ignore-end -->

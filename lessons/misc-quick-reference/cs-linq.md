@@ -1,5 +1,5 @@
 ---
-title: C# Linq
+title: C# LINQ
 ---
 
 We will be using this class as an example for exploring the various methods

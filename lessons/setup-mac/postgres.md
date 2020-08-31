@@ -9,6 +9,15 @@ The database engine we will be using for our back-end work.
 Start a Terminal and run:
 
 ```shell
+pg_config --version
+```
+
+If this comes back with a line similar to `PostgreSQL` followed by numbers:
+**STOP AND DISCUSS WITH YOUR INSTRUCTOR**
+
+Otherwise continue on.
+
+```shell
 brew install postgresql
 ```
 

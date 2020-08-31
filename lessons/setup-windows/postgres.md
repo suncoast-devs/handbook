@@ -9,6 +9,13 @@ The database engine we will be using for our back-end work.
 Start a PowerShell and run:
 
 ```shell
+pg_config --version
+```
+
+If this comes back with a line similar to `PostgreSQL` followed by numbers:
+**STOP AND DISCUSS WITH YOUR INSTRUCTOR**
+
+```shell
 scoop install postgresql
 ```
 

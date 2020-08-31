@@ -34,16 +34,16 @@ You should implement the [Fisher–Yates shuffle](https://en.wikipedia.org/wiki/
 If we were going to write an _algorithm_ for this we would write something like:
 
 ```
-make n = number of cards in our deck
+numberOfCards = length of our deck
 
-for rightIndex from n - 1 down to 1 do:
-  leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex
+for rightIndex from numberOfCards - 1 down to 1 do:
+  leftIndex = random integer that is greater than or equal to 0 and LESS than rightIndex. See the section "How do we get a random integer")
 
   Now swap the values at rightIndex and leftIndex by doing this:
-    leftCard = the value from deck[rightIndex]
-    rightChard = the value from deck[leftIndex]
-    deck[rightIndex] = rightChard
-    deck[leftIndex] = leftCard
+    leftCard = the value from deck[leftIndex]
+    rightCard = the value from deck[rightIndex]
+    deck[rightIndex] = leftCard
+    deck[leftIndex] = rightCard
 ```
 
 _hint:_ understand the algorithm before you try to implement it.
@@ -52,14 +52,14 @@ _hint:_ understand the algorithm before you try to implement it.
 
 As we have seen, computers do _exactly_ what we tell them to do. Thus, computers are bad at generating truly random numbers. Randomness is a deep and complex topic, but it's worth pointing out that most random numbers we use in computing are what we call "[pseudorandom](https://en.wikipedia.org/wiki/pseudorandomness)". That is, they generate numbers that appear to be random such that _guessing_ the next random number the computer's fixed algorithm is going to generate is very difficult. This makes it _good enough_ for most purposes. For this assignment, you will read about, then implement, a popular algorithm that shuffles a list using C#'s built-in `Random.Next()` function as a pseudorandom number generator.
 
-> Hint: Here is an example of code that gives us a random number greater than `0` and less than `956`.
+> Hint: Here is an example of code that gives us a random number greater, or equal to `0` and less than `956`.
 
 ```csharp
 var randomNumberGenerator = new Random();
 var randomNumber = randomNumberGenerator.Next(956);
 ```
 
-When using this code you could replace the specific value `956` with `rightIndex` like in the algorithm
+When using this code you could replace the specific value `956` with `rightIndex` like in the algorithm.
 
 ### Setup
 
@@ -87,4 +87,3 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 ## Resources
 
 - [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
-
