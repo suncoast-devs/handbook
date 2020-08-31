@@ -15,9 +15,9 @@ Today, we are starting our journey into development. This journey has to start s
 
 ## Requirements
 
-Make sure you have followed the [setup instructions](/lessons/cs-environment-setup) for your computer's operating system
+Make sure you have followed the [setup instructions](lesson://cs-environment-setup) for your computer's operating system
 
-Follow [this guide](/lessons/cs-how-to-create-and-run-programs) to review how to create and run `C#` applications
+Follow [this guide](lesson://cs-how-to-create-and-run-programs) to review how to create and run `C#` applications
 
 All your code should place inside the `static void Main(string args[])`
 

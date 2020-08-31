@@ -247,4 +247,4 @@ console.log(total) // [ 155 ]
 
 ### Others
 
-See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`
+See the [quick reference guide](lesson://misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`

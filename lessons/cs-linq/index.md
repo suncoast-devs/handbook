@@ -647,7 +647,7 @@ Console.WriteLine($"There are {anotherWayToCountMoviesCostingMoreThan10} that co
 
 ## References
 
-See this [quick reference guide](/lessons/misc-quick-reference/cs-linq) for an
+See this [quick reference guide](lesson://misc-quick-reference/cs-linq) for an
 overview of the frequently used enumeration methods with examples.
 
 Here is

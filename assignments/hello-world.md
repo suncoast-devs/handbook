@@ -16,13 +16,13 @@ working.
 ## Requirements
 
 Make sure you have followed the
-[setup instructions](/lessons/cs-environment-setup) for your computer's
+[setup instructions](lesson://cs-environment-setup) for your computer's
 operating system
 
-Follow [this guide](/lessons/cs-how-to-create-and-run-programs) to review how to
+Follow [this guide](lesson://cs-how-to-create-and-run-programs) to review how to
 create and run `C#` applications.
 
-Follow [this guide](/lessons/misc-quick-reference/turning-in-assignments) to
+Follow [this guide](lesson://misc-quick-reference/turning-in-assignments) to
 review how to turn in your assignments.
 
 ### Setup

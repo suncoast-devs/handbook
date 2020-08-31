@@ -9,25 +9,25 @@ module.exports = ({ node, actions, getNode }) => {
       path.join(__dirname, '..', '..'),
       node.fileAbsolutePath
     )
-    const [rootDir] = filePath.split(path.sep)
+    const baseName = path.basename(node.fileAbsolutePath, '.md')
     const subPath = createFilePath({ node, getNode, trailingSlash: false })
-    const slug = (subPath.match(/^\/([\w-]+)/) || [, 1])[1]
+    const slug = (subPath.match(/^\/([\w-]+)/) || [undefined, 1])[1]
 
     createNodeField({ name: 'filePath', node, value: filePath })
-    createNodeField({ name: 'path', node, value: `/${rootDir}${subPath}` })
+    createNodeField({ name: 'baseName', node, value: baseName })
     createNodeField({ name: 'slug', node, value: slug })
 
+    const [rootDir] = filePath.split(path.sep)
     switch (rootDir) {
       case 'lessons':
         createNodeField({
           name: 'type',
           node,
-          value: (Object.entries({
-            // TODO: This should be better...
-            lesson: /index\.md/,
-            lecture: /lecture\.md/,
-            reading: /^/,
-          }).find(([_, v]) => v.test(filePath)) || [])[0],
+          value:
+            {
+              index: 'lesson',
+              lecture: 'lecture',
+            }[baseName] || 'reading',
         })
         break
       case 'assignments':

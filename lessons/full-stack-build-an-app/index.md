@@ -30,11 +30,11 @@ In this lesson, we will be combining all of our skills from
 `Fundamentals of Front-end Web Development`. To do so we will build an
 application that will let us track our favorite taco restaurants in town. As we
 go we will incrementally add features to our application. The backend will be an
-[API](/lessons/cs-api-servers) that we develop in `C#` using
-[LINQ](/lessons/cs-linq) with
-[Entity Framework](/lessons/cs-object-relational-mapping). The front end will be
-a [React](/lessons/react-intro) application that will
-[fetch data](/lessons/js-fetch) from our API and support multiple pages with
+[API](lesson://cs-api-servers) that we develop in `C#` using
+[LINQ](lesson://cs-linq) with
+[Entity Framework](lesson://cs-object-relational-mapping). The front end will be
+a [React](lesson://react-intro) application that will
+[fetch data](lesson://js-fetch) from our API and support multiple pages with
 [React Router](https://reactrouter.com/)
 
 ---
@@ -163,10 +163,10 @@ perhaps filtered by a phrase.
 For this full-stack application, we'll be using the last of the SDG `dotnet`
 templates, `sdg-react`. This app includes:
 
-- [API Server](/lessons/cs-api-servers)
-- [LINQ](/lessons/cs-linq)
-- [Entity Framework](/lessons/cs-object-relational-mapping)
-- [React](/lessons/react-intro)
+- [API Server](lesson://cs-api-servers)
+- [LINQ](lesson://cs-linq)
+- [Entity Framework](lesson://cs-object-relational-mapping)
+- [React](lesson://react-intro)
 - and [React Router](https://reactrouter.com/)
 
 It generates a full React application in the directory `ClientApp` and ensures

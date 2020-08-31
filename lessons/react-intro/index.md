@@ -666,7 +666,7 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-In our [lesson on JavaScript iteration](/lessons/js-iteration] we can
+In our [lesson on JavaScript iteration](lesson://js-iteration] we can
 demonstrated that `map` can turn an array of one type of element (say a
 JavaScript object in this case) into an array of another type of element,
 (<NewsArticle/> in this case)

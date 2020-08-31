@@ -229,7 +229,7 @@ handled slightly differently. In the case of the arrow function, the `this`
 value is **always** the instance of the object itself. However, for our normally
 defined methods like `bark` and `eat` it isn't the case. The subtle difference
 here won't make a big impact on us until we get to dealing with things like
-event callback functions in [React](/lessons/react-intro) so we'll hold off any
+event callback functions in [React](lesson://react-intro) so we'll hold off any
 further discussion of the concept of `this`.
 
 If you are very curious about the subject of `this`, an often discussed and

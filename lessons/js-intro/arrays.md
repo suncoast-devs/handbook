@@ -115,4 +115,4 @@ colors.forEach((color, index) =>
 
 For more details on how to manipulate arrays, including adding and removing
 elements, see the
-[quick reference guide](/lessons/misc-quick-reference/js-arrays) on arrays.
+[quick reference guide](lesson://misc-quick-reference/js-arrays) on arrays.

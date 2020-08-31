@@ -33,7 +33,14 @@ function WIPBanner({ relativePath, absolutePath }) {
   ) : null
 }
 
-export function Layout({ title, children, relativePath, absolutePath }) {
+export function Layout({
+  title,
+  module,
+  program,
+  children,
+  relativePath,
+  absolutePath,
+}) {
   const mainRef = React.useRef(null)
   return (
     <>
@@ -47,7 +54,7 @@ export function Layout({ title, children, relativePath, absolutePath }) {
         <body className="bg-gray-100 text-gray-900" />
       </Helmet>
       <div className="h-screen print:h-full flex overflow-hidden print:overflow-visible bg-gray-100">
-        <Navigation />
+        <Navigation module={module} program={program} />
         <div className="flex flex-col w-0 flex-1 overflow-hidden print:overflow-visible">
           <SiteHeader />
           <WIPBanner relativePath={relativePath} absolutePath={absolutePath} />

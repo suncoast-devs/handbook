@@ -1,5 +1,5 @@
 ---
-title: Setting up your Development Environment
+title: Setting up your Development Environment in Linux
 ---
 
 In order to work on coding assignments we need to setup our computers with new

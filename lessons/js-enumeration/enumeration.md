@@ -5,7 +5,7 @@ order: 1
 
 # `forEach`
 
-When we [learned about arrays in JavaScript](/lessons/js-intro/arrays) we saw
+When we [learned about arrays in JavaScript](lesson://js-intro/arrays) we saw
 that the `forEach` method is very helpful for iterating through the contents of
 an array.
 
@@ -198,7 +198,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 ## Similarity to LINQ
 
-For those who have studied [C# LINQ](/lessons/cs-linq) you may see a strong
+For those who have studied [C# LINQ](lesson://cs-linq) you may see a strong
 resemblance of the `Select` statement. In fact `Select` from C# and `map` from
 `JavaScript` are very similar.
 
@@ -314,5 +314,5 @@ const answer = Object.entries(myHobbies).map(
 
 ### Others
 
-See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for
+See the [quick reference guide](lesson://misc-quick-reference/js-arrays) for
 other iterators such as `some`, `every`, and `reduce-right`

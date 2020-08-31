@@ -1,57 +1,69 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { useUIContext } from '../../../context/UIContext'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import { Heading } from './Heading'
 import { Description } from './Description'
 import { SubHeading } from './SubHeading'
 import { LinkItem as Item } from './Item'
 
-export function ModuleMenu() {
-  const {
-    allMdx: { nodes: lessons },
-  } = useStaticQuery(graphql`
-    query LessonMenuQuery {
+export function ModuleMenu({ program, module }) {
+  const { allMdx, allProgramsYaml } = useStaticQuery(graphql`
+    query ModuleMenuQuery {
+      allProgramsYaml {
+        nodes {
+          title
+          slug
+          modules {
+            slug
+            title
+            lessons
+            description
+          }
+        }
+      }
       allMdx(filter: { fields: { type: { eq: "lesson" } } }) {
         nodes {
-          frontmatter {
-            title
-          }
           fields {
             slug
-            path
+          }
+          frontmatter {
+            title
           }
         }
       }
     }
   `)
-  const { resetNavigation, currentNavTarget } = useUIContext()
-  if (currentNavTarget) {
-    const { program, module } = currentNavTarget
-    return (
-      <>
-        <Heading onClick={resetNavigation} icon="fas fa-caret-left">
-          {program.title}
-        </Heading>
-        <SubHeading>{module.title}</SubHeading>
-        {module.description && <Description>{module.description}</Description>}
-        <Heading>Lessons</Heading>
-        <div className="pl-3">
-          {module.lessons.map((slug) => {
-            const lesson = lessons.find((lesson) => lesson.fields.slug === slug)
-            return lesson ? (
-              <Item key={slug} to={lesson.fields.path}>
-                {lesson.frontmatter.title}
-              </Item>
-            ) : (
-              <Item key={slug}>
-                <span className="text-red-400">MISSING LESSON: {slug}</span>
-              </Item>
-            )
-          })}
-        </div>
-      </>
-    )
-  } else {
-    return null
-  }
+
+  const currentProgram = allProgramsYaml.nodes.find((n) => n.slug === program)
+  const currentModule = currentProgram.modules.find((m) => m.slug === module)
+  const lessons = allMdx.nodes.reduce((l, n) => {
+    l[n.fields.slug] = n.frontmatter.title
+    return l
+  }, {})
+
+  return (
+    <>
+      <Heading icon="fas fa-caret-left">
+        <Link to="/">{currentProgram.title}</Link>
+      </Heading>
+      <SubHeading>{currentModule.title}</SubHeading>
+      {currentModule.description && (
+        <Description>{currentModule.description}</Description>
+      )}
+      <Heading>Lessons</Heading>
+      <div className="pl-3">
+        {currentModule.lessons.map((slug) => {
+          const lesson = lessons[slug]
+          return lesson ? (
+            <Item key={slug} to={`/${program}/${module}/${slug}`}>
+              {lesson}
+            </Item>
+          ) : (
+            <Item key={slug}>
+              <span className="text-red-400">MISSING LESSON: {slug}</span>
+            </Item>
+          )
+        })}
+      </div>
+    </>
+  )
 }

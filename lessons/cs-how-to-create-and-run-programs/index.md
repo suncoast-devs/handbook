@@ -14,7 +14,7 @@ to run our code.
 
 ## Before getting started
 
-Ensure you have [setup your environment](/lessons/cs-environment-setup)
+Ensure you have [setup your environment](lesson://cs-environment-setup)
 including a step on selecting and creating a location to keep your projects.
 
 ## The `dotnet` command
@@ -33,7 +33,7 @@ our shell into the directory where we'll keep our code. We suggest you use a
 folder named `sdg` or `code` or something else that will remind you this is
 where your projects are. You'll also want to keep this directory in your home
 folder, your `Desktop`, or your `Documents` folder. You will find instructions
-in [the setup lesson](/lessons/cs-environment-setup) on how to create these.
+in [the setup lesson](lesson://cs-environment-setup) on how to create these.
 
 ### Running `dotnet new sdg-console` to make a new console application
 
