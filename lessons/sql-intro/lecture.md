@@ -326,10 +326,10 @@ Regardless if there are ten rows or ten million rows, this statement will return
 Often we do not want _all_ the columns from the table so we can specify specific columns.
 
 ```sql
-SELECT "Title" FROM "Books";
+SELECT "Title", "PrimaryAuthor" FROM "Books";
 ```
 
-While this will still return all the rows, we will only see the `Title` column for all those rows.
+While this will still return all the rows, we will only see the `Title` and "PrimaryAuthor" columns for all those rows.
 
 ---
 
