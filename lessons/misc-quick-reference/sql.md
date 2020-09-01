@@ -121,6 +121,22 @@ SELECT *
 FROM "Books";
 ```
 
+## We can also do computations with `SELECT`
+
+To see the number of books:
+
+```sql
+SELECT COUNT(*)
+FROM "Books";
+```
+
+To see the average, largest, and smallest year of publication
+
+```sql
+SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
+FROM "Books";
+```
+
 ## SELECT data but limit the rows to return
 
 Using a `WHERE` clause we can limit which rows are selected.
