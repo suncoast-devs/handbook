@@ -1,6 +1,6 @@
 ---
 title: Additional Resources
-order: 4
+order: 2
 ---
 
 - Documentation about

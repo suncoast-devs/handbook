@@ -44,6 +44,7 @@ modules:
       # - misc-rest
       - cs-api-clients
       - cs-api-servers
+      - cs-api-servers-crud
       # - misc-optimizing-developer-workspace
       # - cs-other-enumerables (List, Queue, Dictionary, HashSet, Stack, )
   - front-end-fundamentals:
