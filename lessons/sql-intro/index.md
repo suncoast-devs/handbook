@@ -403,6 +403,22 @@ SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror' ORDER BY "
 SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Title" LIKE 'The Lord of the Rings%' ORDER BY "Title";
 ```
 
+We can also do computations with `SELECT`
+
+To see the number of books:
+
+```sql
+SELECT COUNT(*)
+FROM "Books";
+```
+
+To see the average, largest, and smallest year of publication
+
+```sql
+SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
+FROM "Books";
+```
+
 #### UPDATE
 
 To change data in our database, we use an `UPDATE` statement. The general

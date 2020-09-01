@@ -368,6 +368,23 @@ books.Select(book => book.Title);
 
 ---
 
+# We can also do computations with `SELECT`
+
+See the number of books:
+
+```sql
+SELECT COUNT(*)
+FROM "Books";
+```
+
+See the average, largest, and smallest year of publication
+
+```sql
+SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
+FROM "Books";
+```
+
+
 We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied. 
 
 <br/>
