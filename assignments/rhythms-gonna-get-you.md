@@ -28,7 +28,7 @@ band.
 ### Setup
 
 ```shell
-dotnet new sdg-console-database -o RhythmsGonnaGetYou
+dotnet new sdg-console -o RhythmsGonnaGetYou
 ```
 
 ### Explorer Mode
@@ -73,9 +73,7 @@ dotnet new sdg-console-database -o RhythmsGonnaGetYou
 
 ### Adventure Mode
 
-- [ ] Add the ability for an album to have many songs. **NOTE** a song will only
-      belong to a single album. Even if the same-named song appears on different
-      albums we'd have a second entry for it.
+- [ ] Add the ability for an album to have many songs. **NOTE** a song will only belong to a single album. Even if the same-named song appears on different albums we'd have a second entry for it.
 
   - [ ] Song
 
@@ -85,16 +83,14 @@ dotnet new sdg-console-database -o RhythmsGonnaGetYou
     - Length
     - Genre
 
-- [ ] Track the individual members of a band. Create a new table called
-      `Musicians` and give it a many to many relationships with a Band
+- [ ] Track the individual members of a band. Create a new table called `Musicians` and make it a many to many relationships with a Band
 - Add the following queries
   - [ ] View albums in a genre
   - [ ] View all members of a band
 
 ### Epic Mode
 
-- Add another entity that you feel would benefit the system. Update your ERD,
-  tables and user interface to support it.
+- Add another entity that you feel would benefit the system. Update your ERD, tables, and user interface to support it.
 
 ## Additional Resources
 

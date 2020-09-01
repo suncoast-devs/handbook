@@ -3,10 +3,7 @@ title: Introduction to APIs
 tags: ['api']
 ---
 
-<!-- prettier-ignore-start -->
-
-In this project, you will practice accessing an API. You'll see how an API
-request is made, and see how data is returned from an API
+In this project, you will practice accessing an API. You'll see how an API request is made, and see how data is returned from an API
 
 ## Objectives
 
@@ -14,19 +11,9 @@ request is made, and see how data is returned from an API
 - Understand how an API request is sent.
 - Understand the request and response for an API.
 
-### Setup
-
-```shell
-dotnet new sdg-console -o ApiIntro
-```
-
 ### Explorer Mode
 
-- [] Choose one of the APIs from
-  [this list](https://github.com/public-apis/public-apis) that does not request
-  "AUTH" (Authorization) since an API that requires authorization is a little
-  more difficult to use when first learning. I have also selected some sample
-  APIs that will be good choices:
+- [] Choose one of the APIs from [this list](https://github.com/public-apis/public-apis) that does not request "AUTH" (Authorization) since an API that requires authorization is a little more difficult to use when first learning. I have also selected some sample APIs that will be good choices:
 
 | API            | Documentation                                  |
 | -------------- | ---------------------------------------------- |
@@ -43,16 +30,14 @@ dotnet new sdg-console -o ApiIntro
 | Jokes          | https://github.com/15Dkatz/official_joke_api   |
 | Star Wars API  | https://swapi.dev                              |
 
+> NOTE: To attach images of your screenshots, use a service such as [PostImage](https://postimages.org/) to upload your images and get a URL to paste into the homework comments.
+
 - [ ] After choosing your API **read** the documentation.
 - [ ] Use the `Insomnia` tool to make a few queries of the API.
-- [ ] Capture screenshots from `Insomnia` showing your request and the response
-      output.
+- [ ] Capture screenshots from `Insomnia` showing your request and the response output.
 - [ ] Attach those screenshots to your homework assignment.
 - [ ] For one response, show a screenshot with the "Header" tab displayed.
-- [ ] For this response, find a few headers and describe what they do. NOTE: If
-      the header starts with `X-` it is a _custom_ header and likely is
-      documented by your API. Other headers are more standard and can be google
-      searched.
+- [ ] For this response, find a few headers and describe what they do. NOTE: If the header starts with `X-` it is a _custom_ header and likely is documented by your API. Other headers are more standard and can be google searched.
 
 ## Adventure Mode
 
@@ -61,16 +46,13 @@ Read the documentation on this API: https://one-list-api.herokuapp.com/
 Choose your access token from your first and last name. For example `jane-doe`
 or `ron-swanson`.
 
-- [ ] Use `Insomnia` to insert 6 items in the list associated with your access
-      token. Attach screenshots of the request and results screen.
-- [ ] Use `Insomnia` to mark 2 of these items complete. Attach screenshots of
-      the request and result screen.
-- [ ] Use `Insomnia` to delete 1 of the non-complete items. Attach screenshots
-      of the request and result screen.
+> NOTE: To attach images of your screenshots, use a service such as [PostImage](https://postimages.org/) to upload your images and get a URL to paste into the homework comments.
+
+- [ ] Use `Insomnia` to insert 6 items in the list associated with your access token. Attach screenshots of the request and results screen.
+- [ ] Use `Insomnia` to mark 2 of these items complete. Attach screenshots of the request and result screen.
+- [ ] Use `Insomnia` to delete 1 of the non-complete items. Attach screenshots of the request and result screen.
 
 ## Epic Mode
 
-- [ ] Investigate using C#'s `HttpClient` class to make requests to any of the
-      APIs you used in Adventure mode.
-- [ ] Create a console app that makes requests and prints the results. Submit
-      the URL to the Github repository of this console app.
+- [ ] Investigate using C#'s `HttpClient` class to make requests to any of the APIs you used in Adventure mode.
+- [ ] Create a console app that makes requests and prints the results. Submit the URL to the Github repository of this console app.

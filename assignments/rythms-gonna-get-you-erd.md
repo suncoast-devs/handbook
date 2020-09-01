@@ -1,6 +1,6 @@
 ---
 title: Rhythm's gonna get you - ERD
-tags: ["c-sharp", "console", "sql", "ef-core"]
+tags: ['c-sharp', 'console', 'sql', 'ef-core']
 ---
 
 # Rhythm's gonna get you - ERD
@@ -16,7 +16,7 @@ console app that stores our information in a database.
 
 ## Requirements
 
-Create the ERD (Entity Relationship Diagram) and resulting tables that allows a
+Create the ERD (Entity Relationship Diagram) and resulting tables that allow a
 user to store and manage the company's bands and albums.
 
 ## Top Tips

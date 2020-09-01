@@ -63,10 +63,9 @@ Reuse the same repository from that assignment for this assignment. Add the new 
 * [ ] Insert a new order with order number `X529`, placed on Jan 1st, 2020 at 4:55PM, by someone with the email address "person@example.com"
 * [ ] Add an order quantity of `3` for the product named `Widget` to the order `X529`
 * [ ] Add an order quantity of `2` for the product named `Flowbee` to the order `X529`
-* [ ] Given a department id, return all employees in the department.
-* [ ] Given a department name, return all the phone extensions.
+* [ ] Given a building, return all employees that work in that building. Show this query for buildings named `North Side`, `East Side`, and finally a building that you actually have in your data -- even if your data doesn't have any departments in those buildings. NOTE this means you can't manually look up `Id`s and use them, you have to let SQL do that work. (Hint: JOIN)
 * [ ] Find all orders that contain the product id of `2`.
-* [ ] Remove the `Flowbee` product from order with order number `X529`.
+* [ ] Find the quantity of the `Flowbee` product from order with order number `X529`. You may not write the value of an `Id` in your query, let SQL do the work (HINT: JOIN)
 
 ### Adventure Mode
 
