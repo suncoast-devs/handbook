@@ -356,6 +356,27 @@ var thirdLetter = sentence[2];
 
 ---
 
+# DateTime
+
+C# comes with a specialized class to deal with storing a date and time.
+
+A `DateTime` is a `Year`, `Month`, `Day`, `Hour`, `Minute`, `Second`, and `Millisecond`.
+
+To create a DateTime variable equal to the current time you can use this syntax:
+
+```csharp
+var rightNow = DateTime.Now
+```
+
+If you then wanted to know the current month:
+
+```csharp
+var rightNow = DateTime.Now;
+var currentMonth = rightNow.Month;
+```
+
+---
+
 # About naming variables
 
 - Use clear variable names.

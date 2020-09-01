@@ -347,6 +347,29 @@ and you'll see this fairly often. It will help you if you think of this as the
 `index` as opposed to the `1st`, `2nd`, etc. So `the character at index 0`
 instead of `the 1st character`
 
+# DateTime
+
+C# comes with a specialized class to deal with storing a date and time. A
+DateTime is a Year, Month, Day, Hour, Minute Second, and Millisecond.
+
+To create a DateTime variable equal to the current time you can use this syntax:
+
+```csharp
+var rightNow = DateTime.Now
+```
+
+If you then wanted to know the current month:
+
+```csharp
+var rightNow = DateTime.Now;
+var currentMonth = rightNow.Month;
+```
+
+You can see a full
+[list of the properties](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1#properties)
+of a DateTime on
+[Microsoft's Documentation for DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1#properties)
+
 # Conclusion
 
 Variables are a fundamental aspect of many programming languages. `C#` provides
