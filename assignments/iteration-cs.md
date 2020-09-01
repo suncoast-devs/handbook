@@ -23,11 +23,8 @@ After completing this assignment, you should be able to:
 4. Change into your project's directory: `cd net-iteration`
 5. Install the dependencies: `dotnet restore`
 6. Open in your editor: `code .`
-7. Start the test runner: `dotnet watch test`
-8. Open `Iterations.cs` and work on functions until the test passes. Once you
-   are done with a test you can move to the next one by removing the
-   `(Skip = "Remove to run test")` from the `Fact` attribute. There are a total
-   of 10 questions.
+7. Start the test runner: `dotnet watch run`
+8. Open `Iterations.cs` and work on functions until the test passes. Once you are done with a test you can move to the next one. There are a total of 10 questions.
 9. Commit and push your work to GitHub.
 10. Turn in the URL to your GitHub repo.
 
