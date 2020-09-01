@@ -330,7 +330,7 @@ To see all of the movies, we can use a `foreach` loop:
 ```csharp
 foreach (var movie in movies)
 {
-  Console.WriteLine($"There is a movie named {movie.title}");
+  Console.WriteLine($"There is a movie named {movie.Title}");
 }
 ```
 

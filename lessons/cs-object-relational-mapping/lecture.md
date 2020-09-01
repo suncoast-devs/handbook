@@ -182,7 +182,7 @@ Finally, we **override** a method required by `EF Core` that tells us how to con
 
 EF Core will call this method to setup the connection to the database.
 
-In here we tell the options we are using a postgres database (`UseNpgsql`) and that the database is named `suncoast_movies` and is on our local machine.
+In here we tell the options we are using a postgres database (`UseNpgsql`) and that the database is named `SuncoastMovies` and is on our local machine.
 
 ---
 
