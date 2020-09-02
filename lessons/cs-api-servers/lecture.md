@@ -52,7 +52,7 @@ In this way our entire program becomes _asynchronous_ and broken into small meth
 So far we have used `sdg-console` to create our application. For today's lecture we will use one that configures our code to interact with HTTP clients.
 
 ```shell
-dotnet new webapi -o BasicAPI
+dotnet new sdg-api -o BasicAPI
 ```
 
 ---
@@ -83,9 +83,7 @@ These files configure certain features such as logging (we'll talk more about lo
 
 # Startup.cs
 
-This file controls the startup of the part of our system that handles receiving
-requests from clients and sending results. Lets walk through the code and
-discuss all the important pieces.
+This file controls the startup of the part of our system that handles receiving requests from clients and sending results. Lets walk through the code and discuss all the important pieces.
 
 ---
 
@@ -160,7 +158,7 @@ dotnet aspnet-codegenerator controller
 
        Request an API style controller
        |
-       |     Name of the tool
+       |     Name of the controller
        |     |
        |     |                         What folder to place the generated controller code
        |     |                         |
@@ -372,7 +370,7 @@ These are parts of the URL after a `?` and are key-value pairs separated by `=` 
 Our requests will now look like
 
 ```
-/helloworld?who=Sandy
+/api/HelloWorld?who=Sandy
 ```
 
 ---
@@ -392,7 +390,7 @@ In this case:
 
 ```csharp
 [HttpGet]
-public string Get(string who)
+public string HelloWorld(string who)
 {
     return $"Hello, {who}. It is currently {DateTime.Now}";
 }
