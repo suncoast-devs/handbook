@@ -17,7 +17,7 @@ that run in the terminal. Now we will be using a different template, one that
 configures our code to interact with HTTP clients.
 
 ```shell
-dotnet new webapi -o BasicAPI
+dotnet new sdg-api -o BasicAPI
 ```
 
 You will notice more files in this project than we are familiar with from our
@@ -29,8 +29,6 @@ appsettings.json
 BasicAPI.csproj
 Program.cs
 Startup.cs
-WeatherForecast.cs
-Controllers/WeatherForecastController.cs
 Properties/launchSettings.json
 ```
 
@@ -112,22 +110,7 @@ This file configures how our application is started in different environments
 and by different web hosts. This file will also not be updated often by us. We
 might update it if we need to support a different hosting environment.
 
-### WeatherForecast.cs
-
-This is a class that represents weather information. It is a POCO (Plain Old
-Csharp Object) and is included for an example
-
-### Controllers/WeatherForecastController.cs
-
-This is a _controller_ used to respond to requests. We'll be talking more about
-controllers soon.
-
 ## Writing our first API
-
-The template generates a sample controller and a class to use with it. We'll be
-building up to a similar example, so lets remove those files by deleting them.
-In VS Code we can right click and remove the files, or use `rm` command to
-delete them.
 
 The simplest of all applications is the `Hello, World` app. Let's make an API
 that if you send a `GET` to `/helloworld` we will get back the text
@@ -485,3 +468,11 @@ public List<int> Roll(int sides, int count = 1)`
 
 By changing this we now default to rolling a single die if a value is not
 supplied.
+
+## Conclusion
+
+- We have written our fist API controller.
+- We have written a handler for a GET request.
+- We have allowed input to be supplied with a query parameter.
+- We have allowed input to be supplied with a URL parameter.
+- We have returned JSON data, both a single number and an array of numbers
