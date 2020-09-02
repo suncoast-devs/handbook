@@ -1,5 +1,5 @@
 const path = require('path')
-import { urlForLesson } from '../src/utils'
+const { urlForLesson } = require('../src/utils')
 
 module.exports = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -21,7 +21,7 @@ module.exports = async ({ graphql, actions, reporter }) => {
     reporter.panicOnBuild('🚨  ERROR: Loading "allProgramsYaml" query')
   }
 
-  for (const program of programs) {
+  for (const program of allProgramsResult.data.allProgramsYaml.nodes) {
     for (const module of program.modules) {
       await createPage({
         path: `/${program.slug}/${module.slug}`,

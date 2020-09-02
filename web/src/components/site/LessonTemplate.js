@@ -19,57 +19,61 @@ const LessonContext = React.createContext({
 // TODO: If this ends up getting used elsewhere, refactor lesson Link to it's own component, or make urlForLesson
 //  context aware so everything can just be urlForLesson(slug).
 function AutoLink({ href, children, ...props }) {
-  const [, linkedLesson] = href.match(/^lesson:\/\/(.+)/) || []
-  if (linkedLesson) {
-    return (
-      <LessonContext.Consumer>
-        {({ program, module, programMap }) => {
-          let linkedProgram = program
-          let linkedModule = module
-          const currentModuleLessons = programMap[program][module]
-          const [linkedLessonSlug] = linkedLesson.split(/[^\w-]/)
-          // This lesson is not in the current program and module.
+  if (href) {
+    const [, linkedLesson] = href.match(/^lesson:\/\/(.+)/) || []
+    if (linkedLesson) {
+      return (
+        <LessonContext.Consumer>
+          {({ program, module, programMap }) => {
+            let linkedProgram = program
+            let linkedModule = module
+            const currentModuleLessons = programMap[program][module]
+            const [linkedLessonSlug] = linkedLesson.split(/[^\w-]/)
+            // This lesson is not in the current program and module.
 
-          if (!currentModuleLessons.includes(linkedLessonSlug)) {
-            // Look for the first module in this program that includes this lesson.
-            const [otherModule] =
-              Object.entries(programMap[program]).find(([, l]) => {
-                return l.includes(linkedLessonSlug)
-              }) || []
-            if (otherModule) {
-              linkedModule = otherModule
-            } else {
-              // Otherwise look for the first program that contain this lesson in a module.
-              loop: for (const [program, modules] of Object.entries(
-                programMap
-              )) {
-                for (const [module, lessons] of Object.entries(modules)) {
-                  if (lessons.includes(linkedLessonSlug)) {
-                    linkedProgram = program
-                    linkedModule = module
-                    break loop
+            if (!currentModuleLessons.includes(linkedLessonSlug)) {
+              // Look for the first module in this program that includes this lesson.
+              const [otherModule] =
+                Object.entries(programMap[program]).find(([, l]) => {
+                  return l.includes(linkedLessonSlug)
+                }) || []
+              if (otherModule) {
+                linkedModule = otherModule
+              } else {
+                // Otherwise look for the first program that contain this lesson in a module.
+                loop: for (const [program, modules] of Object.entries(
+                  programMap
+                )) {
+                  for (const [module, lessons] of Object.entries(modules)) {
+                    if (lessons.includes(linkedLessonSlug)) {
+                      linkedProgram = program
+                      linkedModule = module
+                      break loop
+                    }
                   }
                 }
               }
             }
-          }
-          return (
-            <Link
-              to={urlForLesson(linkedLesson, linkedModule, linkedProgram)}
-              {...props}
-            >
-              {children}
-            </Link>
-          )
-        }}
-      </LessonContext.Consumer>
-    )
+            return (
+              <Link
+                to={urlForLesson(linkedLesson, linkedModule, linkedProgram)}
+                {...props}
+              >
+                {children}
+              </Link>
+            )
+          }}
+        </LessonContext.Consumer>
+      )
+    } else {
+      return (
+        <a href={href} {...props}>
+          {children}
+        </a>
+      )
+    }
   } else {
-    return (
-      <a href={href} {...props}>
-        {children}
-      </a>
-    )
+    return <a {...props}>{children}</a>
   }
 }
 
