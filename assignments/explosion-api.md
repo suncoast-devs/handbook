@@ -25,7 +25,7 @@ dotnet new sdg-api -o ExplosionAPI
 
 ### Explorer Mode
 
-- [ ] Create a new `webapi` api project
+- [ ] Create a new `sdg-api` api project
 - [ ] Create a Controller for `explosion`
   - [ ] Create a new Controller called `ExplosionController`
   - [ ] This will have one `HttpGet` method
