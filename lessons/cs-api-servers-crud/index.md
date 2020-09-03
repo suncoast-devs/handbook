@@ -71,7 +71,7 @@ have been added to your environment in the
 To generate an app with API and database support:
 
 ```shell
-dotnet new sdg-api -o GameDatabaseAPI
+dotnet new sdg-api -o GameNight
 ```
 
 This will create a folder `GameDatabaseAPI` with a template of an application
@@ -132,9 +132,9 @@ public class Game
 
 ## Next step, inform our `DatabaseContext` of this model
 
-In our LESSON ON EF CORE we didn't have a separate file for our
-`DatabaseContext` however in most apps it lives in it's own file and you will
-find it in the `Models` folder here as well.
+In our [lesso on ef core](/lessons/cs-object-relational-mapping) we didn't have
+a separate file for our `DatabaseContext` however in most apps it lives in it's
+own file and you will find it in the `Models` folder here as well.
 
 After this code:
 

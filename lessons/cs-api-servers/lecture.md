@@ -346,10 +346,9 @@ Let's put that in our browser.
 
 ## Making our response more dynamic.
 
-If we want to see different data coming back for each request, lets include the
-current date and time in the greeting.
+If we want to see different data coming back for each request, lets include the current date and time in the greeting.
 
-We change the implemention of the method to:
+We change the implementation of the method to:
 
 ```csharp
 [HttpGet]
