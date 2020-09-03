@@ -3,7 +3,7 @@ title: The Rise of the Tamagotchi
 tags: ['c-sharp', 'console', 'api', 'ef-core', 'dotnet']
 ---
 
-To start your journey you will be creating an API that allows a user to create and care for a virtual pet, reminiscent of a [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi). The basic functionality will walk you through the four basic parts of a web API, create, read, update and delete.
+To start your journey you will be creating an API that allows a user to create and care for a virtual pet, reminiscent of a [Tamagotchi](https://en.wikipedia.org/wiki/Tamagotchi). The basic functionality will walk you through the four basic parts of a web API, create, read, update, and delete.
 
 ## Objectives
 
@@ -50,6 +50,14 @@ Your API should have the following endpoints
 - [ ] `POST /pets/{id}/playtimes`, should find the pet by id and add 5 to its happiness level and add 3 to its hungry level. It should also create a new `Playtime` for this pet and the current time.
 - [ ] `POST /pets/{id}/feedings`, should find the pet by id and subtract 5 from its hungry level and add 3 to its happiness level. It should also create a new `Feeding` for this pet and the current time.
 - [ ] `POST /pets/{id}/scoldings`, should find the pet by id and subtract 5 from its happiness level. It should also create a new `Scolding` for this pet and the current time.
+
+Demonstrate your API works
+
+- [ ] Using Insomnia, create three Pets. Include a screenshot containing the API request and the response.
+- [ ] Using Insomnia, create a playtime for one of your pets. Show the API request and the response.
+- [ ] Using Insomnia, create a feeding for one of your pets. Show the API request and the response.
+- [ ] Using Insomnia, create a scolding for one of your pets. Show the API request and the response.
+- [ ] Using Insomnia, show the details of all the pets. Show the API request and the response.
 
 ### Adventure Mode
 
