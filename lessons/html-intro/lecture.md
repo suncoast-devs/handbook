@@ -25,7 +25,7 @@ Jason
 
 ![fit](./assets/jason-plain.png)
 
-^  This is just plain text in the browser. It doesn't have any styling, or any meaning
+^ This is just plain text in the browser. It doesn't have any styling, or any meaning
 
 ---
 
@@ -41,7 +41,7 @@ Jason
 
 ![fit](./assets/jason-paragraph.png)
 
-^  This tells the browser that this is an entire paragraph, which in the browser will make the text appear on it's own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_
+^ This tells the browser that this is an entire paragraph, which in the browser will make the text appear on it's own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_
 
 ---
 
@@ -65,7 +65,6 @@ Jason
 
 # Nesting Elements
 
-
 To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` element. This indicates, both _semantically_ and _visually_ that the word is to be strongly emphasized
 
 <br/>
@@ -75,7 +74,6 @@ To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` eleme
 ```
 
 ![fit right](./assets/jason-strong.png)
-
 
 ---
 
@@ -107,7 +105,6 @@ Making sure you have _correct_ code is very important.
 
 [.column]
 ![fit](./assets/jason-invalid.png)
-
 
 ---
 
@@ -156,7 +153,6 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 </html>
 ```
 
-
 ---
 
 # Lets break this down
@@ -185,7 +181,6 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
   </body>
 </html>
 ```
-
 
 ---
 
@@ -310,7 +305,6 @@ The `<title>` element. This sets the title of your page, which is the title that
 </html>
 ```
 
-
 ---
 
 [.autoscale: true]
@@ -349,8 +343,7 @@ In the above examples you may have noticed that a lot of whitespace is included 
 ```html
 <p>Dogs are silly.</p>
 
-<p>Dogs        are
-         silly.</p>
+<p>Dogs are silly.</p>
 ```
 
 ---
@@ -487,7 +480,6 @@ Semantics are relied on everywhere around us — we rely on previous experience 
 
 In a similar vein, we need to make sure we are using the correct elements, giving our content the correct meaning, function, or appearance. In this context the `<h1>` element is also a semantic element, which gives the text it wraps around the role (or meaning) of "a top level heading on your page."
 
-
 ---
 
 # How are semantics used?
@@ -517,10 +509,7 @@ Unordered lists are used to mark up lists of items for which the order of the it
 Let's take a shopping list as an example.
 
 ```html
-milk
-eggs
-bread
-hummus
+milk eggs bread hummus
 ```
 
 ---
@@ -532,10 +521,7 @@ the list items:
 
 ```html
 <ul>
-milk
-eggs
-bread
-hummus
+  milk eggs bread hummus
 </ul>
 ```
 
@@ -583,7 +569,6 @@ Go straight across the first two roundabouts
 Turn left at the third roundabout
 The school is on your right, 300 meters up the road
 ```
-
 
 ---
 
@@ -690,10 +675,9 @@ Another attribute you may want to add to your links is title; this is intended t
 
   <a
     href="https://suncoast.io/handbook"
-    title="Our curriculum and student handbook">
-
+    title="Our curriculum and student handbook"
+  >
     Suncoast Developers Guild Handbook
-
   </a>
 
   page.
@@ -729,162 +713,61 @@ It is possible to create links or buttons that, when clicked, open a new outgoin
 
 ---
 
-# Tables
+# Images
 
-These help structure _tabular_ data. That is, data that is best expressed in a series of rows comprised of columns. With a little CSS we can make beautiful data representations.
-
-_NOTE_: It _used_ to be that developers used `<table>` for _layout_ which we do not do any more since we have much better systems for layout. (more on layout later)
-
----
-
-# Table Example
-
-![inline](https://mdn.mozillademos.org/files/14583/numbers-table.png)
-
----
-
-# Table Example
-
-![inline](https://mdn.mozillademos.org/files/14587/swimming-timetable.png)
-
----
-
-# How does a table work
-
-The point of a table is that it is rigid. Information is easily interpreted by making visual associations between row and column headers.
-
----
-
-[.column]
-
-```html
-<table>
-  <caption>
-    Data about the planets of our solar system (Planetary facts taken from
-    <a
-      rel="noopener"
-      href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-      class="external external-icon"
-      >Nasa's Planetary Fact Sheet - Metric</a
-    >.
-  </caption>
-  <thead>
-    <tr>
-      <td colspan="2">&nbsp;</td>
-      <th scope="col">Name</th>
-      <th scope="col">Mass (10<sup>24</sup>kg)</th>
-      <th scope="col">Diameter (km)</th>
-      <th scope="col">Notes</th>
-    </tr>
-  </thead>
-```
-
-[.column]
-```html
-  <tbody>
-    <tr>
-      <th colspan="2" rowspan="4" scope="rowgroup">Terrestial planets</th>
-      <th scope="row">Mercury</th>
-      <td>0.330</td>
-      <td>4,879</td>
-      <td>5427</td>
-      <td>Closest to the Sun</td>
-    </tr>
-    <tr>
-      <th scope="row">Venus</th>
-      <td>4.87</td>
-      <td>12,104</td>
-      <td>5243</td>
-      <td>&nbsp;</td>
-    </tr>
-  </tbody>
-</table>
-```
-
----
-
-# Table Example Code
-
-Take a look at [this example](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) to see a detailed example of a table
-
----
-
-# Parts of the table
-
-- A table is comprised of three major portions: `thead`, `tfoot`, and `tbody`
-
-- The `<thead>` element needs to wrap the part of the table that is the header
-- The `<tbody>` element needs to wrap the other parts of the table content that aren't in the table header or footer.
-- The `<tfoot>` element needs to wrap the part of the table that is the footer
-
----
-
-# Making rows
-
-The `<thead>` and `<tbody>` should be comprised of many `<tr>` table rows.
-
-Within the `<tr>` elements we will find a sequence of either `<th>` for _headers_ or `<td>` for _data_
-
----
-
-# Beyond the basics
-
-Now that we have covered many of the basic HTML tags, lets talk about _semantics_
-
-> Semantics relate to meaning in a language. In HTML we want to choose tags that > convey to the browser, and to any future developer, the purpose of the chosen > tag.
-
----
-
-# Example
-
-For example, the `<h1>` element is a semantic element, which gives the text it wraps around the role of "a top level heading on your page."
-
-By default, most browser's user agent stylesheet will style an `<h1>` with a large font size to make it look like a heading.
-
----
-
-# However ...
-
-We could take any element and use styling to make it _look_ like a header.
-
-So why bother with using an `<h1>` versus an `<h2>` or a `<p>`?
-
----
-
-# Representation of structure
-
-HTML should be coded to represent the data that will be populated and not based on its default presentation styling. Presentation (how it should look), is the sole responsibility of CSS.
-
----
-
-# Benefits
-
-- Search engines will consider its contents as important keywords to influence the page's search rankings (see SEO)
-
-- Screen readers can use it as a signpost to help visually impaired users navigate a page
-
-- Finding blocks of meaningful code is significantly easier than searching though endless divs with or without semantic or namespaced classes
-
-- Suggests to the developer the type of data that will be populated
-
-- Semantic naming mirrors proper custom element/component naming
+A common element on a web page is an image. Given that their exchange rate is equal to one thousand words, they can be an important aspect of any page design.
 
 ---
 
 [.autoscale: true]
 
-# How to decide?
+# <img> tag
 
-> "What element(s) best describe/represent the data that I'm going to populate?"
+So for example, if your image is called dinosaur.jpg, and it sits in the same directory as your HTML page, you could embed the image like so:
 
-For example:
+```html
+<img src="dinosaur.jpg" />
+```
 
-- Is it a list of data? -- ordered, unordered?
-- Is it an article with sections and an aside of related information?; does it
-  list out definitions?
-- Is it a figure or image that needs a caption?
-- Should it have a header and a footer in addition to the global site-wide
-  header and footer?
+If the image was in an images subdirectory, then you'd embed it like this:
+
+```html
+<img src="images/dinosaur.jpg" />
+```
+
+You could embed the image using its absolute URL, for example:
+
+```html
+<img src="https://www.example.com/images/dinosaur.jpg" />
+```
+
+---
+
+# Void Element
+
+Notice that the `img` tag is not:
+
+```
+<img src="images/dinosaur.jpg"></img>
+```
+
+But it is a single element that opens and closes on its own.
+
+This is known as a `void element` in that the element has not content area and thus _self closes_
+
+---
+
+# Alternative text
+
+The next attribute we'll look at is `alt`. Its value is supposed to be a textual description of the image, for use in situations where the image cannot be seen/displayed or takes a long time to render because of a slow internet connection. For example, our above code could be modified like so:
+
+```html
+<img
+  src="images/dinosaur.jpg"
+  alt="The head and torso of a dinosaur skeleton;
+          it has a large head with long sharp teeth"
+/>
+```
 
 ---
 
