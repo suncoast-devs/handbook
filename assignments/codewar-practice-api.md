@@ -1,5 +1,5 @@
 ---
-title: Explosion API
+title: Codewar Practice API
 tags: ['c-sharp', 'dotnet', 'api']
 ---
 
@@ -20,20 +20,18 @@ tags: ['c-sharp', 'dotnet', 'api']
 ### Setup
 
 ```shell
-dotnet new sdg-api -o ExplosionAPI
+dotnet new sdg-api -o CodeWarPracticeAPI
 ```
 
 ### Explorer Mode
 
 - [ ] Create a new `sdg-api` api project
-- [ ] Create a Controller for `explosion`
-  - [ ] Create a new Controller called `ExplosionController`
+- [ ] Create a Controller for `explosion` named `ExplosionController`
   - [ ] This will have one `HttpGet` method
   - [ ] The method will accept a string either as a URL parameter or a query parameter. Your choice.
   - [ ] This endpoint method will take the string passed to it, manipulate according to the kata [https://www.codewars.com/kata/digits-explosion](https://www.codewars.com/kata/digits-explosion) and return the result
   - [ ] Have your code return the string
-- [ ] Create a endpoint for `mumbling`
-  - [ ] Create a new Controller called `MumblingController`
+- [ ] Create a Controller for `mumbling` named `MumblingController`
   - [ ] This will have one `HttpGet` method
   - [ ] The method will accept a string either as a URL parameter or a query parameter. Your choice.
   - [ ] This endpoint method will take the string passed to it, manipulate according to the kata [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling) and return the result
