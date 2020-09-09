@@ -55,6 +55,7 @@ modules:
       - css-intro
       - css-layout
       - css-responsive
+      - front-end-safari
       - js-intro
       - js-enumeration
       - js-dom
