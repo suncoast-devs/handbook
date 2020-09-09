@@ -26,8 +26,8 @@ module.exports = [
         }
       }
     }`,
-    transformer: async ({ data: { allProgramsYaml, allMdx } }) => {
-      pages = []
+    transformer: ({ data: { allProgramsYaml, allMdx } }) => {
+      const pages = []
       for (const program of allProgramsYaml.nodes) {
         for (const module of program.modules) {
           for (const slug of module.lessons) {
