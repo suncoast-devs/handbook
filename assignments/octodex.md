@@ -23,7 +23,7 @@ You can use all the tools you have at your disposal to get the job done. Use you
 ### Setup
 
 ```shell
-app-app --beta Octodex
+app-app --alpha Octodex
 ```
 
 ### Explorer Mode
