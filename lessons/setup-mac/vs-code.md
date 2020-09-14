@@ -27,7 +27,7 @@ into your Visual Studio Code
 
 ### General Extensions:
 
-Launch a new Terminal and run:
+In any terminal (and any directory) run the following:
 
 ```shell
 code --install-extension 2gua.rainbow-brackets
@@ -37,6 +37,8 @@ code --install-extension streetsidesoftware.code-spell-checker
 
 ### C#/.NET Extensions:
 
+In any terminal (and any directory) run the following:
+
 ```shell
 code --install-extension ms-dotnettools.csharp
 code --install-extension austincummings.razor-plus
@@ -45,10 +47,11 @@ code --install-extension jorgeserrano.vscode-csharp-snippets
 code --install-extension ms-azuretools.vscode-docker
 ```
 
-## Front End Extensions:
+### Front End Extensions:
+
+In any terminal (and any directory) run the following:
 
 ```shell
-
 code --install-extension aeschli.vscode-css-formatter
 code --install-extension auchenberg.vscode-browser-preview
 code --install-extension coderfee.open-html-in-browser
