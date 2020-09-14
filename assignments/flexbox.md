@@ -40,5 +40,5 @@ app-app --alpha TheDailyKitteh
 ## Recommended Practice:
 
 - https://flexboxfroggy.com/
-- https://http://cssgridgarden.com/
+- http://cssgridgarden.com/
 - https://mastery.games/p/flexbox-zombies
