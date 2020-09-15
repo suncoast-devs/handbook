@@ -18,7 +18,11 @@ You can use all the tools you have at your disposal to get the job done. Use you
 
 ## Requirements
 
-- You should strive to implement the design as close as possible, though, especially if you've never touch HTML or CSS before, this can be extraordinarily difficult and will take a lot of practice and mileage.
+- You should strive to implement the overall structure as close as possible. Focus on the relative layout, not on pixel perfection. For instance, having the header on one line with part of the nav on the left and part of the nav on right is more important than matching the weight of the text in the header.
+
+For example, this header would qualify as "good enough":
+
+![](./assets/octodex-header-good-enough.png)
 
 ### Setup
 
