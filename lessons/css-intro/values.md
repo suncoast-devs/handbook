@@ -60,7 +60,7 @@ font-size or viewport (e.g browser window) size:
 | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | em     | 1em is the same as the font-size of the current element. But beware — font sizes are inherited by elements from their parents, so if different font sizes have been set on parent elements, the pixel equivalent of an em can start to become complicated. |
 | rem    | The rem (root em) works in exactly the same way as the em, except that it will always equal the size of the default base font-size; inherited font sizes will have no effect, so this is a much better option than em                                      |
-| vw, vh | Respectively these are 1/100th of the width of the viewport, and 1/100th of the height of the viewport. Again, these are not as widely supported as em.                                                                                                    |
+| vw, vh | Respectively these are 1/100th of the width of the viewport, and 1/100th of the height of the viewport.                                                                                                                                                    |
 
 Using relative units is quite useful — you can size your HTML elements relative
 to your font or viewport size, meaning that the layout will stay looking correct
