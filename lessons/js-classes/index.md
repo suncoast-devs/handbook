@@ -199,9 +199,9 @@ barkeyMcBarkson.name // 'BARKEY MCBARKSON'
 There is another way to define methods for a class, to use the public field
 definition syntax.
 
-Let's add a `greet method of that style.
+Let's add a `greet` method of that style.
 
-```
+```javascript
 class Dog {
   name = 'Not Named'
 
