@@ -64,7 +64,7 @@ The two rules of a React component are:
 
 JSX is an extension to JavaScript that allows us to an HTML-like syntax in our
 JavaScript code that will be turned into DOM at run-time. By using JSX we can
-dynamically generate content and use a [UI as state](lessons/js-ui-as-state]
+dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
 style.
 
 ## Simplest React Component
