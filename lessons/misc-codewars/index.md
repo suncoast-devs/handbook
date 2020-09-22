@@ -93,6 +93,9 @@ Challenges we like:
 |  7  | Get the Middle Character                                   | https://www.codewars.com/kata/56747fd5cb988479af000028        |                                     |
 |  7  | Form the hightest                                          | https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e        |                                     |
 |  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        |                                     |
+|  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
+|  7  | Cryptanalysis Word Patterns                                | https://www.codewars.com/kata/5f3142b3a28d9b002ef58f5e        |                                     |
+|  8  | Closest Elevator                                           | https://www.codewars.com/kata/5c374b346a5d0f77af500a5a        |                                     |
 |  7  | Find 0 and 1                                               | https://www.codewars.com/kata/57d237f25dc38ede6e00026b        | JS Only - More challenging than a 7 |
 |  7  | Exes and Ohs                                               | https://www.codewars.com/kata/55908aad6620c066bc00002a        |                                     |
 |  7  | Drink responbility                                         | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
