@@ -60,7 +60,7 @@ https://image.tmdb.org/t/p/w185/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg
 ### Setup
 
 ```shell
-app-app --gamma-hooks PartyLitIts1989
+app-app --gamma PartyLikeIts1989
 ```
 
 ### Explorer Mode
