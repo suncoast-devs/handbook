@@ -86,8 +86,3 @@ A quick look at the _some_ of the files and directories you'll see.
 
 Looking for more guidance? Full documentation for Gatsby lives
 [on the website](https://www.gatsbyjs.org/).
-
-<ul>
-   <li>One</li>
-   <li>Two</li>
-</ul>
