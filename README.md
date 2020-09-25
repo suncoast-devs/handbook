@@ -40,7 +40,7 @@ A guide for students of the Suncoast Developers Guild.
 
 ## 🧐 What's inside?
 
-A quick look at the some of the files and directories you'll see.
+A quick look at the _some_ of the files and directories you'll see.
 
     .
     ├── assignments
@@ -49,39 +49,45 @@ A quick look at the some of the files and directories you'll see.
     ├── programs
     ├── warm-ups
     ├── web
-    ├── .prettierrc
+    ├── .prettierrc.json
     ├── LICENSE
     ├── README.md
 
 1. **`/assignments`**: This directory contains markdown formatted Assignments
    referenced by Lessons.
 
-2. **`/lessons`**: This directory contains Lesson definitions. Each lessons
+1. **`/lessons`**: This directory contains Lesson definitions. Each lessons
    contains markdown-formatted reading, lecture notes and associated
    presentations.
 
-3. **`/meta`**:
+1. **`/meta`**: Legacy content and some other things like writing style guides,
+   work-in-progress lessons, etc.
 
-4. **`/programs`**: YAML definitions of the Programs offered by SDG. This is
+1. **`/programs`**: YAML definitions of the Programs offered by SDG. This is
    where a Program is associated with Lessons (via Modules).
 
-5. **`/warm-ups`**: A sort-of miniature lesson/assignment used as a warm-up or
+1. **`/warm-ups`**: A sort-of miniature lesson/assignment used as a warm-up or
    practice outside of lecture time.
 
-6. **`/web`**: This directory contains the actual Gatsby project the powers our
+1. **`/web`**: This directory contains the actual Gatsby project the powers our
    Handbook.
 
-7. **`.prettierrc`**: This is a configuration file for
+1. **`.prettierrc.json`**: This is a configuration file for
    [Prettier](https://prettier.io/). Prettier is a tool to help keep the
    formatting of code consistent. All contributions to this repository should be
    formatted according to these rules.
 
-8. **`LICENSE`**: Our Handbook's content is licened up a Creative Commons (CC
+1. **`LICENSE`**: Our Handbook's content is licened up a Creative Commons (CC
    BY-SA 4.0) license. The web application is MIT.
 
-9. **`LICENSE`**: You're looking at it!
+1. **`README.md`**: You're looking at it!
 
 ## 🎓 Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives
 [on the website](https://www.gatsbyjs.org/).
+
+<ul>
+   <li>One</li>
+   <li>Two</li>
+</ul>
