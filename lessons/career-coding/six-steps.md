@@ -1,5 +1,5 @@
 ---
-title: 6 steps to go from watching tutorials to actually building projects
+title: Six Steps to Go From Watching Tutorials to Actually Building Projects
 order: 1
 ---
 
@@ -7,11 +7,9 @@ order: 1
 [thread on Twitter](https://twitter.com/Madisonkanna/status/1279158985518485504).
 Check out her suggestions and some resources I pulled from it in the thread:
 
----
-
-"When you're learning to code, people say "Stop the tutorials, just go build
-stuff!" But... how?! For a beginner, this is daunting. Thread on what helped me
-go from watching tutorials to actually building projects.
+> When you're learning to code, people say "Stop the tutorials, just go build
+> stuff!" But... how?! For a beginner, this is daunting. Thread on what helped
+> me go from watching tutorials to actually building projects.
 
 1. Add new features to your tutorial apps. Take the app you've built in your
    tutorial and come up with one small feature you can add to that app. Then
@@ -43,4 +41,4 @@ go from watching tutorials to actually building projects.
 6. Starting a coding project can be like standing at the foot of a mountain,
    paralyzed as you look up at how far you have to go to reach the summit. You
    give up before you start. So don't focus on the summit, focus on your next
-   step. The next small bit of code."
+   step. The next small bit of code.

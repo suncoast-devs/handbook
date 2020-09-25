@@ -1,5 +1,5 @@
 ---
-title: Project ideas from beginner to advanced level
+title: Project Ideas From Beginner to Advanced Level
 order: 2
 ---
 
