@@ -6,7 +6,7 @@ A guide for students of the Suncoast Developers Guild.
 
 ## 🚀 Quick start for contributors
 
-1. ** Enter the `web` directory. **
+1. **Enter the `web` directory.**
 
    ```shell
    cd web
