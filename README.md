@@ -6,31 +6,37 @@ A guide for students of the Suncoast Developers Guild.
 
 ## 🚀 Quick start for contributors
 
-1.  **Install dependencies.**
+1. ** Enter the `web` directory. **
 
-    We use the `yarn` package manager.
+   ```shell
+   cd web
+   ```
 
-    ```shell
-    yarn install
-    ```
+1. **Install dependencies.**
 
-1.  **Start developing.**
+   We use the `yarn` package manager.
 
-    Navigate into the site’s directory and start it up.
+   ```shell
+   yarn install
+   ```
 
-    ```shell
-    cd web
-    yarn start
-    ```
+1. **Start developing.**
 
-1.  **Open the source code and start editing!**
+   Navigate into the site’s directory and start it up.
 
-    The handbook is now running at `http://localhost:8000`!
+   ```shell
+   cd web
+   yarn start
+   ```
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
-    This is a tool you can use to experiment with querying data. Learn more
-    about using this tool in the
-    [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+1. **Open the source code and start editing!**
+
+   The handbook is now running at `http://localhost:8000`!
+
+   _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_.
+   This is a tool you can use to experiment with querying data. Learn more about
+   using this tool in the
+   [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
 ## 🧐 What's inside?
 
