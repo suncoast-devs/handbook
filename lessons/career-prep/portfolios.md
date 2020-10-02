@@ -76,7 +76,6 @@ Here are some portfolio template resources to help you get started:
 - [Liz - Cohort 6](https://www.elizabethtiller.com/)
 - [Sherry - Cohort 7](https://smoline.github.io/)
 - [Marianne - Cohort 8](http://marianneKelly.com)
-- [Jeff - Cohort X](http://webb.ooo/)
 - [Matt - Cohort XI](http://mattcooke.tech/)
 - [Allan - Cohort X](https://whoi-allan.surge.sh/)
 - [Shea - Cohort XII](http://shea-portfolio.surge.sh/)
