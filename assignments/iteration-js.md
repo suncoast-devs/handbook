@@ -17,13 +17,14 @@ tags: ['javascript', 'enumeration']
 5. Install the dependencies: `npm install`
 6. Open in your editor: `code .`
 7. Start the test runner: `npm test`
-8. Open `src/functions.test.js` and work on functions until tests pass.
+8. In VS Code, open the file: `src/functions.test.js` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
 10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 
-- All tests passing
+- As you write each function and make them pass the `npm test` screen will show your progress.
+- Work until all the tests are passing
 
 ## Epic Mode
 
