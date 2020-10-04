@@ -25,11 +25,20 @@ app-app --gamma Reactocats
 
 ### Explorer Mode
 
-- [ ] Create your React app using `app-app` `GAMMA`
-- [ ] If you have done the non-React version of octodex, use your existing HTML as the `render()` method of your `App` component. Otherwise, figure out the main components of the page and implement the `render()` method of `App`
-- [ ] Your CSS should be in `index.css` -- feel free to copy your previous project's css if you have done the non-React version of this assignment.
-- [ ] You should have at _least_ two components... (Hint, perhaps Header, and an Octocat)
-- [ ] Use props to try to reuse components (reuse the Octocat component)
+- Create your React app using `app-app` `GAMMA`
+- If you have done the non-React version of octodex, use your existing HTML as the `render()` method of your `App` component. Otherwise, figure out the main components of the page and implement the `render()` method of `App`
+- Your CSS should be in `index.scss` -- feel free to copy your previous project's css if you have done the non-React version of this assignment.
+- Create a component for an `Octocat`
+  - The `Octocat` component should use `props` to customize the data for each usage.
+  - You will have a `prop` for the `name`, and the `image`, and the `number`, etc.
+  - Don't worry about supporting more than one author image (for now)
+- Use your `Octocat` component to render all your cats. This might look something like this:
+```jsx
+<div>
+  <Octocat name="Terracotacat" number="142" other="" props="" go="" here=""/>
+  <Octocat name="SuncoastCat" number="145" other="" props="" go="" here=""/>
+</div>
+```
 
 ### Adventure Mode
 
