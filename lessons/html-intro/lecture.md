@@ -721,7 +721,7 @@ A common element on a web page is an image. Given that their exchange rate is eq
 
 [.autoscale: true]
 
-# <img> tag
+# img tag
 
 So for example, if your image is called dinosaur.jpg, and it sits in the same directory as your HTML page, you could embed the image like so:
 
