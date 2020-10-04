@@ -42,13 +42,14 @@ example:
 ```
 // HINT: Instead of hard coded values here, use your
 // this.state attributes to dynamically create this color
-const currentColor = `hsl(50,8%,20%)`
+const newBackgroundColor = `hsl(50,8%,20%)`
+const newStyle = { backgroundColor: newBackgroundColor  }
 ```
 
 Then you can dynamically set the `backgroundColor` of an element in your component using [inline styles](https://reactjs.org/docs/dom-elements.html#style)
 
 ```jsx
-<div style={ { backgroundColor: currentColor  } } >
+<div style={newStyle}>
 
 </div>
 ```
