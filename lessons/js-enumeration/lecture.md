@@ -10,9 +10,13 @@ JavaScript has `for` loops we can use for enumerating the elements of an array.
 
 ```javascript
 const colors = ['red', 'green', 'blue']
-colors.forEach(function (color, index) {
+
+function logSomeColor(color, index)
+{
   console.log(`The color at position ${index} is ${color}`)
-})
+}
+
+colors.forEach(logSomeColor)
 ```
 
 ---
