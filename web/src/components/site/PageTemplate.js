@@ -6,11 +6,13 @@ import { Link } from 'gatsby'
 import { Layout } from './Layout'
 import { Markdown } from './Markdown'
 import CodePen from '../content/CodePen'
+import { GithubCommitViewer } from '../content/GithubCommitViewer'
 import { CodeBlock } from '../content/CodeBlock'
 
 const components = {
   Link,
   CodePen,
+  GithubCommitViewer,
   code: CodeBlock,
 }
 
