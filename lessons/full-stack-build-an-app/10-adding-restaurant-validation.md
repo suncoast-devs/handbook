@@ -146,8 +146,6 @@ The Name field is required. The Address field is required.
 
 However, if you fill in the name field, only the address will display an error.
 
-![missing-address](./assets/missing-address.png)
-
 ## Improving the user experience
 
 Rather than showing a sentence at the top we could store the error object and
