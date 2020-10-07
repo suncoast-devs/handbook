@@ -45,6 +45,7 @@ Challenges we like:
 |  8  | Keep Hydrated!                                             | https://www.codewars.com/kata/582cb0224e56e068d800003c        |                                     |
 |  8  | Is n divisible by x and y?                                 | https://www.codewars.com/kata/5545f109004975ea66000086        |                                     |
 |  8  | Grasshopper Summation                                      | https://www.codewars.com/kata/55d24f55d7dd296eb9000030        |                                     |
+|  8  | Get Planet Name By ID                                      | https://www.codewars.com/kata/515e188a311df01cba000003        |                                     |
 |  8  | Find the smallest Integer                                  | https://www.codewars.com/kata/55a2d7ebe362935a210000b2        |                                     |
 |  8  | Find Multiples of a Number                                 | https://www.codewars.com/kata/58ca658cc0d6401f2700045f        |                                     |
 |  8  | Even or Odd                                                | https://www.codewars.com/kata/53da3dbb4a5168369a0000fe        |                                     |
@@ -62,6 +63,7 @@ Challenges we like:
 |  8  | Conditional Statement Switch                               | https://www.codewars.com/kata/572059afc2f4612825000d8a        | JS Only                             |
 |  8  | Compare with margin                                        | https://www.codewars.com/kata/56453a12fcee9a6c4700009c        |                                     |
 |  8  | Collect Tuition (SQL for Beginners #4)                     | https://www.codewars.com/kata/5910b0d378cc2ba91400000b        | SQL Only                            |
+|  8  | Closest Elevator                                           | https://www.codewars.com/kata/5c374b346a5d0f77af500a5a        |                                     |
 |  8  | Century From Year                                          | https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097        |                                     |
 |  8  | Calculate Average                                          | https://www.codewars.com/kata/57a2013acf1fa5bfc4000921        |                                     |
 |  8  | Beginner Series #2 Clock                                   | https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a        |                                     |
@@ -79,12 +81,16 @@ Challenges we like:
 |  7  | Suzuki needs help lining up his students!                  | https://www.codewars.com/kata/5701800886306a876a001031        |                                     |
 |  7  | Sum of two lowest positive integers                        | https://www.codewars.com/kata/558fc85d8fd1938afb000014        |                                     |
 |  7  | Sum of all multiples of 3 or 5                             | https://www.codewars.com/kata/57f36495c0bb25ecf50000e7        |                                     |
+|  7  | Stones on the Table                                        | https://www.codewars.com/kata/5f70e4cce10f9e0001c8995a        |                                     |
 |  7  | Square every digit                                         | https://www.codewars.com/kata/546e2562b03326a88e000020        |                                     |
 |  7  | SQL Basics: Simple JOIN                                    | https://www.codewars.com/kata/5802e32dd8c944e562000020        | SQL Only                            |
+|  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
 |  7  | Shortest Word                                              | https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9        |                                     |
+|  7  | Say Me Please Operations                                   | https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d        |                                     |
 |  7  | Removing Elements                                          | https://www.codewars.com/kata/5769b3802ae6f8e4890009d2        | Good for JS, not good for C#        |
 |  7  | Ones and Zeros                                             | https://www.codewars.com/kata/ones-and-zeros                  |                                     |
 |  7  | Mumbling                                                   | https://www.codewars.com/kata/5667e8f4e3f572a8f2000039        |                                     |
+|  7  | Mirror, mirror, on the wall...                             | https://www.codewars.com/kata/5f55ecd770692e001484af7d        |                                     |
 |  7  | Longest Vowel Chain                                        | https://www.codewars.com/kata/59c5f4e9d751df43cf000035        |                                     |
 |  7  | List filtering                                             | https://www.codewars.com/kata/53dbd5315a3c69eed20002dd        |                                     |
 |  7  | Largest pair sum in array                                  | https://www.codewars.com/kata/556196a6091a7e7f58000018        |                                     |
@@ -93,15 +99,13 @@ Challenges we like:
 |  7  | Get the Middle Character                                   | https://www.codewars.com/kata/56747fd5cb988479af000028        |                                     |
 |  7  | Form the hightest                                          | https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e        |                                     |
 |  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        |                                     |
-|  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
-|  7  | Cryptanalysis Word Patterns                                | https://www.codewars.com/kata/5f3142b3a28d9b002ef58f5e        |                                     |
-|  8  | Closest Elevator                                           | https://www.codewars.com/kata/5c374b346a5d0f77af500a5a        |                                     |
 |  7  | Find 0 and 1                                               | https://www.codewars.com/kata/57d237f25dc38ede6e00026b        | JS Only - More challenging than a 7 |
 |  7  | Exes and Ohs                                               | https://www.codewars.com/kata/55908aad6620c066bc00002a        |                                     |
 |  7  | Drink responbility                                         | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
 |  7  | Don't give me 5                                            | https://www.codewars.com/kata/5813d19765d81c592200001a        |                                     |
 |  7  | Disemvowel Troll                                           | https://www.codewars.com/kata/52fba66badcd10859f00097e        |                                     |
 |  7  | Descending Order                                           | https://www.codewars.com/kata/5467e4d82edf8bbf40000155        |                                     |
+|  7  | Cryptanalysis Word Patterns                                | https://www.codewars.com/kata/5f3142b3a28d9b002ef58f5e        |                                     |
 |  7  | Counting Elements                                          | https://www.codewars.com/kata/5569b10074fe4a6715000054        | Requires Dictionary in C#           |
 |  7  | Convert the score                                          | https://www.codewars.com/kata/5b6c220fa0a661fbf200005d        | JS Only                             |
 |  7  | Computer problem series #1: Fill the Hard Disk Drive       | https://www.codewars.com/kata/5d49c93d089c6e000ff8428c        |                                     |
@@ -115,4 +119,3 @@ Challenges we like:
 |  6  | Christmas Tree                                             | https://www.codewars.com/kata/52755006cc238fcae70000ed        |                                     |
 |  6  | Blackjack                                                  | https://www.codewars.com/kata/5bebcbf2832c3acc870000f6        |                                     |
 |  5  | Advanced Pig Latin                                         | https://www.codewars.com/kata/533c46b140aafec05b000d31        |                                     |
-|  8  | Get Planet Name By ID                                      | https://www.codewars.com/kata/515e188a311df01cba000003        |                                     |
