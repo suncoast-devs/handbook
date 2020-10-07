@@ -963,7 +963,7 @@ else
 
 so that now each restaurant will also include an **array** of reviews.
 
-## Update the `seeds.sql` to generate reviews
+## Update the `exampledata.sql` to generate reviews
 
 Add the following sql to our seeds and rerun them to populate the database with
 a few reviews.
@@ -981,7 +981,7 @@ INSERT INTO "Reviews" ("RestaurantId", "CreatedAt", "Summary", "Body") VALUES (1
 ```
 
 ```shell
-psql --file=Models/seeds.sql TacoTuesdayDatabase
+psql --file=Models/exampledata.sql TacoTuesdayDatabase
 ```
 
 ## Updating the interface to return the list of reviews
@@ -1038,7 +1038,7 @@ We should see one restaurant that has two reviews (based on our seed data)
 - [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/Restaurants.jsx)
 - [ClientApp/src/pages/ShowRestaurant.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/ClientApp/src/pages/ShowRestaurant.jsx)
 - [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/e7547b5d1b87e13a80cd2b9b5ba30543594fee31/Controllers/RestaurantsController.cs)
-- [Models/seeds.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Models/seeds.sql)
+- [Models/exampledata.sql](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Models/exampledata.sql)
 
 ---
 

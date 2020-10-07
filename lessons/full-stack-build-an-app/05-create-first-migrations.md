@@ -94,8 +94,8 @@ Use `pgcli` or any other database tool to insert some sample data.
 
 One way to accomplish this is to create a seeding sql script.
 
-Create a file `seeds.sql` and, using the following as an example, create your
-sample data.
+Create a file `exampledata.sql` and, using the following as an example, create
+your sample data.
 
 Save this file in the `Models` directory.
 
@@ -111,7 +111,7 @@ INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone") VALUES
 You can run this with the command line:
 
 ```shell
-psql --file=Models/seeds.sql TacoTuesdayDatabase
+psql --file=Models/exampledata.sql TacoTuesdayDatabase
 ```
 
 ## Files Updated

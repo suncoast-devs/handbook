@@ -6,7 +6,7 @@ order: 7
 # Adding a search feature to our API
 
 Let's consider adding a `search` feature to our API to satisfy the
-`search / filter` UI from our navigation bar.
+`search / filter` in our UI.
 
 We could add another endpoint such as `GET /api/Restaurants/search`, but we
 already have an endpoint that represents what we want: _the list of
@@ -37,7 +37,7 @@ if (filter == null)
 }
 else
 {
-    return await _context.Restaurants.Where(restaurant => restaurant.Name.Contains(filter)).ToListAsync();
+    return await _context.Restaurants.Where(restaurant => restaurant.Name.ToLower().Contains(filter.ToLower())).ToListAsync();
 }
 ```
 
