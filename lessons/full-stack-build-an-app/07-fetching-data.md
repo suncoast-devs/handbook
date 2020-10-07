@@ -134,4 +134,4 @@ function RestaurantList() {
 
 ## Files Updated
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="25b5f865ecf480a92be8e9ce5978fe6cb57950e6"/>
+<GithubCommitViewer repo="gstark/TacoTuesday" commit="8c7aa1e8ad777769229552d33bcd6883d098c05c"/>
