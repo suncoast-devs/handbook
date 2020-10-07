@@ -1,6 +1,6 @@
 ---
 title: Adding Search
-order: 7
+order: 8
 ---
 
 # Adding a search feature to our API

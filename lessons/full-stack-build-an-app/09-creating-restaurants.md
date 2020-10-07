@@ -1,6 +1,6 @@
 ---
 title: Creating Restaurants
-order: 09
+order: 9
 ---
 
 # Implement "Add"
