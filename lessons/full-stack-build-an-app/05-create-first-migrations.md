@@ -119,4 +119,4 @@ psql --file=Models/exampledata.sql TacoTuesdayDatabase
 > NOTE: Your Migrations files will have different filenames with distinct
 > timestamps
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="5a8df1ff79eb07c707909afcbf09c866a2145a7b" />
+<GithubCommitViewer repo="gstark/TacoTuesday" commit="a03f4ee35af55aea15b7ddb2ab71c7d4bab65dd3" />
