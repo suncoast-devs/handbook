@@ -56,8 +56,8 @@ Then we will update the `<input>` tag
   type="text"
   placeholder="Search..."
   value={filterText}
-  onChange={event =>
-    function () {
+  onChange={
+    function(event) {
       setFilterText(event.target.value)
     }
   }
