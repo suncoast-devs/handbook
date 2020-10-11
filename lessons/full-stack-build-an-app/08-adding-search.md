@@ -56,11 +56,9 @@ Then we will update the `<input>` tag
   type="text"
   placeholder="Search..."
   value={filterText}
-  onChange={
-    function(event) {
-      setFilterText(event.target.value)
-    }
-  }
+  onChange={function (event) {
+    setFilterText(event.target.value)
+  }}
 />
 ```
 
@@ -86,4 +84,4 @@ useEffect(() => {
 
 ## Files Updated
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="c5ae144ca1ca6412d8ee1b9ffd7b112addc5eff2"/>
+<GithubCommitViewer repo="gstark/TacoTuesday" commit="8fbac42a977922a851b5a3d66288f82b009f2f4a"/>
