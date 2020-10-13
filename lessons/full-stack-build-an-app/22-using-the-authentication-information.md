@@ -1,9 +1,9 @@
 ---
-title: Adding Login to the User Interface
+title: Using the Authentication Information
 order: 22
 ---
 
-## Using the authentication information
+## Using the Authentication Information
 
 Let's update the sign in and sign up buttons/links to only display if the user
 is **not logged in**
