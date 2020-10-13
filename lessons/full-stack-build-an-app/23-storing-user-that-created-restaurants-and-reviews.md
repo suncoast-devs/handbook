@@ -104,6 +104,14 @@ Then we will make similar updates in the `ReviewsControler`. Update
 `Restaurant.jsx` to have an `errorMessage` state and display. Then update
 `Restaurant.jsx` to handle the error result.
 
+To assign a user to the review, we will add this code to the _beginning_ of the
+`PostReview` implementation:
+
+```csharp
+// Set the UserID to the current user id, this overrides anything the user specifies.
+review.UserId = GetCurrentUserId();
+```
+
 ```javascript
 async function handleNewReviewSubmit(event) {
   event.preventDefault()

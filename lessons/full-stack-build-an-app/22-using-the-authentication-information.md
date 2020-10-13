@@ -5,6 +5,8 @@ order: 22
 
 ## Using the Authentication Information
 
+# Navigation Buttons
+
 Let's update the sign in and sign up buttons/links to only display if the user
 is **not logged in**
 
@@ -95,6 +97,25 @@ And to update the add new restaurant button:
     <Link to="/new">
       <i className="fa fa-plus"></i> Restaurant
     </Link>
+  )
+}
+```
+
+# Hide the "New Review" form unless logged in
+
+We will wrap the `<h3>` and the `<form>` in a fragment tag so that we can place
+them in a group. We then prefix that with the `isLoggedIn() &&` that will show
+that JSX for logged in users.
+
+```jsx
+{
+  isLoggedIn() && (
+    <>
+      <h3>Enter your own review</h3>
+      <form onSubmit={handleNewReviewSubmit}>
+        {/* all the form contents not shown here */}
+      </form>
+    </>
   )
 }
 ```
