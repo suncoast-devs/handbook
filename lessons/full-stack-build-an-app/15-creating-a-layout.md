@@ -1,6 +1,6 @@
 ---
 title: Creating a layout
-order: 14
+order: 15
 ---
 
 # Creating a layout
