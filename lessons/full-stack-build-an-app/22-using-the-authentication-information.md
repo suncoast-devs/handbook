@@ -57,7 +57,8 @@ function handleLogout() {
 }
 ```
 
-Now let's only show the avatar and welcome message if the user is logged in.
+Now let's only show the avatar, welcome message, and create new restaurant if
+the user is logged in.
 
 To determine the user we'll add a call to `getUser` from `auth.js`
 
@@ -82,6 +83,18 @@ coded for the moment.
     <li className="avatar">
       <img src={avatar} alt="Steve's Avatar" height="64" width="64" />
     </li>
+  )
+}
+```
+
+And to update the add new restaurant button:
+
+```jsx
+{
+  isLoggedIn() && (
+    <Link to="/new">
+      <i className="fa fa-plus"></i> Restaurant
+    </Link>
   )
 }
 ```

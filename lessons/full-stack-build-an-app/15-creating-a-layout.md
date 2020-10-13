@@ -22,7 +22,9 @@ We can do the same for the `<footer>` element.
 Now that the header and footer exist in the `App` we can delete the `<header>`
 and `<footer>` content from the `Restaurant.jsx`
 
-In both `Restaurant` and `Restaurants` there is only one main element, `<main>`
-so we can clean up these components by removing the fragment tags, `<></>`
+Since there is only one main element, `<main>` we can clean up these components
+by removing the fragment tags, `<></>`
+
+We will do the same for the other components in the `pages` folder.
 
 <GithubCommitViewer repo="gstark/TacoTuesday" commit="7555464618f9ea604ef5f8bdef8a4cbadba27e90" />
