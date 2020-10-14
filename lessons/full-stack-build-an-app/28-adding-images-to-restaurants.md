@@ -1,6 +1,6 @@
 ---
 title: Adding Images To Restaurants
-order: 27
+order: 28
 ---
 
 # Adding Images To Restaurants
@@ -227,7 +227,7 @@ The dropzone component is expecting a method to call when a file is dropped onto
 a visible target in the UI. Lets add the method for that:
 
 ```javascript
-const onDropFile = acceptedFiles => {
+function onDropFile(acceptedFiles) {
   // Do something with the files
   const fileToUpload = acceptedFiles[0]
   console.log(fileToUpload)
