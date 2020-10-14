@@ -207,6 +207,15 @@ const authFromStorage = () => {
 
   return auth ? JSON.parse(auth) : {}
 }
+
+export const updateUserAuth = updatedUser => {
+  const auth = authFromStorage()
+
+  auth.user.fullName = updatedUser.fullName
+  auth.user.photoURL = updatedUser.photoURL
+
+  recordAuthentication(auth)
+}
 ```
 
 Now in the `SignIn.jsx` we can uncomment the `recordAuthentication(apiResponse)`
