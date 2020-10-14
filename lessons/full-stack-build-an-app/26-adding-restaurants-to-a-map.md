@@ -122,4 +122,4 @@ INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latit
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latitude", "Longitude") VALUES ('Avaveo', 'Persistent zero defect process improvement', '2 Clarendon Junction', '715-663-5265', 27.7717197, -82.6522627);
 ```
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="ea5e45ae003e9a0656a2e4315ba4724a4b081212">
+<GithubCommitViewer repo="gstark/TacoTuesday" commit="ea5e45ae003e9a0656a2e4315ba4724a4b081212" />
