@@ -1,3 +1,10 @@
+---
+title: Review Delete
+order: 32
+---
+
+# Review Delete
+
 To delete a review we will first add a button to each review for the reviews
 with a user id equal to the current user id.
 
