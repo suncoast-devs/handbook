@@ -89,9 +89,9 @@ async function handleFormSubmit(event) {
   if (response.status === 401) {
     setErrorMessage('Not Authorized')
   } else {
-    const json = await response.json()
-
     if (response.status === 400) {
+      const json = await response.json()
+
       setErrorMessage(Object.values(json.errors).join(' '))
     } else {
       history.push('/')
