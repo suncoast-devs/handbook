@@ -27,6 +27,7 @@ In any PowerShell/Terminal (and any directory) run the following:
 code --install-extension 2gua.rainbow-brackets
 code --install-extension hasanali.gitignore-templates
 code --install-extension streetsidesoftware.code-spell-checker
+code --install-extension meganrogge.template-string-converter
 ```
 
 ### C#/.NET Extensions:
