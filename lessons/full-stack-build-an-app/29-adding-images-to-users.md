@@ -26,7 +26,10 @@ public string PhotoURL { get; set; }
 ```
 
 ```shell
-dotnet ef migrations add AddPhotoURLToRestaurant
+dotnet ef migrations add AddPhotoURLToUser
+```
+
+```shell
 dotnet ef database update
 ```
 
@@ -77,7 +80,7 @@ async function onDropFile(acceptedFiles) {
 
     // If we receive a 200 OK response, set the
     // URL of the photo in our state so that it is
-    // sent along when creating the restaurant,
+    // sent along when creating the user,
     // otherwise show an error
     if (response.status === 200) {
       const apiResponse = await response.json()
@@ -100,7 +103,7 @@ async function onDropFile(acceptedFiles) {
 Then create a variable to hold the drop zone message:
 
 ```javascript
-let dropZoneMessage = 'Drag a picture of the restaurant here to upload!'
+let dropZoneMessage = 'Drag a picture of the user here to upload!'
 
 if (isUploading) {
   dropZoneMessage = 'Uploading...'
