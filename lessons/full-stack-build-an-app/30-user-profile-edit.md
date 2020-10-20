@@ -3,6 +3,8 @@ title: User Profile Edit
 order: 30
 ---
 
+# User Profile Edit
+
 Lets add a page and feature to allow the user to update their profile.
 
 The first thing we will do is to create the component for editing a user. This
@@ -12,7 +14,7 @@ Here are some notable differences:
 
 1. We add the `id` and the `photoURL` to the initial `useState`
 1. We use `PUT` and a URL that includes the user's id
-1. When we get a positive API response we call a new method in `auth.js` named
+1. When we get a positive API response we call a method in `auth.js` named
    `updateUserAuth` that updates the local storage.
 1. When we get a positive API response we use `window.location` to force a full
    page refresh so we fetch fresh auth information to display (name and avatar)
