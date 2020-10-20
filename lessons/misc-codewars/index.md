@@ -93,6 +93,7 @@ Challenges we like:
 |  7  | Mirror, mirror, on the wall...                             | https://www.codewars.com/kata/5f55ecd770692e001484af7d        |                                     |
 |  7  | Longest Vowel Chain                                        | https://www.codewars.com/kata/59c5f4e9d751df43cf000035        |                                     |
 |  7  | List filtering                                             | https://www.codewars.com/kata/53dbd5315a3c69eed20002dd        |                                     |
+|  7  | Least Larger                                               | https://www.codewars.com/kata/5f8341f6d030dc002a69d7e4        |                                     |
 |  7  | Largest pair sum in array                                  | https://www.codewars.com/kata/556196a6091a7e7f58000018        |                                     |
 |  7  | Insert Dashes                                              | https://www.codewars.com/kata/55960bbb182094bc4800007b        |                                     |
 |  7  | Highest and Lowest                                         | https://www.codewars.com/kata/554b4ac871d6813a03000035        |                                     |
