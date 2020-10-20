@@ -103,6 +103,7 @@ ask for assistance.
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "javascript.implicitProjectConfig.checkJs": true,
+  "files.eol": "\n",
   "[csharp]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4
