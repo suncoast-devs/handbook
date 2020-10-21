@@ -14,7 +14,6 @@ sudo apt install snapd
 - [Github](/lessons/setup-linux/github)
 - [Code Folder](/lessons/setup-linux/code-folder)
 - [Visual Studio Code](/lessons/setup-linux/vs-code)
-- [Terminal](/lessons/setup-linux/terminal)
 - [git](/lessons/setup-linux/git)
 - [Screen](/lessons/setup-linux/screen)
 - [.NET](/lessons/setup-linux/dotnet)
