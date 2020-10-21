@@ -42,11 +42,35 @@ These steps are run _ONLY ONCE_ before you can deploy to heroku
 - `heroku apps:create NAMEOFAPP` - NOTE: replace `NAMEOFAPP` with something that
   is unique to your project.
 - `heroku buildpacks:add suncoast-devs/dotnetcore-buildpack`
-- `git push heroku master`
 
 > NOTE: If your main branch of code is not `master` you'll have to run the
 > command this way: `git push NAME:master` where `NAME` is the name of your
 > branch
+
+## To Setup Secrets for Heroku
+
+Heroku stores secrets in your _environment variables_. You can change these from
+the command line or from your app's configuration on `heroku.com`
+
+If you are using JWT tokens, you need to do the following:
+
+- `heroku config:set JWT_KEY="MY RANDOM STRING OF LETTERS AND NUMBERS TO USE FOR A KEY"`
+
+If you are using a third party API you can set any configuration as such:
+
+- `heroku config:set THIRD_PARTY_KEY_NAME="THIRD PARTY KEY VALUE"`
+
+For instance, we might need these configurations. NOTE: use your real keys in
+place of `REPLACE-THIS`
+
+```
+heroku config:set CLOUDINARY_CLOUD_NAME=REPLACE-THIS
+heroku config:set CLOUDINARY_API_KEY=REPLACE-THIS
+heroku config:set CLOUDINARY_API_SECRET=REPLACE-THIS
+heroku config:set BING_MAPS_KEY=REPLACE-THIS
+heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
+```
+
 
 ## `git push heroku master`
 
@@ -99,30 +123,6 @@ remote:
 remote: Verifying deploy... done.
 To https://git.heroku.com/taco-tuesday-sdg.git
  * [new branch]      master -> master
-```
-
-## To Setup Secrets for Heroku
-
-Heroku stores secrets in your _environment variables_. You can change these from
-the command line or from your app's configuration on `heroku.com`
-
-If you are using JWT tokens, you need to do the following:
-
-- `heroku config:set JWT_KEY="MY RANDOM STRING OF LETTERS AND NUMBERS TO USE FOR A KEY"`
-
-If you are using a third party API you can set any configuration as such:
-
-- `heroku config:set THIRD_PARTY_KEY_NAME="THIRD PARTY KEY VALUE"`
-
-For instance, we might need these configurations. NOTE: use your real keys in
-place of `REPLACE-THIS`
-
-```
-heroku config:set CLOUDINARY_CLOUD_NAME=REPLACE-THIS
-heroku config:set CLOUDINARY_API_KEY=REPLACE-THIS
-heroku config:set CLOUDINARY_API_SECRET=REPLACE-THIS
-heroku config:set BING_MAPS_KEY=REPLACE-THIS
-heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
 ```
 
 ## To Copy Your Local Database to Heroku
