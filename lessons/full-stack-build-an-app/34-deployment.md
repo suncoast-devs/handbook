@@ -64,13 +64,13 @@ For instance, we might need these configurations. NOTE: use your real keys in
 place of `REPLACE-THIS`
 
 ```
+heroku config:set JWT_KEY=REPLACE-THIS
 heroku config:set CLOUDINARY_CLOUD_NAME=REPLACE-THIS
 heroku config:set CLOUDINARY_API_KEY=REPLACE-THIS
 heroku config:set CLOUDINARY_API_SECRET=REPLACE-THIS
 heroku config:set BING_MAPS_KEY=REPLACE-THIS
 heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
 ```
-
 
 ## `git push heroku master`
 
@@ -131,7 +131,7 @@ Heroku maintains it's own copy of a database for your hosted application. That
 means that all of the local data you have _won't_ be live on your site. You can
 take all the data in your local database and upload that to your Heroku copy of
 the database. See the instructions in the
-[Heroku Quick Reference Guide](/lessons/mis-quick-reference/heroku.md) to learn
+[Heroku Quick Reference Guide](/lessons/misc-quick-reference/heroku) to learn
 how to `Push a copy of your local database to Heroku`
 
 ## To Deploy Updates to Heroku
