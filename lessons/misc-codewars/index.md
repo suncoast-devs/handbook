@@ -90,6 +90,7 @@ Challenges we like:
 |  7  | Removing Elements                                          | https://www.codewars.com/kata/5769b3802ae6f8e4890009d2        | Good for JS, not good for C#        |
 |  7  | Ones and Zeros                                             | https://www.codewars.com/kata/ones-and-zeros                  |                                     |
 |  7  | Mumbling                                                   | https://www.codewars.com/kata/5667e8f4e3f572a8f2000039        |                                     |
+|  7  | Most Sales                                                 | https://www.codewars.com/kata/5e16ffb7297fe00001114824        |                                     |
 |  7  | Mirror, mirror, on the wall...                             | https://www.codewars.com/kata/5f55ecd770692e001484af7d        |                                     |
 |  7  | Longest Vowel Chain                                        | https://www.codewars.com/kata/59c5f4e9d751df43cf000035        |                                     |
 |  7  | List filtering                                             | https://www.codewars.com/kata/53dbd5315a3c69eed20002dd        |                                     |
