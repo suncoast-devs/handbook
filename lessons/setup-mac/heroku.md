@@ -11,7 +11,7 @@ the command line helper tool.
 ## Installation
 
 ```shell
-brew install heroku
+brew tap heroku/brew && brew install heroku
 ```
 
 ## Setup
