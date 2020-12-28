@@ -14,6 +14,14 @@ require, or are written in, JavaScript with node.
 brew install nodejs
 ```
 
+## SDG helper tools
+
+Install this tool which includes some helpful add-on functionality we use at SDG
+
+```shell
+npm install --global suncoast-devs/cli
+```
+
 ## Useful node tools
 
 This tool is useful for removing files and directories

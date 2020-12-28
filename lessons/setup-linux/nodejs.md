@@ -19,6 +19,14 @@ echo "export NPM_CONFIG_PREFIX=~/.npm-global" >> ~/.bashrc
 echo "export PATH=~/.npm-global/bin" >> ~/.bashrc
 ```
 
+## SDG helper tools
+
+Install this tool which includes some helpful add-on functionality we use at SDG
+
+```shell
+npm install --global suncoast-devs/cli
+```
+
 ## Useful node tools
 
 This tool is useful for removing files and directories
