@@ -88,8 +88,8 @@ has the following routes:
 
 > NOTE: The method implementations are not listed above
 
-If we are running our application we can open up `https://localhost:5001` in our
-browser and see an API documentation page:
+If we are running our application we can open up `http://localhost:5000/swagger`
+in our browser and see an API documentation page:
 
 ![swagger](./assets/swagger.png)
 

@@ -12,9 +12,10 @@ ERD without having to create them all at once.
 
 ## Use the `EF Core` tools
 
-First, create a new `C# class` in the `Models` directory. If you use `VS Code`
-feature to `Create new C# class` by right-clicking on `Models` you will get a
-file with the correct namespaces and `using` statements to start.
+First, create a new `C# class` in the `Models` directory.
+
+Right click on the `Models` folder and select `Create new C# class`. Enter
+`Restaurant.cs` as the name of your class.
 
 ### Generate a model
 
