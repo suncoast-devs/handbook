@@ -31,7 +31,6 @@ In any terminal (and any directory) run the following:
 
 ```shell
 code --install-extension 2gua.rainbow-brackets
-code --install-extension hasanali.gitignore-templates
 code --install-extension streetsidesoftware.code-spell-checker
 code --install-extension meganrogge.template-string-converter
 ```
@@ -45,7 +44,6 @@ code --install-extension ms-dotnettools.csharp
 code --install-extension austincummings.razor-plus
 code --install-extension jchannon.csharpextensions
 code --install-extension jorgeserrano.vscode-csharp-snippets
-code --install-extension ms-azuretools.vscode-docker
 ```
 
 ### Front End Extensions:
@@ -53,13 +51,9 @@ code --install-extension ms-azuretools.vscode-docker
 In any terminal (and any directory) run the following:
 
 ```shell
-code --install-extension aeschli.vscode-css-formatter
-code --install-extension auchenberg.vscode-browser-preview
-code --install-extension coderfee.open-html-in-browser
 code --install-extension dbaeumer.vscode-eslint
 code --install-extension ecmel.vscode-html-css
 code --install-extension esbenp.prettier-vscode
-code --install-extension hasanali.gitignore-templates
 code --install-extension skyran.js-jsx-snippets
 code --install-extension xabikos.ReactSnippets
 code --install-extension Zignd.html-css-class-completion

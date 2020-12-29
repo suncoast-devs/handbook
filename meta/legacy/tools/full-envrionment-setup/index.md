@@ -21,7 +21,6 @@ The following VS Code Extensions
 
 ```shell
 code   --install-extension  2gua.rainbow-brackets
-code   --install-extension  hasanali.gitignore-templates
 code   --install-extension  ms-vsliveshare.vsliveshare
 code   --install-extension  streetsidesoftware.code-spell-checker
 code   --install-extension  wayou.vscode-todo-highlight
@@ -37,9 +36,6 @@ The following VS Code Extensions
 
 ```shell
 
-code   --install-extension  aeschli.vscode-css-formatter
-code   --install-extension  auchenberg.vscode-browser-preview
-code   --install-extension  coderfee.open-html-in-browser
 code   --install-extension  dbaeumer.vscode-eslint
 code   --install-extension  ecmel.vscode-html-css
 code   --install-extension  eg2.tslint
@@ -72,7 +68,6 @@ dotnet tool install --global dotnet-ef
 ```shell
 code   --install-extension  jchannon.csharpextensions
 code   --install-extension  jorgeserrano.vscode-csharp-snippets
-code   --install-extension  ms-azuretools.vscode-docker
 code   --install-extension  ms-dotnettools.csharp
 code   --install-extension  ScottSauber.blazorsnippets
 code   --install-extension  Zignd.html-css-class-completion
