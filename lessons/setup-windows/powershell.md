@@ -17,22 +17,3 @@ just like any other program.
 Since we are going to run this often you may consider pinning it to your screen
 by right-clicking the icon in the Task Bar and selecting "Pin to taskbar"
 
-## Note for WINDOWS HOME users
-
-You may need to change the security settings on your machine.
-
-To do so, start a Powershell as administrator by using the Windows + R key and
-typing `Powershell` -- You will see an option to `Run as Administrator` and you
-should choose that option.
-
-You will know are running as administrator if your prompt is:
-
-```shell
-PS C:\Windows\system32>
-```
-
-If so, enter `Set-ExecutionPolicy -ExecutionPolicy Unrestricted` and press
-enter.
-
-If you receive a prompt about changing the Execution Policy, enter "Y" for YES
-and press enter.
