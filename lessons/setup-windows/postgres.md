@@ -15,6 +15,9 @@ pg_config --version
 If this comes back with a line similar to `PostgreSQL` followed by numbers:
 **STOP AND DISCUSS WITH YOUR INSTRUCTOR**
 
+If this comes back with a line that says `command not found` you may proceed to
+the next step.
+
 ```shell
 scoop install postgresql
 ```

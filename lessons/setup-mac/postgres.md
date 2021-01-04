@@ -9,13 +9,12 @@ The database engine we will be using for our back-end work.
 Start a Terminal and run:
 
 ```shell
-pg_config --version
+pg_config >/dev/null 2>&1 || echo "STOP"
 ```
 
-If this comes back with a line similar to `PostgreSQL` followed by numbers:
-**STOP AND DISCUSS WITH YOUR INSTRUCTOR**
+If this comes back and says "STOP" -- **STOP AND DISCUSS WITH YOUR INSTRUCTOR**
 
-Otherwise continue on.
+Otherwise, proceed to the next step.
 
 ```shell
 brew install postgresql
