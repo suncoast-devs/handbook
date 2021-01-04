@@ -8,6 +8,21 @@ from our terminal.
 From your terminal, run the following commands (current directory does not
 matter):
 
+## GitHub Token
+
+To setup `hub` we will need an API token from GitHub.
+
+Follow the
+[Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+guide to generate a new token. Give your token a helpful name such as "Token for
+using with hub on my laptop". Select the `repo` checkbox before creating the
+token.
+
+You will need to leave this token **VISIBLE** on screen for the next steps.
+
+> NOTE: This is the _ONLY_ time this token will be displayed. To ensure its
+> safety copy it to a secure location such as a password manager.
+
 ## Installation
 
 ```shell
@@ -23,8 +38,7 @@ hub api
 ```
 
 This will ask for your `github.com username`, supply your username or email
-address. Enter your `github.com` password. If you have two-factor auth enabled,
-you'll have to enter an authorization code.
+address. Enter the token you received above as your password.
 
 hub outputs a lot of text. If you get a "wall of text" similar to the output
 below, then you have setup `hub` correctly.
