@@ -107,13 +107,14 @@ ask for assistance.
 
 Save this file and close the tab.
 
-## Turn off all auto suggests in VS Code
+## OPTIONAL: Turn off all auto suggests in VS Code
 
-Some students do not like the auto complete nature of VS Code. If you want, you
-can turn these features off.
+Some students do not like the auto complete nature of VS Code. I recommend
+waiting to see if you find these auto complete suggestions helpful. Later, if
+you want you can turn these features off.
 
-Simply redo the 'Open Settings (JSON)" from above and just after the **opening**
-brace paste this:
+Redo the 'Open Settings (JSON)" from above and just after the **opening** brace
+paste this:
 
 ```
 "editor.suggest.showConstants": false,
