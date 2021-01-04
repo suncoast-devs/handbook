@@ -11,7 +11,6 @@ order: 1
 - [Visual Studio Code](/lessons/setup-windows/vs-code)
 - [Windows Terminal](/lessons/setup-windows/windows-terminal)
 - [git](/lessons/setup-windows/git)
-- [posh-git](/lessons/setup-windows/posh-git)
 - [.NET](/lessons/setup-windows/dotnet)
 - [hub](/lessons/setup-windows/hub)
 - [PostgreSQL](/lessons/setup-windows/postgres)
