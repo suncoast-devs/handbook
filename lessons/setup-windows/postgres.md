@@ -1,5 +1,5 @@
 ---
-title: Setting up PostgreSQL
+title: PostgreSQL
 ---
 
 The database engine we will be using for our back-end work.
