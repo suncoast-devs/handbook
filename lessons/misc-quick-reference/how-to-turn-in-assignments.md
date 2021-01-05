@@ -36,17 +36,13 @@ git push
 
 ### Step 2: Turning your code in.
 
-Once you have your code deployed and pushed to GitHub, go to the issue on our
-`assignments` repository in your web browser. As a comment, leave a link to the
-repository of your project and close the issue. **Your assignment is not
-considered done until you close the issue.**
+Once you have your code deployed and pushed to GitHub, visit Nexus and bring up
+the assignment. Click the `Turn In` button. Select the GitHub repository you
+created. Add a comment to let your instructor know anything specific about the
+state of your work. For example if you had any issues or challenges, this is
+where you would document those.
 
-> NOTE: To get the link to your repository, run the command `hub browse` from
-> your project directory. This opens github.com with your repository URL loaded.
-
-This link should look something like
-`https://www.github.com/your_username/project_name`.
-
-After you have closed the issue, your instructor evaluates your work, and leave
-any comments. If deemed incomplete or unaccepted the instructor re-opens the
-issue with a list of items to complete before turning in the assignment again.
+After you have turned in your code, your instructor evaluates your work, and
+leave any comments. If deemed incomplete or unaccepted the instructor re-opens
+the issue with a list of items to complete before turning in the assignment
+again.
