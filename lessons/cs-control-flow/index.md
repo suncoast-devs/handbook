@@ -145,7 +145,67 @@ switch (name)
 }
 ```
 
-The `switch` statement is a cleaner way of writing this type of control flow.
+The `switch` statement is a cleaner way of writing this type of control flow. It
+also comes with some additional neat features.
+
+For instance we can handle multiple values by repeating the `case` statement:
+
+```csharp
+switch (name)
+{
+    case "Paul":
+    case "Peter":
+    case "Mary":
+        Console.WriteLine("Here");
+        break;
+    case "Dorothy":
+        Console.WriteLine("Also Here");
+        break;
+    case "Sam":
+        Console.WriteLine("Here Again");
+        break;
+    default:
+        Console.WriteLine("Didn't find anything");
+        break;
+}
+```
+
+In this code we will see the message `Here` for `name` if it is either `Paul`
+**OR** `Peter` **OR** `Mary`
+
+Let's say we are working with an `int` variable named `score` and we wanted to
+print a grade associated to a score.
+
+We can use the ability of the `case` statement to allow us to use conditionals
+to compare the score to a value. Here we are using both `<` and `>=` in these
+comparisons.
+
+```csharp
+
+var score = 95;
+
+switch (score)
+{
+    case < 65:
+        Console.WriteLine("F");
+        break;
+    case < 70:
+        Console.WriteLine("D");
+        break;
+    case < 80:
+        Console.WriteLine("C");
+        break;
+    case < 90:
+        Console.WriteLine("B");
+        break;
+    case >= 90:
+        Console.WriteLine("A");
+        break;
+    default:
+        Console.WriteLine("Hmmm, I don't recognize this score");
+        break;
+}
+```
 
 ## Repeating code
 

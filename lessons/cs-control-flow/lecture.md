@@ -176,6 +176,69 @@ switch (name)
 
 ---
 
+# Other neat `switch` features
+
+We can handle multiple values by repeating the `case` statement:
+
+```csharp
+switch (name)
+{
+    case "Paul":
+    case "Peter":
+    case "Mary":
+        Console.WriteLine("Here");
+        break;
+    case "Dorothy":
+        Console.WriteLine("Also Here");
+        break;
+    case "Sam":
+        Console.WriteLine("Here Again");
+        break;
+    default:
+        Console.WriteLine("Didn't find anything");
+        break;
+}
+```
+
+In this code we will see the message `Here` for `name` if it is either `Paul`
+**OR** `Peter` **OR** `Mary`
+
+---
+
+# Case conditionals
+
+Let's say we are working with an `int` variable named `score` and we wanted to
+print a grade associated to a score.
+
+```csharp
+
+var score = 95;
+
+switch (score)
+{
+    case < 65:
+        Console.WriteLine("F");
+        break;
+    case < 70:
+        Console.WriteLine("D");
+        break;
+    case < 80:
+        Console.WriteLine("C");
+        break;
+    case < 90:
+        Console.WriteLine("B");
+        break;
+    case >= 90:
+        Console.WriteLine("A");
+        break;
+    default:
+        Console.WriteLine("Hmmm, I don't recognize this score");
+        break;
+}
+```
+
+---
+
 # [fit] What about repeating code?
 
 ## What about repeating code?
