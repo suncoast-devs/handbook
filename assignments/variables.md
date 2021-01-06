@@ -19,7 +19,7 @@ Make sure you have followed the [setup instructions](/lessons/cs-environment-set
 
 Follow [this guide](/lessons/cs-how-to-create-and-run-programs) to review how to create and run `C#` applications
 
-All your code should place inside the `static void Main(string args[])`
+All your code should be placed inside the `static void Main(string args[])`
 
 ### Setup
 
