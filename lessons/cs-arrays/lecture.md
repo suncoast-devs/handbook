@@ -143,7 +143,7 @@ var secondName = names[1];
 We can find out how many elements are in the list but we must use a new syntax:
 
 ```csharp
-var numberOfNamesInList = names.Count();
+var numberOfNamesInList = names.Count;
 ```
 
 For `List` we use `Count` instead of `Length` and notice the `()` after `Count`

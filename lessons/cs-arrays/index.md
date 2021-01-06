@@ -28,13 +28,17 @@ This is a great case for using a type called an `array`. An array allows us to
 store more than one value and maintains the order of the items.
 
 ```csharp
-string[] names = new string[] { "Mark", "Paula", "Sandy" , "Bill" };
+var names = new string[] { "Mark", "Paula", "Sandy" , "Bill" };
 ```
 
-In this case we **do** need to tell `C#` the type of the variable on the
-left-hand side. So we use the syntax `string[]` to indicate this is an array of
-elements. On the right-hand side we list the initial elements of the array and
-place them inside `{ }` braces.
+On the right-hand side we list the initial elements of the array and place them
+inside `{ }` braces.
+
+This syntax also works to declare an array:
+
+```csharp
+string[] names = { "Mark", "Paula", "Sandy" , "Bill" };
+```
 
 Now we can access the elements of the array much like we did the individual
 characters of the string.
@@ -70,6 +74,9 @@ To create a list of strings with some data:
 ```csharp
 var names = new List<string>()  { "Mark", "Paula", "Sandy" , "Bill" };
 ```
+
+> NOTE, the `string[] names = ` style of declaration only works for arrays. We
+> cannot use it here for a `List`
 
 You will notice some new syntax here. First is the `List<string>` and the `()`
 that follows.
