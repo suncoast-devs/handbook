@@ -2,7 +2,7 @@ theme: Next, 1
 
 <!-- prettier-ignore-start -->
 
-# Object Oriented Programing in C#
+# Object Oriented Programing in `C#`
 
 ---
 
