@@ -28,8 +28,15 @@ They call the approach `PEDAC` which stands for:
 - Algorithm
 - Code
 
-Their article is quite good and we recommend this approach any time you are
-solving a programming related problem. This includes homework assignments as
-well as any code challenges you do.
+Their article is good and we recommend this approach any time you are solving a
+programming related problem. This includes homework assignments as well as any
+code challenges you do.
 
-Also see these [resources](../resources) for other videos and books.
+Also see these resources:
+
+- Watch [this video](https://www.youtube.com/watch?v=cDA3_5982h8) about making
+  PB&J sandwiches and see if you could do better.
+- Here is
+  [a book](https://www.amazon.com/Problem-Solving-101-Simple-People/dp/1591842425)
+  and [another book](https://en.wikipedia.org/wiki/How_to_Solve_It) about how to
+  solve problems. Do _NOT_ feel compelled to buy these books.
