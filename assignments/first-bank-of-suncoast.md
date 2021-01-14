@@ -11,7 +11,7 @@ For this assignment, you will be creating your own personal bank account manager
 - Practice data structures.
 - Practice working with user data.
 - Practice with LINQ.
-- Practice with OOP concepts.
+- Practice with Object Oriented concepts such as classes and methods.
 - Practice working with files.
 
 ## Requirements
@@ -30,12 +30,17 @@ The transactions will be **saved** in a file, using a `CSV` format to record the
 dotnet new sdg-console -o FirstBankOfSuncoast
 ```
 
+## Resources
+
+- [C# Reading and Writing Files](https://handbook.suncoast.io/lessons/cs-files-reading-and-writing)
+- [CsvHelper](https://joshclose.github.io/CsvHelper/getting-started)
+
 ### Explorer Mode
 
-- [ ] The application should store a history of transactions in a `List<Transaction>`. Your task is to design the `Transaction` class to support both checking and savings as well as deposits and withdraws.
+- [ ] The application should store a history of transactions in a _SINGLE_ `List<Transaction>`. Your task is to design the `Transaction` class to support both checking and savings as well as deposits and withdraws.
 - [ ] The application should load past transactions from a file when it first starts.
-- [ ] As a user I should be able to see the list of transactions that are `savings`.
-- [ ] As a user I should be able to see the list of transactions that are `checking`.
+- [ ] As a user I should be able to see the list of transactions designated `savings`.
+- [ ] As a user I should be able to see the list of transactions designated `checking`.
 - [ ] Never allow withdrawing more money than is available. That is, we cannot allow our `checking` or `savings` balances to go negative.
 - [ ] When prompting for an amount to deposit or withdraw always ensure the amount is positive. The value we store in the `Transaction` shall be positive as well. (e.g. a `Transaction` that is a withdraw of 25 both inputs and records a positive `25`)
 - [ ] As a user I should have a menu option to make a deposit transaction for `savings`.
@@ -49,16 +54,8 @@ dotnet new sdg-console -o FirstBankOfSuncoast
 
 - [ ] Add the ability to transfer funds from my checking to my saving.
 - [ ] Add the ability to transfer funds from my savings to my checking.
-- [ ] Add the ability to have multiple users. There are many steps to take here, so take the time to plan out the changes needed. This includes changes to the interface as well as changes to how you store the data.
 
 ### Epic Mode
 
+- [ ] Add the ability to have more than one user. Take the time to plan out the changes needed as there are many ways to solve this problem. Include changes to the interface as well as changes to how you store the data.
 - [ ] Add simple password protection.
-
-## Additional Resources
-
-- .NET
-
-  - [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
-
-  - [CsvHelper](https://joshclose.github.io/CsvHelper/getting-started)
