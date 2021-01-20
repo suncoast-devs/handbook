@@ -55,11 +55,11 @@ scoop install python
 ```
 
 ```shell
-pip install https://github.com/suncoast-devs/handbook/raw/cddf635403ae4fa5c048eeea6477229e9e82d1e4/lessons/setup-windows/assets/setproctitle-1.1.10-cp38-cp38-win_amd64.whl
+pip install pgspecial click Pygments prompt_toolkit psycopg2 sqlparse configobj pendulum cli_helpers
 ```
 
 ```shell
-pip install pgcli
+pip install pgcli --no-deps
 ```
 
 <!--
