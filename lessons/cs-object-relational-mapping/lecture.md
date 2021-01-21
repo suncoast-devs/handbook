@@ -423,8 +423,6 @@ var existingMovie = context.Movies.FirstOrDefault(movie => movie.Title == "Space
 if (existingMovie != null) {
   existingMovie.Title = "SpaceBalls - the best movie ever";
 
-  context.Entry(existingMovie).State = EntityState.Modified;
-
   context.SaveChanges();
 }
 ```
