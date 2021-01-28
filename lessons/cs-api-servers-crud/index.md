@@ -702,7 +702,131 @@ public async Task<IActionResult> DeleteGame(int id)
 }
 ```
 
-### Making updates to this code
+### Checking for valid data
 
-If we had other tasks to do while processing any of these web requests we could
-update this generated code to our needs.
+Our Game Nights wouldn't be fun without fellow players. Lets add a valudation to
+ensure at least two players are present at each game.
+
+To add this validation we'll update the methods that create and update a `Game`.
+We'd like to reject any request that has a `MinimumPlayers` less than `2`.
+
+We'll add the following code after the check of the `id` in `PutGame` _AND_ to
+the _beginning_ of the `PostGame` method.
+
+```csharp
+// Add a check to make sure we have enough players.
+if (game.MinimumPlayers < 2)
+{
+    return BadRequest(new { Message = "You need at least 2 players!" });
+}
+```
+
+This will return an error code (and message) indicating that this request was
+rejected.
+
+Let's also add a requirement that we cannot _delete_ a game that has already
+happened. In this case we'll be updating the `DeleteGame` method to add code
+that compares `game.When` to `DateTime.Now`
+
+```csharp
+if (game.When < DateTime.Now)
+{
+    return BadRequest();
+}
+```
+
+### Working with associated data
+
+Our Game Night app is a success! Now we want to update it to keep track of data
+of the players that attended each game.
+
+## Adding a new Player Model
+
+We'll start by adding a model to track this information.
+
+```csharp
+namespace GameDatabaseAPI.Models
+{
+    public class Player
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int GameId { get; set; }
+        public Game Game { get; set; }
+    }
+}
+```
+
+And add the information to our `Database Context`
+
+```csharp
+public DbSet<Player> Players { get; set; }
+```
+
+## Creating a whole new controller versus a nested/additional method on a current controller
+
+There are several approaches to allowing our code to track the related players
+to a Game. The first pass would be to create a new controller that focused on
+managing the `Player` model. The user would supply, for each created player the
+`GameId` along with the details about the player (their `Name`).
+
+We could also simply add a method to the existing `GamesController` if all we
+wanted to do was allow for associating the players. In this case we simply need
+a `Create` style action.
+
+To add such an action to our existing controller we'll add a method on our own.
+
+```csharp
+// Adding Players to a game
+// POST /api/Games/5/Players
+[HttpPost("{id}/Players")]
+public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+//                                       |       |
+//                                       |       Player deserialized from JSON from the body
+//                                       |
+//                                       Game ID comes from the URL
+```
+
+This is a `POST` style action which typically indicates the creation of data.
+Then we ensure the game's `id` is present in the URL. We then place a `/Players`
+behind it such that the URL becomes `POST 42/Players` to create a player for the
+`Game` with `Id` of `42`.
+
+We'll name this method `CreatePlayerForGame` and see that the arguments to the
+method indicate we'll be deserializing a `Player` object from the `body` which
+we will name the variable `player`. The method also returns the newly created
+`Player` object.
+
+Here is the implementation of this method:
+
+```csharp
+// Adding Players to a game
+// POST /api/Games/5/Players
+[HttpPost("{id}/Players")]
+public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+//                                       |       |
+//                                       |       Player deserialized from JSON from the body
+//                                       |
+//                                       Game ID comes from the URL
+{
+    // First, lets find the game (by using the ID)
+    var game = await _context.Games.FindAsync(id);
+
+    // If the game doesn't exist: return a 404 Not found.
+    if (game == null)
+    {
+        // Return a `404` response to the client indicating we could not find a game with this id
+        return NotFound();
+    }
+
+    // Associate the player to the given game.
+    player.GameId = game.Id;
+
+    // Add the player to the database
+    _context.Players.Add(player);
+    await _context.SaveChangesAsync();
+
+    // Return the new player to the response of the API
+    return Ok(player);
+}
+```

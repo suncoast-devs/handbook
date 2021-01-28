@@ -274,3 +274,109 @@ Let's review this code. There is a lot there!
 ---
 
 # [fit] Let's run the application and see what it can do!
+
+---
+
+# [fit] Validation
+
+Adding a check to make sure we have at _least_ two players.
+
+Add this to the `PutGame` and to the `PostGame` methods.
+
+```csharp
+// Add a check to make sure we have enough players.
+if (game.MinimumPlayers < 2)
+{
+    return BadRequest(new { Message = "You need at least 2 players!" });
+}
+```
+
+---
+
+# Adding associated Players
+
+Our Game Night app is a success! Now we want to update it to keep track of data of the players that attended each game.
+
+---
+
+# Create a Player model
+
+```csharp
+namespace GameDatabaseAPI.Models
+{
+    public class Player
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int GameId { get; set; }
+        public Game Game { get; set; }
+    }
+}
+```
+
+And add the information to our `Database Context`
+
+```csharp
+public DbSet<Player> Players { get; set; }
+```
+
+---
+
+## Creating a whole new controller versus a nested/additional method on a current controller
+
+^ There are several approaches to allowing our code to track the related players to a Game. The first pass would be to create a new controller that focused on managing the `Player` model. The user would supply, for each created player the `GameId` along with the details about the player (their `Name`).
+
+^ We could also simply add a method to the existing `GamesController` if all we wanted to do was allow for associating the players. In this case we simply need a `Create` style action.
+
+---
+
+## Adding to the existing controller
+
+```csharp
+// Adding Players to a game
+// POST /api/Games/5/Players
+[HttpPost("{id}/Players")]
+public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+//                                       |       |
+//                                       |       Player deserialized from JSON from the body
+//                                       |
+//                                       Game ID comes from the URL
+```
+
+^ This is a `POST` style action which typically indicates the creation of data. Then we ensure the game's `id` is present in the URL. We then place a `/Players` behind it such that the URL becomes `POST 42/Players` to create a player for the `Game` with `Id` of `42`.
+
+^ We'll name this method `CreatePlayerForGame` and see that the arguments to the method indicate we'll be deserializing a `Player` object from the `body` which we will name the variable `player`. The method also returns the newly created `Player` object.
+
+---
+
+```csharp
+// Adding Players to a game
+// POST /api/Games/5/Players
+[HttpPost("{id}/Players")]
+public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+//                                       |       |
+//                                       |       Player deserialized from JSON from the body
+//                                       |
+//                                       Game ID comes from the URL
+{
+    // First, lets find the game (by using the ID)
+    var game = await _context.Games.FindAsync(id);
+
+    // If the game doesn't exist: return a 404 Not found.
+    if (game == null)
+    {
+        // Return a `404` response to the client indicating we could not find a game with this id
+        return NotFound();
+    }
+
+    // Associate the player to the given game.
+    player.GameId = game.Id;
+
+    // Add the player to the database
+    _context.Players.Add(player);
+    await _context.SaveChangesAsync();
+
+    // Return the new player to the response of the API
+    return Ok(player);
+}
+```
