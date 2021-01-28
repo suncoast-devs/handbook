@@ -49,12 +49,6 @@ app-app --beta ApiClient
 - [ ] Write code to query the API and show results.
 - [ ] If your API has more than one endpoint (URL) support a few options, perhaps by creating a menu system in your application.
 
-## Adventure Mode
-
-Build a command-line link shortening tool using this API: https://rel.ink/
-
-Determine for yourself how you would like the tool to work, what the output would look like, etc.
-
 ## Epic Mode
 
 Use the site [Mockaroo](https://mockaroo.com/) to create a mock API. You may need an account and then learn how their "Mock API" feature works.
