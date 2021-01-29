@@ -75,7 +75,7 @@ We will follow these guidelines while building our API:
 To generate an app with API and database support:
 
 ```shell
-dotnet new sdg-api -o GameDatabaseAPI
+dotnet new sdg-api -o GameNight
 ```
 
 ---
