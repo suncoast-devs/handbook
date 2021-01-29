@@ -208,8 +208,8 @@ JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 ```sql
 SELECT *
 FROM "Movies"
-JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
-WHERE "Ratings"."Description" = 'R'
+JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id"
+WHERE "Ratings"."Description" = 'R';
 ```
 
 ---
@@ -322,7 +322,7 @@ CREATE TABLE "Roles" (
 SELECT "Movies"."Title", "Actors"."FullName"
 FROM "Movies"
 JOIN "Roles" ON "Roles"."MovieId" = "Movies"."Id"
-JOIN "Actors" on "Actors"."Id" = "Roles"."ActorId";
+JOIN "Actors" ON "Actors"."Id" = "Roles"."ActorId";
 ```
 
 ---
