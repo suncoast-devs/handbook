@@ -31,7 +31,6 @@ The website we'll be using for this is `https://codewars.com`
 Exercise Choices:
 
 - https://www.codewars.com/kata/5808dcb8f0ed42ae34000031
-- https://www.codewars.com/kata/5769b3802ae6f8e4890009d2
 - https://www.codewars.com/kata/5672a98bdbdd995fad00000f
 - https://www.codewars.com/kata/5556282156230d0e5e000089
 - https://www.codewars.com/kata/56453a12fcee9a6c4700009c
