@@ -81,7 +81,7 @@ Challenges we like:
 |  7  | Suzuki needs help lining up his students!                  | https://www.codewars.com/kata/5701800886306a876a001031        |                                     |
 |  7  | Sum of two lowest positive integers                        | https://www.codewars.com/kata/558fc85d8fd1938afb000014        |                                     |
 |  7  | Sum of all multiples of 3 or 5                             | https://www.codewars.com/kata/57f36495c0bb25ecf50000e7        |                                     |
-|  7  | Stones on the Table                                        | https://www.codewars.com/kata/5f70e4cce10f9e0001c8995a        |                                     |
+|  7  | Stones on the Table                                        | https://www.codewars.com/kata/5f70e4cce10f9e0001c8995a        | JS Only                             |
 |  7  | Square every digit                                         | https://www.codewars.com/kata/546e2562b03326a88e000020        |                                     |
 |  7  | SQL Basics: Simple JOIN                                    | https://www.codewars.com/kata/5802e32dd8c944e562000020        | SQL Only                            |
 |  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
@@ -100,7 +100,7 @@ Challenges we like:
 |  7  | Highest and Lowest                                         | https://www.codewars.com/kata/554b4ac871d6813a03000035        |                                     |
 |  7  | Get the Middle Character                                   | https://www.codewars.com/kata/56747fd5cb988479af000028        |                                     |
 |  7  | Form the hightest                                          | https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e        |                                     |
-|  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        |                                     |
+|  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        | JS Only                             |
 |  7  | Find 0 and 1                                               | https://www.codewars.com/kata/57d237f25dc38ede6e00026b        | JS Only - More challenging than a 7 |
 |  7  | Exes and Ohs                                               | https://www.codewars.com/kata/55908aad6620c066bc00002a        |                                     |
 |  7  | Drink responbility                                         | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
