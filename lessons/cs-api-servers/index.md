@@ -267,7 +267,7 @@ in our example.
 
 ```csharp
 [HttpGet]
-public string Get(string who)
+public string SayHello(string who)
 {
     return $"Hello, {who}. It is currently {DateTime.Now}";
 }
@@ -285,7 +285,7 @@ this case `null`. We can handle that case and put back our default text of
 
 ```csharp
 [HttpGet]
-public string Get(string who)
+public string SayHello(string who)
 {
     string whoOrWorld;
 

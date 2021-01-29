@@ -389,7 +389,7 @@ In this case:
 
 ```csharp
 [HttpGet]
-public string HelloWorld(string who)
+public string SayHello(string who)
 {
     return $"Hello, {who}. It is currently {DateTime.Now}";
 }
@@ -419,7 +419,7 @@ Let's add code to handle that case:
 
 ```csharp
 [HttpGet]
-public string Get(string who)
+public string SayHello(string who)
 {
     string whoOrWorld;
 
@@ -509,7 +509,7 @@ But wait, this time we are returning an `int` -- what are we going to get in the
 
 ---
 
-# `http://localhost/api/Dice/6`
+# `http://localhost:5000/api/Dice/6`
 
 ---
 
@@ -617,7 +617,7 @@ Luckily `C#` allows us to specify a default value for an argument if it is not s
 ---
 
 ```csharp
-public List<int> Roll(int sides, int count = 1)`
+public List<int> Roll(int sides, int count = 1)
 ```
 
 By changing this we now default to rolling a single die if a value is not supplied.
