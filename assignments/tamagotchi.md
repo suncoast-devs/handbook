@@ -21,7 +21,7 @@ dotnet new sdg-api -o TamagotchiAPI
 
 - Create and new `sdg-api` that has the following features
 
-- You may use `dotnet ef migrations add` or `pgcli` + `CREATE TABLE` - student's choice
+- You may use `dotnet ef migrations add` or `pgcli` + `CREATE TABLE` - You the student can choose which you prefer to use.
 - Create a database with a table named `Pets`.
   - Should use a POCO called `Pet` with the following columns:
     - `Id` (int - automatic primary key)
@@ -46,7 +46,7 @@ The API will have the following endpoints.
 
 - [ ] `GET /pets` should return all pets in your database.
 - [ ] `GET /pets/{id}` should return the pet with the corresponding id.
-- [ ] `POST /pets` should create a new pet. The controller should ensure the following: `Birthday` **defaults** to the current DateTime, `HungerLevel` **defaults** to `0` and `HappinessLevel` **defaults** to `0`. (Hint: it might be useful to set these as model defaults!)
+- [ ] `POST /pets` should create a new pet. The controller should ensure the following: `Birthday` **defaults** to the current DateTime, `HungerLevel` **defaults** to `0` and `HappinessLevel` **defaults** to `0`.
 - [ ] `DELETE /pets/{id}`, should delete a pet from the database by Id
 - [ ] `POST /pets/{id}/playtimes` should find the pet by id and add five to its happiness level and add three to its hunger level. It should also create a new `Playtime` for this pet and the current time.
 - [ ] `POST /pets/{id}/feedings` should find the pet by id and subtract five from its hungry level and add three to its happiness level. It should also create a new `Feeding` for this pet and the current time.
