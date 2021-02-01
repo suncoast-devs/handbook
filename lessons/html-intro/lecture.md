@@ -340,8 +340,10 @@ In the above examples you may have noticed that a lot of whitespace is included 
 
 [.column]
 
+<!-- prettier-ignore -->
 ```html
-<p>Dogs are silly.</p>
+<p>Dogs       are
+                    silly.</p>
 
 <p>Dogs are silly.</p>
 ```
