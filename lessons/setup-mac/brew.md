@@ -5,6 +5,16 @@ title: Homebrew
 Homebrew is a tool for installing other programs and tools. We will use it to
 install many of the development tools we need during this program.
 
+## Pre Setup
+
+Open a Terminal and run:
+
+```shell
+xcode-select --install
+```
+
+This will install the Apple developer tools we need for many of the steps that follow.
+
 ## Installation
 
 Open a Terminal and run:
