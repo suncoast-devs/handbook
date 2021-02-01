@@ -755,7 +755,7 @@ Notice that the `img` tag is not:
 
 But it is a single element that opens and closes on its own.
 
-This is known as a `void element` in that the element has not content area and thus _self closes_
+This is known as a `void element`; the element does not have a content area and thus _self closes_
 
 ---
 
