@@ -169,8 +169,8 @@ p {
 ```
 
 ---
-[.autoscale: true]
 
+[.autoscale: true]
 
 # Selectors
 
@@ -325,13 +325,13 @@ CSS has several ways to select elements based on how they are related to one ano
 
 [.autoscale: true]
 
-| Name                        | Syntax | Selects                                                                                                                                                                                |
-| --------------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| List               | **`A, B`**   | Any element matching A and/or B |
-| Descendant       | **`A B`**    | Any element matching B that is a descendant of an element matching A |
-| Child             | **`A > B`**  | Any element matching B that is a direct child of an element matching A.                                                                                                                |
-| Adjacent | **`A + B`**  | Any element matching B that is the next sibling of an element matching A |
-| General sibling | **`A ~ B`**  | Any element matching B that is one of the next siblings of an element matching A |
+| Name            | Syntax      | Selects                                                                          |
+| --------------- | ----------- | -------------------------------------------------------------------------------- |
+| List            | **`A, B`**  | Any element matching A and/or B                                                  |
+| Descendant      | **`A B`**   | Any element matching B that is a descendant of an element matching A             |
+| Child           | **`A > B`** | Any element matching B that is a direct child of an element matching A.          |
+| Adjacent        | **`A + B`** | Any element matching B that is the next sibling of an element matching A         |
+| General sibling | **`A ~ B`** | Any element matching B that is one of the next siblings of an element matching A |
 
 ---
 
@@ -353,7 +353,7 @@ We are going to concentrate on `px`, `em`, and `rem`.
 
 For other useful sizes such as `vh` (view height), `vw` (view width), and others, see the MDN.
 
-`Google:  mdn css length`
+`Google: mdn css length`
 
 ---
 
@@ -383,7 +383,7 @@ Good for things that are already measured in pixels, like the size of an image. 
 
 - `1rem` equals the `font-size` of the parent, `2rem` is twice the `font-size` of the parent, etc.
 
-This is *relative* to the font-size of the parent.
+This is _relative_ to the font-size of the parent.
 
 This can be confusing if a rule of `2em` is applied to different elements who's parent's `font-size` has been customized.
 
@@ -393,10 +393,9 @@ In this case `2em` of padding won't be the same amount.
 
 # rem
 
-> Represents the calculated font-size of the *root* element.
+> Represents the calculated font-size of the _root_ element.
 
-This is *always* scaled to the `font-size` of the root element. Thus is consistent against all elements regardless of their specific, calculated `font-size`
-
+This is _always_ scaled to the `font-size` of the root element. Thus is consistent against all elements regardless of their specific, calculated `font-size`
 
 ---
 
@@ -420,7 +419,7 @@ What happens if multiple rules apply?
 
 What properties are inherited from their parent elements?
 
-Lets define what the CSS cascade is, what specificity is, what importance is, and how properties inherit from different rules. 
+Lets define what the CSS cascade is, what specificity is, what importance is, and how properties inherit from different rules.
 
 ---
 
@@ -476,7 +475,6 @@ The amount of specificity a selector has is measured using four different values
 
 ---
 
-
 | Column    | Score                                                                                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Thousands | Score one in this column if the declaration is inside a style attribute, aka inline styles. Such declarations don't have selectors, so their specificity is always simply 1000. |
@@ -493,7 +491,6 @@ The amount of specificity a selector has is measured using four different values
 | `li > a[href*="en-US"] > .inline-warning`                    | `0`       | `0`      | `2`  | `2`  | `0022`            |
 | `#identifier`                                                | `0`       | `1`      | `0`  | `0`  | `0100`            |
 | No selector, with a rule inside an element's style attribute | `1`       | `0`      | `0`  | `0`  | `1000`            |
-
 
 ---
 
@@ -557,7 +554,6 @@ To control what happens in such cases, we can use the overflow property.
 | `hidden`  | If there is too much content, the overflowing content is hidden.                                                                         |
 | `visible` | If there is too much content, the overflowing content is shown outside of the box (this is usually the default behavior.)                |
 
-
 ---
 
 # Types of CSS boxes
@@ -599,7 +595,6 @@ Width and height settings have no effect on inline boxes; any padding, margin an
 An `inline-block` box is something in between the first two: It flows with surrounding text and other inline elements without creating line breaks before and after it unlike a block box, but it can be sized using width and height and maintains its block integrity like a block box.
 
 It won't be broken across paragraph lines like an inline box.
-
 
 ---
 
@@ -645,3 +640,374 @@ border-radius: 10px / 20px;
 border-radius: 10px 30px / 20px 40px;
 ```
 
+---
+
+# Apply This!
+
+---
+
+# SDG Safari
+
+---
+
+![fit](./assets/sdg-safari.gif)
+
+---
+
+# First Step - Content!
+
+---
+
+[.column]
+
+```
+<header>
+  <nav>
+    <h1>Safari</h1>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Our Animals</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<h2>Featured Creatures</h2>
+
+<div class="feature">
+  <figure>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/1.jpg" alt="An Animal" />
+  </figure>
+  <figure>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/2.jpg" alt="An Animal" />
+  </figure>
+</div>
+
+<h2>Our New Friends</h2>
+
+<ul>
+  <li>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/3.jpg" alt="An Animal" />
+  </li>
+  <li>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/4.jpg" alt="An Animal" />
+  </li>
+  <li>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/5.jpg" alt="An Animal" />
+  </li>
+  <li>
+    <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/6.jpg" alt="An Animal" />
+  </li>
+</ul>
+<h3>Lorem ipsum dolor sit amet</h3>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Commodo ullamcorper a
+  lacus vestibulum sed arcu non odio euismod.
+</p>
+```
+
+[.column]
+
+```
+<h2>Latest Posts</h2>
+
+<article>
+  <h3><a href="#">Aliquam Eleifend mi in Nulla Posuere</a></h3>
+  <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/9.jpg" alt="An Animal" />
+  <p>
+    In ante metus dictum at tempor commodo ullamcorper a lacus. Ultricies
+    tristique nulla aliquet enim tortor at auctor. Egestas pretium aenean
+    pharetra magna ac placerat vestibulum. Volutpat maecenas volutpat
+    blandit aliquam. Enim diam vulputate ut pharetra sit. Commodo
+    ullamcorper a lacus vestibulum sed arcu.
+  </p>
+</article>
+
+<article>
+  <h3><a href="#">Tristique Risus nec Feugiat in Fermentum</a></h3>
+  <img src="https://github.com/suncoast-devs/handbook/raw/master/lessons/css-intro/assets/safari-images/10.jpg" alt="An Animal" />
+  <p>
+    Euismod quis viverra nibh cras pulvinar. Donec enim diam vulputate ut
+    pharetra sit amet aliquam id. Id volutpat lacus laoreet non curabitur
+    gravida arcu ac tortor. Sapien eget mi proin sed. Sit amet nulla
+    facilisi morbi tempus. Id velit ut tortor pretium viverra.
+  </p>
+</article>
+
+<footer>
+  <h3>Join our Newsletter</h3>
+  <form>
+    <p>
+      <label for="full-name">Name</label>
+      <input type="text" name="full-name" />
+    </p>
+    <p>
+      <label for="email-address">Email Address</label>
+      <input type="e-mail" name="email-address" />
+    </p>
+    <p>
+      <input type="submit" value="Sign Up" />
+    </p>
+  </form>
+
+  <h3>Make a Donation</h3>
+  <p>
+    Magna fringilla urna porttitor rhoncus dolor purus. Nullam non nisi est
+    sit amet. Tincidunt eget nullam non nisi est sit. Blandit cursus risus
+    at ultrices. Id venenatis a condimentum vitae sapien pellentesque
+    habitant morbi.
+  </p>
+  <button>Donate</button>
+  <p>Built with <span class="hearts">&hearts;</span> in St. Petersburg, Florida.</p>
+</footer>
+```
+
+---
+
+# Style top-to-bottom and outside-in
+
+---
+
+# CSS Normalizer
+
+This removes minor variations between browser's default styles
+
+```
+@import url('https://necolas.github.io/normalize.css/latest/normalize.css');
+```
+
+---
+
+# Import fonts
+
+Google Fonts (https://fonts.google.com) is a good starting place
+
+```
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Lato:wght@400;700&display=swap');
+```
+
+---
+
+# Apply some body styles
+
+```
+/* Use the Lato font for all the text */
+font-family: 'Lato', sans-serif;
+/* Specify a background color for the entire body */
+background-color: #eee5e9;
+/* Specify a text color */
+color: #2b303a;
+```
+
+---
+
+# Style the header and the footer
+
+```
+header,
+footer {
+  /* Use a different background color for the header */
+  background-color: #2b303a;
+  /* And a different font color */
+  color: #eee5e9;
+  /* With some padding all the way around */
+  padding: 0.5rem;
+}
+```
+
+---
+
+# Style our links
+
+<!-- prettier-ignore-start -->
+`Lord   Vader      Former   Handle    Anakin`
+`Lord   Voldemort  Fears    Hogwarts  Alumni`
+`----   ---------  ------   --------  ------`
+`Link   Visited    Focus    Hover     Active`
+
+
+<!-- prettier-ignore-end -->
+
+```
+/* Default style for all unvisited and visited links */
+a:link,
+a:visited {
+  text-decoration: none;
+  color: #d64933;
+}
+
+/* Default style for all focus/hover/active links */
+a:focus,
+a:hover,
+a:active {
+  text-decoration: underline;
+}
+
+/* Different styles for header links */
+header a:link,
+header a:visited {
+  color: #92dce5;
+}
+```
+
+---
+
+# Lists
+
+```
+/* Remove padding and bullet style */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Force the header lists to be UPPERCASE */
+header li {
+  text-transform: uppercase;
+}
+```
+
+---
+
+# Headers
+
+```
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Use Calistoga font for headers, fallback to serif otherwise */
+  font-family: 'Calistoga', serif;
+  /* Increase the font weight */
+  font-weight: 400;
+  /* and remove the margins */
+  margin: 0;
+}
+```
+
+---
+
+# Images
+
+```
+.feature figure {
+  /* Add some margin and padding */
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+
+  /* Specify a background color */
+  background-color: #fffffd;
+  /* Round the corners */
+  border-radius: 0.25rem;
+  /* Add a box shadow */
+  box-shadow: 2px 2px 0.5rem #7c7c7c;
+
+}
+
+figure img {
+  width: 50%;
+}
+
+// The images in our list should have some margin and width
+ul li img {
+  margin: 0.25rem;
+  width: 250px;
+}
+```
+
+---
+
+# Articles
+
+```
+article {
+  /* Change the background, with a little bit of opacity */
+  background-color: #ffffffdd;
+  /* Round the corners slightly */
+  border-radius: 0.25rem;
+  /* Add some padding */
+  padding: 0.5rem;
+  /* Set a top/bottom margin but leave the left-right margin auto (centered) */
+  margin: 0.5rem auto;
+  /* Add a neat box-shadow */
+  box-shadow: 2px 2px 0.5rem #7c7c7c;
+}
+
+article h3 {
+  /* Top margin 0, left and right margin automatic (centered), bottom margin half rem */
+  margin: 0 auto 0.5rem;
+}
+
+article p {
+  /* Smaller font size */
+  font-size: 0.75rem;
+  /* Top margin only */
+  margin: 0.5rem 0 0 0;
+}
+```
+
+# Style the form
+
+```
+
+label {
+  /* Display the label as block so it is on it's own line */
+  display: block;
+  /* UPPERCASE */
+  text-transform: uppercase;
+  /* Increase bold and decrease size */
+  font-weight: bold;
+  font-size: 0.75rem;
+  /* Increase the spacing between letters */
+  letter-spacing: 0.05rem;
+  /* Adjsut the text color */
+  color: #7c7c7c;
+}
+
+input {
+  /* Adjust the text color */
+  color: #2b303a;
+  /* Make the input take 100% of it's available container */
+  width: 100%;
+  /* Round the corners */
+  border-radius: 0.25rem;
+  /* Remove the border */
+  border: none;
+  /* Add some padding */
+  padding: 0.5rem;
+}
+
+input[type='submit'] {
+  width: auto;
+}
+
+input[type='submit'],
+button {
+  /* Use the Calistoga font for the submit button */
+  font-family: 'Calistoga', serif;
+  /* Adjust the background color */
+  background-color: #d64933;
+  /* Adjust the text color */
+  color: #eee5e9;
+  /* remove the border */
+  border: none;
+  /* Adjust the padding, top/bottom and left/right */
+  padding: 0.25rem 0.5rem;
+  /* Round those corners! */
+  border-radius: 0.25rem;
+}
+```
+
+# Format our red hearts
+
+```
+.hearts {
+  color: #d64933;
+  text-shadow: 0 0 0.5rem #d64933;
+  font-size: 1.2rem;
+}
+```
