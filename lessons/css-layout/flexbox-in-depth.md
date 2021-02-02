@@ -1,6 +1,6 @@
 ---
 title: Flexbox In Depth
-order: 7
+order: 4
 ---
 
 ## Why Flexbox?

@@ -1,5 +1,6 @@
 ---
 title: Additional Resources
+order: 7
 ---
 
 - [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)

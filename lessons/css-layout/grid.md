@@ -1,6 +1,6 @@
 ---
 title: Grid
-order: 4
+order: 5
 ---
 
 CSS Grid Layout is a two-dimensional way of laying out objects in a grid-like
