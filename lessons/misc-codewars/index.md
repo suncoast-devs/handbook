@@ -63,7 +63,7 @@ Challenges we like:
 |  8  | Conditional Statement Switch                               | https://www.codewars.com/kata/572059afc2f4612825000d8a        | JS Only                             |
 |  8  | Compare with margin                                        | https://www.codewars.com/kata/56453a12fcee9a6c4700009c        |                                     |
 |  8  | Collect Tuition (SQL for Beginners #4)                     | https://www.codewars.com/kata/5910b0d378cc2ba91400000b        | SQL Only                            |
-|  8  | Closest Elevator                                           | https://www.codewars.com/kata/5c374b346a5d0f77af500a5a        |                                     |
+|  8  | Closest Elevator                                           | https://www.codewars.com/kata/5c374b346a5d0f77af500a5a        | JS Only                             |
 |  8  | Century From Year                                          | https://www.codewars.com/kata/5a3fe3dde1ce0e8ed6000097        |                                     |
 |  8  | Calculate Average                                          | https://www.codewars.com/kata/57a2013acf1fa5bfc4000921        |                                     |
 |  8  | Beginner Series #2 Clock                                   | https://www.codewars.com/kata/55f9bca8ecaa9eac7100004a        |                                     |
