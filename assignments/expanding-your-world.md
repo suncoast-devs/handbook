@@ -15,7 +15,7 @@ For this assignment you will be taking the HTML you made for the last project an
 - [ ] Take the CSS ideas and tools that were discussed in class and apply those to your homework.
 - [ ] Apply colors, margin, padding, background colors, and font styles to the various elements of the page. Add `class=` where needed but try to keep to element selectors if you can!
 
-### Explorer Mode
+### Adventure Mode
 
 - [ ] Research fonts.google.com and find an alternative font, or two, for your site. Use two different fonts (but no more than two) to style different aspects of your page. Maybe headers in one font and text in another.
 
