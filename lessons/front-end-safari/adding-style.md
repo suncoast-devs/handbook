@@ -1,5 +1,5 @@
 ---
-title: Content First
+title: Adding Style
 order: 2
 ---
 

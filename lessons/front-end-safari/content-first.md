@@ -1,6 +1,6 @@
 ---
 title: Content First
-order: 2
+order: 1
 ---
 
 # Starting with a blank page
