@@ -1,5 +1,5 @@
 ---
-title: axios, an alternative to JavaScript fetch
+title: AXIOS, an alternative to JavaScript fetch
 ---
 
 # axios

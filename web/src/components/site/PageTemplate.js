@@ -120,7 +120,12 @@ export const pageQuery = graphql`
         fields: { slug: { eq: $slug }, type: { in: ["lesson", "reading"] } }
       }
       sort: {
-        fields: [fields___type, frontmatter___order, fileAbsolutePath]
+        fields: [
+          fields___type
+          frontmatter___order
+          frontmatter___title
+          fileAbsolutePath
+        ]
         order: ASC
       }
     ) {
