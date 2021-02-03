@@ -125,13 +125,13 @@ var index = 0;
 index = (index + 1) % 5;  // 0 + 1 is 1 -- 1 % 5 = 1
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 1 + 1 is 1 -- 1 % 5 = 1
+index = (index + 1) % 5;  // 1 + 1 is 2 -- 1 % 5 = 2
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 2 + 1 is 1 -- 1 % 5 = 1
+index = (index + 1) % 5;  // 2 + 1 is 3 -- 1 % 5 = 3
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 3 + 1 is 1 -- 1 % 5 = 1
+index = (index + 1) % 5;  // 3 + 1 is 4 -- 1 % 5 = 4
 Console.WriteLine($"index is {index}");
 
 // Here is where the % comes into play, adding one to 4 give 5, but we want this to "wrap around" back to 0.
@@ -142,7 +142,7 @@ Console.WriteLine($"index is {index}");
 index = (index + 1) % 5;  // 0 + 1 is 1 -- 1 % 5 = 1
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 1 + 1 is 2 -- 2 % 5 = 1
+index = (index + 1) % 5;  // 1 + 1 is 2 -- 2 % 5 = 2
 Console.WriteLine($"index is {index}");
 ```
 
