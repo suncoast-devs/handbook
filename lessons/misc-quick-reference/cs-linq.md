@@ -51,20 +51,20 @@ var yearAndMovie = movies.Select(movie => $"{movie.ReleaseDate.Year}, {movie.Nam
 > can accept a second argument, the index of the element.
 
 ```csharp
-// Make a list of strings when each string contains the year it's corresponding Movie was released, a comma, the title of the Movie, and the index in the original list.
+// Make a list of strings where each string contains the year the corresponding Movie was released, a comma, the title of the Movie, and the index in the original list.
 var yearAndMovie = movies.Select((movie, index) => $"{movie.ReleaseDate.Year}, {movie.Name}, at index {index} ");
 ```
 
 ### Where
 
 The `Where` statement is like a filter. We use it when we want to make a new
-list, keeping only _some_ of the items from the original list.
+list, keeping _some_ of the items from the original list.
 
 > Makes a new list, of _equal or smaller_ size by running an expression against
-> every item, keeping only items when the expression returns `true`.
+> every item, keeping items when the expression returns `true`.
 
 ```csharp
-// Make a new list containing only the movies that that have over 100 Screenings
+// Make a new list containing the movies that have over 100 Screenings
 var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 ```
 
@@ -94,6 +94,7 @@ and return the `index` of that element when found. If no match is found,
 `FindIndex` returns the value `-1`
 
 ```csharp
+// Find the index of the first movie that has over 100 screenings. Will return -1 if there aren't any such movies.
 var indexOfFirstMovieHavingOverOneHundredScreenings = movies.FindIndex(movie => movie.Screenings >= 100);
 ```
 
@@ -135,6 +136,7 @@ var moviesThatCostMoreThanTenDollars = movies.Count(movie => movie.PricePerTicke
 > Returns _an integer_ by adding up the value of the expression for each item.
 
 ```csharp
+// Get the total price of all movie's PricePerTicket. This goes through every movie, adding to a running total of PricePerTicket, placing the grand total in the variable totalPriceOfAllTickets
 var totalPriceOfAllTickets = movies.Sum(movie => movie.PricePerTicket);
 ```
 
@@ -150,8 +152,8 @@ var favoriteMovie = movies.First(movie => movie.Name == "Jaws");
 
 ### FirstOrDefault
 
-> Returns _a single element of the list_ which is the the first item for which
-> the expression returns `true`. If no item is found, the default value for that
+> Returns _a single element of the list_ which is the first item for which the
+> expression returns `true`. If no item is found, the default value for that
 > type is returned.
 
 ```csharp
@@ -185,14 +187,15 @@ var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTick
 > with a `Select`
 
 ```csharp
-// Make a list of all the distinct movie titles. That is, if two movies have the same title, the title only appears once.
+// Make a list of all the distinct movie titles. That is, if two movies have the same title, the title appears once.
 var titles = movies.Select(movie => movie.Name).Distinct();
 ```
 
 ### Max
 
 > Returns the highest value in the collection, but not the actual item. Useful
-> for getting numbers.
+> for getting the largest value of a list of numbers, or the largest value of
+> some property of a list of objects.
 
 ```csharp
 // Of all the values of `Budget` for all the movies, return the largest one.
@@ -207,16 +210,6 @@ var biggestBudget = movies.Max(movie => movie.Budget);
 ```csharp
 // Of all the values of `Budget` for all the movies, return the smallest one.
 var smallestBudget = movies.Min(movie => movie.Budget);
-```
-
-### Sum
-
-> Returns the sum of the property that was returned by the expressions. Useful
-> for getting totals.
-
-```csharp
-// Get tht total of all revenue for all movies
-var totalOfAllRevenue = movies.Sum(movie => movie.TotalRevenue);
 ```
 
 ### Take
@@ -249,7 +242,7 @@ var alphabetically = movies.OrderBy(movie => movie.Name);
 
 ## ThenBy and ThenByDescending
 
-> Used only after an `OrderBy` and is used to resolve any `OrderBy` ties
+> Used only after an `OrderBy` and resolves any `OrderBy` ties
 
 ```csharp
 // Makes a new list sorted by alphabetically by title, then by release year if they have the same Title
