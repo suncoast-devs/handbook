@@ -71,6 +71,10 @@ If you click any property's you will see the
 
 ---
 
+### [box-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow)
+
+> adds shadow effects around an element's frame.
+
 ### [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
 > sets the foreground color value of an element's text and text decorations
