@@ -243,12 +243,11 @@ var beginsWithHello = greeting.BeginsWith("Hello");
 
 ### Join
 
-We can join an array of strings back into a single string using the Join method.
+We can join an array of strings back into a single string using the `String.Join` method.
 
 ```csharp
 var studentNames = new string[5] {"Marcus", "Emily", "Jason", "Steve", "Julia"};
-
-var studentString = studentNames.Join(", ");
+var studentString = String.Join(", ", studentNames);
 
 // The effect would be:
 // studentString = "Marcus, Emily, Jason, Steve, Julia";
