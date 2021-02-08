@@ -17,6 +17,11 @@ This project will create an API that allows a user to create and care for a virt
 dotnet new sdg-api -o TamagotchiAPI
 ```
 
+### Resources
+
+- [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1)
+- [Web API docs](https://dotnet.microsoft.com/apps/aspnets)
+
 ### Explorer Mode
 
 - Create and new `sdg-api` that has the following features
@@ -75,8 +80,3 @@ Create a console app that interacts with the API that:
 - Select a pet to take care of and then play with, scold, or feed the selected pet.
 - Create a new pet.
 - Delete a pet.
-
-## Resources
-
-- [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1)
-- [Web API docs](https://dotnet.microsoft.com/apps/aspnets)

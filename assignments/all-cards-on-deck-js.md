@@ -94,7 +94,3 @@ Let's break this down from the inside out:
 Because we're rounding down, it's impossible to get `20`. This will give us an
 integer between `0` and `19`. This technique is perfect for finding a "random"
 index in an array of length `n`.
-
-## Slides
-
-https://slides.com/markdewey-1/arrays-and-loops

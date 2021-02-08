@@ -30,7 +30,7 @@ The transactions will be **saved** in a file, using a `CSV` format to record the
 dotnet new sdg-console -o FirstBankOfSuncoast
 ```
 
-## Resources
+### Resources
 
 - [C# Reading and Writing Files](https://handbook.suncoast.io/lessons/cs-files-reading-and-writing)
 - [CsvHelper](https://joshclose.github.io/CsvHelper/getting-started)

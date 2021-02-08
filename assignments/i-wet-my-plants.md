@@ -19,7 +19,7 @@ planted and other details.
 - Create a .NET console app that stores data in a database.
 - Query the database using EF Core.
 
-## Resources
+### Resources
 
 - [EF Core Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
 
@@ -29,9 +29,12 @@ planted and other details.
 dotnet new sdg-console-database -o WetMyPlants
 ```
 
-### Explorer Mode
+## Additional Resources
 
-#### .NET
+- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+- [Lecture Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)
+
+### Explorer Mode
 
 - Create a new console application that will store the list of plants the
   user has planted.
@@ -79,10 +82,3 @@ dotnet new sdg-console-database -o WetMyPlants
 ### Epic Mode
 
 Go back to your Dinosaur app, remove your list and add a database.
-
-## Additional Resources
-
-- .NET
-
-  - [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
-  - [Lecture Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)

@@ -23,6 +23,10 @@ tags: ['c-sharp', 'dotnet', 'api']
 dotnet new sdg-api -o CodeWarPracticeAPI
 ```
 
+### Resources
+
+- Use [Insomnia](https://insomnia.rest/) for interacting with your API.
+
 ### Explorer Mode
 
 - Create a new `sdg-api` api project
@@ -37,14 +41,10 @@ dotnet new sdg-api -o CodeWarPracticeAPI
   - This endpoint method will take the string passed to it, manipulate according to the kata [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling) and return the result
   - Have your code return the string
 
-## Adventure Mode
+### Adventure Mode
 
 None
 
-## Epic Mode
+### Epic Mode
 
 None
-
-## Resources
-
-- Use [Insomnia](https://insomnia.rest/) for interacting with your API.

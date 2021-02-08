@@ -67,6 +67,10 @@ When using this code you could replace the specific value `956` with `rightIndex
 dotnet new sdg-console -o AllCardsOnDeckCS
 ```
 
+### Resources
+
+- [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
+
 ### Explorer Mode
 
 - Once the program starts, you should create a new deck.
@@ -83,7 +87,3 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 - Implement the game of [War][1]
 
 [1]: https://en.wikipedia.org/wiki/War_(card_game)
-
-## Resources
-
-- [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
