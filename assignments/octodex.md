@@ -33,7 +33,7 @@ app-app --alpha Octodex
 ### Explorer Mode
 
 - [ ] Use `app-app` with `alpha` and name your project `Octodex`
-- [ ] Feel free to start with this [template HTML](https://raw.githubusercontent.com/suncoast-devs/octodex-template/master/public/index.html)
+- [ ] Feel free to start with this [template HTML](https://raw.githubusercontent.com/suncoast-devs/warp-gate/trunk/octodex/public/index.html)
 - [ ] Recreate the page as closely as you possibly can. Use the same fonts, sizes, and colors. Use your browser's developers tool to determine the colors and fonts.
 - [ ] Select _some_ Octocats to use on your page (`12` to `16` or so). Your layout should be flexible but doesn't need to _perfectly_ responsive.
   - Don't bother downloading details of the Octocat, we've [made a site]((https://sdg-octodex.herokuapp.com/) that will give you all the data you need.
