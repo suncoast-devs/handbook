@@ -20,18 +20,15 @@ sudo apt install pgcli
 sudo -u postgres createuser --superuser $USER
 ```
 
-<!--
-#### Configure pgcli with nice defaults
+## Configure pgcli with nice defaults
+
+The following command will set some common user configuration options in your
+pgcli. If you've used pgcli before and have custom configured it, this will
+_overwrite_ your configuration changes.
 
 ```shell
-pgcli >/dev/null 2>&1
-sed -i "s/multiline_continuation_char = ''/multiline_continuation_char = '.'/g" ~/.config/pgcli/config
-sed -i "s/multi_line = False/multi_line = True/g" ~/.config/pgcli/config
-sed -i "s/enable_pager = True/enable_pager = False/g" ~/.config/pgcli/config
-sed -i "s/wider_completion_menu = False/wider_completion_menu = True/g" ~/.config/pgcli/config
-sed -i "s/syntax_style = default/syntax_style=native/g" ~/.config/pgcli/config
+sdg pgcliConfig
 ```
- -->
 
 ## Test if it is working:
 
