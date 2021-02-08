@@ -42,4 +42,3 @@ Now that we have learned the power of flexbox we will apply it to the sites we a
 ## Recommended Practice:
 
 - https://flexboxfroggy.com/
-- https://mastery.games/p/flexbox-zombies
