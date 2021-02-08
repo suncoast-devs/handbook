@@ -59,7 +59,7 @@ app-app --beta VariablesJS
     - Use [this page](https://www.random.org/integers/?num=100&min=1&max=100&col=5&base=10&format=plain&rnd=new) to generate a array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor you will need to format the collection of numbers as a JavaScript array.
     - Place these numbers into a properly formatted array named `numbers`.
     - Determine the following. Use JavaScripts `for` loops to your advantage.
-      - Create an object called `statistics` with the following **properties**
+      - Create an object called `statistics` with the following **properties** that your **CODE** figures out (e.g. no doing the work by hand, the JavaScript code should figure out the values for each of these)
         - In a property named `smallest`, put the smallest value in the array.
         - In a property named `largest`, put the largest value in the array.
         - In a property named `sum`, put the sum of all the values in the array.
