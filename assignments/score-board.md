@@ -9,7 +9,7 @@ For this assignment, you are creating a simple interactive scoreboard for your f
 
 - Refer to this mockup to design your page:
 
-![](./assets/scoreboard.png)
+![](https://github.com/suncoast-devs/handbook/raw/master/assignments/assets/scoreboard.png)
 
 - A user should be able to update a score and the teams playing.
 - Use these HTML and CSS files as starting content:
