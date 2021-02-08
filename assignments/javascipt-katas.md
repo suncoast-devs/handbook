@@ -31,25 +31,25 @@ After completing this assignment, you should be able to:
 
 ### Explorer Mode
 
-- [ ] All tests passing
-- [ ] No linter warnings
-- [ ] Turn in the homework using the URL to your repository on Github.
+- All tests passing
+- No linter warnings
+- Turn in the homework using the URL to your repository on Github.
 
 ### Adventure Mode
 
-- [ ] If you used "built-in" JavaScript methods like `String.reverse()` or
-      `Array.max()` to solve these problems, try implementing them from scratch.
-- [ ] Vice-versa: if you implemented your solutions from scratch, look in the
-      documentation linked below to see if JavaScript has any built-in functions
-      to help solve these problems.
+- If you used "built-in" JavaScript methods like `String.reverse()` or
+  `Array.max()` to solve these problems, try implementing them from scratch.
+- Vice-versa: if you implemented your solutions from scratch, look in the
+  documentation linked below to see if JavaScript has any built-in functions
+  to help solve these problems.
 
 ### Epic Mode
 
-- [ ] Expand the `sum` and `max` functions to take arrays instead of numbers and
-      update the tests so they pass.
-- [ ] Create your own simple functions with tests.
-- [ ] Anytime in your code that you used a `for` loop or a `while` loop, convert
-      it to use a `map`, `filter` or `reduce`.
+- Expand the `sum` and `max` functions to take arrays instead of numbers and
+  update the tests so they pass.
+- Create your own simple functions with tests.
+- Anytime in your code that you used a `for` loop or a `while` loop, convert
+  it to use a `map`, `filter` or `reduce`.
 
 ## Additional Resources
 

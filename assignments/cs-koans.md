@@ -1,6 +1,6 @@
 ---
 title: Wax On, Wax Off
-tags: ["c-sharp", "koans"]
+tags: ['c-sharp', 'koans']
 ---
 
 > A **koan** is a riddle or puzzle that Zen Buddhists use during meditation to
@@ -27,14 +27,14 @@ beginners and veterans learn the ins and outs of the language.
 
 ### Explorer Mode
 
-- [ ] Complete the Koans
-- [ ] Once you are done with you koans, (or need a break), continue to work on
-      your capstone.
+- Complete the Koans
+- Once you are done with you koans, (or need a break), continue to work on
+  your capstone.
 
 ### Adventure Mode
 
-- [ ] (.NET) There are a few Koans that were commented out, comment these in and
-      complete them.
+- (.NET) There are a few Koans that were commented out, comment these in and
+  complete them.
 
 ## Reading Material
 

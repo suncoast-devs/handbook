@@ -29,7 +29,7 @@ dotnet new sdg-console -o VariablesCS
 
 ### Explorer Mode
 
-- [ ] Create a new app that does the following.
+- Create a new app that does the following.
 
   - Practice Creating Variables
 
@@ -64,13 +64,13 @@ dotnet new sdg-console -o VariablesCS
 ### Adventure Mode
 
 - Using Logic
-  - [ ] Add some _logic_ to your program that prints a different, special, greeting to the user if their name happens to be `Alice`.
+  - Add some _logic_ to your program that prints a different, special, greeting to the user if their name happens to be `Alice`.
 - Using Advanced Types
-  - [ ] Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the data variables.
+  - Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the data variables.
 
 ### Epic Mode
 
-- [ ] Move all of your code to separate method (but keep it in the same file) and invoke it from the `Main` method.
+- Move all of your code to separate method (but keep it in the same file) and invoke it from the `Main` method.
 
 ## Additional Resources
 

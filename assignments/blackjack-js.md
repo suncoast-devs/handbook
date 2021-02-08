@@ -50,19 +50,19 @@ dotnet new sdg-console -o BlackJackJS
 
 ### Explorer Mode
 
-- [ ] The player should have two choices: "Hit" and "Stand"
-- [ ] Consider Aces to be worth 11, never 1.
-- [ ] The page should display the the winner. For this mode, the winner is
-      defined as who was closer to a blackjack (21) without going over.
-- [ ] There should be an option to play again; this should reset the hands and
-      reshuffle the deck.
+- The player should have two choices: "Hit" and "Stand"
+- Consider Aces to be worth 11, never 1.
+- The page should display the the winner. For this mode, the winner is
+  defined as who was closer to a blackjack (21) without going over.
+- There should be an option to play again; this should reset the hands and
+  reshuffle the deck.
 
 ### Adventure Mode
 
-- [ ] Reveal one of the house's cards to the player when cards are first dealt.
-- [ ] Consider aces be worth one _or_ eleven.
-- [ ] Allow the player to "Split".
-- [ ] Improve the win requirements. From Wikipedia:
+- Reveal one of the house's cards to the player when cards are first dealt.
+- Consider aces be worth one _or_ eleven.
+- Allow the player to "Split".
+- Improve the win requirements. From Wikipedia:
   > Players win by not busting and having a total higher than the dealer, or not
   > busting and having the dealer bust, or getting a blackjack without the
   > dealer getting a blackjack. If the player and dealer have the same total
@@ -71,6 +71,6 @@ dotnet new sdg-console -o BlackJackJS
 
 ### Epic Mode
 
-- [ ] Add a betting system that carries between rounds
-- [ ] Allow the player to "Double down" or "Surrender"
-- [ ] Add more Players
+- Add a betting system that carries between rounds
+- Allow the player to "Double down" or "Surrender"
+- Add more Players

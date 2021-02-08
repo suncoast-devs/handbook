@@ -1,6 +1,6 @@
 ---
 title: Don't Lose Track! Part IV
-tags: ["c-sharp", "dotnet", "api", "sql"]
+tags: ['c-sharp', 'dotnet', 'api', 'sql']
 ---
 
 The store that had you built the API loves it so much, and it caused the store
@@ -25,25 +25,25 @@ add a new Model and new a relationship to our diagrams.
 
 ### Explorer Mode
 
-- [ ] Create a Model for the `Locations`
-- [ ] The `Locations` should have at least
+- Create a Model for the `Locations`
+- The `Locations` should have at least
 
-  - [ ] Id
-  - [ ] Address
-  - [ ] ManagerName
-  - [ ] PhoneNumber
+  - Id
+  - Address
+  - ManagerName
+  - PhoneNumber
 
-- [ ] Add a relationship to your `Item` model to include a Foreign Key to the
-      `Locations` table. Each location can have many items. There are now two
-      new properties to your existing `Item` model that points to the new model
-      you created (`Location`)
+- Add a relationship to your `Item` model to include a Foreign Key to the
+  `Locations` table. Each location can have many items. There are now two
+  new properties to your existing `Item` model that points to the new model
+  you created (`Location`)
 
-- [ ] Add a new Locations Controller. This controller has at least 2 endpoints
+- Add a new Locations Controller. This controller has at least 2 endpoints
 
-  - [ ] A POST endpoint that allows a user to create a location
-  - [ ] A GET endpoint that gets all locations
+  - A POST endpoint that allows a user to create a location
+  - A GET endpoint that gets all locations
 
-- [ ] Update the following endpoints.
+- Update the following endpoints.
 
 * [ ] Update the GET all items endpoint to need a location
 * [ ] Update the GET endpoint for each item to need a location
@@ -61,13 +61,13 @@ add a new Model and new a relationship to our diagrams.
 
 ### Adventure Mode
 
-- [ ] Add a way to create `Orders`. `Orders` should have many `Items` and
-      `Items` should have many `Orders`.
-- [ ] Add endpoints to CRUD `Orders` .
-- [ ] Only allow items that are in stock to be added to an order.
-- [ ] Add a way to associate orders to a location. Be able to view the orders in
-      a location.
-- [ ] Deploy your changes.
+- Add a way to create `Orders`. `Orders` should have many `Items` and
+  `Items` should have many `Orders`.
+- Add endpoints to CRUD `Orders` .
+- Only allow items that are in stock to be added to an order.
+- Add a way to associate orders to a location. Be able to view the orders in
+  a location.
+- Deploy your changes.
 
 ### Epic Mode
 

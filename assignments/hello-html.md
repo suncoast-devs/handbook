@@ -24,15 +24,15 @@ app-app --alpha HelloHTML
 
 ### Explorer Mode
 
-- [ ] use `app-app HelloWorld` to create your first website.
-- [ ] Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy or would like to learn about. We might expand on this page in future assignments, so pick something fun!
-- [ ] Put your short essay into an HTML page, using appropriate semantic HTML elements. Perhaps use some paragraphs and lists.
-- [ ] Add some appropriate images to your page.
-- [ ] Give your webpage a simple header.
-- [ ] Do not apply any style to your page.
-- [ ] Deploy your site.
+- use `app-app HelloWorld` to create your first website.
+- Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy or would like to learn about. We might expand on this page in future assignments, so pick something fun!
+- Put your short essay into an HTML page, using appropriate semantic HTML elements. Perhaps use some paragraphs and lists.
+- Add some appropriate images to your page.
+- Give your webpage a simple header.
+- Do not apply any style to your page.
+- Deploy your site.
 
 ### Adventure Mode
 
-- [ ] Add a second page about your hobby and links in between them.
-- [ ] Do this by creating another `.html` file in your project and use the `<a>` element to link them.
+- Add a second page about your hobby and links in between them.
+- Do this by creating another `.html` file in your project and use the `<a>` element to link them.

@@ -1,6 +1,6 @@
 ---
 title: Let's get visual!
-tags: ["capstone"]
+tags: ['capstone']
 ---
 
 With the wireframes created, we need to start breathing life into our
@@ -20,6 +20,6 @@ Time seems to speed up as we approach the final stretch.
 
 ### Explorer Mode
 
-- [ ] Create the HTML and CSS version of your wireframes. Stay as true as
-      possible. This should focus on static HTML and CSS.
-- [ ] No matter how far you get, submit what you have on Sunday night.
+- Create the HTML and CSS version of your wireframes. Stay as true as
+  possible. This should focus on static HTML and CSS.
+- No matter how far you get, submit what you have on Sunday night.

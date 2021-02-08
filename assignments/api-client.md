@@ -25,8 +25,8 @@ app-app --beta ApiClient
 
 ### Explorer Mode
 
-- [ ] TOP TIP: Choose an API that has a simple, less nested API. Perhaps one that just returns an array of one-level-deep objects. This will make your task _significantly_ easier.
-- [ ] Choose one of the APIs from [this list](https://github.com/public-apis/public-apis) that does not request "AUTH" (Authorization) since an API that requires authorization is a little more difficult to use when first learning. I have also selected some sample APIs that will be good choices:
+- TOP TIP: Choose an API that has a simple, less nested API. Perhaps one that just returns an array of one-level-deep objects. This will make your task _significantly_ easier.
+- Choose one of the APIs from [this list](https://github.com/public-apis/public-apis) that does not request "AUTH" (Authorization) since an API that requires authorization is a little more difficult to use when first learning. I have also selected some sample APIs that will be good choices:
 
 | API            | Documentation                                  |
 | -------------- | ---------------------------------------------- |
@@ -43,11 +43,11 @@ app-app --beta ApiClient
 | Jokes          | https://github.com/15Dkatz/official_joke_api   |
 | Star Wars API  | https://swapi.dev                              |
 
-- [ ] After choosing your API **read** the documentation.
-- [ ] Create a new application for accessing the API. (For `C#` use `sdg-console`, for `JS` use `app-app`)
-- [ ] For `C#` create a class to store information that comes back from your API.
-- [ ] Write code to query the API and show results.
-- [ ] If your API has more than one endpoint (URL) support a few options, perhaps by creating a menu system in your application.
+- After choosing your API **read** the documentation.
+- Create a new application for accessing the API. (For `C#` use `sdg-console`, for `JS` use `app-app`)
+- For `C#` create a class to store information that comes back from your API.
+- Write code to query the API and show results.
+- If your API has more than one endpoint (URL) support a few options, perhaps by creating a menu system in your application.
 
 ## Epic Mode
 

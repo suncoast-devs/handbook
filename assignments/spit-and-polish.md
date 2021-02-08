@@ -26,11 +26,11 @@ Here are some example of great student READMEs:
 
 ### Explorer Mode
 
-- [ ] Choose several (at least three) repositories to update the READMEs
-- [ ] Include a description, in your own words, of what the assignment was
-- [ ] Include a list of technologies (and links to the homepage for each) you used
-- [ ] Include a link to the project in production (surge, etc.)
-- [ ] Include a screenshot or an animated gif (see [Kap](https://github.com/wulkano/kap), [Recordit](http://recordit.co/), or [Licecap](https://www.cockos.com/licecap/))
+- Choose several (at least three) repositories to update the READMEs
+- Include a description, in your own words, of what the assignment was
+- Include a list of technologies (and links to the homepage for each) you used
+- Include a link to the project in production (surge, etc.)
+- Include a screenshot or an animated gif (see [Kap](https://github.com/wulkano/kap), [Recordit](http://recordit.co/), or [Licecap](https://www.cockos.com/licecap/))
 - Optional:
-  - [ ] Include an aspect you are particularly proud of
-  - [ ] Include a snippet of code you are proud of (see GitHub Markdown on how to format code snippets)
+  - Include an aspect you are particularly proud of
+  - Include a snippet of code you are proud of (see GitHub Markdown on how to format code snippets)

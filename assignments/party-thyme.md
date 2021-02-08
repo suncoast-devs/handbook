@@ -33,38 +33,38 @@ dotnet new sdg-console-database -o PartyThme
 
 #### .NET
 
-- [ ] Create a new console application that will store the list of plants the
-      user has planted.
-- [ ] You will be creating a class for your `plant`.
-- [ ] a Plant has the following properties
+- Create a new console application that will store the list of plants the
+  user has planted.
+- You will be creating a class for your `plant`.
+- a Plant has the following properties
 
-  - [ ] Id - primary key
-  - [ ] Species - The type of plant
-  - [ ] Location - where is the plant plated
-  - [ ] PlantedDate - When was the plant planted
-  - [ ] LastWateredDate - When was the last time a plant was water
-  - [ ] LightNeeded - How much sunlight is needed in hours per day
-  - [ ] WaterNeeded - how much water is needed in milliliters per day
+  - Id - primary key
+  - Species - The type of plant
+  - Location - where is the plant plated
+  - PlantedDate - When was the plant planted
+  - LastWateredDate - When was the last time a plant was water
+  - LightNeeded - How much sunlight is needed in hours per day
+  - WaterNeeded - how much water is needed in milliliters per day
 
-- [ ] Your Plants will be stored in a database called PlantDatabase.
-- [ ] When the console application runs, it should let the user choose one of
-      the following actions:
-  - [ ] View All the current plants
-    - [ ] This command will show the all the plants in the list, ordered by
-          LocationPlanted
-  - [ ] Plant a new plant
-    - [ ] This command will let the user type in the information for a plant and
-          add it to the list
-  - [ ] Remove a plant
-    - [ ] This will delete a plant by Id
-  - [ ] Water
-    - [ ] This will update the plant's LastWateredDate to the Current Time. The
-          user will select the plant by Id
-  - [ ] View all the plants that have not been watered today
-  - [ ] Location summary
-    - [ ] This will all the plants that are in a given location
-  - [ ] quit the program
-    - [ ] this will stop the program
+- Your Plants will be stored in a database called PlantDatabase.
+- When the console application runs, it should let the user choose one of
+  the following actions:
+  - View All the current plants
+    - This command will show the all the plants in the list, ordered by
+      LocationPlanted
+  - Plant a new plant
+    - This command will let the user type in the information for a plant and
+      add it to the list
+  - Remove a plant
+    - This will delete a plant by Id
+  - Water
+    - This will update the plant's LastWateredDate to the Current Time. The
+      user will select the plant by Id
+  - View all the plants that have not been watered today
+  - Location summary
+    - This will all the plants that are in a given location
+  - quit the program
+    - this will stop the program
 
 ### Adventure Mode
 

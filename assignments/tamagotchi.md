@@ -44,21 +44,21 @@ dotnet new sdg-api -o TamagotchiAPI
 
 The API will have the following endpoints.
 
-- [ ] `GET /pets` should return all pets in your database.
-- [ ] `GET /pets/{id}` should return the pet with the corresponding id.
-- [ ] `POST /pets` should create a new pet. The controller should ensure the following: `Birthday` **defaults** to the current DateTime, `HungerLevel` **defaults** to `0` and `HappinessLevel` **defaults** to `0`.
-- [ ] `DELETE /pets/{id}`, should delete a pet from the database by Id
-- [ ] `POST /pets/{id}/playtimes` should find the pet by id and add five to its happiness level and add three to its hunger level. It should also create a new `Playtime` for this pet and the current time.
-- [ ] `POST /pets/{id}/feedings` should find the pet by id and subtract five from its hungry level and add three to its happiness level. It should also create a new `Feeding` for this pet and the current time.
-- [ ] `POST /pets/{id}/scoldings` should find the pet by id and subtract five from its happiness level. It should also create a new `Scolding` for this pet and the current time.
+- `GET /pets` should return all pets in your database.
+- `GET /pets/{id}` should return the pet with the corresponding id.
+- `POST /pets` should create a new pet. The controller should ensure the following: `Birthday` **defaults** to the current DateTime, `HungerLevel` **defaults** to `0` and `HappinessLevel` **defaults** to `0`.
+- `DELETE /pets/{id}`, should delete a pet from the database by Id
+- `POST /pets/{id}/playtimes` should find the pet by id and add five to its happiness level and add three to its hunger level. It should also create a new `Playtime` for this pet and the current time.
+- `POST /pets/{id}/feedings` should find the pet by id and subtract five from its hungry level and add three to its happiness level. It should also create a new `Feeding` for this pet and the current time.
+- `POST /pets/{id}/scoldings` should find the pet by id and subtract five from its happiness level. It should also create a new `Scolding` for this pet and the current time.
 
 Demonstrate the API works
 
-- [ ] Using Insomnia, create three Pets. Include a screenshot containing the API request and the response.
-- [ ] Using Insomnia, create a playtime for one of your pets. Show the API request and the response.
-- [ ] Using Insomnia, create a feeding for one of your pets. Show the API request and the response.
-- [ ] Using Insomnia, create a scolding for one of your pets. Show the API request and the response.
-- [ ] Using Insomnia, show the details of all the pets. Show the API request and the response.
+- Using Insomnia, create three Pets. Include a screenshot containing the API request and the response.
+- Using Insomnia, create a playtime for one of your pets. Show the API request and the response.
+- Using Insomnia, create a feeding for one of your pets. Show the API request and the response.
+- Using Insomnia, create a scolding for one of your pets. Show the API request and the response.
+- Using Insomnia, show the details of all the pets. Show the API request and the response.
 
 ### Adventure Mode
 

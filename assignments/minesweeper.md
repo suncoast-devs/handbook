@@ -36,24 +36,24 @@ app-app --gamma-hooks Minesweeper
 
 ### Explorer Mode
 
-- [ ] Create a new game when the page loads, and render it on the screen, this look as close to gif as possible.
-- [ ] Style the cells appropriately.
-- [ ] Left clicking a cell performs the `check` action
-- [ ] Right/secondary clicking a cell performs the `flag` action
-- [ ] When the game status changed to `won` or `lost`, show a victory or failure message.
+- Create a new game when the page loads, and render it on the screen, this look as close to gif as possible.
+- Style the cells appropriately.
+- Left clicking a cell performs the `check` action
+- Right/secondary clicking a cell performs the `flag` action
+- When the game status changed to `won` or `lost`, show a victory or failure message.
 
 ### Adventure Mode
 
-- [ ] Before creating the game, prompt the user to choose: _Easy_, _Medium_, or _Hard_ mode.
-- [ ] Have fun with the styling, make it your own
+- Before creating the game, prompt the user to choose: _Easy_, _Medium_, or _Hard_ mode.
+- Have fun with the styling, make it your own
 
 ### Epic Mode
 
-- [ ] Render your victory/failure message as it's own "_screen_".
-- [ ] On that screen add a button to restart or play again.
-- [ ] Store the current game id in `localStorage`, and render the same game, rather than creating a new one every time (until the player presses the restart button).
-- [ ] Add sound effects.
+- Render your victory/failure message as it's own "_screen_".
+- On that screen add a button to restart or play again.
+- Store the current game id in `localStorage`, and render the same game, rather than creating a new one every time (until the player presses the restart button).
+- Add sound effects.
 
 ## Additional Resources
 
-- [ ] [React Mouse Events](https://reactjs.org/docs/events.html#mouse-events)
+- [React Mouse Events](https://reactjs.org/docs/events.html#mouse-events)

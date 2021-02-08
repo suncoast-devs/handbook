@@ -1,6 +1,6 @@
 ---
 title: A Portfolio
-tags: ["html", "css"]
+tags: ['html', 'css']
 ---
 
 <!-- TODO: update to https://colorlib.com/preview/#riddle -->
@@ -35,19 +35,19 @@ Also, feel free to change it from Jason's picture to a picture of yourself.
 
 ### Explorer Mode
 
-- [ ] Recreate the page as closely as you possibly can. Use the same fonts,
-      sizes, and colors.
-- [ ] Make sure the site is responsive.
-- [ ] Deploy your site
+- Recreate the page as closely as you possibly can. Use the same fonts,
+  sizes, and colors.
+- Make sure the site is responsive.
+- Deploy your site
 
 ### Adventure Mode
 
-- [ ] Take the time to personalize the site with information about yourself,
-      links to your projects, and your pictures.
-- [ ] Keep it professional, but make it your own.
+- Take the time to personalize the site with information about yourself,
+  links to your projects, and your pictures.
+- Keep it professional, but make it your own.
 
 ### Epic Mode
 
-- [ ] Go back and work on the adventure or epic mode for a past assignment.
-- [ ] Start to research
-      [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Go back and work on the adventure or epic mode for a past assignment.
+- Start to research
+  [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

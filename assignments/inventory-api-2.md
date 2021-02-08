@@ -1,6 +1,6 @@
 ---
 title: Don't Lose Track! Part II
-tags: ["c-sharp", "dotnet", "api", "sql"]
+tags: ['c-sharp', 'dotnet', 'api', 'sql']
 ---
 
 The store that had you built the API loves it so much and it caused the store to
@@ -25,24 +25,24 @@ add a new Model and new a relationship to our diagrams.
 
 ### Explorer Mode
 
-- [ ] Create a Model for the `Locations`
-- [ ] The `Locations` should have at least
+- Create a Model for the `Locations`
+- The `Locations` should have at least
 
-  - [ ] Id
-  - [ ] Address
-  - [ ] ManagerName
-  - [ ] PhoneNumber
+  - Id
+  - Address
+  - ManagerName
+  - PhoneNumber
 
-- [ ] Add a relationship to your `Item` model to include a Foreign Key to the
-      Locations table. This will be two new properties to your Existing `Item`
-      model that point to the new Model you create (`Location`)
+- Add a relationship to your `Item` model to include a Foreign Key to the
+  Locations table. This will be two new properties to your Existing `Item`
+  model that point to the new Model you create (`Location`)
 
-- [ ] Add a new Locations Controller. This will have 2 endpoints
+- Add a new Locations Controller. This will have 2 endpoints
 
-  - [ ] A POST endpoint that allows a user to create a location
-  - [ ] A GET endpoint that gets all locations
+  - A POST endpoint that allows a user to create a location
+  - A GET endpoint that gets all locations
 
-- [ ] Update the following endpoints.
+- Update the following endpoints.
 
 * [ ] Update the GET all items endpoint to need a location
 * [ ] Update the GET endpoint for each item to need a location
@@ -59,6 +59,6 @@ add a new Model and new a relationship to our diagrams.
 
 ### Adventure Mode
 
-- [ ] Ensure your instructor has seen and approved your wireframes for your
-      capstone.
-- [ ] Work on your capstone.
+- Ensure your instructor has seen and approved your wireframes for your
+  capstone.
+- Work on your capstone.

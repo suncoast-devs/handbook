@@ -76,9 +76,7 @@ const newStyle = { backgroundColor: newBackgroundColor  }
 Then you can dynamically set the `backgroundColor` of an element in your component using [inline styles](https://reactjs.org/docs/dom-elements.html#style)
 
 ```jsx
-<div style={newStyle}>
-
-</div>
+<div style={newStyle}></div>
 ```
 
 ### Setup
@@ -89,19 +87,19 @@ app-app --gamma-hooks ColorPickerHooks
 
 ### Explorer Mode
 
-- [ ] Represent the three values, `hue`, `saturation`, and `lightness` with
-      hooks.
-- [ ] Add three sliders that update their respective values (`hue`,
-      `saturation`, and `lightness`).
-- [ ] Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`)
-      and the actual color as a background color on an element.
-- [ ] Initialize the hooks to a random color when the page is loaded.
-- [ ] Add a button that picks a new random color.
+- Represent the three values, `hue`, `saturation`, and `lightness` with
+  hooks.
+- Add three sliders that update their respective values (`hue`,
+  `saturation`, and `lightness`).
+- Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`)
+  and the actual color as a background color on an element.
+- Initialize the hooks to a random color when the page is loaded.
+- Add a button that picks a new random color.
 
 ### Adventure Mode
 
-- [ ] Work on other assignments you might be assigned as well. Career support
-      and Capstones
+- Work on other assignments you might be assigned as well. Career support
+  and Capstones
 - [ ][do you wanna build a snowman?]
   (https://suncoast.io/handbook/curriculum/front-end/react-ii/assignments/snowman)
 

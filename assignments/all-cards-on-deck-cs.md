@@ -69,18 +69,18 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 
 ### Explorer Mode
 
-- [ ] Once the program starts, you should create a new deck.
-- [ ] After deck creation, you should shuffle the deck.
-- [ ] After the deck is shuffled, display the top two cards.
+- Once the program starts, you should create a new deck.
+- After deck creation, you should shuffle the deck.
+- After the deck is shuffled, display the top two cards.
 
 ## Adventure Mode
 
-- [ ] In addition to displaying the top two cards, also store these two "dealt" cards in a variable named `playerHand`. Consider what _type_ of variable `playerHand` will have to be.
-- [ ] Implement a way to deal cards into two _different_ hands.
+- In addition to displaying the top two cards, also store these two "dealt" cards in a variable named `playerHand`. Consider what _type_ of variable `playerHand` will have to be.
+- Implement a way to deal cards into two _different_ hands.
 
 ## Epic Mode
 
-- [ ] Implement the game of [War][1]
+- Implement the game of [War][1]
 
 [1]: https://en.wikipedia.org/wiki/War_(card_game)
 

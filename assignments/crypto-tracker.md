@@ -39,28 +39,28 @@ app-app --gamma-hooks ColorPickerHooks
 
 ### Explorer Mode
 
-- [ ] Create a new react app
-- [ ] Fetch new currency data from the API endpoint every 10 seconds.
-- [ ] Update the applications state with currency data from the API.
-- [ ] Create an HTML table to display the currency data in the application
-      state.
-- [ ] Use props to render table rows as child components for each currency in
-      the application state.
-- [ ] Use stateless-functional components where appropriate.
+- Create a new react app
+- Fetch new currency data from the API endpoint every 10 seconds.
+- Update the applications state with currency data from the API.
+- Create an HTML table to display the currency data in the application
+  state.
+- Use props to render table rows as child components for each currency in
+  the application state.
+- Use stateless-functional components where appropriate.
 
 ### Adventure Mode
 
-- [ ] If the updated price of a currency is higher than the last update, show
-      the price in green. If it's lower, show the price in red. **HINT**: You'll
-      probably want to look into additional lifecycle methods for your React
-      components to accomplish this.
+- If the updated price of a currency is higher than the last update, show
+  the price in green. If it's lower, show the price in red. **HINT**: You'll
+  probably want to look into additional lifecycle methods for your React
+  components to accomplish this.
 
 ### Epic Mode
 
-- [ ] How else could we present the changing price to the user? Look into Edward
-      Tufte's [sparklines](https://en.wikipedia.org/wiki/Sparkline), how do you
-      think this could be implemented as a React component? Try using a third
-      party library to render a sparkline for each currency.
+- How else could we present the changing price to the user? Look into Edward
+  Tufte's [sparklines](https://en.wikipedia.org/wiki/Sparkline), how do you
+  think this could be implemented as a React component? Try using a third
+  party library to render a sparkline for each currency.
 
 ## Additional Resources
 

@@ -1,6 +1,6 @@
 ---
 title: A Spooky Portfolio
-tags: ["html", "css"]
+tags: ['html', 'css']
 ---
 
 For this project, we're going to be starting work on a portfolio website that
@@ -33,26 +33,26 @@ The font used is [Josefun Sans](https://fonts.google.com/specimen/Josefin+Sans).
 
 ### Explorer Mode
 
-- [ ] Recreate the
-      [mobile UI](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/mobile.png?raw=true)
-- [ ] Update your site to be response for
-      [tablets](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/tablet.png?raw=true)
-- [ ] Update your site to be responsive for
-      [desktops](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/desktop.png?raw=true)
-- [ ] Deploy your site
+- Recreate the
+  [mobile UI](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/mobile.png?raw=true)
+- Update your site to be response for
+  [tablets](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/tablet.png?raw=true)
+- Update your site to be responsive for
+  [desktops](https://github.com/suncoast-devs/handbook/blob/master/curriculum/fundamentals/modules/html-css/projects/desktop.png?raw=true)
+- Deploy your site
 
 ### Adventure Mode
 
-- [ ] Head over to [here](https://halloween-portfolio-markdewey.netlify.com/).
-      There are animations and hover effects that are not in the mock ups.
-      Implement those using only CSS.
-- [ ] For the responsiveness of your images, if you used flexbox for explorer
-      mode, now use css grids, if you grids, now use flexbox.
+- Head over to [here](https://halloween-portfolio-markdewey.netlify.com/).
+  There are animations and hover effects that are not in the mock ups.
+  Implement those using only CSS.
+- For the responsiveness of your images, if you used flexbox for explorer
+  mode, now use css grids, if you grids, now use flexbox.
 
 ### Epic Mode
 
-- [ ] Take the time to personalize the site with information about yourself,
-      links to your projects, and your pictures.
-- [ ] Keep it professional, but make it your own.
-- [ ] Start to research
-      [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Take the time to personalize the site with information about yourself,
+  links to your projects, and your pictures.
+- Keep it professional, but make it your own.
+- Start to research
+  [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)

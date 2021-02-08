@@ -1,6 +1,6 @@
 ---
 title: It starts with a plan.
-tags: ["capstone"]
+tags: ['capstone']
 ---
 
 We are starting the final stretch of the cohort. This means we are starting to
@@ -32,12 +32,12 @@ must be changed with purpose.
 
 ### Explorer Mode
 
-- [ ] Create the elevator pitch for your final projects.
-- [ ] Place this in the `README.md` of your capstone project repository
+- Create the elevator pitch for your final projects.
+- Place this in the `README.md` of your capstone project repository
 
-- [ ] Create a wire frame for each page in your page you capstone.
-- [ ] Place these wire frames in an `.idea` folder of your capstone project
-      repository.
+- Create a wire frame for each page in your page you capstone.
+- Place these wire frames in an `.idea` folder of your capstone project
+  repository.
 
 ## Additional Resources
 

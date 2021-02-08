@@ -56,17 +56,17 @@ app-app --alpha AllCardsOnDeckJS
 
 ### Explorer Mode
 
-- [ ] The deck should be randomly shuffled when the page is loaded.
-- [ ] Clicking on the deck should deal a single card, making it visible in the
-      face up hand.
+- The deck should be randomly shuffled when the page is loaded.
+- Clicking on the deck should deal a single card, making it visible in the
+  face up hand.
 
 ## Adventure Mode
 
-- [ ] Implement a way to deal cards into two or more hands
+- Implement a way to deal cards into two or more hands
 
 ## Epic Mode
 
-- [ ] Implement the game of [War][1]
+- Implement the game of [War][1]
 
 [1]: https://en.wikipedia.org/wiki/War_(card_game)
 

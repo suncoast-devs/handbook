@@ -31,24 +31,24 @@ app-app APIClientReact
 
 ### Explorer Mode
 
-- [ ] Select an API and get it approved by your instructor.
-- [ ] Read your API docs
-- [ ] Use Postman to make some API requests to be familiar with the API and the
-      data it returns
-- [ ] Create a list of the features you are going to create and how they will
-      work
-- [ ] Design your User Interface
-- [ ] Design your HTML statically in `App.js`
-- [ ] Make it dynamic
-- [ ] Use components when needed
-- [ ] Deploy it and share it with friends
+- Select an API and get it approved by your instructor.
+- Read your API docs
+- Use Postman to make some API requests to be familiar with the API and the
+  data it returns
+- Create a list of the features you are going to create and how they will
+  work
+- Design your User Interface
+- Design your HTML statically in `App.js`
+- Make it dynamic
+- Use components when needed
+- Deploy it and share it with friends
 
 ### Adventure Mode
 
-- [ ] Add multiple pages to your site.
-- [ ] Add a second API
-- [ ] Work on components and clean, well commented code.
-- [ ] Work on other assignments you might be assigned as well. Career support or
-      old adventure modes come to mind.
+- Add multiple pages to your site.
+- Add a second API
+- Work on components and clean, well commented code.
+- Work on other assignments you might be assigned as well. Career support or
+  old adventure modes come to mind.
 - [ ][do you wanna build a snowman?]
   (https://suncoast.io/handbook/curriculum/front-end/react-ii/assignments/snowman)

@@ -35,18 +35,18 @@ app-app --beta TravelSite
 
 For explorer mode, work to recreate the site exactly
 
-- [ ] Start with build the HTML, focus on semantics
-  - [ ] [images are here](https://github.com/suncoast-devs/handbook/tree/master/curriculum/unit-ii/chapter-1/04-practice/assets/tourism-images)
-- [ ] After you are happy with the HTML, build out the mobile view
-- [ ] Build out the desktop view
-- [ ] deploy your app
+- Start with build the HTML, focus on semantics
+  - [images are here](https://github.com/suncoast-devs/handbook/tree/master/curriculum/unit-ii/chapter-1/04-practice/assets/tourism-images)
+- After you are happy with the HTML, build out the mobile view
+- Build out the desktop view
+- deploy your app
 
 ### Adventure Mode
 
-- [ ] The color is interesting to say the least, change the color scheme to
-      something you like better. Tools like
-      [https://coolors.co/](https://coolors.co/) and
-      [http://paletton.com/](http://paletton.com/) will help.
+- The color is interesting to say the least, change the color scheme to
+  something you like better. Tools like
+  [https://coolors.co/](https://coolors.co/) and
+  [http://paletton.com/](http://paletton.com/) will help.
 
 ## Tips and Tricks
 

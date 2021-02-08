@@ -26,17 +26,17 @@ app-app --delta-hooks Sassy
 
 ### Explorer Mode
 
-- [ ] Use Sass (or SCSS) for your CSS, explore and use the following features:
-  - [ ] Variables
-  - [ ] Nesting
-  - [ ] [Functions](https://sass-lang.com/documentation/Sass/Script/Functions.html)
+- Use Sass (or SCSS) for your CSS, explore and use the following features:
+  - Variables
+  - Nesting
+  - [Functions](https://sass-lang.com/documentation/Sass/Script/Functions.html)
 
 ### Adventure Mode
 
-- [ ] Use these Sass features:
-  - [ ] Mixins
-  - [ ] Inheritance
-  - [ ] Break your styles into multiple files using `@import`
+- Use these Sass features:
+  - Mixins
+  - Inheritance
+  - Break your styles into multiple files using `@import`
 
 ## Additional Resources
 

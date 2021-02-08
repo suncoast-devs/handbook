@@ -16,13 +16,13 @@ Reuse the same repository from that assignment for this assignment. Add the new 
 
 ### Explorer Mode
 
-- [ ] In your `CompanyDatabase`, add a table named `Departments` with the
-      following columns:
+- In your `CompanyDatabase`, add a table named `Departments` with the
+  following columns:
   - `Id` as a primary key
   - `DepartmentName` as text
   - `Building` as text
-- [ ] Add a Foreign key `DepartmentId` to your `Employees` Table. If you have trouble, remove the existing employees by running `truncate table "Employees"`.
-- [ ] Add tables named `Products` and `Orders`.
+- Add a Foreign key `DepartmentId` to your `Employees` Table. If you have trouble, remove the existing employees by running `truncate table "Employees"`.
+- Add tables named `Products` and `Orders`.
   - `Products` should have the columns
     - `Id` as a primary key
     - `Price` as a data type that can store a number with decimal places (e.g. 45.12)
@@ -34,18 +34,18 @@ Reuse the same repository from that assignment for this assignment. Add the new 
     - `OrderNumber` as textual data
     - `DatePlaced` as a data type that can store a date (with Year, Month, and Day) -- or one with hours, minutes, and seconds. Student's choice.
     - `Email` as textual data
-- [ ] In our company, one `Order` can have many `Products` and one `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the necessary table `ProductOrders`, foreign keys, and the `OrderQuantity` field needed for this to happen.
+- In our company, one `Order` can have many `Products` and one `Product` can have many `Orders`. This will be a Many-to-Many relationship. Create the necessary table `ProductOrders`, foreign keys, and the `OrderQuantity` field needed for this to happen.
 
 * [ ] Create queries that can do the following:
 
-  - [ ] Insert the following `Departments`
+  - Insert the following `Departments`
 
   | Department Name | Building |
   | --------------- | -------- |
   | Development     | Main     |
   | Marketing       | North    |
 
-  - [ ] Insert the following `Employees`
+  - Insert the following `Employees`
 
   | FullName       | Salary | JobPosition | PhoneExtension | IsPartTime | Department Id |
   | -------------- | ------ | ----------- | -------------- | ---------- | ------------- |
@@ -53,7 +53,7 @@ Reuse the same repository from that assignment for this assignment. Add the new 
   | Barbara Ramsey | 80000  | Manager     | 234            | false      | 1             |
   | Tom Jones      | 32000  | Admin       | 456            | true       | 2             |
 
-- [ ] Insert the following `Products`
+- Insert the following `Products`
 
   | Price | Name    | Description          | QuantityInStock |
   | ----- | ------- | -------------------- | --------------- |
@@ -73,7 +73,7 @@ None
 
 ### Epic Mode
 
-- [ ] Give these [SQL Koans](https://sqlkoans.com/) a try.
+- Give these [SQL Koans](https://sqlkoans.com/) a try.
 
 ## Additional Resources
 

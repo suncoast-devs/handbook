@@ -33,51 +33,51 @@ app-app --delta-hooks EmployeeDirectoryFrontEnd
 
 ### Explorer Mode
 
-- [ ] Create a react app with three pages and navigation between the pages.s
+- Create a react app with three pages and navigation between the pages.s
 
-  - [ ] View All Employees page
-    - [ ] This page should list all the employees for your company
-    - [ ] Each employee should display the employee's full name, job title,
-          full-time status, and profile image. All employees that are returned
-          by the `Get all employees endpoint`,
-          `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees`.
-    - [ ] Each employee item should link to the `employee page` for that
-          employee. The URL should look like: `/employee/:employeeId`
-  - [ ] An Employee Page
+  - View All Employees page
+    - This page should list all the employees for your company
+    - Each employee should display the employee's full name, job title,
+      full-time status, and profile image. All employees that are returned
+      by the `Get all employees endpoint`,
+      `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees`.
+    - Each employee item should link to the `employee page` for that
+      employee. The URL should look like: `/employee/:employeeId`
+  - An Employee Page
 
-    - [ ] This should display all the details for an employee, The details page
-          should list the following:
+    - This should display all the details for an employee, The details page
+      should list the following:
 
-      - [ ] full name
-      - [ ] birthday
-      - [ ] hired date
-      - [ ] job title
-      - [ ] job description
-      - [ ] full address (address, city and zip)
-      - [ ] Contact information (email, phone)
-      - [ ] Emergency contact info
-      - [ ] PTO hours
-      - [ ] profile image
+      - full name
+      - birthday
+      - hired date
+      - job title
+      - job description
+      - full address (address, city and zip)
+      - Contact information (email, phone)
+      - Emergency contact info
+      - PTO hours
+      - profile image
 
-    - [ ] The API endpoint to use will look like this:
-          `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees/:employeeId`
+    - The API endpoint to use will look like this:
+      `https://sdg-staff-directory-app.herokuapp.com/api/:companyName/employees/:employeeId`
 
-  - [ ] Add an Employee Page
-    - [ ] This should allow the user to add all of the fields for an employee.
-    - [ ] The UI should let the user know that the person was added to the API
-          successfully
-  - [ ] Your app should be styled and responsive. Have fun with it.
-  - [ ] Deploy your app
+  - Add an Employee Page
+    - This should allow the user to add all of the fields for an employee.
+    - The UI should let the user know that the person was added to the API
+      successfully
+  - Your app should be styled and responsive. Have fun with it.
+  - Deploy your app
 
 ### Adventure Mode
 
-- [ ] Add the ability to `delete` a user
-- [ ] Add the ability to `update` a user
+- Add the ability to `delete` a user
+- Add the ability to `update` a user
 
 ### Epic Mode
 
-- [ ] You app currently only works for one company, but now add the ability to
-      change companies.
+- You app currently only works for one company, but now add the ability to
+  change companies.
 
 ## Additional Resources
 

@@ -32,10 +32,10 @@ dotnet new sdg-console-database -o SafariApi
 
 ### Explorer Mode (C#)
 
-- [ ] Your database will be named called `SafariVacation`
+- Your database will be named called `SafariVacation`
 
-  - [ ] This will have 1 table called `SeenAnimals` that has the following
-        columns
+  - This will have 1 table called `SeenAnimals` that has the following
+    columns
     - `Id`
     - `Species`
     - `CountOfTimesSeen`
@@ -45,17 +45,17 @@ dotnet new sdg-console-database -o SafariApi
     `Entity Framework`/`active records` and **not** created in the `pgcli`.
 
 * [ ] Your API should have the following endpoints:
-  - [ ] Create `GET /Animals` Endpoint that returns all animals you have seen
-  - [ ] Create `GET /Search?species=lion` that returns all animals where the
-        species name contains the species parameter
-  - [ ] Create a `POST /Animal` endpoint that adds an animal to the database.
-        This should take a JSON body
+  - Create `GET /Animals` Endpoint that returns all animals you have seen
+  - Create `GET /Search?species=lion` that returns all animals where the
+    species name contains the species parameter
+  - Create a `POST /Animal` endpoint that adds an animal to the database.
+    This should take a JSON body
 
 ### Explorer Mode (Ruby)
 
-- [ ] Your rails application will be named called `safari_vacation`
+- Your rails application will be named called `safari_vacation`
 
-  - [ ] This will have 1 model called `Animal` that has the following columns
+  - This will have 1 model called `Animal` that has the following columns
     - `species` (string)
     - `seen_count` (int)
     - `last_seen_location` (string)
@@ -64,39 +64,39 @@ dotnet new sdg-console-database -o SafariApi
     in the `pgcli`.
 
 * [ ] Your API should have the following endpoints:
-  - [ ] Create `GET /animals` that returns all the animals as JSON
-  - [ ] Create `GET /animals?species=lion` that returns all animals as JSON
-        where the species name contains the species parameter
-  - [ ] Create `POST /animal` that adds an animal to the database. This should
-        take a JSON body
+  - Create `GET /animals` that returns all the animals as JSON
+  - Create `GET /animals?species=lion` that returns all animals as JSON
+    where the species name contains the species parameter
+  - Create `POST /animal` that adds an animal to the database. This should
+    take a JSON body
 
 ### Adventure Mode (C#)
 
-- [ ] Create a `GET /Animal/{location}` that returns animals of only that
-      location
-- [ ] Create a `PUT /Animal/{id}` endpoint that adds 1 to the count of times
-      seen for that animal (given by id)
-- [ ] Create a `DELETE /Animal/{id}` endpoint that deletes that animal id from
-      the database
-- [ ] Normalize your database to have `Location` be its own table
-- [ ] Extend your `Search` endpoint to search by an animal or by location
-- [ ] Create a `PUT /Animal/{animal}/{amount}` endpoint that adds `{amount}` to
-      that animal
+- Create a `GET /Animal/{location}` that returns animals of only that
+  location
+- Create a `PUT /Animal/{id}` endpoint that adds 1 to the count of times
+  seen for that animal (given by id)
+- Create a `DELETE /Animal/{id}` endpoint that deletes that animal id from
+  the database
+- Normalize your database to have `Location` be its own table
+- Extend your `Search` endpoint to search by an animal or by location
+- Create a `PUT /Animal/{animal}/{amount}` endpoint that adds `{amount}` to
+  that animal
 
 ### Adventure Mode (Ruby)
 
-- [ ] Create a `GET /animals?location={location}` that returns animals of only
-      that location
-- [ ] Create a `PUT /animals/increment` that adds 1 to the count of times seen
-      for that animal (given by id)
-- [ ] Create a `DELETE /animals/{id}` endpoint that deletes that animal id from
-      the database
+- Create a `GET /animals?location={location}` that returns animals of only
+  that location
+- Create a `PUT /animals/increment` that adds 1 to the count of times seen
+  for that animal (given by id)
+- Create a `DELETE /animals/{id}` endpoint that deletes that animal id from
+  the database
 
 ### Epic Mode
 
-- [ ] Create a React or Vue app that talks to your API and Interacts with all
-      the endpoints
-- [ ] Work on your capstone
+- Create a React or Vue app that talks to your API and Interacts with all
+  the endpoints
+- Work on your capstone
 
 ## Additional Resources
 

@@ -33,22 +33,23 @@ app-app --gamma Reactocats
   - You will have a `prop` for the `name`, and the `image`, and the `number`, etc.
   - Don't worry about supporting more than one author image (for now)
 - Use your `Octocat` component to render all your cats. This might look something like this:
+
 ```jsx
 <div>
-  <Octocat name="Terracotacat" number="142" other="" props="" go="" here=""/>
-  <Octocat name="SuncoastCat" number="145" other="" props="" go="" here=""/>
+  <Octocat name="Terracotacat" number="142" other="" props="" go="" here="" />
+  <Octocat name="SuncoastCat" number="145" other="" props="" go="" here="" />
 </div>
 ```
 
 ### Adventure Mode
 
-- [ ] Place the definition of each Octocat in an `array` of objects and use `map` to generate the Octocat components
+- Place the definition of each Octocat in an `array` of objects and use `map` to generate the Octocat components
 
 ### Epic Mode
 
-- [ ] Put the `array` of Octocats in an `octocats.json` file and `import` that into your app.
+- Put the `array` of Octocats in an `octocats.json` file and `import` that into your app.
 - _OR_
-- [ ] Use the `fetch` API to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
+- Use the `fetch` API to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
 
 ## Additional Resources
 

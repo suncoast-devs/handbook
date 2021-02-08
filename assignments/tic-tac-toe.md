@@ -16,13 +16,13 @@ design skills (i.e. thinking about _how_ you would code this).
 
 Features to consider:
 
-- [ ] Game should be played on the same computer.
-- [ ] As a user, I should be able to see a tic-tac-toe board.
-- [ ] As a user, the game should alternate turns, between `X` and `O`.
-- [ ] As a user, I should be able to click in a square and play either `X` or
-      `O`, respective of the turn.
-- [ ] As a user, when I get three in a row, I should be told I've won and the
-      game should be over.
+- Game should be played on the same computer.
+- As a user, I should be able to see a tic-tac-toe board.
+- As a user, the game should alternate turns, between `X` and `O`.
+- As a user, I should be able to click in a square and play either `X` or
+  `O`, respective of the turn.
+- As a user, when I get three in a row, I should be told I've won and the
+  game should be over.
 
 **TIPS:**
 
@@ -37,30 +37,30 @@ Features to consider:
 WITH your partner: submit a full design of how to approach this problem. This
 should include:
 
-- [ ] A digital mock up (created using software, or a photo/scan of an analog
-      drawing)
-- [ ] Implementation details, such as how you are implementing each square
-- [ ] A list of events you are listening for
-- [ ] _psuedo-code_ describing your program (e.g. event-handling, game logic)
+- A digital mock up (created using software, or a photo/scan of an analog
+  drawing)
+- Implementation details, such as how you are implementing each square
+- A list of events you are listening for
+- _psuedo-code_ describing your program (e.g. event-handling, game logic)
 
 Finally, also with your partner:
 
-- [ ] Create your tic-tac-toe game!
+- Create your tic-tac-toe game!
 
 ### Adventure Mode
 
-- [ ] Plan the implementation of a "vs computer" mode, that picks a random
-      square.
+- Plan the implementation of a "vs computer" mode, that picks a random
+  square.
 
 _or_
 
-- [ ] Have fun with the CSS by adding colors, animations and effects to make the
-      game more enjoyable.
+- Have fun with the CSS by adding colors, animations and effects to make the
+  game more enjoyable.
 
 ### Epic Mode
 
-- [ ] Modify your "vs computer" mode to follow a specific strategy (of your
-      choice).
+- Modify your "vs computer" mode to follow a specific strategy (of your
+  choice).
 
 ## Additional Resources
 

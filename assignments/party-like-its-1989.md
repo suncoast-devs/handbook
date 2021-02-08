@@ -65,23 +65,23 @@ app-app --gamma PartyLikeIts1989
 
 ### Explorer Mode
 
-- [ ] Use the API to fetch the data and render it on the page, rather than the supplied JSON file.
-- [ ] You should have at _least_ two components; `App` and `Movie`.
-- [ ] Render at least the title, poster image, and plot overview. Feel free to include other pieces of the data.
-- [ ] Try to capture a 1980's or early 90's aesthetic when you style your page. Have fun with it!
+- Use the API to fetch the data and render it on the page, rather than the supplied JSON file.
+- You should have at _least_ two components; `App` and `Movie`.
+- Render at least the title, poster image, and plot overview. Feel free to include other pieces of the data.
+- Try to capture a 1980's or early 90's aesthetic when you style your page. Have fun with it!
 
 ### Adventure Mode
 
-- [ ] Sort the films by release date, rather than as they appear in the file.'
-- [ ] Add a search bar that filters down the shown results. Note that is not making a new API call, just `filter`ing the current list
-- [ ] Display the release date in a formatted manner, e.g. "May 24th", rather than `1989-05-24`. _HINT:_ `moment.js` or `date-fns` or some utility code you write yourself!
+- Sort the films by release date, rather than as they appear in the file.'
+- Add a search bar that filters down the shown results. Note that is not making a new API call, just `filter`ing the current list
+- Display the release date in a formatted manner, e.g. "May 24th", rather than `1989-05-24`. _HINT:_ `moment.js` or `date-fns` or some utility code you write yourself!
 
 ### Epic Mode
 
-- [ ] Give the user a chance to "favorite" movies and store favorite movies in local storage
-- [ ] Explore the API and use other endpoints.
-- [ ] Allow the user to change the year they are searching for
-- [ ] Change the style based on the decade they user selected
+- Give the user a chance to "favorite" movies and store favorite movies in local storage
+- Explore the API and use other endpoints.
+- Allow the user to change the year they are searching for
+- Change the style based on the decade they user selected
 
 ## Additional Resources
 

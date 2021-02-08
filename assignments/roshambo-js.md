@@ -38,20 +38,20 @@ app-app --beta RoshamboJS
 
 > NOTE: Complete part 1 before moving on to part 2
 
-- [ ] There should be three buttons for Player One: Rock, Paper, Scissors
-- [ ] There should be three buttons for Player Two: Rock, Paper, Scissors
-- [ ] Player One should be able to select their throw
-- [ ] Player Two should be able to select their throw
-- [ ] After both players make their selection, I should be told who won and the game should be over.
+- There should be three buttons for Player One: Rock, Paper, Scissors
+- There should be three buttons for Player Two: Rock, Paper, Scissors
+- Player One should be able to select their throw
+- Player Two should be able to select their throw
+- After both players make their selection, I should be told who won and the game should be over.
 
 #### Part 2
 
-- [ ] You have heard about _Rock, Paper, Scissors_, but have you tried
-      [_Rock, Paper, Scissors, Lizard, Spock_](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)?
-      Modify your game to allow the extra options!
-- [ ] Have fun with the CSS by adding colors, animations, and effects to make the
-      game more enjoyable
+- You have heard about _Rock, Paper, Scissors_, but have you tried
+  [_Rock, Paper, Scissors, Lizard, Spock_](https://bigbangtheory.fandom.com/wiki/Rock,_Paper,_Scissors,_Lizard,_Spock)?
+  Modify your game to allow the extra options!
+- Have fun with the CSS by adding colors, animations, and effects to make the
+  game more enjoyable
 
 ### Adventure Mode
 
-- [ ] Your game is currently only 1 vs 1, add the ability to add more computer or users players to the game
+- Your game is currently only 1 vs 1, add the ability to add more computer or users players to the game

@@ -49,9 +49,7 @@ const newStyle = { backgroundColor: newBackgroundColor  }
 Then you can dynamically set the `backgroundColor` of an element in your component using [inline styles](https://reactjs.org/docs/dom-elements.html#style)
 
 ```jsx
-<div style={newStyle}>
-
-</div>
+<div style={newStyle}></div>
 ```
 
 ### Setup
@@ -62,18 +60,18 @@ app-app ColorPicker
 
 ### Explorer Mode
 
-- [ ] Represent the three values, `hue`, `saturation`, and `lightness` in your state.
-- [ ] Add three sliders that update their respective values (`hue`, `saturation`, and `lightness`) in the state when changed.
-- [ ] Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`) and the actual color as a background color on an element.
-- [ ] Initialize the state to a random color when the page is loaded.
-- [ ] Add a button that picks a new random color.
-- [ ] In all cases, the sliders should be in the correct positions to represent the current color.
+- Represent the three values, `hue`, `saturation`, and `lightness` in your state.
+- Add three sliders that update their respective values (`hue`, `saturation`, and `lightness`) in the state when changed.
+- Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`) and the actual color as a background color on an element.
+- Initialize the state to a random color when the page is loaded.
+- Add a button that picks a new random color.
+- In all cases, the sliders should be in the correct positions to represent the current color.
 
 ### Adventure Mode
 
-- [ ] Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
-- [ ] Add a section that displays a CSS class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
-- [ ] Only display the output color text in `hsla()` if the alpha value is less than `1`.
+- Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
+- Add a section that displays a CSS class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
+- Only display the output color text in `hsla()` if the alpha value is less than `1`.
 
 ## Additional Resources
 

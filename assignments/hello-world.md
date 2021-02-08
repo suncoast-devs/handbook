@@ -25,5 +25,5 @@ dotnet new sdg-console -o HelloDotNet
 
 ### Explorer Mode
 
-- [ ] Create a new app. (see the setup instructions above as well as the how-to-guides)
-- [ ] In the `static void Main`, Change `Welcome to C#`, to `Hello, World, my name is [your name]`
+- Create a new app. (see the setup instructions above as well as the how-to-guides)
+- In the `static void Main`, Change `Welcome to C#`, to `Hello, World, my name is [your name]`

@@ -30,15 +30,15 @@ app-app --gamma-hooks OneListFrontEnd
 
 ### Explorer Mode
 
-- [ ] Allow a todo to be created
-- [ ] Mark a todo complete
-- [ ] Delete a todo item
+- Allow a todo to be created
+- Mark a todo complete
+- Delete a todo item
 
 ### Adventure Mode
 
-- [ ] Allow the text of a todo item to be changed
+- Allow the text of a todo item to be changed
 
 ### Epic Mode
 
-- [ ] Allow for multiple lists by allowing the user to specify the
-      `access token`
+- Allow for multiple lists by allowing the user to specify the
+  `access token`
