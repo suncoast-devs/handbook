@@ -309,11 +309,11 @@ While there are _many_ attributes to investigate, lets start by looking to see w
 firstListItem.textContent
 ```
 
-Since the `<li>` is empty, we get back an empty string!
+Since the `li` is empty, we get back an empty string!
 
 ---
 
-## Update the HTML code to put an `O` in the first <li>
+## Update the HTML code to put an `O` in the first li
 
 Rerun the example and we'll see this code return `"O"`
 
@@ -437,7 +437,7 @@ function handleClickSquare() {
 
 ---
 
-# Tell the `<li>`: Every time a click happens, here is what to do...
+# Tell the `li`: Every time a click happens, here is what to do...
 
 ---
 

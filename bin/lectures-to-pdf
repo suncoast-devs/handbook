@@ -1,0 +1,7 @@
+#!/bin/bash
+
+
+GIT_ROOT=$(git rev-parse --show-toplevel)
+
+find "${GIT_ROOT}/lessons" -name lecture.md -exec "${GIT_ROOT}/bin/lecture-to-pdf" {} "${GIT_ROOT}/web/public/lectures/" \;
+
