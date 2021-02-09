@@ -56,14 +56,19 @@ app-app --beta VariablesJS
 
   - Using Arrays
 
-    - Use [this page](https://www.random.org/integers/?num=100&min=1&max=100&col=5&base=10&format=plain&rnd=new) to generate a array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor you will need to format the collection of numbers as a JavaScript array.
+    - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate a array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor you will need to format the collection of numbers as a JavaScript array.
     - Place these numbers into a properly formatted array named `numbers`.
-    - Determine the following. Use JavaScripts `for` loops to your advantage.
-      - Create an object called `statistics` with the following **properties** that your **CODE** figures out (e.g. no doing the work by hand, the JavaScript code should figure out the values for each of these)
-        - In a property named `smallest`, put the smallest value in the array.
-        - In a property named `largest`, put the largest value in the array.
-        - In a property named `sum`, put the sum of all the values in the array.
-        - In a property named `average`, put the average of all the values in the array.
+    - Determine the following using one (or more) JavaScript `for` loops:
+      - Find the smallest number in the array and place the answer in a variable named `smallest`
+      - Find the largest number in the array and place the answer in a variable named `largest`
+      - Find the sum of all the numbers in the array and place the answer in a variable named `arraySum`
+      - Find the average of all the numbers in the array and place the answer in a variable named `average`
+
+    - Create an object called `stats` with the following **properties**
+      - In a property named `smallest`, put the value of the variable `smallest`
+      - In a property named `largest`, put the value of the variable `largest`
+      - In a property named `sum`, put the value of the variable `arraySum`
+      - In a property named `average`, put the value of the variable `average`
 
 ### Adventure Mode
 
