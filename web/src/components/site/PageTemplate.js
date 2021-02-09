@@ -69,7 +69,7 @@ export default function PageTemplate({
                   className="uppercase text-gray-500 mr-2"
                   href={`/lectures/${mdx.fields.slug}-lecture.pdf`}
                 >
-                  <i className="far fa-projector"></i>
+                  <i className="fad fa-projector"></i>
                 </a>
               )}
               {lecture && (
@@ -79,7 +79,7 @@ export default function PageTemplate({
                   className="uppercase text-gray-500"
                   href={`/lectures/${mdx.fields.slug}-lecture.pdf`}
                 >
-                  <i className="fas fa-download"></i>
+                  <i className="fad fa-download"></i>
                 </a>
               )}
             </span>
