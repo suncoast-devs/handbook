@@ -6,9 +6,9 @@ Theme: Next, 1
 
 # [fit] Tic Tac Toe
 
-Let's create an interactive Tic Tac Toe game for two players
+Let's create an interactive Tic Tac Toe game for two players.
 
-As always we'll start with static HTML and CSS
+As always, we will start with static HTML and CSS
 
 ---
 
@@ -137,7 +137,7 @@ ul {
 
 ---
 
-# Style the li, in our case the Tic Tac Toe cell
+# Style the li, in our case, the Tic Tac Toe cell
 
 ```css
 ul li {
@@ -182,23 +182,23 @@ ul li.not-allowed-click {
 
 ---
 
-# If we could somehow dynamically change content.
+# If we could somehow dynamically change the content.
 
 Time to make our page reactive by adding in JavaScript that interacts with the browser's content
 
 ---
 
-# JavaScript when run in the browser has access to the DOM (Document Object Model)
+# JavaScript, when run in the browser, has access to the DOM (Document Object Model)
 
 Remember that `Elements` view in the web developer's tool?
 
-That isn't our `index.html` file! Its the browser's interpretation of the content into a nested set of _objects_ the browser uses to _render_ our page.
+That isn't our `index.html` file! The browser's interpretation of the content into a nested set of _objects_ the browser uses to _render_ our page.
 
 ---
 
 # But wait! We know how to use `objects` in JavaScript!
 
-If we had a way to get access to those _live_ objects in our code we could adjust them.
+If we had a way to access those _live_ objects in our code, we could adjust them.
 
 If we can adjust them, the browser would show us the updated view!
 
@@ -210,9 +210,9 @@ Enter the `DOM` and the JavaScript `DOM` API!
 
 ---
 
-# Open up your developer tools
+# Open up developer tools
 
-We've seen some "built in" objects already.
+We've seen some "built-in" objects already.
 
 [.column]
 
@@ -235,7 +235,7 @@ const name = window.prompt('Your name?')
 
 # What about interacting with the current "document"?
 
-In the console type: `document` and press enter
+In the console, type: `document` and press enter
 
 ```
 document
@@ -255,13 +255,13 @@ document
 
 ---
 
-# So how do we get access to these elements so we can change them?
+# How do we get access to these elements so we can change them?
 
-`document` gives us methods to start finding (`select`ing) elements.
+`document` gives us methods to start finding (`select'ing) elements.
 
 ---
 
-# There are many functions the `document`can do, but`querySelector` is the most basic
+# There are many functions the `document'can do, but'querySelector` is the most basic
 
 ---
 
@@ -277,7 +277,7 @@ Example:
 document.querySelector('li')
 ```
 
-Will return the first `li` element in the document, scanning from the top to the bottom
+Will return the first `li` element in the document, scanning from top to bottom.
 
 ---
 
@@ -285,13 +285,13 @@ Will return the first `li` element in the document, scanning from the top to the
 
 > This opens up an entire world!
 
-We didn't get a `string` or a `number` we received an `HTMLElement`
+We didn't get a `string` or a `number`; we received an `HTMLElement`
 
 ---
 
 ## Dev tools show it formatted like HTML
 
-- We can expand it to show all the attributes of the element (Wow, so many!)
+- We can expand it to show all the element's attributes (Wow, so many!)
 - We can hover it to highlight it in the browser window
 - We can click on it to jump to that element in the Elements tab
 
@@ -303,7 +303,7 @@ We didn't get a `string` or a `number` we received an `HTMLElement`
 firstListItem = document.querySelector('li')
 ```
 
-While there are _many_ attributes to investigate, lets start by looking to see what _text_ is inside this element.
+While there are _many_ attributes to investigate, let us start by looking to see what _text_ is inside this element.
 
 ```js
 firstListItem.textContent
@@ -313,9 +313,9 @@ Since the `li` is empty, we get back an empty string!
 
 ---
 
-## Update the HTML code to put an `O` in the first li
+## Update the HTML code to put an `O' in the first li
 
-Rerun the example and we'll see this code return `"O"`
+Rerun the example, and we'll see this code return `"O"`
 
 ```js
 firstListItem = document.querySelector('li')
@@ -359,7 +359,7 @@ firstListItem = document.querySelector('li')
 firstListItem.className
 ```
 
-Wow, we get back `taken` which is the class name we assigned!
+Wow, we get back `taken`, which is the class name we assigned!
 
 ---
 
@@ -406,7 +406,7 @@ firstListItem.classList.remove('small')
 firstListItem.classList.add('small')
 ```
 
-- Since we add/remove classes so often we can even `toggle` them on and off
+- Since we add/remove classes so often, we can even `toggle` them on and off
 
 ```js
 firstListItem.classList.toggle('small')
@@ -414,7 +414,7 @@ firstListItem.classList.toggle('small')
 
 ---
 
-# Now lets interact!
+# Now, let us interact!
 
 We can now:
 
@@ -469,13 +469,13 @@ firstListItem.addEventListener('click', handleClickSquare)
 
 This means:
 
-> The list item in the variable `firstListItem` should listen for a specific kind of event, in this case a `click` and when it happens, the browser will _CALL BACK_ our `handleClickSquare` function
+> The list item in the variable `firstListItem` should listen for a specific kind of event, in this case, a `click`, and when it happens, the browser will _CALL BACK_ our `handleClickSquare` function
 
 ---
 
-# There are a list of pre-defined events that the elements know about!
+# There is a list of pre-defined events that the elements know!
 
-Its a [long list](https://developer.mozilla.org/en-US/docs/Web/Events) but you don't need to know them all.
+It is a [long list](https://developer.mozilla.org/en-US/docs/Web/Events), but you don't need to know them all.
 
 ---
 
@@ -483,7 +483,7 @@ Its a [long list](https://developer.mozilla.org/en-US/docs/Web/Events) but you d
 
 ---
 
-# [fit] Lets try a different event: Mouse Move
+# [fit] Let us try a different event: Mouse Move
 
 ```js
 function handleMouseMove() {
@@ -515,13 +515,13 @@ function handleClickSquare(event) {
 
 ---
 
-# Every time our browser handles an event we are `addEventListener` handling...
+# Every time our browser handles an event, we are `addEventListener` handling...
 
 ... we get our function called _AND_ we get an `event` object!
 
 ---
 
-# Lets check out that event!
+# Let us check out that event!
 
 ```js
 function handleClickSquare(event) {
@@ -539,7 +539,7 @@ firstListItem.addEventListener('click', handleClickSquare)
 
 Check out the `target` property of the event!
 
-Its the element we clicked on!
+It is the element we clicked on!
 
 ---
 
@@ -567,7 +567,7 @@ firstListItem.addEventListener('click', handleClickSquare)
 
 # [fit] NICE!
 
-But how do we do this for _ALL_ the list items?
+However, how do we do this for _ALL_ the list items?
 
 ---
 
@@ -585,7 +585,7 @@ Try to write `allSquares.addEventListener`
 
 # We can't _directly_ call it
 
-`querySelectorAll` returns a _NodeList_ so we have to loop...
+`querySelectorAll` returns a _NodeList_, so we have to loop...
 
 `forEach` will work!
 
@@ -595,13 +595,13 @@ allSquares.forEach(square =>
 )
 ```
 
-This adds an event listener to each item!
+The loop adds an event listener to each item!
 
 ---
 
 # Done playing in the console, to the editor!
 
-Now that we have some experience, lets put it in our actual javascript file!
+Now that we have some experience let us put it in our actual javascript file!
 
 ---
 
@@ -695,9 +695,9 @@ if (currentPlayer === 'X') {
 
 ---
 
-# First let's mark the square as taken!
+# First, let us mark the square as taken!
 
-Add the `taken` class to an element
+Add the `taken` class to an element.
 
 ```js
 thingClickedOn.classList.add('taken')
@@ -705,14 +705,14 @@ thingClickedOn.classList.add('taken')
 
 ---
 
-# Now we can add logic/behavior to block clicking twice!
+# We can add logic/behavior to block clicking twice!
 
 Before we do any work in `handleClickSquare`
 
 Algorithm:
 
 - Look at the `li`
-- If the `li` is already marked with the class `taken`
+- If the `li` contains the class `taken`
   - ... then do nothing, stop work!
 - Otherwise, proceed...
 
@@ -729,9 +729,9 @@ if (thingClickedOn.classList.contains('taken')) {
 
 ---
 
-# Except for winning/losing we are looking pretty good!
+# Except for winning/losing, we are looking pretty good!
 
-Lets add a counter of the number of moves!
+Let us add a counter of the number of moves!
 
 ---
 
@@ -741,18 +741,18 @@ Lets add a counter of the number of moves!
 let moveCounter = 0
 ```
 
-Then every time we make a valid move:
+Then every time we make a good move:
 
 ```js
 // Increment the move counter
 moveCounter++
 ```
 
-See in the console we can look at the `moveCounter` as we click
+See in the console we can look at the `moveCounter` as we click.
 
 ---
 
-# Now lets change the header
+# Change the header
 
 First, query for the element
 
@@ -778,9 +778,9 @@ header.textContent = `Move ${moveCounter} of Tic Tac Toe`
 
 ---
 
-# That is all you need!
+# That is all!
 
-With these simple tools we can make any page dynamic.
+With these simple tools, we can make any page dynamic.
 
 > ... However, there are better tools ...
 
@@ -790,9 +790,9 @@ With these simple tools we can make any page dynamic.
 
 ## Event bubbling!
 
-Remember when we had to add event listeners to _all_ the `LI` so we could handle the clicks?
+Remember when we had to add event listeners to _all_ the `LI` to handle the clicks?
 
-What we didn't now is that the `click` on an `li` will move _up_ the DOM tree to the parent, and grandparent, and the great grandparent, hoping someone will be `listening` to that event.
+We did not know that the `click` on an `li` will move _up_ the DOM tree to the parent, grandparent, and the great grandparent, hoping someone will be `listening` to that event.
 
 ---
 
@@ -810,29 +810,29 @@ But wait ...
 
 ---
 
-# When an `li` click happens it will "bubble up" to the `ul`
+# When a `li` click happens, it will "bubble up" to the `ul`
 
 Our `handleClickSquare` is waiting for it!
 
-And since the `event.target` will be the clicked `li`, all our code will work!
+Since the `event.target` will be the clicked `li`, all our code will work!
 
 ... Almost :(
 
 ---
 
-# It is possible to click on the `ul` itself. Click on the gaps between squares
+# It is possible to click on the `ul` itself. Click on the gaps between squares.
 
 How do we handle this?
 
 ---
 
-# We can tell what element was clicked
+# We can detect the clicked element
 
 ```js
 console.log(event.target.nodeName)
 ```
 
-This might be the `LI` but it could also be the `UL` depending on where the click happened
+The element might be the `LI,` but it could also be the `UL` depending on where the click happened.
 
 ---
 
@@ -845,10 +845,10 @@ if (event.target.nodeName !== 'LI') {
 }
 ```
 
-Now we proceed if the element clicked was an `li`
+Now we proceed if the element clicked was a `li`
 
 And we need _ONE_ eventListener on the parent `ul`
 
-Event bubbling can reduce the amount of code, but it can be tricky...
+Event bubbling can reduce the amount of code, but it can be tricky.
 
 ---
