@@ -21,6 +21,8 @@ mkdir -p "${destination}"
 md_file="$(cd "$(dirname "$lesson_path")"; pwd)/$(basename "$lesson_path")"
 pdf_file="${destination}/${lesson_name}-lecture.pdf"
 
+echo "Writing ${pdf_file}"
+
 TEMPFILE="${md_file}.themehack.md"
 trap 'rm -f ${TEMPFILE}' EXIT
 sed 's/^theme:.*/theme: Next, 9/ig' < "$md_file" > "$TEMPFILE"

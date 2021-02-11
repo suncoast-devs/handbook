@@ -1,7 +1,8 @@
 #!/bin/bash
 
+SPECIFIC_LECTURE="$1"
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
 
-find "${GIT_ROOT}/lessons" -name lecture.md -exec "${GIT_ROOT}/bin/lecture-to-pdf" {} "${GIT_ROOT}/web/public/lectures/" \;
+find "${GIT_ROOT}/lessons/${SPECIFIC_LECTURE}" -name lecture.md -exec "${GIT_ROOT}/bin/lecture-to-pdf" {} "${GIT_ROOT}/web/static/lectures/" \;
 
