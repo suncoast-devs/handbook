@@ -12,11 +12,8 @@ You could define a prototype like this:
 
 ```javascript
 function Dog() {
-  return
-   {
-    bark: function() { console.log('bark') },
-    eat: function() { console.log('mmmmmm') }
-  }
+  this.bark = function() { return 'bark' }
+  this.eat = function() { return 'mmmmmm' }
 }
 ```
 
@@ -58,11 +55,11 @@ Let's redefine our `Dog`
 ```javascript
 class Dog {
   bark() {
-    console.log('bark')
+    return 'bark'
   }
 
   eat() {
-    console.log('mmmm')
+    return 'mmmm'
   }
 }
 ```
@@ -84,11 +81,11 @@ class Dog {
   name = 'Not Named'
 
   bark() {
-    console.log(`${this.name} says bark!`)
+    return `${this.name} says bark!`
   }
 
   eat() {
-    console.log('mmmm')
+    return 'mmmm'
   }
 }
 ```
@@ -122,11 +119,11 @@ class Dog {
   }
 
   bark() {
-    console.log(`${this.name} says bark!`)
+    return `${this.name} says bark!`
   }
 
   eat() {
-    console.log('mmmm')
+    return 'mmmm'
   }
 }
 ```
@@ -148,11 +145,11 @@ a **subclass** of `Dog` that has a unique `bark` method.
 ```javascript
 class LoudDog extends Dog {
   bark() {
-    console.log(`${this.name.toUpperCase(0)} SAYS BARK!!!!!`)
+    return `${this.name.toUpperCase(0)} SAYS BARK!!!!!`
   }
 
   yell() {
-    console.log('I am a loud dog, so I yell!')
+    return 'I am a loud dog, so I yell!'
   }
 }
 ```
@@ -177,11 +174,11 @@ class LoudDog extends Dog {
   }
 
   bark() {
-    console.log(`${this.name.toUpperCase(0)} SAYS BARK!!!!!`)
+    return `${this.name.toUpperCase(0)} SAYS BARK!!!!!`
   }
 
   yell() {
-    console.log('I am a loud dog, so I yell!')
+    return 'I am a loud dog, so I yell!'
   }
 }
 ```
@@ -210,15 +207,15 @@ class Dog {
   }
 
   greet = () => {
-    console.log(`Hello I am ${this.name}`)
+    return `Hello I am ${this.name}`
   }
 
   bark() {
-    console.log(`${this.name} says bark!`)
+    return `${this.name} says bark!`
   }
 
   eat() {
-    console.log('mmmm')
+    return 'mmmm'
   }
 }
 ```
