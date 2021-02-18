@@ -26,7 +26,7 @@ You will need to interpret the response and render a graphical user interface. T
 
 Here's an example implementation of this assignment:
 
-![](./assets/bomb-sniffer.gif)
+![](https://github.com/suncoast-devs/handbook/raw/master/assignments/assets/bomb-sniffer.gif)
 
 ### Setup
 
@@ -34,26 +34,29 @@ Here's an example implementation of this assignment:
 app-app --gamma-hooks Minesweeper
 ```
 
+## Additional Resources
+
+- [React Mouse Events](https://reactjs.org/docs/events.html#mouse-events)
+- [JavaScript Fetch API Quick Reference](https://handbook.suncoast.io/lessons/misc-quick-reference/js-fetch)
+- [AXIOS a better "fetch" for JavaScript](https://handbook.suncoast.io/lessons/misc-quick-reference/axios)
+- [Brief, but good article on using two-dimensional-arrays in React](https://www.pluralsight.com/guides/display-multidimensional-array-data-in-react)
+- Use Insomnia to test out the API, try "playing" games with the API. This will help you understand the "flow" of the game via the API.
+
 ### Explorer Mode
 
-- Create a new game when the page loads, and render it on the screen, this look as close to gif as possible.
+- Create a new game when the page loads, and render it on the screen, use the animated gif above as a user interface guide. Do at least that much, but also feel free to _have fun_.
 - Style the cells appropriately.
 - Left clicking a cell performs the `check` action
 - Right/secondary clicking a cell performs the `flag` action
-- When the game status changed to `won` or `lost`, show a victory or failure message.
+- When the game status changed to `won` or `lost` a victory or failure message - Don't use `alert` for this, update the user interface.
+- Not required in explorer mode, but as a mid-challenge before tackling Adventure Mode: add a button that allows the user to make a new game. The user could abandon their current game or start a new one after winning or losing. Use state/events to do this, no reloading the page.
 
 ### Adventure Mode
 
 - Before creating the game, prompt the user to choose: _Easy_, _Medium_, or _Hard_ mode.
-- Have fun with the styling, make it your own
+- Have fun with the styling, make it your own.
 
 ### Epic Mode
 
-- Render your victory/failure message as it's own "_screen_".
-- On that screen add a button to restart or play again.
-- Store the current game id in `localStorage`, and render the same game, rather than creating a new one every time (until the player presses the restart button).
+- Learn how to use `localStorage` API to store data in the browser. Use this to allow the user to close the browser window and come back to a game already in progress.
 - Add sound effects.
-
-## Additional Resources
-
-- [React Mouse Events](https://reactjs.org/docs/events.html#mouse-events)
