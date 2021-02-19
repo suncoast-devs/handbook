@@ -31,7 +31,7 @@ Here is an example implementation of this assignment:
 ### Setup
 
 ```shell
-app-app --gamma-hooks Minesweeper
+app-app Minesweeper
 ```
 
 ## Additional Resources
