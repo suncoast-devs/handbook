@@ -23,10 +23,17 @@ You'll identify the main `Component`s on the page and create React components fo
 app-app --gamma Reactocats
 ```
 
+## Resources
+
+- [React Tutorial - Do parts 1, 2, 3, and 4, then stop. YOU MAY WANT TO WALK THROUGH THIS FIRST]https://reactjs.org/docs/hello-world.html)
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [.map, .reduce & .filter, Oh My!](https://www.datchley.name/working-with-collections/)
+- [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+
 ### Explorer Mode
 
 - Create your React app using `app-app` `GAMMA`
-- If you have done the non-React version of octodex, use your existing HTML as the `render()` method of your `App` component. Otherwise, figure out the main components of the page and implement the `render()` method of `App`
+- If you have done the non-React version of octodex, use your existing HTML as the `render()` method of your `App` component. Otherwise, figure out the main components of the page and implement the `render()` method of `App` -- Don't forget to replace `class=` with `className=`
 - Your CSS should be in `index.scss` -- feel free to copy your previous project's css if you have done the non-React version of this assignment.
 - Create a component for an `Octocat`
   - The `Octocat` component should use `props` to customize the data for each usage.
@@ -51,8 +58,4 @@ app-app --gamma Reactocats
 - _OR_
 - Use the `fetch` API to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
 
-## Additional Resources
 
-- [React Documentation](https://reactjs.org/docs/getting-started.html)
-- [.map, .reduce & .filter, Oh My!](https://www.datchley.name/working-with-collections/)
-- [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
