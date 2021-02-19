@@ -481,7 +481,7 @@ export class App extends Component {
 handleNewGame = async () => {
   // Make a POST request to ask for a new game
   const response = await fetch(
-    'https://pure-wildwood-47893.herokuapp.com/game',
+    'https://sdg-tic-tac-toe-api.herokuapp.com/game',
     {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
@@ -550,7 +550,7 @@ handleNewGame = async () => {
 ```jsx
 handleClickCell = async (row, column) => {
   // Generate the URL we need
-  const url = `https://pure-wildwood-47893.herokuapp.com/game/${this.state.id}`
+  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${this.state.id}`
 
   // Make an object to send as JSON
   const body = { row: row, column: column }
