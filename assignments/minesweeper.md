@@ -3,7 +3,7 @@ title: Minesweeper
 tags: ['javascript', 'react']
 ---
 
-In this assignment, you will communicate with a back-end API server to create the user-interface for a [Minesweeper][1] clone. It might help to [familiarize yourself](https://www.youtube.com/watch?v=7B85WbEiYf4) with the game if you've never played it.
+In this assignment, you will communicate with a back-end API server to create the user-interface for a [Minesweeper][1] clone. It might help to [familiarize yourself](https://www.youtube.com/watch?v=7B85WbEiYf4) with the game if you have never played it.
 
 [1]: https://en.wikipedia.org/wiki/Minesweeper_(video_game)
 
@@ -18,13 +18,13 @@ In this assignment, you will communicate with a back-end API server to create th
 
 ## Requirements
 
-Read over the documentation for the API we'll be using:
+Read over the documentation for the API we will be using:
 
 `https://minesweeper-api.herokuapp.com/`
 
-You will need to interpret the response and render a graphical user interface. The API results include an array of arrays (two-dimensional array), these represent _rows_ and _columns_. These are probably best translated into table rows (`<tr>`) and table data (`<td>`) cells.
+You will need to interpret the response and render a graphical user interface. The API results include an array of arrays (two-dimensional array). These represent _rows_ and _columns_. These are probably best translated into table rows (`<tr>`) and table data (`<td>`) cells.
 
-Here's an example implementation of this assignment:
+Here is an example implementation of this assignment:
 
 ![](https://github.com/suncoast-devs/handbook/raw/master/assignments/assets/bomb-sniffer.gif)
 
@@ -40,21 +40,20 @@ app-app --gamma-hooks Minesweeper
 - [JavaScript Fetch API Quick Reference](https://handbook.suncoast.io/lessons/misc-quick-reference/js-fetch)
 - [AXIOS a better "fetch" for JavaScript](https://handbook.suncoast.io/lessons/misc-quick-reference/axios)
 - [Brief, but good article on using two-dimensional-arrays in React](https://www.pluralsight.com/guides/display-multidimensional-array-data-in-react)
-- Use Insomnia to test out the API, try "playing" games with the API. This will help you understand the "flow" of the game via the API.
+- Use Insomnia to test out the API. Try "playing" games with the API. This will help you understand the "flow" of the game via the API.
 
 ### Explorer Mode
 
-- Create a new game when the page loads, and render it on the screen, use the animated gif above as a user interface guide. Do at least that much, but also feel free to _have fun_.
+- Create a button to create a new game. Use the animated gif above as a user interface guide. Do at least that much, but also feel free to have fun.
 - Style the cells appropriately.
-- Left clicking a cell performs the `check` action
+- Left-clicking a cell performs the `check` action
 - Right/secondary clicking a cell performs the `flag` action
-- When the game status changed to `won` or `lost` a victory or failure message - Don't use `alert` for this, update the user interface.
-- Not required in explorer mode, but as a mid-challenge before tackling Adventure Mode: add a button that allows the user to make a new game. The user could abandon their current game or start a new one after winning or losing. Use state/events to do this, no reloading the page.
+- When the game status changed to `won` or `lost` a victory or failure message - Do not use `alert` for this. Update the user interface.
 
 ### Adventure Mode
 
-- Before creating the game, prompt the user to choose: _Easy_, _Medium_, or _Hard_ mode.
-- Have fun with the styling, make it your own.
+- Before creating the game, allow the user to choose: _Easy_, _Medium_, or _Hard_ mode.
+- Have fun with the styling. Make it your own.
 
 ### Epic Mode
 
