@@ -22,7 +22,7 @@ Read over the documentation for the API we will be using:
 
 `https://minesweeper-api.herokuapp.com/`
 
-You will need to interpret the response and render a graphical user interface. The API results include an array of arrays (two-dimensional array). These represent _rows_ and _columns_. These are probably best translated into table rows (`<tr>`) and table data (`<td>`) cells.
+You will need to interpret the response and render a graphical user interface. The API results include an array of arrays (two-dimensional array). These represent _rows_ and _columns_. Consider using `flexbox`, `grid`, or an old-fashioned `table` to organize these.
 
 Here is an example implementation of this assignment:
 
