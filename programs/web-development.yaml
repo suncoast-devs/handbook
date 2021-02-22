@@ -68,6 +68,7 @@ modules:
       # react-events -- needs work
       - js-fetch
       - react-state
+      - react-state-flow
       - react-hooks
   - full-stack-development:
     title: Full-stack Application Development
