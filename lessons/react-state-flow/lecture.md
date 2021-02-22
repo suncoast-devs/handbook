@@ -223,7 +223,7 @@ export class Cell extends Component {
 
 # But how do we dispatch the API and update the state?
 
-- The board is a read-only `prop` in the `Cell`
+- The value is a read-only `prop` in the `Cell`
 - If we did call the API in the cell, how can we _transport_ the state to the parent?
 - Whatever to do?
 
@@ -231,7 +231,7 @@ export class Cell extends Component {
 
 # State down
 
-- We are sending the state DOWN by doing something like `board={this.state.board}`
+- We are sending the state DOWN by doing something like `value={this.state.board[0][2]}`
 - This _sends_ the **PARENT**'s state to the **CHILD** as `props`
 
 ---
@@ -246,17 +246,17 @@ export class Cell extends Component {
 ---
 
 ```jsx
-<Cell row={0} column={0} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={0} column={1} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={0} column={2} board={this.state.board} recordMove={this.recordMove} />
+<Cell row={0} column={0} value={this.state.board[0][0]} recordMove={this.recordMove} />
+<Cell row={0} column={1} value={this.state.board[0][1]} recordMove={this.recordMove} />
+<Cell row={0} column={2} value={this.state.board[0][2]} recordMove={this.recordMove} />
 
-<Cell row={1} column={0} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={1} column={1} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={1} column={2} board={this.state.board} recordMove={this.recordMove} />
+<Cell row={1} column={0} value={this.state.board[1][0]} recordMove={this.recordMove} />
+<Cell row={1} column={1} value={this.state.board[1][1]} recordMove={this.recordMove} />
+<Cell row={1} column={2} value={this.state.board[1][2]} recordMove={this.recordMove} />
 
-<Cell row={2} column={0} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={2} column={1} board={this.state.board} recordMove={this.recordMove} />
-<Cell row={2} column={2} board={this.state.board} recordMove={this.recordMove} />
+<Cell row={2} column={0} value={this.state.board[2][0]} recordMove={this.recordMove} />
+<Cell row={2} column={1} value={this.state.board[2][1]} recordMove={this.recordMove} />
+<Cell row={2} column={2} value={this.state.board[2][2]} recordMove={this.recordMove} />
 ```
 
 ---
@@ -285,7 +285,7 @@ handleClickCell = () => {
 |       App      |               |    Cell      |
 |                |               |              |
 |  State:        |               | Props:       |
-|   board  ------------------------> board      |
+|   value  ------------------------> value      |
 |   id           |               |   row        |
 |   winner       |               |   column     |
 |                |     +-----------> recordMove |
@@ -332,7 +332,7 @@ components to replace
 the old ones
 
 There are new values
-for `this.props.board`
+for `this.props.value`
 so the UI draws the
 *current* game.
 
@@ -411,7 +411,7 @@ const body = { row, column }
 
 ---
 
-# `this.props.row`, `this.props.value`, `this.prop.handleClickCell`, ...
+# `this.props.row`, `this.props.value`, `this.prop.recordMove`, ...
 
 ```jsx
 export class Cell extends Component {
