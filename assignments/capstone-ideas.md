@@ -62,7 +62,7 @@ Here are some pre-selected ideas to help get you started.
 - [https://feel-good-inc-hp.netlify.com/](https://feel-good-inc-hp.netlify.com/), A doctor/patient scheduler
 - [https://bands-in-town.netlify.com/](https://bands-in-town.netlify.com/), an event site clone
 - [https://reward-tracker-justin.netlify.com/](https://reward-tracker-justin.netlify.com/), a classroom rewards tracker
-- [https://watchdog-nkerns.netlify.com/](https://watchdog-nkerns.netlify.com/), a management app fof contractors
+- [https://watchdog-nkerns.netlify.com/](https://watchdog-nkerns.netlify.com/), a management app for contractors
 
 ## Explorer Mode
 
