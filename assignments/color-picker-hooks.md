@@ -85,6 +85,15 @@ Then you can dynamically set the `backgroundColor` of an element in your compone
 app-app --gamma-hooks ColorPickerHooks
 ```
 
+## Resources
+
+- [Hooks](https://reactjs.org/docs/hooks-intro.html)
+- [HSL Color Picker](http://hslpicker.com/)
+- [Inline styles in React](https://reactjs.org/docs/dom-elements.html#style)
+- [`hsl()` and `hsla()`][1] on MDN
+
+[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla()
+
 ### Explorer Mode
 
 - Represent the three values, `hue`, `saturation`, and `lightness` with
@@ -98,16 +107,7 @@ app-app --gamma-hooks ColorPickerHooks
 
 ### Adventure Mode
 
-- Work on other assignments you might be assigned as well. Career support
-  and Capstones
-- [ ][do you wanna build a snowman?]
-  (https://suncoast.io/handbook/curriculum/front-end/react-ii/assignments/snowman)
-
-## Additional Resources
-
-- [Hooks](https://reactjs.org/docs/hooks-intro.html)
-- [HSL Color Picker](http://hslpicker.com/)
-- [Inline styles in React](https://reactjs.org/docs/dom-elements.html#style)
-- [`hsl()` and `hsla()`][1] on MDN
-
-[1]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#hsl()_and_hsla()
+- Create a `ColorSlider` component that represents the slider control. What props will you need to send? What function will you need to send to manipulate the correct state?
+- Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
+- Add a section that displays a CSS class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
+- Only display the output color text in `hsla()` if the alpha value is less than `1`.

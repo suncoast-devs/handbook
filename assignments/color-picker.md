@@ -58,6 +58,12 @@ Then you can dynamically set the `backgroundColor` of an element in your compone
 app-app ColorPicker
 ```
 
+## Resources
+
+- [HSL Color Picker](http://hslpicker.com/)
+- [Inline styles in React](https://reactjs.org/docs/dom-elements.html#style)
+- [HSL colors](https://developer.mozilla.org/en-us/docs/web/css/color_value) on MDN
+
 ### Explorer Mode
 
 - Represent the three values, `hue`, `saturation`, and `lightness` in your state.
@@ -69,12 +75,7 @@ app-app ColorPicker
 
 ### Adventure Mode
 
+- Create a `ColorSlider` component that represents the slider control. What props will you need to send? What function will you need to send to manipulate the correct state?
 - Add a fourth slider for `alpha`, be sure to put some kind of pattern behind your color so the user can see the transparency effect.
 - Add a section that displays a CSS class that applies the current background color to an element, just like [https://cssgradient.io/](https://cssgradient.io/)
 - Only display the output color text in `hsla()` if the alpha value is less than `1`.
-
-## Additional Resources
-
-- [HSL Color Picker](http://hslpicker.com/)
-- [Inline styles in React](https://reactjs.org/docs/dom-elements.html#style)
-- [HSL colors](https://developer.mozilla.org/en-us/docs/web/css/color_value) on MDN
