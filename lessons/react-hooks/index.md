@@ -6,9 +6,9 @@ import { CounterWithName } from './CounterWithName'
 
 # React Hooks
 
-We have [already seen how React functions](/lessons/react-intro) using `class`
-based components. In this lesson we will talk about a relatively new approach
-for creating React components. This new approach is often called `hooks`
+We have [already seen how React operates](/lessons/react-intro) using `class`
+based components. In this lesson, we will talk about another approach for
+creating React components. This approach is often called `hooks`
 
 ## History
 
@@ -27,15 +27,15 @@ class HelloWorld extends React.Component {
 // <HelloWorld />
 ```
 
-In this case the component does not maintain any state. Each time it is
-rendered, it simply uses `<div>Hello, World!</div>` as it's content. In this way
+In this case, the component does not maintain any state. Each time it is
+rendered, it merely uses `<div>Hello, World!</div>` as its content. In this way,
 we say that it is stateless.
 
 ### Stateless Functional Components
 
 However, there is overhead in writing a component this simple as an entire
-class. We really only need and use the `render` method. In these cases we can
-reduce this code to just a function with the name `HelloWorld`
+class. We only need and use the `render` method. In these cases, we can reduce
+this code to just a function with the name `HelloWorld`
 
 ```jsx
 function HelloWorld() {
@@ -45,17 +45,17 @@ function HelloWorld() {
 // <HelloWorld />
 ```
 
-This is already easier to read and understand. The component `HelloWorld` just
-returns the JSX representing `<div>Hello, World</div>`
+This code is already easier to read and understand. The component `HelloWorld`
+just returns the JSX representing `<div>Hello, World</div>`
 
 ### Props for Stateless Functional Components
 
-You might be asking: "But what about a component that receives properties from a
-parent component?" Without a class how do we utilize the `this.props` we get
-from inheriting from `React.Component`?
+What about a component that receives properties from a parent component? Without
+a class, how do we utilize the `this.props` we get from inheriting from
+`React.Component`?
 
-The answer is really quite simple; the functional component receives the
-properties via an argument we will call `props`
+The answer is quite simple; the functional component receives the properties via
+an argument we will call `props`
 
 ```jsx
 function HelloWorld(props) {
@@ -66,11 +66,11 @@ function HelloWorld(props) {
 ```
 
 Again, very simple. We do not need to worry about remembering `this.props` or
-dealing with any of the extra complication of a class!
+dealing with any of the extra complications of a class!
 
-You might be asking: "But what about methods to handle events?" and again the
-answer is quite simple. We can declare the functions either _inside_ or
-_outside_ the component! Remember, functions are just variables themselves.
+What about methods to handle events? Again the answer is quite simple. We can
+declare the functions either _inside_ or _outside_ the component! Remember,
+functions are just variables themselves.
 
 ### Handling events in Stateless Functional Components
 
@@ -86,9 +86,9 @@ function HelloWorld(props) {
 // <HelloWorld name="Sandy" />
 ```
 
-We can also define the function inside the method to add some "encapsulation"
-and not have our handle methods be visible, or name collide, with functions that
-other components might need.
+We can also define the function inside the method to add some "encapsulation."
+Our handle methods cannot name collide with functions that other components
+might need.
 
 ```jsx
 function HelloWorld(props) {
@@ -102,10 +102,10 @@ function HelloWorld(props) {
 // <HelloWorld name="Sandy" />
 ```
 
-Finally we may choose to write the handling functions as arrow functions. Given
+Finally, we may choose to write the handling functions as arrow functions. Given
 that we do not need the ability of arrow function to automatically bind `this`,
-we don't _need_ to do this, but some developers prefer to write handling
-functions as arrow functions anyway.
+we don't _need_ the arrow syntax. However, some developers prefer to write
+handling functions as arrow syntax.
 
 ```jsx
 function HelloWorld(props) {
@@ -121,11 +121,11 @@ function HelloWorld(props) {
 
 ### Functional Components vs Stateful Components
 
-Ok, so these examples might convince you that writing components as simple
-functions are easier than writing classes. However, this style of component was
-limited to only those that do not maintain state. This limitation would lead
-some developers to have one _stateful_ component that only maintained the state,
-and then deferred all rendering to a stateless component.
+Ok, so these examples demonstrate that writing components as simple functions is
+more straightforward than writing classes. However, this style was limited to
+only those that do not maintain a state. This limitation would lead some
+developers to have one _stateful_ component that only maintained the state and
+then deferred all rendering to a stateless component.
 
 This might look like:
 
@@ -139,7 +139,7 @@ class ToDoListContainer extends React.Component {
     this.setState({ list: [...this.state.list, item] })
   }
 
-  // Code to remove items, sort items, mark complete, etc.
+  // code to remove items, sort items, mark complete, etc.
 
   render() {
     return (
@@ -166,34 +166,33 @@ function ToDoList(props) {
 }
 ```
 
-Thus the `ToDoList` is still a functional component. It does not maintain state.
-Also the `ToDoListContainer` does not do any rendering, deferring that to the
-`ToDoList` component.
+Thus the `ToDoList` is still a functional component. It does not maintain a
+state. Also, the `ToDoListContainer` does not do any rendering, deferring that
+to the `ToDoList` component.
 
-In this way we get _the best of both worlds_, the stateful component only
+In this way, we get _the best of both worlds_, the stateful component only
 manages state, and the stateless component receives its properties from the
 outside world and is _only_ concerned with rendering content and dispatching
 events.
 
 ### Can We Do Better?
 
-Leading up to the `React 16.8.0` release the React developers wanted to address
-issues that had been noticed over five years of writing, and supporting React
-based projects.
+Leading up to the `React 16.8.0` release, the React developers wanted to address
+issues noticed over five years of writing and supporting React based projects.
 
 Here are the issues these projects would have:
 
-- It’s hard to reuse stateful logic between components
+- It is hard to reuse stateful logic between components
 
-Take our `ToDoListContainer` example from above. It's real purpose is to manage
-a list of items that can be added, deleted, sorted, marked complete. If we
-wanted to reuse this idea for a different domain, say perhaps an entire project,
-it would not be very easy. It will always want to render a `ToDoList`. Various
-approaches were invented to deal with this. For instance we could send the class
-name of the component as one of the `props` to `ToDoListContainer` -- or we
-could use the fact that `this.props.children` would contain the children of a
-component. We could then return something like `return this.props.children`, but
-with a way to _inject_ the `prop` of the `list`.
+Take our `ToDoListContainer` example from above. Its real purpose is to manage a
+list of added, deleted, sorted, and marked complete items. If we wanted to reuse
+this idea for a different domain, say perhaps an entire project, it would not be
+straightforward. It will always want to render a `ToDoList`. Various approaches
+exist to deal with this. For instance, we could send the class name of the
+component as one of the `props` to `ToDoListContainer` -- or we could use the
+fact that `this.props.children` would contain the children of a component. We
+could then return something like `return this.props.children`, but with a way to
+_inject_ the `prop` of the `list`.
 
 However, all of these approaches had drawbacks.
 
@@ -204,21 +203,20 @@ We have seen some of the
 used `componentDidMount` to find a place to perform tasks such as
 [loading data into state from an API](/lessons/react-state)
 
-However, there are many other lifecycle methods that can be used. On large
-projects classes would become loaded with extra code to handle many different
-requirements of the component. These components often became large and difficult
-to refactor.
+However, many other lifecycle methods exist. On large projects, classes would
+become loaded with extra code to handle many different component requirements.
+These components often became large and difficult to refactor.
 
 - Classes confuse both people and machines
 
-Classes are relatively new to JavaScript which, until recently, did not have
-_native_ support in most browsers for the syntax. This meant that any code with
-`class` would have to be
+Classes are relatively new to JavaScript, which, until recently, did not have
+_native_ support in most browsers for the syntax. The new nature of classes
+meant that any code with `class` would have to be
 [transpiled](https://en.wikipedia.org/wiki/Source-to-source_compiler). It also
 makes us have to understand _JavaScripts dreaded `this`_
 
-`function`s are much simpler to write and to understand. They lack the syntax
-and concept complexity of classes.
+`function`s are much simpler to write and to understand. Functions lack the
+syntax concept complexity of classes.
 
 ## Enter Hooks
 
@@ -228,20 +226,20 @@ style definitions.
 
 [React 16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html) was
 released on February 6, 2019. So they are very new to the React landscape.
-However, since their introduction they have risen in popularity and are
-considered the primary development style going forward. Most third party
-libraries are supporting `class` based components but are developing all the
-latest features focused on `hook` usage.
+However, since their introduction, they have risen in popularity and are
+considered the primary development style going forward. Most third-party
+libraries support `class` based components but are developing all the latest
+features focused on `hook` usage.
 
 ### The Simplest Hook: `useState`
 
 We said that one of the things that `Stateless Functional Components` could not
-do is maintain state. Certainly prior to `hooks` we could not define a
-`function` style component and maintain state at all. This is what `useState`
+do is maintain state. Certainly, before `hooks` we could not define a `function`
+style component and maintain state at all. This limitation is what `useState`
 attempts to resolve.
 
-Let's make a component that has a very simple counter that increments it's value
-each time a button is pressed.
+Let us make a component that has a straightforward counter that increments its
+value on pressing a button.
 
 ```jsx
 function Counter() {
@@ -260,7 +258,7 @@ function Counter() {
 }
 ```
 
-Whoa! Let's break this down.
+Whoa! Let us break this down.
 
 We start the very first line of code with:
 
@@ -268,8 +266,8 @@ We start the very first line of code with:
 const counterValueAndSetMethod = useState(0)
 ```
 
-This line of code does a few things. First it declares that we are going to use
-some state. It then says that the initial value of the state is going to be the
+This line of code does a few things. First, it declares that we are going to use
+some state. It then says that the state's initial value is going to be the
 number `0`.
 
 ### `useState` rules
@@ -277,11 +275,11 @@ number `0`.
 `useState` has a few particular _rules_ that we need to remember:
 
 1. The value given to `useState` in parenthesis is used as the initial value
-   only the first time the instance of the component is rendered. Even if the
-   component is rendered again due to a state change, the value of the state
-   isn't reset to the initial value. This may seem strange if we are going to
+   only the first time the component's instance is rendered. Even if the
+   component is rendered again due to a state change, the state's value isn't
+   reset to the initial value. This behavior may seem strange if we are going to
    call `useState` again when that render happens. How React makes this happen
-   is a concept more deep than we have time to discuss at the moment.
+   is a concept deeper than we have time to discuss here.
 
 2. `useState` always returns an _array_ with exactly _two_ elements. The
    **first** element is the _current value of the state_ and the **second**
@@ -295,14 +293,14 @@ It is **different** than `this.setState` from classes in these ways:
 
 1. `this.setState` in classes allows us to do a _partial_ update. That is we can
    call `this.setState({ key: value})` and that `key` and `value` will be
-   _merged_ into the current state. However with `useState` the state is
+   _merged_ into the current state. However, with `useState` the state is
    _replaced_ with whatever we send it.
 
 2. This is ok due to the second difference. In `class` we would define a
    **single** state and _have_ to use an object to track multiple state elements
    in a single component. Thus you would often see states like
    `state = { board: [], score: 0, playerOneName: 'Bill', playerTwoName: 'Susan'}`.
-   In hooks this would be **four** different `useState` calls.
+   In hooks, this would be **four** different `useState` calls.
 
 ### Using the `useState` return value
 
@@ -316,7 +314,7 @@ const setCounter = counterValueAndSetMethod[1]
 Make two local variables to store the **current value** of our state, which we
 call `counter` and the **method that updates the counter** as `setCounter`
 
-Then in the JSX we can use those two local variables. The code
+Then in the JSX, we can use those two local variables. The code
 `<p>The counter is {counter}</p>` will show the current value of the counter.
 The code `<button onClick={() => setCounter(counter + 1)}>Count!</button>` will
 call `setCounter` to change the value of the counter, and make it the counter
@@ -340,7 +338,7 @@ can be rewritten as such:
 const [counter, setCounter] = useState(0)
 ```
 
-and this is how you will find every example of `useState`. See
+and is how every example of `useState` will appear. See
 [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
 for more details on how and why this syntax works.
 
@@ -359,12 +357,12 @@ function Counter() {
 }
 ```
 
-We have just combined the best of both worlds. We have the simplicty of the
+We have just combined the best of both worlds. We have the simplicity of the
 function component with the ability to update state!
 
 ### Adding more state
 
-Let's say we also wanted to keep track of a person's name in the counter.
+Let us say we also wanted to keep track of a person's name on the counter.
 Traditionally we would define a state like this:
 
 ```jsx
@@ -376,13 +374,13 @@ class CounterWithName extends React.Component {
 }
 ```
 
-However, with `hooks` we will make two **independent** states that each track a
+However, with `hooks`, we will make two **independent** states that each track a
 single piece of information.
 
-This has a few benefits:
+Separating these pieces of state has a few benefits:
 
-1. It is easier to remove one part of the state since it has its own state
-   variable and state changing function.
+1. It is easier to remove one part of the state since it has its own variable
+   and state changing function.
 
 2. We can more easily tell where in the code a piece of state or a state
    changing function is used.
@@ -425,15 +423,14 @@ to update the state `setName(event.target.value)`
 
 ## Not everything is perfect in the land of Hooks
 
-As you could imagine a complex component could have a large number of `useState`
-and we could find ourselves tracking many variables and functions. React has
-another hook we will talk about later that will make this easer and there are
-several libraries that help with managing _complex state_ in our components.
+A complex component could have a large number of `useState` Furthermore, we
+could find ourselves tracking many variables and functions. React has another
+hook, `useReducer,` that can simplify the situation. Many third-party libraries
+exist to address managing _complex state_.
 
-Also we haven't talked about how we will implement something like "The first
-time the component is rendered I'd like to use `fetch` to get some data from the
-internet and update the current state" -- We will see that in the next part of
-the lesson.
+We have not talked about implementing "The first time the component is rendered,
+use `fetch` to get some data from the internet and update the current state" --
+We will see that in a future lesson.
 
 The React team has a nice
 [example of hooks](https://reactjs.org/docs/hooks-state.html) in their
