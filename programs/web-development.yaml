@@ -70,6 +70,7 @@ modules:
       - react-state
       - react-state-flow
       - react-hooks
+      - react-hooks-use-effect
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
