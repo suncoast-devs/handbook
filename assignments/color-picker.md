@@ -19,7 +19,7 @@ RGB isn't the only way we can use numbers to represent colors; there exists _man
 
 The first value `hue` is given in degrees (around a color wheel), the second value is a percentage of saturation (0% being grey, 100% fully saturated), and the third value, a percentage of lightness (0% black, 100% white).
 
-You can also read [this short guide to HSL](https://www.nixsensor.com/what-is-hsl-color/)
+You can also read [this short guide to HSL](https://medium.com/innovaccer-tech/rgb-vs-hsb-vs-hsl-demystified-1992d7273d3a)
 
 ## Objectives
 
