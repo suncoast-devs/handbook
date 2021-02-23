@@ -37,7 +37,7 @@ title: React Assets
 ## When we import an image
 
 ```javascript
-import photo from "./skywalker.png";
+import photo from './skywalker.png'
 ```
 
 ##### We get a string representing the path to the image to use in code
