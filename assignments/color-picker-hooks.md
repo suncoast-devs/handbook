@@ -7,7 +7,7 @@ In this assignment, you'll create an HSL(a) color picker with React, but this ti
 
 ### First, a _little_ bit of color theory...
 
-On the web, and computers in general, we often think of colors using the [**RGB**](https://en.wikipedia.org/wiki/RGB_color_model) color model. In HTML and CSS, we often use [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) triplets to describe colors in RGB. For example, `#76BCBB` represents a nice shade of blue: <span style="display: inline-block; background-color: #76BCBB; width: 1em; height: 1em; border-radius: 0.5em"></span>.  `76` is the red component, `BC` for green, and `BB` for blue. Those hexadecimal numbers translate, respectively, to `118`, `188`, `187` in decimal. The range for each color is `0` through `255`.
+On the web, and computers in general, we often think of colors using the [**RGB**](https://en.wikipedia.org/wiki/RGB_color_model) color model. In HTML and CSS, we often use [hexadecimal](https://en.wikipedia.org/wiki/Hexadecimal) triplets to describe colors in RGB. For example, `#76BCBB` represents a nice shade of blue: <span style="display: inline-block; background-color: #76BCBB; width: 1em; height: 1em; border-radius: 0.5em"></span>. `76` is the red component, `BC` for green, and `BB` for blue. Those hexadecimal numbers translate, respectively, to `118`, `188`, `187` in decimal. The range for each color is `0` through `255`.
 
 In this model, the three _additive_ primary colors (red, green, and blue) are combined to create colors. The absence of these colors creates black, while all three colors at full strength combine to create white. In hexadecimal, `FF` represents the decimal value `255`. This helps to explain why `#FFFFFF` represents white. We can also use other notations in CSS to specify colors, such as `rgb(118, 188, 187)`, where the decimal values are given.
 
@@ -31,7 +31,7 @@ You can also read [this short guide to HSL](https://www.nixsensor.com/what-is-hs
 
 Use `range` type `input` elements to drive a color display. You'll end up with something like this:
 
-![](https://raw.githubusercontent.com/suncoast-devs/handbook/master/curriculum/unit-ii/chapter-2/04-state-management/assets/color-picker.gif)
+![](https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/color-picker.gif)
 
 **HINT**: You will want to combine techniques of string interpolation and using [inline styles in React](https://reactjs.org/docs/dom-elements.html#style), for example:
 
