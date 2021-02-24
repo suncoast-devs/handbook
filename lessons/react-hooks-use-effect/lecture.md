@@ -384,7 +384,7 @@ Change text, add items, remove items, change completed state
 ```js
 useEffect(function () {
   console.log('this runs when the component first mounts')
-})
+}, [])
 ```
 
 ---
@@ -418,7 +418,7 @@ useEffect(async function () {
   )
 
   console.log(response.data)
-})
+}, [])
 ```
 
 > NICE!
