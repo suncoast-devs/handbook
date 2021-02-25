@@ -8,13 +8,13 @@ theme: Next, 1
 
 ---
 
-- Lets add the ability to show a details page for each todo in our list
-- The detail page should show the ID, text, complete status, and perhaps the created/updated timestemps
+- let us add the ability to show a details page for each todo in our list
+- The detail page should show the ID, text, complete status, and perhaps the created/updated timestamps
 - The detail page should allow us to _DELETE_ the todo item
 
 ---
 
-# We now have an app that supports different viws of data
+# We now have an app that supports different views of data
 
 - We will distinguish what we are looking at by varying the URL
 - The home page of `/` will always show the todo items list
@@ -22,7 +22,7 @@ theme: Next, 1
 
 ---
 
-# So ouw app has to change behavior based on what URL the user is displaying
+# So our app has to change behavior based on what URL the user is displaying
 
 - We need a way to differentiate our user interface based on URL
 - We need a way to let the user navigate around
@@ -45,17 +45,17 @@ theme: Next, 1
 
 # Two ways to get started
 
-- Create a brand new app using `app-app --delta-hooks` (has React Router built in)
+- Create a brand new app using `app-app --delta-hooks` (has React Router built-in)
 - Add it to an existing app via `npm install`
   - `npm install react-router react-router-dom`
 
 ---
 
-# Lets add it to our One List App!
+# Let's add it to our One List App!
 
 ---
 
-# Adding the packages isn't enough
+# Adding the packages is not enough
 
 - We need to update our `index.js` to add _React Router_ support.
 
@@ -64,7 +64,7 @@ theme: Next, 1
 # Step 1 - Import the `BrowserRouter`
 
 - The purpose of the `Router` is to allow our application to handle different URLs.
-- There are several different kinds of "Routers" but the most common, and the one we'll use is `BrowserRouter`
+- There are several different kinds of "Routers" but the most common, and the one we will use is `BrowserRouter`
 
 ```js
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -104,7 +104,7 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 # Our main `App` has too much in it.
 
-- Lets refactor the `ul` out into it's own component, moving all the state stuff with it
+- Let us refactor the `ul` out into its own component, moving all the state stuff with it
 
 ---
 
@@ -124,7 +124,7 @@ export function TodoList() {
   useEffect(loadAllTodoItems, [])
 
   async function handleCreateNewTodoItem(event) {
-    // Don't do the normal form submit (which would cause the page to refresh)
+    //Do not do the normal form submit (which would cause the page to refresh)
     // since we are going to do our own thing
     event.preventDefault()
 
@@ -200,7 +200,7 @@ export function App() {
 # Whew, now we have a distinct component for the `TodoList`
 
 - But how does this help us?
-- Well we can now tell our app to only render this if the URL is `/`
+- Well, we can now tell our app to only render this if the URL is `/`
 
 ```html
 <main>
@@ -216,9 +216,9 @@ export function App() {
 
 # Try it out
 
-- Visit your site at `/`
+- Visit the site at `/`
 
-- Visit your site at `/should-not-work`
+- Visit the site at `/should-not-work`
   - Wait, this still works! Why?
 
 ---
@@ -242,13 +242,13 @@ export function App() {
 
 ---
 
-# When we visit a URL that isn't a match we still get our header and footer!
+# When we visit a URL that is not a match we still get our header and footer!
 
 [.column]
 
 - This is because the only part of the page that swaps out is what is inside of our `Switch`
 
-- Let's add a "not found!" with `path="*"`
+- Let us add a "not found!" with `path="*"`
 
 [.column]
 
@@ -279,7 +279,7 @@ export function App() {
 
 # [fit] Add a page to show the details of a page
 
-- Lets put a "Route" to `/items/42`
+- Put a "Route" to `/items/42`
 
 ```jsx
 <Switch>
@@ -297,7 +297,7 @@ export function App() {
 
 # But how do we handle multiple pages??
 
-- Certainly we don't want to write out many `Route` entries!?
+- Certainly, we do not want to write out many `Route` entries!?
 
 - We can put a "parameter" in the `path=`
 
@@ -348,7 +348,7 @@ function TodoItemPage() {
 
 ---
 
-# The params works kinda like `props` but the values come from our `Route`
+# The `params` is similar to `props.` However, the values come from our `Route`
 
 ```
 <Route path="/items/:id">
@@ -366,11 +366,11 @@ function TodoItemPage() {                              v
 
 ---
 
-# See that we can put in any item ID and see it in the page!
+# See that we can put in any item ID and see it on the page!
 
 ---
 
-# Ok, so now lets load some data for that specific item!
+# Ok, so now let us load some data for that specific item!
 
 ---
 
@@ -480,7 +480,7 @@ async function deleteTodoItem() {
 # Handle the redirect
 
 - Another hook: `useHistory`
-- This allows you to manipulate the history/browser location
+- This allows us to manipulate the history/browser location
 
 ```js
 const history = useHistory()
@@ -509,8 +509,8 @@ Instead of
 
 we can use
 
-```html
-<link to="" />
+```jsx
+<Link to="" />
 ```
 
 We can generate those links dynamically:
@@ -532,7 +532,7 @@ return (
 
 ---
 
-# Update the TodoPage to have a link "home"
+# Update the TodoPage to have a link "home."
 
 ```jsx
 return (
