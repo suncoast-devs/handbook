@@ -263,12 +263,24 @@ input:focus {
   opacity: 1;
 }
 
+a:link,
+a:visited {
+  line-height: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.6rem;
+}
+
+
 ul {
   padding: 0;
   list-style: none;
   cursor: pointer;
 
   li {
+    display: flex;
+    justify-content: space-between;
+
     margin: 0.7em;
 
     &.completed {
