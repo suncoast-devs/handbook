@@ -116,6 +116,7 @@ Challenges we like:
 |  6  | Strongest Number                                           | https://www.codewars.com/kata/5d16af632cf48200254a6244        |                                     |
 |  6  | RPN                                                        | https://www.codewars.com/kata/52f78966747862fc9a0009ae        |                                     |
 |  6  | IP Validation                                              | https://www.codewars.com/kata/515decfd9dcfc23bb6000006        |                                     |
+|  6  | Find the Order Breaker                                     | https://www.codewars.com/kata/5fc2a4b9bb2de30012c49609        |                                     |
 |  6  | Deaf rats                                                  | https://www.codewars.com/kata/598106cb34e205e074000031        |                                     |
 |  6  | Create Phone Number                                        | https://www.codewars.com/kata/525f50e3b73515a6db000b83        |                                     |
 |  6  | Christmas Tree                                             | https://www.codewars.com/kata/52755006cc238fcae70000ed        |                                     |
