@@ -103,7 +103,7 @@ Challenges we like:
 |  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        | JS Only                             |
 |  7  | Find 0 and 1                                               | https://www.codewars.com/kata/57d237f25dc38ede6e00026b        | JS Only - More challenging than a 7 |
 |  7  | Exes and Ohs                                               | https://www.codewars.com/kata/55908aad6620c066bc00002a        |                                     |
-|  7  | Drink responbility                                         | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
+|  7  | Drink responsibility                                       | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
 |  7  | Don't give me 5                                            | https://www.codewars.com/kata/5813d19765d81c592200001a        |                                     |
 |  7  | Disemvowel Troll                                           | https://www.codewars.com/kata/52fba66badcd10859f00097e        |                                     |
 |  7  | Descending Order                                           | https://www.codewars.com/kata/5467e4d82edf8bbf40000155        |                                     |
