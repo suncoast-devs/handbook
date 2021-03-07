@@ -8,8 +8,8 @@ order: 17
 Let's use the code generator to make a new controller for managing users. We
 will keep the `POST` action to create a new user. Later on, we may add user
 management features where we need to add back in other commands like `DELETE`
-and `PUT`. We also certainly do not want to expose any `GET` actions where
-someone could list all the users!
+and `PUT`. We also do not want to expose any `GET` actions where someone could
+list all the users!
 
 ```shell
 dotnet aspnet-codegenerator controller --model User -name UsersController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers

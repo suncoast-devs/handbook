@@ -6,8 +6,9 @@ order: 33
 # Restaurant Edit
 
 The setup for a restaurant edit will be very similar to creating a new
-restaurant. In fact most of the JSX will be the same except we will first load
-the information about a restaurant into state before showing the form itself.
+restaurant. In fact, most of the JSX will be the same, except we will first load
+the information about a restaurant into the state before showing the form
+itself.
 
 We will begin by creating the basic structure of the restaurant edit in
 `EditRestaurant.jsx`
@@ -203,7 +204,8 @@ changed. For example `newRestaurant` becomes `restaurant`. We also change the
 API's use of `POST` to `PUT` so we are no longer creating a restaurant but
 _updating_ the existing one. We also change the URL to `/api/Restaurants/${id}`
 
-To fetch the editing restaurant we'll add this code at the top of the component:
+To fetch the editing restaurant, we'll add this code at the top of the
+component:
 
 ```javascript
 const params = useParams()
@@ -213,8 +215,8 @@ const id = params.id
 This will get the `id` from the route parameters. Even though we haven't written
 the `<Route>` we know it will have a `:id` in the paramters.
 
-Next we add a `useEffect` to find and load this restaurant. This implementation
-is in `Restaurant.jsx` so we can essentially copy it from there
+Next, we add a `useEffect` to find and load this restaurant. This implementation
+is in `Restaurant.jsx`, so we can essentially copy it from there
 
 ```javascript
 useEffect(() => {
@@ -229,8 +231,8 @@ const fetchRestaurant = async () => {
 }
 ```
 
-Just before the `return` of the main page, we can add a check to only show the
-form once the restaurant is fetched:
+Just before the `return` of the main page, we can add logic to show the form
+only when the restaurant is loaded:
 
 ```jsx
 // If we don't have any restaurant ID, return an empty component
@@ -241,7 +243,7 @@ if (!restaurant.id) {
 
 ## Update our routes in `App.jsx`
 
-We'll add the following route to allow a path to the `EditRestuarant` component
+We'll add the following route to allow a path to the `EditRestuarant` component.
 
 ```jsx
 <Route exact path="/restaurants/:id/edit">
@@ -251,9 +253,9 @@ We'll add the following route to allow a path to the `EditRestuarant` component
 
 ## Using the route from `Restaurant.jsx`
 
-Next we will add an `Edit` button on the `Restaurant.jsx` page to send us to the
-`/restaurants/:id/edit` URL. We only show this link if the user is logged in and
-the user id for this restaurant is the same as the logged in user.
+Next, we will add an `Edit` button on the `Restaurant.jsx` page to send us to
+the `/restaurants/:id/edit` URL. We only show this link if the user is logged in
+and the user id for this restaurant is the same as the logged-in user.
 
 ```jsx
 {
@@ -273,12 +275,12 @@ We should also make a similar change to the controller. The controller should
 ensure the user is logged in and the current user is the same as the user that
 created the restaurant itself.
 
-First add
+First, add
 `[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]` to
 the `PutRestaurant` method.
 
-Before all the other logic in the method we will add this code to find the
-restaurant in the database and check it's user id. If these do not match we'll
+Before all the other logic in the method, we will add this code to find the
+restaurant in the database and check its user id. If these do not match, we'll
 return a custom unauthorized message.
 
 ```csharp
@@ -298,7 +300,7 @@ if (!restaurantBelongsToUser)
 }
 ```
 
-With this we guarantee that the controller only allows authorized users to edit
+With this, we guarantee that the controller only allows authorized users to edit
 a restaurant.
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="7baced125a090448e61384022e53391d7cff4924" />

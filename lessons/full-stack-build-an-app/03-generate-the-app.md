@@ -14,13 +14,14 @@ templates, `sdg-react`. This app includes:
 - [React](/lessons/react-intro)
 - and [React Router](https://reactrouter.com/)
 
-It generates a full React application in the directory `ClientApp` and ensures
-it is connected to the full C# backend application found in the rest of the
-directories.
+The sdg-react template generates a full React application in the directory
+`ClientApp` and ensures connectivity to the C# backend application found in the
+rest of the directories.
 
 ## Generate the app
 
-From your command line in the **main directory** of your application.
+From your command line in the directory where you've stored your other
+assignments, execute the following command
 
 ```shell
 dotnet new sdg-react -o TacoTuesday
@@ -28,7 +29,7 @@ dotnet new sdg-react -o TacoTuesday
 
 ## `ClientApp` uses `npm`
 
-When adding third party libraries to our front end, we will be using `npm`.
+When adding third-party libraries to our front end, we will be using `npm`.
 
 You must also run those commands **from the ClientApp folder**. So before any
 `npm install` commands you must first `cd ClientApp`
@@ -43,9 +44,9 @@ dotnet watch run
 
 ## Setting the JWT Key
 
-You may be promted by a page that says: `You do not have a valid JWT_KEY.`
+You may see a page that says: `You do not have a valid JWT_KEY.`
 
-To resolve this you can run `dotnet user-secrets init` followed by the
+To resolve this, you can run `dotnet user-secrets init` followed by the
 `dotnet user-secrets set` command given on that page.
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="cd14c5c3e43c53e566bd048c83c30f4783c899c4" />

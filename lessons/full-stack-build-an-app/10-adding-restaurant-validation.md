@@ -6,8 +6,8 @@ order: 10
 # Handling validation
 
 You may also notice that our system allows us to enter blank information for
-many of the fields. We shouldn't allow the restaurant to be created without at
-least a name and address field.
+many of the fields. A name and address should be required to create a new
+restaurant.
 
 Let's add that validation and the corresponding error handling in the user
 interface.
@@ -16,8 +16,8 @@ interface.
 
 We can add an _annotation_ named
 [`Required`](https://docs.microsoft.com/en-us/ef/core/modeling/entity-properties?tabs=data-annotations%2Cfluent-api%2Cwithout-nrt#explicit-configuration)
-to both the `Name` and `Address` field in our `Restaurant.cs` to indicate that
-these attributes must be filled in.
+to both the `Name` and `Address` field in our `Restaurant.cs` to indicate these
+attributes are mandatory.
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -41,15 +41,15 @@ namespace TacoTuesday.Models
 }
 ```
 
-We will generate a new migration to capture this change. Any time we add or
-change a **field** to a database-backed model we should generate a new
+We will generate a new migration to capture this change. Any time we add,
+remove, or change a **field** in a database-backed model we must create a new
 migration.
 
 ```shell
 dotnet ef migrations add AddRestaurantRequiredFields
 ```
 
-This will create a new migration with the following as the `Up()` method:
+The new migration will have an `Up()` method:
 
 ```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
@@ -72,7 +72,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
 }
 ```
 
-When we run this migration it will enforce that these columns may not have
+When we run this migration, it will enforce that these columns may not have
 `null` and thus are required.
 
 ```shell
@@ -81,7 +81,7 @@ dotnet ef database update
 
 > NOTE: If any of your data rows **DO** have `NULL` in these columns the
 > migration run will fail. You will have to add data to those rows or remove
-> those rows before the migration will execute properly.
+> those rows before the migration executes.
 
 ## Handling errors in the user interface
 
@@ -89,10 +89,10 @@ Try adding a new restaurant without a name or address. You will notice now that
 you get a `400` response instead of a `200`. However, the UI still redirects us
 back to the main page.
 
-This is because the `fetch` usage is not looking for an error response from the
-server.
+We are redirected because the `fetch` usage is not looking for an error response
+from the server.
 
-If we look at the `JSON` that is returned when an error happens:
+Let us inspect the `JSON` returned when an error happens:
 
 ```json
 {
@@ -107,9 +107,9 @@ If we look at the `JSON` that is returned when an error happens:
 }
 ```
 
-We see there is a `status` field that contains the value `400`, an HTTP error
-code. We can use that information, along with the `errors` to give the user
-information about the error.
+We see a `status` field containing the value `400`, an HTTP error code. We can
+use that information and the `errors` to give the user information about the
+error.
 
 Let's create a state variable to hold an error text.
 
@@ -148,7 +148,7 @@ However, if you fill in the name field, only the address will display an error.
 
 ## Improving the user experience
 
-Rather than showing a sentence at the top we could store the error object and
+Rather than showing a sentence at the top, we could store the error object and
 use it to highlight each field that has an error, decorating the input field
 with a red border and adding the error text next to the field.
 

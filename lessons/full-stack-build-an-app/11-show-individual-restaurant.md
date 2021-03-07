@@ -29,7 +29,7 @@ export function App() {
 
 ## Updating the Restaurants component to use router
 
-Inside any component that is rendered due to a `<Route>` match, we can add
+Inside any component rendered due to a `<Route>` match, we can add
 `const params = useParams()` to get a variable, `params`, that will tell us the
 matching parameters in the `path=` part of the route.
 
@@ -55,13 +55,15 @@ const [restaurant, setRestaurant] = useState({
 })
 ```
 
-You'll notice here we define the initial value of the restaurant as an object
-with all the properties of a restaurant but with empty values. This is a good
-practice as we'll see how this helps us in a later part of this lesson.
+You'll notice here we define the restaurant's initial value as an object with
+all the properties of a restaurant but with empty values. Using an object with
+all the properties initialized with empty values in a state variable is good
+since the component will render **at least** once before any `useEffect` code
+updates the state.
 
 Next, we can use this state variable to represent all the data in the JSX.
 
-Once we have updated the JSX, we'll add a `useState` to fetch the data
+Once we have updated the JSX, we'll add a `useState` to fetch the data.
 
 ```javascript
 useEffect(() => {
@@ -82,11 +84,11 @@ Notice that we use the `id` in the `useEffect` dependency array since if this
 us to use async functionality.
 
 If we tried to apply `async` to the `() => {` anonymous function our Javascript
-tools would warn us that this is not advised and direct us to this style.
+tools would warn us to change our style.
 
 # Update the component to show dynamic data
 
-Locate all the hard coded information in the component and replace it with
+Locate all the hardcoded information in the component and replace it with
 dynamic data.
 
 An example of such a change is:

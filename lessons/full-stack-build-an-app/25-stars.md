@@ -10,7 +10,7 @@ average review stars for a restaurant.
 
 ## `Restaurant.jsx`
 
-Before the `return` that renders the component we will compute the average
+Before the `return` that renders the component, we will compute the average
 ranking of stars. We begin by using `reduce` to total up the number of stars.
 Then we divide by the number of reviews before creating a variable that is the
 number of stars but with only one decimal place.
@@ -36,9 +36,9 @@ Then we update the display of stars:
 ></span>
 ```
 
-However, if we visit a restaurant without any reviews we will notice that we
-don't see any stars! This is because `restaurant.reviews.length` is `0` and thus
-`averageStars` becomes `NaN`
+However, if we visit a restaurant without any reviews, we will notice that we
+don't see any stars! We don't see this because `restaurant.reviews.length` is
+`0` and thus `averageStars` becomes `NaN`
 
 We can solve this one of two ways.
 
@@ -56,8 +56,8 @@ const averageStars =
   restaurant.reviews.length === 0 ? 0 : totalStars / restaurant.reviews.length
 ```
 
-In this style we compare the length of the review array and if it is zero we set
-the `averageStars` to `0`, otherwise setting it equal to the average.
+In this style, we compare the length of the review array, and if it is zero, we
+set the `averageStars` to `0`, otherwise setting it equal to the average.
 
 We can do this same change in `Restaurants.jsx`, except our restaurant variable
 here is `props.restaurant`
@@ -78,8 +78,7 @@ const averageStarsToOneDecimalPlace = averageStars.toFixed(1)
 
 # Extracting a component for reuse
 
-Noting that this code is now duplicated we can consider _extracting a component_
-for the stars!
+We can now consider _extracting a component_ for the stars!
 
 The first thing we'll do is create the component in the `Restaurants.jsx` code.
 
@@ -129,12 +128,12 @@ function SingleRestaurantFromList(props) {
 }
 ```
 
-We can then use Visual Studio Code's refactor to move the `Stars` to it's own
-file. This will create the file in the `pages` folder. Since this component
-doesn't represent a page we should move it to the `components` folder meant for
+We can then use Visual Studio Code's refactor to move the `Stars` to its own
+file. The file will be in the `pages` folder. Since this component doesn't
+represent a page, we should move it to the `components` folder meant for
 reusable components.
 
-Now we can do a similar refactoring in the `Restaurant.jsx` file. First remove
+Now we can do a similar refactoring in the `Restaurant.jsx` file. First, remove
 the computation variables and then replace the `<span>` used for showing the
 stars, importing the `stars` component.
 

@@ -5,7 +5,7 @@ order: 21
 
 # Adding Login to the User Interface
 
-Turning to the `SignIn.jsx` component we will make similar changes to the work
+Turning to the `SignIn.jsx` component, we will make similar changes to the work
 we did to `SignUp.jsx`
 
 The first step is to add state to store the user and an error message:
@@ -80,39 +80,37 @@ window.location.assign('/')
 Notice we use `window.location` to redirect the user instead of `history.push`.
 This is so the browser forces a reload and detects that the user is logged in.
 The information about the logged in user is captured by the recordAuthentication
-method we are about to introduce.
+function we are about to introduce.
 
-The `recordAuthentication` method is one we are going to provide along with many
-other useful authentication methods in a `auth.js` file. The purpose of
-`recordAuthentication` is to store the api response from the login in _local
-storage_ so we can access it later.
+The `recordAuthentication` method and many other useful authentication methods
+exist in the file `auth.js`. The purpose of `recordAuthentication` is to store
+the api response from the login in _local storage_ so we can access it later.
 
 ## Local Storage
 
-Local Storage is a key/value pair storage mechanism that can, for any string
-key, store a string of data. This data is persistant across sessions and browser
-restarts. The storage is _per site_ so each domain has its own set of key/value
-pairs.
+Local storage is a key/value pair mechanism that can, for any string key, store
+a string of data. This data is persistent across sessions and browser restarts.
+The storage is _per site_, so each domain has its own set of key/value pairs.
 
-This makes for a convenient place to store the authentication data. However, we
-should note that this local storage is available to any javascript that runs on
-the page that **originates** from that domain. This should protect the data from
-JavaScript running in an injected ad, but if some malicious software is able to
-inject JavaScript into the page itself, it will be able to read these values. So
-while local storage is convenient, it may not be the most secure way to store
-the authentication information.
+Local storage makes for a convenient place to store the authentication data.
+However, we should note that this local storage is available to any javascript
+that runs on the page that **originates** from that domain. This security should
+protect the data from JavaScript running in an injected ad, but if some
+malicious software can inject JavaScript into the page itself, it will be able
+to read these values. While local storage is convenient, it may not be the most
+secure way to store the authentication information.
 
 An alternative is to send the authentication data as a `cookie` value. However,
-this too has security implications and concernts.
+cookies have security implications and concerns.
 [This article](https://stormpath.com/blog/where-to-store-your-jwts-cookies-vs-html5-web-storage)
-gives a good overview of the differences. For now we will proceed with local
+gives a good overview of the differences. For now, we will proceed with local
 storage.
 
 ## Redirecting after login
 
-Since we want the user to redirect to the main page we also want it to reload
-any authentication data. For this reason we will use `window.location` to force
-a page reload rather than `history.push` which would do a local, non-reload,
+Since we want the user to redirect to the main page, we also want it to reload
+any authentication data. For this reason, we will use `window.location` to force
+a page reload rather than `history.push`, which would do a local, non-reload
 navigation.
 
 ## `auth.js`
@@ -122,7 +120,7 @@ The contents of `auth.js` give some useful client-side methods to:
 - Determine if the user is logged in
 - Fetch the user's ID
 - Fetch the user details
-- Get the details needed for an authentication header for `fetch`
+- Get the elements needed for an authentication header for `fetch`
 - Store the authentication info `recordAuthentication`
 - Logout
 

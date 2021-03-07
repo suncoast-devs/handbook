@@ -5,15 +5,15 @@ order: 26
 
 # Adding Restaurants to a Map
 
-Another nice feature would be to show the list of restaurants on a map. In order
-to map these restaurants we need to know exactly where the restaurants are. The
+Another nice feature would be to show the list of restaurants on a map. To map
+these restaurants, we need to know precisely where the restaurants are. The
 process of turning an address into a position, as well as turning a position
 into an address, is known as
 [`Geocoding`](https://en.wikipedia.org/wiki/Geocoding)
 
-When _geocoding_ an address we are often turning the text of the address, it's
-street number and name along with the city, state, and zip/postal code, into a
-pair of numbers. These decimal numbers,
+When _geocoding_ an address, we are often turning the address's text, its street
+number, and name, along with the city, state, and zip/postal code, into a pair
+of numbers. These decimal numbers,
 [`latitutde` and `longitude`](https://www.timeanddate.com/geography/longitude-latitude.html)
 describe a single position on the surface of the planet.
 
@@ -40,8 +40,8 @@ dotnet ef database update
 
 ## Adding a package to help us geocode
 
-In order to turn the restaurants address into a latitude and longitude we will
-use a third party library.
+To turn the restaurant's address into a latitude and longitude, we will use a
+third-party library.
 
 ```shell
 dotnet add package Geocoding.Core
@@ -54,7 +54,7 @@ dotnet add package Geocoding.Microsoft
 The `Geocoding` package comes with support for other services other than
 Microsoft, but this is the one we will use in this lesson. Each of the geocoding
 systems requires an account and an API key. Microsoft's signup process is one of
-the easiest and we'll choose that to proceed. To sign up for a key, follow
+the easiest, and we'll choose that to proceed. To sign up for a key, follow
 [these procedures](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key)
 
 Similar to our `JWT_KEY` we will have to add a secret for this API. We'll call
@@ -73,12 +73,12 @@ you generated at Microsoft.
 > `heroku config:set BING_MAPS_KEY="xxxx"` with your specific key in place of
 > `xxxx` at least once before you deploy.
 
-To accsss the key from the controller:
+To access the key from the controller:
 
 ```csharp
 private readonly string BING_MAPS_KEY;
 
-// Constructor that recives a reference to your database context
+// Constructor that receives a reference to your database context
 // and stores it in _context for you to use in your API methods
 public RestaurantsController(DatabaseContext context, IConfiguration config)
 {
@@ -109,8 +109,8 @@ if (bestGeocodedAddress != null)
 ```
 
 Let's add some restaurants to our database and see what results we get for
-geocoded addresses. Enter some restaurants with addresses you know and then
-check, using `pgcli` that there are values for `latitude` and `longitude`
+geocoded addresses. Enter some restaurants along with addresses you know and
+then check, using `pgcli` that there are values for `latitude` and `longitude`
 
 Let's also update our `seeds.sql` to add geocoded locations for our example
 restaurants

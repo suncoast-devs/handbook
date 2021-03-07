@@ -7,14 +7,14 @@ order: 5
 
 Given our ERD and the initial design of some pages, we can create the backend
 database tables of the entities that support those pages. By starting with one
-or two pages we can focus on just a few of the database models we need from our
+or two pages, we can focus on just a few of the database models we need from our
 ERD without having to create them all at once.
 
 ## Use the `EF Core` tools
 
 First, create a new `C# class` in the `Models` directory.
 
-Right click on the `Models` folder and select `Create new C# class`. Enter
+Right-click on the `Models` folder and select `Create new C# class`. Enter
 `Restaurant.cs` as the name of your class.
 
 ### Generate a model
@@ -37,7 +37,7 @@ namespace TacoTuesday.Models
 
 ### Let EF Core know about it
 
-Once we have defined the model itself we must update the `DatabaseContext` file
+Once we have defined the model itself, we must update the `DatabaseContext` file
 to let `EF Core` know we wish to track a `DbSet` of these `Restaurant` models.
 
 Add this line to `DatabaseContext.cs`
@@ -57,10 +57,10 @@ correctly.
 dotnet build
 ```
 
-if indicates errors then you must resolve those before moving on.
+If the results include errors, then you must resolve those before moving on.
 
-If `dotnet build` runs without any issues then we can run the command to
-generate a migration.
+If `dotnet build` runs cleanly, we can proceed to the command to generate a
+migration.
 
 ```shell
 dotnet ef migrations add CreateRestaurant
@@ -73,27 +73,26 @@ our `Migrations` folder.
 developer error is to _not_ check this file and ensure that `.net` generated the
 code needed to create or update our database schema.
 
-There should be **two** methods in this file `Up`, and `Down` and they should
+There should be **two** methods in this file `Up`, and `Down`, and they should
 have `C#` statements within that refer to the model and columns we would expect
 to see given the definition in `Restaurant.cs` above.
 
 ### Update the database
 
-Now we can _execute_ the migration so that the changes are made in our local
+Now we can _execute_ the migration so that the changes are executed in our local
 developer database.
 
 ```shell
 dotnet ef database update
 ```
 
-You should see a message indicating that the changes were applied to the
-database.
+You should see a message indicating changes applied to the database.
 
 ### Insert some data
 
 Use `pgcli` or any other database tool to insert some sample data.
 
-One way to accomplish this is to create a seeding sql script.
+One way to accomplish this is to create a seeding SQL script.
 
 Create a file `exampledata.sql` and, using the following as an example, create
 your sample data.

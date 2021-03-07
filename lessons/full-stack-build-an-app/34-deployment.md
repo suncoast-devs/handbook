@@ -5,7 +5,7 @@ order: 34
 
 # Deployment
 
-It is now time to deploy our application. For our application we are going to
+It is now time to deploy our application. For our application, we are going to
 deploy to a service named `Heroku`. Heroku is a
 [Platform as a Service](https://en.wikipedia.org/wiki/Platform_as_a_service)
 company that provides hosting for a large range of application types.
@@ -28,7 +28,7 @@ determine that new code is ready for deployment to "production."
 You should have a heroku account setup from the installation instructions. If
 not, create a heroku account now.
 
-In your project you will have a `STUDENT.md` file which includes instructions on
+In your project, you will have a `STUDENT.md` file that includes instructions on
 deployment. We'll repeat these steps here.
 
 ## Deploying
@@ -56,7 +56,7 @@ If you are using JWT tokens, you need to do the following:
 
 - `heroku config:set JWT_KEY="MY RANDOM STRING OF LETTERS AND NUMBERS TO USE FOR A KEY"`
 
-If you are using a third party API you can set any configuration as such:
+If you are using a third-party API you can set any configuration as such:
 
 - `heroku config:set THIRD_PARTY_KEY_NAME="THIRD PARTY KEY VALUE"`
 
@@ -75,10 +75,10 @@ heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
 ## `git push heroku master`
 
 This command will push your code **JUST** to Heroku for hosting. This means when
-you make a change you should push to github as normal (e.g. `git push master`)
-and also to heroku (e.g. `git push heroku master`).
+you make a change, you should push to GitHub as normal (e.g. `git push master`)
+and also to Heroku (e.g. `git push heroku master`).
 
-You will notice that after the typical messages you get from a `git push` your
+You will notice that after the typical messages you get from a `git push`, your
 terminal will show more messages from Heroku. A typical `git push heroku master`
 will look something like the following. (NOTE: The specific numbers for your
 application will be different than shown here)
@@ -127,7 +127,7 @@ To https://git.heroku.com/taco-tuesday-sdg.git
 
 ## To Copy Your Local Database to Heroku
 
-Heroku maintains it's own copy of a database for your hosted application. That
+Heroku maintains its own copy of a database for your hosted application. That
 means that all of the local data you have _won't_ be live on your site. You can
 take all the data in your local database and upload that to your Heroku copy of
 the database. See the instructions in the
@@ -138,7 +138,7 @@ how to `Push a copy of your local database to Heroku`
 
 - `git push heroku master`
 
-> NOTE: If your main branch of code is not `master` you'll have to run the
+> NOTE: If your main branch of code is not `master`, you'll have to run the
 > command this way: `git push NAME:master` where `NAME` is the name of your
 > branch
 
@@ -164,7 +164,7 @@ You may only want to set this up if you are pushing code to Github infrequently.
 
 ## Viewing Logs When Something Breaks
 
-Unlike your local environment you won't be able to see any errors in your
+Unlike your local environment, you won't be able to see any errors in your
 application. Heroku gives you a way to view the `logs` (or output) from your
 application.
 
@@ -178,6 +178,6 @@ heroku logs
 heroku logs --tail
 ```
 
-The version with `--tail` will continue showing you the output of your code
-until you press `Control-C`. This is useful when you have an error that happens
-when you load a page in your application.
+The version with `--tail` will show you the output of your code until you press
+`Control-C`. Logs with tailing are useful when you have an error when you load a
+page in your application.

@@ -7,8 +7,8 @@ order: 6
 
 Now that we have migrations, a database, and some sample data, let's create a
 controller to generate endpoints for: `Create`, `Read`, `Update`, and `Delete`
-restaurants. This will give us the `C R U D` style interface we will use from
-our front end.
+restaurants. This controller will give us the `C R U D` style interface we will
+use from our front end.
 
 ## Using an automation tool to create the initial controller
 
@@ -29,7 +29,7 @@ views), that the model used with this controller is `Restaurant`, our database
 context class is named `DatabaseContext` and our controller folder is
 `Controllers`
 
-If we were generating a controller for a different model we would change the
+If we were generating a controller for a different model, we would change the
 `--name` and the `--model` arguments. All the others would remain the same.
 
 When done we will have a `RestaurantsController.cs` file with a controller that

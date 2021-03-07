@@ -5,23 +5,23 @@ order: 19
 
 ## Avoid duplicate email addresses
 
-To make the email unique we can add a _unique index_ on the field. Indexes are a
-database optimization technique that allows the database to have fast access to
-looking up information based on a specific column. We automatically get an index
-on our `Id` column to make those lookups fast. Most of the databases we've
-worked with so far haven't been so large that indexes have been needed to make
-them fast. However, we are going to use them here.
+To make the email unique, we can add a _unique index_ on the field. Indexes are
+a database optimization technique that allows the database to have fast access
+to looking up information based on a specific column. We automatically get an
+index on our `Id` column to make those lookups fast. Most of the databases we've
+worked with so far haven't been so extensive that indexes aren't needed to make
+them fast. However, we are going to use them here to enforce uniqueness.
 
-When creating an index we specify the columns involved. This makes lookups for
-values in those columns fast. Of course creating an index takes up more space in
-our database and it also makes **inserting** data slower since it needs to
-insert data into our table and additionally update the index information as
-well.
+When creating an index, we specify the columns involved. Selecting the columns
+makes lookups for values in those columns fast. Of course, creating an index
+takes up more space in our database. It also makes **inserting** data slower
+since it needs to insert data into our table and update the index information.
 
 One of the aspects we can make of an index is to specify that for the column, or
-columns, involved that the values be **unique**.
+columns involved that the values be **unique**.
 
-To create our unique index we will add some code to our `DatabaseContext` model.
+To create our unique index, we will add some code to our `DatabaseContext`
+model.
 
 ```csharp
 protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -42,9 +42,9 @@ Then run the migration:
 dotnet ef database update
 ```
 
-If we attempt to create a user with a duplicate email address we will get an
-_exception_ in our controller. To handle that we will _catch_ the exception and
-instead of terminating the request we will send back a custom error message:
+If we attempt to create a user with a duplicate email address, we will get an
+_exception_ in our controller. To handle that, we will _catch_ the exception and
+instead of terminating the request, we will send back a custom error message:
 
 ```csharp
 [HttpPost]
@@ -76,8 +76,8 @@ public async Task<ActionResult<User>> PostUser(User user)
 }
 ```
 
-Since we are generating the same style error that validation errors do we will
-get a nice error in the UI when someone attempts to use an email address that
-exists.
+Since we are generating the error in the same format as validation errors, we
+will get a nice error in the UI when someone attempts to use an email address
+that exists.
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="8a582f0eded0dff52c722cb2f30493da0ebfbcdb"/>

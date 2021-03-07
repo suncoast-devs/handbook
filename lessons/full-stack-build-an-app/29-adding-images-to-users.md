@@ -5,7 +5,7 @@ order: 29
 
 # Adding Images To Users
 
-When adding a user account we can allow the upload of an avatar/profile image.
+When adding a user account, we can allow the upload of an avatar/profile image.
 
 ## Remove the "Must be logged in" restriction in the UploadsController
 
@@ -13,9 +13,9 @@ Remove the line
 `[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]`
 from the `UploadsController`.
 
-Of course this means that anyone who wishes to can upload content and store it
-on our Cloudinary. For now this is ok, but a more secure option should be
-determined before deploying this to the public.
+Of course, this means anyone who wishes to upload content and store it on our
+Cloudinary. For now, this is ok. However, before deploying this to the public,
+we should increase the security of this code.
 
 ## Adding the photo URL to the User model
 

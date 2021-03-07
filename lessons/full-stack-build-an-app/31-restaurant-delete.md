@@ -5,8 +5,8 @@ order: 31
 
 # Restaurant Delete
 
-When a restaurant is viewed by the user that created it we will add a Delete
-button that will remove the restaurant.
+When a user views a restaurant they created, we can add a delete button to
+remove the restaurant.
 
 ## Update the `Restaurant.jsx`
 
@@ -36,8 +36,7 @@ async function handleDelete(event) {
 }
 ```
 
-and finally a button that is conditionally rendered only if the current user id
-matches:
+and finally, a button that is rendered only if the current user-id matches:
 
 ```jsx
 {
@@ -54,7 +53,7 @@ We'll add
 the `HttpDelete` method to ensure authentication.
 
 And since we can't 100% trust that hiding the delete button on the client is
-enough to prevent unauthorized users, we'll add a check on the server side.
+enough to prevent unauthorized users, we'll add a check on the server-side.
 
 ```csharp
 if (restaurant.UserId != GetCurrentUserId())

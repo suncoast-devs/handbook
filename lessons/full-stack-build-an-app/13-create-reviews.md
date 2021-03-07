@@ -6,9 +6,9 @@ order: 13
 # Create a review
 
 The page that shows an individual restaurant has a form to create a new review.
-In this step we will use a state variable to track the values in the form and
-then POST them to the API. These steps are like those for the form to create a
-new restaurant.
+In this step, we will use a state variable to track the form's values and then
+POST them to the API. These steps are like those for the form to create a new
+restaurant.
 
 ## Create a controller
 
@@ -19,10 +19,10 @@ generator again to make this controller.
 dotnet aspnet-codegenerator controller --model Review -name ReviewsController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
 ```
 
-This will create _Controllers/ReviewsController.cs_ with code to create, read,
-update, and delete reviews.
+The command will create _Controllers/ReviewsController.cs_ with code to create,
+read, update, and delete reviews.
 
-Looking at this controller and our user interface we see that we do not need to
+Looking at this controller and our user interface, we see that we do not need to
 get a listing of all reviews, nor do we need to access a single review, nor do
 we need to update or delete reviews. Thus we should only keep the one endpoint,
 the `POST /api/Reviews` to create a new review. Remove all the methods other
@@ -40,8 +40,9 @@ const [newReview, setNewReview] = useState({
 })
 ```
 
-Notice that we include, by default, the related restaurant id. This will be
-required by the API to associate the review to the correct restaurant.
+Notice that we include, by default, the related restaurant id. Including the
+restaurant's id will be required by the API to associate the review to the
+correct restaurant.
 
 We will also have to change `const id = params.id` to
 `const id = Number(params.id)` to ensure that the `id` value is an integer since
@@ -147,9 +148,9 @@ and
 <form onSubmit={handleNewReviewSubmit}>
 ```
 
-If you use the app at this point you can put in a new review and submit it.
-Doing so will submit the review but you'll have to manually refresh the page to
-see the change.
+If you use the app at this point, you can put in a new review and submit it.
+Doing so will submit the review, but you'll have to refresh the page to see the
+change.
 
 Then we will move `fetchRestaurant` from outside of the `useEffect` method so
 both the `useEffect` and `handleNewReviewSubmit` can access it.

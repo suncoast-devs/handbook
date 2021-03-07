@@ -3,7 +3,7 @@ title: Adding Sign Up
 order: 18
 ---
 
-# Adding the Sign Up feature
+# Adding the Sign-Up feature
 
 Now we will update our static `SignUp.jsx` to become dynamic and add the
 capability of submitting a user for sign up. The first step is to add state to
@@ -78,12 +78,12 @@ We will also add a route in `App.jsx`
 </Route>
 ```
 
-And we will also add a button to our main navigation
+And we will also add a button to our main navigation.
 
 ```jsx
 <Link to="/signup">Sign Up</Link>
 ```
 
-And with this we have the ability for users to sign up to our app!
+And with this, we have the ability for users to sign up for our app!
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="e921d402b70701208882254964a9b14b3f5433cb"/>

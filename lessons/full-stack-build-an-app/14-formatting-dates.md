@@ -5,15 +5,15 @@ order: 14
 
 # Formatting dates
 
-You may have noticed that the dates displayed for a review are not user
-friendly. We are getting values such as `2020-07-06T22:34:42.721481`. Let's look
-at a way we can format these dates.
+You may have noticed that the dates displayed for a review are not
+user-friendly. We are getting values such as `2020-07-06T22:34:42.721481`. Let
+us look at an approach to format these dates.
 
 There are two popular libraries for formatting dates:
 [date-fns](https://date-fns.org/) and [moment](https://momentjs.com/). In this
-application, we'll use `date-fns` to format dates.
+application, we will use `date-fns` to format dates.
 
-In order to add the javascript library we need to:
+To add the javascript library, use the following steps:
 
 - Stop `dotnet watch run`
 - `cd ClientApp`
@@ -24,14 +24,14 @@ In order to add the javascript library we need to:
 The [format](https://date-fns.org/v2.14.0/docs/format) function from `date-fns`
 has useful configuration options.
 
-First we will import the format function:
+First, import the format function:
 
 ```javascript
 import format from 'date-fns/format'
 ```
 
-We would like a format such as: "Monday, July 6th, 2020 at 10:50 PM". To
-generate this we need to review the
+We want a format such as: "Monday, July 6th, 2020 at 10:50 PM". To generate
+this, we need to review the
 [documentation for all the tokens to apply in the format](https://date-fns.org/docs/format).
 
 - `EEEE` day of the week
@@ -55,7 +55,7 @@ pass that and the format string to the `format` function from `date-fns`
 <time>{format(new Date(review.createdAt), dateFormat)}</time>
 ```
 
-Another nice option might to use a relative time (e.g. `20 days ago`) if the
+Another excellent option might use a relative time (e.g. `20 days ago`) if the
 review is recent (perhaps in the last month) and the long descriptive time if it
 is older than that.
 

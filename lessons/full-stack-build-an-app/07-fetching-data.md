@@ -41,7 +41,7 @@ function Restaurants() {
 
 > NOTE: we initialize this to an empty array since the list of restaurants from
 > the API will be an array of restaurant objects. We want our default state to
-> represent "no data" so an empty array is a correct choice.
+> represent "no data," so an empty array is a correct choice.
 
 Next, we will change our static list of a few sample restaurants to use
 `restaurants.map(restaurant =>` to generate the list dynamically
@@ -59,14 +59,14 @@ function RestaurantList() {
 }
 ```
 
-This should render an _empty_ list of restaurants at first.
+The code should render an _empty_ list of restaurants at first.
 
 ## Fetching data
 
 Now we will use the `fetch` method to load the list of restaurants from our API.
 We will do this via the `useEffect` method. We will create a `useEffect` with an
-empty dependency array so that the method is called only once when the component
-is first added to the page.
+empty dependency array so that the function executes only once when the
+component is first added to the page.
 
 ```javascript
 function RestaurantList() {
@@ -92,7 +92,7 @@ function RestaurantList() {
 }
 ```
 
-If we have done this successfully we have a dynamically generated list of
+If we have done this successfully, we have a dynamically generated list of
 restaurants on our home page.
 
 ## Files Updated

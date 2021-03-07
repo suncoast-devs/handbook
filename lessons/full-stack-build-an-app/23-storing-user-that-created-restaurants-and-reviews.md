@@ -15,7 +15,7 @@ Add the following to both `Restaurant` and `Review`
 public int UserId { get; set; }
 ```
 
-Once added we can run a single migration that will update both of these tables.
+Once added, we can run a single migration that will update both of these tables.
 
 ```shell
 dotnet ef migrations add AddUserIdToRestaurantAndReview
@@ -32,10 +32,10 @@ dotnet ef database update
 We _could_ have the client send their `Id` along with the request to create a
 restaurant and review. However, the current user id is not data we want to trust
 to the API. Since anyone could change that value when sending a request we want
-the **server** to be in control of associating that data. Thus we want to
-provide the two controllers with a way to determine the id of the current user.
+the **server** to control associating that data. Thus, we want to provide the
+two controllers with a way to determine the current user's id.
 
-We can a helper method to our controller just after the last method of the
+We can add a helper to our controller just after the last method of the
 controller in `RestaurantsController.cs`
 
 ```csharp
@@ -74,7 +74,7 @@ collection of headers.
 headers: { 'content-type': 'application/json', ...authHeader() },
 ```
 
-And update our logic to handle `401` not authorized
+And update our logic to handle `401` not authorized.
 
 ```javascript
 async function handleFormSubmit(event) {

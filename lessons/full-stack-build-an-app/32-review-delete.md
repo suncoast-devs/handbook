@@ -5,8 +5,8 @@ order: 32
 
 # Review Delete
 
-To delete a review we will first add a button to each review for the reviews
-with a user id equal to the current user id.
+To delete a review, we will first add a button to each review where the user id
+equals the current user id.
 
 ```jsx
 {
@@ -23,9 +23,9 @@ with a user id equal to the current user id.
 }
 ```
 
-Next we will add a method for `handleDeleteReview`. In the onClick we send both
-the event (to prevent any default behavior) and the currently displayed review
-id.
+Next, we will add a method for `handleDeleteReview`. In the onClick, we send
+both the event (to prevent any default behavior) and the currently displayed
+review id.
 
 ```jsx
 async function handleDeleteReview(event, reviewId) {

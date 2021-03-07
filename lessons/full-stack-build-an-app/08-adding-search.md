@@ -6,14 +6,14 @@ order: 8
 # Adding a search feature to our API
 
 Let's consider adding a `search` feature to our API to satisfy the
-`search / filter` in our UI.
+`search/filter` in our UI.
 
 We could add another endpoint such as `GET /api/Restaurants/search`, but we
 already have an endpoint that represents what we want: _the list of
-restaurants_, we just want a **variant** of that list.
+restaurants_, we want a **variant** of that list.
 
 In this case, we can use the `query parameter` feature of HTTP to our advantage,
-and it is specifically what this feature is meant for.
+and it is precisely what this feature supports.
 
 We will update the definition of the `GetRestaurants` method as such:
 
@@ -26,9 +26,9 @@ The `string filter` will be populated with the **value** of a query parameter
 named `filter` if present, otherwise the variable `filter` will be `null`.
 
 We can use this to our advantage in the implementation. If the `filter` variable
-is `null` we simply return the list of all restaurants from the context.
-Otherwise, we add a `Where` method to only include the `restaurant` where the
-`Name` property contains the phrase in the `filter` variable.
+is `null,` we return all restaurants. Otherwise, we add a `Where` method to only
+include the `restaurant` where the `Name` property contains the phrase in the
+`filter` variable.
 
 ```csharp
 if (filter == null)

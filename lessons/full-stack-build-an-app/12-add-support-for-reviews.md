@@ -5,7 +5,7 @@ order: 12
 
 # Add support for reviews
 
-We can now add the support for restaurant reviews.
+We can now add support for restaurant reviews.
 
 ## Database model
 
@@ -59,8 +59,8 @@ by adding a `List` based property to the `Restaurant`
 public List<Review> Reviews { get; set; }
 ```
 
-This will allow us to _navigate_ in code from a single restaurant to the list of
-associated reviews.
+The `Reviews` property will allow us to _navigate_ in code from a single
+restaurant to the list of associated reviews.
 
 ## Restaurant API should return their associated reviews
 
@@ -89,11 +89,12 @@ so that now each restaurant will also include an **array** of reviews.
 > because popular and started to receive heavy traffic. To display our homepage
 > we would be fetching all the restaurants _AND_ the complete list of reviews to
 > count them. We'll review more efficient approaches in a later step. For now
-> we'll go with this approach. Remember: working code before perfect code.
+> we'll go with this approach. Remember to focus on working code before perfect
+> code.
 
 ## Update the `exampledata.sql` to generate reviews
 
-Add the following sql to our seeds and rerun them to populate the database with
+Add the following SQL to our seeds and rerun them to populate the database with
 a few reviews.
 
 ```sql
@@ -117,7 +118,7 @@ psql --file=Models/exampledata.sql TacoTuesdayDatabase
 
 We can now use that to count these in the user interface in `Restaurants.jsx`
 
-Change the hard coded:
+Change the hardcoded:
 
 ```
 2,188
@@ -140,7 +141,7 @@ the `reviews` property of the restaurant object to render each individual
 review. This is why having an "empty" representation of the restaurant in the
 state is useful.
 
-Change the hard coded:
+Change the hardcoded:
 
 ```
 2,188
@@ -150,7 +151,7 @@ Change the hard coded:
 ({restaurant.reviews.length})
 ```
 
-Updating the JSX for showing the list of reviews we use `map` to loop over the
+Updating the JSX for showing the list of reviews, we use `map` to loop over the
 `restaurant.reviews` (again, why that default state of `reviews: []` is so
 important). We also only generate this part of the JSX if there are more than
 zero reviews.

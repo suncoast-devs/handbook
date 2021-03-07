@@ -29,13 +29,12 @@ is **not logged in**
 
 Here we test if the user is logged in, and if they are **not** then we show the
 `<Link>`. This works since `isLoggedIn()` returns either `true` or `false` -- If
-the value is `false` then JavaScript will interpret, and return the second part
-of the boolean logic, which is the `<Link>` -- If the value is `true` then
-JavaScript just renders that, and React renders a value of `true` as nothing.
-The second part of the logic doesn't need to be considered. This effectively
+the value is `false`, JavaScript will interpret and return the second part of
+the boolean logic, which is the `<Link>` -- If the value is `true` JavaScript
+renders that. React renders a value of `true` as nothing. This code effectively
 only shows the links if the user is **not** logged in.
 
-Next we can add a `Sign out` button after the form:
+We can add a `Sign out` button after the form:
 
 ```jsx
 {
@@ -47,7 +46,7 @@ Next we can add a `Sign out` button after the form:
 }
 ```
 
-This only shows the logout button if the user **is logged in**.
+This code only shows the logout button if the user **is logged in**.
 
 We will also add a method to handle the logout:
 
@@ -62,13 +61,13 @@ function handleLogout() {
 Now let's only show the avatar, welcome message, and create new restaurant if
 the user is logged in.
 
-To determine the user we'll add a call to `getUser` from `auth.js`
+To determine the user, we'll add a call to `getUser` from `auth.js`
 
 ```javascript
 const user = getUser()
 ```
 
-and then we can use that in place of the user's name hard coded name:
+and then we can use that in place of the user's name hardcoded name:
 
 ```jsx
 {
@@ -103,9 +102,9 @@ And to update the add new restaurant button:
 
 # Hide the "New Review" form unless logged in
 
-We will wrap the `<h3>` and the `<form>` in a fragment tag so that we can place
-them in a group. We then prefix that with the `isLoggedIn() &&` that will show
-that JSX for logged in users.
+We will wrap the `<h3>` and the `<form>` in a fragment tag to place them in a
+group. We then prefix that with the `isLoggedIn() &&` that will show that JSX
+for logged-in users.
 
 ```jsx
 {

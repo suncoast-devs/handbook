@@ -5,19 +5,19 @@ order: 30
 
 # User Profile Edit
 
-Lets add a page and feature to allow the user to update their profile.
+Let us add a page and feature to allow the user to update their profile.
 
 The first thing we will do is to create the component for editing a user. This
-will look a lot like the `SignUp.jsx` component
+will look a lot like the `SignUp.jsx` component.
 
 Here are some notable differences:
 
 1. We add the `id` and the `photoURL` to the initial `useState`
 1. We use `PUT` and a URL that includes the user's id
-1. When we get a positive API response we call a method in `auth.js` named
+1. When we get a positive API response, we call a method in `auth.js` named
    `updateUserAuth` that updates the local storage.
-1. When we get a positive API response we use `window.location` to force a full
-   page refresh so we fetch fresh auth information to display (name and avatar)
+1. When we get a positive API response, we use `window.location` to force a full
+   page refresh, so we fetch fresh auth information to display (name and avatar)
 
 ## `EditUser.jsx`
 
@@ -194,7 +194,7 @@ export function EditUser() {
 
 ## App.jsx changes
 
-We'll add a profile link in the navigation
+We'll add a profile link in the navigation.
 
 ```jsx
 {
@@ -213,7 +213,7 @@ and a route
 ## UsersController changes
 
 We add back in a `Put` method. The first difference in this version of a `PUT`
-is that we make sure to make this an authorized endpoint. Next we ensure the
+is that we make sure to make this an authorized endpoint. Next, we ensure the
 user id is equal to the current user's id. This prevents someone from editing a
 profile that is not theirs.
 
@@ -298,7 +298,7 @@ password. This is a security risk if someone leaves their computer alone. Anyone
 who has access can change the password without confirmation. We also allow the
 email address to change without any confirmation.
 
-Both of these should have checks in place to make sure someone doesn't hijack
-our accounts.
+Both of these should have logic in place to make sure someone doesn't hijack our
+accounts.
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="d9668d7e37121a4f9cfcd5095257cc794c1b75c5" />

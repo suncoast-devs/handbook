@@ -8,12 +8,12 @@ order: 28
 It would be nice to add an image for the restaurant so we know what the place
 looks like.
 
-When storing user provided assets we can choose between hosting these assets
-ourselves or using an external service to do so. Storing them ourselves gives us
-more control over how these assets are stored. However, external services are
-often more optimized for this process, provied lower cost storage options,
-provide faster networking and more geographically distributed caching of these
-assets making for a more efficient service for our users.
+When storing user-provided assets we can choose between hosting these assets
+ourselves or using an external service. Storing them ourselves gives us more
+control. However, external services are often optimized for this process,
+provide lower-cost storage options, faster networking, and more geographically
+distributed caching of these assets making for a more efficient service for our
+users.
 
 The following are some of the popular choices for asset storage.
 
@@ -22,14 +22,14 @@ The following are some of the popular choices for asset storage.
 - Google Cloud
 - Cloudinary
 
-In this lesson we will be using Cloudinary since the integration is more
+This lesson will be using Cloudinary since the integration is more
 straightforward and does not require a paid plan to get started. If you are
-interested in replacing Cloudinary with one of the other services you may
+interested in replacing Cloudinary with one of the other services, you may
 research existing dotnet libraries for those platforms.
 
 ## Adding Cloudinary
 
-First we will sign up at Cloudinary for an API KEY. When you have your account
+First, we will sign up at Cloudinary for an API KEY. When you have your account
 created you'll need three values:
 
 - `CLOUDINARY_CLOUD_NAME`
@@ -44,7 +44,7 @@ dotnet user-secrets set "CLOUDINARY_API_KEY"    "REPLACE THIS"
 dotnet user-secrets set "CLOUDINARY_API_SECRET" "REPLACE THIS"
 ```
 
-After securing these values we will add the `Cloudinary` third party package to
+After securing these values, we will add the `Cloudinary` third-party package to
 our app:
 
 ```shell
@@ -53,7 +53,7 @@ dotnet add package CloudinaryDotNet
 
 ## Creating a controller for uploading files
 
-As we will consider uploads as a resource we will create a `UploadsController`
+As we will consider uploads as a resource, we will create a `UploadsController`
 with a single `POST` endpoint for creating uploads.
 
 ```csharp
@@ -110,7 +110,8 @@ database. It receives files from the user and uploads them to _Cloudinary_. Our
 constructor takes in the configuration and saves the _Cloudinary_ configuration
 values we will need.
 
-We have protected the endpoint to only allow authorized users to upload content.
+We have configured the endpoint only to allow authorized users to upload
+content.
 
 We also set an upload size maximum to avoid allowing large images (and to ensure
 we can upload files at _least_ that size) -- Cloudinary has a limit of about
@@ -128,11 +129,11 @@ The first thing we will do is update our endpoint to accept a file as input.
 public ActionResult Upload(IFormFile file)
 ```
 
-Next we will ensure that we limit our uploads to supported images types.
+Next, we will ensure that we limit our uploads to supported image types.
 
-To do so we'll make a class property to hold a _set_ of strings of the content
+To do so, we'll make a class property to hold a _set_ of strings of the content
 types allowed. We will use the `HashSet` collection type since it is efficient
-for fast lookups, and does not allow for duplicates (unlike a `List`)
+for fast lookups and does not allow for duplicates (unlike a `List`)
 
 ```csharp
 private readonly HashSet<string> VALID_CONTENT_TYPES = new HashSet<string> {
@@ -205,7 +206,7 @@ dotnet ef database update
 
 ## Updating the user interface to upload a photo when creating a restaurant
 
-To allow a user to upload a file to our restaurant we'll use a fancy
+To allow a user to upload a file to our restaurant, we'll use a fancy
 drag-and-drop library to create an interface for the upload.
 
 ```shell
@@ -234,8 +235,8 @@ function onDropFile(acceptedFiles) {
 }
 ```
 
-For now we will just have this log the details of the files dropped and get log
-details of the first one. We are only going to allow single file drops for now.
+For now, we will have this log the details of the files dropped and get details
+of the first one. We are only going to allow single file drops for now.
 
 Next we will get some configuration information from the dropzone library:
 
@@ -310,14 +311,14 @@ async function onDropFile(acceptedFiles) {
 
 ## Show a message during the upload process
 
-Uploading a file can be slow, so let's add some status to the process. First add
-a new state to indicate we are actively uploading a file:
+Uploading a file can be slow, so let's add some status to the process. First,
+add a new state to indicate we are actively uploading a file:
 
 ```javascript
 const [isUploading, setIsUploading] = useState(false)
 ```
 
-Then update our `onDropFile` to the the state to true when we start the upload
+Then update our `onDropFile` to set the state to true when we start the upload
 and back to false when complete.
 
 ```javascript
