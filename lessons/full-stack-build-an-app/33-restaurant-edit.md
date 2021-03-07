@@ -300,3 +300,5 @@ if (!restaurantBelongsToUser)
 
 With this we guarantee that the controller only allows authorized users to edit
 a restaurant.
+
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="7baced125a090448e61384022e53391d7cff4924" />

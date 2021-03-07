@@ -27,4 +27,4 @@ by removing the fragment tags, `<></>`
 
 We will do the same for the other components in the `pages` folder.
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="7555464618f9ea604ef5f8bdef8a4cbadba27e90" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ef38b498b4af2f96ac67426c3f2c0c7994a00553" />

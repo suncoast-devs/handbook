@@ -121,4 +121,4 @@ We will update the `SingleRestaurantFromList` to make the name a clickable
 </h2>
 ```
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="35cb2c72c331d4316804f95ed4f1cdaad203f59a" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="323c05bd5b0db947bc0b5c6c8f13b3a9bbca456d" />

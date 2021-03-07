@@ -48,4 +48,4 @@ You may be promted by a page that says: `You do not have a valid JWT_KEY.`
 To resolve this you can run `dotnet user-secrets init` followed by the
 `dotnet user-secrets set` command given on that page.
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="62ad5422797541b00f236632a141b86082dc8a84" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="cd14c5c3e43c53e566bd048c83c30f4783c899c4" />

@@ -152,4 +152,4 @@ After validating the migration looks good, run it:
 dotnet ef database update
 ```
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="f644136"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="52835acd14728f0ca26a99621e264b9dfe30fdb6"/>

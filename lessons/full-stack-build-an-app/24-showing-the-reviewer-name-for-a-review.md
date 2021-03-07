@@ -53,4 +53,4 @@ Then in the `Restaurant.jsx` we can access the `user` information.
 </div>
 ```
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="266e159fc04b56bb050599d5727dbb3d3e0b19f1" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="d79bf02d642a7b23b36817e9e7e983dbc5be6951" />

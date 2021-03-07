@@ -97,7 +97,7 @@ restaurants on our home page.
 
 ## Files Updated
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="961549d" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="961549d" />
 
 ## Refactor
 
@@ -134,5 +134,5 @@ function RestaurantList() {
 
 ## Files Updated
 
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="e737bfdbcd30bd138f118e52702192980caa316b"/>
-<GithubCommitViewer repo="gstark/TacoTuesday" commit="f4d9d3b5618705a82c9c58da6ee142b44fb22517"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="f91a8f165c67dfb0953236f15eabc748b8c7ffd2"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="111f27f779bfde4004500ee2017160104c1b5805"/>

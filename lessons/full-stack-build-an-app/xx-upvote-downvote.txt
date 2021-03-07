@@ -251,11 +251,11 @@ With this structure we:
 
 ## Files Updated
 
-- [Models/Restaurant.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Models/Restaurant.cs)
-- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs)
-- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs)
-- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/DatabaseContextModelSnapshot.cs)
-- [Controllers/RestaurantVotesController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Controllers/RestaurantVotesController.cs)
+- [Models/Restaurant.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Models/Restaurant.cs)
+- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.cs)
+- [Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/20200706021021_AddUpAndDownVoteCountsToRestaurants.Designer.cs)
+- [Migrations/DatabaseContextModelSnapshot.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Migrations/DatabaseContextModelSnapshot.cs)
+- [Controllers/RestaurantVotesController.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/76265c4cbb5fe4cbeb1af868fbe417224c9a9757/Controllers/RestaurantVotesController.cs)
 
 ---
 
@@ -452,5 +452,5 @@ as we should.
 
 ## Files Updated
 
-- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/gstark/TacoTuesday/066e831b0dfe119282dae8ea9a74c9001cadfdc4/ClientApp/src/pages/Restaurants.jsx)
-- [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/gstark/TacoTuesday/master/Controllers/RestaurantsController.cs)
+- [ClientApp/src/pages/Restaurants.jsx](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/066e831b0dfe119282dae8ea9a74c9001cadfdc4/ClientApp/src/pages/Restaurants.jsx)
+- [Controllers/RestaurantsController.cs](https://raw.githubusercontent.com/suncoast-devs/TacoTuesday/master/Controllers/RestaurantsController.cs)
