@@ -87,6 +87,7 @@ Challenges we like:
 |  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
 |  7  | Shortest Word                                              | https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9        |                                     |
 |  7  | Say Me Please Operations                                   | https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d        |                                     |
+|  7  | Return The Missing Element                                 | https://www.codewars.com/kata/5299413901337c637e000004        |                                     |
 |  7  | Removing Elements                                          | https://www.codewars.com/kata/5769b3802ae6f8e4890009d2        | Good for JS, not good for C#        |
 |  7  | Ones and Zeros                                             | https://www.codewars.com/kata/ones-and-zeros                  |                                     |
 |  7  | Mumbling                                                   | https://www.codewars.com/kata/5667e8f4e3f572a8f2000039        |                                     |
@@ -100,9 +101,11 @@ Challenges we like:
 |  7  | Highest and Lowest                                         | https://www.codewars.com/kata/554b4ac871d6813a03000035        |                                     |
 |  7  | Get the Middle Character                                   | https://www.codewars.com/kata/56747fd5cb988479af000028        |                                     |
 |  7  | Form the hightest                                          | https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e        |                                     |
+|  7  | Find the middle element                                    | https://www.codewars.com/kata/545a4c5a61aa4c6916000755        |                                     |
 |  7  | Find Screen Size                                           | https://www.codewars.com/kata/5bbd279c8f8bbd5ee500000f        | JS Only                             |
 |  7  | Find 0 and 1                                               | https://www.codewars.com/kata/57d237f25dc38ede6e00026b        | JS Only - More challenging than a 7 |
 |  7  | Exes and Ohs                                               | https://www.codewars.com/kata/55908aad6620c066bc00002a        |                                     |
+|  7  | Encrypt this!                                              | https://www.codewars.com/kata/5848565e273af816fb000449        |                                     |
 |  7  | Drink responsibility                                       | https://www.codewars.com/kata/5aee86c5783bb432cd000018        |                                     |
 |  7  | Don't give me 5                                            | https://www.codewars.com/kata/5813d19765d81c592200001a        |                                     |
 |  7  | Disemvowel Troll                                           | https://www.codewars.com/kata/52fba66badcd10859f00097e        |                                     |
