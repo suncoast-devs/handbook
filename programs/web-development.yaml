@@ -77,6 +77,39 @@ modules:
     title: Full-stack Application Development
     lessons:
       - full-stack-build-an-app
+      - full-stack-build-an-app-getting-started
+      - full-stack-build-an-app-generate-the-app
+      - full-stack-build-an-app-create-static-html-and-css
+      - full-stack-build-an-app-create-first-migrations
+      - full-stack-build-an-app-create-first-controllers
+      - full-stack-build-an-app-fetching-data
+      - full-stack-build-an-app-adding-search
+      - full-stack-build-an-app-creating-restaurants
+      - full-stack-build-an-app-adding-restaurant-validation
+      - full-stack-build-an-app-show-individual-restaurant
+      - full-stack-build-an-app-add-support-for-reviews
+      - full-stack-build-an-app-create-reviews
+      - full-stack-build-an-app-formatting-dates
+      - full-stack-build-an-app-creating-a-layout
+      - full-stack-build-an-app-setting-up-for-users
+      - full-stack-build-an-app-adding-create-user-controller
+      - full-stack-build-an-app-adding-signup
+      - full-stack-build-an-app-prevent-duplicate-users
+      - full-stack-build-an-app-adding-support-for-login
+      - full-stack-build-an-app-adding-login-to-user-interface
+      - full-stack-build-an-app-using-the-authentication-information
+      - full-stack-build-an-app-storing-user-that-created-restaurants-and-reviews
+      - full-stack-build-an-app-showing-the-reviewer-name-for-a-review
+      - full-stack-build-an-app-stars
+      - full-stack-build-an-app-adding-restaurants-to-a-map
+      - full-stack-build-an-app-add-maps-to-the-front-end
+      - full-stack-build-an-app-adding-images-to-restaurants
+      - full-stack-build-an-app-adding-images-to-users
+      - full-stack-build-an-app-user-profile-edit
+      - full-stack-build-an-app-restaurant-delete
+      - full-stack-build-an-app-review-delete
+      - full-stack-build-an-app-restaurant-edit
+      - full-stack-build-an-app-deployment
   - quick-reference:
     title: Quick Reference Guides
     lessons:
