@@ -110,7 +110,6 @@ modules:
       - full-stack-build-an-app-review-delete
       - full-stack-build-an-app-restaurant-edit
       - full-stack-build-an-app-deployment
-      # Something
   - quick-reference:
     title: Quick Reference Guides
     lessons:
