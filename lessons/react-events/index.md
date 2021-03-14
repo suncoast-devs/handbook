@@ -18,13 +18,13 @@ HTML:
 JS:
 
 ```javascript
-const handleButtonClick = (event) => {
-  console.log("button was clicked");
-};
+const handleButtonClick = event => {
+  console.log('button was clicked')
+}
 
 document
-  .querySelector(".my-rad-button")
-  .addEventListener("click", handleButtonClick);
+  .querySelector('.my-rad-button')
+  .addEventListener('click', handleButtonClick)
 ```
 
 React way:
@@ -58,9 +58,3 @@ React way:
   - [Larger view of above image](https://pbs.twimg.com/media/DZ-97vzW4AAbcZj.jpg:large)
   - https://cdn-images-1.medium.com/max/2000/1*sn-ftowp0_VVRbeUAFECMA.png
   - https://cdn-images-1.medium.com/max/1600/1*u8hTumGAPQMYZIvfgQMfPA.jpeg
-
-##### Today's work
-
-- Demo: Convert Score Board
-- Assignment:
-  [Color Picker](/handbook/curriculum/front-end/react-i/assignments/color-picker)

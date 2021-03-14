@@ -17,9 +17,8 @@ properties and values are allowed; each property has a specific list of valid
 values defined for it.
 
 We have listed many of our
-[favorite CSS properties](/handbook/curriculum/fundamentals/modules/html-css/lessons/intro-to-css/resources/css-properties-we-like)
-that we feel represent the most typical properties a developer should be
-familiar with.
+[favorite CSS properties](lessons/misc-quick-reference/css-properties) that we
+feel represent the most typical properties a developer should be familiar with.
 
 ## CSS declaration blocks
 

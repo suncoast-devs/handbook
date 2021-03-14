@@ -190,7 +190,3 @@ end
   give a nicer default template
 - This still needs to be customized based on the application you are creating.
 - Bootstrap does not remove the need to apply styling to your application!
-
-## Additional Ruby / Rails Resources
-
-- See the [Resources](/handbook/resources) section

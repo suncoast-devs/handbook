@@ -89,8 +89,7 @@ end
 ## Database setup
 
 - Step 1: Make sure you have these tables created. You likely have these created
-  if you have previously followed
-  [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
+  if you have previously followed [this lesson](/lessons/sql-joins/index.md)
 
 ```sql
 CREATE TABLE movies (
@@ -121,9 +120,8 @@ CREATE TABLE roles (
 );
 ```
 
-- Step 2: See
-  [this lesson](/handbook/curriculum/back-end/full-stack-i/lecture/sql/intro-to-joins)
-  for `INSERT INTO` statements to populate the database
+- Step 2: See [this lesson](/lessons/sql-joins/index.md) for `INSERT INTO`
+  statements to populate the database
 
 ## Using `bundler`
 
