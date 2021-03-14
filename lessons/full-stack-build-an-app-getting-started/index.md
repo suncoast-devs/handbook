@@ -19,7 +19,7 @@ As such, our user stories might be something like the following:
   - Address and phone number
   - A list of reviews
   - The average rating
-- As a user, I should be able to post a new taco restaurant anonymously.
+- As a user, I should be able to post a new taco restaurant.
 - As a user, I should be able to review an existing restaurant.
 - As a user, I should be able to rate a restaurant.
 

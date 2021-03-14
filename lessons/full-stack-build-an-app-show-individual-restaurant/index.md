@@ -63,7 +63,7 @@ updates the state.
 
 Next, we can use this state variable to represent all the data in the JSX.
 
-Once we have updated the JSX, we'll add a `useState` to fetch the data.
+Once we have updated the JSX, we'll add a `useEffect` to fetch the data.
 
 ```javascript
 useEffect(() => {
