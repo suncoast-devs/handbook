@@ -99,7 +99,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using TacoTuesday.Models;
-using TacoTuesday.Utils;;
+using TacoTuesday.Utils;
 
 namespace TacoTuesday.Controllers
 {
