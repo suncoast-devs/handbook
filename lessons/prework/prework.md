@@ -9,9 +9,34 @@ marathon. You don't show up the day of the race and start; you need to train
 beforehand. In our program, your brain is the muscle that needs to train. This
 pre-work is training for your brain.
 
-## Start Here
+# Starting in the back
 
-Watch ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s).
+Our full time program _begins_ with work on the Back End of a website. That is,
+all of the code that deals with keeping track of data, storing it in a database,
+searching, sorting, collating, and delivering information to the front end of a
+website.
+
+Websites are served from a web server running some back-end language, such as
+Ruby, Python, or .NET. During the course, you are studying a back-end language
+to learn more in depth. There are plenty of back-end languages to choose from.
+Each language has its strengths and weakness. We have chosen to focus on `C#`
+and `.NET`.
+
+### Explore C\# \("c-sharp"\) & .NET
+
+`.NET` is a robust framework built by Microsoft. While there are many languages
+that use the `.NET` ecosystem, `C#` is a common, flexible, and ubiquitous
+language.
+
+- [SoloLearn C# course](https://www.sololearn.com/Course/CSharp/)
+- [LearnCS.org](http://www.learncs.org/)
+- [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
+- [Code Academy](https://www.codecademy.com/learn/learn-c-sharp)
+- [Tutorial Point](https://www.tutorialspoint.com/csharp/)
+
+And of course
+[the docs](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) are
+usually a great place to start once you learn a little from the above tutorials
 
 ## Fundamentals and Front End Development
 
@@ -56,26 +81,8 @@ way.
 - [http://jstherightway.org/](http://jstherightway.org/)
 - [http://bonsaiden.github.io/JavaScript-Garden/](http://bonsaiden.github.io/JavaScript-Garden/)
 
-## Back-end Focus
+## Start Here
 
-Next, let us continue our journey with the rest of what creates a website, the
-server. Websites are served from a web server running some back-end language,
-such as Ruby, Python, or .NET. During the course, you are studying a back-end
-language to learn more in depth. There are plenty of back-end languages to
-choose from. Each language has its strengths and weakness. We have chosen to
-focus on .NET. Check out these resources to get started
-
-### Explore C\# \("c-sharp"\) & .NET
-
-.NET is a robust framework built by Microsoft. .NET and C# is a common, flexible
-and ubiquitous language.
-
-- [SoloLearn C# course](https://www.sololearn.com/Course/CSharp/)
-- [LearnCS.org](http://www.learncs.org/)
-- [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
-- [Code Academy](https://www.codecademy.com/learn/learn-c-sharp)
-- [Tutorial Point](https://www.tutorialspoint.com/csharp/)
-
-And of course
-[the docs](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) are
-usually a great place to start once you learn a little from the above tutorials
+<!-- This is good for the getting and receiving help
+ Watch ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s).
+  -->
