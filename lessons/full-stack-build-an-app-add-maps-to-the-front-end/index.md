@@ -6,7 +6,7 @@ order: 27
 # Add Maps to the Front End
 
 To render a map within our front end, we will be using another third party
-library, `react-map-0gl`.
+library, `react-map-gl`.
 
 ```shell
 cd ClientApp
