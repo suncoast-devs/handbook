@@ -57,8 +57,13 @@ As we will consider uploads as a resource, we will create a `UploadsController`
 with a single `POST` endpoint for creating uploads.
 
 ```csharp
+using System.Collections.Generic;
+using System.Net;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
