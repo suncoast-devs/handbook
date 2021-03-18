@@ -13,7 +13,7 @@ Heroku CLI.
 
 Sometimes you need to restart your application on Heroku. This might be because
 you've changed something other than something that is updated by
-`git push heroku master`.
+`git push heroku HEAD:master`.
 
 To restart:
 

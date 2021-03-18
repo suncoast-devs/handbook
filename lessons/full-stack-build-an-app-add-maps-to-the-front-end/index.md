@@ -60,8 +60,6 @@ of the SDG campus as our map center.
 
 ```javascript
 const [viewport, setViewport] = useState({
-  width: 327,
-  height: 264,
   latitude: 27.77101804911986,
   longitude: -82.66090611749074,
   zoom: 9.8,
@@ -76,11 +74,13 @@ style to be absolutely positioned to work with our CSS.
 ```jsx
 <section className="map">
   <ReactMapGL
-    style={{ position: 'absolute' }}
     {...viewport}
+    style={{ position: 'absolute' }}
+    width="100%"
+    height="100%"
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
   >
-    <div style={{ position: 'absolute', right: 0 }}>
+    <div style={{ position: 'absolute', left: 10 }}>
       <NavigationControl />
     </div>
   </ReactMapGL>
