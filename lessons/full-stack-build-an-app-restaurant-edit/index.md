@@ -34,6 +34,7 @@ export function EditRestaurant() {
     description: '',
     address: '',
     telephone: '',
+    photoURL: '',
   })
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -52,7 +53,7 @@ export function EditRestaurant() {
   async function handleFormSubmit(event) {
     event.preventDefault()
 
-    const response = await fetch('/api/Restaurants', {
+    const response = await fetch(`/api/Restaurants/${id}`, {
       method: 'PUT',
       headers: { 'content-type': 'application/json', ...authHeader() },
       body: JSON.stringify(restaurant),
@@ -135,7 +136,7 @@ export function EditRestaurant() {
         <Link to="/">
           <i className="fa fa-home"></i>
         </Link>
-        <h2>Add a Restaurant</h2>
+        <h2>Edit Restaurant</h2>
       </nav>
       <form onSubmit={handleFormSubmit}>
         {errorMessage && <p>{errorMessage}</p>}
@@ -220,15 +221,15 @@ is in `Restaurant.jsx`, so we can essentially copy it from there
 
 ```javascript
 useEffect(() => {
+  function fetchRestaurant() {
+    const response = await fetch(`/api/Restaurants/${id}`)
+    const apiData = await response.json()
+
+    setRestaurant(apiData)
+  }
+
   fetchRestaurant()
 }, [id])
-
-const fetchRestaurant = async () => {
-  const response = await fetch(`/api/Restaurants/${id}`)
-  const apiData = await response.json()
-
-  setRestaurant(apiData)
-}
 ```
 
 Just before the `return` of the main page, we can add logic to show the form
@@ -259,7 +260,7 @@ and the user id for this restaurant is the same as the logged-in user.
 
 ```jsx
 {
-  isLoggedIn() && restaurant.userId === user.id && (
+  isLoggedIn() && restaurant.userId === getUserId() && (
     <p>
       <Link className="button" to={`/restaurants/${id}/edit`}>
         Edit
