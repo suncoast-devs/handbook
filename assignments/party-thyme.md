@@ -22,17 +22,14 @@ ago they were planted and other details.
 ## Resources
 
 - [EF Core Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet/04-entity-framework/)
+- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
+- [Lecture Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)
 
 ### Setup
 
 ```shell
 dotnet new sdg-console-database -o PartyThme
 ```
-
-### Resources
-
-- [.NET Documentation](https://docs.microsoft.com/en-us/dotnet/)
-- [Lecture Notes](https://suncoast.io/handbook/curriculum/back-end/full-stack-i/lecture/dotnet)
 
 ### Explorer Mode
 
