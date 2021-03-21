@@ -4,14 +4,21 @@ module.exports = {
   purge: {
     content: ['./src/**/*.html', './src/**/*.js'],
     options: {
-      // These are used by the markdown autolink-headers
-      whitelist: ['group', 'float-right', 'invisible', 'group-hover:visible'],
+      // These are used by the markdown autolink-headers and other JSX elements
+      whitelist: [
+        'group',
+        'float-right',
+        'invisible',
+        'group-hover:visible',
+        'border-indigo-600',
+        'border-transparent',
+      ],
     },
   },
   theme: {
     extend: {
       screens: {
-        'print': {'raw': 'print'},
+        print: { raw: 'print' },
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
