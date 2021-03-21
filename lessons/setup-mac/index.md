@@ -1,16 +1,15 @@
 ---
-title: Windows Setup
-order: 1
+title: Mac Setup
+order: 2
 ---
 
 - [Slack](/lessons/setup-slack)
 - [Github](/lessons/setup-github)
 - [Code Folder](/lessons/setup-code-folder)
-- [Scoop](/lessons/setup-windows-scoop)
+- [Homebrew](/lessons/setup-mac-brew)
 - [Node.js](/lessons/setup-nodejs)
-- [PowerShell](/lessons/setup-windows-powershell)
-- [Windows Terminal](/lessons/setup-windows-windows-terminal)
 - [Visual Studio Code](/lessons/setup-vs-code)
+- [Terminal](/lessons/setup-mac-terminal)
 - [git](/lessons/setup-git)
 - [.NET](/lessons/setup-dotnet)
 - [hub](/lessons/setup-hub)
