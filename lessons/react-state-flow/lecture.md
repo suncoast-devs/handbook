@@ -48,9 +48,11 @@ handleClickCell = async (row, column) => {
     body: JSON.stringify(body),
   })
 
-  const game = await response.json()
+  if (response.status === 201) {
+    const game = await response.json()
 
-  this.setState(game)
+    this.setState(game)
+  }
 }
 ```
 
@@ -66,9 +68,11 @@ handleNewGame = async () => {
     }
   )
 
-  const game = await response.json()
+  if (response.status === 201) {
+    const game = await response.json()
 
-  this.setState(game)
+    this.setState(game)
+  }
 }
 ```
 

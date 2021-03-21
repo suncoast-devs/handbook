@@ -488,11 +488,13 @@ handleNewGame = async () => {
     }
   )
 
-  // Get the response as JSON
-  const game = await response.json()
+  if (response.status === 201) {
+    // Get the response as JSON
+    const game = await response.json()
 
-  // Make that the new state!
-  this.setState(game)
+    // Make that the new state!
+    this.setState(game)
+  }
 }
 ```
 
@@ -562,11 +564,13 @@ handleClickCell = async (row, column) => {
     body: JSON.stringify(body),
   })
 
-  // Get the response as JSON
-  const game = await response.json()
+  if (response.status === 201) {
+    // Get the response as JSON
+    const game = await response.json()
 
-  // Make that the new state!
-  this.setState(game)
+    // Make that the new state!
+    this.setState(game)
+  }
 }
 ```
 

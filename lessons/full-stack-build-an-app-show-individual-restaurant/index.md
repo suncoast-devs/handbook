@@ -69,9 +69,12 @@ Once we have updated the JSX, we'll add a `useEffect` to fetch the data.
 useEffect(() => {
   async function fetchRestaurant() {
     const response = await fetch(`/api/Restaurants/${id}`)
-    const apiData = await response.json()
 
-    setRestaurant(apiData)
+    if (response.code === 200) {
+      const apiData = await response.json()
+
+      setRestaurant(apiData)
+    }
   }
 
   fetchRestaurant()

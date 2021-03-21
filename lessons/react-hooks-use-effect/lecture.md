@@ -271,7 +271,6 @@ a:visited {
   font-size: 0.6rem;
 }
 
-
 ul {
   padding: 0;
   list-style: none;
@@ -429,7 +428,9 @@ useEffect(async function () {
     'https://one-list-api.herokuapp.com/items?access_token=cohort42'
   )
 
-  console.log(response.data)
+  if (response.status === 200) {
+    console.log(response.data)
+  }
 }, [])
 ```
 
@@ -458,9 +459,11 @@ useEffect(async function () {
     'https://one-list-api.herokuapp.com/items?access_token=cohort42'
   )
 
-  console.log(response.data)
+  if (response.status === 200) {
+    console.log(response.data)
 
-  setTodoItems(response.data)
+    setTodoItems(response.data)
+  }
 }, [])
 ```
 
@@ -528,7 +531,9 @@ async function handleCreateNewTodoItem(event) {
     { item: { text: newTodoText } }
   )
 
-  console.log(response.data)
+  if (response.status === 200) {
+    console.log(response.data)
+  }
 }
 ```
 
@@ -670,14 +675,18 @@ async function toggleCompleteStatus() {
       { item: { complete: false } }
     )
 
-    console.log(response.data)
+    if (response.status === 201) {
+      console.log(response.data)
+    }
   } else {
     const response = await axios.put(
       `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
       { item: { complete: true } }
     )
 
-    console.log(response.data)
+    if (response.status === 201) {
+      console.log(response.data)
+    }
   }
 }
 ```
@@ -697,7 +706,9 @@ async function toggleCompleteStatus() {
     { item: { complete: !props.complete } }
   )
 
-  console.log(response.data)
+  if (response.status === 201) {
+    console.log(response.data)
+  }
 }
 ```
 
@@ -721,7 +732,9 @@ async function loadAllTodoItems() {
     'https://one-list-api.herokuapp.com/items?access_token=cohort42'
   )
 
-  setTodoItems(response.data)
+  if (response.status === 200) {
+    setTodoItems(response.data)
+  }
 }
 
 useEffect(loadAllTodoItems, [])
@@ -749,7 +762,7 @@ Now we have a function we can share with the `TodoItem` via props
 
 ```js
 async function toggleCompleteStatus() {
-  const response = await axios.put(
+  await axios.put(
     `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
     { item: { complete: !props.complete } }
   )
@@ -768,7 +781,7 @@ async function handleCreateNewTodoItem(event) {
   // since we are going to do our own thing
   event.preventDefault()
 
-  const response = await axios.post(
+  await axios.post(
     'https://one-list-api.herokuapp.com/items?access_token=cohort42',
     { item: { complete: !complete } }
   )
@@ -794,7 +807,7 @@ export function TodoItem(props) {
   const { id, text, complete, reloadItems } = props
 
   async function toggleCompleteStatus() {
-    const response = await axios.put(
+    await axios.put(
       `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`,
       { item: { complete: !complete } }
     )
@@ -836,7 +849,7 @@ Furthermore, this looks like our function takes _arguments_ -- but it is really 
 ```jsx
 export function TodoItem({ id, text, complete, reloadItems }) {
   async function toggleCompleteStatus() {
-    const response = await axios.put(
+    await axios.put(
       `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`,
       { item: { complete: !complete } }
     )

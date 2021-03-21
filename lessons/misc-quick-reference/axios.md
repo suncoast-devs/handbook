@@ -73,7 +73,11 @@ const response = await axios({
     'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
 })
 
-const items = response.data
+if (response.code === 200) {
+  const items = response.data
+
+  // ... process the items here ...
+}
 ```
 
 ## Sending a non-GET request, with data.
@@ -92,6 +96,10 @@ const response = await axios({
     'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
   data: newOneListItem,
 })
+
+if (response.code === 201) {
+  // ... process the data here ...
+}
 ```
 
 Notice that we do not have to do any `JSON.stringify` as `axios` knows how to
