@@ -31,11 +31,9 @@ export default function PageTemplate({
     allWarning: { nodes: warnings },
   },
 }) {
-  const [os, setOS] = useState(
-    window.navigator.appVersion.indexOf('Win') !== -1 ? 'Windows' : 'Mac'
-  )
+  const [os, setOS] = useState('Mac')
 
-  console.log({ os, mdx, lecture, reading })
+  console.log({ mdx, lecture, reading })
   return (
     <OperatingSystemContext.Provider value={{ os, setOS }}>
       <Layout
