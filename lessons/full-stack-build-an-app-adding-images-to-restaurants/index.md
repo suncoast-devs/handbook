@@ -370,11 +370,11 @@ Add this code just above the drop zone:
 
 ```jsx
 {
-  newRestaurant.photoURL && (
+  newRestaurant.photoURL ? (
     <p>
       <img alt="Restaurant Photo" width={200} src={newRestaurant.photoURL} />
     </p>
-  )
+  ) : null
 }
 ```
 
@@ -384,9 +384,9 @@ Update the `Restaurant` component to display the restaurant image, if present.
 
 ```jsx
 {
-  restaurant.photoURL && (
+  restaurant.photoURL ? (
     <img alt="Restaurant Photo" width={200} src={restaurant.photoURL} />
-  )
+  ) : null
 }
 ```
 

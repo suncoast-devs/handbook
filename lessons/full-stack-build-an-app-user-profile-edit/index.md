@@ -144,7 +144,7 @@ export function EditUser() {
       </nav>
 
       <form onSubmit={handleFormSubmit}>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage ? <p>{errorMessage}</p> : null}
         <p className="form-input">
           <label htmlFor="fullName">Name</label>
           <input
@@ -172,10 +172,10 @@ export function EditUser() {
             onChange={handleStringFieldChange}
           />
         </p>
-        {updatedUser.photoURL && (
+        {updatedUser.photoURL ? (
           <p>
             <img alt="User Photo" width={200} src={updatedUser.photoURL} />
-          </p>
+          </p> : null
         )}
         <div className="file-drop-zone">
           <div {...getRootProps()}>
@@ -198,7 +198,7 @@ We'll add a profile link in the navigation.
 
 ```jsx
 {
-  isLoggedIn() && <Link to="/profile">Profile</Link>
+  isLoggedIn() ? <Link to="/profile">Profile</Link> : null
 }
 ```
 

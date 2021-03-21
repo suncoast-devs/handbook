@@ -139,7 +139,7 @@ export function EditRestaurant() {
         <h2>Edit Restaurant</h2>
       </nav>
       <form onSubmit={handleFormSubmit}>
-        {errorMessage && <p>{errorMessage}</p>}
+        {errorMessage ? <p>{errorMessage}</p> : null}
         <p className="form-input">
           <label htmlFor="name">Name</label>
           <input
@@ -178,10 +178,10 @@ export function EditRestaurant() {
           />
         </p>
 
-        {restaurant.photoURL && (
+        {restaurant.photoURL ? (
           <p>
             <img alt="Restaurant Photo" width={200} src={restaurant.photoURL} />
-          </p>
+          </p> : null
         )}
 
         <div className="file-drop-zone">
@@ -263,13 +263,13 @@ and the user id for this restaurant is the same as the logged-in user.
 
 ```jsx
 {
-  isLoggedIn() && restaurant.userId === getUserId() && (
+  isLoggedIn() && restaurant.userId === getUserId() ? (
     <p>
       <Link className="button" to={`/restaurants/${id}/edit`}>
         Edit
       </Link>
     </p>
-  )
+  ) : null
 }
 ```
 

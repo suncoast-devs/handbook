@@ -168,7 +168,7 @@ Then just before we render our array of `<Marker>`, we will add this code:
 
 ```jsx
 {
-  selectedMapRestaurant && (
+  selectedMapRestaurant ? (
     <Popup
       latitude={selectedMapRestaurant.latitude}
       longitude={selectedMapRestaurant.longitude}
@@ -182,7 +182,7 @@ Then just before we render our array of `<Marker>`, we will add this code:
         <p>{selectedMapRestaurant.description}</p>
       </div>
     </Popup>
-  )
+  ) : null
 }
 ```
 

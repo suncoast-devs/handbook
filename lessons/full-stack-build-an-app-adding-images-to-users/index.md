@@ -133,11 +133,11 @@ Add this code just above the drop zone:
 
 ```jsx
 {
-  newUser.photoURL && (
+  newUser.photoURL ? (
     <p>
       <img alt="User Photo" width={200} src={newUser.photoURL} />
     </p>
-  )
+  ) : null
 }
 ```
 
@@ -147,7 +147,7 @@ Change the avatar code to this, and remove the static avatar import.
 
 ```jsx
 {
-  isLoggedIn() && user.photoURL && (
+  isLoggedIn() && user.photoURL ? (
     <li className="avatar">
       <img
         src={user.photoURL}
@@ -156,7 +156,7 @@ Change the avatar code to this, and remove the static avatar import.
         width="64"
       />
     </li>
-  )
+  ) : null
 }
 ```
 

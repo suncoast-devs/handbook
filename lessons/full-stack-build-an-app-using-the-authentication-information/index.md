@@ -12,14 +12,14 @@ is **not logged in**
 
 ```jsx
 {
-  isLoggedIn() || (
+  isLoggedIn() ? null : (
     <Link className="btn btn-success mr-2" to="/signin">
       Sign in
     </Link>
   )
 }
 {
-  isLoggedIn() || (
+  isLoggedIn() ? null : (
     <Link className="btn btn-success mr-2" to="/signup">
       Sign up
     </Link>
@@ -38,11 +38,11 @@ We can add a `Sign out` button after the form:
 
 ```jsx
 {
-  isLoggedIn() && (
+  isLoggedIn() ? (
     <span className="link" onClick={handleLogout}>
       Sign out
     </span>
-  )
+  ) : null
 }
 ```
 
@@ -71,7 +71,7 @@ and then we can use that in place of the user's name hardcoded name:
 
 ```jsx
 {
-  isLoggedIn() && <p>Welcome back, {user.fullName}!</p>
+  isLoggedIn() ? <p>Welcome back, {user.fullName}!</p> : null
 }
 ```
 
@@ -80,11 +80,11 @@ coded for the moment.
 
 ```jsx
 {
-  isLoggedIn() && (
+  isLoggedIn() ? (
     <li className="avatar">
       <img src={avatar} alt="Steve's Avatar" height="64" width="64" />
     </li>
-  )
+  ) : null
 }
 ```
 
@@ -92,30 +92,30 @@ And to update the add new restaurant button:
 
 ```jsx
 {
-  isLoggedIn() && (
+  isLoggedIn() ? (
     <Link to="/new">
       <i className="fa fa-plus"></i> Restaurant
     </Link>
-  )
+  ) : null
 }
 ```
 
 # Hide the "New Review" form unless logged in
 
 We will wrap the `<h3>` and the `<form>` in a fragment tag to place them in a
-group. We then prefix that with the `isLoggedIn() &&` that will show that JSX
-for logged-in users.
+group. We then use a ternary operator with `isLoggedIn()` that will show that
+JSX for logged-in users.
 
 ```jsx
 {
-  isLoggedIn() && (
+  isLoggedIn() ? (
     <>
       <h3>Enter your own review</h3>
       <form onSubmit={handleNewReviewSubmit}>
         {/* all the form contents not shown here */}
       </form>
     </>
-  )
+  ) : null
 }
 ```
 
