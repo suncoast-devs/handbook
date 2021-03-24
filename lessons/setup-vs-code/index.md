@@ -98,95 +98,19 @@ ask for assistance.
 
 **Replace** the contents of this file with:
 
-```
+```json
 {
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
   "javascript.implicitProjectConfig.checkJs": true,
   "files.eol": "\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "git.enableSmartCommit": true,
+  "csharp.referencesCodeLens.enabled": false,
   "[csharp]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4
-  }
-}
-```
-
-Save this file and close the tab.
-
-## OPTIONAL: Turn off all auto suggests in VS Code
-
-Some students do not like the auto complete nature of VS Code. I recommend
-waiting to see if you find these auto complete suggestions helpful. Later, if
-you want you can turn these features off.
-
-Redo the 'Open Settings (JSON)" from above and just after the **opening** brace
-paste this:
-
-```
-"editor.suggest.showConstants": false,
-"editor.suggest.showConstructors": false,
-"editor.suggest.showCustomcolors": false,
-"editor.suggest.showEnums": false,
-"editor.suggest.showFields": false,
-"editor.suggest.showEvents": false,
-"editor.suggest.showFolders": false,
-"editor.suggest.showFunctions": false,
-"editor.suggest.showIssues": false,
-"editor.suggest.showKeywords": false,
-"editor.suggest.showInterfaces": false,
-"editor.suggest.showMethods": false,
-"editor.suggest.showProperties": false,
-"editor.suggest.showModules": false,
-"editor.suggest.showOperators": false,
-"editor.suggest.showReferences": false,
-"editor.suggest.showSnippets": false,
-"editor.suggest.showStructs": false,
-"editor.suggest.showTypeParameters": false,
-"editor.suggest.showUnits": false,
-"editor.suggest.showUsers": false,
-"editor.suggest.showValues": false,
-"editor.suggest.showVariables": false,
-"editor.suggest.showWords": false,
-"editor.suggest.showColors": false,
-"editor.suggest.showClasses": false,
-```
-
-Your file may look like this:
-
-```json
-{
-  "editor.suggest.showConstants": false,
-  "editor.suggest.showConstructors": false,
-  "editor.suggest.showCustomcolors": false,
-  "editor.suggest.showEnums": false,
-  "editor.suggest.showFields": false,
-  "editor.suggest.showEvents": false,
-  "editor.suggest.showFolders": false,
-  "editor.suggest.showFunctions": false,
-  "editor.suggest.showIssues": false,
-  "editor.suggest.showKeywords": false,
-  "editor.suggest.showInterfaces": false,
-  "editor.suggest.showMethods": false,
-  "editor.suggest.showProperties": false,
-  "editor.suggest.showModules": false,
-  "editor.suggest.showOperators": false,
-  "editor.suggest.showReferences": false,
-  "editor.suggest.showSnippets": false,
-  "editor.suggest.showStructs": false,
-  "editor.suggest.showTypeParameters": false,
-  "editor.suggest.showUnits": false,
-  "editor.suggest.showUsers": false,
-  "editor.suggest.showValues": false,
-  "editor.suggest.showVariables": false,
-  "editor.suggest.showWords": false,
-  "editor.suggest.showColors": false,
-  "editor.suggest.showClasses": false,
-  "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "javascript.implicitProjectConfig.checkJs": true,
-  "[csharp]": {
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
   }
 }
 ```
