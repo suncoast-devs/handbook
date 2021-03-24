@@ -24,26 +24,28 @@ support all of these and to follow a common convention.
 We are going to treat our games as a resource we can manage. We will follow
 these guidelines while building our API:
 
-- Game is the model we are going to manage
+- GameNight is the model we are going to manage
 - If an endpoint uses the GET verb we expect the endpoint to return the same
   resource each time and not modify it. NOTE: the data inside may change (e.g.
-  we may update the address, or date) but the resource, the Game Night, is still
+  we may update the address, or date) but the resource, the GameNight, is still
   the same. When we say "the same resource" we don't mean the contents, but
-  rather the concept (the Game Night with ID 1)
+  rather the concept (the GameNight with ID 1)
 - If an endpoint uses POST/PUT/DELETE it will modify the resource in some way.
-- POST will modify the "list of all games" resource by adding a new Game.
+- POST will modify the "list of all game nights" resource by adding a new
+  GameNight.
 - PUT will modify a specific game by supplying new values
-- DELETE will modify a specific game by removing it from the "list of all games"
+- DELETE will modify a specific game night by removing it from the "list of all
+  game nights"
 
 Thus we will end up with an API with these endpoints:
 
-| Endpoint           | Purpose                                                                                                                           |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
-| GET /games         | Gets a list of all games                                                                                                          |
-| GET /games/{id}    | Gets the single specific game given by its id                                                                                     |
-| POST /games        | Creates a new game, assigning a new ID for the game. The properties of the game are given as JSON in the BODY of the request      |
-| PUT /games/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
-| DELETE /games/{id} | Deletes the specific game given by its id                                                                                         |
+| Endpoint                | Purpose                                                                                                                           |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| GET /GameNights         | Gets a list of all games                                                                                                          |
+| GET /GameNights/{id}    | Gets the single specific game given by its id                                                                                     |
+| POST /GameNights        | Creates a new game, assigning a new ID for the game. The properties of the game are given as JSON in the BODY of the request      |
+| PUT /GameNights/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
+| DELETE /GameNights/{id} | Deletes the specific game given by its id                                                                                         |
 
 > This is a very typical pattern of API for a CRUD style application. These URL
 > patterns and VERB combinations are enough of a pattern that we can typically
@@ -71,20 +73,20 @@ have been added to your environment in the
 To generate an app with API and database support:
 
 ```shell
-dotnet new sdg-api -o GameNight
+dotnet new sdg-api -o GameNightWithFriends
 ```
 
-This will create a folder `GameDatabaseAPI` with a template of an application
-that will connect to a database as well as support API controllers.
+This will create a folder `GameNightWithFriends` with a template of an
+application that will connect to a database as well as support API controllers.
 
 ## Generating an ERD
 
 Our ERD for this application is simple since it is only dealing with a single
-entity: a `Game`
+entity: a `GameNight`
 
 ```
 +-------------------------+
-|          Game           |
+|         GameNight       |
 +-------------------------+
 | Id - SERIAL PRIMARY KEY |
 | Name - string           |
@@ -112,13 +114,13 @@ This is the idea of `Code First` database modeling. What we had done before,
 creating our tables manually in `SQL` was considered `Database First`.
 
 In order to use Migrations the first thing we do is define our model. We will
-create the `Game.cs` file and define all the fields we want. Notice they match
-the same definitions from our `ERD` above. Now we are going to place our
+create the `GameNight.cs` file and define all the fields we want. Notice they
+match the same definitions from our `ERD` above. Now we are going to place our
 database model files in their own directory. Open the `Models` folder and add a
-file `Game.cs` and place the code inside.
+file `GameNight.cs` and place the code inside.
 
 ```csharp
-public class Game
+public class GameNight
 {
     public int Id { get; set; }
     public string Name { get; set; }
@@ -143,13 +145,13 @@ public partial class DatabaseContext : DbContext
 {
 ```
 
-add this statement to let the `DatabaseContext` know we want to track `Game` in
-a `Games` table:
+add this statement to let the `DatabaseContext` know we want to track
+`GameNight` in a `GameNights` table:
 
 ```csharp
 public partial class DatabaseContext : DbContext
 {
-    public DbSet<Game> Games { get; set; }
+    public DbSet<GameNight> GameNights { get; set; }
 ```
 
 ## Next up: generate a migration
@@ -161,24 +163,24 @@ public partial class DatabaseContext : DbContext
 Since we just added a new model we need to create a migration
 
 ```shell
-dotnet ef migrations add AddGames
+dotnet ef migrations add AddGameNights
 ```
 
 > NOTE: The name of our migration should attempt to capture the database
-> structure change we are making. In this case we are `Add`ing the `Games`
+> structure change we are making. In this case we are `Add`ing the `GameNights`
 > table.
 
 ## Next up: ensure your migration is good
 
 You should have at least two new files in `Migrations`, one ending in
-`_AddGames.cs`. Open that file and ensure the `Up` method has the expected
+`_AddGameNights.cs`. Open that file and ensure the `Up` method has the expected
 results:
 
 ```csharp
 protected override void Up(MigrationBuilder migrationBuilder)
 {
     migrationBuilder.CreateTable(
-        name: "Games",
+        name: "GameNights",
         columns: table => new
         {
             Id = table.Column<int>(nullable: false)
@@ -192,7 +194,7 @@ protected override void Up(MigrationBuilder migrationBuilder)
         },
         constraints: table =>
         {
-            table.PrimaryKey("PK_Games", x => x.Id);
+            table.PrimaryKey("PK_GameNights", x => x.Id);
         });
 }
 ```
@@ -225,22 +227,22 @@ that will have a very standard set of code for:
 - Updating a model
 - Deleting a model
 
-In this case, our model being our `Game`. This code generator produces much of
-the `boilerplate` code that we would normally have to write by hand. Often we
+In this case, our model being our `GameNight`. This code generator produces much
+of the `boilerplate` code that we would normally have to write by hand. Often we
 will have to update this code when our particular requirements change.
 
 To run the code generator:
 
 ```shell
-dotnet aspnet-codegenerator controller --model Game -name GamesController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
+dotnet aspnet-codegenerator controller --model GameNight -name GameNightsController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
 ```
 
 Let's look at the various options:
 
 - The first option `controller` says we want to make a controller.
-- The second option `--model Game` indicates which model will be used in this
-  controller.
-- The third option `--name GamesController` indicates the name of the
+- The second option `--model GameNight` indicates which model will be used in
+  this controller.
+- The third option `--name GameNightsController` indicates the name of the
   controller. Notice it is a plural version of the singular model name.
 - The fourth option `--useAsyncActions` indicates we prefer to code with async
   style code.
@@ -251,12 +253,13 @@ Let's look at the various options:
 - the seventh option `---relativeFolderPath controllers` is the directory where
   our controllers will be stored.
 
-With this we generate a file `controllers/GamesController.cs` which we will
+With this we generate a file `controllers/GameNightsController.cs` which we will
 review next.
 
-## GamesController.cs
+## GameNightsController.cs
 
-Here is the entirety of the `GamesController.cs` that we will be breaking down.
+Here is the entirety of the `GameNightsController.cs` that we will be breaking
+down.
 
 ```csharp
 using System;
@@ -266,85 +269,85 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using GameDatabaseAPI.Models;
+using GameNightWithFriends.Models;
 
-namespace GameDatabaseAPI.Controllers
+namespace GameNightWithFriends.Controllers
 {
-    // All of these routes will be at the base URL:     /api/Games
+    // All of these routes will be at the base URL:     /api/GameNights
     // That is what "api/[controller]" means below. It uses the name of the controller
-    // in this case GamesController to determine the URL
+    // in this case GameNightsController to determine the URL
     [Route("api/[controller]")]
     [ApiController]
-    public class GamesController : ControllerBase
+    public class GameNightsController : ControllerBase
     {
         // This is the variable you use to have access to your database
         private readonly DatabaseContext _context;
 
         // Constructor that recives a reference to your database context
         // and stores it in _context for you to use in your API methods
-        public GamesController(DatabaseContext context)
+        public GameNightsController(DatabaseContext context)
         {
             _context = context;
         }
 
-        // GET: api/Games
+        // GET: api/GameNights
         //
-        // Returns a list of all your Games
+        // Returns a list of all your GameNights
         //
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Game>>> GetGames()
+        public async Task<ActionResult<IEnumerable<GameNight>>> GetGameNights()
         {
-            // Uses the database context in `_context` to request all of the Games and
+            // Uses the database context in `_context` to request all of the GameNights and
             // return them as a JSON array.
-            return await _context.Games.ToListAsync();
+            return await _context.GameNights.ToListAsync();
         }
 
-        // GET: api/Games/5
+        // GET: api/GameNights/5
         //
-        // Fetches and returns a specific game by finding it by id. The id is specified in the
+        // Fetches and returns a specific game night by finding it by id. The id is specified in the
         // URL. In the sample URL above it is the `5`.  The "{id}" in the [HttpGet("{id}")] is what tells dotnet
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpGet("{id}")]
-        public async Task<ActionResult<Game>> GetGame(int id)
+        public async Task<ActionResult<GameNight>> GetGameNight(int id)
         {
-            // Find the game in the database using `FindAsync` to look it up by id
-            var game = await _context.Games.FindAsync(id);
+            // Find the game night in the database using `FindAsync` to look it up by id
+            var gameNight = await _context.GameNights.FindAsync(id);
 
             // If we didn't find anything, we receive a `null` in return
-            if (game == null)
+            if (gameNight == null)
             {
-                // Return a `404` response to the client indicating we could not find a game with this id
+                // Return a `404` response to the client indicating we could not find a game night with this id
                 return NotFound();
             }
 
-            //  Return the game as a JSON object.
-            return game;
+            //  Return the game night as a JSON object.
+            return gameNight;
         }
 
-        // PUT: api/Games/5
+        // PUT: api/GameNights/5
         //
-        // Update an individual game with the requested id. The id is specified in the URL
+        // Update an individual game night with the requested id. The id is specified in the URL
         // In the sample URL above it is the `5`. The "{id} in the [HttpPut("{id}")] is what tells dotnet
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
-        // In addition the `body` of the request is parsed and then made available to us as a Game
-        // variable named game. The controller matches the keys of the JSON object the client
-        // supplies to the names of the attributes of our Game POCO class. This represents the
+        // In addition the `body` of the request is parsed and then made available to us as a GameNight
+        // variable named game night. The controller matches the keys of the JSON object the client
+        // supplies to the names of the attributes of our GameNight POCO class. This represents the
         // new values for the record.
         //
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGame(int id, Game game)
+        public async Task<IActionResult> PutGameNight(int id, GameNight gameNight)
         {
             // If the ID in the URL does not match the ID in the supplied request body, return a bad request
-            if (id != game.Id)
+            if (id != gameNight.Id)
             {
                 return BadRequest();
             }
 
-            // Tell the database to consider everything in game to be _updated_ values. When
-            // the save happens the database will _replace_ the values in the database with the ones from game
-            _context.Entry(game).State = EntityState.Modified;
+            // Tell the database to consider everything in game night to be _updated_ values. When
+            // the save happens the database will _replace_ the values in the database with the ones from game night
+            _context.Entry(gameNight).State = EntityState.Modified;
 
             try
             {
@@ -355,7 +358,7 @@ namespace GameDatabaseAPI.Controllers
             {
                 // Ooops, looks like there was an error, so check to see if the record we were
                 // updating no longer exists.
-                if (!GameExists(id))
+                if (!GameNightExists(id))
                 {
                     // If the record we tried to update was already deleted by someone else,
                     // return a `404` not found
@@ -372,51 +375,51 @@ namespace GameDatabaseAPI.Controllers
             // return NoContent to indicate the update was done. Alternatively you can use the
             // following to send back a copy of the updated data.
             //
-            // return Ok(game)
+            // return Ok(gameNight)
             //
             return NoContent();
         }
 
-        // POST: api/Games
+        // POST: api/GameNights
         //
-        // Creates a new game in the database.
+        // Creates a new game night in the database.
         //
-        // The `body` of the request is parsed and then made available to us as a Game
-        // variable named game. The controller matches the keys of the JSON object the client
-        // supplies to the names of the attributes of our Game POCO class. This represents the
+        // The `body` of the request is parsed and then made available to us as a GameNight
+        // variable named game night. The controller matches the keys of the JSON object the client
+        // supplies to the names of the attributes of our GameNight POCO class. This represents the
         // new values for the record.
         //
         [HttpPost]
-        public async Task<ActionResult<Game>> PostGame(Game game)
+        public async Task<ActionResult<GameNight>> PostGameNight(GameNight gameNight)
         {
             // Indicate to the database context we want to add this new record
-            _context.Games.Add(game);
+            _context.GameNights.Add(gameNight);
             await _context.SaveChangesAsync();
 
             // Return a response that indicates the object was created (status code `201`) and some additional
             // headers with details of the newly created object.
-            return CreatedAtAction("GetGame", new { id = game.Id }, game);
+            return CreatedAtAction("GetGameNight", new { id = gameNight.Id }, gameNight);
         }
 
-        // DELETE: api/Games/5
+        // DELETE: api/GameNights/5
         //
-        // Deletes an individual game with the requested id. The id is specified in the URL
+        // Deletes an individual game night with the requested id. The id is specified in the URL
         // In the sample URL above it is the `5`. The "{id} in the [HttpDelete("{id}")] is what tells dotnet
         // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
         //
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGame(int id)
+        public async Task<IActionResult> DeleteGameNight(int id)
         {
-            // Find this game by looking for the specific id
-            var game = await _context.Games.FindAsync(id);
-            if (game == null)
+            // Find this game night by looking for the specific id
+            var gameNight = await _context.GameNights.FindAsync(id);
+            if (gameNight == null)
             {
-                // There wasn't a game with that id so return a `404` not found
+                // There wasn't a game night with that id so return a `404` not found
                 return NotFound();
             }
 
             // Tell the database we want to remove this record
-            _context.Games.Remove(game);
+            _context.GameNights.Remove(gameNight);
 
             // Tell the database to perform the deletion
             await _context.SaveChangesAsync();
@@ -424,15 +427,15 @@ namespace GameDatabaseAPI.Controllers
             // return NoContent to indicate the update was done. Alternatively you can use the
             // following to send back a copy of the deleted data.
             //
-            // return Ok(game)
+            // return Ok(gameNight)
             //
             return NoContent();
         }
 
-        // Private helper method that looks up an existing game by the supplied id
-        private bool GameExists(int id)
+        // Private helper method that looks up an existing game night by the supplied id
+        private bool GameNightExists(int id)
         {
-            return _context.Games.Any(game => game.Id == id);
+            return _context.GameNights.Any(gameNight => gameNight.Id == id);
         }
     }
 }
@@ -445,15 +448,15 @@ namespace GameDatabaseAPI.Controllers
 Starting at the top we see:
 
 ```csharp
-// All of these routes will be at the base URL:     /api/Games
+// All of these routes will be at the base URL:     /api/GameNights
 // That is what "api/[controller]" means below. It uses the name of the controller
-// in this case GamesController to determine the URL
+// in this case GameNightsController to determine the URL
 [Route("api/[controller]")]
 [ApiController]
-public class GamesController : ControllerBase
+public class GameNightsController : ControllerBase
 ```
 
-This defines that our API will be contained within the URL `api/Games`.
+This defines that our API will be contained within the URL `api/GameNights`.
 
 #### Database Context
 
@@ -478,128 +481,130 @@ constructor we simply "save a copy" of the context for our later use.
 ```
 // Constructor that receives a reference to your database context
 // and stores it in _context for you to use in your API methods
-public GamesController(DatabaseContext context)
+public GameNightsController(DatabaseContext context)
 {
     _context = context;
 }
 ```
 
-#### GET /api/Games -- get all the games
+#### GET /api/GameNights -- get all the game nights
 
-This code defines a GET method at the URL `/api/Games`. The method indicates
-that it returns an list of `Game` through this return type:
+This code defines a GET method at the URL `/api/GameNights`. The method
+indicates that it returns an list of `GameNight` through this return type:
 
-`Task<ActionResult<IEnumerable<Game>>>`
+`Task<ActionResult<IEnumerable<GameNight>>>`
 
 The `Task<>` indicates that this API request can be handled asynchronously.
 
 The `ActionResult<>` indicates that the result will have data, and a status
 code, and other API related response data.
 
-Lastly, `IEnumerable<Game>` is a more generic version of `List<Game>` meaning we
-return some kind of collection of `Game` objects.
+Lastly, `IEnumerable<GameNight>` is a more generic version of `List<GameNight>`
+meaning we return some kind of collection of `GameNight` objects.
 
-The code inside the method simply asks the `context` for the set of `Game`s and
-returns them as a `List` to be generated via async. (`ToListAsync`)
+The code inside the method simply asks the `context` for the set of `GameNight`s
+and returns them as a `List` to be generated via async. (`ToListAsync`)
 
-The effect is that if we ask the API for `/api/Games` we will get a JSON
-formatted list of all the `Game` objects in our database.
+The effect is that if we ask the API for `/api/GameNights` we will get a JSON
+formatted list of all the `GameNight` objects in our database.
 
 ```csharp
-// GET: api/Games
+// GET: api/GameNights
 //
-// Returns a list of all your Games
+// Returns a list of all your GameNights
 //
 [HttpGet]
-public async Task<ActionResult<IEnumerable<Game>>> GetGames()
+public async Task<ActionResult<IEnumerable<GameNight>>> GetGameNights()
 {
-    // Uses the database context in `_context` to request all of the Games and
+    // Uses the database context in `_context` to request all of the GameNights and
     // return them as a JSON array.
-    return await _context.Games.ToListAsync();
+    return await _context.GameNights.ToListAsync();
 }
 ```
 
-#### GET /api/Games/42 -- get a specific Game
+#### GET /api/GameNights/42 -- get a specific GameNight
 
-This method uses the same base url of `/api/Games` but adds on one parameter of
-the `{id}` of the game we are looking for.
+This method uses the same base url of `/api/GameNights` but adds on one
+parameter of the `{id}` of the game night we are looking for.
 
-We then use `FindAsync` to find this `Game` by looking for it by ID.
+We then use `FindAsync` to find this `GameNight` by looking for it by ID.
 
 If the returned value is `null` we simply return a `NotFound` response.
 
 If we do find a value we return that value as the JSON formatted response.
 
-The return value of the function `Task<ActionResult<Game>>` indicates that this
-is an async function that returns a result of a `Game` including any possible
-response codes, such as returning a `NotFound` resuling in a 404 code.
+The return value of the function `Task<ActionResult<GameNight>>` indicates that
+this is an async function that returns a result of a `GameNight` including any
+possible response codes, such as returning a `NotFound` resuling in a 404 code.
 
 ```csharp
-// GET: api/Games/5
+// GET: api/GameNights/5
 //
-// Fetches and returns a specific game by finding it by id. The id is specified in the
+// Fetches and returns a specific game night by finding it by id. The id is specified in the
 // URL. In the sample URL above it is the `5`.  The "{id}" in the [HttpGet("{id}")] is what tells dotnet
 // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
 //
 [HttpGet("{id}")]
-public async Task<ActionResult<Game>> GetGame(int id)
+public async Task<ActionResult<GameNight>> GetGameNight(int id)
 {
-    // Find the game in the database using `FindAsync` to look it up by id
-    var game = await _context.Games.FindAsync(id);
+    // Find the game night in the database using `FindAsync` to look it up by id
+    var gameNight = await _context.GameNights.FindAsync(id);
 
     // If we didn't find anything, we receive a `null` in return
-    if (game == null)
+    if (gameNight == null)
     {
-        // Return a `404` response to the client indicating we could not find a game with this id
+        // Return a `404` response to the client indicating we could not find a game night with this id
         return NotFound();
     }
 
-    //  Return the game as a JSON object.
-    return game;
+    //  Return the game night as a JSON object.
+    return gameNight;
 }
 ```
 
-#### PUT api/Games/42 -- Update an existing Game found by id
+#### PUT api/GameNights/42 -- Update an existing GameNight found by id
 
 This API endpoint is much like the `GET` however with a `PUT` we are indicating
-we are updating an existing `Game` by ID.
+we are updating an existing `GameNight` by ID.
 
 Notice that the parameters to the method include both the `int id` we get from
-the `[HttpPut("{id})]` but also a `Game game`. The `Game game` argument will be
-a variable, of type `Game` that is parsed from deserializing the _body_ of the
-request as the JSON representation of a `Game`.
+the `[HttpPut("{id})]` but also a `GameNight gameNight`. The
+`GameNight gameNight` argument will be a variable, of type `GameNight` that is
+parsed from deserializing the _body_ of the request as the JSON representation
+of a `GameNight`.
 
 The very first thing that happens is we ensure that the `id` specified on the
 command line matches the `id` in the body. If they do not match, we return an
 error code that this is a `BadRequest()`
 
-Next up we take the `game` we parsed from the body and tell the context that
-this is an modified game. We can do this since we have provided _all_ the
-attributes of a `Game` in the body.
+Next up we take the `gameNight` we parsed from the body and tell the context
+that this is an modified gameNight. We can do this since we have provided _all_
+the attributes of a `GameNight` in the body.
 
 We attempt to `SaveChangesAsync` to the database. If for some reason, when we
-attempt to save the game, it does not already exist in the database, we return a
-`NotFound` message, otherwise we re-throw the error so our client can see what
-happened.
+attempt to save the game night, it does not already exist in the database, we
+return a `NotFound` message, otherwise we re-throw the error so our client can
+see what happened.
 
 Finally, if there is no error, we simply return a `NoContent()` (204) successful
 response. If the client would like the entire updated object returned to it, we
-could `return Ok(game)` to return the JSON version of the updated `Game`
+could `return Ok(gameNight)` to return the JSON version of the updated
+`GameNight`
 
 ```csharp
-// PUT: api/Games/5
+// PUT: api/GameNights/5
 [HttpPut("{id}")]
-public async Task<IActionResult> PutGame(int id, Game game)
+public async Task<IActionResult> PutGameNight(int id, GameNight gameNight)
 {
     // If the ID in the URL does not match the ID in the supplied request body, return a bad request
-    if (id != game.Id)
+    if (id != gameNight.Id)
     {
         return BadRequest();
     }
 
-    // Tell the database to consider everything in game to be _updated_ values. When
-    // the save happens the database will _replace_ the values in the database with the ones from game
-    _context.Entry(game).State = EntityState.Modified;
+    // Tell the database to consider everything in game night to be _updated_ values. When
+    // the save happens the database will _replace_ the values in the database with the ones from gameNight
+    _context.Entry(gameNight).State = EntityState.Modified;
 
     try
     {
@@ -610,7 +615,7 @@ public async Task<IActionResult> PutGame(int id, Game game)
     {
         // Ooops, looks like there was an error, so check to see if the record we were
         // updating no longer exists.
-        if (!GameExists(id))
+        if (!GameNightExists(id))
         {
             // If the record we tried to update was already deleted by someone else,
             // return a `404` not found
@@ -627,68 +632,69 @@ public async Task<IActionResult> PutGame(int id, Game game)
     // return NoContent to indicate the update was done. Alternatively you can use the
     // following to send back a copy of the updated data.
     //
-    // return Ok(game)
+    // return Ok(gameNight)
     //
     return NoContent();
 }
 ```
 
-#### POST /api/Game - Creating a new game
+#### POST /api/GameNights - Creating a new game
 
-This URL, when called with a `POST` will create a new game.
+This URL, when called with a `POST` will create a new game night.
 
 In the arguments to the function we see that we supply the JSON representation
-of a `Game` in the `POST` body. This will be deserialized into a `Game` object
-containing the information we wish to add.
+of a `GameNight` in the `POST` body. This will be deserialized into a
+`GameNight` object containing the information we wish to add.
 
-We simply need to add this game to our context and tell our context to save
-changes.
+We simply need to add this game night to our context and tell our context to
+save changes.
 
-We then use `CreatedAtAction("GetGame", new {id = game.Id }, game)` to return a
-`201` (Created) code with the response body of the newly saved Game.
+We then use
+`CreatedAtAction("GetGameNight", new {id = gameNight.Id }, gameNight)` to return
+a `201` (Created) code with the response body of the newly saved `GameNight`.
 
 ```csharp
-// POST: api/Games
+// POST: api/GameNights
 [HttpPost]
-public async Task<ActionResult<Game>> PostGame(Game game)
+public async Task<ActionResult<GameNight>> PostGameNight(GameNight gameNight)
 {
     // Indicate to the database context we want to add this new record
-    _context.Games.Add(game);
+    _context.GameNights.Add(gameNight);
     await _context.SaveChangesAsync();
 
     // Return a response that indicates the object was created (status code `201`) and some additional
     // headers with details of the newly created object.
-    return CreatedAtAction("GetGame", new { id = game.Id }, game);
+    return CreatedAtAction("GetGameNight", new { id = gameNight.Id }, gameNight);
 }
 ```
 
-#### DELETE /api/Game/42 -- Delete a game given it's ID
+#### DELETE /api/GameNights/42 -- Delete a game night given it's ID
 
-First we attempt to find the given game in the database. If not found we simply
-return a `404` (NotFound) message.
+First we attempt to find the given game night in the database. If not found we
+simply return a `404` (NotFound) message.
 
-If we have found the game, we call `_context.Remove(game)` to tell the context
-we are deleting this game.
+If we have found the game night, we call `_context.Remove(gameNight)` to tell
+the context we are deleting this gameNight.
 
 We follow this with a `SaveChanges` to cause the deletion to happen and then we
 return a `204` (NoContent) response. Again we could return the JSON content of
-the deleted game by changing the return code to `return Ok(game)`
+the deleted game night by changing the return code to `return Ok(gameNight)`
 
 ```csharp
-// DELETE: api/Games/5
+// DELETE: api/GameNights/5
 [HttpDelete("{id}")]
-public async Task<IActionResult> DeleteGame(int id)
+public async Task<IActionResult> DeleteGameNight(int id)
 {
-    // Find this game by looking for the specific id
-    var game = await _context.Games.FindAsync(id);
-    if (game == null)
+    // Find this game night by looking for the specific id
+    var gameNight = await _context.GameNights.FindAsync(id);
+    if (gameNight == null)
     {
-        // There wasn't a game with that id so return a `404` not found
+        // There wasn't a game night with that id so return a `404` not found
         return NotFound();
     }
 
     // Tell the database we want to remove this record
-    _context.Games.Remove(game);
+    _context.GameNights.Remove(gameNight);
 
     // Tell the database to perform the deletion
     await _context.SaveChangesAsync();
@@ -696,7 +702,7 @@ public async Task<IActionResult> DeleteGame(int id)
     // return NoContent to indicate the update was done. Alternatively you can use the
     // following to send back a copy of the deleted data.
     //
-    // return Ok(game)
+    // return Ok(gameNight)
     //
     return NoContent();
 }
@@ -704,18 +710,19 @@ public async Task<IActionResult> DeleteGame(int id)
 
 ### Checking for valid data
 
-Our Game Nights wouldn't be fun without fellow players. Lets add a valudation to
-ensure at least two players are present at each game.
+Our Game Nights wouldn't be fun without fellow players. Lets add a validation to
+ensure at least two players are present at each game night.
 
-To add this validation we'll update the methods that create and update a `Game`.
-We'd like to reject any request that has a `MinimumPlayers` less than `2`.
+To add this validation we'll update the methods that create and update a
+`GameNight`. We'd like to reject any request that has a `MinimumPlayers` less
+than `2`.
 
-We'll add the following code after the check of the `id` in `PutGame` _AND_ to
-the _beginning_ of the `PostGame` method.
+We'll add the following code after the check of the `id` in `PutGameNight` _AND_
+to the _beginning_ of the `PostGameNight` method.
 
 ```csharp
 // Add a check to make sure we have enough players.
-if (game.MinimumPlayers < 2)
+if (gameNight.MinimumPlayers < 2)
 {
     return BadRequest(new { Message = "You need at least 2 players!" });
 }
@@ -724,12 +731,12 @@ if (game.MinimumPlayers < 2)
 This will return an error code (and message) indicating that this request was
 rejected.
 
-Let's also add a requirement that we cannot _delete_ a game that has already
-happened. In this case we'll be updating the `DeleteGame` method to add code
-that compares `game.When` to `DateTime.Now`
+Let's also add a requirement that we cannot _delete_ a game night that has
+already happened. In this case we'll be updating the `DeleteGameNight` method to
+add code that compares `gameNight.When` to `DateTime.Now`
 
 ```csharp
-if (game.When < DateTime.Now)
+if (gameNight.When < DateTime.Now)
 {
     return BadRequest();
 }
@@ -738,21 +745,21 @@ if (game.When < DateTime.Now)
 ### Working with associated data
 
 Our Game Night app is a success! Now we want to update it to keep track of data
-of the players that attended each game.
+of the players that attended each game night.
 
 ## Adding a new Player Model
 
 We'll start by adding a model to track this information.
 
 ```csharp
-namespace GameDatabaseAPI.Models
+namespace GameNightWithFriends.Models
 {
     public class Player
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int GameId { get; set; }
-        public Game Game { get; set; }
+        public int GameNightId { get; set; }
+        public GameNight GameNight { get; set; }
     }
 }
 ```
@@ -766,61 +773,61 @@ public DbSet<Player> Players { get; set; }
 ## Creating a whole new controller versus a nested/additional method on a current controller
 
 There are several approaches to allowing our code to track the related players
-to a Game. The first pass would be to create a new controller that focused on
-managing the `Player` model. The user would supply, for each created player the
-`GameId` along with the details about the player (their `Name`).
+to a GameNight. The first pass would be to create a new controller that focused
+on managing the `Player` model. The user would supply, for each created player
+the `GameNightId` along with the details about the player (their `Name`).
 
-We could also simply add a method to the existing `GamesController` if all we
-wanted to do was allow for associating the players. In this case we simply need
-a `Create` style action.
+We could also simply add a method to the existing `GameNightsController` if all
+we wanted to do was allow for associating the players. In this case we simply
+need a `Create` style action.
 
 To add such an action to our existing controller we'll add a method on our own.
 
 ```csharp
-// Adding Players to a game
-// POST /api/Games/5/Players
+// Adding Players to a game night
+// POST /api/GameNights/5/Players
 [HttpPost("{id}/Players")]
-public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+public async Task<ActionResult<Player>> CreatePlayerForGameNight(int id, Player player)
 //                                       |       |
 //                                       |       Player deserialized from JSON from the body
 //                                       |
-//                                       Game ID comes from the URL
+//                                       GameNight ID comes from the URL
 ```
 
 This is a `POST` style action which typically indicates the creation of data.
-Then we ensure the game's `id` is present in the URL. We then place a `/Players`
-behind it such that the URL becomes `POST 42/Players` to create a player for the
-`Game` with `Id` of `42`.
+Then we ensure the game night's `id` is present in the URL. We then place a
+`/Players` behind it such that the URL becomes `POST 42/Players` to create a
+player for the `GameNight` with `Id` of `42`.
 
-We'll name this method `CreatePlayerForGame` and see that the arguments to the
-method indicate we'll be deserializing a `Player` object from the `body` which
-we will name the variable `player`. The method also returns the newly created
-`Player` object.
+We'll name this method `CreatePlayerForGameNight` and see that the arguments to
+the method indicate we'll be deserializing a `Player` object from the `body`
+which we will name the variable `player`. The method also returns the newly
+created `Player` object.
 
 Here is the implementation of this method:
 
 ```csharp
-// Adding Players to a game
-// POST /api/Games/5/Players
+// Adding Players to a game night
+// POST /api/GameNights/5/Players
 [HttpPost("{id}/Players")]
-public async Task<ActionResult<Player>> CreatePlayerForGame(int id, Player player)
+public async Task<ActionResult<Player>> CreatePlayerForGameNight(int id, Player player)
 //                                       |       |
 //                                       |       Player deserialized from JSON from the body
 //                                       |
-//                                       Game ID comes from the URL
+//                                       Game Night ID comes from the URL
 {
-    // First, lets find the game (by using the ID)
-    var game = await _context.Games.FindAsync(id);
+    // First, lets find the game night (by using the ID)
+    var gameNight = await _context.GameNights.FindAsync(id);
 
-    // If the game doesn't exist: return a 404 Not found.
-    if (game == null)
+    // If the game night doesn't exist: return a 404 Not found.
+    if (gameNight == null)
     {
-        // Return a `404` response to the client indicating we could not find a game with this id
+        // Return a `404` response to the client indicating we could not find a game night with this id
         return NotFound();
     }
 
-    // Associate the player to the given game.
-    player.GameId = game.Id;
+    // Associate the player to the given game night.
+    player.GameNightId = gameNight.Id;
 
     // Add the player to the database
     _context.Players.Add(player);
