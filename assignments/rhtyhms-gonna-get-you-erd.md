@@ -20,6 +20,14 @@ Create the ERD (Entity Relationship Diagram) and resulting tables that allow a u
 
 Although in reality an album could be done by more than one band, our system will just have an album involving **one** band. That is, an album belongs to one band.
 
+## Resources
+
+There are many software tools for generating ERD diagrams. If you'd like to try
+these tools we suggest tying these:
+
+- [LucidChart](https://www.lucidchart.com)
+- [Draw.io](Draw.io)
+
 ### Explorer Mode
 
 - Create an ERD for these entities: `Albums`, `Bands`, and `Songs`. They should have the following properties, use your best judgment for types.
