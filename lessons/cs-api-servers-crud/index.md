@@ -5,29 +5,29 @@ order: 1
 
 In the [lesson on API Servers](/lessons/cs-api-servers) we saw how to create an
 API server. However, an API server that cannot perform the actions of a CRUD
-(Create, Read, Update, and Delete) style system isn't as useful to us. In this
-lesson we will build an application to keep track of our game nights!
+(Create, Read, Update, and Delete) style system isn't as valuable for us. In
+this lesson, we will build an application to keep track of our game nights!
 
 # Game Night
 
-Lets create an API to manage our game nights. When creating a game night we'd
+Let us create an API to manage our game nights. When creating a game night, we'd
 like to track the name of the game we will play, the name of the person hosting
 the event, their address, the date and time the game will start, and the minimum
-and maximum number of people the game can support.
+and the maximum number of people the game can support.
 
 ## API Definition
 
-We are going to make an API that has the ability to `CRUD` (Create, Read,
-Update, and Delete) games. The first thing we should do is design our API to
-support all of these and to follow a common convention.
+We are going to make an API that can `CRUD` (Create, Read, Update, and Delete)
+games. The first thing we should do is design our API to support all of these
+and to follow a standard convention.
 
 We are going to treat our games as a resource we can manage. We will follow
 these guidelines while building our API:
 
 - GameNight is the model we are going to manage
-- If an endpoint uses the GET verb we expect the endpoint to return the same
+- If an endpoint uses the GET verb, we expect the endpoint to return the same
   resource each time and not modify it. NOTE: the data inside may change (e.g.
-  we may update the address, or date) but the resource, the GameNight, is still
+  we may update the address or date) but the resource, the GameNight, is still
   the same. When we say "the same resource" we don't mean the contents, but
   rather the concept (the GameNight with ID 1)
 - If an endpoint uses POST/PUT/DELETE it will modify the resource in some way.
@@ -47,7 +47,7 @@ Thus we will end up with an API with these endpoints:
 | PUT /GameNights/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
 | DELETE /GameNights/{id} | Deletes the specific game given by its id                                                                                         |
 
-> This is a very typical pattern of API for a CRUD style application. These URL
+> This is a very typical pattern of API for a CRUD-style application. These URL
 > patterns and VERB combinations are enough of a pattern that we can typically
 > make some guesses as to what an API does by only looking at the `URL`+`VERB`
 > definition.
@@ -64,7 +64,7 @@ If you have not yet followed the [lesson on SQL](/lessons/sql-intro),
 [lesson on EF Core](/lessons/cs-object-relational-mapping) we suggest you study
 that lesson
 
-For this application we are going to use a new template. This template should
+For this application, we are going to use a new template. This template should
 have been added to your environment in the
 [lesson on computer setup](/lessons/cs-environment-setup).
 
@@ -76,7 +76,7 @@ To generate an app with API and database support:
 dotnet new sdg-api -o GameNightWithFriends
 ```
 
-This will create a folder `GameNightWithFriends` with a template of an
+This command will create a folder `GameNightWithFriends` with a template of an
 application that will connect to a database as well as support API controllers.
 
 ## Generating an ERD
@@ -113,11 +113,11 @@ definition of the database.
 This is the idea of `Code First` database modeling. What we had done before,
 creating our tables manually in `SQL` was considered `Database First`.
 
-In order to use Migrations the first thing we do is define our model. We will
-create the `GameNight.cs` file and define all the fields we want. Notice they
-match the same definitions from our `ERD` above. Now we are going to place our
-database model files in their own directory. Open the `Models` folder and add a
-file `GameNight.cs` and place the code inside.
+To use Migrations, the first thing we do is define our model. We will create the
+`GameNight.cs` file and define all the fields we want. Notice they match the
+same definitions from our `ERD` above. Now we are going to place our database
+model files in their proper directory. Open the `Models` folder and add a file
+`GameNight.cs`, and place the code inside.
 
 ```csharp
 public class GameNight
@@ -134,9 +134,9 @@ public class GameNight
 
 ## Next step, inform our `DatabaseContext` of this model
 
-In our [lesso on ef core](/lessons/cs-object-relational-mapping) we didn't have
-a separate file for our `DatabaseContext` however in most apps it lives in it's
-own file and you will find it in the `Models` folder here as well.
+In our [lesson on ef core](/lessons/cs-object-relational-mapping) we didn't have
+a separate file for our `DatabaseContext` however, in most apps, it lives in
+it's own file, and you will find it in the `Models` folder here as well.
 
 After this code:
 
@@ -160,14 +160,16 @@ public partial class DatabaseContext : DbContext
 > **new** model we must generate a _Database Migration_ and _update_ our
 > database.
 
-Since we just added a new model we need to create a migration
+Since we just added a new model, we need to create a migration.
+
+"`shell dotnet ef migrations add AddGameNights
 
 ```shell
 dotnet ef migrations add AddGameNights
 ```
 
 > NOTE: The name of our migration should attempt to capture the database
-> structure change we are making. In this case we are `Add`ing the `GameNights`
+> structure change we are making. In this case we are `Add'ing the `GameNights`
 > table.
 
 ## Next up: ensure your migration is good
@@ -215,21 +217,21 @@ dotnet ef database update
 
 ## Define our API controller
 
-In addition to the magic of `Migrations` we are also going to add a new tool to
+In addition to the magic of `Migrations`, we are also going to add a new tool to
 our toolkit: `aspnet-codegenerator`
 
 `aspnet-codegenerator` is a tool that can generate a default controller for us
 that will have a very standard set of code for:
 
-- Reading a full list of our models
+- Reading a complete list of our models
 - Reading a single instance of our model by ID
 - Creating a model
 - Updating a model
 - Deleting a model
 
-In this case, our model being our `GameNight`. This code generator produces much
-of the `boilerplate` code that we would normally have to write by hand. Often we
-will have to update this code when our particular requirements change.
+In this case, our model is our `GameNight`. This code generator produces much of
+the `boilerplate` code that we normally have to write by hand. Often we will
+have to update this code when our particular requirements change.
 
 To run the code generator:
 
@@ -239,14 +241,14 @@ dotnet aspnet-codegenerator controller --model GameNight -name GameNightsControl
 
 Let's look at the various options:
 
-- The first option `controller` says we want to make a controller.
-- The second option `--model GameNight` indicates which model will be used in
+- The first option `controller`, says we want to make a controller.
+- The second option, `--model GameNight` indicates which model will be used in
   this controller.
-- The third option `--name GameNightsController` indicates the name of the
+- The third option, `--name GameNightsController` indicates the name of the
   controller. Notice it is a plural version of the singular model name.
 - The fourth option `--useAsyncActions` indicates we prefer to code with async
   style code.
-- The fifth option `-api` indicates we are generating API style controllers.
+- The fifth option, `-api` indicates we are generating API style controllers.
   There are different styles of controllers we will not cover in this course.
 - The sixth option `--dataContext DatabaseContext` is the name of our context
   class.
