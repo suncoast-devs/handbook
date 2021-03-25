@@ -73,15 +73,51 @@ name here, not a pseudonym or a `1337 haxor` name.
 git config --global user.name "Replace This With Your Full Name"
 ```
 
+Example:
+
+```shell
+git config --global user.name "Grace Hopper"
+```
+
+or
+
+```shell
+git config --global user.name "Ada Lovelace"
+```
+
 ### Tell Git your E-Mail Address
 
-> NOTE: In the following command, instead of
+> -- IMPORTANT NOTE -- STOP AND READ --
+>
+> In the following command, instead of
 > `email-address-you-used-at-github@example.com` use the **same email address
 > you gave to GitHub**. Github uses this to make sure it can generate this
 > awesome "activity" chart for you. ![github-activity](./github-activity.png)
 
+To find the email address you used at github, go to this menu and choose "Your
+Profile"
+
+![Profile Menu](profile-menu.png)
+
+Once you do, you'll see your profile page that includes the email address you
+used for registration on github. (highlighted in RED)
+
+![Profile Page ](profile-page.png)
+
+Command to run WITH YOUR PERSONAL EMAIL ADDRESS:
+
+> git config --global user.email "email-address-you-used-at-github@example.com"
+
+Example:
+
 ```shell
-git config --global user.email "email-address-you-used-at-github@example.com"
+git config --global user.email "gracehopper@example.com"
+```
+
+or
+
+```shell
+git config --global user.email "adalovelace@example.com"
 ```
 
 ### Tell Git your Github username
