@@ -20,7 +20,7 @@ export function OperatingSystemSelector() {
   console.log({ os, ourOs })
 
   return (
-    <div className="flex justify-end my-1">
+    <div className="flex justify-end my-1" key={ourOs}>
       <span>{ourOs}</span>
       <span onClick={() => setOS('Mac')}>
         <i
@@ -47,7 +47,7 @@ export function OperatingSystemSelector() {
             ourOs.localeCompare('Windows') === 0
               ? 'border-indigo-600'
               : 'border-transparent',
-            'fal',
+            'fab',
             'fa-fw',
             'fa-2x',
             'fa-windows',
