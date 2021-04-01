@@ -128,6 +128,7 @@ ask for assistance.
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "git.enableSmartCommit": true,
   "csharp.referencesCodeLens.enabled": false,
+  "workbench.startupEditor": "none",
   "[csharp]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 4,
