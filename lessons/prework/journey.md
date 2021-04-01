@@ -1,6 +1,6 @@
 ---
 title: This Journey
-order: 3
+order: 30
 ---
 
 Going through this course is a fantastic journey, full of highs and lows. Here
@@ -13,13 +13,12 @@ This course moves _quickly_ as we cover a large amount of material in a short
 time frame. Managing your time and learning to cope with the pacing of the
 course helps ensure you can sustain yourself.
 
-Read:
+These
 [7 Time Management Tips for Students](https://www.topuniversities.com/blog/7-time-management-tips-students)
+will help you organize your time, body, and scheudle to be ready for the pace of
+this class.
 
-Read:
-[Manipulate Time With These Powerful 20 Time Management Tips](https://www.forbes.com/sites/johnrampton/2018/05/01/manipulate-time-with-these-powerful-20-time-management-tips)
-
-## Everyone has something to teach
+## Everyone has something to teach (also known as: "there are no silly questions")
 
 Even if someone participates with "just a question," it benefits the classroom
 and yourself. The chances are that someone else has that question. Great
@@ -27,7 +26,8 @@ learners ask great questions – never forget that!
 
 Lectures and lab time are interactive with the instructors, mentors, staff,
 community, and peers. We encourage you to take advantage of this time to work
-together, interact, ask and answer questions.
+together, interact, ask and answer questions. Their experience, knowledge, and
+guidance are a prime aspect of what you are paying for in this process.
 
 ## Automating, scheduling, and decision fatigue
 
@@ -58,13 +58,15 @@ many excuses not to focus on our task at hand; don't let them control you.
 is one way to organize activities. A process like this can help focus on what to
 work on next.
 
-## Talking the lingo
+## Preparing your support team
 
-During your time here, you will communicate technical ideas in various ways.
-Writing, speaking, and talking about code, being a developer, a tool you are
-using, and so forth gives you leverage and knowledge. You learn to put into
-words what you know, what you don't know, how you emotionally feel, and how you
-can brand yourself. Those thoughts, ideas, and takeaways are in essence
-"pre-meditated" and prepared so that when you rub shoulders with and interview
-with employers, clients, and customers, you have something eloquent enough to
-deliver and memorable enough to recall
+Your family members, partners, spouses, friends, and loved-ones are all part of
+your team while you are in this program. They too need to be prepared for the
+level of effort you are about to put into this course.
+
+Spend some time discussing how every-day life requirements such as meal
+preparation, cooking, cleaning, paying bills, taking care of young ones, grocery
+shopping, and all the events that take place in life _outside_ of your time at
+SDG will be handled. Your days, evenings, and weekends will be preoccupied by
+your study and homework at SDG. Having your support team ready can be a critical
+step in your success!

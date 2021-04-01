@@ -1,6 +1,6 @@
 ---
 title: Program Catalog
-order: 2
+order: 20
 ---
 
 # Program Catalog
@@ -11,5 +11,15 @@ and schedule we've put together a
 entire catalog. If you have additional questions, reach out to the Suncoast
 Developers Guild team.
 
-Once you have read it, you _must_ fill out
-[this short survey](https://goo.gl/forms/eX4dqLnwYMJCNhtw1).
+The [program catalog](https://suncoast.io/catalog.pdf) covers topics such as:
+
+- Our Team
+- Curriculum
+- Classwork and Homework Requirements
+- Daily Schedule
+- Program Costs
+- Evaluation and Graduation Requirements
+
+You will need to sign off that you have read the
+[program catalog](https://suncoast.io/catalog.pdf) on a form later in the
+pre-work

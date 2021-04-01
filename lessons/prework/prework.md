@@ -1,6 +1,6 @@
 ---
 title: Practice Pre-work
-order: 9
+order: 70
 ---
 
 Pre-work is material that ensures you have the necessary foundation required for
@@ -28,15 +28,23 @@ and `.NET`.
 that use the `.NET` ecosystem, `C#` is a common, flexible, and ubiquitous
 language.
 
-- [SoloLearn C# course](https://www.sololearn.com/Course/CSharp/)
-- [LearnCS.org](http://www.learncs.org/)
-- [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
-- [Code Academy](https://www.codecademy.com/learn/learn-c-sharp)
-- [Tutorial Point](https://www.tutorialspoint.com/csharp/)
+There are a several resources here that can help you learn some basics of `C#`
+and `.NET`. We feel that this
+[four hour video from `freeCodeCamp` and Giraffe Academy is a great start](https://www.youtube.com/watch?v=GhQdlIFylQ8).
+If you do nothing else in this section do watch this video. Don't try to type
+along with the video or even worry about understanding everything that is
+happening. Concentrate on the big ideas, write down new terminology, and get
+familiar with what it sounds like to discuss code.
 
-And of course
-[the docs](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) are
-usually a great place to start once you learn a little from the above tutorials
+For an interactive tutorial, check out [LearnCS.org](http://www.learncs.org/)
+
+For a longer, and more technical introduction, this video from Microsoft:
+[C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
+is worth a viewing.
+
+If you have 30+ hours to dedicate (and it may take you much longer) you can work
+through a lesson at
+[Code Academy](https://www.codecademy.com/learn/learn-c-sharp).
 
 ## Fundamentals and Front End Development
 
@@ -71,18 +79,3 @@ way.
 ### Basics
 
 - [https://www.learn-js.org/](https://www.learn-js.org/)
-- [https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-- [https://javascript.info/](https://javascript.info/)
-- [https://www.sololearn.com/Play/JavaScript](https://www.sololearn.com/Play/JavaScript)
-- [freeCodeCamp](https://learn.freecodecamp.org/)
-
-### Advanced
-
-- [http://jstherightway.org/](http://jstherightway.org/)
-- [http://bonsaiden.github.io/JavaScript-Garden/](http://bonsaiden.github.io/JavaScript-Garden/)
-
-## Start Here
-
-<!-- This is good for the getting and receiving help
- Watch ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s).
-  -->

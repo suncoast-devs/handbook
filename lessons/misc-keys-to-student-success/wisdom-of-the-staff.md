@@ -3,6 +3,15 @@ title: Wisdom of the Staff
 order: 1
 ---
 
+# Advice from SDG Staff
+
+The advice here comes from the staff at SDG. These are things we'd like you to
+consider at the beginning of this course and to reflect on during the times you
+find yourself challenged and struggling. (It _WILL_ happen, it happens to every
+student)
+
+**Take this advice to heart** and it will serve you well during your cohort.
+
 ## Ask Questions
 
 This is your time to ask the questions you want. If your question comes up
