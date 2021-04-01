@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 
 export const OperatingSystemContext = React.createContext({
   os: '',
@@ -6,23 +6,31 @@ export const OperatingSystemContext = React.createContext({
 })
 
 export function OperatingSystemSelector() {
+  const [ourOs, setOurOs] = useState('')
   const { os, setOS } = useContext(OperatingSystemContext)
 
-  console.log({ os })
+  useEffect(
+    function () {
+      setOurOs(os)
+    },
+    [os]
+  )
+
+  console.log({ os, ourOs })
 
   return (
     <div className="flex justify-end my-1">
       <span onClick={() => setOS('Mac')}>
         <i
           className={`pb-2 border-b-4 border-${
-            os === 'Mac' ? 'indigo-600' : 'transparent'
+            ourOs === 'Mac' ? 'indigo-600' : 'transparent'
           } fal fa-fw fa-2x fa-apple-alt cursor-pointer`}
         />
       </span>
       <span onClick={() => setOS('Windows')}>
         <i
           className={`pb-2 border-b-4 border-${
-            os === 'Windows' ? 'indigo-600' : 'transparent'
+            ourOs === 'Windows' ? 'indigo-600' : 'transparent'
           } fab fa-fw  fa-2x fa-windows cursor-pointer`}
         />
       </span>
