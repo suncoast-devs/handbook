@@ -33,7 +33,8 @@ export default function PageTemplate({
 }) {
   // Detect and set the client operating system
   const [os, setOS] = useState(
-    window.navigator &&
+    typeof window !== 'undefined' &&
+      window.navigator &&
       window.navigator.appVersion &&
       window.navigator.appVersion.indexOf('Win') !== -1
       ? 'Windows'
