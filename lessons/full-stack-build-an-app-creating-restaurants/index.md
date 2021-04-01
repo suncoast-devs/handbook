@@ -137,7 +137,9 @@ async function handleFormSubmit(event) {
     body: JSON.stringify(newRestaurant),
   })
 
-  const json = await response.json()
+  if (response.code === 201) {
+    // ... code for when we have created a restaurant ...
+  }
 }
 ```
 
@@ -206,9 +208,9 @@ async function handleFormSubmit(event) {
     body: JSON.stringify(newRestaurant),
   })
 
-  const json = await response.json()
-
-  history.push('/')
+  if (response.code === 201) {
+    history.push('/')
+  }
 }
 ```
 

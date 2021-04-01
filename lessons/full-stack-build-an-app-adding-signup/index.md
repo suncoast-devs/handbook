@@ -23,7 +23,7 @@ We can add a `<p>` tag to show the error message:
 
 ```jsx
 {
-  errorMessage && <p>{errorMessage}</p>
+  errorMessage ? <p>{errorMessage}</p> : null
 }
 ```
 

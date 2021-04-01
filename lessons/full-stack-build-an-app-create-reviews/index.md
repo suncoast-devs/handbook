@@ -168,13 +168,16 @@ async function handleNewReviewSubmit(event) {
     body: JSON.stringify(newReview),
   })
 
-  setNewReview({
-    ...newReview,
-    body: '',
-    summary: '',
-    stars: 0,
-  })
-  fetchRestaurant()
+  if (response.code === 201) {
+    setNewReview({
+      ...newReview,
+      body: '',
+      summary: '',
+      stars: 0,
+    })
+
+    fetchRestaurant()
+  }
 }
 ```
 

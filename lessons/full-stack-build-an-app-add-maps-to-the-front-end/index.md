@@ -6,7 +6,7 @@ order: 27
 # Add Maps to the Front End
 
 To render a map within our front end, we will be using another third party
-library, `react-map-0gl`.
+library, `react-map-gl`.
 
 ```shell
 cd ClientApp
@@ -60,8 +60,6 @@ of the SDG campus as our map center.
 
 ```javascript
 const [viewport, setViewport] = useState({
-  width: 327,
-  height: 264,
   latitude: 27.77101804911986,
   longitude: -82.66090611749074,
   zoom: 9.8,
@@ -76,11 +74,13 @@ style to be absolutely positioned to work with our CSS.
 ```jsx
 <section className="map">
   <ReactMapGL
-    style={{ position: 'absolute' }}
     {...viewport}
+    style={{ position: 'absolute' }}
+    width="100%"
+    height="100%"
     mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
   >
-    <div style={{ position: 'absolute', right: 0 }}>
+    <div style={{ position: 'absolute', left: 10 }}>
       <NavigationControl />
     </div>
   </ReactMapGL>
@@ -168,7 +168,7 @@ Then just before we render our array of `<Marker>`, we will add this code:
 
 ```jsx
 {
-  selectedMapRestaurant && (
+  selectedMapRestaurant ? (
     <Popup
       latitude={selectedMapRestaurant.latitude}
       longitude={selectedMapRestaurant.longitude}
@@ -182,7 +182,7 @@ Then just before we render our array of `<Marker>`, we will add this code:
         <p>{selectedMapRestaurant.description}</p>
       </div>
     </Popup>
-  )
+  ) : null
 }
 ```
 

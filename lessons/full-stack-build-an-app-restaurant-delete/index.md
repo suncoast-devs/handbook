@@ -10,13 +10,10 @@ remove the restaurant.
 
 ## Update the `Restaurant.jsx`
 
-We start by adding `history` (for redirecting) and the current user to the
-`Restaurant.jsx` component
+We start by adding `history` (for redirecting)
 
 ```javascript
 const history = useHistory()
-
-const user = getUser()
 ```
 
 We also define a `handleDelete` method to send the API request:
@@ -40,7 +37,7 @@ and finally, a button that is rendered only if the current user-id matches:
 
 ```jsx
 {
-  restaurant.userId === user.id && (
+  restaurant.userId === getUserId() && (
     <button onClick={handleDelete}>Delete</button>
   )
 }

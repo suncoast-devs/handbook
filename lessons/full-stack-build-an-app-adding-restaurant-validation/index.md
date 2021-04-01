@@ -133,7 +133,7 @@ bootstrap element to the user.
 
 ```jsx
 {
-  errorMessage && <p>{errorMessage}</p>
+  errorMessage ? <p>{errorMessage}</p> : null
 }
 ```
 

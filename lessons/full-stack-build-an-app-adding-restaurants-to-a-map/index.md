@@ -41,7 +41,7 @@ dotnet ef database update
 ## Adding a package to help us geocode
 
 To turn the restaurant's address into a latitude and longitude, we will use a
-third-party library.
+[third-party library](https://www.nuget.org/packages/Geocoding.Core/).
 
 ```shell
 dotnet add package Geocoding.Core

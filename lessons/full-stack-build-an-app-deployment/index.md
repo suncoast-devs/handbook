@@ -72,7 +72,7 @@ heroku config:set BING_MAPS_KEY=REPLACE-THIS
 heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
 ```
 
-## `git push heroku master`
+## `git push heroku HEAD:master`
 
 This command will push your code **JUST** to Heroku for hosting. This means when
 you make a change, you should push to GitHub as normal (e.g. `git push master`)
@@ -136,7 +136,7 @@ how to `Push a copy of your local database to Heroku`
 
 ## To Deploy Updates to Heroku
 
-- `git push heroku master`
+- `git push heroku HEAD:master`
 
 > NOTE: If your main branch of code is not `master`, you'll have to run the
 > command this way: `git push NAME:master` where `NAME` is the name of your

@@ -75,9 +75,12 @@ function RestaurantList() {
   useEffect(() => {
     async function loadRestaurants() {
       const response = await fetch('/api/restaurants')
-      const json = await response.json()
 
-      setRestaurants(json)
+      if (response.code === 200) {
+        const json = await response.json()
+
+        setRestaurants(json)
+      }
     }
 
     loadRestaurants()

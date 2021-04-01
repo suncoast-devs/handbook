@@ -57,8 +57,13 @@ As we will consider uploads as a resource, we will create a `UploadsController`
 with a single `POST` endpoint for creating uploads.
 
 ```csharp
+using System.Collections.Generic;
+using System.Net;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 
@@ -365,11 +370,11 @@ Add this code just above the drop zone:
 
 ```jsx
 {
-  newRestaurant.photoURL && (
+  newRestaurant.photoURL ? (
     <p>
       <img alt="Restaurant Photo" width={200} src={newRestaurant.photoURL} />
     </p>
-  )
+  ) : null
 }
 ```
 
@@ -379,9 +384,9 @@ Update the `Restaurant` component to display the restaurant image, if present.
 
 ```jsx
 {
-  restaurant.photoURL && (
+  restaurant.photoURL ? (
     <img alt="Restaurant Photo" width={200} src={restaurant.photoURL} />
-  )
+  ) : null
 }
 ```
 

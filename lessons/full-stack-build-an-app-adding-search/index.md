@@ -73,9 +73,11 @@ useEffect(() => {
         : `/api/Restaurants?filter=${filterText}`
 
     const response = await fetch(url)
-    const json = await response.json()
+    if (response.code === 200) {
+      const json = await response.json()
 
-    setRestaurants(json)
+      setRestaurants(json)
+    }
   }
 
   loadRestaurants()

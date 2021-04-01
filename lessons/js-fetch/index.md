@@ -99,8 +99,11 @@ So our `fetch` call above becomes:
 ```javascript
 async function countries() {
   const response = await fetch('https://restcountries.eu/rest/v2/all')
-  const json = await response.json()
-  console.log(json)
+
+  if (response.code === 200) {
+    const json = await response.json()
+    console.log(json)
+  }
 }
 ```
 
@@ -134,8 +137,10 @@ async function createOneListItem() {
     }
   )
 
-  // Process the response
-  const json = response.json()
+  if (response.code === 201) {
+    // Process the response
+    const json = response.json()
+  }
 }
 ```
 

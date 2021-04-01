@@ -10,11 +10,13 @@ equals the current user id.
 
 ```jsx
 {
-  review.user.id === user.id && (
+  review.user.id === getUserId() && (
     <div>
       <button
         className="small"
-        onClick={event => handleDeleteReview(event, review.id)}
+        onClick={function (event) {
+          handleDeleteReview(event, review.id)
+        }}
       >
         Delete
       </button>
@@ -36,7 +38,13 @@ async function handleDeleteReview(event, reviewId) {
     headers: { 'content-type': 'application/json', ...authHeader() },
   })
 
-  fetchRestaurant()
+  const response = await fetch(`/api/Restaurants/${id}`)
+
+  if (response.code === 200) {
+    const apiData = await response.json()
+
+    setRestaurant(apiData)
+  }
 }
 ```
 
