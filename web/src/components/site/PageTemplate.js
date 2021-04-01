@@ -86,10 +86,19 @@ export default function PageTemplate({
                   <a
                     title="Download lecture slides"
                     download={`${mdx.fields.slug}-lecture.pdf`}
-                    className="uppercase text-gray-500"
+                    className="uppercase text-gray-500 mr-2"
                     href={`/lectures/${mdx.fields.slug}-lecture.pdf`}
                   >
                     <i className="fad fa-download"></i>
+                  </a>
+                )}
+                {lecture && (
+                  <a
+                    title="Markdown Source"
+                    className="uppercase text-gray-500"
+                    href={lecture.fields.path}
+                  >
+                    <i className="fab fa-markdown"></i>
                   </a>
                 )}
               </span>
