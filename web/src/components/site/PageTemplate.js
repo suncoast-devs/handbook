@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { graphql } from 'gatsby'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
@@ -31,13 +31,16 @@ export default function PageTemplate({
     allWarning: { nodes: warnings },
   },
 }) {
-  const [os, setOS] = useState(
+  const [os, setOS] = useState('Mac')
+
+  // Detect and set the client operating system
+  useEffect(function () {
     navigator &&
-      navigator.appVersion &&
-      navigator.appVersion.indexOf('Win') !== -1
+    navigator.appVersion &&
+    navigator.appVersion.indexOf('Win') !== -1
       ? 'Windows'
       : 'Mac'
-  )
+  }, [])
 
   return (
     <OperatingSystemContext.Provider value={{ os, setOS }}>
