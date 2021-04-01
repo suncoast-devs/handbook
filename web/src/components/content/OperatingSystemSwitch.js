@@ -8,6 +8,8 @@ export const OperatingSystemContext = React.createContext({
 export function OperatingSystemSelector() {
   const { os, setOS } = useContext(OperatingSystemContext)
 
+  console.log({ os })
+
   return (
     <div className="flex justify-end my-1">
       <span onClick={() => setOS('Mac')}>
@@ -29,6 +31,8 @@ export function OperatingSystemSelector() {
 }
 export function OperatingSystemSwitch({ allowedOperatingSystems, children }) {
   const { os } = useContext(OperatingSystemContext)
+
+  console.log({ os })
 
   if (allowedOperatingSystems.includes(os)) {
     return (
