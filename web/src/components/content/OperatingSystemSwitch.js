@@ -17,11 +17,8 @@ export function OperatingSystemSelector() {
     [os]
   )
 
-  console.log({ os, ourOs })
-
   return (
     <div className="flex justify-end my-1" key={ourOs}>
-      <span>{ourOs}</span>
       <span onClick={() => setOS('Mac')}>
         <i
           className={cx(
@@ -34,8 +31,7 @@ export function OperatingSystemSelector() {
             'fa-fw',
             'fa-2x',
             'fa-apple-alt',
-            'cursor-pointer',
-            ourOs
+            'cursor-pointer'
           )}
         />
       </span>
@@ -51,8 +47,7 @@ export function OperatingSystemSelector() {
             'fa-fw',
             'fa-2x',
             'fa-windows',
-            'cursor-pointer',
-            ourOs
+            'cursor-pointer'
           )}
         />
       </span>
