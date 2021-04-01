@@ -14,7 +14,7 @@ tools will help.
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
 ```shell
-brew cask install firefox
+brew install firefox
 ```
 
 </OperatingSystemSwitch>
