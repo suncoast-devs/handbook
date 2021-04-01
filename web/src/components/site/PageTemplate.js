@@ -31,16 +31,14 @@ export default function PageTemplate({
     allWarning: { nodes: warnings },
   },
 }) {
-  const [os, setOS] = useState('Mac')
-
   // Detect and set the client operating system
-  useEffect(function () {
-    navigator &&
-    navigator.appVersion &&
-    navigator.appVersion.indexOf('Win') !== -1
+  const [os, setOS] = useState(
+    window.navigator &&
+      window.navigator.appVersion &&
+      window.navigator.appVersion.indexOf('Win') !== -1
       ? 'Windows'
       : 'Mac'
-  }, [])
+  )
 
   return (
     <OperatingSystemContext.Provider value={{ os, setOS }}>
