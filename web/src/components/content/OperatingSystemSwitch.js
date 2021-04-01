@@ -20,17 +20,18 @@ export function OperatingSystemSelector() {
 
   return (
     <div className="flex justify-end my-1">
+      <span>{ourOs}</span>
       <span onClick={() => setOS('Mac')}>
         <i
           className={`pb-2 border-b-4 border-${
-            ourOs === 'Mac' ? 'indigo-600' : 'transparent'
+            ourOs.localeCompare('Mac') === 0 ? 'indigo-600' : 'transparent'
           } fal fa-fw fa-2x fa-apple-alt cursor-pointer`}
         />
       </span>
       <span onClick={() => setOS('Windows')}>
         <i
           className={`pb-2 border-b-4 border-${
-            ourOs === 'Windows' ? 'indigo-600' : 'transparent'
+            ourOs.localeCompare('Windows') === 0 ? 'indigo-600' : 'transparent'
           } fab fa-fw  fa-2x fa-windows cursor-pointer`}
         />
       </span>
