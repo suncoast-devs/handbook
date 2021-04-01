@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
+import cx from 'classnames'
 
 export const OperatingSystemContext = React.createContext({
   os: '',
@@ -23,16 +24,36 @@ export function OperatingSystemSelector() {
       <span>{ourOs}</span>
       <span onClick={() => setOS('Mac')}>
         <i
-          className={`pb-2 border-b-4 border-${
-            ourOs.localeCompare('Mac') === 0 ? 'indigo-600' : 'transparent'
-          } fal fa-fw fa-2x fa-apple-alt cursor-pointer`}
+          className={cx(
+            'pb-2',
+            'border-b-4',
+            ourOs.localeCompare('Mac') === 0
+              ? 'border-indigo-600'
+              : 'border-transparent',
+            'fal',
+            'fa-fw',
+            'fa-2x',
+            'fa-apple-alt',
+            'cursor-pointer',
+            ourOs
+          )}
         />
       </span>
       <span onClick={() => setOS('Windows')}>
         <i
-          className={`pb-2 border-b-4 border-${
-            ourOs.localeCompare('Windows') === 0 ? 'indigo-600' : 'transparent'
-          } fab fa-fw  fa-2x fa-windows cursor-pointer`}
+          className={cx(
+            'pb-2',
+            'border-b-4',
+            ourOs.localeCompare('Windows') === 0
+              ? 'border-indigo-600'
+              : 'border-transparent',
+            'fal',
+            'fa-fw',
+            'fa-2x',
+            'fa-windows',
+            'cursor-pointer',
+            ourOs
+          )}
         />
       </span>
     </div>
