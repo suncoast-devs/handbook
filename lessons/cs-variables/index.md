@@ -68,7 +68,7 @@ Each language you learn will have specific rules about:
   assigned
 
 In this lesson we will look at how the `C#` language works with variables and we
-will learn a few, thought not all, types of information our variables can store.
+will learn a few, though not all, types of information our variables can store.
 
 ## Declaring Variables
 
@@ -350,7 +350,7 @@ instead of `the 1st character`
 # DateTime
 
 C# comes with a specialized class to deal with storing a date and time. A
-DateTime is a Year, Month, Day, Hour, Minute Second, and Millisecond.
+DateTime is a Year, Month, Day, Hour, Minute, Second, and Millisecond.
 
 To create a DateTime variable equal to the current time you can use this syntax:
 
