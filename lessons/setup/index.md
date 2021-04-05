@@ -15,7 +15,7 @@ system of your computer. The guide will attempt to detect your operating system
 correctly. If you need to change the operating system setting, you may toggle
 between the choices using icons on the right side of the page.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Slack
 
@@ -44,7 +44,7 @@ SDG maintains two main Slack Teams:
 - `suncoast-devs` is a general Tampa Bay community team that includes over 1,300
   members.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Github
 
@@ -73,7 +73,7 @@ your face. We recommend this because you want other developers, hiring managers,
 and companies to start recognizing you. Use your best photo. If you need a
 professional photo let us know and we can help.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Nexus
 
@@ -88,7 +88,7 @@ You will also see instructions to connect `Slack` with `Nexus`. If you choose to
 you will receive notifications when homework is assigned as well as when your
 assignments have been checked by your instructors.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Command Line
 
@@ -167,7 +167,7 @@ by right-clicking the icon in the Task Bar and selecting "Pin to taskbar"
 
 </OperatingSystemSwitch>
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Code Folder
 
@@ -233,7 +233,7 @@ cd Desktop
 mkdir sdg
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Tool Installation
 
@@ -318,7 +318,7 @@ scoop install extras/vcredist2019
 
 </OperatingSystemSwitch>
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Node
 
@@ -372,7 +372,7 @@ This tool is useful for removing files and directories
 npm install --global rimraf
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Visual Studio Code
 
@@ -513,7 +513,7 @@ ask for assistance.
 
 Save this file and close the tab.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Git
 
@@ -624,7 +624,7 @@ following in your shell (`Powershell`):
 git config --global hub.protocol https
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # .NET
 
@@ -722,7 +722,7 @@ In a Terminal window:
 dotnet dev-certs https --trust
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # hub
 
@@ -797,7 +797,7 @@ below, then you have setup `hub` correctly.
 
 </OperatingSystemSwitch>
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # PostgreSQL
 
@@ -921,7 +921,7 @@ If this command runs without requiring a password the configuration is complete
 
 To close the `pgcli` tool you can type `exit` and press return.
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Insomnia
 
@@ -945,7 +945,7 @@ scoop install insomnia
 
 </OperatingSystemSwitch>
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Firefox
 
@@ -974,7 +974,7 @@ scoop install firefox
 
 </OperatingSystemSwitch>
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # heroku
 
@@ -1008,7 +1008,7 @@ scoop install heroku-cli
 heroku login
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # app-app
 
@@ -1026,7 +1026,7 @@ matter):
 npm install --global app-app
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Netlify
 
@@ -1053,7 +1053,7 @@ npm install --global netlify-cli
 netlify login
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Prettier
 
@@ -1071,7 +1071,7 @@ code.
 npm install --global prettier
 ```
 
-<div className="mt-48 border-t-8 border-indigo-600"/>
+<SectionSeparator />
 
 # Additional Resources
 

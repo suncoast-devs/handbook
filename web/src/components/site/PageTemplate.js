@@ -13,6 +13,7 @@ import {
   OperatingSystemSelector,
 } from '../content/OperatingSystemSwitch'
 import { CodeBlock } from '../content/CodeBlock'
+import { SectionSeparator } from '../content/SectionSeparator'
 
 const components = {
   Link,
@@ -20,6 +21,7 @@ const components = {
   GithubCommitViewer,
   OperatingSystemSwitch,
   OperatingSystemSelector,
+  SectionSeparator,
   code: CodeBlock,
 }
 
