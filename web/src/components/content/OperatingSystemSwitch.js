@@ -1,4 +1,5 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import cx from 'classnames'
 
 export const OperatingSystemContext = React.createContext({
   os: '',
@@ -6,22 +7,48 @@ export const OperatingSystemContext = React.createContext({
 })
 
 export function OperatingSystemSelector() {
+  const [ourOs, setOurOs] = useState('')
   const { os, setOS } = useContext(OperatingSystemContext)
 
+  useEffect(
+    function () {
+      setOurOs(os)
+    },
+    [os]
+  )
+
   return (
-    <div className="flex justify-end my-1">
+    <div className="flex justify-end my-1" key={ourOs}>
       <span onClick={() => setOS('Mac')}>
         <i
-          className={`pb-2 border-b-4 ${
-            os === 'Mac' ? 'border-indigo-600' : 'border-transparent'
-          } fal fa-fw fa-2x fa-apple-alt cursor-pointer`}
+          className={cx(
+            'pb-2',
+            'border-b-4',
+            ourOs.localeCompare('Mac') === 0
+              ? 'border-indigo-600'
+              : 'border-transparent',
+            'fal',
+            'fa-fw',
+            'fa-2x',
+            'fa-apple-alt',
+            'cursor-pointer'
+          )}
         />
       </span>
       <span onClick={() => setOS('Windows')}>
         <i
-          className={`pb-2 border-b-4 border-${
-            os === 'Windows' ? 'indigo-600' : 'transparent'
-          } fab fa-fw  fa-2x fa-windows cursor-pointer`}
+          className={cx(
+            'pb-2',
+            'border-b-4',
+            ourOs.localeCompare('Windows') === 0
+              ? 'border-indigo-600'
+              : 'border-transparent',
+            'fab',
+            'fa-fw',
+            'fa-2x',
+            'fa-windows',
+            'cursor-pointer'
+          )}
         />
       </span>
     </div>
@@ -29,6 +56,8 @@ export function OperatingSystemSelector() {
 }
 export function OperatingSystemSwitch({ allowedOperatingSystems, children }) {
   const { os } = useContext(OperatingSystemContext)
+
+  console.log({ os })
 
   if (allowedOperatingSystems.includes(os)) {
     return (

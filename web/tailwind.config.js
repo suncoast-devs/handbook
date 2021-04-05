@@ -5,7 +5,14 @@ module.exports = {
     content: ['./src/**/*.html', './src/**/*.js'],
     options: {
       // These are used by the markdown autolink-headers and other JSX elements
-      whitelist: ['group', 'float-right', 'invisible', 'group-hover:visible'],
+      whitelist: [
+        'group',
+        'float-right',
+        'invisible',
+        'group-hover:visible',
+        'border-indigo-600',
+        'border-transparent',
+      ],
     },
   },
   theme: {

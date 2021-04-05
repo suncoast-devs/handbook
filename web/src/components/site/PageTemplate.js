@@ -13,6 +13,7 @@ import {
   OperatingSystemSelector,
 } from '../content/OperatingSystemSwitch'
 import { CodeBlock } from '../content/CodeBlock'
+import { SectionSeparator } from '../content/SectionSeparator'
 
 const components = {
   Link,
@@ -20,6 +21,7 @@ const components = {
   GithubCommitViewer,
   OperatingSystemSwitch,
   OperatingSystemSelector,
+  SectionSeparator,
   code: CodeBlock,
 }
 
@@ -31,9 +33,16 @@ export default function PageTemplate({
     allWarning: { nodes: warnings },
   },
 }) {
-  const [os, setOS] = useState('Mac')
+  // Detect and set the client operating system
+  const [os, setOS] = useState(
+    typeof window !== 'undefined' &&
+      window.navigator &&
+      window.navigator.appVersion &&
+      window.navigator.appVersion.indexOf('Win') !== -1
+      ? 'Windows'
+      : 'Mac'
+  )
 
-  console.log({ mdx, lecture, reading })
   return (
     <OperatingSystemContext.Provider value={{ os, setOS }}>
       <Layout
