@@ -14,7 +14,7 @@ represented by the executable lines of code in our program.
 - Explaining some difficult to understand code.
 - Removing code that is no longer relevant but you just can't let it go.
 
-Comments are good for all of these reasons are. However, the last one, leaving
+Comments are good for all of these reasons. However, the last one, leaving
 commented out code is usually frowned upon since a developer who inherits your
 project may not know why that code needs to still be in the file, but commented
 out.
@@ -26,7 +26,7 @@ out.
 ```csharp
 // These are comments in C# code
 //
-// The double slash beings a comment that lasts for the remainder of the line.
+// The double slash begins a comment that lasts for the remainder of the line.
 
 var name = "Mark"; // Comments can start anywhere on a line
 ```
