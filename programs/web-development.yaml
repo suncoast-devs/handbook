@@ -11,8 +11,7 @@ modules:
   - setup:
     title: Environment Setup
     lessons:
-      - setup-mac
-      - setup-windows
+      - setup
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
