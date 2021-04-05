@@ -113,3 +113,11 @@ diagram we can begin to see the structure of the data in our application. ERD
 diagrams also serve as good documentation for your project and allow you to
 review with the various _stakeholders_ since the diagrams are also easy for
 non-developers to understand (perhaps with a little help).
+
+## Resources
+
+There are many software tools for generating ERD diagrams. If you'd like to try
+these tools we suggest tying these:
+
+- [LucidChart](https://www.lucidchart.com)
+- [Draw.io](Draw.io)

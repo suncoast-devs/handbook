@@ -588,15 +588,51 @@ name here, not a pseudonym or a `1337 haxor` name.
 git config --global user.name "Replace This With Your Full Name"
 ```
 
+Example:
+
+```shell
+git config --global user.name "Grace Hopper"
+```
+
+or
+
+```shell
+git config --global user.name "Ada Lovelace"
+```
+
 ### Tell Git your E-Mail Address
 
-> NOTE: In the following command, instead of
+> -- IMPORTANT NOTE -- STOP AND READ --
+>
+> In the following command, instead of
 > `email-address-you-used-at-github@example.com` use the **same email address
 > you gave to GitHub**. Github uses this to make sure it can generate this
 > awesome "activity" chart for you. ![github-activity](./github-activity.png)
 
+To find the email address you used at github, go to this menu and choose "Your
+Profile"
+
+![Profile Menu](./assets/profile-menu.png)
+
+Once you do, you'll see your profile page that includes the email address you
+used for registration on github. (highlighted in RED)
+
+![Profile Page ](./assets/profile-page.png)
+
+Command to run WITH YOUR PERSONAL EMAIL ADDRESS:
+
+> git config --global user.email "email-address-you-used-at-github@example.com"
+
+Example:
+
 ```shell
-git config --global user.email "email-address-you-used-at-github@example.com"
+git config --global user.email "grace-hopper@example.com"
+```
+
+or
+
+```shell
+git config --global user.email "ada-lovelace@example.com"
 ```
 
 ### Tell Git your Github username
@@ -902,6 +938,13 @@ pip install pgcli --no-deps
 ```
 
 </OperatingSystemSwitch>
+
+## Install a graphical tool for working with our database
+
+`psql` and `pgcli` are good _command-line_ tools for working with a database.
+You may prefer working with a graphical user interface for your database work.
+If so, install [BeeKeeper Studio](https://www.beekeeperstudio.io) and use it in
+place of `psql` and `pgcli`.
 
 ## Test if it is working:
 
