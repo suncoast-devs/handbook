@@ -104,6 +104,13 @@ pip install pgcli --no-deps
 
 </OperatingSystemSwitch>
 
+## Install a graphical tool for working with our database
+
+`psql` and `pgcli` are good _command-line_ tools for working with a database.
+You may prefer working with a graphical user interface for your database work.
+If so, install [BeeKeeper Studio](https://www.beekeeperstudio.io) and use it in
+place of `psql` and `pgcli`.
+
 ## Test if it is working:
 
 From Terminal:
