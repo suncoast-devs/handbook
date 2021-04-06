@@ -19,8 +19,8 @@ different _title_ and _body_ depending on the properties supplied.
 <NewsArticle title="React Version 17 is Released" body="..." />
 ```
 
-One of the "_rules_" of `props` is that they cannot be changed by the receiving
-component. That is, `NewsArticle` cannot change the value of the property.
+One of the "_rules_" of `props` is that the receiving component cannot change
+them. That is, `NewsArticle` cannot change the value of the property.
 
 > `props` are "read only" data
 
@@ -66,11 +66,11 @@ re-rendering.
 
 # Building a Click Counter
 
-In this example we will build a component that displays the number of times a
-user has clicked an `Increment` button. We will go through `5` steps that we can
-follow any time we are building a dynamic user interface. These steps ally
-whether we are building a click-counter or a much more complex user interface
-that interacts with APIs and the user.
+In this example, we will build a component that displays the number of times a
+user has clicked an `Increment` button. We will go through `5` steps to follow
+any time we build a dynamic user interface. These steps apply whether we create
+a click-counter or a much more complex user interface that interacts with APIs
+and the user.
 
 # A step-by-step approach to building a dynamic UI
 
@@ -79,24 +79,24 @@ The steps we will be following in this guide are:
 1. Static Implementation
 2. Make a state object containing data
 3. Try manually changing the value in the state
-4. Connect actions (later on we'll add API interaction here)
+4. Connect actions (later on, we'll add API interaction here)
 5. Update state
 
 ## Step 1 - Static Implementation
 
 Often we are in a rush to start building all the interactions into code at the
 beginning of a project or at the first stage of creating a new component. Resist
-this temptation. If we can build a static version of the component we gain
+this temptation. If we can build a static version of the component, we gain
 several valuable advantages:
 
 1. We can validate our design (that should be coming from our wireframes,
    mockups, or design renderings)
-1. We may discover some elements that were overlooked in the design phase.
-1. We can show the static implementation to our project stakeholders so they can
-   provide feedback before we spend time adding user and API interactions.
+1. We may discover some elements that we overlooked in the design phase.
+1. We can show the static implementation to our project stakeholders to provide
+   feedback before adding user and API interactions.
 
 > NOTE: As a rule, changes and bugs found **early** in a project are easier to
-> deal with, and less "expensive" than those found later. So use this step to
+> deal with and less "expensive" than those found later. So use this step to
 > help ease your process.
 
 Here is the static implementation of our click counter:
@@ -114,14 +114,14 @@ export class Counter extends React.Component {
 }
 ```
 
-> NOTE: We'd also have some CSS with this as well to give the counter a nice
-> user experience.
+> NOTE: We'd have some CSS with this as well to give the counter a nice user
+> experience.
 
 # Step 2 - Make a state object containing data
 
-Now that we have a static design we can review the implementation to find all
-the elements that need to become dynamic. In our case this is simply one
-element, the current `count` of clicks. In more complex cases this may be an
+Now that we have a static design, we can review the implementation to find all
+the elements that need to become dynamic. In our case, this is simply one
+element, the current `count` of clicks. In more complex cases, this may be an
 object with many properties, an array of simple data like strings or numbers, or
 an array of objects. Whatever the structure of this state, we'll create an
 **initial state** value and then use that value wherever we had static data.
@@ -157,28 +157,28 @@ state = {
 This code initializes an **instance** variable named `state` with a value being
 an object containing a single key (`count`) with the value `0`.
 
-The name `state` here is a **very** important fact. We cannot choose any name we
-want for the `state` variable. The value we assign to the variable is completely
+The name `state` here is a **very** essential fact. We cannot choose any name we
+want for the `state` variable. The value we assign to the variable is entirely
 up to us. We could have simply made the `state` value the `0` directly. However,
 it is a fairly common practice to make this value an object with a key that
 gives a _name_ to our data.
 
-You'll see in later examples, when we start working with APIs, the _shape_ of
-the `state` object will follow the structure of the API data. Since we aren't
-using an API here, we can control the structure of the `state` variable.
+You'll see in later examples when we start working with APIs, the _shape_ of the
+`state` object will follow the structure of the API data. Since we aren't using
+an API here, we can control the design of the `state` variable.
 
 The next change is in our `p` paragraph. Instead of the static value `0` we
 place `{this.state.count}`. This will render the value associated with the
 `count` key inside the `this.state` variable (object).
 
-If we were to add this component to a project we would see that the component
+If we were to add this component to a project, we would see that the component
 would display `The count is 0` when it first renders.
 
 > NOTE: A vitally important thing to remember is that your component will render
 > the **first** time with whatever value is in the `this.state` variable. This
 > means we need to _always_ provide an initial value for the `state` that _makes
-> sense_. In this code if we forgot to initialize `state` we would have received
-> an **error** the first time our component rendered.
+> sense_. If we forgot to initialize `state` in this code, we would have
+> received an **error** the first time our component rendered.
 
 > **Always provide a working default/initial value for `state`**
 
@@ -186,9 +186,9 @@ would display `The count is 0` when it first renders.
 
 While we have removed the _static_ implementation of the `0` in our
 `The count is...` statement (another way to say this is "hardcoded") we do not
-yet have the ability to **change** the value due to a user interaction.
+yet have the ability to **change** the value due to user interaction.
 
-However, if we the programmer were to change the initial value of `state` we
+However, if we, the programmer, were to change the initial value of `state` we
 could see that the UI would reflect the new value.
 
 Change the state initializing code to:
@@ -204,37 +204,37 @@ and you will see the display update to `The count is 42`.
 Another way to change the state value is using the
 [React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
 
-If you open your developer window with the React Developer Tools installed
-you'll see a new tab `Components.` If you then click in that tab you will see
-`Counter` which will, when clicked, show you the current value of `state`. Here
+If you open your developer window with the React Developer Tools installed,
+you'll see a new tab `Components.` If you then click that tab you will see a
+component which will, when clicked, show you the current value of `state`. Here
 you can double click on the value and change it to any number you like. As soon
 as you make that change, the UI will update like magic!
 
 Both of these approaches show that if there were **some** way to change the
-state the UI would automatically update to show the new value of the counter!
+state the UI would automatically update to display the new value of the counter!
 
-> NOTE: This is an important step. For this example it seems simple. Later we
+> NOTE: This is an important step. For this example, it seems simple. Later we
 > will be dealing with much more complex state variables and changing the value
-> to see how our component "reacts" will be more important.
+> to see how our component "reacts" will be more critical.
 
 # Step 4 - Connect actions
 
 We can now add interaction code to allow the user to click the `<button>` and
 have the counter update.
 
-In non-React based JavaScript we would setup an `addEventListener` for such an
-interaction. We would pass this function an event handling function.
+In non-React-based JavaScript, we would set up an `addEventListener` for such an
+interaction. We would pass this function as an event handling function.
 
-In React the event handling function is still useful. In this case we will use
+In React, the event handling function is still proper. In this case, we will use
 the `arrow function` syntax. This ensures that the `this.state` is correctly set
 when we need it.
 
-It is important to use `arrow syntax` for your event handling functions based on
-how **binding** works. To read more about binding `this` in JavaScript see
+It is essential to use `arrow syntax` for your event handling functions based on
+how **binding** works. To read more about binding `this` in JavaScript, see
 [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this).
-Understanding `this` and `binding` is an important concept for JavaScript
-developers (and it is often an interview question) -- but it is outside the
-immediate scope here.
+Understanding `this` and `binding` is an essential concept for JavaScript
+developers (and it is often an interview question) but outside the immediate
+scope here.
 
 > **IMPORTANT** -- use `arrow functions` for your event handlers.
 
@@ -247,32 +247,31 @@ handleClickButton = event => {
 ```
 
 Notice that we still receive an `event` variable as the first argument. We'll
-use that `event` variable to prevent any default behavior that would happen
-based on clicking on whatever element caused this event. This isn't always
-necessary, but it can be a good habit. There is no default behavior for this
-button, but this would inhibit that behavior if there were.
+use that `event` variable to prevent any default behavior based on clicking on
+whatever element caused this event. This isn't always necessary, but it can be a
+good habit. There is no default behavior for this button, but this would inhibit
+that behavior if there were.
 
-For now we will `console.log` a message. This allows us to **test** if we have
-properly connected our function to the element. When writing code, try to write
-a small amount of code and then **validate** if that code works. Right now we do
-this with `console.log` but later on you'll learn about concepts like
+For now, we will `console.log` a message. This allows us to **test** if we have
+correctly connected our function to the element. When writing code, try to write
+a small amount of code and then **validate** if that code works. Right now, we
+do this with `console.log` but later on, you'll learn about concepts like
 `automated testing` that can do this for us. Here we add a line of `console.log`
 to see a message in the console when we click on the button.
 
-> **NOTE** When writing code, write a few lines and then consider "how could I
-> know if this code will work" -- Often things like `console.log` in JavaScript
-> will help you debug.
+> **NOTE** When building your logic, write a few lines and then consider "how
+> could I know if this code will work" -- Often, a few `console.log` statements
+> in JavaScript will help you debug.
 
 ## Sidebar -- Using `debugger`
 
-There is a `debugger` built into our browser. The other way we could validate
-this code is to use the `debugger` statement instead of `console.log`. The
-`debugger` statement will stop our code and bring up the JavaScript debugger
-window. However, this only happens if your Developer Tools are open. The
-`debugger` statement is useful to allow you to stop and "look around" at the
-condition of your code while you are running it.
+There is a `debugger` built into our browser. We could validate this code using
+the `debugger` statement instead of `console.log`. The `debugger` statement will
+stop our code and bring up the JavaScript debugger window. However, this only
+happens if your Developer Tools are open. The `debugger` statement helps you
+stop and "look around" at your code's condition while you are running it.
 
-> **NOTE** Sometimes a `debugger` statement can be more useful than a
+> **NOTE** Sometimes, a `debugger` statement can be more useful than a
 > `console.log`. Try using it and see if you prefer that.
 
 > **NOTE** Don't forget to take the `debugger` statement out of your code
@@ -280,7 +279,7 @@ condition of your code while you are running it.
 
 ## Back to our regularly scheduled lesson
 
-Now that we have the handling function we can update our `<button>` to execute
+Now that we have the handling function, we can update our `<button>` to execute
 that function each time it is clicked.
 
 ```jsx
@@ -288,15 +287,15 @@ that function each time it is clicked.
 ```
 
 In React we will use `onXXXXX` methods (e.g. `onClick`, `onSubmit`,
-`onContextMenu`, `onChange`, etc.) when we want to associate an element ot an
-event handling function. In this case we are telling React to call our
+`onContextMenu`, `onChange`, etc.) when we want to associate an element to an
+event handling function. In this case, we are telling React to call our
 `handleClickButton` function each time the button is clicked.
 
 Now we know that we can connect a method to an event handling function.
 
 # Step 5 - Update State
 
-For our button we want to:
+For our button, we want to:
 
 - Get the current count from the state
 
@@ -338,7 +337,7 @@ correct and won't generate any errors when we execute it, we will see that
 
 `this.setState` is a function given to us by the fact that we
 `extends React.Component` and is used to tell React that **after** this function
-is done, it should recognize this new state object and **rerender** our
+is done, it should recognize this new state object and ** re-render** our
 component.
 
 > NOTE: `this.setState` is the only way we should ever update state in a `class`
@@ -407,7 +406,7 @@ handleClickButton = event => {
 We could continue and use a rule:
 
 > RULE: If we create a variable and use it only once, we _could_ replace the use
-> of the variable with it's definition.
+> of the variable with the variable's definition.
 
 Using this rule:
 
@@ -599,7 +598,7 @@ it generates data like this:
 
 We should use good default values for our initial state, so we'll make the
 `winner` and `id` values equal to `null` to indicate we don't have any values.
-We'll leave the `board' equal to the two dimensional array of strings.
+We'll leave the `board' equal to the two-dimensional array of strings.
 
 ```js
 state = {
@@ -663,15 +662,15 @@ handleClickCell = (row, column) => {
 ```
 
 Notice here we aren't using the typical function that takes an `event`. This is
-because we need additional context in order to handle clicking. We'll deal with
-this by writing a slightly different `onClick` method for each of the `<li>`
+because we need additional context to handle clicking. We'll deal with this by
+writing a slightly different `onClick` method for each of the `<li>`
 
 ```jsx
 <li onClick={() => this.handleClickCell(0, 0)}>{this.state.board[0][0]}</li>
 ```
 
-In this case the value of the `onClick` is itself an arrow function! However, we
-have placed it **inline**. By doing this we can specify the row and column
+In this case, the value of the `onClick` is itself an arrow function! However,
+we have placed it **inline**. By doing this, we can specify the row and column
 values.
 
 The way to think about `onClick={() => this.handleClickCell(0, 0)}` is this:
@@ -696,13 +695,14 @@ So we might do the same with the remaining `li`
 </ul>
 ```
 
-Try clicking on each of the cells on the board and we should see messages in our
-developer console that match up with the row and column we have been clicking!
+Try clicking on each of the cells on the board, and we should see messages in
+our developer console that matches up with the row and column we have been
+clicking!
 
 # Step 5 - Update the state
 
-For this we will use the Tic Tac Toe API. Reading the API it appears we need to
-"Create a new game" to get a "Game ID" so that we can register moves.
+For this, we will use the Tic Tac Toe API. Reading the API, it appears we need
+to "Create a new game" to get a "Game ID" so that we can register moves.
 
 We'll make a small change to our UI to add a button:
 
@@ -760,7 +760,7 @@ on a click.
 
 ## Update handleClickCell
 
-When we click a cell we need to build an API request to send to the server. The
+When we click a cell, we need to build an API request to send to the server. The
 response we get back, as we did with handleNewGame, will be in exactly the form
 to use with `this.setState`.
 
@@ -815,7 +815,7 @@ Make a new game and try a few moves!
 The API will also tell us the winner of the game. We can make the header display
 the winner information.
 
-To do this we'll first extract the static data to a variable.
+To do this, we'll first extract the static data to a variable.
 
 ```jsx
   const header = 'Tic Tac Toe'
@@ -837,7 +837,7 @@ const header = this.state.winner
   : 'Tic Tac Toe'
 ```
 
-And with this we have a playable Tic Tac Toe game that demonstrates how to use
+And with this, we have a playable Tic Tac Toe game that demonstrates how to use
 an API and React State to make an interactive app!
 
 # Improve the code
@@ -845,7 +845,7 @@ an API and React State to make an interactive app!
 We can improve the code to remove some duplication in the drawing of the game
 board.
 
-We can use `map` to generate the elements of the board. In this case since we
+We can use `map` to generate the elements of the board. In this case, since we
 have an _array of arrays_ we'll have to use **two** `map` calls. The outer one
 will loop through the `rows` and the inner one will loop through the `columns`
 
@@ -867,7 +867,7 @@ will loop through the `rows` and the inner one will loop through the `columns`
 ```
 
 Two dimensional arrays can be tricky at first so study this code. Maybe some
-console.log will help make the code more clear:
+`console.log` will help make the code more clear:
 
 ```jsx
 <ul>
@@ -898,8 +898,8 @@ console.log will help make the code more clear:
 > React will be satisfied.
 
 You may have noticed that if you try to click on a game square before there is a
-game created, or after a winner is decided, we'll get back some error
-information from the API.
+game created, or after a winner exists, we'll get back some error information
+from the API.
 
 Let's block clicks in these cases:
 
@@ -913,8 +913,8 @@ We can do this by introducing the concept of a
 [guard clause](<https://en.wikipedia.org/wiki/Guard_(computer_science)>). A
 `guard clause` is a boolean conditional (typically an `if`) statement that
 checks for conditions under which we don't want the rest of the function/method
-to execute. Typically inside a `guard clause if statement` we would see a
-`return` statement which would end the function's execution.
+to execute. Typically inside a `guard clause if statement`, we would see a
+`return` statement, which would end the function's execution.
 
 In our case we want to add this code to the top of our `handleClickCell`
 function:
@@ -934,10 +934,10 @@ if (
 
 This allows us to block the click for each of the conditions we want to prevent.
 
-If you look in the `CSS` file you'll see that we have some styling for cells
+If you look in the `CSS` file, you'll see that we have some styling for cells
 that show any cell with a class of `taken` to have a cursor that indicates we
-cannot click. This adds a nice visual effect to align with the `guard clause`
-protection we just added.
+cannot click. This adds a nice visual effect to align with the
+`guard clause`protection we just added.
 
 We can dynamically set the class name of an `li` again using a `ternary`
 expression:
@@ -953,7 +953,7 @@ expression:
 ```
 
 This code will set the `className` to a blank string if the cell is still open
-(equal to a space) and to `taken` if there is any other value (say an `X` or an
+(equal to space) and to `taken` if there is any other value (say an `X` or an
 `O`)
 
 # Reviewing the Steps for an API based component
