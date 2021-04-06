@@ -115,7 +115,11 @@ export class Counter extends React.Component {
     count: 42,
   }
 
-  handleClickButton = () => {
+  handleClickButton = event => {
+    // This isn't necessary, but it can be a good habit.
+    // There is no default behavior for this button, but this would inhibit that behavior if there were.
+    event.preventDefault()
+
     console.log('Clicked!')
   }
 
@@ -153,7 +157,9 @@ export class Counter extends React.Component {
     count: 42,
   }
 
-  handleClickButton = () => {
+  handleClickButton = (event) => {
+    event.preventDefault()
+
     // Get the current count
     const currentCount = this.state.count
 
@@ -196,7 +202,9 @@ export class Counter extends React.Component {
     count: 42,
   }
 
-  handleClickButton = () => {
+  handleClickButton = event => {
+    event.preventDefault()
+
     const newState = {
       count: this.state.count + 1,
     }
@@ -227,7 +235,9 @@ export class Counter extends React.Component {
     count: 42,
   }
 
-  handleClickButton = () => {
+  handleClickButton = event => {
+    event.preventDefault()
+
     this.setState({ count: this.state.count + 1 })
   }
 
@@ -336,6 +346,7 @@ export class App extends Component {
       [' ', ' ', ' '],
       [' ', ' ', ' '],
     ],
+    id: null,
     winner: null,
   }
 ```
