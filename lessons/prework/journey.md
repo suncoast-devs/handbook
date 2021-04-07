@@ -7,7 +7,7 @@ Going through this course is a fantastic journey, full of highs and lows. Here
 are some topics/articles to read through as you mentally prepare yourself to
 begin class:
 
-## Learn how to adapt to the fast pace
+## Learn How to Adapt to the Fast Pace
 
 This course moves _quickly_ as we cover a large amount of material in a short
 time frame. Managing your time and learning to cope with the pacing of the
@@ -18,7 +18,7 @@ These
 will help you organize your time, body, and scheudle to be ready for the pace of
 this class.
 
-## Everyone has something to teach (also known as: "there are no silly questions")
+## Everyone Has Something to Teach (Also Known as: "There Are No Silly Questions")
 
 Even if someone participates with "just a question," it benefits the classroom
 and yourself. The chances are that someone else has that question. Great
@@ -29,7 +29,7 @@ community, and peers. We encourage you to take advantage of this time to work
 together, interact, ask and answer questions. Their experience, knowledge, and
 guidance are a prime aspect of what you are paying for in this process.
 
-## Automating, scheduling, and decision fatigue
+## Automating, Scheduling, and Decision Fatigue
 
 We are hardwired to need breaks every 90-120 minutes. We've considered this in
 the schedule for each day. During your open lab time, focus on scheduling your
@@ -42,7 +42,7 @@ non-coding websites, checking social media, or reading emails.
 
 Focus is important.
 
-## There is no excuse not to work on high-priority items first.
+## There is No Excuse Not to Work on High-Priority Items First
 
 To overcome decision fatigue and be more productive in general, the author Tim
 Ferris recommends putting systems and processes in place that automate as much
@@ -58,7 +58,7 @@ many excuses not to focus on our task at hand; don't let them control you.
 is one way to organize activities. A process like this can help focus on what to
 work on next.
 
-## Preparing your support team
+## Preparing Your Support Team
 
 Your family members, partners, spouses, friends, and loved-ones are all part of
 your team while you are in this program. They too need to be prepared for the

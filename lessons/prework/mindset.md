@@ -28,7 +28,7 @@ and watch
 Success in our program will require you to focus on a growth mindset. During the
 course check in with yourself to see if you are experiencing a fixed mindset.
 
-## Getting out of your comfort zone
+## Getting Out of Your Comfort Zone
 
 Surprise! You are already out of your comfort zone! You've signed up for this
 class which is a huge step. You have left your comfort zone which is the
@@ -80,7 +80,7 @@ see a pattern of how you prefer to communicate. Use the results not as concrete
 life-changing facts but rather as self-reflection to help you consume, apply and
 eventually share new information.
 
-## Taking care of yourself
+## Taking Care of Yourself
 
 You are about to embark on a journey of personal and professional growth. There
 will be highs and lows.

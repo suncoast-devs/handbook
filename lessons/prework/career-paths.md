@@ -3,7 +3,7 @@ title: Know what you are getting into
 order: 40
 ---
 
-## What is software?
+## What is Software?
 
 The world of development is vast and has a unique and fascinating past. To give
 you a better perspective on software engineers, read this blog post about what
@@ -23,7 +23,7 @@ Really, read:
 We really think you should read:
 [What is Code?](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)
 
-## What jobs are out there?
+## What Jobs Are Out There?
 
 In the technical space, there are many other jobs than just "developer."
 

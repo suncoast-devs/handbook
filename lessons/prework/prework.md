@@ -9,9 +9,9 @@ marathon. You don't show up the day of the race and start; you need to train
 beforehand. In our program, your brain is the muscle that needs to train. This
 pre-work is training for your brain.
 
-# Starting in the back
+# Starting in the Back
 
-Our full time program _begins_ with work on the Back End of a website. That is,
+Our full time program _begins_ with work on the back-end of a website. That is,
 all of the code that deals with keeping track of data, storing it in a database,
 searching, sorting, collating, and delivering information to the front end of a
 website.
@@ -46,9 +46,9 @@ If you have 30+ hours to dedicate (and it may take you much longer) you can work
 through a lesson at
 [Code Academy](https://www.codecademy.com/learn/learn-c-sharp).
 
-## Fundamentals and Front End Development
+## Fundamentals and Front-End Development
 
-## Start with the HTML and CSS
+## Start With the HTML and CSS
 
 Start with some HTML and CSS. HTML and CSS are the essentially what the web is
 all about. HTML and CSS are what the user sees and interacts with the most.
@@ -68,7 +68,7 @@ feet wet.
 - [https://www.htmldog.com/guides/css/advanced/](https://www.htmldog.com/guides/css/advanced/)
 - [https://www.edx.org/course/advanced-css-concepts-3](https://www.edx.org/course/advanced-css-concepts-3)
 
-## Add some life with JavaScript
+## Add Some Life With JavaScript
 
 JavaScript allows to create interactive and dynamic websites. This is what
 brings our websites to life. This will also help us learn the fundamentals of
