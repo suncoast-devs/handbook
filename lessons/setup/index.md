@@ -137,28 +137,11 @@ As a developer on the Windows platform, one of our main tools is `Powershell`.
 interact with our computer. Using the shell seems difficult at first, but with
 practice, this becomes a much more efficient way of using our computers.
 
-## Two ways to run PowerShell. `PowerShell` and `Windows Terminal`
-
-### PowerShell is the "classic" way
+### PowerShell
 
 To open `Powershell`, open your `start` menu or type \(Win + R\), then type
 `Powershell`, this searches your system and give you the option to start it,
 just like any other program.
-
-### Windows Terminal is the "new and fancy" way
-
-Windows Terminal is a better tool for running PowerShell. It uses a better color
-scheme for text and errors. It also supports multiple tabbed windows. We
-recommend this in place of running PowerShell directly.
-
-If you do choose to use Windows Terminal, any place that says to start a
-PowerShell you may start a new Windows Terminal tab.
-
-#### Installation
-
-```shell
-scoop install windows-terminal
-```
 
 ## PRO TIP
 
@@ -318,6 +301,26 @@ scoop install extras/vcredist2019
 
 </OperatingSystemSwitch>
 
+<OperatingSystemSwitch allowedOperatingSystems={['Windows']}>
+
+### Windows Terminal
+
+Windows Terminal is a better tool for running PowerShell. It uses a better color
+scheme for text and errors. It also supports multiple tabbed windows. We
+recommend this in place of running PowerShell directly.
+
+If you do choose to use Windows Terminal, any place that says to start a
+PowerShell you may start a new Windows Terminal tab. You may also want to _pin_
+this to your task bar.
+
+#### Installation
+
+```shell
+scoop install windows-terminal
+```
+
+</OperatingSystemSwitch>
+
 <SectionSeparator />
 
 # Node
@@ -353,6 +356,8 @@ npm install --global windows-build-tools
 ```
 
 > NOTE: This may take a long time to complete
+
+**CLOSE THIS POWERSHELL WHEN COMPLETE**
 
 </OperatingSystemSwitch>
 
@@ -420,6 +425,8 @@ download the installer.
 - Use the default for "Select Additional Tasks" -- Press `Next`
 - Click `Install`
 - Ensure the `Launch Visual Studio Code` checkbox is selected and press `Finish`
+- Once launched, uncheck the option "Show welcome page on startup" and close the
+  welcome window
 
 </OperatingSystemSwitch>
 
@@ -653,12 +660,25 @@ git config --global core.editor "code --wait"
 
 ### Tell Git + Hub to use `HTTPS`
 
-Finally, we need to set up Git and GitHub to use the `https` protocol. Enter the
+We need to set up Git and GitHub to use the `https` protocol. Enter the
 following in your shell (`Powershell`):
 
 ```shell
 git config --global hub.protocol https
 ```
+
+<OperatingSystemSwitch allowedOperatingSystems={['Windows']}>
+
+### Tell git how to handle line endings
+
+The way Windows and Mac handle the end of a line of code differ. The following
+setup will help configure git to handle this difference.
+
+```shell
+git config --global core.autocrlf true
+```
+
+</OperatingSystemSwitch>
 
 <SectionSeparator />
 
@@ -1115,6 +1135,18 @@ npm install --global prettier
 ```
 
 <SectionSeparator />
+
+# Check your setup
+
+From your terminal/powershell execute:
+
+```shell
+sdg check
+```
+
+After processing, this will give you a report of any issues in your setup. If
+you have any issues (red errors) please review with your instructor or academic
+mentor.
 
 # Additional Resources
 
