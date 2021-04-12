@@ -695,7 +695,7 @@ us.
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
 ```shell
-brew install dotnet-sdk
+brew install --cask dotnet-sdk
 ```
 
 </OperatingSystemSwitch>
@@ -995,7 +995,7 @@ Insomnia is a graphical tool that allows us to work with web based APIs.
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
 ```shell
-brew install insomnia
+brew install --cask insomnia
 ```
 
 </OperatingSystemSwitch>
@@ -1024,7 +1024,7 @@ tools will help.
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
 ```shell
-brew install firefox
+brew install --cask firefox
 ```
 
 </OperatingSystemSwitch>
