@@ -11,7 +11,7 @@ Welcome to your journey as a developer. When learning a new language, a develope
 
 ## Requirements
 
-Make sure you have followed the [setup instructions](https://handbook.suncoast.io/lessons/setup-all) for your computer's operating system
+Make sure you have followed the [setup instructions](https://handbook.suncoast.io/lessons/setup) for your computer's operating system
 
 Follow [this guide](https://handbook.suncoast.io/lessons/cs-how-to-create-and-run-programs) to review how to create and run `C#` applications.
 
@@ -26,4 +26,4 @@ dotnet new sdg-console -o HelloDotNet
 ### Explorer Mode
 
 - Create a new app. (see the setup instructions above as well as the how-to-guides)
-- In the `static void Main`, Change `Welcome to C#`, to `Hello, World, my name is [your name]`
+- In the `static void Main`, Change `Welcome to C#`, to `Hello, World, my name is [your name]` -- replace `[your name]` with your name typed out. For example: `Hello, World, my name is Katherine Johnson`
