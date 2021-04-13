@@ -816,14 +816,11 @@ brew install hub
 Start a new Powershell and enter the command:
 
 ```shell
-hub api | grep -q "current_user_url" && echo "Connected" || echo "Not Connected"
+hub api user --flat
 ```
 
 This will ask for your `github.com username`, supply your username or email
 address. Enter the token you received above as your password.
-
-If you see `Connected` then you have logged into your github account. Otherwise
-you will see "Not Connected"
 
 </OperatingSystemSwitch>
 
@@ -838,7 +835,7 @@ scoop install hub
 Start a new Powershell and enter the command:
 
 ```shell
-hub api
+hub api user --flat
 ```
 
 This will ask for your `github.com username`, supply your username or email
@@ -866,7 +863,7 @@ The database engine we will be using for our back-end work.
 Start a Terminal and run:
 
 ```shell
-pg_config >/dev/null 2>&1 || echo "STOP"
+pg_config >/dev/null 2>&1 && echo "STOP"
 ```
 
 If this comes back and says "STOP" -- **STOP AND DISCUSS WITH YOUR INSTRUCTOR**
