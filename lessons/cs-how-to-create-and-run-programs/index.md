@@ -12,6 +12,12 @@ to contain our code. This project will tell our computer how to organize our
 code, how to make the code ready to run (known as `compiling`) and finally how
 to run our code.
 
+## TL;DR
+
+Too Long; Didn't Read
+
+Skip to the end for a short animation of the process in action
+
 ## Before getting started
 
 Ensure you have [setup your environment](/lessons/cs-environment-setup)
@@ -210,3 +216,7 @@ This leaves us in our code editor more often and allows us to focus.
 # Congratulations
 
 We are all setup to begin writing programs in `C#` and `.NET`!
+
+# Demonstration
+
+![How To Animation](./assets/how-to.gif)
