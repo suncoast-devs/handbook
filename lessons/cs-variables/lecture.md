@@ -321,42 +321,6 @@ var howLong = sentence.Length;
 
 ---
 
-# What else ya got?
-
-Strings have other capabilities.
-
----
-
-[.autoscale: true]
-
-# Character by position
-
-[.column]
-
-```csharp
-var firstLetter = sentence[0];
-var secondLetter = sentence[1];
-var thirdLetter = sentence[2];
-```
-
-[.column]
-
-> New syntax _*`[]`*_
-
-<br />
-
-> The `[]` is the `index` operator.
-
-<br />
-
-> Indicates which position of the string we want the character for.
-
-<br />
-
-> Counting starts at 0.
-
----
-
 [.autoscale: true]
 
 # DateTime
