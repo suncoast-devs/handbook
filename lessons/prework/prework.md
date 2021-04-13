@@ -1,6 +1,6 @@
 ---
 title: Practice Pre-work
-order: 9
+order: 70
 ---
 
 Pre-work is material that ensures you have the necessary foundation required for
@@ -9,13 +9,46 @@ marathon. You don't show up the day of the race and start; you need to train
 beforehand. In our program, your brain is the muscle that needs to train. This
 pre-work is training for your brain.
 
-## Start Here
+# Starting in the Back
 
-Watch ["Your Brain's API"](https://www.youtube.com/watch?v=hY14Er6JX2s).
+Our full time program _begins_ with work on the back-end of a website. That is,
+all of the code that deals with keeping track of data, storing it in a database,
+searching, sorting, collating, and delivering information to the front end of a
+website.
 
-## Fundamentals and Front End Development
+Websites are served from a web server running some back-end language, such as
+Ruby, Python, or .NET. During the course, you are studying a back-end language
+to learn more in depth. There are plenty of back-end languages to choose from.
+Each language has its strengths and weakness. We have chosen to focus on `C#`
+and `.NET`.
 
-## Start with the HTML and CSS
+### Explore C\# \("c-sharp"\) & .NET
+
+`.NET` is a robust framework built by Microsoft. While there are many languages
+that use the `.NET` ecosystem, `C#` is a common, flexible, and ubiquitous
+language.
+
+There are a several resources here that can help you learn some basics of `C#`
+and `.NET`. We feel that this
+[four hour video from `freeCodeCamp` and Giraffe Academy is a great start](https://www.youtube.com/watch?v=GhQdlIFylQ8).
+If you do nothing else in this section do watch this video. Don't try to type
+along with the video or even worry about understanding everything that is
+happening. Concentrate on the big ideas, write down new terminology, and get
+familiar with what it sounds like to discuss code.
+
+For an interactive tutorial, check out [LearnCS.org](http://www.learncs.org/)
+
+For a longer, and more technical introduction, this video from Microsoft:
+[C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
+is worth a viewing.
+
+If you have 30+ hours to dedicate (and it may take you much longer) you can work
+through a lesson at
+[Code Academy](https://www.codecademy.com/learn/learn-c-sharp).
+
+## Fundamentals and Front-End Development
+
+## Start With the HTML and CSS
 
 Start with some HTML and CSS. HTML and CSS are the essentially what the web is
 all about. HTML and CSS are what the user sees and interacts with the most.
@@ -35,7 +68,7 @@ feet wet.
 - [https://www.htmldog.com/guides/css/advanced/](https://www.htmldog.com/guides/css/advanced/)
 - [https://www.edx.org/course/advanced-css-concepts-3](https://www.edx.org/course/advanced-css-concepts-3)
 
-## Add some life with JavaScript
+## Add Some Life With JavaScript
 
 JavaScript allows to create interactive and dynamic websites. This is what
 brings our websites to life. This will also help us learn the fundamentals of
@@ -46,36 +79,3 @@ way.
 ### Basics
 
 - [https://www.learn-js.org/](https://www.learn-js.org/)
-- [https://developer.mozilla.org/en-US/docs/Learn/JavaScript](https://developer.mozilla.org/en-US/docs/Learn/JavaScript)
-- [https://javascript.info/](https://javascript.info/)
-- [https://www.sololearn.com/Play/JavaScript](https://www.sololearn.com/Play/JavaScript)
-- [freeCodeCamp](https://learn.freecodecamp.org/)
-
-### Advanced
-
-- [http://jstherightway.org/](http://jstherightway.org/)
-- [http://bonsaiden.github.io/JavaScript-Garden/](http://bonsaiden.github.io/JavaScript-Garden/)
-
-## Back-end Focus
-
-Next, let us continue our journey with the rest of what creates a website, the
-server. Websites are served from a web server running some back-end language,
-such as Ruby, Python, or .NET. During the course, you are studying a back-end
-language to learn more in depth. There are plenty of back-end languages to
-choose from. Each language has its strengths and weakness. We have chosen to
-focus on .NET. Check out these resources to get started
-
-### Explore C\# \("c-sharp"\) & .NET
-
-.NET is a robust framework built by Microsoft. .NET and C# is a common, flexible
-and ubiquitous language.
-
-- [SoloLearn C# course](https://www.sololearn.com/Course/CSharp/)
-- [LearnCS.org](http://www.learncs.org/)
-- [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
-- [Code Academy](https://www.codecademy.com/learn/learn-c-sharp)
-- [Tutorial Point](https://www.tutorialspoint.com/csharp/)
-
-And of course
-[the docs](https://docs.microsoft.com/en-us/dotnet/csharp/getting-started/) are
-usually a great place to start once you learn a little from the above tutorials
