@@ -1,8 +1,7 @@
 Theme: Next, 1
 
-<!-- prettier-ignore-start -->
-
 # [fit] Arrays and Lists
+
 # [fit] Tracking more than one thing
 
 ![](https://i.pinimg.com/originals/dc/9c/d8/dc9cd8cb84ecf2deeaaa7ba8df5f3748.gif)
@@ -26,12 +25,12 @@ var name4 = "Bill";
 
 ---
 
-#  Arrays
+# Arrays
 
 ```csharp
 
 //               Type
-//               |   
+//               |
 //               |   Array
 //               |    ||
 //               |    ||  Start of list of values
@@ -69,7 +68,6 @@ var nameCount = names.Length;
 ```
 
 ---
-
 
 # [fit] Unfortunately `array`s come with some limitations:
 
@@ -146,9 +144,7 @@ We can find out how many elements are in the list but we must use a new syntax:
 var numberOfNamesInList = names.Count;
 ```
 
-For `List` we use `Count` instead of `Length` and notice the `()` after `Count`
-
-This is because `Count` is a **method** not a **property** -- We'll be talking about these soon.
+For `List` we use `Count` instead of `Length`
 
 ---
 
@@ -172,7 +168,138 @@ listOfScores.Add(44);
 
 ---
 
+## Other helpful List features
+
+---
+
+### Clear
+
+This method removes all the elements from the current list.
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+
+listOfScores.Clear();
+```
+
+---
+
+### IndexOf
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+
+var indexOfFiftyFive = listOfScores.IndexOf(55);
+Console.WriteLine($"Found 55 at index {indexOfFiftyFive}"); // Prints 2
+```
+
+---
+
+### Insert
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+
+// Insert the number `42` so it placed at index 2 (in this case after the 100)
+listOfScores.Insert(2, 42);
+
+// Now our list has: 12, 100, 42, 55, and 44
+```
+
+---
+
+### Remove
+
+Removes the value from the list. Only the first occurrence of the value is removed. For instance in the example below, there are two `55`s in the list. After calling `Remove(55)` there is still one `55` in the list.
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+listOfScores.Add(55);
+
+Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 5
+listOfScores.Remove(55);
+
+Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 4
+```
+
+---
+
+### RemoveAt
+
+If we want to remove a value at a specific instance we can call `RemoveAt` and supply the index.
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+listOfScores.Add(55);
+
+Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 5
+
+// This will remove the `44` since it's index 3.
+listOfScores.RemoveAt(3);
+
+Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 4
+```
+
+---
+
+### Reverse
+
+This reverses the list in place.
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+listOfScores.Add(55);
+
+listOfScores.Reverse();
+
+// Now our list has 55 44 55 100 12
+```
+
+---
+
+### Sort
+
+This orders the values in place.
+
+```csharp
+var listOfScores = new List<int>();
+listOfScores.Add(12);
+listOfScores.Add(100);
+listOfScores.Add(55);
+listOfScores.Add(44);
+listOfScores.Add(55);
+
+listOfScores.Sort();
+
+// Now our list has 12 44 55 55 100
+```
+
+---
+
 # [fit] We will be using `List` quite a lot in our time with `C#`.
 
-
-<!-- prettier-ignore-end -->
+Top Tip: See the Quick Reference Guide for more useful `List` help

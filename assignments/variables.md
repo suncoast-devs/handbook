@@ -76,8 +76,9 @@ dotnet new sdg-console -o VariablesCS
 
 - Using Logic
   - Add some _logic_ to your program that prints a different, special, greeting to the user if their name happens to be `Alice`.
-- Using Advanced Types
-- Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the date variables.
+- Using DateTime
+  - Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the date variables.
+  - See the [lesson on variables](/lessons/cs-variables#datetime) for some guidance on `DateTime`
 
 ### Epic Mode
 

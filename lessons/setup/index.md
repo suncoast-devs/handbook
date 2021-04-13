@@ -1162,3 +1162,5 @@ mentor.
 - Follow this [tutorial](https://learnpythonthehardway.org/book/appendixa.html)
 
 </OperatingSystemSwitch>
+
+## Learn the Windows PowerShell
