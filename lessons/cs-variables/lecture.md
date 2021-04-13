@@ -201,30 +201,31 @@ be cases where we cannot.
 var score = 42;
 ```
 
-### Floats
+### Double
 
 ```csharp
-var total = 10f;
-var price = 10.0;
+var total = 10.0;
+var alsoTotal = 10d;
 var pi = 3.14159265;
 ```
 
 [.column]
 
+
+### Floats
+
+```csharp
+var total = 10f;
+var price = 10.0f;
+var pi = 3.14159265f;
+```
+
 ### Decimal
 
 ```csharp
 var total = 10m;
-var price = 10.0;
-var pi = 3.14159265;
-```
-
-### Double
-
-```csharp
-var total = 10.0;
-var total = 10d;
-var pi = 3.14159265
+var price = 10.0m;
+var pi = 3.14159265m;
 ```
 
 ---
@@ -272,12 +273,12 @@ var worldIsFlat = false;
 
 ```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
-var howLong = sentence.length;
+var howLong = sentence.Length;
 ```
 
 ^ Variable being used on the _right hand side_ for the first time. ^ Right side
 first ^ Result goes into variable on the left side ^ The `.` in the
-`sentence.length` asks the variable `sentence` for it's `length` property.
+`sentence.Length` asks the variable `sentence` for it's `Length` property.
 
 ---
 
@@ -289,7 +290,7 @@ first ^ Result goes into variable on the left side ^ The `.` in the
 //     variable  right-hand-side
 //        |             |
 //        v             v
-    var howLong = sentence.length;
+    var howLong = sentence.Length;
 ```
 
 [.column]
@@ -298,11 +299,11 @@ first ^ Result goes into variable on the left side ^ The `.` in the
 // variable  property
 //    |         |
 //    v         v
-    sentence.length
+    sentence.Length
 ```
 
 ^ Computer first goes to the contents of the variable (sentence) in memory and
-then looks at the property `length` and it figures out what that property value
+then looks at the property `Length` and it figures out what that property value
 is. ^ In this case the `int` 44.
 
 ---
@@ -355,6 +356,8 @@ var thirdLetter = sentence[2];
 > Counting starts at 0.
 
 ---
+
+[.autoscale: true]
 
 # DateTime
 

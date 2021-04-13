@@ -279,16 +279,16 @@ For instance, we can ask the variable how many characters are in the string.
 ```csharp
 var sentence = "The quick brown fox jumped over the lazy dog";
 
-var howLong = sentence.length;
+var howLong = sentence.Length;
 ```
 
-With the code `var howLong = sentence.length;` we see a variable being used on
+With the code `var howLong = sentence.Length;` we see a variable being used on
 the _right hand side_ for the first time. When processing an _assignment
 statement_ the computer will figure out the value of the **right hand side**
 first before taking that result and assigning it to the variable on the left.
-The next new syntax here is `sentence.length` -- the `.` in that part of the
+The next new syntax here is `sentence.Length` -- the `.` in that part of the
 statement separates the variable (`sentence`) from the property we are asking
-about, `length`. So to break this down:
+about, `Length`. So to break this down:
 
 ```
     variable  right-hand-side
@@ -296,7 +296,7 @@ about, `length`. So to break this down:
        |             |
        v             v
 
-var howLong = sentence.length;
+var howLong = sentence.Length;
 ```
 
 ```
@@ -306,13 +306,13 @@ variable  property
    |         |
    v         v
 
-sentence.length
+sentence.Length
 ```
 
-If we ask the `sentence` variable for it's length, the computer first goes to
+If we ask the `sentence` variable for it's Length, the computer first goes to
 the contents of the variable in memory, in this case the string
 `The quick brown fox jumped over the lazy dog` and then looks at what property
-we want, length. In this case we get the \_int_eger `44`
+we want, Length. In this case we get the \_int_eger `44`
 
 So after:
 
