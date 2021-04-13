@@ -27,6 +27,17 @@ All your code should be placed inside the `static void Main(string args[])`
 dotnet new sdg-console -o VariablesCS
 ```
 
+## Additional Resources
+
+- [SDG Quick Reference on Strings](https://handbook.suncoast.io/lessons/misc-quick-reference/cs-string)
+- [SDG Quick Reference on Numbers](https://handbook.suncoast.io/lessons/misc-quick-reference/cs-numbers)
+- [Turning in Assignments](https://handbook.suncoast.io/lessons/misc-quick-reference/how-to-turn-in-assignments)
+- [Types and variables](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-and-variables)
+
+## Reading Material
+
+- [Microsoft intro to C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
+
 ### Explorer Mode
 
 - Create a new app that does the following.
@@ -66,16 +77,8 @@ dotnet new sdg-console -o VariablesCS
 - Using Logic
   - Add some _logic_ to your program that prints a different, special, greeting to the user if their name happens to be `Alice`.
 - Using Advanced Types
-  - Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the data variables.
+- Use the type [DateTime](https://docs.microsoft.com/en-us/dotnet/api/system.datetime?view=netcore-3.1) to represent the date variables.
 
 ### Epic Mode
 
-- Move all of your code to separate method (but keep it in the same file) and invoke it from the `Main` method.
-
-## Additional Resources
-
-- [Types and variables](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/types-and-variables)
-
-## Reading Material
-
-- [Microsoft intro to C#](https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/)
+- Move all of your code to a separate method (but keep it in the same file) and invoke it from the `Main` method.
