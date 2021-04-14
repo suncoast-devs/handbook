@@ -75,24 +75,24 @@ counter
 
 ---
 
-# Looping through an array
+# Looping through a List
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 ```
 
-Let's loop through this array and print out each name.
+Let's loop through this list and print out each name.
 
 ```csharp
 // Start the index at 0
 //      |
-//      |        Keep going as long as index is less than the length of the array
+//      |        Keep going as long as index is less than the length of the list
 //      |                 |
 //      |                 |        Increment index after each loop is done
 //      |                 |                   |
 //      |                 |                   |
 //      v                 v                   v
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -109,9 +109,9 @@ It is often helpful to imagine we are .NET and walk through the code and see it
 how the computer does
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -127,9 +127,9 @@ Console.WriteLine("Hi, this is code after the loop");
 [.code-highlight:1]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -140,10 +140,10 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Make an array of three strings.
+Make a List of three strings.
 
 ```
-name    =>  "Mark", "Paula", "Sandy"
+names    =>  "Mark", "Paula", "Sandy"
 ```
 
 ---
@@ -153,9 +153,9 @@ name    =>  "Mark", "Paula", "Sandy"
 [.code-highlight:3]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -171,7 +171,7 @@ First time at this loop. Do the initialization. Make `index` equal to `0`
 [.code-highlight:2]
 
 ```
-name    =>  "Mark", "Paula", "Sandy"
+names   =>  "Mark", "Paula", "Sandy"
 index   =>  0
 ```
 
@@ -182,9 +182,9 @@ index   =>  0
 [.code-highlight:4]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -200,7 +200,7 @@ Make `currentName` equal to whatever is at the index given by `index`. Well `ind
 [.code-highlight:3]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  0
 currentName =>  "Mark"
 ```
@@ -212,9 +212,9 @@ currentName =>  "Mark"
 [.code-highlight:6]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -230,7 +230,7 @@ Call the method `Console.WriteLine` and provide it the value in `currentName` wh
 [.code-highlight:3]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  0
 currentName =>  "Mark"
 ```
@@ -242,9 +242,9 @@ currentName =>  "Mark"
 [.code-highlight:7]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -260,7 +260,7 @@ End of the loop, so do the afterthought step of `index++`, turning the value of 
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  1
 currentName =>  "Mark"
 ```
@@ -272,9 +272,9 @@ currentName =>  "Mark"
 [.code-highlight:3]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -285,12 +285,12 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`1`) less than `names.Length` (`3`). Yes, so do the loop again.
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`1`) less than `names.Count` (`3`). Yes, so do the loop again.
 
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  1
 ```
 
@@ -301,9 +301,9 @@ index       =>  1
 [.code-highlight:4]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -319,7 +319,7 @@ Make `currentName` equal to whatever is at the index given by `index`. Well `ind
 [.code-highlight:3]
 
 ```
-name          =>  "Mark", "Paula", "Sandy"
+names         =>  "Mark", "Paula", "Sandy"
 index         =>  1
 currentName   =>  "Paula"
 ```
@@ -331,9 +331,9 @@ currentName   =>  "Paula"
 [.code-highlight:6]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -350,7 +350,7 @@ which is currently `"Paula"`
 [.code-highlight:3]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  1
 currentName =>  "Paula"
 ```
@@ -362,9 +362,9 @@ currentName =>  "Paula"
 [.code-highlight:7]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -381,7 +381,7 @@ to `2`
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  2
 currentName =>  "Paula"
 ```
@@ -393,9 +393,9 @@ currentName =>  "Paula"
 [.code-highlight:3]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -406,12 +406,12 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`2`) less than `names.Length` (`3`). Yes, so do the loop again.
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`2`) less than `names.Count` (`3`). Yes, so do the loop again.
 
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  2
 ```
 
@@ -422,9 +422,9 @@ index       =>  2
 [.code-highlight:4]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -440,7 +440,7 @@ Make `currentName` equal to whatever is at the index given by `index`. Well `ind
 [.code-highlight:3]
 
 ```
-name          =>  "Mark", "Paula", "Sandy"
+names         =>  "Mark", "Paula", "Sandy"
 index         =>  2
 currentName   =>  "Sandy"
 ```
@@ -452,9 +452,9 @@ currentName   =>  "Sandy"
 [.code-highlight:6]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -470,7 +470,7 @@ Call the method `Console.WriteLine` and provide it the value in `currentName` wh
 [.code-highlight:3]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  2
 currentName =>  "Sandy"
 ```
@@ -482,9 +482,9 @@ currentName =>  "Sandy"
 [.code-highlight:7]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -500,7 +500,7 @@ End of the loop, so do the afterthought step of `index++`, turning the value of 
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  3
 currentName =>  "Paula"
 ```
@@ -512,9 +512,9 @@ currentName =>  "Paula"
 [.code-highlight:3]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -525,12 +525,12 @@ Console.WriteLine("Hi, this is code after the loop");
 
 [.column]
 
-Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`3`) less than `names.Length` (`3`). No! So we leave the loop, moving to the code **AFTER** the loop
+Back to the loop. Since `currentName` is defined inside the loop we forget that variable. Time to do the comparison. Is `index` (`3`) less than `names.Count` (`3`). No! So we leave the loop, moving to the code **AFTER** the loop
 
 [.code-highlight:2]
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 index       =>  3
 ```
 
@@ -541,9 +541,9 @@ index       =>  3
 [.code-highlight:9]
 
 ```csharp
-string[] names = { "Mark", "Paula", "Sandy" };
+var names = new List<string>() { "Mark", "Paula", "Sandy" };
 
-for (var index = 0; index < names.Length; index++) {
+for (var index = 0; index < names.Count; index++) {
   var currentName = names[index];
 
   Console.WriteLine(currentName);
@@ -557,7 +557,7 @@ Console.WriteLine("Hi, this is code after the loop");
 We are now out of the loop, and since `index` was defined inside the loop we forget about that variable as well.
 
 ```
-name        =>  "Mark", "Paula", "Sandy"
+names       =>  "Mark", "Paula", "Sandy"
 ```
 
 ---
@@ -578,6 +578,6 @@ foreach (var name in names) {
 }
 ```
 
-^ Assumes you are going to loop through the entire array.
+^ Assumes you are going to loop through the entire list.
 
 <!-- prettier-ignore-end -->

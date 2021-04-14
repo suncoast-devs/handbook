@@ -1,7 +1,5 @@
 theme: Next, 1
 
-<!-- prettier-ignore-start -->
-
 # [fit] Control Flow
 
 ---
@@ -178,7 +176,13 @@ switch (name)
 
 # Other neat `switch` features
 
+[.column]
+
 We can handle multiple values by repeating the `case` statement:
+
+In this code we will see the message `Here` for `name` if it is either `Paul` **OR** `Peter` **OR** `Mary`
+
+[.column]
 
 ```csharp
 switch (name)
@@ -200,15 +204,16 @@ switch (name)
 }
 ```
 
-In this code we will see the message `Here` for `name` if it is either `Paul`
-**OR** `Peter` **OR** `Mary`
 
 ---
 
 # Case conditionals
 
-Let's say we are working with an `int` variable named `score` and we wanted to
-print a grade associated to a score.
+[.column]
+
+Let's say we are working with an `int` variable named `score` and we wanted to print a grade associated to a score.
+
+[.column]
 
 ```csharp
 
@@ -284,4 +289,3 @@ while (name != "quit") {
 ```
 
 
-<!-- prettier-ignore-end -->
