@@ -110,7 +110,7 @@ There is nothing about `name1` that associates it with `department1` instead of
 variable names.
 
 To group related data together we consider them all part of the same `state`. In
-this case the `state` is about a `Employee` who has individual attributes such
+this case the `state` is about an `Employee` who has individual attributes such
 as their `name`, their `department`, their `salary` and something we compute
 named `monthlySalary`.
 
@@ -149,12 +149,12 @@ So, if we were able to group these attributes together (a process we call
 This is one of the benefits of the idea of a `class`. The ability to group,
 encapsulate, related data together. Often these attributes represent real world
 attributes of the types of things we are modeling in the computer. Here we are
-encapsulating the various attributes of a _employee_ we might want to track in
+encapsulating the various attributes of an _employee_ we might want to track in
 an employee database.
 
 ## Class Syntax
 
-Lets take our idea of a _employee_ in this system and write some syntax to help
+Lets take our idea of an _employee_ in this system and write some syntax to help
 us.
 
 ```
@@ -307,7 +307,7 @@ for details.
 Now that we have this `class` definition, let's use it inside our application.
 
 We can think of the `class` we created as a template used to create new
-_instances_ of itself. That is, it can create new variables who's type is a
+_instances_ of itself. That is, it can create new variables who's type is an
 `Employee` and it has the properties we defined. We call these _instances_
 `objects`.
 
@@ -610,7 +610,7 @@ We now have our classes, and objects, enabled with the ability to have both
 `state` (the list of which properties are defined, and what the values are for
 each object we create) and `behavior` the methods defined for the class. With
 both state and behavior we have the ability to represent real world ideas. In
-this case our modeling of a `Employee` in our Employee Database:
+this case our modeling of an `Employee` in our Employee Database:
 
 ```csharp
 using System;
@@ -688,12 +688,12 @@ namespace EmployeeDatabase
 ## Default values
 
 We can also define a property to have a default value. If we wanted our
-`Employee` to track the date their information was cerated, we could add a
+`Employee` to track the date their information was created, we could add a
 `CreatedAt` property. However, the developer would have to remember to give it a
 valid value each time we used `new Employee`
 
 We can address this by defining a default value, in this case the value of
-`DateTime.now` which will be the current time when the object is created.
+`DateTime.Now` which will be the current time when the object is created.
 
 We could default other properties such as `Salary`, or `Department` as long as
 the default value we give is compatible with the data type.
@@ -703,7 +703,7 @@ class Employee
 {
   public string Name { get; set; }
   public int Department { get; set; }
-  public DateTime CreatedAt { get; set; } = DateTime.now;
+  public DateTime CreatedAt { get; set; } = DateTime.Now;
   public int Salary { get; set; }
   public int MonthlySalary()
   {
@@ -726,7 +726,7 @@ class Employee
 {
   public Employee()
   {
-    this.CreatedAt = DateTime.now;
+    this.CreatedAt = DateTime.Now;
   }
 
   public string Name { get; set; }
@@ -780,7 +780,7 @@ This would output `0`. Notice we did not have to redeclare `Name`, or
 `Department`, or `Salary` as those are **inherited** from the `base class` of
 `Employee`.
 
-Inheriting allows is to both _add_ new state and behavior and _override_
+Inheriting allows us to both _add_ new state and behavior and _override_
 behavior from the base class.
 
 Every `class` in the system will have a _parent_. If we keep moving up the class
