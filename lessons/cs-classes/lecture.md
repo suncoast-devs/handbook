@@ -1,7 +1,5 @@
 theme: Next, 1
 
-<!-- prettier-ignore-start -->
-
 # Object Oriented Programing in `C#`
 
 ---
@@ -104,6 +102,7 @@ int monthlySalary2 = computeMonthlySalaryFromYearly(salary2);
 ---
 
 Or perhaps we would have some arrays
+
 - `names[]`
 - `departments[]`
 
@@ -115,13 +114,14 @@ If we removed something from `names` we'd have to be sure to remove the correspo
 
 # Put related data in the same state
 
-To group related data together we consider them all part of the same `state`.
+To group related we consider them all part of the same `state`.
 
-In this case the `state` is about a `Employee` who has individual attributes:
+In this case the `state` is about an `Employee` who has individual attributes:
+
 - `name`
 - `department`
 - `salary`
--  and something we compute named `monthlySalary`
+- and something we compute named `monthlySalary`
 
 ---
 
@@ -187,6 +187,137 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
     // |   |
     // |   |      Name of property
     // |   |      |
+    // |   |      |
+    // |   |      |
+    // v   v      v
+    public string Name;
+    public int Department;
+    public int Salary;
+    public int MonthlySalary;
+
+    // This is a *special* method known as a "constructor"
+    // The constructor is called when we write a line like: `var bob = new Employee(`
+    // The arguments to the method should line up to those below
+    //
+    //              This will become the employee's name
+    //              |               This will become the employee's department
+    //              |               |                  This will become the employee's salary
+    //              |               |                  |              This will become the employee's monthly salary
+    //              |               |                  |              |
+    //              v               v                  v              v
+    public Employee(string newName, int newDepartment, int newSalary, int newMonthlySalary)
+    {
+        // In the constructor we should setup the values for any of the properties.
+        // Here we will *copy* the values given by the arguments to the corresponding property.
+
+        Name = newName;
+        Department = newDepartment;
+        Salary = newSalary;
+        MonthlySalary = newSalary;
+    }
+  }
+
+```
+
+---
+
+# Properties
+
+These represent the `DATA` part of `state and `data`.
+
+Accessible both inside the class and outside.
+
+```csharp
+// public means "this can be seen outside of the class
+// |   Type
+// |   |      Name of property
+// v   v      v
+public string Name;
+public int Department;
+public int Salary;
+public int MonthlySalary;
+```
+
+---
+
+# Constructor
+
+- Special method.
+- Used when we create an _instance_ of an object
+- May include arguments used to initialize properties
+
+```csharp
+//              New Name
+//              |               New Department
+//              |               |                  New Salary
+//              |               |                  |              New Monthly Salary
+//              |               |                  |              |
+//              v               v                  v              v
+public Employee(string newName, int newDepartment, int newSalary, int newMonthlySalary)
+```
+
+---
+
+# Constructor
+
+- Responsible for setting up default values of properties
+- Anything else that happens at _make a new object_ time
+- In our case, take each of the arguments and _copy_ them into the properties
+
+```csharp
+{
+  Name = newName;
+  Department = newDepartment;
+  Salary = newSalary;
+  MonthlySalary = newSalary;
+}
+```
+
+---
+
+# Example usage
+
+## We refer to this as _instantiating objects_
+
+## Notice this has a similar syntax to `new List`
+
+## We've already been making objects!
+
+```csharp
+var graceHopper = new Employee("Grace Hopper", 100, 240000, 20000);
+Console.WriteLine(adaLovelace.Department); // Will show 100
+
+var elonMusk = new Employee("Elon Musk", 42, 120000, 10000);
+Console.WriteLine(elonMusk.Department); // Will show 42
+```
+
+---
+
+# [fit] We make objects like this _often_
+
+- `C#` gives us a shortcut to create a new object and fill in properties
+- `getters and setters`
+- `defaults`
+
+---
+
+# Properties with _getters_ and _setters_
+
+```csharp
+//
+// class keyword
+// |
+// |    Name of class (PascalCase)
+// |    |
+// v    v
+  class Employee
+  {
+    // public means "this can be seen outside of the class
+    // |
+    // |   Type
+    // |   |
+    // |   |      Name of property
+    // |   |      |
     // |   |      |      We can get the data and set the data
     // |   |      |      |
     // v   v      v      v
@@ -199,7 +330,7 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
 
 ---
 
-We can *instantiate* employees.
+We can _instantiate_ employees.
 
 ```
 +---------------------------+       +------------------------------+
@@ -321,7 +452,7 @@ var secondEmployee = new Employee {
 
 ---
 
-The code has a method `computeMonthlySalaryFromYearly` that accesses a property of our object and does some math.
+The code has a method `computeMonthlySalaryFromYearly` that accesses our object's property and does some math.
 
 We also have a _property_ named `MonthlySalary`.
 
@@ -380,6 +511,7 @@ var secondEmployee = new Employee {
 # Objects have their own data (state) but shared behavior (methods)
 
 For `firstEmployee.MonthlySalary()`
+
 - Runs `return Salary / 12`
 - But `C#` knows we are the instance `firstEmployee`
 - Thus `Salary` is `120000` and we get back `10000`.
@@ -389,6 +521,7 @@ For `firstEmployee.MonthlySalary()`
 # Objects have their own data (state) but shared behavior (methods)
 
 For `secondEmployee.MonthlySalary()`
+
 - Runs `return Salary / 12`
 - But `C#` knows we are the instance `secondEmployee`
 - Thus `Salary` is `240000` and we get back `20000`.
@@ -445,11 +578,9 @@ This would output `0`. Notice we did not have to redeclare `Name`, or `Departmen
 Inheriting allows is to both _add_ new state and behavior and _override_ behavior from the base class.
 
 _Inheritance_ is a powerful but it is used less often in favor of other techniques such as
+
 - _extensions_
 - _mixins_
 - _dependency injection_
 
 We will discuss some of these in other lessons.
-
-
-<!-- prettier-ignore-end -->
