@@ -56,8 +56,8 @@ Func<Employee, string, bool> EmployeeHasName = (employee, name) => employee.Name
 In this case we are telling our _function_ that it first takes an `Employee`
 object, secondarily it takes a `string` and finally it returns a `bool`. The
 expression defines the `Employee` (first) variable to be named `employee` and
-the `string` (second) variable to be called `name`. Finally the expression it
-self returns a `bool` since that is what we would get if we evaluated
+the `string` (second) variable to be called `name`. Finally the expression itself 
+returns a `bool` since that is what we would get if we evaluated
 `employee.Name == name` as the `==` will always give us either `true` or
 `false`.
 
@@ -83,7 +83,7 @@ var scores = new List<int> { 42, 100, 98, 15 };
 ```
 
 and suppose our task was to make a new variable equal to a list with all those
-values doubled? We'll good for us that we have a `expression` that can do just
+values doubled? Well good for us that we have an `expression` that can do just
 that!
 
 We would write code such as:
