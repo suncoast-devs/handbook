@@ -3,6 +3,17 @@ title: Terminology
 order: 1000
 ---
 
-| Term | Definition |
-| ---- | ---------- |
-
+| Term                    | Definition                                                                                                                                                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Flow Control Statements | When manipulating data in a C# app logical flow control statements preform actions depending on their function ie. `if`, `else`, `switch`, `while`.                                                                                                   |
+| `if` and `if else`      | A logic statement that if a boolean condition is true then execute the code within the if statement. The `if else` statement is used to execute code if the `if` statement is true, and if it isn't true the `else` statement is run.                 |
+| Equality                | `==` is used when comparing two variables and if the variables are the same it would be a true statement.                                                                                                                                             |
+| Inequality              | `!=` is used when comparing two variables and if the variables are not the same it would be a true statement.                                                                                                                                         |
+| Greater than            | `90 > 60`                                                                                                                                                                                                                                             |
+| Less than               | `50 < 60`                                                                                                                                                                                                                                             |
+| Greater or Equal to     | `total >= 90`                                                                                                                                                                                                                                         |
+| Less than or Equal to   | `total <= 90`                                                                                                                                                                                                                                         |
+| Boolean AND             | `&&` is used between two separate logical comparisons that will run code if both statements are true. `if(total < 100 && total != 0)`                                                                                                                 |
+| Boolean OR              | `                                                                                                                                                                                                                                                     |  | `is used between two separate logical comparisons that will run code if either of the statements is true.`if(total == 100 |  | total == 0)` |
+| `switch` statement      | When comparing a variable to multiple different cases `switch` statements are a cleaner alternative to `if else`.                                                                                                                                     |
+| `while` loop            | When executing code that needs to continue running over and over until the condition in the while loop is true. For example: `while(reading) {Console.WriteLine("I'm being read")}` if reading becomes false there is nothing written to the console. |
