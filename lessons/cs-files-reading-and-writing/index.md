@@ -22,7 +22,7 @@ more accurately `bytes`). This is similar to how a `string` is also just a
 sequence of characters.
 
 However, files might be significantly larger than any strings we've dealt with
-in the past. Additionaly, as opposed to a `string` we would want our files to
+in the past. Additionally, as opposed to a `string` we would want our files to
 store more than one element. We've seen converting information to and from
 `string`s with various parsing functions. Lets take that one step further as we
 discuss files.
@@ -151,7 +151,7 @@ feature after the saving is working.
 
 Before we can write to the file we have to tell the code what file we want to
 write to. For this we will use a new object named `StreamWriter`. The purpose of
-the `StreamWriter` is to accept information and sends it to a destination. Since
+the `StreamWriter` is to accept information and send it to a destination. Since
 eventually we may be writing a large amount of information the `StreamWriter`
 can process the information from our code and into the file in a flow, like
 water running in a stream. We simply need to tell it where the output goes, in
