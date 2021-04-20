@@ -6,14 +6,14 @@ assignments:
 
 ## State + Behavior
 
-So far we have learned about `variables` which allow us to store information and
-about `methods` that allow us to organize our code. In this lesson we will
-introduce the idea of a `class` which combines these two ideas into a single
+So far, we have learned about `variables` that allow us to store information and
+`methods` that will enable us to organize our code. In this lesson, we will
+introduce the idea of a `class` that combines these two ideas into a single
 concept.
 
-When discussing this idea we are going to shift our terminology just a little
+When discussing this idea, we are going to shift our terminology just a little
 bit. We are going to refer to the information we keep track of as `state` and
-the code that interacts with that information as `behavior`
+the code that interacts with that information as `behavior.`
 
 ## An example
 
@@ -104,15 +104,15 @@ int monthlySalary2 = computeMonthlySalaryFromYearly(salary2);
 Or perhaps we would have some arrays, e.g. `names[]` and `departments[]`.
 
 Each of these has some drawbacks. The first is that the information about a
-single employee is spread out amongst variables that are not grouped together.
-There is nothing about `name1` that associates it with `department1` instead of
-`department2`. The only thing that associates them is that they have similar
-variable names.
+single employee is not correlated. There is nothing about `name1` that
+associates it with `department1` instead of `department2`. The only thing that
+associates them is that they have similar variable names.
 
 To group related data together we consider them all part of the same `state`. In
 this case the `state` is about an `Employee` who has individual attributes such
 as their `name`, their `department`, their `salary` and something we compute
 named `monthlySalary`.
+
 
 A diagram of this might look like:
 
@@ -127,8 +127,8 @@ A diagram of this might look like:
 ---------------------
 ```
 
-If we had a few of these `Employee` things around we might also see they could
-have their own, specific, values for each of these attributes.
+If we had a few of these `Employee` things around, we might also see they could
+have their own specific values for each of these attributes.
 
 ```
 -----------------------------       --------------------------------
@@ -143,11 +143,11 @@ have their own, specific, values for each of these attributes.
 -----------------------------       --------------------------------
 ```
 
-So, if we were able to group these attributes together (a process we call
+So, if we were able to group these attributes (a process we call
 `encapsulation`) then we would be able to keep track of them together!
 
 This is one of the benefits of the idea of a `class`. The ability to group,
-encapsulate, related data together. Often these attributes represent real world
+encapsulate, related data together. Often these attributes represent real-world
 attributes of the types of things we are modeling in the computer. Here we are
 encapsulating the various attributes of an _employee_ we might want to track in
 an employee database.
@@ -168,12 +168,104 @@ us.
 ---------------------
 ```
 
-C# gives us a syntax for defining this structure. We call it a `class`. You have
+C# gives us syntax for defining this structure. We call it a `class`. You have
 already seen this syntax in our sample applications so far since `dotnet`
 generated a `Program` class for us by default. We've been using _classes_ but we
 didn't quite know it yet!
 
-Lets make a `class` for this `Employee` structure.
+Let us make a `class` for this `Employee` structure.
+
+```csharp
+class Employee
+{
+  // public means "this can be seen outside of the class
+  // |
+  // |   Type
+  // |   |
+  // |   |      Name of property
+  // |   |      |
+  // |   |      |
+  // |   |      |
+  // v   v      v
+  public string Name;
+  public int Department;
+  public int Salary;
+  public int MonthlySalary;
+
+  // This is a *special* method known as a "constructor"
+  // The constructor is called when we write a line like: `var bob = new Employee(`
+  // The arguments to the method should line up to those below
+  //
+  //              This will become the employee's name
+  //              |               This will become the employee's department
+  //              |               |                  This will become the employee's salary
+  //              |               |                  |              This will become the employee's monthly salary
+  //              |               |                  |              |
+  //              v               v                  v              v
+  public Employee(string newName, int newDepartment, int newSalary, int newMonthlySalary)
+  {
+      // In the constructor we should setup the values for any of the properties.
+      // Here we will *copy* the values given by the arguments to the corresponding property.
+      Name = newName;
+      Department = newDepartment;
+      Salary = newSalary;
+      MonthlySalary = newSalary;
+  }
+}
+```
+
+You'll notice a few things right away with this syntax. First is the `class`
+keyword followed by the name of the class. We will use _CamelCase_ for our
+classes' names, so we name this `Employee`. The rest of the definition of this
+class is implemented within braces `{ }`.
+
+Inside the definition, we have four similar lines of code. For each line, we are
+defining an attribute of this class, in `C#`, we call these properties. The
+first part of the definition is if this property is `public`, `protected`, or
+`private`. `public` properties can be accessed by code outside the class (we'll
+see what this means in a minute), whereas `private` can only be seen from other
+code within the class itself. We'll talk about `protected` later.
+
+Next, we define the type of this property. Unfortunately, we cannot use the
+`var` style definition here since we must tell the code what type of information
+this property stores.
+
+Finally, we name the property. You'll notice here that we switched to
+`CamelCase` as well. Class properties by convention are named with CamelCase.
+You could certainly use other case approaches, but most `C#` developers will
+follow this convention.
+
+Next, in the class, you'll notice what appears to be a _method_ but it is a
+special type of method. This method has the same name as the class itself and is
+known as the _constructor_ of the method.
+
+The _constructor_ is used when we eventually write `new Employee`. Since we
+indicate that this method requires four arguments we must provide those each
+time we make a `new Employee`
+
+In this case, we are requiring the new name, department, salary, and monthly
+salary of our employee.
+
+Inside the constructor's implementation, we _copy_ these values into the
+properties for this instance of the object we are creating. Copying the data
+ensures that we correctly set all the properties of the new object.
+
+We could use this new class to create two new employees:
+
+```csharp
+var graceHopper = new Employee("Grace Hopper", 100, 240000, 20000);
+Console.WriteLine(adaLovelace.Department); // Will show 100
+
+var elonMusk = new Employee("Elon Musk", 42, 120000, 10000);
+Console.WriteLine(elonMusk.Department); // Will show 42
+```
+
+You may notice that this syntax is similar to our usage of `new List` when
+working with `C#`s `List`. We've been using objects for a while!
+
+Since we often create new objects and want to specify their default properties
+(in this case, Name, Department, Salary, MonthlySalary), `C#` provides a shorter
+syntax.
 
 ```csharp
 class Employee
@@ -185,33 +277,12 @@ class Employee
 }
 ```
 
-You'll notice a few things right away with this syntax. First is the `class`
-keyword followed by the name of the class. We will use _CamelCase_ for the names
-of our classes, so we name this `Employee`. The rest of the definition of this
-class is contained within braces `{ }`.
+In this syntax, we do not need a constructor because we have the `{ get; set; }`
+syntax. For now, we won't explore the specifics of **how** the `{ get; set; }`
+works other than to mention it allows us to `set` (or change) the information in
+that property as well as `get` (or retrieve) the information stored within.
 
-Inside the definition we have four similar lines of code. For each line we are
-defining an attribute of this class, in `C#` we call these properties. The first
-part of the definition is if this property is `public`, `protected`, or
-`private`. `public` properties can be accessed by code outside the class (we'll
-see what this means in a minute) whereas `private` can only be seen from other
-code within the class itself. We'll talk about `protected` later.
-
-Next we define the type of this property. Unfortunately we cannot use the `var`
-style definition here since we must tell the code what type of information this
-property stores.
-
-Finally we name the property. You'll notice here that we switched to `CamelCase`
-as well. Class properties by convention are named with CamelCase. You could
-certainly use other case approaches, but most `C#` developers will follow this
-convention.
-
-Finally we have a `{ get; set; }` syntax. For now we won't dive too much into
-what this is for except to note that it allows us to `set` (or change) the
-information in that property as well as `get` (or retrieve) the information
-stored within.
-
-We will add this `class` to our program, within the
+We will add this `class` to our program within the
 `namespace EmployeeDatabase { }` but as a sibling of the existing
 `class Program` as such:
 
@@ -289,32 +360,32 @@ namespace EmployeeDatabase
 
 ## Allowing properties to be `null`
 
-As is, the properties of our object cannot be `null`, that is they must have
+As is, the properties of our object cannot be `null`. That is, they must have
 _some_ value, even if for a string this is an empty string `""` and for a number
 it might be `0`.
 
-However, by adding a `?` to the end of the data type we can indicate that the
+However, by adding a `?` to the end of the data type, we can indicate that the
 property is allowed to be `null`.
 
 This is also true of variables we declare outside of a class as well.
 
-For more information, and examples, see
+For more information and examples, see
 [this article](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/nullable-value-types)
 for details.
 
 ## Creating and using classes: Objects
 
-Now that we have this `class` definition, let's use it inside our application.
+Now that we have this `class` definition let us use it inside our application.
 
 We can think of the `class` we created as a template used to create new
 _instances_ of itself. That is, it can create new variables who's type is an
 `Employee` and it has the properties we defined. We call these _instances_
 `objects`.
 
-Each `object` knows what it's type is, and thus what `state` it can store. In
-our case, each `Employee` _object_ will have a `Name`, a `Department`, a
-`Salary` and a `MonthlySalary`. And each `Employee` _object_ will keep it's own
-copy of that information. Much like in this diagram from before
+Each `object` knows what its type is and what `state` it can store. In our case,
+each `Employee` _object_ will have a `Name`, a `Department`, a `Salary` and a
+`MonthlySalary`. And each `Employee` _object_ will keep its own copy of that
+information. Much like in this diagram from before
 
 ```
 +---------------------------+       +------------------------------+
@@ -327,7 +398,7 @@ copy of that information. Much like in this diagram from before
 +---------------+-----------+       +---------------+--------------+
 ```
 
-If we were going to create these objects we will use the `new` keyword.
+If we were going to create these objects, we would use the `new` keyword.
 
 ```csharp
 var firstEmployee = new Employee();
@@ -335,8 +406,8 @@ var secondEmployee = new Employee();
 ```
 
 When we create these new variables, the various attributes of the object will
-all be empty. For strings this means the values will be an empty string `""` and
-for integers, the values will be `0`.
+all be empty. For strings, this means the values will be an empty string `""`
+and for integers, the values will be `0`.
 
 ```csharp
 Console.WriteLine(firstEmployee.Department); // This would output 0
@@ -344,8 +415,8 @@ Console.WriteLine(firstEmployee.Department); // This would output 0
 
 We can now _access_ the properties of these new _objects_ using the `.`
 notation. For instance, you will see above that we write
-`firstEmployee.Department`. The thing to the _left_ of the `.` says which
-variable we are working with and the thing to the _right_ of the `.` says which
+`firstEmployee.Department`. The text to the _left_ of the `.` says which
+variable we are working with and the text to the _right_ of the `.` says which
 property we want from **that** object.
 
 Now that we know how to say which object and which property we want, we can use
@@ -374,7 +445,7 @@ like this:
 +---------------+-------------+       +---------------+----------------=
 ```
 
-Lets fill in the rest of the properties.
+Let us fill in the rest of the properties.
 
 ```csharp
 var firstEmployee = new Employee();
@@ -427,8 +498,8 @@ You will see that we replaced the `()` with a pair of `{ }` and inside we have a
 syntax of `NameOfPropertyHere = ValueHere,` and each property is separated by a
 comma.
 
-This works well if we know the values ahead of time. Let's change our Employee
-Database code to use our new class.
+This works well if we know the values ahead of time. Let's change our
+`Employee Database` code to use our new class.
 
 ```csharp
 using System;
@@ -505,16 +576,16 @@ We have replaced our many local variables with creating one new `object` of
 _type_ `Employee` and then used our object property accessing `.` syntax to both
 _set_ and _get_ those properties when needed.
 
-So far we have seen how `class`es:
+So far, we have seen how `class`es:
 
 - Store data, which we call `state`, in attributes we call `properties`.
 - `Class`es are the template that describes what data
 - `Object`s are _instances_ of a class.
 - `Class`es are like cookie cutters, where `object`s are like the cookies
 
-Next up we will introduce some _behavior_ to our classes. If you'll note in the
-code above we have to compute the monthly salary ourselves and store it. What if
-the `Employee` object could just do that work for us!
+Next, we will introduce some _behavior_ to our classes. If you'll note in the
+code above, we have to compute the monthly salary ourselves and store it. What
+if the `Employee` object could just do that work for us!
 
 ## Behavior with methods
 
@@ -524,9 +595,8 @@ salary. We also have a _property_ named `MonthlySalary`. However, any time we
 change the `Salary` we would like to be able to ask for the `MonthlySalary` to
 get this computed value.
 
-This is where the ability to add methods that are _specific_ to a class come in
-handy. Rather than create a _property_ named `MonthlySalary` let's make a method
-instead.
+Adding methods that are _specific_ to a class comes in handy. Rather than create
+a _property_ named `MonthlySalary` let us make a method instead.
 
 ```csharp
 class Employee
@@ -543,12 +613,11 @@ class Employee
 
 The definition of this method should seem familiar to our previous encounter
 with methods. However, you will notice we no longer have the parameters to the
-method like we do for `computeMonthySalaryFromYearly`. This is because, when
-defining methods for a class, we have access to all the other attributes of the
-specific object this method is working with!
+method as we do for `computeMonthySalaryFromYearly`. When defining a class's
+methods, we have access to all the other attributes of the specific object!
 
-That is, any method on a class, when called for a specific object can ask "Who
-am I and what properties (state) do I have?"
+That is, any method on a class, when called for a specific object, can ask "Who
+am I, and what properties (state) do I have?"
 
 We can add the code for `MonthlySalary` by accessing the existing `Salary`
 property!
@@ -745,11 +814,11 @@ any necessary _initialization_ code required.
 
 ## Inheritance
 
-Often in modeling the real world we encounter different types of data that are
+Often in modeling the real-world we encounter different types of data that are
 related. Sometimes these are in an _is a_ or _is a kind of_ relationship.
 
-For instance in our system perhaps we have active employees and retired
-employees. In this case perhaps we want to return a `0` for the `MonthlySalary`
+For instance, in our system, perhaps we have active employees and retired
+employees. In this case, perhaps we want to return a `0` for the `MonthlySalary`
 of any retired employees.
 
 We could declare a new `class` named `RetiredEmployee` as such:
@@ -784,9 +853,9 @@ Inheriting allows us to both _add_ new state and behavior and _override_
 behavior from the base class.
 
 Every `class` in the system will have a _parent_. If we keep moving up the class
-parent lineage, we eventually reach `Object` which is the top-most parent of all
-classes.
+parent lineage, we eventually reach `Object`, which is the top-most parent of
+all classes.
 
-We should also note that while _inheritance_ is a powerful technique it is used
+We should also note that while _inheritance_ is a powerful technique, it is used
 less often in favor of other techniques such as _extensions_ and _mixins_ and
 _dependency injection_. We will discuss some of these in other lessons.
