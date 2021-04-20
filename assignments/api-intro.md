@@ -15,20 +15,21 @@ In this project, you will practice accessing an API. You'll see how an API reque
 
 - [] Choose one of the APIs from [this list](https://github.com/public-apis/public-apis) that does not request "AUTH" (Authorization) since an API that requires authorization is a little more difficult to use when first learning. I have also selected some sample APIs that will be good choices:
 
-| API            | Documentation                                  |
-| -------------- | ---------------------------------------------- |
-| Dogs           | https://dog.ceo/dog-api/                       |
-| Studio Ghibli  | https://ghibliapi.herokuapp.com/#tag/Films     |
-| Open Brewery   | https://www.openbrewerydb.org/                 |
-| Recipes        | http://www.recipepuppy.com/about/api/          |
-| Deck of Cards! | http://deckofcardsapi.com/                     |
-| Geocode        | https://geocode.xyz/api                        |
-| Jobs           | https://jobs.github.com/api                    |
-| Lyrics         | https://lyricsovh.docs.apiary.io/#reference    |
-| Quotes         | https://pprathameshmore.github.io/QuoteGarden/ |
-| SpaceX         | https://docs.spacexdata.com/?version=latest    |
-| Jokes          | https://github.com/15Dkatz/official_joke_api   |
-| Star Wars API  | https://swapi.dev                              |
+| API                                                                              | Documentation                                     |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Dogs                                                                             | https://dog.ceo/dog-api/                          |
+| Studio Ghibli                                                                    | https://ghibliapi.herokuapp.com/#tag/Films        |
+| Open Brewery                                                                     | https://www.openbrewerydb.org/                    |
+| Recipes                                                                          | http://www.recipepuppy.com/about/api/             |
+| Deck of Cards!                                                                   | http://deckofcardsapi.com/                        |
+| Geocode                                                                          | https://geocode.xyz/api                           |
+| Jobs                                                                             | https://jobs.github.com/api                       |
+| Lyrics                                                                           | https://lyricsovh.docs.apiary.io/#reference       |
+| Quotes                                                                           | https://pprathameshmore.github.io/QuoteGarden/    |
+| SpaceX                                                                           | https://docs.spacexdata.com/?version=latest       |
+| Jokes                                                                            | https://github.com/15Dkatz/official_joke_api      |
+| Star Wars API                                                                    | https://swapi.dev                                 |
+| Harvard Art Museum API (this one requires an API key, but set up is very simple) | https://www.harvardartmuseums.org/collections/api |
 
 > NOTE: To attach images of your screenshots, use a service such as [PostImage](https://postimages.org/) to upload your images and get a URL to paste into the homework comments.
 
