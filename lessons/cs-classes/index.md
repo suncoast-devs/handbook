@@ -108,10 +108,11 @@ single employee is not correlated. There is nothing about `name1` that
 associates it with `department1` instead of `department2`. The only thing that
 associates them is that they have similar variable names.
 
-To group related data, we consider them all part of the same `state`. In In this
-case, the `state` is about an `Employee` who has individual attributes such as
-their `name`, their `department`, their `salary` and something we compute named
-`monthlySalary`.
+To group related data together we consider them all part of the same `state`. In
+this case the `state` is about an `Employee` who has individual attributes such
+as their `name`, their `department`, their `salary` and something we compute
+named `monthlySalary`.
+
 
 A diagram of this might look like:
 
@@ -153,8 +154,8 @@ an employee database.
 
 ## Class Syntax
 
-Let us take our idea of an _employee_ in this system and write some syntax to
-help us.
+Lets take our idea of an _employee_ in this system and write some syntax to help
+us.
 
 ```
 ---------------------
@@ -377,7 +378,7 @@ for details.
 Now that we have this `class` definition let us use it inside our application.
 
 We can think of the `class` we created as a template used to create new
-_instances_ of itself. That is, it can create new variables whose type is a
+_instances_ of itself. That is, it can create new variables who's type is an
 `Employee` and it has the properties we defined. We call these _instances_
 `objects`.
 
@@ -674,11 +675,11 @@ By allowing the `objects` to share the same behavior and names of properties,
 but have different **VALUES** for those properties we get a lot of code
 reusability.
 
-We now have our classes and objects, enabled to have both `state` (the list of
-which properties are defined and what the values are for each object we create)
-and `behavior` (the class's methods.) With both state and behavior, we can
-represent real-world ideas. In this case, our modeling of an `Employee` in our
-Employee Database:
+We now have our classes, and objects, enabled with the ability to have both
+`state` (the list of which properties are defined, and what the values are for
+each object we create) and `behavior` the methods defined for the class. With
+both state and behavior we have the ability to represent real world ideas. In
+this case our modeling of an `Employee` in our Employee Database:
 
 ```csharp
 using System;
@@ -760,8 +761,8 @@ We can also define a property to have a default value. If we wanted our
 `CreatedAt` property. However, the developer would have to remember to give it a
 valid value each time we used `new Employee`
 
-We can address this by defining a default value, in this case, the value of
-`DateTime.now` will be equal to the current time.
+We can address this by defining a default value, in this case the value of
+`DateTime.Now` which will be the current time when the object is created.
 
 We could default other properties such as `Salary`, or `Department` as long as
 the default value we give is compatible with the data type.
@@ -771,7 +772,7 @@ class Employee
 {
   public string Name { get; set; }
   public int Department { get; set; }
-  public DateTime CreatedAt { get; set; } = DateTime.now;
+  public DateTime CreatedAt { get; set; } = DateTime.Now;
   public int Salary { get; set; }
   public int MonthlySalary()
   {
@@ -779,6 +780,37 @@ class Employee
   }
 }
 ```
+
+## Constructors
+
+Another way to initialize an instance of an object is using a _special_ method
+called a `constructor`. This method has the same name as the class itself and is
+used any time we call for a new instance of the object.
+
+For instance, to default the `CreatedAt` property we could have also used this
+code:
+
+```csharp
+class Employee
+{
+  public Employee()
+  {
+    this.CreatedAt = DateTime.Now;
+  }
+
+  public string Name { get; set; }
+  public int Department { get; set; }
+  public DateTime CreatedAt { get; set; }
+  public int Salary { get; set; }
+  public int MonthlySalary()
+  {
+    return Salary / 12;
+  }
+}
+```
+
+Constructors are more flexible than just assigning a default value, we can have
+any necessary _initialization_ code required.
 
 ## Inheritance
 
@@ -817,7 +849,7 @@ This would output `0`. Notice we did not have to redeclare `Name`, or
 `Department`, or `Salary` as those are **inherited** from the `base class` of
 `Employee`.
 
-Inheriting allows is to both _add_ new state and behavior and _override_
+Inheriting allows us to both _add_ new state and behavior and _override_
 behavior from the base class.
 
 Every `class` in the system will have a _parent_. If we keep moving up the class

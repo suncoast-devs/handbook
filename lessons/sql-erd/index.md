@@ -15,7 +15,7 @@ translate into database tables and relationships.
 
 ## Representing our business logic and problem in natural language
 
-When we are working on a business problem we should be on the looking for
+When we are working on a business problem we should be on the look out for
 statements that reveal the types and structure of data we want to manage.
 
 > "Keep track of students, the courses they are enrolled in, and the course's

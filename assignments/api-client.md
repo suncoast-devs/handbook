@@ -28,20 +28,21 @@ app-app --beta ApiClient
 - TOP TIP: Choose an API that has a simple, less nested API. Perhaps one that just returns an array of one-level-deep objects. This will make your task _significantly_ easier.
 - Choose one of the APIs from [this list](https://github.com/public-apis/public-apis) that does not request "AUTH" (Authorization) since an API that requires authorization is a little more difficult to use when first learning. I have also selected some sample APIs that will be good choices:
 
-| API            | Documentation                                  |
-| -------------- | ---------------------------------------------- |
-| Dogs           | https://dog.ceo/dog-api/                       |
-| Studio Ghibli  | https://ghibliapi.herokuapp.com/#tag/Films     |
-| Open Brewery   | https://www.openbrewerydb.org/                 |
-| Recipes        | http://www.recipepuppy.com/about/api/          |
-| Deck of Cards! | http://deckofcardsapi.com/                     |
-| Geocode        | https://geocode.xyz/api                        |
-| Jobs           | https://jobs.github.com/api                    |
-| Lyrics         | https://lyricsovh.docs.apiary.io/#reference    |
-| Quotes         | https://pprathameshmore.github.io/QuoteGarden/ |
-| SpaceX         | https://docs.spacexdata.com/?version=latest    |
-| Jokes          | https://github.com/15Dkatz/official_joke_api   |
-| Star Wars API  | https://swapi.dev                              |
+| API                                                                              | Documentation                                     |
+| -------------------------------------------------------------------------------- | ------------------------------------------------- |
+| Dogs                                                                             | https://dog.ceo/dog-api/                          |
+| Studio Ghibli                                                                    | https://ghibliapi.herokuapp.com/#tag/Films        |
+| Open Brewery                                                                     | https://www.openbrewerydb.org/                    |
+| Recipes                                                                          | http://www.recipepuppy.com/about/api/             |
+| Deck of Cards!                                                                   | http://deckofcardsapi.com/                        |
+| Geocode                                                                          | https://geocode.xyz/api                           |
+| Jobs                                                                             | https://jobs.github.com/api                       |
+| Lyrics                                                                           | https://lyricsovh.docs.apiary.io/#reference       |
+| Quotes                                                                           | https://pprathameshmore.github.io/QuoteGarden/    |
+| SpaceX                                                                           | https://docs.spacexdata.com/?version=latest       |
+| Jokes                                                                            | https://github.com/15Dkatz/official_joke_api      |
+| Star Wars API                                                                    | https://swapi.dev                                 |
+| Harvard Art Museum API (this one requires an API key, but set up is very simple) | https://www.harvardartmuseums.org/collections/api |
 
 - After choosing your API **read** the documentation.
 - Create a new application for accessing the API. (For `C#` use `sdg-console`, for `JS` use `app-app`)
