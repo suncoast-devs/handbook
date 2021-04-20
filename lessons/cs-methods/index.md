@@ -270,7 +270,7 @@ type. In our case, since the argument is the _prompt_ we call the variable
 `prompt` and the type of this variable is a `string`.
 
 Next, we will consider if our method _returns_ anything to the code that called
-it. In does, the string the user entered. So this method has a return type of
+it. It does, the string the user entered. So this method has a return type of
 `string`.
 
 Our method signature will be:
