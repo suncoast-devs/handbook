@@ -84,7 +84,7 @@ concept of `ACID` (which stands for
 - Durability - This ensures that once data is written to the database, the
   database does not lose the information in the case of a database, computer, or
   system crash. For instance, once a database says that a row is updated, a
-  power loss to the system should not loose the data that was updated.
+  power loss to the system should not lose the data that was updated.
 
 ### SQL vs NoSQL
 
@@ -101,7 +101,7 @@ structure allows developers to more freely control what and how the data is
 stored. NoSQL databases have become popular with the rise of data science and
 big data.
 
-Currently "Relational/SQL Databases" are the most common databases we will
+Currently "Relational/SQL Databases" are the most common databases, we will
 explore what a SQL database is and what it can do.
 
 ## SQL Basics
@@ -196,7 +196,7 @@ INSERT INTO "Books" ("DatePublished") VALUES ("2020-07-04");
 
 ### Date and Time
 
-If we wanted to know the exact time a book was published we weould also need the
+If we wanted to know the exact time a book was published we would also need the
 time component.
 
 For this we would use the `timestamp` column type.
