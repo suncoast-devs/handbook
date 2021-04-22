@@ -83,9 +83,9 @@ The structure of a simple CSV file looks similar to this:
 
 ---
 
-# [fit] Header Row
+# [fit] First Row (aka Header)
 
-The CSV file also allows us to have a header row that describes the data for any human and computer reader.
+The CSV file also allows us to have a first row (aka header) that describes the data for any human and computer reader.
 
 <br/>
 

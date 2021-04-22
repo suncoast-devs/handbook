@@ -44,7 +44,7 @@ In this format you will see that we have strings of data surrounded by `"`
 quotes and our values are separated by commas `,` and there are multiple lines
 representing, in this case, employees.
 
-The CSV file also allows us to have a header row that describes the data for any
+The CSV file also allows us to have a first row (aka header) that describes the data for any
 human and computer reader.
 
 ```csv
