@@ -532,7 +532,7 @@ foreach (var movie in movies)
 }
 ```
 
-Notice how if their is no related `Rating` we need to see that the
+Notice how if there is no related `Rating` we need to see that the
 `movie.Rating` is not `null`. This will be the case for each row in `Movies`
 that doesn't have a `RatingId` that matches something from the `Ratings` table.
 
