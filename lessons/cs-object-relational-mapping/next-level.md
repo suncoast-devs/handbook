@@ -29,7 +29,7 @@ Initially our database design might start off as empty, no tables. An initial
 _migration_ might be described as "From a database without any tables, please
 add the following tables with the following columns and relationships." After
 working on the application for a while and receiving feedback from the team,
-maangement, or customers we may discover we need a new attribute of one of our
+management, or customers we may discover we need a new attribute of one of our
 database models (POCO + table). We could then make a _new migration_ that says
 "Please add an integer column named Salary to the People table."
 
@@ -46,7 +46,7 @@ These _generated migrations_ solve the above problems:
 4. The code will be in our project when we deploy to the cloud so we can keep
    that database up-to-date.
 
-Migrations are a wondeful benefit of having an ORM. Lets see how to add this
+Migrations are a wonderful benefit of having an ORM. Lets see how to add this
 capability to our system and start to use it.
 
 ## Add the needed packages
@@ -137,7 +137,7 @@ to _rollback_ or _undo_ that database change. The `Down` migration is
 essentially a safety net in case we realize the migration had a bad impact on
 the system.
 
-If we look inside the body of teh `Up` method we will see code similar to the
+If we look inside the body of the `Up` method we will see code similar to the
 following.
 
 ```csharp
@@ -348,7 +348,7 @@ that is a `<bool>`.
 Now that we have:
 
 - Added the property to the model
-- Run the `dotnet ef migrations add` commadn and given it a good descriptive
+- Run the `dotnet ef migrations add` command and given it a good descriptive
   name
 - Reviewed the migration `Up` to make sure it captures the change we expected
 
