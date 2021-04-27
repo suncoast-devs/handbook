@@ -8,13 +8,15 @@ database to manage employees. We will create a menu system that will allow us to
 
 # Reviewing the code we will start with.
 
+We will make a new project: `dotnet new sdg-console -o SuncoastHumanResources`
+
 This is the code we will start with. It defines an `Employee` class and contains
 code to input the details of a single employee.
 
 ```csharp
 using System;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -107,7 +109,7 @@ Now our code looks like:
 using System;
 using System.Collections.Generic;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -188,7 +190,7 @@ quits
 using System;
 using System.Collections.Generic;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -285,7 +287,7 @@ Let's add a menu item to show all the employees in the database.
 using System;
 using System.Collections.Generic;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -392,7 +394,7 @@ the user no match was found, otherwise we show the details of `foundEmployee`.
 using System;
 using System.Collections.Generic;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -511,6 +513,28 @@ namespace EmployeeDatabase
 }
 ```
 
+## Improving this code by adding `LINQ`
+
+We can add `using System.Linq` to the top of our code we utilize
+`FirstOrDefault` for our searching code.
+
+```C#
+// Ask for the name of an employee
+var name = PromptForString("What name are you looking for: ");
+
+// Make a new variable to store the found employee, initializing
+// to null which will indicate no match found
+Employee foundEmployee = employees.FirstOrDefault(employee => employee.Name == name);
+
+// If the foundEmployee is still null, nothing was found
+if (foundEmployee == null) {
+  Console.WriteLine("No match found");
+} else {
+  // Otherwise print details of the found employee
+  Console.WriteLine($"{foundEmployee.Name} is in department {foundEmployee.Department} and makes ${foundEmployee.Salary}");
+}
+```
+
 ## Delete an employee and update an employee
 
 These are two other features that our employee database might need. We'll leave
@@ -542,7 +566,7 @@ system) we have created a good _decoupling_ of our system's parts.
 using System;
 using System.Collections.Generic;
 
-namespace EmployeeDatabase
+namespace SuncoastHumanResources
 {
   class Employee
   {
@@ -584,16 +608,7 @@ namespace EmployeeDatabase
     public Employee FindOneEmployee(string name)
     {
       // to null which will indicate no match found
-      Employee foundEmployee = null;
-
-      // Go through all the employees
-      foreach(var employee in employees) {
-        // If the name matches
-        if (employee.Name == name) {
-          // ... then store this employee in the foundEmployee variable
-          foundEmployee = employee;
-        }
-      }
+      Employee foundEmployee = employees.FirstOrDefault(employee => employee.Name == name)
 
       // Return what we found (the employee or null)
       return foundEmployee;
