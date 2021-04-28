@@ -96,7 +96,7 @@ Excel-like format, that focuses on normalizing our data by focusing on
 relationships and structure. This is often referred to as "Relational Databases"
 
 NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database
-stores data in form other the table structure in SQL. This looseness of data
+stores data in a form other than the table structure. This looseness of data
 structure allows developers to more freely control what and how the data is
 stored. NoSQL databases have become popular with the rise of data science and
 big data.
