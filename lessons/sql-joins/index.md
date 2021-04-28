@@ -432,8 +432,8 @@ INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (8,1);
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (9,1);
 ```
 
-_Create cast membership for Warick Davis in Harry Potter and Hitchhikers. Harry
-Potter's movie `id` is 3, and Warrik's actor `id` is 2_
+_Create cast membership for Warwick Davis in Harry Potter and Hitchhikers. Harry
+Potter's movie `id` is 3, and Warwick's actor `id` is 2_
 
 ```sql
 -- The movie "Harry Potter and Goblet of Fire" had the actor "Warwick Davis"
