@@ -196,10 +196,8 @@ var context = new SuncoastMoviesContext();
 With this object we access our `Movies` property:
 
 ```csharp
-// Get a reference to our collection of movies.
-// NOTE: this doesn't yet access any of them, just gives
-//       us a variable that knows how.
-var movies = context.Movies;
+// This would represent the "movies" table in our database
+context.Movies;
 ```
 
 ---
@@ -211,7 +209,7 @@ Now with this `movies` object we can use some of our familiar `LINQ` capabilitie
 We start by seeing how we would count the number of movies in the table.
 
 ```csharp
-var movieCount = movies.Count();
+var movieCount = context.Movies.Count();
 Console.WriteLine($"There are {movieCount} movies!");
 ```
 
@@ -232,7 +230,7 @@ However, EF Core is translating this to the appropriate SQL statements and retur
 To see all of the movies, we can use a `foreach` loop:
 
 ```csharp
-foreach (var movie in movies)
+foreach (var movie in context.Movies)
 {
   Console.WriteLine($"There is a movie named {movie.Title}");
 }
@@ -301,7 +299,7 @@ This tells the `Movie` model that it can use the `Rating` property to return a `
 Now when we access the `context.Movies` we can also tell it to fetch the related `Rating` via the `Include` method.
 
 ```csharp
-var movies = context.Movies.Include(movie => movie.Rating);
+var moviesWithRatings = context.Movies.Include(movie => movie.Rating);
 ```
 
 ---
@@ -309,7 +307,8 @@ var movies = context.Movies.Include(movie => movie.Rating);
 # Showing movies and ratings
 
 ```csharp
-foreach (var movie in movies)
+var moviesWithRatings = context.Movies.Include(movie => movie.Rating);
+foreach (var movie in moviesWithRatings)
 {
   if (movie.Rating == null)
   {
@@ -368,7 +367,16 @@ class Role
 
 
 ```csharp
-foreach (var movie in movies)
+// Makes a new collection of movies but each movie knows the associated Rating object
+var moviesWithRatingsRolesAndActors = context.Movies.
+                                        // from our movie, please include the associated Rating object
+                                        Include(movie => movie.Rating).
+                                        // ... and from our movie, please include the associated Roles LIST
+                                        Include(movie => movie.Roles).
+                                        // THEN for each of roles, please include the associated Actor object
+                                        ThenInclude(role => role.Actor);
+
+foreach (var movie in moviesWithRatingsRolesAndActors)
 {
   if (movie.Rating == null)
   {
@@ -379,7 +387,7 @@ foreach (var movie in movies)
     Console.WriteLine($"{movie.Title} - {movie.Rating.Description}");
   }
 
-  foreach (var role in movie.Roles)
+  foreach (var role in context.Movie.Roles)
   {
     Console.WriteLine($" - {role.CharacterName} played by {role.Actor.FullName}");
   }
@@ -434,10 +442,10 @@ if (existingMovie != null) {
 To remove a movie we find the movie and then remove it.
 
 ```csharp
-var existingMovie = context.Movies.FirstOrDefault(movie => movie.Title == "Cujo");
+var existingMovieToDelete = context.Movies.FirstOrDefault(movie => movie.Title == "Cujo");
 
-if (existingMovie != null) {
-  context.Movies.Remove(existingMovie);
+if (existingMovieToDelete != null) {
+  context.Movies.Remove(existingMovieToDelete);
 
   context.SaveChanges();
 }
