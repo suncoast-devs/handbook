@@ -30,14 +30,14 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
 
 - Create a database that stores `Albums`, `Bands`, and `Songs`. They should have the following properties, use your best judgment for types. Also include the foreign keys when making your CREATE TABLE statements. HINT: You might have to create your tables in a _specific order_
 
-  - Album
+  - Albums
 
     - Id
     - Title
     - IsExplicit
     - ReleaseDate
 
-  - Band
+  - Bands
 
     - Id
     - Name
@@ -49,7 +49,7 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
     - ContactName
     - ContactPhoneNumber
 
-  - Song
+  - Songs
 
     - Id
     - Track Number
