@@ -236,6 +236,20 @@ Example, to delete all the rows where the `PrimaryAuther` is `R. L. Stine`
 DELETE FROM "Books"  WHERE "PrimaryAuthor" = 'R. L. Stine';
 ```
 
+## ALTER TABLE - Renaming a table
+
+We can rename a table if we use the wrong name.
+
+Example of renaming a table:
+
+```sql
+ALTER TABLE "Band" RENAME TO "Bands";
+```
+
+```sql
+ALTER TABLE "OldName" RENAME TO "NewName";
+```
+
 ## ALTER TABLE - Adding a column, Renaming a Column, Changing a Type
 
 The structure of our tables is not set in stone. They can be modified at a later
