@@ -295,7 +295,7 @@ With this object we access our `Movies` property:
 // Get a reference to our collection of movies.
 // NOTE: this doesn't yet access any of them, just gives
 //       us a variable that knows how.
-var movies = context.Movies;
+context.Movies;
 ```
 
 Now with this `movies` object we can use some of our familiar `LINQ`
@@ -305,7 +305,7 @@ table.
 ### Counting movies
 
 ```csharp
-var movieCount = movies.Count();
+var movieCount = context.Movies.Count();
 Console.WriteLine($"There are {movieCount} movies!");
 ```
 
@@ -328,7 +328,7 @@ There are 14 movies!
 To see all of the movies, we can use a `foreach` loop:
 
 ```csharp
-foreach (var movie in movies)
+foreach (var movie in context.Movies)
 {
   Console.WriteLine($"There is a movie named {movie.Title}");
 }
@@ -400,15 +400,10 @@ namespace SuncoastMovies
     {
       var context = new SuncoastMoviesContext();
 
-      // Get a reference to our collection of movies.
-      // NOTE: this doesn't yet access any of them, just gives
-      //       us a variable that knows how.
-      var movies = context.Movies;
-
-      var movieCount = movies.Count();
+      var movieCount = context.Movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
-      foreach (var movie in movies)
+      foreach (var movie in context.Movies)
       {
         Console.WriteLine($"There is a movie named {movie.Title}");
       }
@@ -510,7 +505,7 @@ Now when we access the `context.Movies` we can also tell it to fetch the related
 `Rating` via the `Include` method.
 
 ```csharp
-var movies = context.Movies.Include(movie => movie.Rating);
+var moviesWithRatings = context.Movies.Include(movie => movie.Rating);
 ```
 
 Now when we access the `movies` we are going to generate a **JOIN** to the
@@ -519,7 +514,8 @@ Now when we access the `movies` we are going to generate a **JOIN** to the
 Now we can change our loop to also show the `rating` if it has one.
 
 ```csharp
-foreach (var movie in movies)
+const moviesWithRatings = context.movies.Include(movie => movie.Rating);
+foreach (var movie in moviesWithRatings)
 {
   if (movie.Rating == null)
   {
@@ -532,7 +528,7 @@ foreach (var movie in movies)
 }
 ```
 
-Notice how if their is no related `Rating` we need to see that the
+Notice how if there is no related `Rating` we need to see that the
 `movie.Rating` is not `null`. This will be the case for each row in `Movies`
 that doesn't have a `RatingId` that matches something from the `Ratings` table.
 
@@ -627,15 +623,11 @@ namespace SuncoastMovies
     {
       var context = new SuncoastMoviesContext();
 
-      // Get a reference to our collection of movies.
-      // NOTE: this doesn't yet access any of them, just gives
-      //       us a variable that knows how.
-      var movies = context.Movies.Include(movie => movie.Rating);
-
-      var movieCount = movies.Count();
+      var movieCount = context.Movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
-      foreach (var movie in movies)
+      const moviesWithRatings = context.movies.Include(movie => movie.Rating);
+      foreach (var movie in moviesWithRatings)
       {
         if (movie.Rating == null)
         {
@@ -762,15 +754,19 @@ namespace SuncoastMovies
     {
       var context = new SuncoastMoviesContext();
 
-      // Get a reference to our collection of movies.
-      // NOTE: this doesn't yet access any of them, just gives
-      //       us a variable that knows how.
-      var movies = context.Movies.Include(movie => movie.Rating).Include(movie => movie.Roles).ThenInclude(role => role.Actor);
 
-      var movieCount = movies.Count();
+      var movieCount = context.Movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
-      foreach (var movie in movies)
+      // Makes a new collection of movies but each movie knows the associated Rating object
+      var moviesWithRatingsRolesAndActors = context.Movies.
+                                              // from our movie, please include the associated Rating object
+                                              Include(movie => movie.Rating).
+                                              // ... and from our movie, please include the associated Roles LIST
+                                              Include(movie => movie.Roles).
+                                              // THEN for each of roles, please include the associated Actor object
+                                              ThenInclude(role => role.Actor);
+      foreach (var movie in moviesWithRatingsRolesAndActors)
       {
         if (movie.Rating == null)
         {

@@ -3,9 +3,7 @@ title: INSERT INTO "Student" ("Knowledge") VALUES ('SQL')
 tags: ['sql']
 ---
 
-Every application uses data in some way. In many of our applications, we will be
-storing information in a database. In this assignment, we will be practicing
-using SQL databases.
+Every application uses data in some way. In many of our applications, we will be storing information in a database. In this assignment, we will be practicing using SQL databases.
 
 ## Objectives
 
@@ -14,14 +12,23 @@ using SQL databases.
 
 ## Setup
 
-1. Fork [this repository](https://github.com/suncoast-devs/sql-intro) to your
-   own account.
+1. Fork [this repository](https://github.com/suncoast-devs/sql-intro) to your own account.
 2. Change into your project's directory.
 3. Clone your repository:
    `hub clone sql-intro`
 4. Change into your newly cloned project's directory: `cd sql-intro`
 5. `code .`
 6. All your SQL queries should be placed inside the `queries.sql` file.
+
+## Additional Resources
+
+- [Quick Reference to Helpful Postgres Commands](https://handbook.suncoast.io/lessons/misc-quick-reference/postgres)
+- [Quick Reference to Navigating in pgcli](https://handbook.suncoast.io/lessons/misc-quick-reference/pgcli)
+- [Quick Reference to Common SQL Queries](https://handbook.suncoast.io/lessons/misc-quick-reference/sql)
+- [pgcli/psql CheatSheet](https://tomcam.github.io/postgres/)
+- [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
+- [Hint for a useful data type](https://www.postgresql.org/docs/current/datatype-boolean.html)
+- [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 
 ### Explorer Mode
 
@@ -58,10 +65,3 @@ using SQL databases.
     - `BuildingNumber`
   - Create a column on the `Employees` table named `DepartmentId` to relate to the `Departments` table. Make it a foreign key.
   - Insert employees and related departments.
-
-## Additional Resources
-
-- [pgcli/psql CheatSheet](https://tomcam.github.io/postgres/)
-- [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
-- [Hint for a useful data type](https://www.postgresql.org/docs/current/datatype-boolean.html)
-- [PostgreSQL Documentation](https://www.postgresql.org/docs/)

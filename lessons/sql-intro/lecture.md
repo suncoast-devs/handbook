@@ -1,7 +1,5 @@
 theme: Next, 1
 
-<!-- prettier-ignore-start -->
-
 # [fit] SQL
 
 ---
@@ -12,14 +10,14 @@ SQL (Structured Query Language) is a descriptive computer language designed for 
 
 ---
 
-# [fit] Been around since early 70s.
+# [fit] Been around since the early 70s.
 
 ---
 
 # Has features we've been looking for
 
 - Structured
-- Random Access (don't have to rewrite or just append)
+- Random Access (don't have to rewrite or append)
 - Can store multiple related data in one place
 - Supports multiple users
 
@@ -36,14 +34,14 @@ SQL (Structured Query Language) is a descriptive computer language designed for 
 
 # [fit] Atomicity
 
-Updates to the database allow for multiple changes to be requested at once and either all of them fail, or all of them succeed
+Updates to the database allow for multiple changes to execute at once. Either all of them fail, or all of them succeed.
 
 ^ For instance, if our application is a banking application and we want to
 withdraw \$10 from Andy's account and add it to Barbara's account, we might
 first write a statement to decrease Andy's balance by 10. Then a second
 statement would increase Barbara's balance by 10. If these two statements aren't
-guaranteed to succeed in pairs we have the possibility that we would decrease
-Andy's balance without correspondingly increase Barabara's. In an `atomic`
+guaranteed to succeed in pairs, we can decrease
+Andy's balance without correspondingly increasing Barabara's. In an `atomic`
 system, either we would both decrease Andy's balance and increase Barbara's
 balance - _or_ - if an error occurs, their balances are as they were at the
 start.
@@ -54,31 +52,30 @@ start.
 
 Any rules the database enforces are applied when asking for changes.
 
-^ An example is when creating a user to a system we _require_ the user to have
+^ An example is when creating a user in a system, we _require_ the user to have
 an email address and a password. If we attempt to create a row in the `Users`
-table but the `Email` field is blank, we do not allow the row. This ensures that
-our expectations of the contents of the database are always upheld.
+table, but the `Email` field is blank, we do not allow the row. The validation upholds our expectations of the contents of the database.
 
 ---
 
 # [fit] Isolation
 
-This allows for multiple database requests to be handled concurrently (e.g. reading and writing to multiple tables/rows at the same time)
+Isolation allows for multiple database requests to be handled concurrently (e.g., reading and writing to multiple tables/rows at the same time)
 
 ---
 
 # [fit] Durability
 
-This ensures that once data is written to the database, the database does not lose the information in the case of a database, computer, or system crash.
+Durability ensures that once data is written to the database, the database does not lose the information in the case of a database, computer, or system crash.
 
-Once a database says that a row is updated, a power loss to the system should not loose the data that was updated.
+Once a database says that row updates, a power loss to the system should not lose the updated data.
 
 ---
 
 # [fit] SQL Basics
 
-- SQL (relational) databases store and arranges data into tables.
-- These tables are made up of rows where each row has the same set of columns.
+- SQL (relational) databases store and arrange data into tables.
+- These tables consist of rows where each row has the same set of columns.
 
 > For an analogy, you can think of a database as an Excel spreadsheet, a table as "sheet" within that spreadsheet, rows as the rows of the sheet, and columns as _named_ versions of the familiar "Column A", "Column B" style of spreadsheets.
 
@@ -93,7 +90,7 @@ Once a database says that a row is updated, a power loss to the system should no
 
 For instance, let's imagine we are designing and building a system to manage books for a library. We could create a database named `Library` and in that database, there would be one table, called `Books`.
 
-Into this `Books` table, we would design columns that represent the specific data about books we wish to track. Each row in the `Books` table would represent a unique book in our collection.
+Into this `Books` table, we would design columns representing the specific data about books we wish to track. Each row in the `Books` table would represent a unique book in our collection.
 
 ---
 
@@ -106,11 +103,11 @@ Into this `Books` table, we would design columns that represent the specific dat
 ---
 
 - In our `Books` table, we will want to store specific details:
- - `Title`
- - `PrimaryAuthor`
- - `YearPublished`
- - `Genre`
- 
+- `Title`
+- `PrimaryAuthor`
+- `YearPublished`
+- `Genre`
+
 In a language such as JavaScript, Ruby, or C# we would naturally define some of these as a `string`
 
 In a database, we have a few choices for the data type.
@@ -119,19 +116,19 @@ In a database, we have a few choices for the data type.
 
 `char(N)`
 
-The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is _always_ `N` characters long
+The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters, spaces will fill the remaining space. The appended spaces ensures the column is _always_ `N` characters long
 
 ---
 
-`varchar(N)` 
+`varchar(N)`
 
-Again the `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is _not_ filled with spaces.
+Again the `N` represents the largest number of characters the column can store. However, the width of the data is variable. If we supply _less_ than `N` characters, the column is _not_ filled with spaces.
 
 ---
 
-`text` 
+`text`
 
-Allows for a variable number of characters, but has a much larger limit than what a `char` or `varchar` can support. In some cases many megabytes, or gigabytes of text.
+Allows for a variable number of characters but has a much larger limit than what a `char` or `varchar` can support. In some cases many megabytes, or gigabytes of text.
 
 ---
 
@@ -143,9 +140,10 @@ See the Postgres docs for more details.
 
 ### Rows
 
-Rows are where our data is actually stored.
+Rows are where our data is stored.
 
 Each row represents one instance of a "thing", in our case one "book".
+
 > Much like one `object` is an instance of a class (_this is an important concept_)
 
 In our example, a row of data would contain 'The Cat in the Hat' (`Title`), 'Dr. Suess' (`Author`), and 'kids' (`Genre`).
@@ -184,11 +182,11 @@ createdb Library
 
 # But where is it?
 
-All of our databases, their tables, columns, rows, relationships, and data are stored and managed by the database. 
+The databases, tables, columns, rows, relationships, and data are stored and managed by the database.
 
-We do not see where it keeps the data, or how it is organized.
+We do not see where it keeps the data or how the database structures the data.
 
-Eventually the data won't even be on the same computer where our code runs!
+Eventually, the data won't even be on the same computer where our code runs!
 
 ---
 
@@ -249,11 +247,11 @@ CREATE TABLE "Books" (
 
 # Other types
 
-| Type | Description |
-| --- | --- |
-| BOOLEAN | Stores a `true` or `false` value |
-| DATE| Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data |
-| TIMESTAMP| Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data |
+| Type      | Description                                                                                             |
+| --------- | ------------------------------------------------------------------------------------------------------- |
+| BOOLEAN   | Stores a `true` or `false` value                                                                        |
+| DATE      | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data |
+| TIMESTAMP | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data |
 
 ---
 
@@ -323,7 +321,7 @@ Regardless if there are ten rows or ten million rows, this statement will return
 
 ### SELECT (some of the columns)
 
-Often we do not want _all_ the columns from the table so we can specify specific columns.
+Often we do not want _all_ the columns from the table. We can specify specific columns.
 
 ```sql
 SELECT "Title", "PrimaryAuthor" FROM "Books";
@@ -377,17 +375,18 @@ SELECT COUNT(*)
 FROM "Books";
 ```
 
-See the average, largest, and smallest year of publication
+See the average, largest, and smallest year of publication.
 
 ```sql
 SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
 FROM "Books";
 ```
 
+---
 
-We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied. 
+# `SELECT` and `WHERE` together!
 
-<br/>
+We can use the `WHERE` clause to help filter down our table to only see rows that satisfy the conditions supplied.
 
 `SQL`
 
@@ -435,7 +434,7 @@ The above update statement will update all rows that have `ColumnB = 'some value
 
 The same syntax for `WHERE` clauses from `SELECT` apply here. We can use multiple conditions and combine them with `AND` and `OR`
 
-> Word of warning, if the `WHERE` clause is left off, then **all** rows will be updated.
+> Word of warning. If the `WHERE` clause is left off, it will update all rows.
 
 This might cause a **bad day**
 
@@ -457,10 +456,9 @@ To remove one **or many** rows, we can use the `DELETE` statement.
 DELETE FROM "Books" WHERE "YearPublished" = 1995;
 ```
 
+As with the `UPDATE` statement, the `DELETE` statement can use the same `WHERE` syntax to filter rows to delete.
 
-As with the `UPDATE` statement the `DELETE` statement can use the same `WHERE` syntax to filter which rows will be deleted.
-
-> Word of warning, if the `WHERE` clause is left off, then **all** rows will be  deleted.
+> Word of warning. If the `WHERE` clause is left off, it will delete all rows.
 
 This might cause a **bad day**
 
@@ -472,5 +470,3 @@ Here are some useful postgres database references about SQL
 
 - [PostgreSQL Data Types](https://www.postgresql.org/docs/current/datatype.html)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
-
-<!-- prettier-ignore-end -->

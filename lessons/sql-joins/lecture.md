@@ -37,6 +37,37 @@ pgcli SuncoastMovies
 
 ---
 
+# SERIAL Data Type
+
+- Databases provide their own way of supplying a unique value for each row in the database.
+- In `Postgres` We call this SERIAL column.
+- A `SERIAL` data type will begin at `1` and increase for each new row.
+- Values are never reused or repeated.
+
+---
+
+# Defining a Primary Key for our Movies
+
+[.column]
+
+- Use `Id` column name. This is a common pattern.
+- Define the data type as: `SERIAL`.
+- Denote that this column is part of the `PRIMARY KEY`
+
+[.column]
+
+```
+       Data Type
+       |
+       |      Mark this column as part of the PRIMARY KEY
+       |      |
+       |      |
+       v      v---------v
+"Id"  SERIAL PRIMARY KEY,
+```
+
+---
+
 ```sql
 CREATE TABLE "Movies" (
   "Id"               SERIAL PRIMARY KEY,
