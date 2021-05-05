@@ -10,10 +10,11 @@ tags: ['c-sharp', 'console', 'api', 'codewars']
 
 ## Requirements
 
-- Before starting solve these two codewars:
+- Before starting solve these codewars:
+  - Reverse String [https://www.codewars.com/kata/5168bb5dfe9a00b126000018]
   - Digits Explosion [https://www.codewars.com/kata/digits-explosion](https://www.codewars.com/kata/digits-explosion)
   - Mumbling [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling)
-- TOP TIP: Digits Explosion is probably an easier algorithm to create. Start there!
+- TOP TIP: Reverse String is easier than Digits Explosion. Digits Explosion is probably an easier than Mumbling. Start in that order!
 
 ### Setup
 
@@ -23,22 +24,28 @@ dotnet new sdg-api -o ExplosionAPI
 
 ### Resources
 
-- Use [Insomnia](https://insomnia.rest/) for interacting with your API.
+- Use [Insomnia](https://insomnia.rest/) for testing your API.
 
 ### Explorer Mode
 
 - Create a new `webapi` api project
+- Create a Controller for `repeater`
+  - Create a new Controller called `ReverseStringController`
+  - This will have one `HttpGet` method
+  - The method will accept a string either as a URL parameter or a query parameter. Your choice.
+  - This endpoint method will reverse the string passed to it, manipulate according to the kata [Reverse String](https://www.codewars.com/kata/digits-explosion) and return the result
+  - Have your code return the string
 - Create a Controller for `explosion`
   - Create a new Controller called `ExplosionController`
   - This will have one `HttpGet` method
   - The method will accept a string either as a URL parameter or a query parameter. Your choice.
-  - This endpoint method will take the string passed to it, manipulate according to the kata [https://www.codewars.com/kata/digits-explosion](https://www.codewars.com/kata/digits-explosion) and return the result
+  - This endpoint method will take the string passed to it, manipulate according to the kata [Digits Explosion](https://www.codewars.com/kata/digits-explosion) and return the result
   - Have your code return the string
 - Create a endpoint for `mumbling`
   - Create a new Controller called `MumblingController`
   - This will have one `HttpGet` method
   - The method will accept a string either as a URL parameter or a query parameter. Your choice.
-  - This endpoint method will take the string passed to it, manipulate according to the kata [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling) and return the result
+  - This endpoint method will take the string passed to it, manipulate according to the kata [Mumbling](https://www.codewars.com/kata/mumbling) and return the result
   - Have your code return the string
 
 ### Adventure Mode
