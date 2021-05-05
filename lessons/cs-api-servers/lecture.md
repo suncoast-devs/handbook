@@ -466,7 +466,7 @@ public int Roll(int sides)
 
 In this case we are telling the controller that there is information **INSIDE** the URL itself.
 
-The `("{sides})` means
+The `("{sides}")` means
 
 > Right after the end of the URL comes some important information. Whatever is there please put in an argument named sides
 
@@ -592,7 +592,7 @@ public List<int> Roll(int sides, int count)
 
 ---
 
-# `/dice/4?count=6`
+# `/dice/6?count=4`
 
 ![fit inline](./assets/roll-4-6.png)
 
