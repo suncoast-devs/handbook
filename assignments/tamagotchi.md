@@ -19,7 +19,7 @@ dotnet new sdg-api -o TamagotchiAPI
 
 ### Resources
 
-- [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-3.1)
+- [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0)
 - [Web API docs](https://dotnet.microsoft.com/apps/aspnets)
 
 ### Explorer Mode
@@ -59,11 +59,11 @@ The API will have the following endpoints.
 
 Demonstrate the API works
 
-- Using Insomnia, create three Pets. Include a screenshot containing the API request and the response.
-- Using Insomnia, create a playtime for one of your pets. Show the API request and the response.
-- Using Insomnia, create a feeding for one of your pets. Show the API request and the response.
-- Using Insomnia, create a scolding for one of your pets. Show the API request and the response.
-- Using Insomnia, show the details of all the pets. Show the API request and the response.
+- Using Insomnia, create three Pets. Include a screenshot containing the API request and the response. Post the image in the comment when turning in the assignment.
+- Using Insomnia, create a playtime for one of your pets. Show the API request and the response. Post the image in the comment when turning in the assignment.
+- Using Insomnia, create a feeding for one of your pets. Show the API request and the response. Post the image in the comment when turning in the assignment.
+- Using Insomnia, create a scolding for one of your pets. Show the API request and the response. Post the image in the comment when turning in the assignment.
+- Using Insomnia, show the details of all the pets. Show the API request and the response. Post the image in the comment when turning in the assignment.
 
 ### Adventure Mode
 
