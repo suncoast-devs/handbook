@@ -388,7 +388,7 @@ with practice.
 Here is what our page looks like so far and below that the HTML we are starting
 with.
 
-![](assets/content-only.png)
+![](assets/content-only.jpg)
 
 ```html
 <header>
