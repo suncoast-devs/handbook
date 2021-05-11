@@ -381,7 +381,7 @@ Good for things that are already measured in pixels, like the size of an image. 
 
 > Represents the calculated font-size of the element.
 
-- `1rem` equals the `font-size` of the parent, `2rem` is twice the `font-size` of the parent, etc.
+- `1em` equals the `font-size` of the parent, `2em` is twice the `font-size` of the parent, etc.
 
 This is _relative_ to the font-size of the parent.
 
