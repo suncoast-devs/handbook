@@ -155,6 +155,10 @@ ul li {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Don't let the squares become too small */
+  min-width: 3rem;
+  min-height: 10rem;
 }
 ```
 

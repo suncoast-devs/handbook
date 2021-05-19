@@ -174,8 +174,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 # Improvements
 
 - We no longer have to initialize an empty array and modify its contents.
-- We no longer `push` to the array, but simply **return** the new value from our
-  callback function.
+- We no longer `push` to the array, but simply **return** the new value from our callback function.
 
 ---
 
