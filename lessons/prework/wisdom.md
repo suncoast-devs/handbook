@@ -18,5 +18,5 @@ to understand our advice for you.
 
 Then follow up by reading
 [wisdom of the alumni](/lessons/misc-keys-to-student-success/wisdom-of-the-alumni)
-to hear amazing advice from alumni who were once where you are today, reading
+to read amazing advice from alumni who were once where you are today, reading
 this pre-work before their first day of class!
