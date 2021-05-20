@@ -110,7 +110,7 @@ command.
 # |      |   |           Option to tell dotnet what directory to create to store our project
 # |      |   |           |
 # |      |   |           |
-# |      |   |           |  Name of the directory to put our project
+# |      |   |           |  Name of our project
 # |      |   |           |  |
 # |      |   |           |  |
 # v      v   v           v  v
