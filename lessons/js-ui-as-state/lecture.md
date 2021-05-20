@@ -64,15 +64,17 @@ function render() {
   `
 
   document.body.innerHTML = html
-}
 
-function main() {
+  // After we create the HTML we can
+  // now setup our listener for clicks
   document.querySelector('button').addEventListener('click', function (event) {
     counter++
 
     render()
   })
+}
 
+function main() {
   render()
 }
 ```
