@@ -27,7 +27,6 @@ After completing this assignment, you should be able to:
 10. Each time you save your code, the tests run and tell you if your code is
     correct.
 11. Commit and push your work to GitHub.
-12. Turn in the URL to your GitHub repo.
 
 ### Explorer Mode
 

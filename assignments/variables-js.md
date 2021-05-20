@@ -56,7 +56,7 @@ app-app --beta VariablesJS
 
   - Using Arrays
 
-    - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate a array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor you will need to format the collection of numbers as a JavaScript array.
+    - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate an array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor, you will need to format the collection of numbers as a JavaScript array.
     - Place these numbers into a properly formatted array named `numbers`.
     - Determine the following using one (or more) JavaScript `for` loops:
       - Find the smallest number in the array and place the answer in a variable named `smallest`

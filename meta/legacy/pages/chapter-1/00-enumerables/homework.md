@@ -28,7 +28,6 @@ After completing this assignment, you should be able to:
    `(Skip = "Remove to run test")` from the `Fact` attribute. There are a total
    of 10 questions
 9. Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 

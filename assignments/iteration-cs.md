@@ -26,7 +26,6 @@ To setup your assignment:
 7. Start the test runner: `dotnet watch run`
 8. Open `Iterations.cs` and work on functions until the test passes. Once you are done with a test you can move to the next one. There are a total of 10 questions.
 9. Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
 
 ## Additional Resources
 

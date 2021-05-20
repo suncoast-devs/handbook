@@ -24,7 +24,6 @@ After completing this assignment, you should be able to:
 7. Start the test runner: `npm test`
 8. Open `src/functions.test.js` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 

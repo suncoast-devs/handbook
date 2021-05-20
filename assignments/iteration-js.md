@@ -19,7 +19,6 @@ tags: ['javascript', 'enumeration']
 7. Start the test runner: `npm test`
 8. In VS Code, open the file: `src/functions.js` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
-10. Turn in the URL to your GitHub repo.
 
 ## Explorer Mode
 
