@@ -334,7 +334,7 @@ function render() {
 <main>
 ${teams.map(function (team) {
   return renderTeam(team)
-})}
+}.join(''))}
 </main>
 `
 
