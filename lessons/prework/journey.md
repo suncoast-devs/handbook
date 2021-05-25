@@ -15,7 +15,7 @@ course helps ensure you can sustain yourself.
 
 These
 [7 Time Management Tips for Students](https://www.topuniversities.com/blog/7-time-management-tips-students)
-will help you organize your time, body, and scheudle to be ready for the pace of
+will help you organize your time, body, and schedule to be ready for the pace of
 this class.
 
 ## Everyone Has Something to Teach (Also Known as: "There Are No Silly Questions")
