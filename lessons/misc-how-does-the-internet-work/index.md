@@ -48,7 +48,7 @@ every request for a translation from a name into an address comes with a `TTL`
 and reused. So if that time has expired your router must ask for fresh
 information, the same as if it had never requested the information in the first
 place. Your router will then look at its own list of DNS addresses. Typically
-this these addresses belong to your ISP, but you may have also set up to use DNS
+these addresses belong to your ISP, but you may have also set up to use DNS
 services from a company like Google, Cloudflare, OpenDNS or other organizations
 that run "Public DNS Servers." Your router will send a request to it's DNS
 service on your behalf and await a result. That DNS service does a lookup in
@@ -174,7 +174,7 @@ particular `port number`. If you think of the `IP Address` as a street address
 of an office building, you can think of the `port number` as which room in the
 building the service is in.
 
-Port number range from `1` to `65535` with many of the common services being in
+Port numbers range from `1` to `65535` with many of the common services being in
 the range less than `1024`. Any port number `1024` or less is typically
 restricted to privileged accounts on a server. Taking our example of `http` and
 `https` these services are typically on port `80` and `443` respectively.
