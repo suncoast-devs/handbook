@@ -1,5 +1,5 @@
 ---
-title: Getting into the correct frame of mind
+title: Getting Into The Correct Frame of Mind
 order: 50
 ---
 
@@ -15,8 +15,8 @@ perhaps you come from a job, industry, or environment where asking for help is
 considered a sign of weakness or asking for help might lead to you being fired.
 
 In this class _YOU WILL NEED TO ASK FOR HELP_ -- You will be asking for help
-continuously. You will be be lost and confused more than you will be sure of
-yourself and certain. This is by design. We have you for a short period of time
+continuously. You will be lost and confused more than you will be sure of
+yourself and certain, this is by design. We have you for a short period of time
 and we need to expose you to a vast array of knowledge. To do that we need _you_
 to be in a growth mindset.
 
@@ -63,8 +63,8 @@ they feel themselves lingering on the panic side of the panic/learning boundary.
 
 ## Realize Your Learning Style
 
-Developers are lifelong learners. The tech field is ever-growing and
-ever-changing. Learning is a particular skill to hone. During the course, this
+The tech field is ever-growing and ever-changing. Developers are considered lifelong learners and 
+learning is a particular skill to hone. During the course, this
 skill is sharpened to help you on the route to success. Understanding how you
 learn helps put any developer, both new and veteran, on a path to success.
 
