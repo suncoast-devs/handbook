@@ -15,7 +15,7 @@ student)
 ## Ask Questions
 
 This is your time to ask the questions you want. If your question comes up
-during lecture time and lab time or an offline discussion is a better place to
+during lecture time, lab time, or an offline discussion is a better place to
 address your question we'll let you know.
 
 ## This is a marathon and not a sprint
@@ -69,19 +69,13 @@ are falling behind and you **will** feel like you aren't understanding as much
 as you like. Trust us to be the judges of that. Put all your effort in and we
 will tell you where you need to focus.
 
-## Focus on the "now"
+## Focus on the "now", Work on the current homework before the old
 
 At some point, you will fall behind on homework. Work on _todays_ assignment
-before trying to catch up on past assignments. We will let you know if you need
-to play catch up and which assignments are the most important.
+before trying to catch up on past assignments. If you need to work on old homework
+first your instructor will let you know which homework is the most critical.
 
-## Work on the current homework before the old
-
-If you are behind on homework work on the current homework before working on
-catching up. If you need to work on old homework first your instructor will let
-you know which homework is the most critical.
-
-## Look backward more than you look forwards
+## Look backward more than you look forward
 
 Learning software development is a lifelong process. Each new thing you learn
 will reveal an entire world of learning. There will **always** be more you

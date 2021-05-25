@@ -57,6 +57,6 @@ coupon codes.
 The game is [Light Bot](https://lightbot.com/) and is available for the iPhone,
 and the Android phone.
 
-Play as many levels as you can. Each level and puzzle is practicing, through
+Play as many levels as you can. Each level and puzzle is practicing, though
 fun, another aspect of algorithmic thinking. If you have young people in your
 life, challenge them to play along with you.

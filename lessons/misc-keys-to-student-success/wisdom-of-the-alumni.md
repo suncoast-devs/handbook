@@ -56,10 +56,10 @@ received before starting the class, or on Day 1."
 
 ## Everyone is different
 
-> I’d recommend that the students realize that every one is different, everyone
+> I’d recommend that the students realize that everyone is different, everyone
 > learns at a different pace, learns in a different way, and will solve problems
 > and write code differently. Don’t be afraid to ask questions and try your best
-> to not feel over whelmed and if you are speak on it.
+> to not feel overwhelmed and if you are speak on it.
 
 ## Being frustrated is OK
 
@@ -86,7 +86,7 @@ received before starting the class, or on Day 1."
 > Also, learn to reach out for help when necessary, it will save you so much
 > time and help you truly understand the concept of the problem.
 
-> For next cohort, I would tell them it is a long process of learning that never
+> For the next cohort, I would tell them it is a long process of learning that never
 > stops. I would tell them to not think that they are leaving knowing
 > everything, but they are leaving with the skills to keep going. I would also
 > tell them they are not alone and to ask for help ASAP. I have spent many times

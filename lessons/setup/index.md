@@ -5,9 +5,9 @@ order: 1
 
 # Developer Tools
 
-This guide will step you through installing all of the developer tools we will
+This guide will walk you through installing all of the developer tools we will
 use during this course. While you may not understand yet _why_ we are installing
-each of these software tools you will encounter and use each of them during this
+each of these software tools, you will encounter and use each of them during this
 course.
 
 Several sections may have different setup instructions based on the operating
@@ -21,7 +21,7 @@ between the choices using icons on the right side of the page.
 
 Slack will be our main form of communication. You will communicate with your
 instructors and SDG staff via Slack. You will get notifications of homework,
-links to resources, and be able to ask for help via Slack.
+links to resources, and be able to ask for help from peers and staff via Slack.
 
 Download it to you computer; if you have a smart phone, I _highly_ recommend
 installing the app.
@@ -78,7 +78,7 @@ professional photo let us know and we can help.
 # Nexus
 
 We use [nexus](https://nexus.suncoast.io) as our student information site. You
-will see your attendance record, homework assignments, as well as homework
+will see your attendance record, homework assignments, lecture videos, as well as homework
 completion status.
 
 To sign up, visit, [https://nexus.suncoast.io](https://nexus.suncoast.io) and
@@ -94,7 +94,7 @@ assignments have been checked by your instructors.
 
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
-The default color scheme for `Terminal` is black text on a while background.
+The default color scheme for `Terminal` is black text on a white background.
 This can be difficult to use for long periods of time. Consider changing your
 default profile to `Pro` which will give you light text on a dark background.
 
@@ -140,7 +140,7 @@ practice, this becomes a much more efficient way of using our computers.
 ### PowerShell
 
 To open `Powershell`, open your `start` menu or type \(Win + R\), then type
-`Powershell`, this searches your system and give you the option to start it,
+`Powershell`, this searches your system and gives you the option to start it,
 just like any other program.
 
 ## PRO TIP
@@ -325,8 +325,8 @@ scoop install windows-terminal
 
 # Node
 
-Node is a runtime for javascript. This means that with node, we can run
-javascript on our machines without having to be in a browser
+Node is a runtime for JavaScript. This means that with node, we can run
+JavaScript on our machines without having to be in a browser.
 
 When working with HTML, CSS, and JavaScript we will find many of the tools
 require, or are written in, JavaScript with node.
@@ -355,7 +355,7 @@ Start a **PowerShell As Administrator**
 npm install --global windows-build-tools
 ```
 
-> NOTE: This may take a long time to complete
+> NOTE: This may take a long time to complete.
 
 **CLOSE THIS POWERSHELL WHEN COMPLETE**
 
@@ -363,7 +363,7 @@ npm install --global windows-build-tools
 
 ## SDG helper tools
 
-Install this tool which includes some helpful add-on functionality we use at SDG
+Install this tool which includes some helpful add-on functionality we use at SDG.
 
 ```shell
 npm install --global suncoast-devs/cli
@@ -371,7 +371,7 @@ npm install --global suncoast-devs/cli
 
 ## Useful node tools
 
-This tool is useful for removing files and directories
+This tool is useful for removing files and directories.
 
 ```shell
 npm install --global rimraf
@@ -435,7 +435,7 @@ download the installer.
 VS Code has a large number of optional extensions that increase the capabilities
 of the editor. We have chosen a few that we feel improve the workflow during the
 course. We recommend running the following commands to install these extensions
-into your Visual Studio Code
+into your Visual Studio Code.
 
 ### General Extensions:
 
@@ -524,7 +524,7 @@ Save this file and close the tab.
 
 # Git
 
-Git is a distributed source control system. This allows us to easily work, and
+Git is a distributed source control system. This allows us to easily work and
 collaborate, on many different projects.
 
 Git is how we will be managing our files and sharing code with each other. Git
@@ -556,12 +556,12 @@ scoop install git
 ## Post Installation Steps
 
 After the installation, re-open Terminal. We need to run a few commands to
-configuration git correctly.
+configure git correctly.
 
 ### Default branch name
 
 When working in `git` as a source control resource we work in `branches` of
-code. Branches are series of changes to code for a particular purpose. The
+code. Branches are a series of changes to code for a particular purpose. The
 default branch for a new git project has been `master`. SDG believes
 master-slave is an oppressive metaphor and we empathize with those hurt by the
 use of that term.
@@ -782,7 +782,7 @@ dotnet dev-certs https --trust
 
 # hub
 
-Hub is command line helper for github. It allows for easy github manipulation
+Hub is a command line helper for github. It allows for easy github manipulation
 from our terminal.
 
 From your terminal, run the following commands (current directory does not
@@ -977,7 +977,7 @@ Then:
 pgcli MyTestDatabase
 ```
 
-If this command runs without requiring a password the configuration is complete
+If this command runs without requiring a password the configuration is complete.
 
 To close the `pgcli` tool you can type `exit` and press return.
 
@@ -1012,7 +1012,7 @@ scoop install insomnia
 We recommend using [Firefox](https://firefox.com) during this course.
 
 We are going to be using Firefox's `Development Tools` feature extensively when
-developing front end applications. Even if you do not use Firefox for your web
+developing front-end applications. Even if you do not use Firefox for your web
 browsing experience, having all of your fellow students on the same development
 tools will help.
 
@@ -1075,7 +1075,7 @@ heroku login
 App-App is a tool created by [SDG](https://suncoast.io) for creating projects
 using HTML, CSS, and JavaScript.
 
-App App ensures a good project folder setup and includes all the needed tools.
+App-App ensures a good project folder setup and includes all the needed tools.
 
 ## Installation
 

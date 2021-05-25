@@ -1,5 +1,5 @@
 ---
-title: Know what you are getting into
+title: Know What You Are Getting Into
 order: 40
 ---
 
@@ -27,8 +27,8 @@ We really think you should read:
 
 In the technical space, there are many other jobs than just "developer."
 
-While watching the talk below, take notes about the different careers paths and
-consider which one appeals the most to you. Where you want to be in your career
+While watching the talk below, take notes about the different career paths and
+consider which one appeals the most to you. Where do you want to be in your career
 in two years? Five years?
 
 Watch this talk about

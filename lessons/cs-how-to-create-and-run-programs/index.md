@@ -12,16 +12,10 @@ to contain our code. This project will tell our computer how to organize our
 code, how to make the code ready to run (known as `compiling`) and finally how
 to run our code.
 
-## TL;DR
-
-Too Long; Didn't Read
-
-Skip to the end for a short animation of the process in action
-
 ## Before getting started
 
 Ensure you have [setup your environment](/lessons/cs-environment-setup)
-including a step on selecting and creating a location to keep your projects.
+including the steps on selecting and creating a location to keep your projects.
 
 ## The `dotnet` command
 
@@ -37,8 +31,8 @@ Windows this will be our `Powershell` window.
 Before we can create a new project we must first change the working directory of
 our shell into the directory where we'll keep our code. We suggest you use a
 folder named `sdg` or `code` or something else that will remind you this is
-where your projects are. You'll also want to keep this directory in your home
-folder, your `Desktop`, or your `Documents` folder. You will find instructions
+where your projects are. You'll also want to keep this directory either in your home
+folder, on your `Desktop`, or in your `Documents` folder. You will find instructions
 in [the setup lesson](/lessons/cs-environment-setup) on how to create these.
 
 ### Running `dotnet new sdg-console` to make a new console application
@@ -46,7 +40,7 @@ in [the setup lesson](/lessons/cs-environment-setup) on how to create these.
 Now that we have created a directory to contain our application we can use the
 `dotnet` app to create the project:
 
-- If your folder is named `sdg` and you keep it in your _home directory_
+- If your folder is named `sdg` and you keep it in your _home directory_ folder.
 
 ```shell-session
 cd ~/sdg
@@ -59,7 +53,7 @@ cd ~/sdg
 cd ~/Documents/sdg
 ```
 
-- **OR** if your folder is named `sdg` and you keep it in your _Desktop_ folder.
+- **OR** if your folder is named `sdg` and you keep it on your _Desktop_.
 
 ```shell-session
 cd ~/Desktop/sdg
@@ -101,13 +95,13 @@ command.
 # dotnet command
 # |
 # |
-# |      Option to say we are making a new project
+# |      Option to say we are making a new project.
 # |      |
 # |      |
 # |      |   Name of the template to use for this project.
-# |      |   We will be using several different templates along the way
+# |      |   We will be using several different templates along the way.
 # |      |   |
-# |      |   |           Option to tell dotnet what directory to create to store our project
+# |      |   |           Option to tell dotnet what directory to create to store our project.
 # |      |   |           |
 # |      |   |           |
 # |      |   |           |  Name of our project
