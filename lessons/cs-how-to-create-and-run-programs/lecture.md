@@ -8,7 +8,7 @@ theme: Next, 1
 
 - Before we can write code in `C#` we must create a project.
 
-- Each project will be in it's own directory.
+- Each project will be in its own directory.
 
 - We should create these projects in an organized parent folder such as `sdg` in our _home_ directory
 
@@ -22,7 +22,7 @@ theme: Next, 1
 
 - This command creates new projects from a **template**
 - Includes starter code for us!
-- We'll be using it **ALOT**
+- We'll be using it **A LOT**
 
 ---
 
@@ -39,7 +39,7 @@ theme: Next, 1
   - **`sdg`** directory in home folder
   - **`sdg`** directory on your desktop
   - **`sdg`** directory in your Documents folder
-  - Or name the directory `code` or `school` or `dev`, but do keep all your projects together in a folder
+  - Or name the directory `code`, `school` or `dev`; but do keep all your projects together in a folder.
 
 <br />
 
