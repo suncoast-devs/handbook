@@ -30,6 +30,9 @@ var characterCount = shipName.length;
   fan. The latter consisted simply of six hydrocoptic marzlevanes, so
   fitted to the ambifacient lunar waneshaft that side fumbling was
   effectively prevented.
+
+  See: https://www.youtube.com/watch?v=Ac7G7xOG2Ag
+  See: https://en.wikipedia.org/wiki/Turboencabulator
 */
 ```
 
