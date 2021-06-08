@@ -10,7 +10,7 @@ represented by the executable lines of code in our program.
 ## Reasons for writing comments
 
 - Documenting your algorithm.
-- Describing the reason the code, or the entire file, is needed.
+- Describing the reason the code, or possibly the entire file, is needed.
 - Explaining some difficult to understand code.
 - Removing code that is no longer relevant but you just can't let it go.
 
@@ -34,7 +34,7 @@ var name = "Mark"; // Comments can start anywhere on a line
 ### Multiple Line Comments
 
 If you are writing a long paragraph of comments you may not want to begin each
-line with `//` -- in this case we can use a `multi line comment`
+line with `//` -- in this case we can use a `multi-line comment`
 
 ```csharp
 /*
