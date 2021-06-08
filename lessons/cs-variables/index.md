@@ -143,9 +143,9 @@ signifies the end of a complete thought. In the case of our code, the complete
 statement declaring our variable.
 
 Looking at the other statement `int score = 95;` we see the same pattern. In
-this case we are declaring an `int`eger variable named `score` and we make it's
+this case we are declaring an `int`eger variable named `score` and we make its
 value the _number_ `95`. Notice we do not put the `95` in any kind of quotes or
-other syntax. We simply refer to it by it's value.
+other syntax. We simply refer to it by its value.
 
 ## Let C# do the work
 
@@ -161,7 +161,7 @@ string name = "Mark";
 int score = 95;
 ```
 
-The `C#` language can, when declaring a variable, _infer_ (determine on it's
+The `C#` language can, when declaring a variable, _infer_ (determine on its
 own) the type of variable if we supply it with an _initial value_. Adding an
 initial value for a variable is a good idea anyway since without it, the
 computer will assign an `undefined value`, which we'll get into later.
@@ -309,7 +309,7 @@ variable  property
 sentence.Length
 ```
 
-If we ask the `sentence` variable for it's Length, the computer first goes to
+If we ask the `sentence` variable for its Length, the computer first goes to
 the contents of the variable in memory, in this case the string
 `The quick brown fox jumped over the lazy dog` and then looks at what property
 we want, Length. In this case we get the \_int_eger `44`

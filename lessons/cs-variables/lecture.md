@@ -278,7 +278,7 @@ var howLong = sentence.Length;
 
 ^ Variable being used on the _right hand side_ for the first time. ^ Right side
 first ^ Result goes into variable on the left side ^ The `.` in the
-`sentence.Length` asks the variable `sentence` for it's `Length` property.
+`sentence.Length` asks the variable `sentence` for its `Length` property.
 
 ---
 
@@ -317,7 +317,7 @@ var howLong = sentence.Length;
 
 <br />
 
-> The `howLong` variable will know it is an _*`int`*_, and it's contents will be _*`44`*_
+> The `howLong` variable will know it is an _*`int`*_, and its contents will be _*`44`*_
 
 ---
 
