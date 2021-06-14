@@ -48,7 +48,7 @@ Console.WriteLine("Welcome to my program");
 <br />
 <br />
 
-> This will output one line to the console and move the cursor to the next line. Further output will be on it's own line.
+> This will output one line to the console and move the cursor to the next line. Further output will be on its own line.
 
 ---
 
@@ -64,7 +64,7 @@ Console.WriteLine("");
 
 [.column]
 
-To leave the cursor on the **same** line as the text use **`Console.Write`**.
+To leave the cursor on the **same** line as the text use **`Console.Write()`**.
 
 In this case the cursor remains in place after the last character of our output.
 In this case we leave a blank space.
@@ -85,7 +85,7 @@ To read information we use **`Console.ReadLine()`**
 
 This pauses our program for the user to type in text and press **`ENTER`**.
 
-Assign to a **`string`** variable we place on the left-hand-side.
+Then assigns the answer to a **`string`** variable we place on the left-hand-side.
 
 [.column]
 
