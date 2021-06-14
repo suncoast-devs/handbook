@@ -71,7 +71,7 @@ var nameCount = names.Length;
 
 # [fit] Unfortunately `array`s come with some limitations:
 
-- Once an array is created, it's size cannot change
+- Once an array is created, its size cannot change
 - If we access an index that does not exist our program will crash. For example `names[42]` will cause our program to have an exception and stop.
 - Arrays can only store data of the same type
 
@@ -111,7 +111,7 @@ If you add this code to a program you will notice red-squiggly errors for `List`
 
 The `List` is not an intrinsic type. This means that we need to tell `C#` to use it in our code.
 
-To do this we need to add a `using` statement. `using` tells `C#` what other code ours depend on.
+To do this we need to add a `using` statement. `using` tells `C#` what other code ours depends on.
 
 ---
 
@@ -123,7 +123,7 @@ We can click on `List` and press **Control .** -- or click on the **lightbulb** 
 
 We want to use the one that adds a `using` statement.
 
-In this case `using System.Collection.Generic` -- This is the **namespace** where the `List` code lives.
+In this case `using System.Collections.Generic` -- This is the **namespace** where the `List` code lives.
 
 ---
 
@@ -212,7 +212,7 @@ listOfScores.Add(100);
 listOfScores.Add(55);
 listOfScores.Add(44);
 
-// Insert the number `42` so it placed at index 2 (in this case after the 100)
+// Insert the number `42` so it is placed at index 2 (in this case after the 100)
 listOfScores.Insert(2, 42);
 
 // Now our list has: 12, 100, 42, 55, and 44
@@ -254,7 +254,7 @@ listOfScores.Add(55);
 
 Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 5
 
-// This will remove the `44` since it's index 3.
+// This will remove the `44` since it is at index 3.
 listOfScores.RemoveAt(3);
 
 Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 4

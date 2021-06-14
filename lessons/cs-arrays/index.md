@@ -56,7 +56,7 @@ var nameCount = names.Length;
 
 Unfortunately `array`s come with some limitations:
 
-- Once an array is created, it's size cannot change
+- Once an array is created, its size cannot change
 - If we access an index that does not exist our program will crash. For example
   `names[42]` will cause our program to have an exception and stop.
 - Arrays can only store data of the same type
@@ -66,7 +66,7 @@ a list of data. Even more fortunate, it is conveniently named: `List`
 
 ## Lists
 
-Lists are more flexible than arrays while maintaining some of their key
+Lists are more flexible than arrays while maintaining some of the key
 features.
 
 To create a list of strings with some data:
@@ -201,7 +201,7 @@ listOfScores.Add(100);
 listOfScores.Add(55);
 listOfScores.Add(44);
 
-// Insert the number `42` so it placed at index 2 (in this case after the 100)
+// Insert the number `42` so it is placed at index 2 (in this case after the 100)
 listOfScores.Insert(2, 42);
 
 // Now our list has: 12, 100, 42, 55, and 44
@@ -242,7 +242,7 @@ listOfScores.Add(55);
 
 Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 5
 
-// This will remove the `44` since it's index 3.
+// This will remove the `44` since it is at index 3.
 listOfScores.RemoveAt(3);
 
 Console.WriteLine($"Our list has {listOfScores.Count} values"); // Prints 4
