@@ -12,7 +12,7 @@ theme: Next,1
 
 - Perform a task repeatedly until a condition is met
 
-- Process all the items in a collection
+- Process all of the items in a collection
 
 ---
 
@@ -71,7 +71,7 @@ for (var counter = 0; counter < 10; counter++) {
 
 ^ Another way to read the for loop is Start the counter at 0 and as long as the
 value of counter is less than 10, do the contents of the loop and then increment
-counter
+counter.
 
 ---
 
