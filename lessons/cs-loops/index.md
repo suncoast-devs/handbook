@@ -4,8 +4,8 @@ assignments:
   - cs-all-cards-on-deck
 ---
 
-Often in programming, we need to perform a task repeatedly, or we need to
-process all the items in some collection. For these situations we can use the
+Often in programming, we need to perform a task repeatedly or we need to
+process all of the items in some collection. For these situations we can use the
 idea of `loops`.
 
 Let's say we want to perform some statement, or statements, `10` times. We could
@@ -46,12 +46,12 @@ As you can see, all the elements of the `while` loop have their own place in the
 
 Another way to read the for loop is **Start the counter at 0 and as long as the
 value of counter is less than 10, do the contents of the loop and then increment
-counter**
+counter**.
 
 ## Looping through an array
 
 The `for` loop is also helpful for processing all the elements of an `array` or
-`List`
+`List`.
 
 ```csharp
 string[] names = { "Mark", "Paula", "Sandy" , "Bill" };
@@ -71,9 +71,9 @@ for (var index = 0; index < names.Length; index++) {
 In this case we start the `index` at 0 since our array index start at `0`. And
 we want to keep the loop going as long as the index stays _less_ than the length
 of the array (again, since array indexes start at `0` and end one index _before_
-the value of their length)
+the value of their length).
 
-This code works well but there is an even more succinct syntax called `foreach`
+This code works well but there is an even more succinct syntax called `foreach`.
 
 ```csharp
 foreach (var name in names) {
