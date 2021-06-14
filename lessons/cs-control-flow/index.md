@@ -4,7 +4,7 @@ assignments:
   - cs-all-cards-on-deck
 ---
 
-If we just write lines of code one after another in our code we would have no
+If we just write lines of code one after another, we would have no
 way to make decisions and take different paths in our code. To allow us this
 flexibility we have the idea of `flow control` statements.
 
