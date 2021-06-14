@@ -2,10 +2,10 @@
 title: What is `null`?
 ---
 
-In addition to the other value types we've discussed, integers, strings, etc.
+There have been many value types we've discussed; integers, strings, etc.
 there is another type we should mention.
 
-This is the `null` value. A value of `null` means the absence of a value.
+This is the `null` value which means the absence of a value.
 Normally we don't directly write the `null` value when programming but it is
 sometimes returned by methods we use in order to indicate the lack of a result.
 
