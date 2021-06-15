@@ -137,7 +137,7 @@ async function handleFormSubmit(event) {
     body: JSON.stringify(newRestaurant),
   })
 
-  if (response.code === 201) {
+  if (response.ok) {
     // ... code for when we have created a restaurant ...
   }
 }
@@ -208,7 +208,7 @@ async function handleFormSubmit(event) {
     body: JSON.stringify(newRestaurant),
   })
 
-  if (response.code === 201) {
+  if (response.ok) {
     history.push('/')
   }
 }

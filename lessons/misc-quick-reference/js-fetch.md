@@ -27,7 +27,7 @@ fetch('https://restcountries.eu/rest/v2/all')
 ```javascript
 async function countries() {
   const response = await fetch('https://restcountries.eu/rest/v2/all')
-  if (response.code === 200) {
+  if (response.ok) {
     const apiData = await response.json()
     console.log(apiData)
   }
@@ -57,7 +57,7 @@ async function createOneListItem() {
     }
   )
 
-  if (response.code === 201) {
+  if (response.ok) {
     // Process the response
     const apiData = await response.json()
   }

@@ -40,7 +40,7 @@ async function handleDeleteReview(event, reviewId) {
 
   const response = await fetch(`/api/Restaurants/${id}`)
 
-  if (response.code === 200) {
+  if (response.ok) {
     const apiData = await response.json()
 
     setRestaurant(apiData)
