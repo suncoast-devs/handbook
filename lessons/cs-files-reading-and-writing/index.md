@@ -44,8 +44,8 @@ In this format you will see that we have strings of data surrounded by `"`
 quotes and our values are separated by commas `,` and there are multiple lines
 representing, in this case, employees.
 
-The CSV file also allows us to have a first row (aka header) that describes the data for any
-human and computer reader.
+The CSV file also allows us to have a first row (aka header) that describes the
+data for any human and computer reader.
 
 ```csv
 "Name","Department","Salary"
@@ -333,11 +333,17 @@ And as we have a `CsvWriter` we also have a `CsvReader` we can use to read the
 CSV data.
 
 ```csharp
-// Create a CSV reader to parse the stream into CSV format
-var csvReader = new CsvReader(fileReader, CultureInfo.InvariantCulture);
-
 // Tell the CSV reader not to interpret the first row as a header, otherwise the first number will be skipped.
-csvReader.Configuration.HasHeaderRecord = false;
+var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+{
+    // Tell the reader not to interpret the first
+    // row as a "header" since it is just the
+    // first number.
+    HasHeaderRecord = false,
+};
+
+// Create a CSV reader to parse the stream into CSV format
+var csvReader = new CsvReader(fileReader, config);
 ```
 
 Finally, instead of `WriteRecords` we have a way to `ReadRecords`.
@@ -377,13 +383,24 @@ namespace NumberTracker
       // Creates a stream reader to get information from our file
       var fileReader = new StreamReader("numbers.csv");
 
+      // Create a configuration that indicates this CSV file has no header
+      var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+      {
+          // Tell the reader not to interpret the first
+          // row as a "header" since it is just the
+          // first number.
+          HasHeaderRecord = false,
+      };
+
       // Create a CSV reader to parse the stream into CSV format
-      var csvReader = new CsvReader(fileReader, CultureInfo.InvariantCulture);
+      var csvReader = new CsvReader(fileReader, config);
 
-      // Tell the CSV reader not to interpret the first row as a header, otherwise the first number will be skipped
-      csvReader.Configuration.HasHeaderRecord = false;
-
-      // Get the records from the CSV reader, as `int` and finally as a `List`
+      // Creates a list of numbers we will be tracking
+      //
+      //            reader
+      //                      read rows from the stream
+      //                                 each row is an int
+      //                                        Give me back a List (List<int>)
       var numbers = csvReader.GetRecords<int>().ToList();
 
       // Close the reader
