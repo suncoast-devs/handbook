@@ -27,7 +27,7 @@ export function App() {
 }
 ```
 
-## Updating the Restaurants component to use router
+## Updating the Restaurant component to use router
 
 Inside any component rendered due to a `<Route>` match, we can add
 `const params = useParams()` to get a variable, `params`, that will tell us the
