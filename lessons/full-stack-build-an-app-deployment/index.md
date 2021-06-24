@@ -43,10 +43,6 @@ These steps are run _ONLY ONCE_ before you can deploy to heroku
   is unique to your project.
 - `heroku buildpacks:add suncoast-devs/dotnetcore-buildpack`
 
-> NOTE: If your main branch of code is not `master` you'll have to run the
-> command this way: `git push NAME:master` where `NAME` is the name of your
-> branch
-
 ## To Setup Secrets for Heroku
 
 Heroku stores secrets in your _environment variables_. You can change these from
@@ -137,10 +133,6 @@ how to `Push a copy of your local database to Heroku`
 ## To Deploy Updates to Heroku
 
 - `git push heroku HEAD:master`
-
-> NOTE: If your main branch of code is not `master`, you'll have to run the
-> command this way: `git push NAME:master` where `NAME` is the name of your
-> branch
 
 ## To Open Your Deployed Application
 
