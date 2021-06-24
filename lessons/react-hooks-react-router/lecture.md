@@ -118,7 +118,7 @@ export function TodoList() {
       'https://one-list-api.herokuapp.com/items?access_token=cohort42'
     )
 
-    if (response.code === 200) {
+    if (response.status === 200) {
       setTodoItems(response.data)
     }
   }
@@ -396,14 +396,18 @@ const [todoItem, setTodoItem] = useState({
 
 ```jsx
 useEffect(
-  async function () {
-    const response = await axios.get(
-      `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
-    )
+  function () {
+    async function loadItems() {
+      const response = await axios.get(
+        `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
+      )
 
-    if (response.code === 200) {
-      setTodoItem(response.data)
+      if (response.status === 200) {
+        setTodoItem(response.data)
+      }
     }
+
+    loadItems()
   },
   [params.id]
 )
@@ -441,7 +445,7 @@ function TodoItemPage() {
         `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
       )
 
-      if (response.code === 200) {
+      if (response.status === 200) {
         setTodoItem(response.data)
       }
     },
@@ -478,7 +482,7 @@ async function deleteTodoItem() {
 # Add a handler
 
 ```html
-<button onClick={deleteTodoItem}>Delete</button>
+<button onClick="{deleteTodoItem}">Delete</button>
 ```
 
 ---
@@ -498,7 +502,7 @@ async function deleteTodoItem() {
     `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
   )
 
-  if (response.code === 204) {
+  if (response.status === 204) {
     // Send the user back to the homepage
     history.push('/')
   }
