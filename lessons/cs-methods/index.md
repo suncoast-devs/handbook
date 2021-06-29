@@ -9,7 +9,7 @@ code. While the computer has no issues with this it does pose a few issues for
 us, the developer.
 
 - Long sequences of lines of code are like a run on sentence in prose.
-- A long sequence of code obscures the meaning of the code by representing many
+- A long sequence of code obscures the meaning by representing many
   ideas in sequence, or perhaps all mixed together. This is often called
   [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).
 - It is difficult to discuss long sequences of code. For instance, when asking
@@ -96,7 +96,7 @@ Let's make a few "methods" to start improving this code.
 
 ## What is the structure of a method?
 
-Every method in C# is defined by it's `signature`. Similar to your personal
+Every method in C# is defined by its `signature`. Similar to your personal
 signature, this uniquely identifies the method in the system. Unlike your
 signature, a method's signature tells others how to interact with it.
 
@@ -151,7 +151,7 @@ us? No, we only output to the screen, so we will not have any _return value_
 Thus our method will look like
 
 ```csharp
-static void displayGreeting()
+static void DisplayGreeting()
 {
   Console.WriteLine("----------------------------------------");
   Console.WriteLine("    Welcome to Our Employee Database    ");
@@ -172,7 +172,7 @@ static void displayGreeting()
 //  |   |                   |
 //  |   |                   |
 //  v   v                   v
-static void displayGreeting()
+static void DisplayGreeting()
 ```
 
 We haven't explained that odd `static` keyword hanging out in our method
@@ -490,7 +490,7 @@ and our program stops cold. Maybe you have used software like this before and
 agree that it isn't a very nice
 [user experience](https://en.wikipedia.org/wiki/User_experience).
 
-By having _one_ method where this is, we can improve the experience for both the
+By having _one_ method, we can improve the experience for both the
 department _and_ salary prompts by making a single change.
 
 In `C#` the `int.Parse` method will cause this exception if the supplied value
@@ -626,7 +626,7 @@ namespace EmployeeDatabase
       }
     }
 
-    static int computeMonthlySalaryFromYearly(int yearlySalary)
+    static int ComputeMonthlySalaryFromYearly(int yearlySalary)
     {
       return yearlySalary / 12;
     }
@@ -641,7 +641,7 @@ namespace EmployeeDatabase
 
       int salary = PromptForInteger("What is your yearly salary (in dollars)? ");
 
-      int monthlySalary = computeMonthlySalaryFromYearly(salary);
+      int monthlySalary = ComputeMonthlySalaryFromYearly(salary);
 
       Console.WriteLine($"Hello, {name} you make {monthlySalary} dollars per month.");
     }
