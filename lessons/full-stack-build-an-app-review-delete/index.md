@@ -10,7 +10,7 @@ equals the current user id.
 
 ```jsx
 {
-  review.user.id === getUserId() && (
+  review.user.id === getUserId() ? (
     <div>
       <button
         className="small"
@@ -21,7 +21,7 @@ equals the current user id.
         Delete
       </button>
     </div>
-  )
+  ) : null
 }
 ```
 
