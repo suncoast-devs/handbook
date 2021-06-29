@@ -466,7 +466,7 @@ In doing so we've **reduced the amount of code** the reader has to visually conc
 - Work: Show the user the prompt - Wait for their response
 - Output: The user's response, as a `string`.
 
-^ Notice how we had to identify what the input is, and it's type. We also need to specify the type of the return
+^ Notice how we had to identify what the input is, and its type. We also need to specify the type of the return
 
 ---
 
@@ -529,7 +529,7 @@ static string PromptForString(string prompt)
 
 # [fit] Writing the body of the method
 
-Use the argument (what the called sent us)
+Use the argument (what the caller sent us)
 
 [.code-highlight: 3-4]
 
@@ -647,7 +647,7 @@ Our main code is now shorter, and clearer. The line
 var name = PromptForString("What is your name? ");
 ```
 
-describes it's entire **intent** without having to detail **how** it is done.
+describes its entire **intent** without having to detail **how** it is done.
 
 ---
 
@@ -758,7 +758,7 @@ static int PromptForInteger(string prompt)
 
 # Conclusion
 
-- Methods are fundamental part of many programming languages
+- Methods are a fundamental part of many programming languages
 - Style and structure may vary <sub>You'll see when we get to JavaScript</sub>
 - Increased organization == easier to understand + easier to improve
 
