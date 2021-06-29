@@ -84,6 +84,9 @@ let users access your system.
 
 ```shell
 heroku pg:reset
+```
+
+```shell
 heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 ```
 
@@ -93,6 +96,9 @@ heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 
 ```shell
 heroku pg:reset
+```
+
+```shell
 heroku pg:push SuperAwesomeAppDatabase DATABASE_URL
 ```
 
