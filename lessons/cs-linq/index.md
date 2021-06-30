@@ -31,9 +31,9 @@ However, there is another way to express this idea.
 Func<int, int> MultiplyBy2 = value => value * 2;
 ```
 
-Lets break this down and see how it works in a similar way. First the data type
+Let's break this down and see how it works in a similar way. First the data type
 for `MultiplyBy2` is `Func<int, int>` -- The first `int` in the `<>` is the type
-of argument the _function_ takes. The last `int` represents the kind of return
+of argument the _function_ takes in. The last `int` represents the kind of return
 value the _function_ produces. We are then assigning this variable the
 following: `value => value * 2`. This small bit of code is called an
 `expression`
@@ -210,7 +210,7 @@ var slightlyBetterScores = scores.Select(score => score + 1);
 ## The power of LINQ methods that take expressions
 
 We are about to see many different `LINQ` methods that each work by starting
-with a collection and applying an expression to it's elements in different ways.
+with a collection and applying an expression to its elements in different ways.
 Which method we will reach for when writing code depends on the behavior we are
 looking for. We must simply find the appropriate method and supply it an
 expression that does the work we want to do.
@@ -523,7 +523,7 @@ var movies = new List<Movie>()
 
 ## How many movies are there?
 
-To determine how many movies there are, we can ask the collection for it's
+To determine how many movies there are, we can ask the collection for its
 count:
 
 ```csharp
@@ -584,7 +584,7 @@ var totalRevenue = movies.Aggregate(0.0, (currentTotalRevenue, movie) => current
 
 ## Using `Aggregate` to total the gross revenue
 
-This is similar to the above but with a different expression for totalling
+This is similar to the above but with a different expression for totaling
 
 ```csharp
 var totalGross = movies.Aggregate(0.0, (currentGross, movie) => currentGross + movie.TotalRevenue - movie.Cost);

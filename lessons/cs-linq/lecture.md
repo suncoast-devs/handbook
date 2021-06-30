@@ -84,7 +84,7 @@ if (EmployeeHasName(employee, "Bob"))
 
 ## Using LINQ and expressions.
 
-Lets return to our expression example of using the `MultiplyBy2`. Suppose we had a list such as:
+Let's return to our expression example of using the `MultiplyBy2`. Suppose we had a list such as:
 
 ```csharp
 var scores = new List<int> { 42, 100, 98, 15 };
@@ -420,7 +420,7 @@ var newScores = scores.Select(score => score * 2);
 
 ---
 
-However `Select` is _generic_ method and can work with any expression we give it.
+However `Select` is a _generic_ method and can work with any expression we give it.
 
 ```csharp
 var slightlyBetterScores = scores.Select(score => score + 1);
@@ -428,7 +428,7 @@ var slightlyBetterScores = scores.Select(score => score + 1);
 
 ---
 
-We are about to see many different _`LINQ`_ methods that each work by starting with a collection and applying an expression to it's elements in different ways.
+We are about to see many different _`LINQ`_ methods that each work by starting with a collection and applying an expression to its elements in different ways.
 
 Which method we will reach for when writing code depends on the behavior we are looking for. We must simply find the appropriate method and supply it an expression that does the work we want to do.
 
@@ -801,7 +801,7 @@ The `Where` statement is like a filter. We use it when we want to make a new lis
 
 ```csharp
 // Make a new list containing only
-// the movies that that have over 100 Screenings
+// the movies that have over 100 Screenings
 var popularMovies =
    movies.Where(movie => movie.Screenings >= 100);
 ```
@@ -823,7 +823,7 @@ var popularMoviesNamesInOneLine = movies.Where(movie => movie.Screenings >= 100)
 
 The `Aggregate` method, often called `reduce` in other languages, takes the list and processes it down into a single value. Thus why it is often called `reduce`.
 
-> Returns a `single value`. It starts with a value we will call the `current value`. The given expression gets to use, one a a time, the current value and the item from the list, returning a new `current value`.
+> Returns a `single value`. It starts with a value we will call the `current value`. The given expression gets to use, one at a time, the current value and the item from the list, returning a new `current value`.
 
 ---
 
@@ -881,7 +881,7 @@ var areAnyOldMovies = movies.Any(
 
 # Count
 
-> Returns `an integer` of items count of elements for which the expression returns `true`.
+> Returns `an integer` of items, the count of elements for which the expression returns `true`.
 
 ---
 
