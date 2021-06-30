@@ -251,7 +251,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -348,7 +348,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -449,13 +449,14 @@ namespace SuncoastHumanResources
       var employees = new List<Employee>();
 
       // Should we keep showing the menu?
+    
       var keepGoing = true;
 
       DisplayGreeting();
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (F)ind an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -465,7 +466,7 @@ namespace SuncoastHumanResources
           keepGoing = false;
         } else if (choice == "F") {
           // Ask for the name of an employee
-          var name = PromptForString("What name are you looking for: ");
+          var name = PromptForString("What name are you looking for? ");
 
           // Make a new variable to store the found employee, initializing
           // to null which will indicate no match found
@@ -515,7 +516,7 @@ namespace SuncoastHumanResources
 
 ## Improving this code by adding `LINQ`
 
-We can add `using System.Linq` to the top of our code we utilize
+We can add `using System.Linq` to the top of our code then we can utilize
 `FirstOrDefault` for our searching code.
 
 ```C#
@@ -548,7 +549,7 @@ to manage the list.
 
 We start by creating a class `EmployeeDatabase` and move our `List<Employee>`
 inside. We make this class property `private` since we do not want code outside
-of the class to be able to access it. All the use must come from the methods we
+of the class to be able to access it. All the usage must come from the methods we
 create and allow as `public`. We then create methods to perform the common
 actions we need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of
 these methods _receives_ data it needs, and return the data it _provides_. This
@@ -663,7 +664,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (F)ind an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -673,7 +674,7 @@ namespace SuncoastHumanResources
           keepGoing = false;
         } else if (choice == "F") {
           // Ask for the name of an employee
-          var name = PromptForString("What name are you looking for: ");
+          var name = PromptForString("What name are you looking for? ");
 
           // Make a new variable to store the found employee, or null if not found
           Employee foundEmployee = database.FindOneEmployee(name);
