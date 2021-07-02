@@ -10,7 +10,7 @@ our programs all of this information is lost.
 
 It would be helpful if our programs could keep track of the information we give
 it so that the next time our application runs it can bring all of that back into
-it's memory before we interact with it.
+its memory before we interact with it.
 
 There are many ways to store information and we will investigate a few during
 our learning. The first way we will look at is reading and writing from files.
@@ -24,7 +24,7 @@ sequence of characters.
 However, files might be significantly larger than any strings we've dealt with
 in the past. Additionally, as opposed to a `string` we would want our files to
 store more than one element. We've seen converting information to and from
-`string`s with various parsing functions. Lets take that one step further as we
+`string`s with various parsing functions. Let's take that one step further as we
 discuss files.
 
 One of the most straight forward structures for storing data in a file is the
@@ -37,7 +37,7 @@ The structure of a simple CSV file looks similar to this:
 
 ```csv
 "Elon Musk",42,120000
-"Grace Hopper",100,24000
+"Grace Hopper",100,240000
 ```
 
 In this format you will see that we have strings of data surrounded by `"`
@@ -50,14 +50,14 @@ data for any human and computer reader.
 ```csv
 "Name","Department","Salary"
 "Elon Musk",42,120000
-"Grace Hopper",100,24000
+"Grace Hopper",100,240000
 ```
 
 Having a header makes the structure of the contents easier to understand.
 
 ## Sample Program
 
-Before we start with integrating CSV into our application, lets look at the
+Before we start with integrating CSV into our application, let's look at the
 application we are going to work with. This code will create a new, empty, list
 of numbers and ask the user to enter more numbers until they type in `quit`.
 Study this code since next we will add the ability to _save_ the list of numbers
@@ -135,7 +135,7 @@ we can add this library to our application with this command:
 dotnet add package CsvHelper
 ```
 
-This command looks up the library `CvsHelper` in a global repository of shared
+This command looks up the library `CsvHelper` in a global repository of shared
 code. TODO: CREATE AND LINK LESSON ON DOTNET-LIBRARIES HERE.
 
 Once we have added this _external_ library to our application we can add a
@@ -177,7 +177,7 @@ the `CsvWriter` class to do so.
 var csvWriter = new CsvWriter(fileWriter, CultureInfo.InvariantCulture);
 ```
 
-This class takes two arguments, the first the object, in our case the
+This class takes two arguments, first the object, in our case the
 `fileWriter` where the information is going, and second some information on how
 to format various values. This `CultureInfo.InvariantCulture` indicates that we
 do not want any specific formatting of strings or numbers in our file. (e.g.
@@ -198,7 +198,7 @@ ensuring all the information is saved.
 fileWriter.Close();
 ```
 
-Lets look at the code all together:
+Let's look at the code all together:
 
 ```csharp
 // Create a stream for writing information into a file
@@ -319,7 +319,7 @@ namespace NumberTracker
 
 ## Adding loading logic to our sample application
 
-Now lets read this information from the file at the beginning of the code.
+Now let's read this information from the file at the beginning of the code.
 
 Just as we have a `StreamWriter` we also have a `StreamReader` we can use to
 load data.

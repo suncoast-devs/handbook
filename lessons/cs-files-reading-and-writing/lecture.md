@@ -92,7 +92,7 @@ The CSV file also allows us to have a first row (aka header) that describes the 
 ```
 "Name","Department","Salary"
 "Elon Musk",42,120000
-"Grace Hopper",100,24000
+"Grace Hopper",100,240000
 ```
 
 ---
@@ -256,7 +256,7 @@ If the user entered a sequence of numbers: `1`, `42`, `99`, `3`, and `17` our `n
 
 ---
 
-Now lets read this information from the file at the beginning of the code.
+Now let's read this information from the file at the beginning of the code.
 
 Just as we have a `StreamWriter` we also have a `StreamReader` we can use to load data.
 
