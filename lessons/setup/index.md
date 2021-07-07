@@ -7,8 +7,8 @@ order: 1
 
 This guide will walk you through installing all of the developer tools we will
 use during this course. While you may not understand yet _why_ we are installing
-each of these software tools, you will encounter and use each of them during this
-course.
+each of these software tools, you will encounter and use each of them during
+this course.
 
 Several sections may have different setup instructions based on the operating
 system of your computer. The guide will attempt to detect your operating system
@@ -73,13 +73,31 @@ your face. We recommend this because you want other developers, hiring managers,
 and companies to start recognizing you. Use your best photo. If you need a
 professional photo let us know and we can help.
 
+## **CRITICAL**
+
+## GitHub Token
+
+To setup `hub` we will need an API token from GitHub.
+
+Follow the
+[Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
+guide to generate a new token. Give your token a helpful name such as "Token for
+using my laptop". Select the `repo` checkbox before creating the token.
+
+Copy the token you create.
+
+We'll use this the _first_ time we have to login to github
+
+> NOTE: This is the _ONLY_ time this token will be displayed. To ensure its
+> safety copy it to a secure location such as a password manager.
+
 <SectionSeparator />
 
 # Nexus
 
 We use [nexus](https://nexus.suncoast.io) as our student information site. You
-will see your attendance record, homework assignments, lecture videos, as well as homework
-completion status.
+will see your attendance record, homework assignments, lecture videos, as well
+as homework completion status.
 
 To sign up, visit, [https://nexus.suncoast.io](https://nexus.suncoast.io) and
 connect with your github login.
@@ -266,10 +284,8 @@ installer.
 
 ## Set Execution Policy
 
-Answer "Y"es if the command below presents a prompt.
-
 ```shell
-Set-ExecutionPolicy RemoteSigned -scope CurrentUser
+Set-ExecutionPolicy RemoteSigned -scope CurrentUser -Force
 ```
 
 ## Run the Installer
@@ -313,6 +329,9 @@ If you do choose to use Windows Terminal, any place that says to start a
 PowerShell you may start a new Windows Terminal tab. You may also want to _pin_
 this to your task bar.
 
+> NOTE: We _highly_ recommend you use Windows Terminal instead of PowerShell. It
+> is much more user friendly.
+
 #### Installation
 
 ```shell
@@ -351,7 +370,7 @@ scoop install nodejs
 
 Start a **PowerShell As Administrator**
 
-```sh
+```shell
 npm install --global windows-build-tools
 ```
 
@@ -363,7 +382,8 @@ npm install --global windows-build-tools
 
 ## SDG helper tools
 
-Install this tool which includes some helpful add-on functionality we use at SDG.
+Install this tool which includes some helpful add-on functionality we use at
+SDG.
 
 ```shell
 npm install --global suncoast-devs/cli
@@ -787,21 +807,6 @@ from our terminal.
 
 From your terminal, run the following commands (current directory does not
 matter):
-
-## GitHub Token
-
-To setup `hub` we will need an API token from GitHub.
-
-Follow the
-[Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
-guide to generate a new token. Give your token a helpful name such as "Token for
-using with hub on my laptop". Select the `repo` checkbox before creating the
-token.
-
-You will need to leave this token **VISIBLE** on screen for the next steps.
-
-> NOTE: This is the _ONLY_ time this token will be displayed. To ensure its
-> safety copy it to a secure location such as a password manager.
 
 ## Installation
 
