@@ -68,3 +68,20 @@ value for `"Robby Lakeman"` then we would be setting a new value.
 Since `string`s are case-sensitive, we need to be careful when using them as
 keys. The value at `playerScores["Robbie Lakeman"]` is different from the value
 at `playerScores["robbie lakeman"]`.
+
+### Looping through a dictionary
+
+Like a `List`, a `Dictionary` can loop through its contents.
+
+```csharp
+foreach (var playerScore in playerScores)
+{
+	Console.WriteLine($"{playerScore.Key} has a score of {playerScore.Value}")
+}
+```
+
+Since each element in the dictionary has a key part and a valu part, the
+variable `playerScore` will have a type known as a `KeyValuePair`. The
+`KeyValuePair` has two properties, the `Key` and the `Value`. In our example the
+`Key` is a `string` and the `Value` is an `int`. This is because the
+`Dictionary` is of type `Dictionary<string, int>`.

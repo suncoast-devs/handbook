@@ -86,6 +86,21 @@ The value at `playerScores["Robbie Lakeman"]` is different from the value at
 
 ---
 
+### Looping through a dictionary
+
+Like a `List`, a `Dictionary` can be looped through.
+
+```csharp
+foreach (var playerScore in playerScores)
+{
+	Console.WriteLine($"{playerScore.Key} has a score of {playerScore.Value}")
+}
+```
+
+- Each element in the dictionary has a key part and a value part
+- The variable `playerScore` will have a type known as a `KeyValuePair`
+- The `KeyValuePair` has two properties, the `Key` and the `Value`.
+
 # Dictionaries are powerful
 
 Any time we are _tabulating_ data or summarizing data based on a key, we can use a dictionary. You will find them appearing in data analysis tasks and are often valuable for solving code katas on sites such as [codewars](https://codewars.com)
