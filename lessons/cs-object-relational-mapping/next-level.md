@@ -1,5 +1,6 @@
 ---
 title: ORM Next Level
+order: 2
 ---
 
 We have so far seen how to declare Plain Old C-Sharp Objects (POCO)s that we can
