@@ -419,6 +419,23 @@ SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
 FROM "Books";
 ```
 
+#### Aliases via `AS`
+
+Sometimes we want to use a different name for a column than the name in the
+table itself. SQL allows us to do this with the `AS` keyword.
+
+We can use an alternate name for a column by using the `AS` keyword.
+
+```sql
+SELECT "Title" AS "BookTitle" FROM "Books";
+```
+
+We can also rename the table itself:
+
+```sql
+SELECT "Title" AS "BookTitle" FROM "Books" AS "BooksTable";
+```
+
 #### UPDATE
 
 To change data in our database, we use an `UPDATE` statement. The general
