@@ -1,5 +1,6 @@
 ---
 title: Refactoring our One List API client
+order: 3
 ---
 
 There is quite a bit of repetitive code in our application. Lets take a look at
