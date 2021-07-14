@@ -4,7 +4,7 @@ theme: Next, 1
 
 ---
 
-- Using **class**es and **List<>** we will create an employee database
+- Using **class**es and **List** we will create an employee database
 - Database will be able to
   - **C**reate
   - **R**ead
