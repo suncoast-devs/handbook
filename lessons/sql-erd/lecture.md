@@ -123,7 +123,7 @@ After identifying the entities and their attributes, we can identify the relatio
 
 # Some relationships take more work (and entities)
 
-If we determine that a relationship, in this case, _enrolled in_ needs extra data stored along with it, say the student enrolled, we'll create another entity to hold it.
+If we determine that a relationship, in this case, _enrolled in_ needs extra data stored along with it, say the date the student enrolled, we'll create another entity to hold it.
 
 ```
 +-------------+                  +--------------+                 +--------------+                   +-----------+
