@@ -21,7 +21,7 @@ libraries_ or _core packages_. These are bits of code we can use without telling
 our projects to download _external_ libraries or packages.
 
 For instance, in .NET, we use `Console.WriteLine` to output to the console. This
-code is available to us in the `System` library. Once we tell a csharp file to
+code is available to us in the `System` library. Once we tell a csharp file that we are
 `using System` we can now use all the code provided by `System`.
 
 To add more features we need to reach for _external libraries_
@@ -38,8 +38,8 @@ If we wanted `ENTER` to be in a different color below.
 Console.WriteLine("Press ENTER to continue");
 ```
 
-We can add an external library of code to our project. The following command,
-when run _inside_ our .NET project we are telling .NET to find, download, and
+We can add an external library of code to our project. When the following command 
+is ran _inside_ our .NET project, we are telling .NET to find, download, and
 add to our project all the code for a library called `Pastel`
 
 ```shell
