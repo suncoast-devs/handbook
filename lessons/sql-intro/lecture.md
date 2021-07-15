@@ -37,11 +37,11 @@ SQL (Structured Query Language) is a descriptive computer language designed for 
 Updates to the database allow for multiple changes to execute at once. Either all of them fail, or all of them succeed.
 
 ^ For instance, if our application is a banking application and we want to
-withdraw \$10 from Andy's account and add it to Barbara's account, we might
+withdraw $10 from Andy's account and add it to Barbara's account, we might
 first write a statement to decrease Andy's balance by 10. Then a second
-statement would increase Barbara's balance by 10. If these two statements aren't
+statement to increase Barbara's balance by 10. If these two statements aren't
 guaranteed to succeed in pairs, we can decrease
-Andy's balance without correspondingly increasing Barabara's. In an `atomic`
+Andy's balance without correspondingly increasing Barbara's. In an `atomic`
 system, either we would both decrease Andy's balance and increase Barbara's
 balance - _or_ - if an error occurs, their balances are as they were at the
 start.
@@ -90,7 +90,7 @@ Once a database says that row updates, a power loss to the system should not los
 
 For instance, let's imagine we are designing and building a system to manage books for a library. We could create a database named `Library` and in that database, there would be one table, called `Books`.
 
-Into this `Books` table, we would design columns representing the specific data about books we wish to track. Each row in the `Books` table would represent a unique book in our collection.
+In this `Books` table, we would design columns representing the specific data about books we wish to track. Each row in the `Books` table would represent a unique book in our collection.
 
 ---
 
@@ -207,7 +207,7 @@ pgcli Library
 - Print
 - Loop
 
-> Like our command terminal/shell but now the commands go to the database instead of our opearting system.
+> Like our command terminal/shell but now the commands go to the database instead of our operating system.
 
 ---
 
@@ -327,7 +327,7 @@ Often we do not want _all_ the columns from the table. We can specify specific c
 SELECT "Title", "PrimaryAuthor" FROM "Books";
 ```
 
-While this will still return all the rows, we will only see the `Title` and "PrimaryAuthor" columns for all those rows.
+While this will still return all the rows, we will only see the `Title` and `PrimaryAuthor` columns for all those rows.
 
 ---
 
@@ -391,7 +391,7 @@ We can use the `WHERE` clause to help filter down our table to only see rows tha
 `SQL`
 
 ```sql
-SELECT "Title", "PrimaryAuthor" FROM 'Books" WHERE "Genre" = 'horror';
+SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror';
 ```
 
 `C#`
@@ -441,7 +441,7 @@ To change data in our database, we use an `UPDATE` statement. The general struct
 ```sql
 UPDATE "TableName"
 SET "ColumnA" = 'new value'
-WHERE "ColumnB" = 'some value'
+WHERE "ColumnB" = 'some value';
 ```
 
 The above update statement will update all rows that have `ColumnB = 'some value'` and change `ColumnA` to contain `'new value'`.
