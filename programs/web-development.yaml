@@ -54,7 +54,7 @@ modules:
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
-      # - environment-setup
+      - front-end-template-html-css-ts
       - html-intro
       - css-intro
       - css-layout
