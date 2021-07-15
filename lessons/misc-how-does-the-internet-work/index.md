@@ -50,7 +50,7 @@ information, the same as if it had never requested the information in the first
 place. Your router will then look at its own list of DNS addresses. Typically
 these addresses belong to your ISP, but you may have also set up to use DNS
 services from a company like Google, Cloudflare, OpenDNS or other organizations
-that run "Public DNS Servers." Your router will send a request to it's DNS
+that run "Public DNS Servers." Your router will send a request to its DNS
 service on your behalf and await a result. That DNS service does a lookup in
 much the same way. For instance, if it has recently answered the same request,
 say your neighbor also looked up `handbook.suncoast.io` it will return that
@@ -71,7 +71,7 @@ result is cached, and passed back down to the router, which caches it as well,
 and then sent to the computer, which also caches it, and finally to the browser.
 
 Whew! And all we have done so far is ask "What address should I send my request
-to for `handbook.suncoast.io`"
+to for `handbook.suncoast.io`?"
 
 The Internet is a wondrous thing indeed! Oh, and we skipped over quite a bit of
 detail here about how these requests travel over the internet itself, the
@@ -83,7 +83,7 @@ we encounter is, itself, a deep and fascinating subject.
 ## Let's take a look at a few DNS examples
 
 Your computer may come with a tool named `dig` to lookup DNS entries. If not you
-may have a tool named `nslooup`.
+may have a tool named `nslookup`.
 
 Let's lookup `handbook.suncoast.io`
 
@@ -92,7 +92,7 @@ dig handbook.suncoast.io
 ```
 
 In addition to other details, you will get something similar to the following.
-NOTE, your address may differ from `162.243.166.170`
+NOTE: your address may differ from `162.243.166.170`
 
 ```
 ;; ANSWER SECTION:
@@ -112,7 +112,7 @@ dig amazon.com
 ```
 
 In addition to other details, you will get something similar to the following.
-NOTE, your address may differ from those below
+NOTE: your address may differ from those below
 
 ```
 ;; ANSWER SECTION:
