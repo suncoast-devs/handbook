@@ -65,15 +65,15 @@ modules:
       - js-dom
       - js-event-loop
       - js-ui-as-state
-      - js-classes
+      # js-classes
       - js-modules
       - react-intro
       - react-assets
       # react-events -- needs work
       - js-fetch
       - react-state
+      - react-state-with-fetch
       - react-state-flow
-      - react-hooks
       - react-hooks-use-effect
       - react-hooks-react-router
   - full-stack-development:
