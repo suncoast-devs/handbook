@@ -17,7 +17,7 @@ make HTTP possible.
 
 Starting in the 1970 researchers were looking for ways to interconnect computers
 to share information. These computers were mostly at research and educational
-institution. The first widely recognized network was ARPANET which combined
+institutions. The first widely recognized network was ARPANET which combined
 local networks of computers into a network-of-networks (the beginnings of the
 ideas of "the web"). From this some standards began to evolve, one of which
 became the Transmission Control Protocol and Internet Protocol. Perhaps you have
@@ -48,25 +48,25 @@ In this lesson we will review the portions of HTTP that are relevant to
 application developers that interact with HTTP clients (our browsers) and HTTP
 servers (our backend application). The depth and breadth of how the internet
 works, how data is transferred, and how the protocols enable us to work is
-worthy of a course all it's own. For those interested in networking, devops, or
+worthy of a course all its own. For those interested in networking, devops, or
 systems engineering consider a deeper dive into these subjects.
 
 ## Starting at the top, how does the browser know where to go?
 
 When you type `https://suncoast.io` in your browser's URL bar how does it know
-where to do?
+where to go?
 
 Fortunately one of the technologies mentioned above provides that answer. DNS,
 the Domain Name System, is a protocol and set of services that allow our
 computer to translate a human friend domain name (`suncoast.io`) into an _IP
-address_, a network location, that the internet knows how to route.
+address_, a network location, that the internet knows how to route to.
 
 Devices on the internet only know how to speak to each other based on their IP
-(Internet Protocol) address. Every device has it's own address and knows how to
-speak to the other devices in it's local network. Part of recognizing these
-addresses is understanding how to _route_ or pass along your traffic to the next
-hop on the internet closer to your destination. Routing is a complex topic
-beyond the scope of this lesson.
+(Internet Protocol) address. Every device has its own address and knows how to
+speak to the other devices in its local network. Part of recognizing these
+addresses is understanding how to _route_ or pass along traffic to the next
+stop on the internet which will bring you closer to your destination. 
+Routing is a complex topic beyond the scope of this lesson.
 
 However, understanding how DNS works is relavant since we may need to register
 domains and hosts as part of deploying our applications.
@@ -104,7 +104,7 @@ registering, and keeping our registration up to date, Suncoast Developers Guild
 is allowed to control the definition of this domain and any **hosts** within.
 
 Host names are the last component. You may have seen domains that have multiple
-hosts definited within them. Perhaps `www.domain.io`, `shop.domain.io`,
+hosts defined within them. Perhaps `www.domain.io`, `shop.domain.io`,
 `mail.domain.io`, `support.domain.io`, etc. All of these hosts are defined and
 controlled by the domain owner. The definition of these hosts are configured by
 their DNS server. Each domain on the internet must define one or more DNS
@@ -118,22 +118,22 @@ the registrar but often registrars provide both registration and DNS services.
 DNS translates a host name into specific details, often an IP address, about
 that host. DNS translates a hostname and a record type into a definition.
 
-When a client initiates a DNS request it sends it's request to one of it's
+When a client initiates a DNS request it sends its request to one of its
 defined DNS servers. Often this is a local machine on the network. Most routers
-provide a local DNS service to the devices on it's network. When the request is
+provide a local DNS service to the devices on its network. When the request is
 received, this first DNS server (perhaps your router) will look to see if it has
-recently done the same lookup and return a stored (cached) value. If it has not
-have an answer for this request it will forward the request to **it's** DNS
+recently done the same lookup and return a stored (cached) value. If it does not
+have an answer for this request it will forward the request to **its** DNS
 server. In the case of your local network router, this will often be the DNS
 server of your ISP or perhaps a custom DNS server from a DNS provider (such as
 Cloudflare, OpenDNS, Google). Since these providers supply DNS to many clients
 it may have cached this request. These servers may forward their request to
 another parent DNS server. Or they may try to resolve it on their own. To
 resolve it on their own they would ask a group of special DNS servers called the
-"Root DNS Serers". These are highly secure, tightly controlled servers that are
+"Root DNS Servers". These are highly secure, tightly controlled servers that are
 geographically spread. It is their purpose to indicate where the DNS servers for
 TLDs are located. So when our request for `suncoast.io` hits a DNS server that
-need to directly resolve, it asks the _root servers_ for the DNS for `io`. It
+needs to directly resolve, it asks the _root servers_ for the DNS for `io`. It
 then asks that server for the DNS servers for `suncoast.io`. As you remember we
 had to tell our registrar our list of DNS servers. This is where that is
 critical. With that list of DNS servers the request for `suncoast.io` is sent to
@@ -152,7 +152,7 @@ make the lookup as efficient as possible.
 
 ## Let's try some DNS!
 
-Lets try to find the IP address of `www.wikipedia.org`.
+Let's try to find the IP address of `www.wikipedia.org`.
 
 On a Mac OS or linux machine we have a tool named `dig`. On Windows you can use
 `nslookup`
@@ -193,7 +193,7 @@ on port `443`. SMTP (Simple Mail Transport Protocol) is found on port `25`, etc.
 These services could be on different ports, but then users would have to type
 that into the URL. For instance we could put our HTTP on port `8080` but then
 users would have to run `http://suncoast.io:8080` and that isn't too friendly.
-When we run our local development servers you will notice that we use port
+When we run our local development servers you will notice that we use a port
 number for this. One of the common operating system rules is that user
 applications are not allowed to run on ports less than `1024`. This prevents a
 user of a server from starting their own HTTP server that the public would
@@ -209,14 +209,14 @@ both directions.
 ## Communicating over our connection
 
 Now that we have a connection to our port (say port `80` for HTTP) how do we
-communicate? Each protocol (HTTP, SMTP, DNS, FTP, etc.) has it's own language.
+communicate? Each protocol (HTTP, SMTP, DNS, FTP, etc.) has its own language.
 Within that 100+ page _RFC_ we mentioned earlier is a detailed description of
 the HTTP protocol. Every client (known as a `user agent` or more commonly known
 to us as a browser) must speak this protocol to the server and every server must
 respond in this protocol to a client.
 
 As with many protocols you will notice that HTTP is an "answer-response" style
-communication. That is we the client will introduce ourselves to the server
+communication. That is we (the client) will introduce ourselves to the server
 first and make a request. The server will acknowledge our greeting and provide a
 response.
 
@@ -235,7 +235,7 @@ page_. and finally we indicate which version of the protocol we are speaking.
 This allows the server to know how to answer our request.
 
 The second line says which host we are asking for. We need to repeat this here
-since the server only knows that a client connected to it's IP address. It does
+since the server only knows that a client connected to its IP address. It does
 not know which name they looked up to receive that address. A single server
 might only provide for a single host, or it might host thousands of sites. This
 `Host:` line tells the server which application/site the client is interested
