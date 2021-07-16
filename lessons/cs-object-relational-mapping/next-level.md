@@ -46,7 +46,7 @@ These _generated migrations_ solve the above problems:
 4. The code will be in our project when we deploy to the cloud so we can keep
    that database up-to-date.
 
-Migrations are a wonderful benefit of having an ORM. Lets see how to add this
+Migrations are a wonderful benefit of having an ORM. Let's see how to add this
 capability to our system and start to use it.
 
 ## Add the needed packages
@@ -90,7 +90,7 @@ When we add a migration .NET is comparing several things. It is comparing the
 design of the database it knows about so far to the collection of `DbSet` based
 POCOs we have described in our `DbContext` class. You'll notice in our
 `DbContext` we have four `DbSet` entries: `Movies`, `Ratings`, `Roles`, and
-`Actors`. .NET then considers what it has in it's `design`. Since this is our
+`Actors`. .NET then considers what it has in its `design`. Since this is our
 first time using migrations on this project it doesn't know about any migrations
 for any of these models/tables. It will then proceed to make entries in our
 migration to record the details about each of these models. It looks at the
@@ -103,7 +103,7 @@ migration files.
 ### The structure of a migration
 
 In our `Migrations` folder you'll see two files with the text `InitialMigration`
-as part of the name. Lets look at the one **without** the `.Designer.cs` part.
+as part of the name. Let's look at the one **without** the `.Designer.cs` part.
 
 The structure of the file looks like this. We've left out the body of those
 methods for readability.
@@ -195,7 +195,7 @@ first recreate our database since we already manually added these tables. In the
 future we won't have to do this step since we'll **only** be using migrations to
 do database work.
 
-For now lets make sure our database is clean by running command.
+For now let's make sure our database is clean by running command.
 
 > NOTE: This will remove all of our existing rows. So if you want that data, you
 > can simply re-run the `INSERT` commands from the `sql` lessons again.
@@ -265,7 +265,7 @@ The timestamp for your migration may be different as well as the
 `ProductVersion`. This table keeps an accounting of what migrations have been
 run so far.
 
-Lets run our `dotnet ef database update` again to see that it is smart enough
+Let's run our `dotnet ef database update` again to see that it is smart enough
 not to run the migration a second time.
 
 ```
@@ -279,12 +279,12 @@ Done.
 Yes, we get a message
 `No migrations were applied. The database is already up to date.`
 
-Now that we have an initial structure for our database, lets try adding a
+Now that we have an initial structure for our database, let's try adding a
 property/column to an existing model.
 
 ### Adding a migration that changes an existing model
 
-Lets add a boolean property to our `Actor` model to indicate if they are members
+Let's add a boolean property to our `Actor` model to indicate if they are members
 of SAG-AFTRA. We'll call this field `ScreenActorsGuildMember`. The first step is
 to add this property to our model.
 
@@ -371,7 +371,7 @@ Done.
 # Conclusion
 
 This process of making small incremental additions to our POCOs, generating
-migrations, and applying them repeat continuously through the development cycle.
+migrations, and applying them will repeat continuously through the development cycle.
 We often do not know, at the start of our project, all the requirements and all
 of the data we will need. Migrations give us a way to _iterate_ on the design of
 our database structure and keep a history of the work that was done. As we build
