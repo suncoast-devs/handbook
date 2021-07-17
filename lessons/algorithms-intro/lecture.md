@@ -1083,9 +1083,7 @@ is O(n)
 
 # [fit] Tower of Hanoi
 
-![inline](http://see-math.math.tamu.edu/2010/CounselorMovies/philip-y.gif)
-
----
+## ![inline](https://upload.wikimedia.org/wikipedia/commons/8/8d/Iterative_algorithm_solving_a_6_disks_Tower_of_Hanoi.gif)
 
 # Tower of Hanoi
 

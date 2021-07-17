@@ -1,5 +1,5 @@
 ---
-title: Hello, Algorithms!
+title: Scrabble Algorithms
 tags: ['algorithms']
 ---
 
