@@ -12,6 +12,12 @@ modules:
     title: Environment Setup
     lessons:
       - setup
+  - algorithms:
+    title: Algorithmic Thinking
+    lessons:
+      - algorithms-intro
+      - algorithms-day-two
+      - algorithms-day-three
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
