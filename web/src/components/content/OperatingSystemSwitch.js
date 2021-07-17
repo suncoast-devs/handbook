@@ -57,8 +57,6 @@ export function OperatingSystemSelector() {
 export function OperatingSystemSwitch({ allowedOperatingSystems, children }) {
   const { os } = useContext(OperatingSystemContext)
 
-  console.log({ os })
-
   if (allowedOperatingSystems.includes(os)) {
     return (
       <>
