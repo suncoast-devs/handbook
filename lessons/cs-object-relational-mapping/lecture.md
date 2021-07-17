@@ -8,7 +8,7 @@ theme: Next, 1
 
 We would like to use a relational database in our systems.
 
-However, our systems are Object Oriented. We aren't coding in the landscape of tables, and rows, but lists and objects.
+However, our systems are Object Oriented. We aren't coding in the landscape of tables and rows, but lists and objects.
 
 ---
 
@@ -238,7 +238,7 @@ foreach (var movie in context.Movies)
 
 ---
 
-Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we receive instances of our `Movie` class we can use to output information such as each movie object's title: `movie.title`. 
+Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we receive instances of our `Movie` class we can use to output information such as each movie object's title: `movie.Title`. 
 
 ---
 
