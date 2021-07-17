@@ -4,7 +4,7 @@ theme: Next, 1
 
 ---
 
-# Real world examples: Transforming data, codes and ciphers
+# Real world examples: Transforming data, codes, and ciphers
 
 ---
 
@@ -26,7 +26,7 @@ theme: Next, 1
 # Simple substitution
 
 - Consider only the uppercase letters A through Z
-- For each letter we have another unique letter to transform into
+- For each letter, we have another unique letter to transform into
 
 ---
 
@@ -140,7 +140,7 @@ Takes each letter and "shifts" it down the alphabet, circling back to the start 
 
 # A .. Z, with a shift number
 
-Let's take the example of a shift of 3.
+Take the example of a shift of 3.
 
 ---
 
@@ -188,7 +188,7 @@ Let's take the example of a shift of 3.
 
 # Encoding the phrase CODES
 
-Works just like when using a substitution cipher.
+It works just like when using a substitution cipher.
 
 What is the ciphertext?
 
@@ -202,7 +202,7 @@ What if there was a shift of 0?
 
 ```
 1. Start with the first letter in the plain text
-2. For the given letter, figure out it's index in the alphabet (e.g. A is 0, B is 1, ..., Y is 24, Z is 25)
+2. For the given letter, figure out the index in the alphabet (e.g., A is 0, B is 1, ..., Y is 24, Z is 25)
 3. Go to that index in the shifted alphabet and copy that letter to the ciphertext
 4. If this is the last letter in the plain text: STOP
 5. Consider the next letter in the plain text
@@ -219,7 +219,7 @@ First attempt, consider a shift of 3
 
 ```
 1. Start with the first letter in the plain text
-2. For the given letter, figure out it's index in the alphabet (e.g. A is 0, B is 1, ..., Y is 24, Z is 25)
+2. For the given letter, figure out the index in the alphabet (e.g., A is 0, B is 1, ..., Y is 24, Z is 25)
 3. Add 3 to that index
 4. If the index is more than 25 (the index of Z), subtract 25
 5. Go to that index in the alphabet and copy that letter to the ciphertext
@@ -229,11 +229,11 @@ First attempt, consider a shift of 3
 ```
 
 Only needs _ONE_ alphabet!
-No need to keep that second alphabet order.
+There is no need to keep that second alphabet order.
 
 ---
 
-# [fit] Another way to deal with "... went off the end of the alphabet"
+# [fit] Another way to deal with "... went off the end of the alphabet."
 
 <br/>
 
@@ -253,7 +253,7 @@ or
 
 ---
 
-# [fit] That remainder is considered the "modulus"
+# [fit] That remainder is considered the "modulus."
 
 We would say:
 
@@ -339,8 +339,8 @@ Consider the index divided by 26, but only the remainder.
 
 ```
 1. Start with the first letter in the plain text
-2. For the given letter, figure out it's index in the alphabet
-   (e.g. A is 0, B is 1, ..., Y is 24, Z is 25)
+2. For the given letter, figure out the index in the alphabet
+   (e.g., A is 0, B is 1, ..., Y is 24, Z is 25)
 3. Go to the index in the alphabet given by the formula
 
    (current letter index + offset) % shift number
@@ -367,7 +367,7 @@ Consider the index divided by 26, but only the remainder.
 - Simple Caeser Cipher with offset 13 (half the alphabet)
 - No need to use a _negative_ code to decipher (since `26 - 13` is `13`)
 - Try [here](https://rot13.com/)
-- Used for a while on the early days of the internet to avoid spoilers. Everything was plaintext.
-- Example: "Whow, I just saw Empire Strikes back! I can't believe `Qnegu Inqre vf Yhxr'f sngure!`
+- It was used for a while during the early days of the internet to avoid spoilers. Everything was plaintext.
+- Example: "Wow, I just saw Empire Strikes Back! I can't believe `Qnegu Inqre vf Yhxr'f sngure!`
 
 ---

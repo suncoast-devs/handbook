@@ -3,9 +3,9 @@ title: Activity
 order: 2
 ---
 
-# Lets Play Robot
+# Play Robot
 
-In this activity we will explore the necessity to be specific and detailed in
+In this activity, we will explore the necessity to be specific and detailed in
 how we present information to a computer.
 
 ## Numbers...
@@ -36,12 +36,12 @@ others act as the algorithm authors.
 
 ## Scrabble Tiles
 
-In the following problems you are allowed to use the following sentences as your
-_language_
+In the following problems, you are allowed to use the following sentences as
+your _language_
 
 We will have "memory spots" in this exercise. The best way to represent this is
-to get out a sheet of paper and make several squares where you can label each
-one. These squares will either contain a number or a tile.
+to get out a sheet of paper and make several squares to label each one. These
+squares will either contain a number or a tile.
 
 ```
 Make a memory spot with the label ____.
@@ -50,9 +50,9 @@ Turn over the scrabble tile at position ____, copy the tile to a memory spot lab
 
 Put the number ____ in the memory spot labeled ____.
 
-Add `1` to the value of the number at memory spot labeled ____.
+Add `1` to the value of the number at the memory spot labeled ____.
 
-If the tile in memory spot with label is ____ then do the next step, otherwise skip the next step.
+If the tile in memory spot with the label is ____ then do the next step, otherwise, skip the next step.
 
 STOP with the answer YES
 

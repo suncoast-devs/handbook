@@ -8,7 +8,7 @@ theme: Huerta, 5
 
 # Algorithms
 
-Like any good presentation lets give the boring definition
+Like any good presentation, let us give the boring definition.
 
 ---
 
@@ -22,7 +22,7 @@ Like any good presentation lets give the boring definition
 
 # Definition (2/3)
 
-    Algorithms perform calculation,
+    Algorithms perform calculations,
     data processing, and/or
     automated reasoning tasks.
 
@@ -65,7 +65,7 @@ Like any good presentation lets give the boring definition
 
 ![inline fill](assets/recipe.jpg)
 
-^ Followed, created, or modified a recipe for cooking
+^ Followed, created or modified a recipe for cooking
 
 ---
 
@@ -654,14 +654,14 @@ return A
 
 ---
 
-# [fit] "Make a PB&J Sandwich"
+# [fit] "Make a PB&J Sandwich."
 
 Example [video](https://www.youtube.com/watch?v=cDA3_5982h8) of a family
 practicing this.
 
 ^ Give a couple of example tries
 
-^ Show that nearly every step we think is precise, could be more precise
+^ Show that nearly every step we think is precise could be more precise
 
 ^ Suggest people try at home
 
@@ -673,8 +673,7 @@ practicing this.
 
 ![fit](assets/break-it-down.jpg)
 
-^ When starting out with algorithms, the more detail we include, even to the
-point where it may seem silly, the better developers we will be.
+^ When starting with algorithms, the more detail we include, even to the point where it may seem silly, the better developers we will be.
 
 ---
 
@@ -708,7 +707,7 @@ point where it may seem silly, the better developers we will be.
 
 # Optimize the manual solution
 
-    - Can you remove steps?
+    - Can you remove any steps?
 
 ---
 
@@ -720,7 +719,7 @@ point where it may seem silly, the better developers we will be.
 
 # Replace comments with real code
 
-    - Replace each individual steps with code
+    - Replace each individual step with code
 
 ---
 
@@ -749,7 +748,7 @@ down into tiny steps
 
 # `P`roblem
 
-Given a word, which is just a sequence of letters, make a new word which is the same sequence of letters in reverse order.
+Given a word, which is just a sequence of letters, make a new word with the same sequence of letters in reverse order.
 
 ---
 
@@ -838,7 +837,7 @@ https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5
 
 <br/>
 
-> Repeat until array is sorted.
+> Repeat until the array is sorted.
 
 ---
 
@@ -854,7 +853,7 @@ https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5
     3. When done with all the elements, if we
        still believe the array is sorted, STOP
 
-    4. Otherwise go back to step 1
+    4. Otherwise, go back to step 1
 
 ---
 
@@ -887,7 +886,7 @@ def bubble_sort(array)
     # If array is sorted, stop
     break if sorted
 
-    # end of loop/do goes back to first step
+    # end of loop/do go back to the first step
   end
 end
 ```
@@ -932,11 +931,11 @@ https://www.flickr.com/photos/91604813@N03/8439070389/in/photolist-dRJrBB-s4K1VU
 
 ---
 
-|              |                                                                      |
-| ------------ | -------------------------------------------------------------------- |
-| Best case    | If the data is perfect for _this_ algorithm, how fast are we?        |
-| Worst case   | If the data is terrible for _this_ algorithm, how slow are we?       |
-| Average case | Over all possible inputs, what is the average speed of the algorithm |
+|              |                                                                             |
+| ------------ | --------------------------------------------------------------------------- |
+| Best case    | If the data is perfect for _this_ algorithm, how fast are we?               |
+| Worst case   | If the data is terrible for _this_ algorithm, how slow are we?              |
+| Average case | Considering all possible inputs, what is the average speed of the algorithm |
 
 ---
 
@@ -1015,7 +1014,7 @@ is O(n)
 
     If n doubles, the algorithm takes many times as long
 
-    e.g. if n grows from 20 to 40, O(2^n) grows by over a MILLION times
+    e.g., if n grows from 20 to 40, O(2^n) grows by over a MILLION times
 
     Example: Tower of Hanoi
 
@@ -1025,7 +1024,7 @@ is O(n)
 
     The Tower of Hanoi is a mathematical game or puzzle.
 
-    It consists of three rods and a number of disks
+    It consists of three rods and several disks
     of different sizes, which can slide onto any rod.
 
     The puzzle starts with the disks in a neat stack

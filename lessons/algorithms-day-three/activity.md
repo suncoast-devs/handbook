@@ -12,7 +12,8 @@ Consider the
 encodes text into a musical notation. The bottom of the page has details on how
 the encoding works.
 
-- Do you think this makes the cipher more difficult to decode? Why, or why not?
+- Do you think this makes the cipher more challenging to decode? Why, or why
+  not?
 
 ## Other Ciphers
 
@@ -20,6 +21,6 @@ Consider the ciphers at [this site](http://rumkin.com/tools/cipher/) and choose
 a few to investigate.
 
 - What aspect of the encoding algorithm do you think makes any of these ciphers
-  stronger than the one's we've considered so far?
+  stronger than the ones we've considered so far?
 
 - Choose one cipher and see if you can write an algorithm for it.

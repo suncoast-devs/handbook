@@ -14,7 +14,7 @@ How detailed do we need to be?
 
 # [fit] Algorithm Detail
 
-The more details the better!
+The more details, the better!
 
 New developers/algorithm-creators don't specify enough detail.
 
@@ -24,13 +24,13 @@ Typical new SDG student generates about a **third** to a **fourth** the amount o
 
 ---
 
-# [fit] So how do we learn and practice?
+# [fit] So, how do we learn and practice?
 
     Use precise language
 
     Break problems into smaller pieces
 
-    Learn common problem solving approaches
+    Learn common problem-solving approaches
 
     Practice, practice, practice ... and more practice.
 
@@ -42,7 +42,7 @@ It takes **time**
 
 - We will be using programming languages like `C#` and `SQL` and `TypeScript` to write our algorithms.
 
-- For now we will be using **human** language, **English** specifically, which is a terribly imprecise language.
+- For now, we will be using **human** language, **English** specifically, which is an imprecise language.
 
 ---
 
@@ -50,8 +50,8 @@ It takes **time**
 
 - When creating algorithms, pretend that you are giving instructions to:
   - A baby that just learned to speak
-  - A robot that only knows a few specifc words or phrases
-  - The most picky, [pedantic](https://www.dictionary.com/browse/pedantic) person you know.
+  - A robot that only knows a few specific words or phrases
+  - The pickiest, [pedantic](https://www.dictionary.com/browse/pedantic) person you know.
   - ... then **double** or **triple** the specificity and detail
 
 ---
@@ -69,7 +69,7 @@ Who knows it?
 # Zeno's Dichotomy Paradox
 
      That which is in locomotion must arrive
-     at the half-way stage before it arrives
+     at the halfway stage before it arrives
      at the goal.
 
      —  as recounted by Aristotle, Physics VI:9, 239b10
@@ -80,19 +80,19 @@ Who knows it?
 
 ---
 
-# Mathematically you **do** arrive at your goal
+# Mathematically, you **do** arrive at your goal
 
     Curious students can see me after class to see how
 
 ---
 
-# [fit] Take a large problem and
+# [fit] Take a significant problem and
 
 # [fit] break it into (two?) smaller problems
 
 ---
 
-# [fit] We might know this as delegation
+# [fit] We might know this as "delegation"
 
 ---
 
@@ -142,7 +142,7 @@ Who knows it?
 
 # [fit] Even this is too simplistic
 
-    Anyone who cooks knows I've summarized many of these steps
+    Anyone who cooks knows I've summarized many of these steps.
 
 <br/>
 
@@ -153,14 +153,14 @@ Who knows it?
 # [fit] Transform a problem
 
     Take a problem in an area we don't
-    know how to solve and turning into
+    know how to solve and turn it into
     one that we do!
 
 ---
 
 [.autoscale: true]
 
-# [fit] Here comes a simple to state problem.
+# [fit] Here is a simple to state problem.
 
 # [fit] See if you can solve it (no computer usage)
 
@@ -308,7 +308,7 @@ $$\frac{n(n + 1)}{2}$$
     method a post office typically uses to route
     mail: letters are sorted into separate bags
     for different geographical areas, each of
-    these bags is itself sorted into batches for
+    these bags is sorted into batches for
     smaller sub-regions, and so on until they
     are delivered.
 
@@ -316,7 +316,7 @@ $$\frac{n(n + 1)}{2}$$
 
 # Breaking problem down, one bit at a time.
 
-`Find the largest number in a list`
+`Find the largest number in a list.`
 
 ---
 
@@ -326,7 +326,7 @@ The largest number in a list is either:
 
 - The first number in a list
 - **or**
-- If there are other numbers remaining in the list ... the largest number in the remainder of the list
+- If other numbers are remaining in the list ... the largest number in the remainder of the list
 
 ---
 
@@ -434,15 +434,15 @@ Middle is `21` and `25`, so median is: `23`
 - Solving a problem with _zero_ inputs is typically easy
 - Solving a problem with _one_ input is typically easy
 - Solving a problem with a _few_ inputs is typically easy due to our natural intuition
-- Solving a problem wiht a _huge_ amount of input challenges our intuition and assumptions
+- Solving a problem with a _huge_ amount of input challenges our intuition and assumptions
 
-- See example of adding up the first N numbers.
+- See an example of adding up the first N numbers.
 
 ---
 
 # [fit] Use "0, 1, few, $$ \infty $$" in your thinking process
 
-- Perhaps start with an input size of "a few"
+- Perhaps start with an input size of "a few."
 - Use your intuition to understand the problem
 - Don't forget about `0` and `1` inputs
   - (sometimes the problem has a curveball here)
@@ -452,9 +452,9 @@ Middle is `21` and `25`, so median is: `23`
 
 # [fit] Idea of conditions and loops in algorithms
 
-- When thinking of an algorithm it often helps to solve a smaller version of the problem
-- Then see if applying that process to each element of the input works.
-- This is "looping"
+- When thinking of an algorithm, it often helps to solve a smaller version of the problem
+- Then, see if applying that process to each element of the input works.
+- This is "looping."
 - We'll work with looping **often** in this class
 
 ---
@@ -474,6 +474,6 @@ _"If something is true"_ or _"If something is false"_ help determine if or when 
 
 # [fit] Computers are _very_ good at conditions and loops.
 
-    In fact, computers are mostly machines that work with conditions and loops.
+    Computers are primarily machines that work with conditions and loops.
 
 ---
