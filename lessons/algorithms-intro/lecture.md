@@ -176,7 +176,7 @@ return A
 
 [.column]
 
-`A = 210, B = 45` <br> `A > B (210 > 45)`
+`A = 210, B = 45` <br/> `A > B (210 > 45)`
 
 [.column]
 
@@ -203,7 +203,7 @@ return A
 
 [.code-highlight: 4]
 
-`A = 210, B = 45` <br> `A > B (210 > 45)` <br> `A = 210 - 45` <br> `A = 165`
+`A = 210, B = 45` <br/> `A > B (210 > 45)` <br/> `A = 210 - 45` <br/> `A = 165`
 
 [.column]
 
@@ -253,7 +253,7 @@ return A
 
 [.column]
 
-`A = 165, B = 45` <br> `A > B (165 > 45)`
+`A = 165, B = 45` <br/> `A > B (165 > 45)`
 
 [.column]
 
@@ -278,7 +278,7 @@ return A
 
 [.column]
 
-`A = 165, B = 45` <br> `A > B (165 > 45)` <br> `A = 165 - 45` <br> `A = 120`
+`A = 165, B = 45` <br/> `A > B (165 > 45)` <br/> `A = 165 - 45` <br/> `A = 120`
 
 [.column]
 
@@ -328,7 +328,7 @@ return A
 
 [.column]
 
-`A = 120, B = 45` <br> `A > B (120 > 45)`
+`A = 120, B = 45` <br/> `A > B (120 > 45)`
 
 [.column]
 
@@ -353,7 +353,7 @@ return A
 
 [.column]
 
-`A = 120, B = 45` <br> `A > B (120 > 45)` <br> `A = 120 - 45` <br> `A = 75`
+`A = 120, B = 45` <br/> `A > B (120 > 45)` <br/> `A = 120 - 45` <br/> `A = 75`
 
 [.column]
 
@@ -403,7 +403,7 @@ return A
 
 [.column]
 
-`A = 75, B = 45` <br> `A > B (75 > 45)`
+`A = 75, B = 45` <br/> `A > B (75 > 45)`
 
 [.column]
 
@@ -428,7 +428,7 @@ return A
 
 [.column]
 
-`A = 75, B = 45` <br> `A > B (75 > 45)` <br> `A = 75 - 45` <br> `A = 30`
+`A = 75, B = 45` <br/> `A > B (75 > 45)` <br/> `A = 75 - 45` <br/> `A = 30`
 
 [.column]
 
@@ -478,8 +478,8 @@ return A
 
 [.column]
 
-`A = 30, B = 45` <br> `else ... since it isn't true that (30 > 45)` <br>
-`B = 45 - 30` <br> `B = 15`
+`A = 30, B = 45` <br/> `else ... since it isn't true that (30 > 45)` <br/>
+`B = 45 - 30` <br/> `B = 15`
 
 [.column]
 
@@ -504,7 +504,7 @@ return A
 
 [.column]
 
-`A = 30, B = 45` <br> `else ... since it isn't true that (30 > 45)` <br> `B = 45 - 30` <br> `B = 15`
+`A = 30, B = 45` <br/> `else ... since it isn't true that (30 > 45)` <br/> `B = 45 - 30` <br/> `B = 15`
 
 [.column]
 
@@ -554,7 +554,7 @@ return A
 
 [.column]
 
-`A = 30, B = 15` <br> `A > B (30 > 15)`
+`A = 30, B = 15` <br/> `A > B (30 > 15)`
 
 [.column]
 
@@ -579,7 +579,7 @@ return A
 
 [.column]
 
-`A = 30, B = 15` <br> `A > B (30 > 15)` <br> `A = 30 - 15` <br> `A = 15`
+`A = 30, B = 15` <br/> `A > B (30 > 15)` <br/> `A = 30 - 15` <br/> `A = 15`
 
 [.column]
 
@@ -629,7 +629,7 @@ return A
 
 [.column]
 
-`A = 15, B = 15` <br>`done with *while*` <br>`since A == B`<br>`GCD = 15`
+`A = 15, B = 15` <br/>`done with *while*` <br/>`since A == B`<br/>`GCD = 15`
 
 [.column]
 
@@ -832,11 +832,11 @@ https://www.flickr.com/photos/shannonlofthus/4670090955/in/photolist-87Frkz-WHY5
 
 > For each two adjacent elements
 
-<br>
+<br/>
 
 > Exchange them if out of order
 
-<br>
+<br/>
 
 > Repeat until array is sorted.
 
@@ -1089,7 +1089,7 @@ is O(n)
 
 # Tower of Hanoi
 
-<br>
+<br/>
 
 # If we could move a **disk per second** how long would this take?
 
