@@ -20,13 +20,13 @@ In the following problems you are allowed to use the following sentences as your
 ```
 Make a memory spot with the label ____.
 
-Turn over the scrabble tile at position ____, copy the letter to a memory spot labeled ____, turn the tile back over.
+Turn over the scrabble tile at position ____, copy the tile to a memory spot labeled ____, turn the tile back over.
 
 Put the number ____ in the memory spot labeled ____.
 
 Add `1` to the value of the number at memory spot labeled ____.
 
-If the value in memory spot with label is ____ then do the next step, otherwise skip the next step.
+If the tile in memory spot with label is ____ then do the next step, otherwise skip the next step.
 
 STOP with the answer YES
 
