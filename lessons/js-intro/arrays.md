@@ -12,7 +12,7 @@ employee number one, `employee[2]` employee number two, and so on.
 
 The following statements create equivalent arrays:
 
-```javascript
+```typescript
 const array = new Array(element0, element1, ..., elementN);
 const array = Array(element0, element1, ..., elementN);
 const array = [element0, element1, ..., elementN];
@@ -36,7 +36,7 @@ To create an array with non-zero length, but without any items, the following
 can be used. Note we need to give the `array` variable a type since we have no
 initial values.
 
-```javascript
+```typescript
 const array: number[] = []
 array.length = arrayLength
 ```
@@ -45,7 +45,7 @@ array.length = arrayLength
 
 You can populate an array by assigning values to its elements. For example,
 
-```javascript
+```typescript
 const employees: string[] = []
 employees[0] = 'Casey Jones'
 employees[1] = 'Phil Lesh'
@@ -72,7 +72,7 @@ cantChangeTheseValues[0] = 1
 You refer to an array's elements by using the element's ordinal number. For
 example, suppose you define the following array:
 
-```javascript
+```typescript
 const myArray = ['Wind', 'Rain', 'Fire']
 ```
 
@@ -86,7 +86,7 @@ element of the array as `myArray[1]`.
 A common operation is to iterate over the values of an array, processing each
 one in some way. The simplest way to do this is as follows:
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 for (let index = 0; index < colors.length; index++) {
   console.log(colors[index])
@@ -98,7 +98,7 @@ through the loop.
 
 The `forEach()` method provides another way of iterating over an array:
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 colors.forEach(function (color) {
   console.log(color)
@@ -108,7 +108,7 @@ colors.forEach(function (color) {
 Alternatively, You can shorten the code for the forEach parameter with Arrow
 Functions:
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 colors.forEach(color => console.log(color))
 ```
@@ -123,7 +123,7 @@ as a second argument in our arrow function.
 Note that we do not need to apply a type to `color` or to `index`. TypeScript
 will determine that they must be of types `string` and `number` respectively.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 colors.forEach((color, index) =>
   console.log(`The color at position ${index} is ${color}`)
