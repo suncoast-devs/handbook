@@ -13,10 +13,16 @@ employee number one, `employee[2]` employee number two, and so on.
 The following statements create equivalent arrays:
 
 ```javascript
-let array = new Array(element0, element1, ..., elementN);
-let array = Array(element0, element1, ..., elementN);
-let array = [element0, element1, ..., elementN];
+const array = new Array(element0, element1, ..., elementN);
+const array = Array(element0, element1, ..., elementN);
+const array = [element0, element1, ..., elementN];
 ```
+
+The first two cases are challenging for TypeScript unless we define a type for
+the array. For instance `const array = new Array('hello', 42)` will define an
+array of `string` and convert the `42` to a string. However,
+`const array = new Array(42, 'hello')` will be a TypeScript error. These are not
+recommended approaches for creating arrays.
 
 `element0, element1, ..., elementN` is a list of values for the array's
 elements. When these values are specified, the array is initialized with them as
@@ -26,15 +32,12 @@ arguments.
 The bracket syntax is called an "array literal" or "array initializer." It's
 shorter than other forms of array creation, and so is generally preferred.
 
-To create an array with non-zero length, but without any items, either of the
-following can be used:
+To create an array with non-zero length, but without any items, the following
+can be used. Note we need to give the `array` variable a type since we have no
+initial values.
 
 ```javascript
-let array = new Array(arrayLength)
-let array = Array(arrayLength)
-
-// This has exactly the same effect
-let array = []
+const array: number[] = []
 array.length = arrayLength
 ```
 
@@ -43,17 +46,25 @@ array.length = arrayLength
 You can populate an array by assigning values to its elements. For example,
 
 ```javascript
-let employees = []
+const employees: string[] = []
 employees[0] = 'Casey Jones'
 employees[1] = 'Phil Lesh'
 employees[2] = 'August West'
 ```
 
-You can also populate an array when you create it:
+You might be surprised that we can change the values of the entries of an array
+that is defined `const employees: string[] = []`. This is because the `const`
+refers to the variable name `employees`, **not** to the _values_ inside the
+array. What `const` prevents here is a statement such as
+`employees = ['Peter', 'Paul', 'Mary']`
 
-```javascript
-let myArray = new Array('Hello', myVar, 3.14159)
-let myArray = ['Mango', 'Apple', 'Orange']
+You **can** have an array variable that you can neither assign a new value,
+**or** change the contents of:
+
+```typescript
+const cantChangeTheseValues: ReadonlyArray<number> = [42, 100, 52]
+
+cantChangeTheseValues[0] = 1
 ```
 
 ## Referring to array elements
@@ -62,7 +73,7 @@ You refer to an array's elements by using the element's ordinal number. For
 example, suppose you define the following array:
 
 ```javascript
-let myArray = ['Wind', 'Rain', 'Fire']
+const myArray = ['Wind', 'Rain', 'Fire']
 ```
 
 You then refer to the first element of the array as `myArray[0]` and the second
@@ -76,16 +87,19 @@ A common operation is to iterate over the values of an array, processing each
 one in some way. The simplest way to do this is as follows:
 
 ```javascript
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 for (let index = 0; index < colors.length; index++) {
   console.log(colors[index])
 }
 ```
 
+Note that the `index` variable is a `let` since we do need to reassign it
+through the loop.
+
 The `forEach()` method provides another way of iterating over an array:
 
 ```javascript
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 colors.forEach(function (color) {
   console.log(color)
 })
@@ -95,7 +109,7 @@ Alternatively, You can shorten the code for the forEach parameter with Arrow
 Functions:
 
 ```javascript
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 colors.forEach(color => console.log(color))
 ```
 
@@ -104,10 +118,13 @@ colors.forEach(color => console.log(color))
 > at SDG, we will prefer this way to iterate over arrays.
 
 Notice that we do not have an index. If we **do** want an index we can add that
-as a second argument in our arrow function
+as a second argument in our arrow function.
+
+Note that we do not need to apply a type to `color` or to `index`. TypeScript
+will determine that they must be of types `string` and `number` respectively.
 
 ```javascript
-let colors = ['red', 'green', 'blue']
+const colors = ['red', 'green', 'blue']
 colors.forEach((color, index) =>
   console.log(`The color at position ${index} is ${color}`)
 )

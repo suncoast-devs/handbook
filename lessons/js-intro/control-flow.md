@@ -3,7 +3,7 @@ title: Control Flow
 order: 4
 ---
 
-JavaScript supports a compact set of statements, specifically control flow
+TypeScript supports a compact set of statements, specifically control flow
 statements, that you can use to incorporate a great deal of interactivity in
 your application. This chapter provides an overview of these statements.
 
@@ -14,21 +14,21 @@ Before we can discuss control flow, we need to understand the idea of a block.
 The most basic statement is a block statement that is used to group statements.
 The block is delimited by a pair of curly brackets:
 
-```javascript
+```typescript
 {
-  statement_1
-  statement_2
-  .
-  .
-  .
-  statement_n
+statement_1
+statement_2
+.
+.
+.
+statement_n
 }
 ```
 
 ## Conditional Statements
 
 A conditional statement is a set of commands that executes if a specified
-condition is true. JavaScript supports two conditional statements: `if...else`
+condition is true. TypeScript supports two conditional statements: `if...else`
 and `switch`.
 
 **if statement**
@@ -37,7 +37,7 @@ Use the if statement to execute a statement if a logical condition is `true`.
 Use the optional `else` clause to execute a statement if the condition is
 `false`. An if statement looks as follows:
 
-```javascript
+```typescript
 if (condition) {
   statement_1
 } else {
@@ -47,7 +47,7 @@ if (condition) {
 
 Here the condition can be any expression that evaluates to `true` or `false`.
 
-> NOTE: In JavaScript all of these are considered `false`: `0`, `-0`, `null`,
+> NOTE: In TypeScript all of these are considered `false`: `0`, `-0`, `null`,
 > `false`, `NaN`, `undefined`, and the empty string `""`
 
 If condition evaluates to `true`, `statement_1` is executed; otherwise,
@@ -57,7 +57,7 @@ including further nested if statements.
 You may also compound the statements using `else if` to have multiple conditions
 tested in sequence, as follows:
 
-```javascript
+```typescript
 if (condition_1) {
   statement_1
 } else if (condition_2) {
@@ -74,7 +74,7 @@ evaluates to true will be executed. To execute multiple statements, group them
 within a block statement (`{ ... }`) . In general, it's good practice to always
 use block statements, especially when nesting if statements:
 
-```javascript
+```typescript
 if (condition) {
   statement_1_runs_if_condition_is_true
   statement_2_runs_if_condition_is_true
@@ -90,7 +90,7 @@ A `switch` statement allows a program to evaluate an expression and attempt to
 match the expression's value to a case label. If a match is found, the program
 executes the associated statement. A switch statement looks as follows:
 
-```javascript
+```typescript
 switch (expression) {
   case label_1:
     statements_1
@@ -124,7 +124,7 @@ statement. When break is encountered, the program terminates switch and executes
 the statement following switch. If break were omitted, the statement for case
 "Cherries" would also be executed.
 
-```javascript
+```typescript
 switch (fruittype) {
   case 'Oranges':
     console.log('Oranges are $0.59 a pound.')

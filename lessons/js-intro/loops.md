@@ -8,10 +8,10 @@ loop as a computerized version of the game where you tell someone to take X
 steps in one direction then Y steps in another; for example, the idea "Go five
 steps to the east" could be expressed this way as a loop:
 
-```javascript
+```typescript
 for (let step = 0; step < 5; step++) {
   // Runs 5 times, with values of step 0 through 4.
-  console.log("Walking east one step");
+  console.log('Walking east one step')
 }
 ```
 
@@ -21,7 +21,7 @@ that number could be zero). The various loop mechanisms offer different ways to
 determine the start and end points of the loop. There are various situations
 that are more easily served by one type of loop over the others.
 
-The statements for loops provided in JavaScript are:
+The statements for loops provided in TypeScript are:
 
 - `for statement`
 - `do...while statement`
@@ -34,9 +34,9 @@ The statements for loops provided in JavaScript are:
 
 A for statement looks as follows:
 
-```javascript
+```typescript
 for ([initialExpression]; [condition]; [incrementExpression]) {
-  statement;
+  statement
 }
 ```
 
@@ -60,10 +60,10 @@ When a for loop executes, the following occurs:
 The do...while statement repeats until a specified condition evaluates to false.
 A do...while statement looks as follows:
 
-```javascript
+```typescript
 do {
-  statement;
-} while (condition);
+  statement
+} while (condition)
 ```
 
 `statement` is always executed once before the condition is checked (and then
@@ -78,9 +78,9 @@ execution stops and control passes to the statement following `do...while`.
 A `while` statement executes its statements as long as a specified `condition`
 evaluates to `true`. A while statement looks as follows:
 
-```javascript
+```typescript
 while (condition) {
-  statement;
+  statement
 }
 ```
 
@@ -97,24 +97,24 @@ statements.
 
 The following while loop iterates as long as n is less than three:
 
-```javascript
-let n = 0;
-let x = 0;
+```typescript
+let n = 0
+let x = 0
 while (n < 3) {
-  n++;
-  x += n;
+  n++
+  x += n
 }
 ```
 
 ## for...in statement
 
 The `for...in` statement iterates a specified variable over all the enumerable
-properties of an object. For each distinct property, JavaScript executes the
+properties of an object. For each distinct property, TypeScript executes the
 specified statements. A `for...in` statement looks as follows:
 
-```javascript
+```typescript
 for (variable in object) {
-  statements;
+  statements
 }
 ```
 
@@ -122,12 +122,12 @@ The following function takes as its argument an object and the object's name. It
 then iterates over all the object's properties and returns a string that lists
 the property names and their values.
 
-```javascript
-const car = { make: "Ford", model: "Mustang" };
+```typescript
+const car = { make: 'Ford', model: 'Mustang' }
 
-for (let property in car) {
-  const message = `The value of ${property} is ${car[property]}`;
-  console.log(message);
+for (const property in car) {
+  const message = `The value of ${property} is ${car[property]}`
+  console.log(message)
 }
 // The value of make is Ford
 // The value of model is Mustang
@@ -144,12 +144,10 @@ The `for...of` statement creates a loop iterating over iterable objects
 (including `Array`, `Map`, `Set`, arguments object and so on), invoking a block
 with statements to be executed for the value of each distinct property.
 
-```javascript
-var numbers = [3, 5, 7];
+```typescript
+const numbers = [3, 5, 7]
 
-for (let number of numbers) {
-  console.log(number); // logs 3, 5, 7
+for (const number of numbers) {
+  console.log(number) // logs 3, 5, 7
 }
 ```
-
----
