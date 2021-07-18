@@ -220,9 +220,9 @@ const myOtherCar = {
 
 And now we would have a new object, independent of the first, with a different
 year. However, you could imagine that if we had many properties it would be
-cumbersome to repeat all the keys and values. Fortunately, recent TypeScript
-allows for a shortcut to "expand" all the keys and values. This is known as the
-`spread` operator and is noted as `...`
+cumbersome to repeat all the keys and values. Fortunately, TypeScript allows for
+a shortcut to "expand" all the keys and values. This is known as the `spread`
+operator and is noted as `...`
 
 So let's write this again using the spread operator:
 
