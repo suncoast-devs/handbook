@@ -1,5 +1,5 @@
 ---
-title: Object-Oriented Programing in C#
+title: Object-Oriented Programming in C#
 assignments:
   - cs-blackjack
 ---
