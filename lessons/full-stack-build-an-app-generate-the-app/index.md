@@ -48,7 +48,7 @@ and then in the second:
 
 ```shell
 cd ClientApp
-dotnet watch run
+npm start
 ```
 
 ## Setting the JWT Key
