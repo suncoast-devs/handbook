@@ -17,7 +17,7 @@
     "gatsby-plugin-postcss": "^2.3.1",
     "gatsby-plugin-react-helmet": "^3.3.1",
     "gatsby-plugin-sharp": "^2.6.2",
-    "gatsby-plugin-sitemap": "^2.21.24",
+    "gatsby-plugin-sitemap": "^2.12.0",
     "gatsby-remark-autolink-headers": "^2.3.5",
     "gatsby-remark-classes": "^1.0.0",
     "gatsby-remark-copy-linked-files": "^2.3.2",
