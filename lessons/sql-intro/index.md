@@ -60,12 +60,12 @@ concept of `ACID` (which stands for
 
 - Atomicity - Updates to the database allow for multiple changes to be requested
   at once and either all of them fail, or all of them succeed. For instance, if
-  our application is a banking application and we want to withdraw \$10 from
+  our application is a banking application and we want to withdraw $10 from
   Andy's account and add it to Barbara's account, we might first write a
-  statement to decrease Andy's balance by 10. Then a second statement would
+  statement to decrease Andy's balance by 10. Then a second statement to 
   increase Barbara's balance by 10. If these two statements aren't guaranteed to
   succeed in pairs we have the possibility that we would decrease Andy's balance
-  without correspondingly increase Barabara's. In an `atomic` system, either we
+  without correspondingly increasing Barbara's. In an `atomic` system, either we
   would both decrease Andy's balance and increase Barbara's balance - _or_ - if
   an error occurs, their balances are as they were at the start.
 
@@ -95,7 +95,7 @@ SQL is a table-based storage paradigm, that stores data arranged in an
 Excel-like format, that focuses on normalizing our data by focusing on
 relationships and structure. This is often referred to as "Relational Databases"
 
-NoSQL can be thought of the opposite of SQL. At a high level, a NoSQL database
+NoSQL can be thought of as the opposite of SQL. At a high level, a NoSQL database
 stores data in a form other than the table structure. This looseness of data
 structure allows developers to more freely control what and how the data is
 stored. NoSQL databases have become popular with the rise of data science and
@@ -122,7 +122,7 @@ For instance, let's imagine we are designing and building a system to manage
 books for a library. We could create a database named `Library` and in that
 database, there would be one table, called `Books`.
 
-Into this `Books` table, we would design columns that represent the specific
+In this `Books` table, we would design columns that represent the specific
 data about books we wish to track. Each row in the `Books` table would represent
 a unique book in our collection.
 
@@ -302,7 +302,7 @@ This is different from having a value for that column, but being blank. In SQL,
 
 #### INSERT
 
-To create a new row in our database, we need to use `INSERT`. A `INSERT`
+To create a new row in our database, we need to use `INSERT`. An `INSERT`
 statement looks like this:
 
 ```sql
@@ -444,7 +444,7 @@ structure of an `UPDATE` is:
 ```sql
 UPDATE "TableName"
 SET "ColumnA" = 'new value'
-WHERE "ColumnB" = 'some value'
+WHERE "ColumnB" = 'some value';
 ```
 
 The above update statement will update all rows that have

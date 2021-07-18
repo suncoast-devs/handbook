@@ -18,7 +18,7 @@ translate into database tables and relationships.
 When working on a business problem, we should be on the lookout for statements
 that reveal the types and structure of data we want to manage.
 
-> "Keep track of students, the courses the students they are taking, and the
+> "Keep track of students, the courses the students are taking, and the
 > course's teacher."
 
 > "Record the customer's order, the items on each order, and which of the
@@ -41,7 +41,7 @@ guide us. We should be looking for:
 The first component of an ERD is an entity. These typically represent the major
 _nouns_ of our system.
 
-> "Keep track of students, the courses the students they are taking, and the
+> "Keep track of students, the courses the students are taking, and the
 > course's teacher."
 
 ```
