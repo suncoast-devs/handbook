@@ -9,11 +9,11 @@ const {
 } = process.env
 
 const isNetlifyProduction = NETLIFY_ENV === 'production'
-const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+const siteUrl = (isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL) || 'https://handbook.suncoast.io'
 
 module.exports = {
   siteMetadata: {
-    siteUrl
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-sitemap`,
