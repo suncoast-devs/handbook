@@ -1,5 +1,5 @@
 const queries = require('./src/utils/algolia')
-require('dotenv').config()
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 const {
   NODE_ENV,
@@ -9,7 +9,9 @@ const {
 } = process.env
 
 const isNetlifyProduction = NETLIFY_ENV === 'production'
-const siteUrl = (isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL) || 'https://handbook.suncoast.io'
+const siteUrl =
+  (isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL) ||
+  'https://handbook.suncoast.io'
 
 module.exports = {
   siteMetadata: {
@@ -29,13 +31,13 @@ module.exports = {
           },
           'branch-deploy': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: `${siteUrl}/sitemap.xml`,
+            host: siteUrl,
           },
           'deploy-preview': {
             policy: [{ userAgent: '*', disallow: ['/'] }],
-            sitemap: null,
-            host: null,
+            sitemap: `${siteUrl}/sitemap.xml`,
+            host: siteUrl,
           },
         },
       },
