@@ -2,7 +2,11 @@ const queries = require('./src/utils/algolia')
 require('dotenv').config()
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://handbook.suncoast.io`,
+  },
   plugins: [
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
