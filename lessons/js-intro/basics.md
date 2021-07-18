@@ -3,11 +3,11 @@ title: The Basics
 order: 2
 ---
 
-JavaScript programs are made up from a series of instructions called
+TypeScript programs are made up from a series of instructions called
 `statements`. These instructions are read by the computer (the browser) from the
 top to the bottom and from left to right.
 
-In many JavaScript programs you will see that each statement ends with a
+In many TypeScript programs you will see that each statement ends with a
 semicolon (`;`). While not absolutely necessary, some teams will use this style.
 At SDG we follow a style where the semicolons are not required. In fact we
 recommend you use an automatic code formatter named
@@ -28,7 +28,7 @@ the author, or other readers, to the purpose of the code.
 
 Comments look like this:
 
-```javascript
+```TypeScript
 // This is a single line comment
 
 /* This is a longer comment

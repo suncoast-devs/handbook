@@ -1,42 +1,10 @@
 theme: Next, 1
 
-# [fit] JavaScript
-
----
-
-# [fit] What is it?
-
----
-
-# Purpose
-
-- Initially to make web pages "interactive".
-- Is the lingua franca of the front-end web, the default programming language.
-- Has extended to the server-side via implementations like Node.js
-- Showing up in more places like embedded environments.
-
----
-
-# History
-
-- Created around 1995.
-- JavaScript is not Java.
-- Became a standard in 1997.
-
----
-
-# Lineage
-
-- Draws from Java, C, Scheme.
-- Some syntax will look familiar since Java and C also inspire C#.
-
----
-
 # Also statement based
 
-Like C# a JavaScript program is composed of a sequence of statements.
+Like C# a TypeScript program is composed of a sequence of statements.
 
-Like a C# program, these statements may end with a semicolon, `;`. However, these are _optional_ in JavaScript, and we will code without them.
+Like a C# program, these statements may end with a semicolon, `;`. However, these are _optional_ in TypeScript, and we will code without them.
 
 Comments are the same as in C#, single lines with `//` and multiple lines with `/*` and `*/`.
 
@@ -46,7 +14,7 @@ Comments are the same as in C#, single lines with `//` and multiple lines with `
 
 [.autoscale: true]
 
-JavaScript also has `types`, some of which will be familiar.
+TypeScript also has `types`, some of which will be familiar.
 
 - `number`
 - `string`
@@ -58,15 +26,9 @@ JavaScript also has `types`, some of which will be familiar.
 
 ---
 
-# Dynamically typed
+# Can create our own types!
 
-Variables are not bound to their value type.
-
-Unlike `C#`, once assigned a type, like a `number` the variable can change to accept a `string`, or a `boolean`
-
-JavaScript can also automatically convert values from one type to another.
-
-It is also more loose about how it _compares_ values.
+During this lecture, and in our work, we'll create our own types!
 
 ---
 
@@ -122,13 +84,13 @@ When looking at code on the web, e.g., StackOverflow, and blog posts, you will s
 
 They can also not be re-assigned later in the code.
 
-```javascript
+```typescript
 const answer = 42
 ```
 
 Not allowed, will be an error:
 
-```javascript
+```typescript
 answer = answer + 1
 ```
 
@@ -140,11 +102,11 @@ answer = answer + 1
 
 They **can** be re-assigned later in the code.
 
-```javascript
+```typescript
 let score = 98
 ```
 
-```javascript
+```typescript
 score = score + 1
 ```
 
@@ -161,14 +123,135 @@ That is, they are valid and accessible inside the current block. A block is:
 
 ---
 
+# So, what about types?
+
+- Shouldn't we be declaring types for our variables?
+- Like `C#`, TypeScript has type inference.
+
+So the following code declares variables that are of type `number`!
+
+```typescript
+const answer = 42
+let score = 98
+```
+
+# TypeScript inference is quite good!
+
+```typescript
+const name = 'Mary'
+const students = ['Mary', 'Steven', 'Paulo', 'Sophia']
+const scores = [98, 100, 55, 100]
+```
+
+- `name` is a string
+- `students` is an array of strings
+- `scores is an array of numbers
+
+We can see this over in Visual Studio if we have a TypeScript file!
+
+---
+
+# Mix and Match
+
+What about an array that has different types of elements?
+
+Unlike `C#`, TypeScript can handle that just fine, and in a very nice way.
+
+![fit right](http://3.bp.blogspot.com/-2vVZ7SPGpIg/UFs0TJ5zTdI/AAAAAAAABOA/qT7jRACFolE/s320/IMG_1154.JPG)
+
+---
+
+# Mix and Match
+
+```typescript
+const differentKindsOfThings = [42, 'Ice Cream', 100, 'Tacos']
+```
+
+          The variable differentKindsOfThings
+          will have the type
+
+          (string | number)[]
+
+The `|` is a `union` of types; it means **or**.
+
+`differentKindsOfThings` is an array of elements that can be **either** a `string` **or** a `number`.
+
+---
+
+# Declaring types explicitly
+
+```typescript
+const name: string = 'Mary'
+
+const students: string[] = ['Mary', 'Steven', 'Paulo', 'Sophia']
+
+const scores: number[] = [98, 100, 55, 100]
+
+const differentKindsOfThings: (string | number)[] = [
+  42,
+  'Ice Cream',
+  100,
+  'Tacos',
+]
+```
+
+---
+
+# Declaring types explicitly
+
+Once we introduce the idea of TypeScript objects we'll discuss why specifying an explict type is useful.
+
+---
+
 # Undefined variables
 
 After declaring a variable but before assigning it a value, the variable will contain a special but confusing, value known as `undefined`
 
-```javascript
-let name // name contains 'undefined'
+The type of the variable will also be `any` which means it will accept a value of **any** kind.
+
+```typescript
+let name // name contains 'undefined', and is of `any` type
 
 name = 'Jane' // name now contains the value 'Jane'
+```
+
+---
+
+## Avoid `undefined` and `any` in your code!
+
+In fact, we can turn on code checking tools to make sure we avoid them!
+
+---
+
+## Bad form
+
+```typescript
+let name
+// name contains 'undefined' and is of type `any`
+
+name = 'Jane'
+// name now contains the value 'Jane', but `name` is still an `any` type.
+```
+
+---
+
+## Better form
+
+```typescript
+let name: string
+// name contains 'undefined' and should be of type `string`
+
+name = 'Jane'
+// name now contains the value 'Jane'
+```
+
+---
+
+## Best form
+
+```typescript
+const name = 'Jane'
+// name contains the value 'Jane' and we avoid any issue with `undefined`
 ```
 
 ---
@@ -180,41 +263,18 @@ Follow these rules, and you'll do well:
 - Only use `const` and `let`.
 - Use `const` unless you have a **good** reason to use `let`
 - Always initialize a variable unless you have a **good** reason not to.
-- Avoid assigning a **different** type to a variable once created.
-
----
-
-# Dynamically typed
-
-That means you don't have to specify the data type of a variable when you declare it.
-
-JavaScript doesn't care what type of value a variable has, unlike `C#`
-
----
-
-# Valid code
-
-```javascript
-let answer = 42
-```
-
-And later, you could assign the same variable a string value, for example:
-
-```javascript
-answer = 'Thanks for all the fish...'
-```
 
 ---
 
 # Conversions
 
-JavaScript is far more forgiving when converting types.
+TypeScript is far more forgiving when converting types.
 
-Valid in `JavaScript` but not allowed in a language like `C#`
+Valid in `TypeScript` but not allowed in a language like `C#`
 
-```javascript
-let x = 'The answer is ' + 42 // "The answer is 42"
-let y = 42 + ' is the answer' // "42 is the answer"
+```typescript
+const x = 'The answer is ' + 42 // "The answer is 42"
+const y = 42 + ' is the answer' // "42 is the answer"
 ```
 
 ---
@@ -227,18 +287,20 @@ let y = 42 + ' is the answer' // "42 is the answer"
 
 # Doesn't work as you might expect
 
-In statements involving other operators, JavaScript does not convert numeric values to strings. For example:
+In statements involving other operators, TypeScript does not convert numeric values to strings. For example:
 
-```javascript
-'37' - 7 // 30
-'37' + 7 // "377"
+```typescript
+let x: string
+
+x = '37' - 7 // 30 and notes an error
+x = '37' + 7 // "377" does not note any error
 ```
 
 ---
 
 # String interpolation
 
-```javascript
+```typescript
 const score = 98
 const answer = 42
 
@@ -251,17 +313,17 @@ const message = `Congratulations, ${answer} is correct. You have ${score} points
 
 Similar to other languages as a combination of state and behavior.
 
-In JavaScript, an object is a standalone entity with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, and a material. In the same way, JavaScript objects can have properties, which define their characteristics.
+In TypeScript, an object is a standalone entity with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, and a material. In the same way, TypeScript objects can have properties, which define their characteristics.
 
 ---
 
 # Object Properties
 
-A JavaScript object has properties associated with it.
+A TypeScript object has properties associated with it.
 
 A property of an object is a variable that is attached to the object.
 
-Object properties are the same as ordinary JavaScript variables, except for the attachment to objects.
+Object properties are the same as ordinary TypeScript variables, except for the attachment to objects.
 
 The properties of an object define the characteristics of the object.
 
@@ -271,7 +333,7 @@ The properties of an object define the characteristics of the object.
 
 You access the properties of an object with a simple dot-notation:
 
-```javascript
+```typescript
 objectName.propertyName
 ```
 
@@ -283,7 +345,7 @@ objectName.propertyName
 
 [.column]
 
-Like all JavaScript variables, both the object name (which could be a standard variable) and property name are case-sensitive.
+Like all TypeScript variables, both the object name (which could be a standard variable) and property name are case-sensitive.
 
 You can define a property by assigning it a value.
 
@@ -291,20 +353,7 @@ For example, let's create an object named myCar and give it properties named mak
 
 [.column]
 
-```javascript
-const myCar = new Object()
-myCar.make = 'Ford'
-myCar.model = 'Mustang'
-myCar.year = 1969
-```
-
----
-
-# Object Initializer
-
-The previous example could also use an object initializer, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}):
-
-```javascript
+```typescript
 const myCar = {
   make: 'Ford',
   model: 'Mustang',
@@ -314,13 +363,9 @@ const myCar = {
 
 ---
 
-# Object unassigned properties
+# Object Initializer
 
-> Unassigned properties of an object are `undefined` (and not `null`).
-
-```javascript
-myCar.color // undefined
-```
+The previous example uses an object initializer, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}):
 
 ---
 
@@ -328,13 +373,13 @@ myCar.color // undefined
 
 [.column]
 
-Properties of JavaScript objects can also be accessed or set using a bracket notation.
+Properties of TypeScript objects can also be accessed or set using a bracket notation.
 
 So, for example, you could access the properties of the `myCar` object as follows:
 
 [.column]
 
-```javascript
+```typescript
 myCar['make'] = 'Ford'
 myCar['model'] = 'Mustang'
 myCar['year'] = 1969
@@ -344,52 +389,179 @@ myCar['year'] = 1969
 
 # Why?
 
-An object property name can be any valid JavaScript string or anything convertible into a string, including the empty string.
+An object property name can be any valid TypeScript string or anything convertible into a string, including the empty string.
 
-> However, any property name that is not a valid JavaScript identifier (for example, a property name with space or hyphens, or that starts with a number) can only use the square bracket notation.
+> However, any property name that is not a valid TypeScript identifier (for example, a property name with space or hyphens, or that starts with a number) can only use the square bracket notation.
 
 ---
 
-# Objects
+# Make a second car
 
-**LOTS** more in the handbook! Please consider reading the entire `Intro to JavaScript` and trying out the code for yourself.
+```typescript
+const theirCar = {
+  make: 'Jeep',
+  model: 'Wrangler',
+  year: 2021,
+}
+```
+
+This car has the same `type` as the `myCar` variable, but only through coincidence.
+
+---
+
+# Make another car
+
+```typescript
+const otherCar = {
+  make: 'Honda',
+  modal: 'Fit',
+  year: 2020,
+}
+```
+
+Anyone see a problem?
+
+---
+
+# Typo!
+
+```typescript
+const otherCar = {
+  make: 'Honda',
+  modal: 'Fit',
+  year: 2020,
+}
+```
+
+I make **many** typos and similar errors. Maybe TypeScript can help me?
+
+---
+
+# Using types to find issues in our code
+
+We can teach TypeScript about a new specific type and give it a name of our choice.
+
+```typescript
+type Car = {
+  make: string
+  model: string
+  year: number
+}
+```
+
+---
+
+# Using the type
+
+[.column]
+
+```typescript
+type Car = {
+  make: string
+  model: string
+  year: number
+}
+
+const myCar: Car = {
+  make: 'Ford',
+  model: 'Mustang',
+  year: 1969,
+}
+```
+
+[.column]
+
+```typescript
+const theirCar: Car = {
+  make: 'Jeep',
+  model: 'Wrangler',
+  year: 2021,
+}
+
+const otherCar: Car = {
+  make: 'Honda',
+  modal: 'Fit',
+  year: 2020,
+}
+```
+
+# [fit] The `modal` error will be called out
+
+---
+
+# Making a new object from an existing one
+
+[.column]
+
+Let's take our car example again:
+
+```typescript
+const myCar = {
+  make: 'Ford',
+  model: 'Mustang',
+  year: 1969,
+}
+```
+
+[.column]
+
+Make a new car, but with a different year.
+
+```typescript
+const myOtherCar = {
+  make: myCar.make,
+  model: myCar.model,
+  year: 1971,
+}
+```
+
+---
+
+# Fortunately, TypeScript allows for a shortcut
+
+- "expands" all the keys and values.
+- This is known as the `spread` operator and is noted as `...`
+
+```typescript
+const myOtherCar = {
+  ...myCar,
+  year: 1971,
+}
+```
 
 ---
 
 # Arrays
 
-JavaScript also has an array type. JavaScript arrays are more flexible than C#'s and are more akin to `List<>` in their flexibility. JavaScript arrays also differ from `C#` arrays as JavaScript arrays can store values of different types.
+TypeScript also has an array type. TypeScript arrays are more flexible than C#'s and are more akin to `List<>` in their flexibility. TypeScript arrays also differ from `C#` arrays as TypeScript arrays can store values of different types.
 
 There are three ways to declare an array:
 
-```javascript
-let array = new Array(element0, element1, ..., elementN);
-let array = Array(element0, element1, ..., elementN);
-let array = [element0, element1, ..., elementN];
+```typescript
+const array = new Array(element0, element1, ..., elementN);
+const array = Array(element0, element1, ..., elementN);
+const array = [element0, element1, ..., elementN];
 ```
 
 ---
 
-# Arrays
+# `Array` and `new Array` are problematic
 
-The `new Array` and `Array()` styles are confusing since they have a second form that creates an array with a sequence of empty elements
-
-```javascript
-let arrayWithSevenEmptyElements = new Array(7)
-let arrayWithSevenEmptyElements = Array(7)
-```
-
-For this reason, we typically use the `literal` form.
+- `const array = new Array('hello', 42)` will define an array of `string` and convert the `42` to a string.
+- `const array = new Array(42, 'hello')` will be a TypeScript error.
+- These are not recommended approaches for creating arrays.
 
 ---
 
 # Array literals
 
-```javascript
-let people = ['Betty', 'Wilma', 'Fred', 'Barny']
-let scores = [100, 42, 50, 98]
-let collection = ['Betty', 98, 'Fred', 12, 42]
+```typescript
+const people = ['Betty', 'Wilma', 'Fred', 'Barny']
+const scores = [100, 42, 50, 98]
+const collection = ['Betty', 98, 'Fred', 12, 42]
 ```
+
+Even though the arrays contain different types, TypeScript will create the correct kind of array.
 
 ---
 
@@ -397,8 +569,8 @@ let collection = ['Betty', 98, 'Fred', 12, 42]
 
 We can also use the `[]` operator to assign values to specific elements of an array.
 
-```javascript
-let employees = []
+```typescript
+const employees = []
 employees[0] = 'Casey Jones'
 employees[1] = 'Phil Lesh'
 employees[2] = 'August West'
@@ -406,29 +578,22 @@ employees[2] = 'August West'
 
 ---
 
-# Populating an array
+# Wait, what about const?
 
-We can set elements of an array even if they are not next to each other. JavaScript will fill in the elements in between with empty items.
+`const` only refers to the **variable**, not it's contents.
 
-[.column]
+It only prevents us from doing `employees = ['Peter', 'Paul', 'Mary']`
 
-```javascript
-let employees = []
-employees[0] = 'Casey Jones'
-employees[12] = 'Phil Lesh'
-employees[42] = 'August West'
-```
+---
 
-[.column]
+# Can you make an unchangable array?
 
-```javascript
-[
-  'Casey Jones',
-  <11 empty items>,
-  'Phil Lesh',
-  <29 empty items>,
-  'August West'
-]
+- Yes, use `ReadOnlyArray<>`
+
+```typescript
+const cantChangeTheseValues: ReadonlyArray<number> = [42, 100, 52]
+
+cantChangeTheseValues[0] = 1
 ```
 
 ---
@@ -437,7 +602,7 @@ employees[42] = 'August West'
 
 A common operation is to iterate over the values of an array, processing each one in some way. The simplest way to do this is as follows:
 
-```javascript
+```typescript
 let colors = ['red', 'green', 'blue']
 for (let index = 0; index < colors.length; index++) {
   console.log(colors[index])
@@ -450,7 +615,7 @@ for (let index = 0; index < colors.length; index++) {
 
 The `forEach()` method provides another way of iterating over an array:
 
-```javascript
+```typescript
 let colors = ['red', 'green', 'blue']
 colors.forEach(function (color) {
   console.log(color)
@@ -464,7 +629,7 @@ colors.forEach(function (color) {
 Alternatively, You can shorten the code for the forEach parameter with Arrow
 Functions:
 
-```javascript
+```typescript
 let colors = ['red', 'green', 'blue']
 colors.forEach(color => console.log(color))
 ```
@@ -479,9 +644,9 @@ For more details on how to manipulate arrays, including adding and removing elem
 
 # Control flow
 
-Control flow in JavaScript is nearly identical to `C#` in that our code consists of a sequential set of statements that comprises a block of code:
+Control flow in TypeScript is nearly identical to `C#` in that our code consists of a sequential set of statements that comprises a block of code:
 
-```javascript
+```typescript
 {
   statement_1
   statement_2
@@ -498,7 +663,7 @@ Control flow in JavaScript is nearly identical to `C#` in that our code consists
 
 We can control the flow of the code with a conditional statement:
 
-```javascript
+```typescript
 if (condition) {
   statement_1
 } else {
@@ -512,9 +677,9 @@ This works exactly as `C#` except for the different style in how the braces and 
 
 # Comparisons
 
-The same boolean comparisons are present in `JavaScript`, `<`, `>`, `<=`, `>=`, and `==`.
+The same boolean comparisons are present in `TypeScript`, `<`, `>`, `<=`, `>=`, and `==`.
 
-```javascript
+```typescript
 const answer = 42
 const score = 98
 
@@ -552,12 +717,14 @@ It first sees if the values can be converted to a _common type_ and then perform
 
 # WAT
 
-```javascript
+```typescript
 const answer = 42
 const message = '42'
 
 if (answer == message) {
   // Yup! this will be *TRUE*
+  //
+  // However, TypeScript will complain at us!
 }
 ```
 
@@ -578,7 +745,7 @@ if (answer == message) {
 
 ---
 
-# In JavaScript
+# In TypeScript
 
 |       |                                |
 | ----- | ------------------------------ |
@@ -591,7 +758,7 @@ if (answer == message) {
 
 In **most** cases `===` is what you want when comparing values.
 
-There are some exceptions, and we'll discuss them along the way.
+There are some exceptions, but they are **very** rare.
 
 ---
 
@@ -603,7 +770,7 @@ See [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equal
 
 # For loop
 
-```javascript
+```typescript
 for(let index = 0; index < 20; index++) {
   console.log(`The index is ${index})
 }
@@ -613,7 +780,7 @@ for(let index = 0; index < 20; index++) {
 
 # Switch
 
-```javascript
+```typescript
 switch (expression) {
   case label_1:
     statements_1
@@ -634,62 +801,56 @@ switch (expression) {
 
 # Functions
 
-In JavaScript, named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
+In TypeScript, named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
 
 Also, these `functions` do not need to be in `classes`.
-
-In fact, the idea of `class`es came to JavaScript quite late.
 
 ---
 
 # Example
 
-The following code defines a simple function named square:
+The following code defines a simple function named greet:
 
-```javascript
-// Function keyword
+```typescript
+// function keyword
 // |
-// |        name of method
-// |        |
-// |        |      list of arguments
-// |        |      |
-// |        |      |
-// v        v      v
-function square(number) {
-  return number * number
+// |     name of the function
+// |     |
+// |     |    required parenthesis where arguments will go
+// |     |    |
+// |     |    |  opening scope of the function
+// |     |    |  |
+// |     |    |  |
+// v     v    v  v
+function greet() {
+  console.log('Hello there programmer!')
 }
 ```
 
 ---
 
-# Things to notice
+# Add arguments
 
-```javascript
-function square(number) {
-  return number * number
+For example, the following code defines a simple function named
+square.
+
+```typescript
+//                             argument type
+//                             |
+//                             |        function return type (optional)
+//                             |        |
+//                             |        |
+//                             v        v
+function square(valueToSquare: number): number {
+  return valueToSquare * valueToSquare
 }
 ```
-
-- No variable types for arguments
-- No return type declaration
-
----
-
-# Duck typing
-
-> If it quacks like a duck, and it walks like a duck, it must be a duck
-
-Our `square` method will work for any variable type where `*`behaves the way we like.
-
----
-
-> With great power comes great responsibility.
 
 ---
 
 # Calling functions
 
-```javascript
+```typescript
 const answer = square(5)
 ```
 
@@ -707,9 +868,9 @@ const answer = square(5)
 
 While the function declaration above is syntactically a statement, functions can also use a `function expression` style.
 
-```javascript
-const square = function (number) {
-  return number * number
+```typescript
+const square = function (valueToSquare: number) {
+  return valueToSquare * valueToSquare
 }
 
 const answer = square(4) // answer gets the value 16
@@ -719,58 +880,85 @@ const answer = square(4) // answer gets the value 16
 
 # Functions are just another kind of type!
 
-We say that `functions` in JavaScript are a type just like numbers, strings and booleans.
+We say that `functions` in TypeScript are a type just like numbers, strings and booleans.
 
 We can assign them names and pass them as arguments.
 
 ---
 
-[.column]
+```typescript
+type PrintItFunction = (value: number) => number
 
-```javascript
-function printIt(array, func) {
-  for (let index = 0; index < array.length; index++) {
-    const value = array[index]
+function printIt(numbers: number[], func: PrintItFunction) {
+  for (let index = 0; index < numbers.length; index++) {
+    const value = numbers[index]
     const result = func(value)
 
-    console.log(`Function turned ${value} into ${result}`)
+    console.log(`Turned ${value} into ${result}`)
   }
 }
-
-const square = function (number) {
-  return number * number
-}
-
-const double = function (number) {
-  return number * 2
-}
 ```
 
-[.column]
+---
 
-```javascript
+```typescript
+function square(valueToSquare: number) {
+  return valueToSquare \* valueToSquare
+}
+
+function double(valueToDouble: number) {
+  return valueToDouble * 2
+}
+
 const numbers = [1, 2, 3, 4, 5]
 printIt(numbers, square)
-// Function turned 1 into 1
-// Function turned 2 into 4
-// Function turned 3 into 9
-// Function turned 4 into 16
-// Function turned 5 into 25
+// Turned 1 into 1
+// Turned 2 into 4
+// Turned 3 into 9
+// Turned 4 into 16
+// Turned 5 into 25
 printIt(numbers, double)
-// Function turned 1 into 2
-// Function turned 2 into 4
-// Function turned 3 into 6
-// Function turned 4 into 8
-// Function turned 5 into 10
+// Turned 1 into 2
+// Turned 2 into 4
+// Turned 3 into 6
+// Turned 4 into 8
+// Turned 5 into 10
 ```
+
+---
+
+## Here is where TypeScript shines!
+
+What if we define a new function that doesn't fit the pattern our `printIt` function expects.
+
+```typescript
+function upperCase(stringToUpperCase: string) {
+  return stringToUpperCase.toUpperCase()
+}
+
+const words = ['hello', 'there']
+printIt(words, upperCase)
+```
+
+---
+
+The TypeScript system would immediately tell us that `words` isn't an array of numbers and cannot be sent to `printIt`!
+
+![inline](./assets/printit-error.png)
+
+---
+
+If we "fix" this error by using our `numbers` variable, we'll see that TypeScript then notifies us that the `upperCase` doesn't follow the style of the `function` we are expecting!
+
+![inline](./assets/printit-error-2.png)
 
 ---
 
 # Powerful
 
-Passing functions as arguments to other functions is a very powerful pattern in JavaScript. We will be using this ability quite a bit in other lessons.
+Passing functions as arguments to other functions is a very powerful pattern in TypeScript. We will be using this ability quite a bit in other lessons.
 
-Functions treated as values for variables and passed as arguments are two things that make JavaScript a **functional**-style language.
+Functions treated as values for variables and passed as arguments are two things that make TypeScript a **functional**-style language.
 
 ---
 
@@ -784,7 +972,7 @@ A function defined inside another function can also access all variables defined
 
 ---
 
-```javascript
+```typescript
 const PI = 3.14
 const numbers = [1, 2, 4, 8, 16]
 
@@ -816,7 +1004,7 @@ Taking the above example another step, we'll introduce the concept of `closures`
 
 # A Closure
 
-Closures in JavaScript are a way to create a function that has access to the variables and functions defined in the outer scope.
+Closures in TypeScript are a way to create a function that has access to the variables and functions defined in the outer scope.
 
 What does this mean? We can try a few examples.
 
@@ -824,7 +1012,7 @@ What does this mean? We can try a few examples.
 
 ## Simple example
 
-```javascript
+```typescript
 const variableFromOuterScope = "Wow, I'm from the outer scope"
 
 function thisFunctionActsLikeAClosure() {
@@ -869,12 +1057,12 @@ We can create a more complex example to demonstrate that these functions do "rem
 # Doing work later but still having access to variables
 
 - Create an array of people. Each person will have a name, a birthday, and a number of milliseconds we should wait before showing their information.
-- Use javaScript's `setTimeout` to do the waiting.
+- Use TypeScript's `setTimeout` to do the waiting.
 - Since `setTimeout` calls a function **later**, this will help prove that the function is really "remembering" its values.
 
 ---
 
-```javaScript
+```typescript
 const people = [
   {
     name: 'Alan Turing',
@@ -897,7 +1085,6 @@ const people = [
     delayMilliseconds: 2500,
   },
 ]
-
 ```
 
 ---
@@ -906,7 +1093,7 @@ const people = [
 
 Then we will create a method that accepts a person variable and prints out details about them.
 
-```javascript
+```typescript
 function printPersonInfo(person) {
   console.log(`${person.name} was born on ${person.birthDate}`)
 }
@@ -923,7 +1110,7 @@ function printPersonInfo(person) {
 
 ---
 
-```javascript
+```typescript
 people.forEach(function (person) {
   // Inside here we have access to the `person` variable here. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the

@@ -5,14 +5,14 @@ order: 6
 
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
-This section describes JavaScript's expressions and operators, including
+This section describes TypeScript's expressions and operators, including
 assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
 
 A complete and detailed list of operators and expressions is also available in
 the
-[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators)
+[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators)
 
-JavaScript has the following types of operators. This section describes the
+TypeScript has the following types of operators. This section describes the
 operators and contains information about operator precedence.
 
 - Assignment operators
@@ -37,7 +37,7 @@ There are also compound assignment operators that are shorthand for the
 operations listed in the following table:
 
 | Name                            | Shorthand operator | Meaning       |
-| ------------------------------- | ------------------ | ------------- |
+| ------------------------------- | ------------------ | ------------- | ------ | --- |
 | Assignment                      | `x = y`            | `x = y`       |
 | Addition assignment             | `x += y`           | `x = x + y`   |
 | Subtraction assignment          | `x -= y`           | `x = x - y`   |
@@ -50,26 +50,26 @@ operations listed in the following table:
 | Unsigned right shift assignment | `x >>>= y`         | `x = x >>> y` |
 | Bitwise AND assignment          | `x &= y`           | `x = x & y`   |
 | Bitwise XOR assignment          | `x ^= y`           | `x = x ^ y`   |
-| Bitwise OR assignment           | `x |= y`           | `x = x | y`   |
+| Bitwise OR assignment           | `x                 | = y`          | `x = x | y`  |
 |                                 |                    |               |
 
 **Destructuring Assignment**
 
 For more complex assignments, the destructuring assignment syntax is a
-JavaScript expression that makes it possible to extract data from arrays or
+TypeScript expression that makes it possible to extract data from arrays or
 objects using a syntax that mirrors the construction of array and object
 literals.
 
-```javascript
-let numbers = ['one', 'two', 'three']
+```typescript
+const numbers = ['one', 'two', 'three']
 
 // without destructuring
-let one = numbers[0]
-let two = numbers[1]
-let three = numbers[2]
+const one = numbers[0]
+const two = numbers[1]
+const three = numbers[2]
 
 // with destructuring
-let [one, two, three] = numbers
+const [one, two, three] = numbers
 ```
 
 ## Comparison Operators
@@ -77,7 +77,7 @@ let [one, two, three] = numbers
 A comparison operator compares its operands and returns a logical value based on
 whether the comparison is true. The operands can be numerical, string, logical,
 or object values. Strings are compared based on standard ordering. In most
-cases, if the two operands are not of the same type, JavaScript attempts to
+cases, if the two operands are not of the same type, TypeScript attempts to
 convert them to an appropriate type for the comparison. This behavior generally
 results in comparing the operands numerically. The sole exceptions to type
 conversion within comparisons involve the === and !== operators, which perform
@@ -85,9 +85,9 @@ strict equality and inequality comparisons. These operators do not attempt to
 convert the operands to compatible types before checking equality. The following
 table describes the comparison operators in terms of this sample code:
 
-```javascript
-let var1 = 3
-let var2 = 4
+```typescript
+const var1 = 3
+const var2 = 4
 ```
 
 | Operator                     | Description                                                                                         | Examples returning true                      |
@@ -111,12 +111,12 @@ operators are addition (+), subtraction (-), multiplication (\*), and division
 used with floating point numbers (in particular, note that division by zero
 produces Infinity). For example:
 
-```javascript
+```typescript
 1 / 2 // 0.5
 1 / 2 == 1.0 / 2.0 // this is true
 ```
 
-In addition to the standard arithmetic operations (+, -, \* /), JavaScript
+In addition to the standard arithmetic operations (+, -, \* /), TypeScript
 provides the arithmetic operators listed in the following table:
 
 | Operator                       | Description                                                                                                                                                                                                                  | Example                                                                                                               |
@@ -138,14 +138,14 @@ A bitwise operator treats their operands as a set of 32 bits (zeros and ones),
 rather than as decimal, hexadecimal, or octal numbers. For example, the decimal
 number nine has a binary representation of `1001`. Bitwise operators perform
 their operations on such binary representations, but they return standard
-JavaScript numerical values.
+TypeScript numerical values.
 
-The following table summarizes JavaScript's bitwise operators.
+The following table summarizes TypeScript's bitwise operators.
 
 | Operator                                                                             | Usage     | Description                                                                                                              |
-| ------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------ |
+| ------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------------------------------------------------------------ | --- | ------------------------------------------------------------------------------------------------ |
 | Bitwise AND                                                                          | `a & b`   | Returns a one in each bit position for which the corresponding bits of both operands are ones.                           |
-| Bitwise OR                                                                           | `a | b`   |                                                                                                                          | Returns a zero in each bit position for which the corresponding bits of both operands are zeros. |
+| Bitwise OR                                                                           | `a        | b`                                                                                                                       |     | Returns a zero in each bit position for which the corresponding bits of both operands are zeros. |
 | Bitwise XOR                                                                          | `a ^ b`   | Returns a zero in each bit position for which the corresponding bits are the same.                                       |
 | [Returns a one in each bit position for which the corresponding bits are different.] |
 | Bitwise NOT                                                                          | `~ a`     | Inverts the bits of its operand.                                                                                         |
@@ -156,9 +156,9 @@ The following table summarizes JavaScript's bitwise operators.
 Bitwise operator examples
 
 | Expression | Result | Binary Description                           |
-| ---------- | ------ | -------------------------------------------- |
+| ---------- | ------ | -------------------------------------------- | ----- | ------------ |
 | `15 & 9`   | `9`    | `1111 & 1001 = 1001`                         |
-| `15 | 9`   | `15`   | `1111 | 1001 = 1111`                         |
+| `15        | 9`     | `15`                                         | `1111 | 1001 = 1111` |
 | `15 ^ 9`   | `6`    | `1111 ^ 1001 = 0110`                         |
 | `~15`      | `-16`  | `~00000000...00001111 = 11111111...11110000` |
 | `~9`       | `-10`  | `~00000000...00001001 = 11111111...11110110` |
@@ -183,9 +183,9 @@ used with non-Boolean values, they may return a non-Boolean value. The logical
 operators are described in the following table.
 
 | Operator                   | Usage                       | Description                                                                                                                                                                                      |
-| -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- | ------------------------------------------------------------------------- |
 | Logical AND <pre>&&</pre>  | <pre>expr1 && expr2</pre>   | Returns `expr1` if it can be converted to `false`; otherwise, returns `expr2`. Thus, when used with Boolean values, `&&` returns `true` if both operands are `true`; otherwise, returns `false`. |
-| Logical OR <pre>\|\|</pre> | <pre>expr1 \|\| expr2</pre> | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values,                                                                                     |  | returns true if either operand is true; if both are false, returns false. |
+| Logical OR <pre>\|\|</pre> | <pre>expr1 \|\| expr2</pre> | Returns expr1 if it can be converted to true; otherwise, returns expr2. Thus, when used with Boolean values,                                                                                     |     | returns true if either operand is true; if both are false, returns false. |
 | Logical NOT <pre>!</pre>   | <pre>!expr</pre>            | Returns false if its single operand that can be converted to true; otherwise, returns true.                                                                                                      |
 
 ---
