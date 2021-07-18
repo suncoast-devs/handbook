@@ -116,7 +116,7 @@ CREATE TABLE "Ratings" (
 
 ---
 
-# Lets insert some ratings:
+# Let's insert some ratings:
 
 ```sql
 INSERT INTO "Ratings" ("Description") VALUES ('G');
@@ -129,7 +129,7 @@ INSERT INTO "Ratings" ("Description") VALUES ('R');
 
 # Actors
 
-- Lets also add a table to keep information about our actors.
+- Let's also add a table to keep information about our actors.
 - For this table we want to know the full name of the actor and their birthday.
 - We'll also create an `Id` that is a `PRIMARY KEY` and is `SERIAL`
 
@@ -176,7 +176,7 @@ VALUES ('Martin Freeman', '1971-09-08');
 
 # Relationship
 
-Lets add a new column to our `Movies` to indicate _WHICH_ rating is associated to each row representing a movie.
+Let's add a new column to our `Movies` to indicate _WHICH_ rating is associated to each row representing a movie.
 
 ---
 
@@ -184,7 +184,7 @@ Lets add a new column to our `Movies` to indicate _WHICH_ rating is associated t
 ALTER TABLE "Movies" ADD COLUMN "RatingId" INTEGER NULL REFERENCES "Ratings" ("Id");
 ```
 
-- `RatingId` is an integer since matches the `SERIAL` which we are going to relate to.
+- `RatingId` is an integer since it matches the `SERIAL` which we are going to relate to.
 - `NULL` indicates that we are allowed to have no value.
 - Next we indicate that this is a foreign key (we are _relating_ this table) to the `Ratings` table.
 - We also specify the column in the other table, in this case `Id` in `Ratings`, we mean to match.
@@ -211,9 +211,9 @@ Now we can specify the `RatingId` associated to each movie when we insert the
 movie.
 
 ```sql
-UPDATE "Movies" SET "RatingId" = 2 WHERE "Id" in (10);
-UPDATE "Movies" SET "RatingId" = 3 WHERE "Id" in (1, 2, 3, 4, 5, 6, 7, 8,9 );
-UPDATE "Movies" SET "RatingId" = 4 WHERE "Id" in (11, 12, 13 );
+UPDATE "Movies" SET "RatingId" = 2 WHERE "Id" IN (10);
+UPDATE "Movies" SET "RatingId" = 3 WHERE "Id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9 );
+UPDATE "Movies" SET "RatingId" = 4 WHERE "Id" IN (11, 12, 13 );
 ```
 
 ---
@@ -297,7 +297,7 @@ LEFT JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
 
 - In the case of a _many-to-many_ relationship we cannot place the foreign keys on either of the tables.
 - In this case we need a third table, commonly referred to as a _join table_ to store the relationships.
-- In this table, we will place two foreign keys, one to the left (movies) and the other to the right (to the actor.)
+- In this table, we will place two foreign keys, one to the left (movies) and the other to the right (actors).
 - We attempt to name this table based on the relationship between the two tables.
 
 ---
@@ -376,25 +376,25 @@ ALTER TABLE "Roles" ADD COLUMN "CharacterName" TEXT NULL;
 
 ---
 
-Now that we have done that, we can add in a few character names. In order to know what rows to update, lets add the `Roles.Id` to our query above.
+Now that we have done that, we can add in a few character names. In order to know what rows to update, let's add the `Roles.Id` to our query above.
 
 ```sql
 SELECT "Roles"."Id", "Movies"."Title", "Actors"."FullName", "Roles"."CharacterName"
 FROM "Movies"
 JOIN "Roles" ON "Roles"."MovieId" = "Movies"."Id"
-JOIN "Actors" on "Actors"."Id" = "Roles"."ActorId";
+JOIN "Actors" ON "Actors"."Id" = "Roles"."ActorId";
 ```
 
 ---
 
-Now lets update the roles for all of our actors
+Now let's update the roles for all of our actors
 
 ```sql
 -- Orlando Bloom played Will Turner in Pirates (ID 1)
-UPDATE "Roles" set "CharacterName" = 'Will Turner' where "Id" in (1);
+UPDATE "Roles" SET "CharacterName" = 'Will Turner' WHERE "Id" IN (1);
 
 -- Orlando Bloom played Legolas in the Lord of the Rings movies
-UPDATE "Roles" set "CharacterName" = 'Legolas' where "Id" in (2,3,4);
+UPDATE "Roles" SET "CharacterName" = 'Legolas' WHERE "Id" IN (2,3,4);
 ```
 
 ---
@@ -405,7 +405,7 @@ UPDATE "Roles" set "CharacterName" = 'Legolas' where "Id" in (2,3,4);
 SELECT "Roles"."Id", "Movies"."Title", "Actors"."FullName", "Roles"."CharacterName"
 FROM "Movies"
 JOIN "Roles" ON "Roles"."MovieId" = "Movies"."Id"
-JOIN "Actors" on "Actors"."Id" = "Roles"."ActorId";
+JOIN "Actors" ON "Actors"."Id" = "Roles"."ActorId";
 ```
 
 ---
