@@ -83,7 +83,7 @@ Downsides:
 In the same directory where you create projects:
 
 ```shell
-npm init vite -- html-css-project-template
+npm init vite -- html-css-ts-project-template
 ```
 
 - Choose **vanilla** as the _framework_
@@ -94,7 +94,7 @@ npm init vite -- html-css-project-template
 # [fit] Check out the template it created
 
 ```shell
-cd html-css-project-template
+cd html-css-ts-project-template
 ```
 
 ```shell
@@ -253,6 +253,28 @@ Add this section:
 
 ```shell
 npm install --save-dev vite typescript
+```
+
+---
+
+[.autoscale: true]
+
+# [fit] Turn on TypeScript checking in our terminal
+
+```shell
+npm install --save-dev vite-plugin-checker
+```
+
+Create the file `vite.config.ts` with the following:
+
+```js
+import { defineConfig } from 'vite'
+import checker from 'vite-plugin-checker'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [checker({ typescript: true })],
+})
 ```
 
 ---

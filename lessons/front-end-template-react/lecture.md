@@ -218,7 +218,7 @@ npm install --save-dev vite typescript
 npm install --save-dev vite-plugin-checker
 ```
 
-Open `src/vite.config.ts` and add the following to the top:
+Open `vite.config.ts` and add the following to the top:
 
 ```js
 import checker from 'vite-plugin-checker'
