@@ -61,7 +61,7 @@ modules:
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
-      # - environment-setup
+      - front-end-template-html-css-ts
       - html-intro
       - css-intro
       - css-layout
@@ -74,6 +74,7 @@ modules:
       - js-ui-as-state
       - js-classes
       - js-modules
+      - front-end-template-react
       - react-intro
       - react-assets
       # react-events -- needs work
