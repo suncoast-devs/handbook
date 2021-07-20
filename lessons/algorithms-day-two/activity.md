@@ -46,13 +46,15 @@ squares will either contain a number or a tile.
 ```
 Make a memory spot with the label ____.
 
-Turn over the scrabble tile at position ____, copy the tile to a memory spot labeled ____, turn the tile back over.
+Turn over the scrabble tile at the position determined by the value in label ____; copy the tile to a memory spot labeled ____; turn the tile back over.
 
 Put the number ____ in the memory spot labeled ____.
 
-Add `1` to the value of the number at the memory spot labeled ____.
+Add `1` to the value of the number at memory spot labeled ____.
 
-If the tile in memory spot with the label ____ is equal to ____ then do the next step, otherwise, skip the next step.
+Change the letter at memory spot labeled ____ to the next letter in the alphabet (if you want consider wrapping around, then consider "A" the next letter after "Z").
+
+If the tile in memory spot with the label ____ is equal to ____ then go to step number ____.
 
 STOP with the answer YES
 
