@@ -52,7 +52,7 @@ Put the number ____ in the memory spot labeled ____.
 
 Add `1` to the value of the number at the memory spot labeled ____.
 
-If the tile in memory spot with the label is ____ then do the next step, otherwise, skip the next step.
+If the tile in memory spot with the label ____ is equal to ____ then do the next step, otherwise, skip the next step.
 
 STOP with the answer YES
 
