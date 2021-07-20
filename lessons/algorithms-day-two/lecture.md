@@ -131,7 +131,7 @@ Who knows it?
 [.column]
 
 - Spaghetti
-  - Eggs, flour, salt
+  - Eggs, flour, semolina, salt
   - Make dough
   - Rise
   - Roll
