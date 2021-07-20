@@ -18,15 +18,15 @@ others act as the algorithm authors.
 
 - Adding/finding/ordering numbers
 
-  - Add two numbers
-  - Add ten numbers
-  - Add one hundred numbers
+  - Add any two numbers (not necessarily numbers in order)
+  - Add any ten numbers (not necessarily numbers in order)
+  - Add one hundred numbers (not necessarily numbers in order)
 
 ### Number Challenge: Searching
 
-- Find the lower of two numbers
-- Find the lowest of ten numbers
-- Find the lowest of one hundred numbers
+- Find the lower of two numbers (not necessarily numbers in order)
+- Find the lowest of ten numbers (not necessarily numbers in order)
+- Find the lowest of one hundred numbers (not necessarily numbers in order)
 
 ## Number Challenge: Ordering
 
