@@ -144,45 +144,45 @@ Take the example of a shift of 3.
 
 ---
 
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-
----
-
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
       A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 ---
 
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
-    Z A B C D E F G H I J K L M N O P Q R S T U V W X Y
+    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
 ---
 
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
-      Z A B C D E F G H I J K L M N O P Q R S T U V W X Y
-
----
-
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-
-    Y Z A B C D E F G H I J K L M N O P Q R S T U V W X
+      B C D E F G H I J K L M N O P Q R S T U V W X Y Z A
 
 ---
 
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
-      Y Z A B C D E F G H I J K L M N O P Q R S T U V W X
+    B C D E F G H I J K L M N O P Q R S T U V W X Y Z A
 
 ---
 
-    A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
 
-    X Y Z A B C D E F G H I J K L M N O P Q R S T U V W
+      C D E F G H I J K L M N O P Q R S T U V W X Y Z A B
+
+---
+
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+    C D E F G H I J K L M N O P Q R S T U V W X Y Z A B
+
+---
+
+      A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+      D E F G H I J K L M N O P Q R S T U V W X Y Z A B C
 
 ---
 
@@ -211,6 +211,12 @@ What if there was a shift of 0?
 
 ---
 
+# [fit] Let's encode `SDGDAY`
+
+Walk through each step of the algorithm to get the encoded text (... which is the not very secure text of `SDGDAY`)
+
+---
+
 # What if the shift was more than 0?
 
 How do we handle the "index in the shifted alphabet"?
@@ -221,12 +227,20 @@ First attempt, consider a shift of 3
 1. Start with the first letter in the plain text
 2. For the given letter, figure out the index in the alphabet (e.g., A is 0, B is 1, ..., Y is 24, Z is 25)
 3. Add 3 to that index
-4. If the index is more than 25 (the index of Z), subtract 25
+4. If the index is more than 25 (the index of Z), subtract 26
 5. Go to that index in the alphabet and copy that letter to the ciphertext
 6. If this is the last letter in the plain text: STOP
 7. Consider the next letter in the plain text
 8. Go to step 2
 ```
+
+---
+
+# [fit] Let's encode `SDGDAY`
+
+Walk through each step of the algorithm to get the encoded text (what do you get?)
+
+---
 
 Only needs _ONE_ alphabet!
 There is no need to keep that second alphabet order.
@@ -343,7 +357,7 @@ Consider the index divided by 26, but only the remainder.
    (e.g., A is 0, B is 1, ..., Y is 24, Z is 25)
 3. Go to the index in the alphabet given by the formula
 
-   (current letter index + offset) % shift number
+   (current letter index + shift number) % 26
 
    and copy that letter to the ciphertext
 4. If this is the last letter in the plain text: STOP
