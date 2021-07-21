@@ -15,7 +15,7 @@ Write your answers in a _text_ file on your computer. If you have `Visual Studio
 
 ### Language
 
-In the following problems you are allowed to use the following sentences as your _language_
+In the following problems you are allowed to use **any** of the following sentences, in any order you need, and as often as you need. In other activities and assignments you've been able to make up your own sentences. Here we are using a more limited set of sentences that start to reflect what computer "syntax" is like.
 
 ```
 Make a memory spot with the label ____.
@@ -39,7 +39,7 @@ STOP with the answer NO
 
 - For each of the following your algorithm has to work for _ANY_ length of scrabble tiles. I'll be trying your algorithms with many different sample sizes
 
-- Write an algorithm for: `Given list of "N" scrabble tiles and a starting letter, does it make a sequence?`
+- Write an algorithm for: `Given a list of "N" scrabble tiles and a starting letter, does it make a sequence?`
 
   - For example. "Given a list of 4 scrabble tiles and the starting letter of C, does it make a sequence". Try it with some scrabble tiles where this is true (ex C, D, E, F) and some where it does not (C, D, M, P)
 
@@ -54,4 +54,4 @@ STOP with the answer NO
 
 ### Adventure Mode
 
-- Write an algorithm for: `Given list of "N" scrabble tiles, does it make any sequence?`
+- Write an algorithm for: `Given a list of "N" scrabble tiles, does it make any sequence?`
