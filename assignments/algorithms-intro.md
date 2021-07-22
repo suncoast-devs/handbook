@@ -17,7 +17,7 @@ Write your answers in a _text_ file on your computer. If you have `Visual Studio
 
 In the following problems you will write individual English statement steps. Try to be as specific and precise as you can.
 
-For example, if we were writing an algorithm for counting the coins in our pocket we might write something like this:
+For example, if we were writing an algorithm for finding the total value of coins in our pocket we might write something like this:
 
 1. Start our counter out at zero (0) cents
 1. Place your hand in your pocket, and attempt to remove a single coin.
