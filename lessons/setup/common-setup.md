@@ -487,7 +487,7 @@ To read about these extensions:
 
 ## Configure Visual Studio Code
 
-In VS Code go to the "View" menu and select the menu item "Control Panel". Then
+In VS Code go to the "View" menu and select the menu item "Command Pallete". Then
 type `Open Settings JSON` and select option that does _NOT_ mention "Default" or
 "Workspace"
 
