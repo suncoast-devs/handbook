@@ -105,11 +105,16 @@ assignments have been checked by your instructors.
 
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
-The default color scheme for `Terminal` is black text on a white background.
-This can be difficult to use for long periods of time. Consider changing your
-default profile to `Pro` which will give you light text on a dark background.
+If your Mac is setup for `Light Mode` then the default color scheme for
+`Terminal` is black text on a white background. This can be difficult to use for
+long periods of time. If your Mac is setup for `Dark Mode` then the default
+color scheme for `Terminal` is light text on a grey background.
 
-Recommended profiles:
+If you are using `Light Mode`, consider changing your default profile to `Pro`
+which will give you light text on a dark background. Your instructors, and your
+eyes, will thank you.
+
+These are our recommended profiles for Terminal:
 
 - Pro
 - Homebrew
@@ -118,6 +123,8 @@ Recommended profiles:
 To change your default profile, start `Terminal` and select `Preferences` from
 the _Terminal_ menu. Click on `Profiles` then on `Pro` (or any other profile you
 want) and then click the `Default` button.
+
+![](./assets/terminal-setup.gif)
 
 > NOTE: if you choose a profile that is bright and colorful, but difficult for
 > your instructor or fellow classmates to read, you will be making it more
