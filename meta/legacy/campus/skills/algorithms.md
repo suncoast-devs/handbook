@@ -2,7 +2,10 @@
 title: Algorithms
 ---
 
-These resources are curated to help developers of all skill levels get more familiar with algorithms, both in theory and in practice. These might be challenging, but investing time into studying and practicing algorithms will help anyone be a better developers and problem solvers.
+These resources are curated to help developers of all skill levels get more
+familiar with algorithms, both in theory and in practice. These might be
+challenging, but investing time into studying and practicing algorithms will
+help anyone be a better developers and problem solvers.
 
 ## Websites
 
