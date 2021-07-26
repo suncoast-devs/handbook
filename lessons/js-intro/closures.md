@@ -5,7 +5,8 @@ order: 6
 
 ## Closures
 
-> NOTE: "What is a closure in TypeScript?" is often an interview question.
+> NOTE: "What is a closure in JavaScript/TypeScript?" is often an interview
+> question.
 
 Closures in TypeScript are a way to create a function that has access to the
 variables and functions defined in the outer scope.
@@ -53,7 +54,13 @@ information. We'll use TypeScript's `setTimeout` to do the waiting. Since
 is really "remembering" its values.
 
 ```typescript
-const people = [
+type Person = {
+  name: string
+  birthDate: string
+  delayMilliseconds: number
+}
+
+const people: Person[] = [
   {
     name: 'Alan Turing',
     birthDate: 'June 23, 1912',
@@ -81,7 +88,7 @@ Then we will create a method that accepts a person variable and prints out
 details about them.
 
 ```typescript
-function printPersonInfo(person) {
+function printPersonInfo(person: Person) {
   console.log(`${person.name} was born on ${person.birthDate}`)
 }
 ```

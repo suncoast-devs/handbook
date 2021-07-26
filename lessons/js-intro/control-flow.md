@@ -11,18 +11,34 @@ Before we can discuss control flow, we need to understand the idea of a block.
 
 ## Block
 
-The most basic statement is a block statement that is used to group statements.
-The block is delimited by a pair of curly brackets:
+The most basic block is a block statement that is used to group statements. The
+block is delimited by a pair of curly brackets:
 
 ```typescript
 {
-statement_1
-statement_2
-.
-.
-.
-statement_n
+  statement_1
+  statement_2
+  .
+  .
+  .
+  statement_n
 }
+```
+
+Using a plain block like this can be used to reduce the "scope" of a variable.
+That is, ensuring a variable only exists for a few lines of code. Here is an
+example of when we would use this type of block:
+
+```typescript
+const employees = ['Mary', 'Bob', 'Alice', 'Frank']
+
+{
+  let employeeIndex = 1
+
+  // Some code that uses the variable
+}
+
+// We want to ensure that the variable `employeeIndex` is not valid here.
 ```
 
 ## Conditional Statements
