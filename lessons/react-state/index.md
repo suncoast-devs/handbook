@@ -1,5 +1,5 @@
 ---
-title: React State
+title: React State and Introduction to Events
 ---
 
 See the lecture slides as this reading is under construction.
@@ -26,7 +26,7 @@ them. That is, `NewsArticle` cannot change the value of the property.
 
 > `props` are passed from the **parent** to the **child**
 
-> `props` are accessible via a `this.props` object in `class` based components
+> `props` are accessible via a `props` argument
 
 What are we to do if we want to change data? What approach does React provide
 for initializing, storing, and changing data that varies during the time a
@@ -34,21 +34,24 @@ component is visible on the page?
 
 # Enter `state`
 
-Borrowing from our existing terminology of `objects`, React implements a system
-called `state` to allow us to modify data during the lifetime of a component.
+React implements a system called `state` to allow us to modify data during the
+lifetime of a component. This is similar in concept to the idea of `state` in
+object oriented systems.
 
-`state` is a specifically named variable that is part of the `class`, much like
-`this.props`. In this case the variable is named `this.state`.
+In a functional component we use a system called `hooks` to implement features
+such as tracking `state`-ful information. The name `hook` comes from the idea
+that we are `hooking` into React's processing.
 
-`state` can be modified. However, we must modify this variable in a very
-specific way so that React knows we have changed the information.
+We will start with the simplest `hook` in React, `useState`.
 
-> `state` is a specifically named variable as part of the class (`this.state`)
+`useState` is a React function that allows us to create a variable in our
+component that can change over time. It comes from the standard React library
+and follows the standard hook rules which are:
 
-> `state` can be modified (but we need to use a specific method to make changes)
-
-> Changing `state` causes React to re-draw our component with the new state
-> information.
+1. Hooks should all begin with the word `use` and follow `camelCase` names.
+1. Hooks must be called in the same order each time a compontent renders. The
+   easiest way to guarantee this is to not place a `useXXXX` hook inside of a
+   conditional, or have any "guard clauses" **before** the use of a hook method.
 
 # State changes lead to re-rendering
 
@@ -102,85 +105,124 @@ several valuable advantages:
 Here is the static implementation of our click counter:
 
 ```js
-export class Counter extends React.Component {
-  render() {
-    return (
-      <div>
-        <p>The count is 0</p>
-        <button>Increment</button>
-      </div>
-    )
-  }
+export function Counter() {
+  return (
+    <div>
+      <p>The count is 0</p>
+      <button>Increment</button>
+    </div>
+  )
 }
 ```
 
-> NOTE: We'd have some CSS with this as well to give the counter a nice user
-> experience.
+## Step 2 - Add state hooks
 
-# Step 2 - Make a state object containing data
+We will add our first hook, known as `useState`. Here is the code to create the
+state variables and display their value. We'll then break down this code
+line-by-line
 
-Now that we have a static design, we can review the implementation to find all
-the elements that need to become dynamic. In our case, this is simply one
-element, the current `count` of clicks. In more complex cases, this may be an
-object with many properties, an array of simple data like strings or numbers, or
-an array of objects. Whatever the structure of this state, we'll create an
-**initial state** value and then use that value wherever we had static data.
+```jsx
+function Counter() {
+  // prettier-ignore
+  const counterValueAndSetMethod /* this is an array */ = useState( 0 /* initial state */)
 
-Here is what this looks like for our `Counter` component. We'll review the code
-changes below.
+  const counter = counterValueAndSetMethod[0]
+  const setCounter = counterValueAndSetMethod[1]
 
-```js
-export class Counter extends React.Component {
-  state = {
-    count: 0,
-  }
-
-  render() {
-    return (
-      <div>
-        <p>The count is {this.state.count}</p>
-        <button>Increment</button>
-      </div>
-    )
-  }
+  return (
+    <div>
+      <p>The counter is {counter}</p>
+      <button>Count!</button>
+    </div>
+  )
 }
 ```
 
-The first change to notice is:
+Whoa! Let us break this down.
 
-```js
-state = {
-  count: 0,
+We start the very first line of code with:
+
+```jsx
+const counterValueAndSetMethod = useState(0)
+```
+
+This line of code does a few things. First, it declares that we are going to use
+some state. It then says that the state's initial value is going to be the
+number `0`.
+
+### `useState` rules
+
+`useState` has a few particular _rules_ that we need to remember:
+
+1. The value given to `useState` in parenthesis is used as the initial value
+   only the first time the component's instance is rendered. Even if the
+   component is rendered again due to a state change, the state's value isn't
+   reset to the initial value. This behavior may seem strange if we are going to
+   call `useState` again when that render happens. How React makes this happen
+   is a concept deeper than we have time to discuss here.
+
+2. `useState` always returns an _array_ with exactly _two_ elements. The
+   **first** element is the _current value of the state_ and the **second**
+   element is _a function that can change the value of this state_
+
+### Using the `useState` return value
+
+Here are the next two lines of code:
+
+```jsx
+const counter = counterValueAndSetMethod[0]
+const setCounter = counterValueAndSetMethod[1]
+```
+
+These lines of code make two local variables to store the **current value** of
+our state, which we call `counter` and the **method that updates the counter**
+as `setCounter`
+
+Then in the JSX, we can use those two local variables. The code
+`<p>The counter is {counter}</p>` will show the current value of the counter.
+The code `<button onClick={() => setCounter(counter + 1)}>Count!</button>` will
+call `setCounter` to change the value of the counter, and make it the counter
+plus one.
+
+However, this code is not as compact as we can make it! We can use
+`array destructuring assignment` to simplify the code.
+
+The code:
+
+```jsx
+const counterValueAndSetMethod = useState(0)
+
+const counter = counterValueAndSetMethod[0]
+const setCounter = counterValueAndSetMethod[1]
+```
+
+can be rewritten as such:
+
+```jsx
+const [counter, setCounter] = useState(0)
+```
+
+and is how every example of `useState` will appear. See
+[this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
+for more details on how and why this syntax works.
+
+Thus our component will look like this:
+
+```jsx
+function Counter() {
+  const [counter, setCounter] = useState(0)
+
+  return (
+    <div>
+      <p>The counter is {counter}</p>
+      <button>Count!</button>
+    </div>
+  )
 }
 ```
 
-This code initializes an **instance** variable named `state` with a value being
-an object containing a single key (`count`) with the value `0`.
-
-The name `state` here is a **very** essential fact. We cannot choose any name we
-want for the `state` variable. The value we assign to the variable is entirely
-up to us. We could have simply made the `state` value the `0` directly. However,
-it is a fairly common practice to make this value an object with a key that
-gives a _name_ to our data.
-
-You'll see in later examples when we start working with APIs, the _shape_ of the
-`state` object will follow the structure of the API data. Since we aren't using
-an API here, we can control the design of the `state` variable.
-
-The next change is in our `p` paragraph. Instead of the static value `0` we
-place `{this.state.count}`. This will render the value associated with the
-`count` key inside the `this.state` variable (object).
-
-If we were to add this component to a project, we would see that the component
-would display `The count is 0` when it first renders.
-
-> NOTE: A vitally important thing to remember is that your component will render
-> the **first** time with whatever value is in the `this.state` variable. This
-> means we need to _always_ provide an initial value for the `state` that _makes
-> sense_. If we forgot to initialize `state` in this code, we would have
-> received an **error** the first time our component rendered.
-
-> **Always provide a working default/initial value for `state`**
+We have just combined the best of both worlds. We have the simplicity of the
+function component with the ability to update state!
 
 # Step 3 - Try manually changing the value in the state
 
@@ -194,9 +236,7 @@ could see that the UI would reflect the new value.
 Change the state initializing code to:
 
 ```js
-state = {
-  count: 42,
-}
+const [counter, setCounter] = useState(42)
 ```
 
 and you will see the display update to `The count is 42`.
@@ -225,21 +265,11 @@ have the counter update.
 In non-React-based JavaScript, we would set up an `addEventListener` for such an
 interaction. We would pass this function as an event handling function.
 
-In React, the event handling function is still proper. In this case, we will use
-the `arrow function` syntax. This ensures that the `this.state` is correctly set
-when we need it.
-
-It is essential to use `arrow syntax` for your event handling functions based on
-how **binding** works. To read more about binding `this` in JavaScript, see
-[this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this).
-Understanding `this` and `binding` is an essential concept for JavaScript
-developers (and it is often an interview question) but outside the immediate
-scope here.
-
-> **IMPORTANT** -- use `arrow functions` for your event handlers.
+In React, the event handling function is still proper. However, we will connect
+it to the event in a different way.
 
 ```js
-handleClickButton = event => {
+function handleClickButton(event) {
   event.preventDefault()
 
   console.log('Clicked!')
@@ -286,10 +316,10 @@ that function each time it is clicked.
 <button onClick={handleClickButton}>Increment</button>
 ```
 
-In React we will use `onXXXXX` methods (e.g. `onClick`, `onSubmit`,
-`onContextMenu`, `onChange`, etc.) when we want to associate an element to an
-event handling function. In this case, we are telling React to call our
-`handleClickButton` function each time the button is clicked.
+In React we will use `onXXXXX` or `handleXXXXX` named methods (e.g. `onClick`,
+`onSubmit`, `onContextMenu`, `onChange`, `handleClick`, etc.) when we want to
+associate an element to an event handling function. In this case, we are telling
+React to call our `handleClickButton` function each time the button is clicked.
 
 Now we know that we can connect a method to an event handling function.
 
@@ -303,118 +333,46 @@ For our button, we want to:
 
 - Update the state to make the count equal to the incremented value
 
-We will update this _algorithm_ to be specifically related to React:
-
-- Get the current count
-- Increment the count
-- **Make a new state**
-- Tell React about the new state
-
 That code looks like this:
 
 ```js
-// Get the current count
-const currentCount = this.state.count
-
 // Increment
-const newCount = currentCount + 1
+const newCount = count + 1
 
-// Make a new state
-const newState = {
-  count: newCount,
-}
-
-// Tell React about the new state
-this.setState(newState)
+// Tell React there is a new value for the count
+setCount(newCount)
 ```
 
-All of this code should feel familiar except for the last line,
-`this.setState(newState)`. This is the **special method** we use to tell React
-about a new state. Typically we might write something like
-`this.state.count = newCount` and while that line of code is syntactically
-correct and won't generate any errors when we execute it, we will see that
-`this.state.count = newCount` isn't enough.
+> NOTE: After calling `setCount` you will see that `count` has **NOT** been
+> updated. the value of `count` isn't changed until React gets a chance to
+> update state **AFTER** our `handleClickButton` method is done. This often
+> confuses new React developers.
 
-`this.setState` is a function given to us by the fact that we
-`extends React.Component` and is used to tell React that **after** this function
-is done, it should recognize this new state object and ** re-render** our
-component.
+We can simplify this code when we place it in our function:
 
-> NOTE: `this.setState` is the only way we should ever update state in a `class`
-> component.
+```js
+function handleClickButton(event) {
+  event.preventDefault()
 
-> NOTE: After calling `this.setState` you will see that `this.state.count` has
-> **NOT** been updated. the value of `this.state` isn't changed until React gets
-> a chance to update state **AFTER** our `handleClickButton` method is done.
-> This often confuses new React developers.
+  setCount(count + 1)
+}
+```
 
 # Our code so far:
 
 ```jsx
-export class Counter extends React.Component {
-  state = {
-    count: 42,
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+
+  function handleButtonClick() {
+    setCounter(counter + 1)
   }
 
-  handleClickButton = event => {
-    event.preventDefault()
-
-    // Get the current count
-    const currentCount = this.state.count
-
-    // Increment
-    const newCount = currentCount + 1
-
-    // Make a new state
-    const newState = {
-      count: newCount,
-    }
-
-    // Tell React about the new state
-    this.setState(newState)
-  }
-
-  render() {
-    return (
-      <div>
-        <p>The count is {this.state.count}</p>
-        <button onClick={handleClickButton}>Increment</button>
-      </div>
-    )
-  }
-}
-```
-
-# Simplify the code
-
-There are some simplifications we could make to `handleClickButton`.
-
-The first is to make the creation of the `newState` a single statement:
-
-```js
-handleClickButton = event => {
-  event.preventDefault()
-
-  const newState = {
-    count: this.state.count + 1,
-  }
-
-  this.setState(newState)
-}
-```
-
-We could continue and use a rule:
-
-> RULE: If we create a variable and use it only once, we _could_ replace the use
-> of the variable with the variable's definition.
-
-Using this rule:
-
-```js
-handleClickButton = event => {
-  event.preventDefault()
-
-  this.setState({ count: this.state.count + 1 })
+  return (
+    <div>
+      <button onClick={handleButtonClick}>Count!</button>
+    </div>
+  )
 }
 ```
 
@@ -430,546 +388,48 @@ handleClickButton = event => {
 
 - Step 5 - Update state
 
-# A more complex example: Tic Tac Toe With an API
+### Adding more state
 
-Let's extend our knowledge of `state` by interacting with an API.
+Let us say we also wanted to keep track of a person's name on the counter.
 
-The API we'll be using for this example is an
-[unbeatable Tic Tac Toe API](https://sdg-tic-tac-toe-api.herokuapp.com/). Read
-the API to get familiar with how it works. You'll notice that there are three
-main endpoints:
+With `hooks`, we will make two **independent** states that each track a single
+piece of information.
 
-- Create a new game
+Separating these pieces of state has a few benefits:
 
-- Make a move in a game
+1. It is easier to remove one part of the state since it has its own variable
+   and state changing function.
 
-- Get the state of a game
-
-We'll be using those API endpoints during this example.
-
-# Step 1 - Static Implementation
-
-We'll begin by designing our Tic Tac Toe game.
+2. We can more easily tell where in the code a piece of state or a state
+   changing function is used.
 
 ```jsx
-export class App extends Component {
-  render() {
-    return (
-      <div>
-        <h1>
-          Tic Tac Toe - <button>New</button>
-        </h1>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
-    )
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+  const [name, setName] = useState('Susan')
+
+  function handleButtonClick() {
+    setCounter(counter + 1)
   }
-}
-```
 
-```css
-:root {
-  /* CSS Variables for all the font colors and sizes. Try changing these! */
-  --header-background: #5661b3;
-  --header-text-color: #fff9c2;
-  --header-font-size: 2rem;
-  --square-font-size: calc(8 * var(--header-font-size));
-  --square-text-color: #5661b3;
-  --square-background-color: #e6e8ff;
-  --square-border: 3px solid var(--square-text-color);
+  function handleChangeInput(event) {
+    setName(event.target.name)
+  }
 
-  font: 16px / 1 sans-serif;
-}
-
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  min-height: 100%;
-}
-
-h1 {
-  /* center the header */
-  text-align: center;
-
-  /* Use a sans serif font with a little spacing and color */
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  letter-spacing: 0.4rem;
-  font-size: var(--header-font-size);
-  color: var(--header-text-color);
-
-  /* Remove margins and set a little padding */
-  margin: 0;
-  padding: var(--header-font-size);
-
-  /* Set a background color for the header */
-  background-color: var(--header-background);
-}
-
-ul,
-li {
-  /* Be gone margins! */
-  margin: 0;
-  padding: 0;
-
-  /* and list styles */
-  list-style: none;
-}
-
-ul {
-  /* Make the height of the list equal to the height of the page MINUS the height taken by the header */
-  height: calc(100vh - 3 * var(--header-font-size));
-
-  /* Display the list as a 3 column and three row grid */
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
-
-  /* Add a little gap between to allow the background color through */
-  gap: 1rem;
-
-  /* Set the background color that will show through the gap */
-  background-color: var(--square-text-color);
-}
-
-ul li {
-  /* Use a monospace font */
-  font-family: monospace;
-  font-size: var(--square-font-size);
-
-  /* Style the background color of the item */
-  background-color: var(--square-background-color);
-
-  /* Make the cursor a pointer by default */
-  cursor: pointer;
-
-  /* Center the text in the LI */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 1s font-size ease-in-out;
-}
-
-ul li.taken {
-  cursor: not-allowed;
-}
-
-ul li.small {
-  font-size: 4rem;
-}
-
-ul li.not-allowed-click {
-  background-color: red;
-}
-```
-
-This static implementation should allow us to put `X` and `O` elements in any of
-the `<li>` elements and see that the board renders correctly. This is an
-important step as we want to validate that as we fill in our state, and use it
-to populate the board, we can see a game of `X` and `O`.
-
-# Step 2: Make a state using data
-
-When we are using an API we want to use a state with the same "shape"
-(structure) as the API uses. Looking at the API response of a new game we'll see
-it generates data like this:
-
-```json
-{
-  "winner": "X",
-  "id": 42,
-  "board": [
-    [" ", " ", " "],
-    [" ", " ", " "],
-    [" ", " ", " "]
-  ]
-}
-```
-
-We should use good default values for our initial state, so we'll make the
-`winner` and `id` values equal to `null` to indicate we don't have any values.
-We'll leave the `board' equal to the two-dimensional array of strings.
-
-```js
-state = {
-  board: [
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-    [' ', ' ', ' '],
-  ],
-  id: null,
-  winner: null,
-}
-```
-
-We can then update the static representation of our `<li>` game board:
-
-```jsx
-render() {
   return (
     <div>
-      <h1>
-        Tic Tac Toe - <button>New</button>
-      </h1>
-      <ul>
-        <li>{this.state.board[0][0]}</li>
-        <li>{this.state.board[0][1]}</li>
-        <li>{this.state.board[0][2]}</li>
-        <li>{this.state.board[1][0]}</li>
-        <li>{this.state.board[1][1]}</li>
-        <li>{this.state.board[1][2]}</li>
-        <li>{this.state.board[2][0]}</li>
-        <li>{this.state.board[2][1]}</li>
-        <li>{this.state.board[2][2]}</li>
-      </ul>
+      <p>
+        Hi there {name} The counter is {counter}
+      </p>
+      <button onClick={handleButtonClick}>Count!</button>
+      <p>
+        <input type="text" value={name} onChange={handleChangeInput} />
+      </p>
     </div>
   )
 }
 ```
 
-We'll use `board[0]` to represent the first **row** of squares, then
-`board[0][0]` is the first square on that row, `board[0][1]` the second, and
-`board[0][2]` the last. The same will be true of the remaining rows.
-
-# Step 3 - Try manually changing the state
-
-Now try replacing a few of the empty strings with some `X` and `O` values that
-you might see in a real game of Tic Tac Toe.
-
-We should see the game board render with the appropriate values in the squares!
-
-# Step 4 - Connect the actions
-
-We will begin by defining a method that will handle clicking on a cell.
-
-In this case we'll need to know the row and column of the cell so we might write
-our `handleClickCell` method like this:
-
-```js
-handleClickCell = (row, column) => {
-  console.log(`You clicked on row ${row} and column ${column}`)
-}
-```
-
-Notice here we aren't using the typical function that takes an `event`. This is
-because we need additional context to handle clicking. We'll deal with this by
-writing a slightly different `onClick` method for each of the `<li>`
-
-```jsx
-<li onClick={() => this.handleClickCell(0, 0)}>{this.state.board[0][0]}</li>
-```
-
-In this case, the value of the `onClick` is itself an arrow function! However,
-we have placed it **inline**. By doing this, we can specify the row and column
-values.
-
-The way to think about `onClick={() => this.handleClickCell(0, 0)}` is this:
-
-> When you click on this specific `li`, call the function
-> `() => this.handleClickCell(0,0)` -- When that function is called **it** will
-> call `handleClickCell` and specify `0` as the `row` and `0` as the `column`.
-
-So we might do the same with the remaining `li`
-
-```jsx
-<ul>
-  <li onClick={() => this.handleClickCell(0, 0)}>{this.state.board[0][0]}</li>
-  <li onClick={() => this.handleClickCell(0, 1)}>{this.state.board[0][1]}</li>
-  <li onClick={() => this.handleClickCell(0, 2)}>{this.state.board[0][2]}</li>
-  <li onClick={() => this.handleClickCell(1, 0)}>{this.state.board[1][0]}</li>
-  <li onClick={() => this.handleClickCell(1, 1)}>{this.state.board[1][1]}</li>
-  <li onClick={() => this.handleClickCell(1, 2)}>{this.state.board[1][2]}</li>
-  <li onClick={() => this.handleClickCell(2, 0)}>{this.state.board[2][0]}</li>
-  <li onClick={() => this.handleClickCell(2, 1)}>{this.state.board[2][1]}</li>
-  <li onClick={() => this.handleClickCell(2, 2)}>{this.state.board[2][2]}</li>
-</ul>
-```
-
-Try clicking on each of the cells on the board, and we should see messages in
-our developer console that matches up with the row and column we have been
-clicking!
-
-# Step 5 - Update the state
-
-For this, we will use the Tic Tac Toe API. Reading the API, it appears we need
-to "Create a new game" to get a "Game ID" so that we can register moves.
-
-We'll make a small change to our UI to add a button:
-
-```jsx
-<h1>
-  Tic Tac Toe - <button onClick="{this.handleNewGame}">New</button>
-</h1>
-```
-
-And we will define a function `handleNewGame` that uses the API:
-
-```js
-handleNewGame = async () => {
-  // Make a POST request to ask for a new game
-  const response = await fetch(
-    'https://sdg-tic-tac-toe-api.herokuapp.com/game',
-    {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-    }
-  )
-
-  if (response.status === 201) {
-    // Get the response as JSON
-    const game = await response.json()
-
-    // Make that the new state!
-    this.setState(game)
-  }
-}
-```
-
-This function uses the API to send a request to make a new game. Because we
-designed our state to **exactly** match what the API returns, all we need to do
-is take the `JSON` object that it returns and place it in the state.
-
-```js
-// Get the response as JSON
-const game = await response.json()
-
-// Make that the new state!
-this.setState(game)
-```
-
-Try this a few times in the UI. Use the `React Developer Tools` to look at the
-`state` of our component after clicking the new game button. You should see an
-empty board but with a new `id` value each time!
-
-You could also try making the initial state something other than a blank board.
-You would see that making a new game will _reset_ it. **Don't forget to put the
-default state back to an array of empty strings!**
-
-The `id` within the `state` will help us when we need to record the game actions
-on a click.
-
-## Update handleClickCell
-
-When we click a cell, we need to build an API request to send to the server. The
-response we get back, as we did with handleNewGame, will be in exactly the form
-to use with `this.setState`.
-
-That code looks like:
-
-```js
-handleClickCell = async (row, column) => {
-  // Generate the URL we need
-  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${this.state.id}`
-
-  // Make an object to send as JSON
-  const body = { row: row, column: column }
-
-  // Make a POST request to make a move
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(body),
-  })
-
-  if (response.status === 201) {
-    // Get the response as JSON
-    const game = await response.json()
-
-    // Make that the new state!
-    this.setState(game)
-  }
-}
-```
-
-Other than sending the url, sending a `body` containing the `row` and `column`
-information, the structure of this code is very similar to `handleNewGame`. This
-includes the processing of the response:
-
-```js
-// Get the response as JSON
-const game = await response.json()
-
-// Make that the new state!
-this.setState(game)
-```
-
-So as we make a move, we should see the API send us back a game state.
-
-This game state will have our recorded move, but it will also have **the
-computer's move as well**
-
-Make a new game and try a few moves!
-
-## Handle the winner
-
-The API will also tell us the winner of the game. We can make the header display
-the winner information.
-
-To do this, we'll first extract the static data to a variable.
-
-```jsx
-  const header = 'Tic Tac Toe'
-
-  return (
-    <div>
-      <h1>
-        {header} - <button onClick={this.handleNewGame}>New</button>
-      </h1>
-```
-
-Now we can make this string dynamic by using a
-[ternary](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator)
-operator.
-
-```js
-const header = this.state.winner
-  ? `${this.state.winner} is the winner`
-  : 'Tic Tac Toe'
-```
-
-And with this, we have a playable Tic Tac Toe game that demonstrates how to use
-an API and React State to make an interactive app!
-
-# Improve the code
-
-We can improve the code to remove some duplication in the drawing of the game
-board.
-
-We can use `map` to generate the elements of the board. In this case, since we
-have an _array of arrays_ we'll have to use **two** `map` calls. The outer one
-will loop through the `rows` and the inner one will loop through the `columns`
-
-```jsx
-<ul>
-  {this.state.board.map((boardRow, rowIndex) => {
-    return boardRow.map((cell, columnIndex) => {
-      return (
-        <li
-          key={columnIndex}
-          onClick={() => this.handleClickCell(rowIndex, columnIndex)}
-        >
-          {cell}
-        </li>
-      )
-    })
-  })}
-</ul>
-```
-
-Two dimensional arrays can be tricky at first so study this code. Maybe some
-`console.log` will help make the code more clear:
-
-```jsx
-<ul>
-  {this.state.board.map((boardRow, rowIndex) => {
-    console.log(`The rowIndex is ${rowIndex} and the boardRow is ${boardRow}`)
-    return boardRow.map((cell, columnIndex) => {
-      console.log(
-        `-- With the inside loop the columnIndex is ${columnIndex} and the cell is ${cell}`
-      )
-      return (
-        <li
-          key={columnIndex}
-          onClick={() => this.handleClickCell(rowIndex, columnIndex)}
-        >
-          {cell}
-        </li>
-      )
-    })
-  })}
-</ul>
-```
-
-> **IMPORTANT** -- Any time we generate JSX dynamically such as with a `map` we
-> need to include a `key` value for the outer-most element. In this case we need
-> a unique value for the `<li>`. The value only needs to be unique to it's
-> siblings. So in this case the `columnIndex` is enough to tell React "this is
-> the 0th element ... this is the 1st element ... this is the 2nd element" and
-> React will be satisfied.
-
-You may have noticed that if you try to click on a game square before there is a
-game created, or after a winner exists, we'll get back some error information
-from the API.
-
-Let's block clicks in these cases:
-
-- There is no game created
-
-- The user clicks on an occupied cell
-
-- Someone has won
-
-We can do this by introducing the concept of a
-[guard clause](<https://en.wikipedia.org/wiki/Guard_(computer_science)>). A
-`guard clause` is a boolean conditional (typically an `if`) statement that
-checks for conditions under which we don't want the rest of the function/method
-to execute. Typically inside a `guard clause if statement`, we would see a
-`return` statement, which would end the function's execution.
-
-In our case we want to add this code to the top of our `handleClickCell`
-function:
-
-```js
-if (
-  // No game id
-  this.state.id === undefined ||
-  // A winner exists
-  this.state.winner ||
-  // The space isn't blank
-  this.state.board[row][column] !== ' '
-) {
-  return
-}
-```
-
-This allows us to block the click for each of the conditions we want to prevent.
-
-If you look in the `CSS` file, you'll see that we have some styling for cells
-that show any cell with a class of `taken` to have a cursor that indicates we
-cannot click. This adds a nice visual effect to align with the
-`guard clause`protection we just added.
-
-We can dynamically set the class name of an `li` again using a `ternary`
-expression:
-
-```jsx
-<li
-  key={columnIndex}
-  className={cell === ' ' ? '' : 'taken'}
-  onClick={() => this.handleClickCell(rowIndex, columnIndex)}
->
-  {cell}
-</li>
-```
-
-This code will set the `className` to a blank string if the cell is still open
-(equal to space) and to `taken` if there is any other value (say an `X` or an
-`O`)
-
-# Reviewing the Steps for an API based component
-
-- Step 1 - Static implementation
-
-- Step 2 - Make a state object containing data
-
-- Step 3 - Try manually changing the value in the state.
-
-- Step 4 - Connect actions
-
-- Step 5 - Update state
-
-- Step 5a - Use fetch to send required data to the API
-- Step 5b - Use the response from fetch to get the new state
-- Step 5c - Update the state
-
-- Step 6 - Refine dynamic nature of UI based on state data
+Ah, how nice. We have independent **variables** to track our state, instead of
+chained object access (e.g. `name` vs `this.state.name`) and very simple methods
+to update the state `setName(event.target.value)`

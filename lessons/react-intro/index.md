@@ -42,23 +42,29 @@ reduce code.
 
 ## Class versus Function components
 
-We will begin by looking at `class` based React Components. In a future lesson,
-we will be looking at `function` based components. These are the two current
-ways to create React Components. `class` components were introduced first and
-you will see most documentation relate to this style. However, the React team,
-and the community as a whole, are migrating to `function` based components. SDG
-will encourage you to use function components once we learn them. We'll start
-with `class` components since they are where React started and where you'll find
-the most documentation help.
+These are the two current ways to create React Components. `class` components
+were introduced first and you will see most documentation relate to this style.
+However, the React team, and the community as a whole, are migrating to
+`function` based components. In this course we will teach you the function
+component style. If you continue with React in your career and work on projects
+that use `class` components you won't have much trouble picking up that style.
 
 ## What does a Component look like
 
 The rules of a React component are:
 
-- It must `extend React.Component`
-- It must have a `render()` method that returns JSX
-- The JSX that `render()` returns must consist of _exactly_ one main element,
-  with other elements contained within. We'll see this more later.
+- It must be named following the `PascalCase` style.
+- It must be a function (`function` style or arrow-style) that returns JSX
+- The JSX returned must consist of _exactly_ one main element, with other
+  elements contained within. We'll see this more later.
+
+Example:
+
+```jsx
+function HelloWorld() {
+  return <p>Hello, World!</p>
+}
+```
 
 ## What is JSX?
 
@@ -70,22 +76,37 @@ style.
 ## Simplest React Component
 
 ```javascript
-class HelloWorld extends React.Component {
-  render() {
-    return <div>Hello, World!</div>
-  }
+function HelloWorld() {
+  return <p>Hello, World!</p>
 }
 ```
 
 When this component is presented on the page it will render
-`<div>Hello, World</div>`
+`<p>Hello, World</p>`. This done by a process known as `transpiling` or
+converting JSX into real JavaScript code. When our code is sent to the browser
+it is first manipulated by the JSX transpiling system.
+`return <p>Hello, World!</p>` is turned into:
 
-## How does app-app help us use React Components?
+```javascript
+function HelloWorld() {
+  return React.createElement('p', null, 'Hello, World')
+}
+```
+
+We _could_ code using the `React.createElement` style, but you would quickly
+realize that it is very tedious and "hides" the structure of the component we
+are trying to create.
+
+If you'd like to experiment with any of the other examples in the handbook, you
+can visit: [Babel REPL](https://babeljs.io/repl) to see how JSX is transformed
+into plain JavaScript.
+
+## How do we use React Components?
 
 React Components can represent the **entire** web page, or be mixed in with
 static content of the page.
 
-In the code we write with `app-app` we will use React to generate all of the
+In the code we write in our projects we will use React to generate all of the
 content on the page via components. React is very powerful for this but it is
 good to know that you can also add a small component to an existing non-React
 project just as easily.
@@ -103,8 +124,8 @@ parts)
 If we rendered this without JavaScript it would be an empty page. It is thus up
 to JavaScript to connect our React code to our HTML.
 
-In our SDG template from `app-app` we include an `index.js` -- this script loads
-React and a component we provide named `App`
+In our template we include an `main.tsx` -- this script loads React and a
+component we provide named `App`
 
 ```js
 import React from 'react'
@@ -112,20 +133,25 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
 ```
 
 React connects an existing `DOM` element to a component with the `ReactDOM`
 method. Here we state that the element with the `id` of `root` will be replaced
-with the component `App` that we `import` from the `App.jsx` file.
+with the component `App` that we `import` from the `App.tsx` file.
 
-Typically we will not have to adjust the `index.html` or the `index.js` files.
-We will start writing our code in our `App.jsx` file.
+Typically we will not have to adjust the `index.html` or the `main.tsx` files.
+We will start writing our code in our `App.tsx` file.
 
 ## JSX Files
 
 You may have noticed that we define our React Components in files that end in
-`.jsx` instead of `.js`. The `.jsx` extension allows our editors and our code
+`.tsx` instead of `.ts`. The `.tsx` extension allows our editors and our code
 management tools to know we are using the `JSX` extensions. Browsers do not
 understand `JSX` by default so a
 [transpile](https://en.wikipedia.org/wiki/Source-to-source_compiler) step takes
@@ -134,12 +160,7 @@ browser **can** understand.
 
 # Build a simple React application
 
-Let's generate a new `app-app` project using the `gamma` stack that will set up
-a new React project.
-
-```shell
-app-app --gamma ReactArticles
-```
+Let's generate a new project that will set up a new React project.
 
 This is some sample HTML we will work to create and learn how React Components
 can help simplify our code.
@@ -177,40 +198,37 @@ Let's open up our main component, the `App` component, and put this static
 content on the page.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <article className="intro-article">
-            <h2 className="article-title">SDG Announces Hackathon!</h2>
-            <p>
-              SDG announces the 2020 Summer Hackathon. Join us for an exciting
-              weekend
-            </p>
-            <a className="read-more" href="#here">
-              read more about SDG Announces Hackathon!
-            </a>
-          </article>
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <article className="intro-article">
+          <h2 className="article-title">SDG Announces Hackathon!</h2>
+          <p>
+            SDG announces the 2020 Summer Hackathon. Join us for an exciting
+            weekend
+          </p>
+          <a className="read-more" href="#here">
+            read more about SDG Announces Hackathon!
+          </a>
+        </article>
 
-          <article className="intro-article">
-            <h2 className="article-title">
-              Student Graduation is Right Around the Corner
-            </h2>
-            <p>
-              Our next cohort of students will be graduating in just over a
-              week.
-            </p>
-            <a className="read-more" href="#here">
-              read more about Student Graduation is Right Around the Corner
-            </a>
-          </article>
-        </main>
-      </div>
-    )
-  }
+        <article className="intro-article">
+          <h2 className="article-title">
+            Student Graduation is Right Around the Corner
+          </h2>
+          <p>
+            Our next cohort of students will be graduating in just over a week.
+          </p>
+          <a className="read-more" href="#here">
+            read more about Student Graduation is Right Around the Corner
+          </a>
+        </article>
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -295,7 +313,8 @@ Let's start that process.
 ## Creating a `NewsArticle` component.
 
 Let's create a new file in the `components` directory and name it
-`NewsArticle.jsx`
+`NewsArticle.tsx`. If you do not already have a `components` directory in your
+project, you should make one and then create `NewsArticle.tsx` inside.
 
 We'll add this as the first line:
 
@@ -309,21 +328,21 @@ This line tells the script we are going to use `React` and it activates the
 Next, we will make our component:
 
 ```javascript
-export class NewsArticle extends React.Component {
+export function NewsArticle() {
   // code here
 }
 ```
 
 the `export` at the beginning of that line, tells JavaScript we wish to share
-this class outside of the file. We'll use that fact in just a moment.
+this class outside of the file. It also exports this function by `name` rather
+than as the _default_ export. See the lesson on JavaScript modules for more on
+the difference between the two. We'll use the export in just a moment.
 
 And we will ensure it has a `render()` method.
 
 ```javascript
-export class NewsArticle extends React.Component {
-  render() {
-    return <div>Something</div>
-  }
+export function NewsArticle() {
+  return <div>Something</div>
 }
 ```
 
@@ -331,21 +350,21 @@ Now let's see if we have a working component.
 
 ## Using our new `NewsArticle` from the `App`
 
-Returning to our `App.jsx` we can bring in this component to use. At the top,
+Returning to our `App.tsx` we can bring in this component to use. At the top,
 and at the end of the list of `import` we will add
 
 ```javascript
 import { NewsArticle } from './components/NewsArticle'
 ```
 
-This line tells JavaScript we wish to use the `NewsArticle` class in this code,
-and that it can be found in the file `NewsArticle.jsx` in the `components`
+This line tells JavaScript we wish to use the `NewsArticle` component in this
+code, and that it can be found in the file `NewsArticle.tsx` in the `components`
 folder. Notice we do not add the extension. The `import` system is smart and can
 tell we mean the `jsx` version. If there were multiple files with the same
 extension we'd have to be more clear.
 
-Finally, we can add this element to our `render()` method. Let's insert it right
-inside the `<main>`
+Finally, we can add this element to our `App`. Let's insert it right inside the
+`<main>`
 
 ```html
 <NewsArticle />
@@ -359,33 +378,27 @@ This means our `NewsArticle` component is rendering itself.
 ## Composition
 
 This is the idea of `composition` -- we are now defining a component, that has
-it's own content, that we can embed into another component, in this case the
-`App`.
+it's own content, embedded into another component, in this case the `App`.
 
 ## Update the `NewsArticle`
 
-Let's take one example of the news article we have and make it the `render`
-method's JSX.
+Let's take one example of the news article we have and make it the method's JSX.
 
 ```javascript
 import React from 'react'
 
-export class NewsArticle extends React.Component {
-  render() {
-    return (
-      <article className="intro-article">
-        <h2 className="article-title">
-          Student Graduation is Right Around the Corner
-        </h2>
-        <p>
-          Our next cohort of students will be graduating in just over a week.
-        </p>
-        <a className="read-more" href="#here">
-          read more about Student Graduation is Right Around the Corner
-        </a>
-      </article>
-    )
-  }
+export function NewsArticle() {
+  return (
+    <article className="intro-article">
+      <h2 className="article-title">
+        Student Graduation is Right Around the Corner
+      </h2>
+      <p>Our next cohort of students will be graduating in just over a week.</p>
+      <a className="read-more" href="#here">
+        read more about Student Graduation is Right Around the Corner
+      </a>
+    </article>
+  )
 }
 ```
 
@@ -396,19 +409,17 @@ Let's remove the other two hardcoded `<article>`s leaving only our
 `<NewsArticle/>`
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -418,22 +429,20 @@ We should only see one article listed. If we repeat the `<NewsArticle/>` we can
 have as many of the `<article>` structure as we want.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle />
-          <NewsArticle />
-          <NewsArticle />
-          <NewsArticle />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle />
+        <NewsArticle />
+        <NewsArticle />
+        <NewsArticle />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -470,11 +479,11 @@ This is great, however, our `<NewsArticle>` still shows the hardcoded data.
 
 ## Using props in a component
 
-When React places our component on the page and calls the `render()` method to
-generate the elements, it makes the supplied `props` available in a variable
-named `this.props` -- the `this.props` is an object whose keys are the names of
-the properties. In our case this is `this.props.title` and `this.props.body` --
-the corresponding values are supplied as well.
+When React places our component on the page and calls the method to generate the
+elements, it makes the supplied `props` available in the argument to the
+function. The `props` argument is an object whose keys are the names of the
+properties. In our case this is `props.title` and `props.body` -- the
+corresponding values are supplied as well.
 
 We can use these in our component by using an _interpolation_ method within JSX.
 This is much like string interpolation in plain JavaScript but the syntax is
@@ -483,23 +492,21 @@ slightly different:
 ```javascript
 import React from 'react'
 
-export class NewsArticle extends React.Component {
-  render() {
-    return (
-      <article className="intro-article">
-        <h2 className="article-title">{this.props.title}</h2>
-        <p>{this.props.body}</p>
-        <a className="read-more" href="#here">
-          read more about {this.props.title}
-        </a>
-      </article>
-    )
-  }
+export function NewsArticle(props) {
+  return (
+    <article className="intro-article">
+      <h2 className="article-title">{props.title}</h2>
+      <p>{props.body}</p>
+      <a className="read-more" href="#here">
+        read more about {props.title}
+      </a>
+    </article>
+  )
 }
 ```
 
 Now when each of these components is rendered on the page, the unique values for
-`this.props` are available and we now have a component that is:
+`props` are available and we now have a component that is:
 
 - **reusable**
 - **customizable**
@@ -510,30 +517,28 @@ This is great, and we have an application that can render any number of articles
 we want. However, we still must manually code these in our main application.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle
-            title="sdg announces hackathon!"
-            body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
-          />
-          <NewsArticle
-            title="student graduation is right around the corner"
-            body="our next cohort of students will be graduating in just over a week."
-          />
-          <NewsArticle
-            title="sdg standardizes on react"
-            body="reactjs is the best library for learning front end web"
-          />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle
+          title="sdg announces hackathon!"
+          body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
+        />
+        <NewsArticle
+          title="student graduation is right around the corner"
+          body="our next cohort of students will be graduating in just over a week."
+        />
+        <NewsArticle
+          title="sdg standardizes on react"
+          body="reactjs is the best library for learning front end web"
+        />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -544,7 +549,7 @@ It would be nice to render this from the data.
 ## Importing JSON data
 
 Let's start by making a JSON file named `articles.json` in the directory along
-with `App.jsx` -- In this file, we will describe, in JSON, an array of articles
+with `App.tsx` -- In this file, we will describe, in JSON, an array of articles
 we want to render. We will also give each article an `id` as if it came from an
 API since that is likely the most common case for where this data will
 eventually come from.
@@ -574,34 +579,32 @@ eventually come from.
 ]
 ```
 
-We will be using this in our `App.jsx` so let's import it!
+We will be using this in our `App.tsx` so let's import it!
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle
-            title="sdg announces hackathon!"
-            body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
-          />
-          <NewsArticle
-            title="student graduation is right around the corner"
-            body="our next cohort of students will be graduating in just over a week."
-          />
-          <NewsArticle
-            title="sdg standardizes on react"
-            body="reactjs is the best library for learning front end web"
-          />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle
+          title="sdg announces hackathon!"
+          body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
+        />
+        <NewsArticle
+          title="student graduation is right around the corner"
+          body="our next cohort of students will be graduating in just over a week."
+        />
+        <NewsArticle
+          title="sdg standardizes on react"
+          body="reactjs is the best library for learning front end web"
+        />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -612,7 +615,7 @@ its contents available as the variable `articles`! No parsing required! This is
 because the environment comes with a **`loader`** for JSON files and it knows
 how to read and parse them for us!
 
-Let's use that data to build up an array of `<NewsArtcle/>` components.
+Let's use that data to build up an array of `<NewsArticle/>` components.
 
 ## Transforming data into components
 
@@ -620,35 +623,33 @@ Since we want one `<NewsArticle/>` that is related to each element of the
 `articles` array, we will bring out our friend `map`
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    const newsArticlesFromData = articles.map(article => (
-      <NewsArticle title={article.title} body={article.body} />
-    ))
+function App() {
+  const newsArticlesFromData = articles.map(article => (
+    <NewsArticle title={article.title} body={article.body} />
+  ))
 
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle
-            title="sdg announces hackathon!"
-            body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
-          />
-          <NewsArticle
-            title="student graduation is right around the corner"
-            body="our next cohort of students will be graduating in just over a week."
-          />
-          <NewsArticle
-            title="sdg standardizes on react"
-            body="reactjs is the best library for learning front end web"
-          />
-        </main>
-      </div>
-    )
-  }
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle
+          title="sdg announces hackathon!"
+          body="sdg announces the 2020 summer hackathon. join us for an exciting weekend"
+        />
+        <NewsArticle
+          title="student graduation is right around the corner"
+          body="our next cohort of students will be graduating in just over a week."
+        />
+        <NewsArticle
+          title="sdg standardizes on react"
+          body="reactjs is the best library for learning front end web"
+        />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -717,22 +718,20 @@ Since we now have an array of the `<NewsArticle/>` we can simply place them
 where we want them in place of the hardcoded data.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    const newsArticlesFromData = articles.map(article => (
-      <NewsArticle title={article.title} body={article.body} />
-    ))
+function App() {
+  const newsArticlesFromData = articles.map(article => (
+    <NewsArticle title={article.title} body={article.body} />
+  ))
 
-    return (
-      <div className="all-main-content">
-        <main>{newsArticlesFromData}</main>
-      </div>
-    )
-  }
+  return (
+    <div className="all-main-content">
+      <main>{newsArticlesFromData}</main>
+    </div>
+  )
 }
 
 export default App
@@ -751,26 +750,24 @@ is important to know.
 > (i.e. that same key can be in another array-to-component map in another part
 > of the app, but must be unique for this array)
 
-Well, now it is handy that we had that `id` attribute of our JSON objects! We
-will us that `id` as out key!
+Wasn't it fortunte that we ensured our JSON objects had that `id` attribute! We
+will us that `id` as our key!
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    const newsArticlesFromData = articles.map(article => (
-      <NewsArticle key={article.id} title={article.title} body={article.body} />
-    ))
+function App() {
+  const newsArticlesFromData = articles.map(article => (
+    <NewsArticle key={article.id} title={article.title} body={article.body} />
+  ))
 
-    return (
-      <div className="all-main-content">
-        <main>{newsArticlesFromData}</main>
-      </div>
-    )
-  }
+  return (
+    <div className="all-main-content">
+      <main>{newsArticlesFromData}</main>
+    </div>
+  )
 }
 
 export default App
