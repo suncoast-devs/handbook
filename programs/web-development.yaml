@@ -72,7 +72,6 @@ modules:
       - js-dom
       - js-event-loop
       - js-ui-as-state
-      - js-classes
       - js-modules
       - react-intro
       - react-assets

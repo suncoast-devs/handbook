@@ -27,17 +27,15 @@ Theme: Next, 1
 <button>Increment</button>
 ```
 
-```js
+```typescript
 let counter = 0
 
-function main() {
-  document.querySelector('button').addEventListener('click', function (event) {
-    counter++
+document.querySelector('button').addEventListener('click', function (event) {
+  counter++
 
-    const counterElement = document.querySelector('p')
-    counterElement.textContent = counter
-  })
-}
+  const counterElement = document.querySelector('p')
+  counterElement.textContent = counter
+})
 ```
 
 ---
@@ -54,12 +52,12 @@ In the example we are using a _local_ variable to track the _state_ of the count
 
 ## Empty HTML
 
-```js
+```typescript
 let counter = 0
 
 function render() {
   const html = `
-  <p>0</p>
+  <p>${counter}</p>
   <button>Increment</button>
   `
 
@@ -74,9 +72,7 @@ function render() {
   })
 }
 
-function main() {
-  render()
-}
+render()
 ```
 
 ---
@@ -93,12 +89,16 @@ _Every_ time we update `counter` we _repaint_ the entire user interface.
 
 # Scoreboard
 
+Take contents of the `<body>`
+
 [HTML](https://raw.githubusercontent.com/suncoast-devs/scoreboard-template/master/index.html)
 [CSS](https://raw.githubusercontent.com/suncoast-devs/scoreboard-template/master/screen.css)
 
 ---
 
-```js
+```typescript
+import './style.css'
+
 function render() {
   const html = `
 <header><h1>My Score Board</h1></header>
@@ -124,13 +124,15 @@ function render() {
 
   // Setup event listeners here
 }
+
+render()
 ```
 
 ---
 
 # Setup state
 
-```js
+```typescript
 let teamOneName = 'Team 1'
 let teamOneScore = 0
 
@@ -148,12 +150,18 @@ Change static text such as:
 
 ```html
 <h2>Team 1</h2>
+<h3>0</h3>
+<fieldset><input type="text" placeholder="Name" /></fieldset>
 ```
 
 to
 
 ```html
 <h2>${teamOneName}</h2>
+<h3>${teamOneScore}</h3>
+<fieldset>
+  <input type="text" placeholder="Name" value="${teamOneName}" />
+</fieldset>
 ```
 
 ---
@@ -168,50 +176,68 @@ to
 
 The event listening functions should update the appropriate variable and call `render`
 
-````js
-document.querySelector('.team1 .add').addEventListener('click', function (event) {
+```typescript
+document.querySelector('.team1 .add')?.addEventListener('click', function () {
   teamOneScore++
   render()
 })
-document.querySelector('.team1 .subtract').addEventListener('click', function (event) {
-  teamOneScore--
-  render()
-})
-document.querySelector('.team1 input').addEventListener('input', function (event) {
-  teamOneName = event.target.value
-  render()
-})
+document
+  .querySelector('.team1 .subtract')
+  ?.addEventListener('click', function () {
+    teamOneScore--
+    render()
+  })
+document
+  .querySelector('.team1 input')
+  ?.addEventListener('input', function (event) {
+    const target = event.target as HTMLInputElement
 
-document.querySelector('.team2 .add').addEventListener('click', function (event) {
+    teamOneName = target?.value
+    render()
+  })
+
+document.querySelector('.team2 .add')?.addEventListener('click', function () {
   teamTwoScore++
   render()
 })
-document.querySelector('.team2 .subtract').addEventListener('click', function (event) {
-  teamTwoScore--
-  render()
-})
-document.querySelector('.team2 input').addEventListener('input', function (event) {
-  teamTwoName = event.target.value
-  render()
-})
+document
+  .querySelector('.team2 .subtract')
+  ?.addEventListener('click', function () {
+    teamTwoScore--
+    render()
+  })
+document
+  .querySelector('.team2 input')
+  ?.addEventListener('input', function (event) {
+    const target = event.target as HTMLInputElement
+
+    teamTwoName = target?.value
+    render()
+  })
 ```
+
 ---
 
 [.column]
 
 ## Change state to be an object for each team
 
-```js
-const teamOne = {
+```typescript
+interface Team {
+  name: string
+  score: number
+}
+
+const teamOne: Team = {
   name: 'Team 1',
   score: 0,
 }
 
-const teamTwo = {
+const teamTwo: Team = {
   name: 'Team 2',
   score: 0,
 }
-````
+```
 
 [.column]
 
@@ -243,7 +269,7 @@ to
 
 # Render
 
-```js
+```typescript
 function renderTeam(team) {
   const html = `
   <section class="team${team.id}">
@@ -268,26 +294,44 @@ function renderTeam(team) {
 
 # Listeners
 
-```js
-function setupListeners(team) {
+```typescript
+function setupListeners(team: Team) {
   document
     .querySelector(`.team${team.id} .add`)
-    .addEventListener('click', function (event) {
+    ?.addEventListener('click', function () {
       team.score++
       render()
     })
   document
     .querySelector(`.team${team.id} .subtract`)
-    .addEventListener('click', function (event) {
+    ?.addEventListener('click', function () {
       team.score--
       render()
     })
   document
     .querySelector(`.team${team.id} input`)
-    .addEventListener('input', function (event) {
-      team.name = event.target.value
+    ?.addEventListener('input', function (event) {
+      const target = event.target as HTMLInputElement
+      team.name = target?.value
       render()
     })
+}
+```
+
+---
+
+```typescript
+function render() {
+  const html = `
+<header><h1>My Score Board</h1></header>
+<main>
+${renderTeam(teamOne)}
+${renderTeam(teamTwo)}
+</main>`
+
+  document.body.innerHTML = html
+  setupListeners(teamOne)
+  setupListeners(teamTwo)
 }
 ```
 
@@ -307,8 +351,8 @@ function setupListeners(team) {
 
 # State
 
-```js
-const teams = [
+```typescript
+const teams: Team[] = [
   {
     id: 1,
     name: 'Team 1',
@@ -327,22 +371,24 @@ const teams = [
 
 # Render
 
-```js
+```typescript
 function render() {
   const html = `
 <header>
   <h1>My Score Board</h1>
 </header>
 <main>
-${teams.map(function (team) {
-  return renderTeam(team)
-}.join(''))}
+${teams
+  .map(function (team: Team) {
+    return renderTeam(team)
+  })
+  .join('')}
 </main>
 `
 
   document.body.innerHTML = html
 
-  teams.forEach(function (team) {
+  teams.forEach(function (team: Team) {
     setupListeners(team)
   })
 }
@@ -352,7 +398,7 @@ ${teams.map(function (team) {
 
 # Add more teams!
 
-```js
+```typescript
   {
     id: 3,
     name: 'Team 3',
@@ -386,11 +432,8 @@ footer button {
 
 [.column]
 
-<!-- prettier-ignore -->
-```js
-document
-.querySelector('button')
-.addEventListener('click', function (event) {
+```typescript
+document.querySelector('button')?.addEventListener('click', function (event) {
   // Reset the teams
   teams = [
     { id: 1, name: 'Team 1', score: 0 },
