@@ -255,6 +255,24 @@ you use to login to your Mac, or unlock the screen.
 > without any feedback. If you get the password wrong the installation process
 > will let you know and you can try again.
 
+## Follow up
+
+```shell
+for BREW in /opt/homebrew /usr/local; do
+  if [[ -f "${BREW}/bin/brew" ]]; then
+    HOMEBREW_PREFIX=${BREW}
+  fi
+done
+for PROFILE in "$HOME/.bash_profile" "$HOME/.zprofile" "$HOME/.profile"; do
+  if [[ -f $PROFILE ]]; then
+    "${HOMEBREW_PREFIX}/bin/brew" shellenv >> ${PROFILE}
+    eval "$(${HOMEBREW_PREFIX}/bin/brew shellenv)"
+  fi
+done
+```
+
+<!-- If the computer says `Run these two commands in your terminal`, please follow the instructions it provides you. -->
+
 </OperatingSystemSwitch>
 
 <OperatingSystemSwitch allowedOperatingSystems={['Windows']}>
@@ -487,9 +505,9 @@ To read about these extensions:
 
 ## Configure Visual Studio Code
 
-In VS Code go to the "View" menu and select the menu item "Command Pallete". Then
-type `Open Settings JSON` and select option that does _NOT_ mention "Default" or
-"Workspace"
+In VS Code go to the "View" menu and select the menu item "Command Pallete".
+Then type `Open Settings JSON` and select option that does _NOT_ mention
+"Default" or "Workspace"
 
 ![](./assets/open-settings.png)
 

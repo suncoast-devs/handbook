@@ -72,6 +72,20 @@ dotnet new --install SDG.templates.Web.API
 dotnet new --install SDG.templates.Web.React
 ```
 
+<OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
+
+### Add dotnet tools to path
+
+```shell
+for PROFILE in "$HOME/.bash_profile" "$HOME/.zprofile" "$HOME/.profile"; do
+  if [[ -f $PROFILE ]]; then
+    echo 'export PATH=$PATH:~/.dotnet/tools' >> ${PROFILE}
+  fi
+done
+```
+
+</OperatingSystemSwitch>
+
 ### Set dotnet locally to "Development Mode"
 
 In a Terminal window:
