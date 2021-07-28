@@ -12,8 +12,12 @@ You could define a prototype like this:
 
 ```javascript
 function Dog() {
-  this.bark = function() { return 'bark' }
-  this.eat = function() { return 'mmmmmm' }
+  this.bark = function () {
+    return 'bark'
+  }
+  this.eat = function () {
+    return 'mmmmmm'
+  }
 }
 ```
 
@@ -145,7 +149,7 @@ a **subclass** of `Dog` that has a unique `bark` method.
 ```javascript
 class LoudDog extends Dog {
   bark() {
-    return `${this.name.toUpperCase(0)} SAYS BARK!!!!!`
+    return `${this.name.toUpperCase()} SAYS BARK!!!!!`
   }
 
   yell() {
@@ -174,7 +178,7 @@ class LoudDog extends Dog {
   }
 
   bark() {
-    return `${this.name.toUpperCase(0)} SAYS BARK!!!!!`
+    return `${this.name} SAYS BARK!!!!!`
   }
 
   yell() {

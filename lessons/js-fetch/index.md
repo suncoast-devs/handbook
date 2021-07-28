@@ -100,7 +100,7 @@ So our `fetch` call above becomes:
 async function countries() {
   const response = await fetch('https://restcountries.eu/rest/v2/all')
 
-  if (response.code === 200) {
+  if (response.ok) {
     const json = await response.json()
     console.log(json)
   }
@@ -137,7 +137,7 @@ async function createOneListItem() {
     }
   )
 
-  if (response.code === 201) {
+  if (response.ok) {
     // Process the response
     const json = response.json()
   }

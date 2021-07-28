@@ -25,9 +25,9 @@ var restaurant = await _context.Restaurants.
                                     Where(restaurant => restaurant.Id == id).FirstOrDefaultAsync();
 ```
 
-We should update the `seeds.sql` to specify a `UserId` for each of the reviews.
-We'll give it a value of `1` even though we don't have any `Users` -- whatever
-user we create first will get those reviews.
+We should update the `exampledata.sql` to specify a `UserId` for each of the
+reviews. We'll give it a value of `1` even though we don't have any `Users` --
+whatever user we create first will get those reviews.
 
 ```sql
 -- Ensure we truncate the table and restart the identity so our Id column starts at 1 each time

@@ -100,7 +100,7 @@ your sample data.
 Save this file in the `Models` directory.
 
 ```sql
-TRUNCATE TABLE "Restaurants";
+TRUNCATE TABLE "Restaurants" RESTART IDENTITY;
 
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone") VALUES ('Thoughtbeat', 'Inverse zero administration benchmark', '07 Meadow Vale Drive', '314-651-9791');
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone") VALUES ('Dabtype', 'Organized stable firmware', '7 Miller Park', '523-760-6681');

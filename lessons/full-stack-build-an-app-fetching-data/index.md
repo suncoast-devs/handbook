@@ -76,7 +76,7 @@ function RestaurantList() {
     async function loadRestaurants() {
       const response = await fetch('/api/restaurants')
 
-      if (response.code === 200) {
+      if (response.ok) {
         const json = await response.json()
 
         setRestaurants(json)

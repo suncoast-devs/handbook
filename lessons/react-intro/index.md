@@ -53,7 +53,7 @@ the most documentation help.
 
 ## What does a Component look like
 
-The two rules of a React component are:
+The rules of a React component are:
 
 - It must `extend React.Component`
 - It must have a `render()` method that returns JSX
@@ -161,9 +161,7 @@ can help simplify our code.
       <h2 className="article-title">
         Student Graduation is Right Around the Corner
       </h2>
-      <p>
-        Our next cohort of students will be graduating in just over a week.
-      </p>
+      <p>Our next cohort of students will be graduating in just over a week.</p>
       <a class="read-more" href="#here">
         read more about Student Graduation is Right Around the Corner
       </a>
@@ -311,7 +309,9 @@ This line tells the script we are going to use `React` and it activates the
 Next, we will make our component:
 
 ```javascript
-export class NewsArticle extends React.Component {}
+export class NewsArticle extends React.Component {
+  // code here
+}
 ```
 
 the `export` at the beginning of that line, tells JavaScript we wish to share
@@ -348,9 +348,7 @@ Finally, we can add this element to our `render()` method. Let's insert it right
 inside the `<main>`
 
 ```html
-<main>
-  <NewsArticle />
-</main>
+<NewsArticle />
 ```
 
 When reloading the browser we should see the `<div>Something</div>` in our

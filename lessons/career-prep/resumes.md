@@ -13,7 +13,7 @@ Giving employers and recruiters a method for contacting you is vital. You want t
 ### Your Name
 Use your full professional name; this is the name that your application is filed under and used when verifying information about you.
 
-If you have a preferred name, it is recommended you still use your full name, but it ok to add your preferred name in parathesis if you choose —for example, Kathlyn (Kathy) Harrison.
+If you have a preferred name, it is recommended you still use your full name, but it ok to add your preferred name in parentheses if you choose —for example, Kathlyn (Kathy) Harrison.
 
 ### Email
 

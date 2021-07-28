@@ -12,7 +12,7 @@ theme: Next, 1
 
 - Initially to make web pages "interactive".
 - Is the lingua franca of the front-end web, the default programming language.
-- Has extended to the server side via implementations like Node.js
+- Has extended to the server-side via implementations like Node.js
 - Showing up in more places like embedded environments.
 
 ---
@@ -36,7 +36,7 @@ theme: Next, 1
 
 Like C# a JavaScript program is composed of a sequence of statements.
 
-Like a C# program these statements can be ended with a semicolon, `;`. However these are _optional_ in JavaScript and we will code without them.
+Like a C# program, these statements may end with a semicolon, `;`. However, these are _optional_ in JavaScript, and we will code without them.
 
 Comments are the same as in C#, single lines with `//` and multiple lines with `/*` and `*/`.
 
@@ -86,7 +86,7 @@ Like `C#` we can declare literal values.
 
 # Variables
 
-Must start with a letter (upper or lower), an underscore, or dollar sign. After the first character variable names may also have digits in the name.
+Must start with a letter (upper or lower), an underscore, or a dollar sign. Variable names may also have digits in the name after the first character.
 
 Standard to use `camelCase` for our variable names.
 
@@ -110,11 +110,9 @@ Standard to use `camelCase` for our variable names.
 
 `undeclared global` variables are highly discouraged as they can often lead to unexpected behavior.
 
-In our coding we will always use `var`, `let`, or `const`.
+We will always use `let` or `const` in our coding.
 
-In fact, in modern JavaScript, and at SDG, we will restrict our usage to `let` and `const`.
-
-When looking at code on the web, e.g. StackOverflow, and blog posts, you will still see a lot of `var`.
+When looking at code on the web, e.g., StackOverflow, and blog posts, you will still see `var`.
 
 ---
 
@@ -156,16 +154,16 @@ score = score + 1
 
 `let` and `const` are considered `block` scope.
 
-That is they are valid and accessible inside the current block. A block is:
+That is, they are valid and accessible inside the current block. A block is:
 
-- A pair of `{ }` which we will see for functions and statements such as `if`, `while`, etc.
+- A pair of `{ }` which we will see for functions and statements such as `if`, `while`, `switch`, and others.
 - The source file they are in if there is no current block.
 
 ---
 
 # Undefined variables
 
-After declaring a variable but before assigning it a value, the variable will contain a special, but confusing, value known as `undefined`
+After declaring a variable but before assigning it a value, the variable will contain a special but confusing, value known as `undefined`
 
 ```javascript
 let name // name contains 'undefined'
@@ -177,7 +175,7 @@ name = 'Jane' // name now contains the value 'Jane'
 
 # Good variable hygiene
 
-Follow these rules and you'll do well:
+Follow these rules, and you'll do well:
 
 - Only use `const` and `let`.
 - Use `const` unless you have a **good** reason to use `let`
@@ -221,7 +219,7 @@ let y = 42 + ' is the answer' // "42 is the answer"
 
 ---
 
-# Amazing right?
+# Amazing, right?
 
 # ... not so fast!
 
@@ -253,7 +251,7 @@ const message = `Congratulations, ${answer} is correct. You have ${score} points
 
 Similar to other languages as a combination of state and behavior.
 
-In JavaScript, an object is a standalone entity, with properties and type. Compare it with a cup, for example. A cup is an object, with properties. A cup has a color, a design, weight, a material it is made of, etc. The same way, JavaScript objects can have properties, which define their characteristics.
+In JavaScript, an object is a standalone entity with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, and a material. In the same way, JavaScript objects can have properties, which define their characteristics.
 
 ---
 
@@ -261,9 +259,9 @@ In JavaScript, an object is a standalone entity, with properties and type. Compa
 
 A JavaScript object has properties associated with it.
 
-A property of an object can be explained as a variable that is attached to the object.
+A property of an object is a variable that is attached to the object.
 
-Object properties are basically the same as ordinary JavaScript variables, except for the attachment to objects.
+Object properties are the same as ordinary JavaScript variables, except for the attachment to objects.
 
 The properties of an object define the characteristics of the object.
 
@@ -285,7 +283,7 @@ objectName.propertyName
 
 [.column]
 
-Like all JavaScript variables, both the object name (which could be a normal variable) and property name are case sensitive.
+Like all JavaScript variables, both the object name (which could be a standard variable) and property name are case-sensitive.
 
 You can define a property by assigning it a value.
 
@@ -304,7 +302,7 @@ myCar.year = 1969
 
 # Object Initializer
 
-The previous example could also be written using an object initializer, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}):
+The previous example could also use an object initializer, which is a comma-delimited list of zero or more pairs of property names and associated values of an object, enclosed in curly braces ({}):
 
 ```javascript
 const myCar = {
@@ -346,9 +344,9 @@ myCar['year'] = 1969
 
 # Why?
 
-An object property name can be any valid JavaScript string, or anything that can be converted to a string, including the empty string.
+An object property name can be any valid JavaScript string or anything convertible into a string, including the empty string.
 
-> However, any property name that is not a valid JavaScript identifier (for example, a property name that has a space or a hyphen, or that starts with a number) can only be accessed using the square bracket notation.
+> However, any property name that is not a valid JavaScript identifier (for example, a property name with space or hyphens, or that starts with a number) can only use the square bracket notation.
 
 ---
 
@@ -360,7 +358,7 @@ An object property name can be any valid JavaScript string, or anything that can
 
 # Arrays
 
-JavaScript also has an array type. JavaScript arrays are more flexible than C#'s and are more akin to `List<>` in their flexibility. JavaScript arrays also differ from `C#` arrays in that they can store values of different types.
+JavaScript also has an array type. JavaScript arrays are more flexible than C#'s and are more akin to `List<>` in their flexibility. JavaScript arrays also differ from `C#` arrays as JavaScript arrays can store values of different types.
 
 There are three ways to declare an array:
 
@@ -381,7 +379,7 @@ let arrayWithSevenEmptyElements = new Array(7)
 let arrayWithSevenEmptyElements = Array(7)
 ```
 
-For this reason we typically use the `literal` form.
+For this reason, we typically use the `literal` form.
 
 ---
 
@@ -410,7 +408,7 @@ employees[2] = 'August West'
 
 # Populating an array
 
-We can set elements of an array even if they are not next to each other. JavaScript will fill in the elements inbetween with empty items
+We can set elements of an array even if they are not next to each other. JavaScript will fill in the elements in between with empty items.
 
 [.column]
 
@@ -481,7 +479,7 @@ For more details on how to manipulate arrays, including adding and removing elem
 
 # Control flow
 
-Control flow in JavaScript is nearly identical to `C#` in that our code is comprised of a sequential set of statements that comprises a block of code:
+Control flow in JavaScript is nearly identical to `C#` in that our code consists of a sequential set of statements that comprises a block of code:
 
 ```javascript
 {
@@ -542,13 +540,13 @@ if (score == 98) {
 
 ---
 
-# `==` doesn't work like you might expect
+# `==` doesn't work as you might expect
 
 It doesn't mean `is exactly` as we've seen in a language like `C#`
 
 It means `is this thing kinda like the other thing`?
 
-It first sees if the values can be converted to a _common type_ and then be compared
+It first sees if the values can be converted to a _common type_ and then performs the comparison.
 
 ---
 
@@ -574,7 +572,7 @@ if (answer == message) {
 
 ---
 
-# So what do we do?
+# So, what do we do?
 
 ## Enter the threequal (`===`)
 
@@ -589,11 +587,11 @@ if (answer == message) {
 
 ---
 
-# `===` is usually what we want
+# `===` is typically what we want
 
 In **most** cases `===` is what you want when comparing values.
 
-There are some exceptions and we'll discuss them along the way.
+There are some exceptions, and we'll discuss them along the way.
 
 ---
 
@@ -636,11 +634,11 @@ switch (expression) {
 
 # Functions
 
-In JavaScript named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
+In JavaScript, named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
 
-Also these `functions` do not need to be in `classes`.
+Also, these `functions` do not need to be in `classes`.
 
-In fact the idea of `class`es came to JavaScript quite late.
+In fact, the idea of `class`es came to JavaScript quite late.
 
 ---
 
@@ -681,11 +679,11 @@ function square(number) {
 
 > If it quacks like a duck, and it walks like a duck, it must be a duck
 
-Our `square` method will work for any variable type that has `*` that behaves the way we like.
+Our `square` method will work for any variable type where `*`behaves the way we like.
 
 ---
 
-> With great power, comes great responsibility.
+> With great power comes great responsibility.
 
 ---
 
@@ -697,7 +695,7 @@ const answer = square(5)
 
 ---
 
-# If there is one way, more ways is better!
+# If there is one way, more ways are better!
 
 ---
 
@@ -707,7 +705,7 @@ const answer = square(5)
 
 ## Function expressions
 
-While the function declaration above is syntactically a statement, functions can also be created by a `function expression`.
+While the function declaration above is syntactically a statement, functions can also use a `function expression` style.
 
 ```javascript
 const square = function (number) {
@@ -772,17 +770,17 @@ printIt(numbers, double)
 
 Passing functions as arguments to other functions is a very powerful pattern in JavaScript. We will be using this ability quite a bit in other lessons.
 
-Allowing functions to be treated as values for variables and to be passed as arguments is one of the things that makes JavaScript a **functional**-style language.
+Functions treated as values for variables and passed as arguments are two things that make JavaScript a **functional**-style language.
 
 ---
 
 ## Scope again
 
-Variables defined inside a function cannot be accessed from anywhere outside the function, because the variable is defined only in the scope of the function.
+We cannot access variables defined inside a function from anywhere outside the function because the variable is defined only in the function's scope.
 
-However, a function can access all variables and functions defined inside the scope in which it is defined.
+However, a function can access all variables and functions defined inside its scope.
 
-A function defined inside another function can also access all variables defined in its parent function and any other variable to which the parent function has access.
+A function defined inside another function can also access all variables defined in its parent function and any other variable to which it has access.
 
 ---
 
@@ -801,7 +799,174 @@ function pies() {
     console.log(`The area of a circle with radius ${number} is ${area}`)
   }
 
-  // Here we *cannot* see the variable `area` since we are *OUTSIDE* the scope
+  // Here, we *cannot* see the variable `area` since we are *OUTSIDE* the scope
   // where it was defined.
 }
 ```
+
+---
+
+# Closures!
+
+Taking the above example another step, we'll introduce the concept of `closures`.
+
+> NOTE: This is often an interview question.
+
+---
+
+# A Closure
+
+Closures in JavaScript are a way to create a function that has access to the variables and functions defined in the outer scope.
+
+What does this mean? We can try a few examples.
+
+---
+
+## Simple example
+
+```javascript
+const variableFromOuterScope = "Wow, I'm from the outer scope"
+
+function thisFunctionActsLikeAClosure() {
+  const variableFromInnerScope = 42
+  console.log(
+    `I'm a closure! I have access to the variable "${variableFromOuterScope}" and the variable "${variableFromInnerScope}"`
+  )
+  // Have the debugger stop the program so we can look around
+  debugger
+}
+
+thisFunctionActsLikeAClosure()
+```
+
+---
+
+We'll run this program in Visual Studio, and we'll see the following output.
+
+---
+
+![fit](./assets/closure-simple.png)
+
+---
+
+[.autoscale: true]
+
+# Notice
+
+- The debugger is showing us all the variables we can see when we reach the `debugger statement and our program paused.
+- The variable `variableFromInnerScope` is shown in the list of `Local Variables`.
+- The variable `variableFromOuterScope` is listed in the section marked `closure`.
+- This is because that variable was "captured" by the function when it was defined.
+
+---
+
+## A more complex example.
+
+We can create a more complex example to demonstrate that these functions do "remember" their values.
+
+---
+
+# Doing work later but still having access to variables
+
+- Create an array of people. Each person will have a name, a birthday, and a number of milliseconds we should wait before showing their information.
+- Use javaScript's `setTimeout` to do the waiting.
+- Since `setTimeout` calls a function **later**, this will help prove that the function is really "remembering" its values.
+
+---
+
+```javaScript
+const people = [
+  {
+    name: 'Alan Turing',
+    birthDate: 'June 23, 1912',
+    delayMilliseconds: 1100,
+  },
+  {
+    name: 'Ada Lovelace',
+    birthDate: 'December 10, 1815',
+    delayMilliseconds: 1500,
+  },
+  {
+    name: 'Grace Hopper',
+    birthDate: 'December 9, 1906',
+    delayMilliseconds: 2000,
+  },
+  {
+    name: 'Donald Knuth',
+    birthDate: 'January 10, 1938',
+    delayMilliseconds: 2500,
+  },
+]
+
+```
+
+---
+
+# printPersonInfo
+
+Then we will create a method that accepts a person variable and prints out details about them.
+
+```javascript
+function printPersonInfo(person) {
+  console.log(`${person.name} was born on ${person.birthDate}`)
+}
+```
+
+---
+
+# Create a loop and use `setTimeout`
+
+- Create a loop that will call the printPersonInfo method for each person in the array.
+- Call this method from inside a call to `setTimeout`.
+- `setTimeout` creates a timer that will call the supplied function at a later time.
+- Put a `debugger` statement inside the function so we can see what is happening.
+
+---
+
+```javascript
+people.forEach(function (person) {
+  // Inside here we have access to the `person` variable here. The `person` variable is
+  // recreated each time through the forEach loop. Since it is an argument to the
+  // function, it is a new creation of that variable.
+
+  function timeoutCallback() {
+    // We also have access to the `person` variable here. The function timeoutCallback
+    // will remember all the variables that existed that it could see. This includes
+    // the `person` variable from the forEach loop.
+
+    // When the function executes **later** (via the `setTimeout`) the
+    // fact that this is a "closure" (remembers variables from the outer scope) ensures
+    // that each time we call printPersonInfo, the variable `person` will be correct.
+    debugger
+    printPersonInfo(person)
+  }
+
+  setTimeout(timeoutCallback, person.delayMilliseconds)
+})
+```
+
+---
+
+[.autoscale: true]
+
+- **TWO** closures defined.
+- One created by the `function(person)` defined inside the `forEach` loop.
+- Second closure comes from inside the `function timeoutCallback`
+- Has access to the `person` variable created by the `forEach` loop.
+- When code calls `printPersonInfo` for the first time, `person` is
+  `Alan Turing`
+- The second time, the closure captures `person` being equal to `Ada Lovelace`
+- Then `Grace Hooper`
+- Finally `Donald Knuth`.
+
+![right fit](./assets/closure-complex.gif)
+
+---
+
+# Complex, powerful, and simple
+
+- Closures are when a function grabs hold of the definition of the variables it can see when defined.
+
+- We'll be using closures, but we won't be calling it out as a special technique.
+
+# [fit] This [youtube video](https://www.youtube.com/watch?v=ePfe7nFSnAk) also gives a good overview of closures.
