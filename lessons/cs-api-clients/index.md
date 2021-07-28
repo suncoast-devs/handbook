@@ -9,13 +9,13 @@ assignments:
 In [this lesson](/lessons/misc-api-intro) we discussed the idea of an API which
 operates over the internet via HTTP.
 
-In this lesson we will build a console application that will interact with the
+In this current lesson we will build a console application that will interact with the
 `One List API` to manage todo lists. All of the information about the todo items
 will be stored in the API itself. In this way our console application will be
 considered a `client` of the API. In other lessons we will build full web page
 applications that also serve as a client that runs in our browser. We could also
 develop a mobile phone application in Android or iOS that could also access this
-API. In this way the API is _agnostic_ to it's client. As long as the client
+API. In this way the API is _agnostic_ to its client. As long as the client
 software (in this case our `C#` console application) complies with the API
 requirements it will work with the API. This is why APIs are so powerful and
 help power the modern internet.
@@ -59,9 +59,9 @@ As we mentioned in our discussion of APIs we are making these requests over the
 internet. Anyone who has visited a busy web page will notice that sending data
 to, and receiving information from, a remote service (web site, API, etc) on the
 internet is not _instantaneous_. There is always going to be some amount of
-delay as the request is constructed, sent out by our computer, traverses the
-various connections over the internet on it's way to the destination server,
-received, parsed, executed, response created, and the response traversing the
+delay as the request is constructed, sent out by our computer, it traverses the
+various connections over the internet on its way to the destination server,
+received, parsed, executed, response created, and then the response traverses the
 return path through the internet back to our computer. Due to the inherent and
 unpredictable delay in sending requests and receiving a response the code we
 write for interacting with such services should be `a-synchronous`. The term
@@ -76,7 +76,7 @@ synchronous event when our browsers give us a "wait" cursor (spinning wheel,
 etc) when a web page freezes. That does not provide a great user experience.
 
 The idea of async methods will become very common as we write code that
-interacts with remote resources such as HTTP APIs or even our own database. That
+interacts with remote resources such as HTTP APIs or even our own databases. That
 the .NET core team made these methods asynchronous allows us the flexibility to
 make our applications as responsive as possible.
 
@@ -117,7 +117,7 @@ namespace OneListClient
 }
 ```
 
-If we were look in our editor or try to run this code we will notice an error.
+If we were to look in our editor or try to run this code we will notice an error.
 
 ```
 The 'await' operator can only be used within an async method. Consider marking this method with the 'async' modifier and changing its return type to 'Task'
@@ -473,7 +473,7 @@ The task Write more about the PEDAC process of problem solving. was created on 4
 ```
 
 The `False` is not friendly so lets improve that. We can add another custom
-property which contains logic for it's `get` implementation:
+property which contains logic for its `get` implementation:
 
 ```csharp
 public string CompletedStatus
@@ -919,5 +919,5 @@ namespace OneListClient
 
 Our todo list app is really going places!
 
-Next up, lets add a little menu system that will let us get a list of items, get
-a specific item by it's ID, add an item, and remove an item.
+Next up, let's add a little menu system that will let us get a list of items, get
+a specific item by its ID, add an item, and remove an item.

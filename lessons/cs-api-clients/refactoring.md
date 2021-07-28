@@ -2,7 +2,7 @@
 title: Refactoring our One List API client
 ---
 
-There is quite a bit of repetitive code in our application. Lets take a look at
+There is quite a bit of repetitive code in our application. Let's take a look at
 places where we can share functionality.
 
 ## Extract a property for the common base URL

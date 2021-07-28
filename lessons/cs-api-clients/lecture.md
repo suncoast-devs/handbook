@@ -56,7 +56,7 @@ var responseAsString = client.GetStringAsync(
 
 ## Synchronous
 ## vs
-## Not-syncrhonous
+## Not-synchronous
 
 ^ Describe syncrhonous code.
 ^ What are the benefits of async? (multiple requests processing at once)
@@ -253,8 +253,8 @@ foreach (var item in items)
 {
     // Output some details on that item
     Console.WriteLine($"The task {item.text}" +
-    " was created on {item.created_at} and " +
-    " has a completion of: {item.complete}");
+    $" was created on {item.created_at} and " +
+    $" has a completion of: {item.complete}");
 }
 ```
 
@@ -275,7 +275,7 @@ Luckily for us that string is in a very specific format called an [ISO8601](http
 
 # Complete Status
 
-The `False` is not friendly so lets improve that. We can add another custom property which contains logic for it's `get` implementation:
+The `False` is not friendly so let's improve that. We can add another custom property which contains logic for its `get` implementation:
 
 ```csharp
 public string CompletedStatus
