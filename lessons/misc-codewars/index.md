@@ -98,7 +98,7 @@ cd ~/sdg
 Download the project template:
 
 ```shell
-degit suncoast-devs/katas-template
+degit suncoast-devs/katas-template katas-template
 ```
 
 Navigate into the template directory:
@@ -110,7 +110,11 @@ cd katas-template
 Initialize your own GitHub copy of the template:
 
 ```shell
-git init .
+git init
+```
+
+```shell
+git add .
 ```
 
 ```shell
