@@ -684,6 +684,14 @@ git config --global hub.protocol https
 
 <OperatingSystemSwitch allowedOperatingSystems={['Windows']}>
 
+## Tell git to automatically push the current branch by default
+
+This configuration tells git to push the current branch when we do `git push` without any branch name.
+
+```shell
+git config --global push.default current
+```
+
 ## Tell git how to handle line endings
 
 The way Windows and Mac handle the end of a line of code differ. The following
