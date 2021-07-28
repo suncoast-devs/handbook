@@ -83,7 +83,7 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 ## Adventure Mode
 
 - In addition to displaying the top two cards, also store these two "dealt" cards in a variable named `playerHand`. Consider what _type_ of variable `playerHand` will have to be.
-- Implement a way to deal cards into two _different_ hands.
+- Implement a way to two deal cards each into two _different_ hands.
 
 ## Epic Mode
 
