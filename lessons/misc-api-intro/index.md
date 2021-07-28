@@ -127,7 +127,7 @@ to us. One of the most interesting is
 `Content-Type: application/json; charset=utf-8`. This line indicates that the
 body of the response should be considered as JSON data. `utf-8` means use the
 `utf-8` standard for representing characters. This would allow the response to
-use a wide range of characters, such as emoji!
+use a wide range of characters, such as an emoji!
 
 Everything after the blank line following the headers is the information the
 remote API returned to us. From the LESSON ON JSON, we see that this is an array
@@ -239,7 +239,7 @@ However, it would _not_ fit a style of:
 
 - Here is a new Ron Swanson quote I want you to keep around.
 - Please remove the 4th Ron Swanson quote.
-- There is a mis-spelling in the 12th Ron Swanson quote, here is the corrected
+- There is a misspelling in the 12th Ron Swanson quote, here is the corrected
   quote.
 
 All of those requests modify information and thus a `GET` request is not
@@ -250,6 +250,6 @@ sufficient. Luckily there are other verbs we can use.
 These are the next most common verbs. They are typically used to CREATE, UPDATE,
 and DELETE information.
 
-If we need to supply additional information, say to a `POST` request to create
+If we need to supply additional information, say a `POST` request to create
 data, we will put the information in the `body` of the request. We will see some
 examples when we try a few APIs that allow us to create and modify data.

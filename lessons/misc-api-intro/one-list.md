@@ -3,14 +3,14 @@ title: A more complex API
 order: 1
 ---
 
-After seeing a simple example of an API lets take a look at a more complex
+After seeing a simple example of an API let's take a look at a more complex
 example.
 
 ## One List
 
 The One List API is an API for managing a list of todo items.
 
-Lets review the style of API access we've already seen. The first URL pattern
+Let's review the style of API access we've already seen. The first URL pattern
 will retrieve the full list of TODO items.
 
 `/items?access_token={access_token}`
