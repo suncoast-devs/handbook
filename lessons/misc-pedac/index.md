@@ -9,8 +9,8 @@ value.
 
 What adds the most value is **solving problems**. We solve these problems in the
 language of computer code. If we are hired to write a company's employee
-database we are actually being paid to figure out all of the needs they have
-involving keeping track of employees and to improve that situation through
+database we are actually being paid to figure out all of the needs they have that
+involves keeping track of employees and to improve that situation through
 solving the related problems and implementing it in code.
 
 # A formal approach for solving problems
