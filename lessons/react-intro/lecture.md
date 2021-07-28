@@ -135,7 +135,7 @@ If we rendered this without JavaScript it would be an empty page. It is thus up 
 
 # User Interface all in JavaScript
 
-In our SDG template we include an `main.tsx` -- this script loads React and a component we provide named `App`
+In our SDG template we include an `main.tsx` -- this script loads React and a component named `App`
 
 ```js
 import React from 'react'
