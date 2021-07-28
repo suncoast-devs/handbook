@@ -155,7 +155,7 @@ Begins with a `{`. Key names are in double-quotes. Followed by a colon and then 
 
 # Flexibility
 
-The flexibility of the JSON format comes from it's simplicity and lack of assumptions about the contents of our data.
+The flexibility of the JSON format comes from its simplicity and lack of assumptions about the contents of our data.
 
 You will notice that there is no data type for Dates, Times, images, or other more complex structures.
 
