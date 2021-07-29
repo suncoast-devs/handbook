@@ -7,7 +7,7 @@ We have seen several types of collections of data, including `List`,
 `SortedList`, `Stack`, `HashSet`, and `LinkedList`.
 
 So how can `C#` know how to use `foreach` and other methods that work for all of
-these different types? C# ueses interfaces.
+these different types? C# uses interfaces.
 
 # Interfaces
 
