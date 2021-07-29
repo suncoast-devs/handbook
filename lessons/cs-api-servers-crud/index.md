@@ -62,7 +62,7 @@ thanks to LINQ.
 If you have not yet followed the [lesson on SQL](/lessons/sql-intro),
 [lesson on SQL joins](/lessons/sql-joins), and the
 [lesson on EF Core](/lessons/cs-object-relational-mapping) we suggest you study
-that lesson
+those lessons.
 
 For this application, we are going to use a new template. This template should
 have been added to your environment in the
@@ -136,7 +136,7 @@ public class GameNight
 
 In our [lesson on ef core](/lessons/cs-object-relational-mapping) we didn't have
 a separate file for our `DatabaseContext` however, in most apps, it lives in
-it's own file, and you will find it in the `Models` folder here as well.
+its own file, and you will find it in the `Models` folder here as well.
 
 After this code:
 
@@ -169,7 +169,7 @@ dotnet ef migrations add AddGameNights
 ```
 
 > NOTE: The name of our migration should attempt to capture the database
-> structure change we are making. In this case we are `Add'ing the `GameNights`
+> structure change we are making. In this case we are `Adding the GameNights`
 > table.
 
 ## Next up: ensure your migration is good
@@ -285,7 +285,7 @@ namespace GameNightWithFriends.Controllers
         // This is the variable you use to have access to your database
         private readonly DatabaseContext _context;
 
-        // Constructor that recives a reference to your database context
+        // Constructor that receives a reference to your database context
         // and stores it in _context for you to use in your API methods
         public GameNightsController(DatabaseContext context)
         {
@@ -476,7 +476,7 @@ be supplied each time a request is made. The way this is supplied is through
 
 #### Constructor
 
-The constructor for our controller is called for each API request. It it also
+The constructor for our controller is called for each API request. It is also
 supplied a database context that is setup to access our database. Inside the
 constructor we simply "save a copy" of the context for our later use.
 
@@ -492,7 +492,7 @@ public GameNightsController(DatabaseContext context)
 #### GET /api/GameNights -- get all the game nights
 
 This code defines a GET method at the URL `/api/GameNights`. The method
-indicates that it returns an list of `GameNight` through this return type:
+indicates that it returns a list of `GameNight` through this return type:
 
 `Task<ActionResult<IEnumerable<GameNight>>>`
 
@@ -537,7 +537,7 @@ If we do find a value we return that value as the JSON formatted response.
 
 The return value of the function `Task<ActionResult<GameNight>>` indicates that
 this is an async function that returns a result of a `GameNight` including any
-possible response codes, such as returning a `NotFound` resuling in a 404 code.
+possible response codes, such as returning a `NotFound` resulting in a 404 code.
 
 ```csharp
 // GET: api/GameNights/5
@@ -580,7 +580,7 @@ command line matches the `id` in the body. If they do not match, we return an
 error code that this is a `BadRequest()`
 
 Next up we take the `gameNight` we parsed from the body and tell the context
-that this is an modified gameNight. We can do this since we have provided _all_
+that this is a modified gameNight. We can do this since we have provided _all_
 the attributes of a `GameNight` in the body.
 
 We attempt to `SaveChangesAsync` to the database. If for some reason, when we
@@ -670,7 +670,7 @@ public async Task<ActionResult<GameNight>> PostGameNight(GameNight gameNight)
 }
 ```
 
-#### DELETE /api/GameNights/42 -- Delete a game night given it's ID
+#### DELETE /api/GameNights/42 -- Delete a game night given its ID
 
 First we attempt to find the given game night in the database. If not found we
 simply return a `404` (NotFound) message.
@@ -712,7 +712,7 @@ public async Task<IActionResult> DeleteGameNight(int id)
 
 ### Checking for valid data
 
-Our Game Nights wouldn't be fun without fellow players. Lets add a validation to
+Our Game Nights wouldn't be fun without fellow players. Let's add a validation to
 ensure at least two players are present at each game night.
 
 To add this validation we'll update the methods that create and update a
@@ -818,7 +818,7 @@ public async Task<ActionResult<Player>> CreatePlayerForGameNight(int id, Player 
 //                                       |
 //                                       Game Night ID comes from the URL
 {
-    // First, lets find the game night (by using the ID)
+    // First, let's find the game night (by using the ID)
     var gameNight = await _context.GameNights.FindAsync(id);
 
     // If the game night doesn't exist: return a 404 Not found.
