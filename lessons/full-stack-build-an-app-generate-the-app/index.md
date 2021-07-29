@@ -36,10 +36,19 @@ You must also run those commands **from the ClientApp folder**. So before any
 
 ## Running the application
 
-You can run both the _backend_ and the _front end_ from a **single** command of
+You'll need two terminal/PowerShell to run the app. In the first window:
 
 ```shell
 dotnet watch run
+```
+
+and then in the second:
+
+(You may need to `cd` again to your project if the new terminal/PowerShell starts in your "home" folder)
+
+```shell
+cd ClientApp
+npm start
 ```
 
 ## Setting the JWT Key

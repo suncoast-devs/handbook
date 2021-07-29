@@ -168,7 +168,7 @@ async function handleNewReviewSubmit(event) {
     body: JSON.stringify(newReview),
   })
 
-  if (response.code === 201) {
+  if (response.ok) {
     setNewReview({
       ...newReview,
       body: '',

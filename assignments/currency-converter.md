@@ -15,7 +15,7 @@ For the data, you will use the API [available here](https://ratesapi.io/)
 
 ## Requirements
 
-- Use [this API documentation](https://ratesapi.io/documentation/) to build a page that allows for conversion between multiple currencies
+- Use [this API documentation](https://exchangeratesapi.io/documentation/#latestrates) to build a page that allows for conversion between multiple currencies - Note, do not specify the optional list of currencies, allow your code to dynamically determine them.
 
 ### Setup
 

@@ -271,12 +271,17 @@ var fileReader = new StreamReader("numbers.csv");
 And as we have a `CsvWriter` we also have a `CsvReader` we can use to read the CSV data.
 
 ```csharp
-var csvReader = new CsvReader(fileReader, CultureInfo.InvariantCulture);
 
-// Tell the reader not to interpret the first
-// row as a "header" since it is just the
-// first number.
-csvReader.Configuration.HasHeaderRecord = false;
+// Create a configuration that indicates this CSV file has no header
+var config = new CsvConfiguration(CultureInfo.InvariantCulture)
+{
+   // Tell the reader not to interpret the first
+   // row as a "header" since it is just the
+   // first number.
+   HasHeaderRecord = false,
+};
+
+var csvReader = new CsvReader(fileReader, config);
 ```
 
 ---

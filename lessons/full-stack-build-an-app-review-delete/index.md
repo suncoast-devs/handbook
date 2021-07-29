@@ -10,7 +10,7 @@ equals the current user id.
 
 ```jsx
 {
-  review.user.id === getUserId() && (
+  review.user.id === getUserId() ? (
     <div>
       <button
         className="small"
@@ -21,7 +21,7 @@ equals the current user id.
         Delete
       </button>
     </div>
-  )
+  ) : null
 }
 ```
 
@@ -40,7 +40,7 @@ async function handleDeleteReview(event, reviewId) {
 
   const response = await fetch(`/api/Restaurants/${id}`)
 
-  if (response.code === 200) {
+  if (response.ok) {
     const apiData = await response.json()
 
     setRestaurant(apiData)

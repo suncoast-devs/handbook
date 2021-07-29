@@ -12,6 +12,13 @@ modules:
     title: Environment Setup
     lessons:
       - setup
+  - algorithms:
+    title: Algorithmic Thinking
+    lessons:
+      - algorithms-intro
+      - algorithms-day-two
+      - algorithms-day-three
+      - algorithms-day-four
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
@@ -20,6 +27,9 @@ modules:
       - cs-commenting-code
       - cs-interacting-with-the-console
       - cs-arrays
+      - cs-dictionaries
+      - cs-queues
+      - cs-interfaces
       - cs-control-flow
       - cs-loops
       - cs-what-is-null
