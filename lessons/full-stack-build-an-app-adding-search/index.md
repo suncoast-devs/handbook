@@ -73,7 +73,7 @@ useEffect(() => {
         : `/api/Restaurants?filter=${filterText}`
 
     const response = await fetch(url)
-    if (response.code === 200) {
+    if (response.ok) {
       const json = await response.json()
 
       setRestaurants(json)
