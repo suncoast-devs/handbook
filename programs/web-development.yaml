@@ -79,6 +79,7 @@ modules:
       # react-events -- needs work
       - js-fetch
       - react-state
+      - react-state-with-fetch
       - react-state-flow
       - react-hooks
       - react-hooks-use-effect
