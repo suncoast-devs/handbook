@@ -23,7 +23,7 @@ For example, the following code defines a simple function named square:
 
 ```javascript
 function square(number) {
-  return number * number;
+  return number * number
 }
 ```
 
@@ -40,7 +40,7 @@ function actually performs the specified actions with the indicated parameters.
 For example, if you define the function square, you could call it as follows:
 
 ```javascript
-square(5);
+square(5)
 ```
 
 The preceding statement calls the function with an argument of 5. The function
@@ -55,9 +55,9 @@ could have been defined as:
 
 ```javascript
 let square = function (number) {
-  return number * number;
-};
-let x = square(4); // x gets the value 16
+  return number * number
+}
+let x = square(4) // x gets the value 16
 ```
 
 ## Functions are values of variables
@@ -71,29 +71,29 @@ functions just like any other value.
 ```javascript
 function printIt(array, func) {
   for (let index = 0; index < array.length; index++) {
-    const value = array[index];
-    const result = func(value);
+    const value = array[index]
+    const result = func(value)
 
-    console.log(`After the function we turned ${value} into ${result}`);
+    console.log(`After the function we turned ${value} into ${result}`)
   }
 }
 
 const square = function (number) {
-  return number * number;
-};
+  return number * number
+}
 
 const double = function (number) {
-  return number * 2;
-};
+  return number * 2
+}
 
-const numbers = [1, 2, 3, 4, 5];
-printIt(numbers, square);
+const numbers = [1, 2, 3, 4, 5]
+printIt(numbers, square)
 // After the function we turned 1 into 1
 // After the function we turned 2 into 4
 // After the function we turned 3 into 9
 // After the function we turned 4 into 16
 // After the function we turned 5 into 25
-printIt(numbers, double);
+printIt(numbers, double)
 // After the function we turned 1 into 2
 // After the function we turned 2 into 4
 // After the function we turned 3 into 6
@@ -121,30 +121,25 @@ function and any other variable to which the parent function has access.
 example:
 
 ```javascript
-const PI = 3.14;
-const numbers = [1, 2, 4, 8, 16];
+const PI = 3.14
+const numbers = [1, 2, 4, 8, 16]
 
 function pies() {
   // Inside this function we can "see" the variables `PI` and `numbers`
   // because we are *INSIDE* the scope where they were defined
   for (let index = 0; index < numbers.length; index++) {
-    const number = numbers[index];
+    // Inside this function we can see the variable index, number, and area.
+    const number = numbers[index]
 
-    const area = PI * number * number;
+    const area = PI * number * number
 
-    console.log(`The area of a circle with radius ${number} is ${area}`);
+    console.log(`The area of a circle with radius ${number} is ${area}`)
   }
 
   // Here we *cannot* see the variable `area` since we are *OUTSIDE* the scope
   // where it was defined.
 }
 ```
-
-> This will also come in helpful in other lessons
-
-> This ability in JavaScript is possible since functions are considered
-> `closures.` Closures are an advanced, but
-> [interesting topic](<https://en.wikipedia.org/wiki/Closure_(computer_programming)>)
 
 ## Arrow functions
 
@@ -159,12 +154,8 @@ and non-binding of this.
 In some functional patterns, shorter functions are welcome. Compare:
 
 ```
-let elements = [
-  'Hydrogen',
-  'Helium',
-  'Lithium',
-  'Beryllium'
-]
+
+let elements = [ 'Hydrogen', 'Helium', 'Lithium', 'Beryllium' ]
 
 let elementLengths1 = elements.map(function(element) { return element.length; })
 
@@ -173,6 +164,7 @@ console.log(elementLengths1) // logs [8, 6, 7, 9]
 let elementLengths2 = elements.map(element => element.length)
 
 console.log(elementLengths2); // logs [8, 6, 7, 9]
+
 ```
 
 The code for `elementLengths2` is shorter and has less code that we refer to as
@@ -180,7 +172,5 @@ _ceremony_, that is, syntax that isn't absolutely necessary.
 
 There are some other considerations where arrow functions are better and we will
 cover those in another lesson.
-
-> For now we'll prefer arrow functions over traditional function definitions.
 
 ---

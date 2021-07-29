@@ -51,7 +51,7 @@ function Counter() {
   return (
     <div>
       <p>
-        Count: {count} <button onClick={incrementCount} />
+        Count: {count} <button onClick={handleClickButton}>Click Me</button>
       </p>
     </div>
   )
@@ -531,7 +531,7 @@ async function handleCreateNewTodoItem(event) {
     { item: { text: newTodoText } }
   )
 
-  if (response.status === 200) {
+  if (response.status === 201) {
     console.log(response.data)
   }
 }
@@ -675,7 +675,7 @@ async function toggleCompleteStatus() {
       { item: { complete: false } }
     )
 
-    if (response.status === 201) {
+    if (response.status === 200) {
       console.log(response.data)
     }
   } else {
@@ -684,7 +684,7 @@ async function toggleCompleteStatus() {
       { item: { complete: true } }
     )
 
-    if (response.status === 201) {
+    if (response.status === 200) {
       console.log(response.data)
     }
   }
@@ -706,7 +706,7 @@ async function toggleCompleteStatus() {
     { item: { complete: !props.complete } }
   )
 
-  if (response.status === 201) {
+  if (response.status === 200) {
     console.log(response.data)
   }
 }

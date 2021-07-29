@@ -87,10 +87,10 @@ namespace TacoTuesday.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required("You must provide your name")]
         public string FullName { get; set; }
 
-        [Required]
+        [Required("You must provide your email")]
         public string Email { get; set; }
 
         [JsonIgnore]

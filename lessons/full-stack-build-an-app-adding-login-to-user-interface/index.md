@@ -124,8 +124,8 @@ The contents of `auth.js` give some useful client-side methods to:
 - Store the authentication info `recordAuthentication`
 - Logout
 
-Create an `auth.js` at the top level of your front end, right next to the
-`App.jsx`.
+The template added an `auth.js` at the top level of your front end, right next
+to the `App.jsx`.
 
 The contents of the `auth.js` are:
 

@@ -43,10 +43,6 @@ These steps are run _ONLY ONCE_ before you can deploy to heroku
   is unique to your project.
 - `heroku buildpacks:add suncoast-devs/dotnetcore-buildpack`
 
-> NOTE: If your main branch of code is not `master` you'll have to run the
-> command this way: `git push NAME:master` where `NAME` is the name of your
-> branch
-
 ## To Setup Secrets for Heroku
 
 Heroku stores secrets in your _environment variables_. You can change these from
@@ -72,16 +68,16 @@ heroku config:set BING_MAPS_KEY=REPLACE-THIS
 heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
 ```
 
-## `git push heroku HEAD:master`
+## `git push heroku HEAD:main`
 
 This command will push your code **JUST** to Heroku for hosting. This means when
 you make a change, you should push to GitHub as normal (e.g. `git push master`)
-and also to Heroku (e.g. `git push heroku master`).
+and also to Heroku (e.g. `git push heroku HEAD:main`).
 
 You will notice that after the typical messages you get from a `git push`, your
-terminal will show more messages from Heroku. A typical `git push heroku master`
-will look something like the following. (NOTE: The specific numbers for your
-application will be different than shown here)
+terminal will show more messages from Heroku. A typical
+`git push heroku HEAD:main` will look something like the following. (NOTE: The
+specific numbers for your application will be different than shown here)
 
 ```shell
 Enumerating objects: 377, done.
@@ -136,11 +132,7 @@ how to `Push a copy of your local database to Heroku`
 
 ## To Deploy Updates to Heroku
 
-- `git push heroku HEAD:master`
-
-> NOTE: If your main branch of code is not `master`, you'll have to run the
-> command this way: `git push NAME:master` where `NAME` is the name of your
-> branch
+- `git push heroku HEAD:main`
 
 ## To Open Your Deployed Application
 

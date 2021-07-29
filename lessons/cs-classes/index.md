@@ -1,5 +1,5 @@
 ---
-title: Object-Oriented Programing in C#
+title: Object-Oriented Programming in C#
 assignments:
   - cs-blackjack
 ---
@@ -63,7 +63,7 @@ namespace EmployeeDatabase
       }
     }
 
-    static int computeMonthlySalaryFromYearly(int yearlySalary)
+    static int ComputeMonthlySalaryFromYearly(int yearlySalary)
     {
       return yearlySalary / 12;
     }
@@ -78,7 +78,7 @@ namespace EmployeeDatabase
 
       int salary = PromptForInteger("What is your yearly salary (in dollars)? ");
 
-      int monthlySalary = computeMonthlySalaryFromYearly(salary);
+      int monthlySalary = ComputeMonthlySalaryFromYearly(salary);
 
       Console.WriteLine($"Hello, {name} you make {monthlySalary} dollars per month.");
     }
@@ -93,12 +93,12 @@ approach would be to add a second set of variables such as:
 var name1 = PromptForString("What is your name? ");
 int department1 = PromptForInteger("What is your department number? ");
 int salary1 = PromptForInteger("What is your yearly salary (in dollars)? ");
-int monthlySalary1 = computeMonthlySalaryFromYearly(salary1);
+int monthlySalary1 = ComputeMonthlySalaryFromYearly(salary1);
 
 var name2 = PromptForString("What is your name? ");
 int department2 = PromptForInteger("What is your department number? ");
 int salary2 = PromptForInteger("What is your yearly salary (in dollars)? ");
-int monthlySalary2 = computeMonthlySalaryFromYearly(salary2);
+int monthlySalary2 = ComputeMonthlySalaryFromYearly(salary2);
 ```
 
 Or perhaps we would have some arrays, e.g. `names[]` and `departments[]`.
@@ -146,8 +146,8 @@ have their own specific values for each of these attributes.
 So, if we were able to group these attributes (a process we call
 `encapsulation`) then we would be able to keep track of them together!
 
-This is one of the benefits of the idea of a `class`. The ability to group,
-encapsulate, related data together. Often these attributes represent real-world
+This is one of the benefits of the idea of a `class`, the ability to group
+(encapsulate) related data together. Often these attributes represent real-world
 attributes of the types of things we are modeling in the computer. Here we are
 encapsulating the various attributes of an _employee_ we might want to track in
 an employee database.
@@ -209,7 +209,7 @@ class Employee
       Name = newName;
       Department = newDepartment;
       Salary = newSalary;
-      MonthlySalary = newSalary;
+      MonthlySalary = newMonthlySalary;
   }
 }
 ```
@@ -254,7 +254,7 @@ We could use this new class to create two new employees:
 
 ```csharp
 var graceHopper = new Employee("Grace Hopper", 100, 240000, 20000);
-Console.WriteLine(adaLovelace.Department); // Will show 100
+Console.WriteLine(graceHopper.Department); // Will show 100
 
 var elonMusk = new Employee("Elon Musk", 42, 120000, 10000);
 Console.WriteLine(elonMusk.Department); // Will show 42
@@ -378,7 +378,7 @@ for details.
 Now that we have this `class` definition let us use it inside our application.
 
 We can think of the `class` we created as a template used to create new
-_instances_ of itself. That is, it can create new variables who's type is an
+_instances_ of itself. That is, it can create new variables whose type is an
 `Employee` and it has the properties we defined. We call these _instances_
 `objects`.
 
@@ -491,7 +491,7 @@ var secondEmployee = new Employee {
   Department = 100,
   Salary = 240000,
   MonthlySalary = 20000
-}
+};
 ```
 
 You will see that we replaced the `()` with a pair of `{ }` and inside we have a
@@ -579,7 +579,7 @@ _set_ and _get_ those properties when needed.
 So far, we have seen how `class`es:
 
 - Store data, which we call `state`, in attributes we call `properties`.
-- `Class`es are the template that describes what data
+- `Class`es are the template that describes what data is used
 - `Object`s are _instances_ of a class.
 - `Class`es are like cookie cutters, where `object`s are like the cookies
 
@@ -589,7 +589,7 @@ if the `Employee` object could just do that work for us!
 
 ## Behavior with methods
 
-In our Employee Database we have a method `computeMonthlySalaryFromYearly` that
+In our Employee Database we have a method `ComputeMonthlySalaryFromYearly` that
 accesses a property of our object and does some math to compute a monthly
 salary. We also have a _property_ named `MonthlySalary`. However, any time we
 change the `Salary` we would like to be able to ask for the `MonthlySalary` to
@@ -613,7 +613,7 @@ class Employee
 
 The definition of this method should seem familiar to our previous encounter
 with methods. However, you will notice we no longer have the parameters to the
-method as we do for `computeMonthySalaryFromYearly`. When defining a class's
+method as we do for `ComputeMonthySalaryFromYearly`. When defining a class's
 methods, we have access to all the other attributes of the specific object!
 
 That is, any method on a class, when called for a specific object, can ask "Who
@@ -733,7 +733,7 @@ namespace EmployeeDatabase
       }
     }
 
-    static int computeMonthlySalaryFromYearly(int yearlySalary)
+    static int ComputeMonthlySalaryFromYearly(int yearlySalary)
     {
       return yearlySalary / 12;
     }

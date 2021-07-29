@@ -19,7 +19,7 @@ For this we can use **`comments`** in our code.
 var shipName = "Heart of Gold";
 
 // We need to know how many characters there are in order to center the text on the screen.
-var characterCount = shipName.length;
+var characterCount = shipName.Length;
 
 /*
   Build a Turboencabulator
@@ -30,6 +30,9 @@ var characterCount = shipName.length;
   fan. The latter consisted simply of six hydrocoptic marzlevanes, so
   fitted to the ambifacient lunar waneshaft that side fumbling was
   effectively prevented.
+
+  See: https://www.youtube.com/watch?v=Ac7G7xOG2Ag
+  See: https://en.wikipedia.org/wiki/Turboencabulator
 */
 ```
 

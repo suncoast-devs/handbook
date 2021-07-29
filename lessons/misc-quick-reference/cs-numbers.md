@@ -183,7 +183,7 @@ Wrapped value is 4 since index is 19
 
 ### Conversions
 
-## `int.Parse("42")`
+## Converting strings to integers with `int.Parse("42")`
 
 Attempts to convert the given string into an `int` value. The method also takes
 additional arguments that allow for different formats of the string, e.g.
@@ -192,9 +192,17 @@ allowing it to parse numbers with currency symbols like "\$42".
 If the string _cannot_ be parsed into an integer then an **exception** is
 thrown, FormatException.
 
+Example:
+
+```csharp
+int parsedNumber = int.Parse(someStringVariable);
+```
+
 [MSDN Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse?view=netcore-3.1)
 
-## `bool success = int.TryParse("42", out result)`
+## COnverting strings to integers with success/failure
+
+`bool success = int.TryParse("42", out result)`
 
 Much like the `int.Parse` method except this will return a boolean (true/false)
 if the number is parsable. If the number is parsable, and the method returns
@@ -219,7 +227,9 @@ else
 
 [MSDN Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.int32.tryparse?view=netcore-3.1)
 
-## `double.Parse` and `double.TryParse`
+## Converting strings to doubles -
+
+`double.Parse` and `double.TryParse`
 
 These work exactly like their `int` counterparts yet they work with doubles.
 

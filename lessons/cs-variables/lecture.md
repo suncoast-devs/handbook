@@ -261,6 +261,36 @@ var worldIsFlat = false;
 
 ---
 
+# Math
+
+Addition, subtraction, multiplication, division, remainder (modulus)
+
+```C#
+var firstNumber = 42;
+var secondNumber = 12;
+
+var sum = firstNumber + secondNumber;
+var difference = secondNumber - firstNumber;
+var product = firstNumber * secondNumber;
+var division = firstNumber / secondNumber;
+var remainder = firstNumber % secondNumber;
+```
+
+---
+
+# PEMDAS
+
+[PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics)
+
+```C#
+var answer = 2 + 3 * 4; // 14
+var answer2 = (2 + 3) * 4; // 19
+```
+
+> NOTE: There are other order of operations in code. We may see some of those later.
+
+---
+
 # Strings have extra features!
 
 <br />
