@@ -12,3 +12,11 @@ order: 1000
 | `Response Code`               | A number representing a kind of success or failure                                                                                                                                                                                     |
 | `Response Headers`            | A series of key/value pairs containing additional details about the response. Can indicate the kind of data being returned, - details about how the server completed the request, or cookie values the client should store.            |
 | `Response Body`               | The actual data returned to the client for processing                                                                                                                                                                                  |
+| API (Application Programming Interface) | ---------- |
+| URL Parameter | ---------- |
+| URL Query Parameter | ---------- |
+| GET | ---------- |
+| PUT | ---------- |
+| POST | ---------- |
+| DELETE | ---------- |
+| Insomnia | ---------- |

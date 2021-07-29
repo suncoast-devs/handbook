@@ -37,7 +37,7 @@ are a few things to notice:
    calling a method to handle the user's choice.
 2. We've moved the code for getting a list of all the items to a method
    `ShowAllItems` - Notice we need to _pass_ it the `token` so we have access to
-   it. Also notice that we have to tell the `Main` method to `await` it's
+   it. Also notice that we have to tell the `Main` method to `await` its
    completion since it is now marked `async.
 3. The `client` variable is also moved into `ShowAllItems`.
 
@@ -176,7 +176,7 @@ Then we will make a new method to handle `GetOneItem`
 static async Task GetOneItem(string token, int id)
 ```
 
-Notice that this method requires two pieces of information in order to do it's
+Notice that this method requires two pieces of information in order to do its
 work. First it needs the list's `token`, and second it requires the _integer_
 `id` of the specific item we are looking for.
 
@@ -213,7 +213,7 @@ the _endpoint_ for getting a single item. Next our `DeserializeAsync` has been
 modified from `<List<Item>>` to simply `<Item>`. This is because the API should
 only be giving us back a single item, not a `List`. Correspondingly we name the
 resulting variable `item` as a reminder that this is a single item and not a
-list. NOTE, this is only _convetion_ as we could call the variable anything we
+list. NOTE, this is only _convention_ as we could call the variable anything we
 like. Finally when we create our fancy table, we do not iterate since we only
 have the single `item` variable to add.
 
@@ -530,17 +530,17 @@ Next up we start to create the JSON body we are going to send. Since this is a
 `POST` endpoint we need to send the `Item` (in the variable `newItem`) as part
 of the body. We first _serialize_ the `Item` into a JSON. The `PostAsync` method
 only knows how to send `HttpContent`-like objects that have the content of the
-body along with headers that indcate the type of data being sent. Thus we
+body along with headers that indicate the type of data being sent. Thus we
 convert the JSON body into a "StringContent" object and add a _header_ that
 marks the body as JSON content.
 
 Finally we can `await client.PostAsync(url, jsonBodyAsContent)` to send the
 `POST` request to the URL.
 
-Next we ask the `response` for it's `Content` and get a _stream_ from it which
+Next we ask the `response` for its `Content` and get a _stream_ from it which
 we then send to our friend the _deserializer_ who in turn gives us an `Item`.
 This is the `item` that is being returned from the API. We get this item so that
-we can show the newly created item to the user (which would include it's ID,
+we can show the newly created item to the user (which would include its ID,
 creation time, etc.)
 
 Using this feature would look like this:
@@ -874,7 +874,7 @@ case "D":
     break;
 ```
 
-And the implementation only needs to only send the deletion request.
+And the implementation only needs to send the deletion request.
 
 ```csharp
 static async Task DeleteOneItem(string token, int id)
