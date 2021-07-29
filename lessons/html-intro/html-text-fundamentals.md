@@ -80,7 +80,7 @@ you create such structures:
 ## Why do we need semantics?
 
 Semantics are relied on everywhere around us — we rely on previous experience to
-tell us what the function of everyday objects is; when we see something, we know
+tell us what the function of everyday objects are; when we see something, we know
 what its function will be. So, for example, we expect a red traffic light to
 mean "stop", and a green traffic light to mean "go". Things can get tricky very
 quickly if the wrong semantics are applied (do any countries use red to mean
@@ -219,7 +219,7 @@ current fourth bullet. This would look like so:
 
 ## Emphasis and importance
 
-In human language, we often emphasise certain words to alter the meaning of a
+In human language, we often emphasize certain words to alter the meaning of a
 sentence, and we often want to mark certain words as important or different in
 some way. HTML provides various semantic elements to allow us to mark up textual
 content with such effects, and in this section, we'll look at a few of the most
