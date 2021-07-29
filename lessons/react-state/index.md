@@ -254,7 +254,7 @@ Both of these approaches show that if there were **some** way to change the
 state the UI would automatically update to display the new value of the counter!
 
 > NOTE: This is an important step. For this example, it seems simple. Later we
-> will be dealing with much more complex state variables and changing the value
+> will be dealing with much morxe complex state variables and changing the value
 > to see how our component "reacts" will be more critical.
 
 # Step 4 - Connect actions
@@ -268,8 +268,8 @@ interaction. We would pass this function as an event handling function.
 In React, the event handling function is still proper. However, we will connect
 it to the event in a different way.
 
-```js
-function handleClickButton(event) {
+```typescript
+function handleClickButton(event: MouseEvent) {
   event.preventDefault()
 
   console.log('Clicked!')
@@ -335,12 +335,12 @@ For our button, we want to:
 
 That code looks like this:
 
-```js
+```typescript
 // Increment
-const newCount = count + 1
+const newCounter = counter + 1
 
 // Tell React there is a new value for the count
-setCount(newCount)
+setCounter(newCounter)
 ```
 
 > NOTE: After calling `setCount` you will see that `count` has **NOT** been
@@ -354,7 +354,7 @@ We can simplify this code when we place it in our function:
 function handleClickButton(event) {
   event.preventDefault()
 
-  setCount(count + 1)
+  setCounter(counter + 1)
 }
 ```
 
@@ -388,12 +388,56 @@ function CounterWithName() {
 
 - Step 5 - Update state
 
-### Adding more state
+# A note on types
 
-Let us say we also wanted to keep track of a person's name on the counter.
+You may have noticed that when declaring these variables we did **not** have to
+specify a type:
 
-With `hooks`, we will make two **independent** states that each track a single
-piece of information.
+```typescript
+const [counter, setCounter] = useState(0)
+```
+
+However, TypeScript knows that `counter` is an `number` and `setCounter` is a
+function that accepts a `number` as an argument.
+
+This is because the React developers provided type information for all of their
+code. They also made their code, such as `useState` able to provide type
+inference based on the **initial state** value.
+
+If we did not provide an initial state, React would **not** be able to infer the
+type. Here is an example of that type of `useState`
+
+```typescript
+const [price, setPrice] = useState()
+```
+
+In this example TypeScript will set a type of `undefined` to `price`. When we
+try to `setPrice(42)` (or any other number) we'll receive a TypeScript error
+that we cannot assign `number` to `undefined`.
+
+In the case where we do **not** provide an initial value to `useState` we
+_should_ provide a type.
+
+```typescript
+const [price, setPrice] = useState<number>()
+```
+
+In this case the type of `price` is actually `undefined | number`. That is,
+`price` can either have the value of `undefined` **OR** any `number`. This is
+very powerful but only if this is the programmers intent. If you never intend
+for `price` to `undefined` then we should disallow this by specifying an inital
+value.
+
+This is the reason that we **strongly** recommend always using an initial value
+for all of your `useState` hooks. If you _cannot_ set an initial value you must
+be consider the impact that allowing an `undefined` value in a state variable
+will have.
+
+## Adding more state
+
+What if we also wanted to keep track of a person's name on the counter? With
+`hooks`, we will make two **independent** states that each track a single piece
+of information.
 
 Separating these pieces of state has a few benefits:
 
@@ -403,7 +447,7 @@ Separating these pieces of state has a few benefits:
 2. We can more easily tell where in the code a piece of state or a state
    changing function is used.
 
-```jsx
+```tsx
 function CounterWithName() {
   const [counter, setCounter] = useState(0)
   const [name, setName] = useState('Susan')
@@ -412,8 +456,8 @@ function CounterWithName() {
     setCounter(counter + 1)
   }
 
-  function handleChangeInput(event) {
-    setName(event.target.name)
+  function handleChangeInput(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value)
   }
 
   return (
@@ -429,6 +473,17 @@ function CounterWithName() {
   )
 }
 ```
+
+# handleChangeInput
+
+In this function we need to specifically declare the `event` as a data type that
+indicates this is a `React.ChangeEvent` on an element that is an
+`HTMLInputElement`. This allows `event.target` and `event.target.value` to have
+types. Without this specific code for `event`, TypeScript cannot ensure that
+`event.target`isn't possibly`null`as well as recognize
+that`event.target.value`is a`string`
+
+# Two independent states
 
 Ah, how nice. We have independent **variables** to track our state, instead of
 chained object access (e.g. `name` vs `this.state.name`) and very simple methods

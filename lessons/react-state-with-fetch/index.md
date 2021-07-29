@@ -250,7 +250,7 @@ In this case we'll need to know the row and column of the cell so we might write
 our `handleClickCell` method like this:
 
 ```js
-function handleClickCell(row, column) {
+function handleClickCell(row: number, column: number) {
   console.log(`You clicked on row ${row} and column ${column}`)
 }
 ```
@@ -319,7 +319,7 @@ async function handleNewGame() {
     }
   )
 
-  if (response.status === 201) {
+  if (response.ok) {
     // Get the response as JSON
     const newGame = await response.json()
 
@@ -361,7 +361,7 @@ form to use with `setGame`.
 That code looks like:
 
 ```js
-async function handleClickCell(row, column) {
+async function handleClickCell(row: number, column: number) {
   // Generate the URL we need
   const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${game.id}`
 
@@ -375,7 +375,7 @@ async function handleClickCell(row, column) {
     body: JSON.stringify(body),
   })
 
-  if (response.status === 201) {
+  if (response.ok) {
     // Get the response as JSON
     const newGame = await response.json()
 
@@ -571,3 +571,112 @@ existing ones based on what we've learned about managing state.
 - Step 5c - Update the state
 
 - Step 6 - Refine dynamic nature of UI based on state data
+
+## Refining our TypeScript
+
+Notice that the `json` we are sending to `setGame` has a data type of `any`.
+This is because `response.json()` cannot know the data type it is processing.
+
+We also don't have a very flexible data type for our `game` state. Since we are
+providing an object to the initial state, this is the only structure the `game`
+will know.
+
+We need to define some types for the state if we want better type checking in
+our code.
+
+We might start with this:
+
+```typescript
+type Game = {
+  board: [
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' '],
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' '],
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' ']
+  ]
+  id: null | number
+  winner: null | string
+}
+```
+
+Here we define `board` as a two dimensional array of three rows and three
+columns where each element is either an `'X'`, an `'O'`, or a `' '`. While this
+works we can reduce the repetition by defining a `Square` type.
+
+```typescript
+type Square = 'X' | 'O' | ' '
+
+type Game = {
+  board: [
+    [Square, Square, Square],
+    [Square, Square, Square],
+    [Square, Square, Square]
+  ]
+  id: null | number
+  winner: null | string
+}
+```
+
+This is better. but we **could** go down the path even further:
+
+```typescript
+type Square = 'X' | 'O' | ' '
+type Row = [Square, Square, Square]
+
+type Game = {
+  board: [Row, Row, Row]
+  id: null | number
+  winner: null | string
+}
+```
+
+This defines the board even more simply as three `Row` types. (and who doesn't
+like saying `Row, Row, Row` without thinking
+`your boat gently down the stream`). However we can take one more step:
+
+```typescript
+type Square = 'X' | 'O' | ' '
+type Row = [Square, Square, Square]
+type Board = [Row, Row, Row]
+
+type Game = {
+  board: Board
+  id: null | number
+  winner: null | string
+}
+```
+
+Once we have this type we can use it in a few places. First, we will set the
+`Game` type on our `useState`
+
+```typescript
+const [game, setGame] = useState<Game>({
+  board: [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+  ],
+  id: null,
+  winner: null,
+})
+```
+
+The second place we can use the type is to **force** the `response.json()` to
+indicate it shares the shape of the `Game` type.
+
+```typescript
+const newGame = (await response.json()) as Game
+```
+
+While this did not **remove** any errors from our code it does increaase our
+type safety.
+
+## Warning!
+
+You might be thinking to yourself: "Oh this is good, if the data from
+`response.json()` isn't in the right shape of a `Game` we will find out!
+
+Unfortunately, `TypeScript` only checks types while in development mode. When we
+**RUN** our application, all of the type information is stripped away and
+nothing is checked while our code is `executing`. This is a downside to
+TypeScript that might be improved in future versions. Future versions may add
+what we'd call **run-time type checking**

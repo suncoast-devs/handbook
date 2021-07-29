@@ -77,8 +77,9 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 - This returns usable information!
 
-```javascript
-;[
+<!-- prettier-ignore -->
+```typescript
+[
   { name: 'Afghanistan', alpha2Code: 'AF', alpha3Code: 'AFG' },
   { name: 'Åland Islands', alpha2Code: 'AX', alpha3Code: 'ALA' },
   { name: 'Albania', alpha2Code: 'AL', alpha3Code: 'ALB' },
