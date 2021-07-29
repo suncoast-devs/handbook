@@ -41,12 +41,12 @@ logging later) and which hosts (computers) are allowed to connect.
 
 ### Startup.cs
 
-This file controls the startup of the part of our system that handles receiving
-requests from clients and sending results. Lets walk through the code and
+This file controls the startup part of our system that handles receiving
+requests from clients and sending results. Let's walk through the code and
 discuss all the important pieces.
 
 In the code below we've taken the included `Startup.cs` and added documentation
-about each line and it's purpose.
+about each line and its purpose.
 
 > NOTE: You won't have to edit this code often, but you may update it as we add
 > new libraries and capabilities to our system.
@@ -179,7 +179,7 @@ beyond `/helloworld`) this is the method to call when we receive `GET` on
 Notice that the **NAME** of the method does not matter to the _routing_ but it
 will have meaning to us. We'll review some conventions to follow later.
 
-## Implementing the endpoing handling method
+## Implementing the endpoint handling method
 
 ```csharp
 public string SayHello()
@@ -193,7 +193,7 @@ then just `return "Hello, World.";` as the content to send back. Pretty simple!
 We'll be increasing the complexity of these methods, but things don't get too
 complicated.
 
-## Running out API
+## Running our API
 
 So with all of that if we run our code with `dotnet watch run` we will see that
 dotnet is running our application and suggests a starting URL for us.
@@ -225,7 +225,7 @@ will represent as `text/plain`.
 
 ## Making our response more dynamic.
 
-If we want to see different data coming back for each request, lets include the
+If we want to see different data coming back for each request, let's include the
 current date and time in the greeting.
 
 We change the implemention of the method to:
@@ -248,7 +248,7 @@ each time.
 
 ## Accepting input
 
-When we were review APIs we said that APIs need to handle a few questions, the
+When we were reviewing APIs we said that APIs need to handle a few questions, the
 first was:
 
 - What is the input that needs to be sent?
@@ -257,7 +257,7 @@ We also said that one way we can send information to an API is via the idea of
 `query parameters` in our URL. These are parts of the URL after a `?` and are
 key-value pairs separated by `=` signs.
 
-Lets modify our code so that we require a name and we use that name in our
+Let's modify our code so that we require a name and we use that name in our
 greeting. Our requests will now look like `/helloworld?who=Sandy`.
 
 To indicate that we want to look at the query parameters and look for a key
@@ -308,7 +308,7 @@ specify a `who`.
 The other way we discussed giving information to an API was as part of the URL
 itself.
 
-Lets make an API for rolling die. We will start with making and endpoint
+Let's make an API for rolling die. We will start with making an endpoint
 `/dice`. To follow our convention we will make a `DiceController.cs` file (e.g.
 the `dice` from `/dice` is converted to CamelCase and we tack on `Controller`)
 and inside we define a `DiceController` class.
@@ -396,7 +396,7 @@ There will be another change if you look over at the `Header` tab. The
 because the return type is more complicated than a simple `string` and .NET is
 automatically converting our output to JSON for us.
 
-Lets return some more complex data. Lets roll many die.
+Let's return some more complex data. Let's roll many die.
 
 ## Rolling more than one die.
 
@@ -404,7 +404,7 @@ Let's combine the URL pattern with a query parameter of the number of die we
 wish to roll. So our URL will look like `/dice/6?count=4` to roll `4` die with
 `6` sides.
 
-First lets add the query parameter to our arguments:
+First let's add the query parameter to our arguments:
 `public int Roll(int sides, int count)` and since we will be returning more than
 one value we will change our return type. Since we are returning a collection of
 integers, we'll return a `List<int>`. In our method we will create a new `List`
