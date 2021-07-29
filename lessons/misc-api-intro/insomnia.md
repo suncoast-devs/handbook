@@ -3,7 +3,7 @@ title: Using the Insomnia tool for working with APIs
 order: 2
 ---
 
-To see how to use a desktop API tool, lets use `Insomnia`. You may have
+To see how to use a desktop API tool, let's use `Insomnia`. You may have
 installed this during the setup lesson. If not, follow those instructions and
 return here.
 
@@ -25,7 +25,7 @@ Notice that it asks for us to name the request, we'll give it "One List API".
 Now we can define the various parts of the request.
 
 We can specify the `VERB` (defaults to `GET`) and give it the URL of our first
-API request. Lets get the list of TODO items for a new list. I'll use
+API request. Let's get the list of TODO items for a new list. I'll use
 `sdg-handbook` as my list name, you should try using your own!
 
 ![](./assets/get-example.png)

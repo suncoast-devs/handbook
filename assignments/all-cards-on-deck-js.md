@@ -26,7 +26,7 @@ function as a pseudorandom number generator.
 ## Requirements
 
 - Your deck should contain 52 unique cards.
-- All cards should be represented as as string such as "Ace of Hearts"
+- All cards should be represented as a string such as "Ace of Hearts"
 - There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
 - There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "Jack", "Queen", and "King".

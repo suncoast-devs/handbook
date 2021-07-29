@@ -262,7 +262,7 @@ However it would _not_ fit a style of:
 
 - Here is a new Ron Swanson quote I want you to keep around.
 - Please remove the 4th Ron Swanson quote.
-- There is a mis-spelling in the 12th Ron Swanson quote, here is the corrected quote.
+- There is a misspelling in the 12th Ron Swanson quote, here is the corrected quote.
 
 All of those requests modify information and thus a `GET` request is not
 sufficient. Luckily there are other verbs we can use.
@@ -273,7 +273,7 @@ sufficient. Luckily there are other verbs we can use.
 
 These are the next most common verbs. They are typically used to CREATE, UPDATE, and DELETE information.
 
-If we need to supply additional information, say to a `POST` request to create data, we will put the information in the `body` of the request. We will see some examples when we try a few APIs that allow us to create and modify data.
+If we need to supply additional information, say a `POST` request to create data, we will put the information in the `body` of the request. We will see some examples when we try a few APIs that allow us to create and modify data.
 
 ---
 

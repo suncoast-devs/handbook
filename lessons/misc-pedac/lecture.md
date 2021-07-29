@@ -39,7 +39,7 @@ Given a list of numbers, perhaps very long, find the largest number.
   - Add the value ____ to the number stored in ____.
   - Add the value of number named ____ to the value stored in the number named ____.
   - If the value of the the number named ____ is more than the value of the number named ____ then do some specific steps.
-  - Look at the number at the position given by the number named ____ and copy it's value to a number named ____. -->
+  - Look at the number at the position given by the number named ____ and copy its value to a number named ____. -->
 
 ---
 
@@ -81,7 +81,7 @@ Generate example inputs and see if you can work out the answer.
 # E - Examples
 
 - How many examples do I need?
-- As many as you feel give you a better understanding of the problem statment.
+- As many as you feel give you a better understanding of the problem statement.
 
 ---
 
@@ -161,13 +161,13 @@ Will need to try out your algorithm steps on your example data.
 ---
 
 1. If the list is empty, the answer is 0, stop.
-1. Start at the first element of the list
-1. That number is your largest so far
-1. Move to the next number 
-1. If we are at the end of the list stop and return our answer
-1. If the current number in the list is larger than `largest so far`, replace `largest so far` with this number.
-1. Move to the next number in the list
-1. Go back to step 5
+2. Start at the first element of the list
+3. That number is your largest so far
+4. Move to the next number 
+5. If we are at the end of the list stop and return our answer
+6. If the current number in the list is larger than `largest so far`, replace `largest so far` with this number.
+7. Move to the next number in the list
+8. Go back to step 5
 
 ---
 

@@ -16,8 +16,7 @@ Another term for this kind of data structure is "first-in, first-out."
 
 # Not random access
 
-Unlike a `List`or `Dictionary`, a `Queue` does not allow random access to its
-elements. That is we cannot use `[]` to access any element we want.
+Unlike a `List`or `Dictionary`, a `Queue` does not allow random access to its elements. That is we cannot use `[]` to access any element we want.
 
 We may only use `Enqueue` and `Dequeue` to add and remove data from the queue.
 
@@ -25,9 +24,7 @@ We may only use `Enqueue` and `Dequeue` to add and remove data from the queue.
 
 # Enqueue
 
-To add elements to the end of a queue, we use the `Enqueue` method. Much like
-`Add` appends things to a `List`, `Enqueue` adds things to a `Queue`. However,
-we can _only_ add to the end of the queue.
+To add elements to the end of a queue, we use the `Enqueue` method. Much like `Add` appends things to a `List`, `Enqueue` adds things to a `Queue`. However, we can _only_ add to the end of the queue.
 
 ```csharp
 var students = new Queue<string>();
@@ -42,8 +39,7 @@ students.Enqueue("Thomas");
 
 # Looping through a queue
 
-Much like our `List` and `Dictionary` we can use the `foreach` method to loop
-through the elements of a queue.
+Much like our `List` and `Dictionary` we can use the `foreach` method to loop through the elements of a queue.
 
 ```csharp
 foreach (var student in students)
@@ -67,8 +63,7 @@ var student = students[0];
 
 # Removing an element
 
-We can use `Dequeue` to remove an element from the beginning of a queue. We can
-only remove the first element in a queue.
+We can use `Dequeue` to remove an element from the beginning of a queue. We can only remove the first element in a queue.
 
 ```csharp
 var student = students.Dequeue();
