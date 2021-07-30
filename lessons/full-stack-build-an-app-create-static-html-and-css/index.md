@@ -29,19 +29,6 @@ several vital steps:
    page/feature supports the MVP. We haven't invested a large amount of time
    making the static pages into real and dynamic pages.
 
-## Remove bootstrap if you are not going to use it
-
-Remove the line `import 'bootstrap/dist/css/bootstrap.css'` from `index.js` if
-you don't intend on using bootstrap. You may also choose to remove the
-dependency with these commands:
-
-```shell
-cd ClientApp
-npm uninstall bootstrap
-```
-
-Not including the CSS is enough to remove the Bootstrap styles.
-
 ## Start by building the component directly into the main `<App>`
 
 An excellent place to start is a page that primarily lists data. These pages are

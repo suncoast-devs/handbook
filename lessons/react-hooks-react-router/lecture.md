@@ -8,7 +8,7 @@ theme: Next, 1
 
 ---
 
-- let us add the ability to show a details page for each todo in our list
+- Let us add the ability to show a details page for each todo in our list
 - The detail page should show the ID, text, complete status, and perhaps the created/updated timestamps
 - The detail page should allow us to _DELETE_ the todo item
 
@@ -17,8 +17,8 @@ theme: Next, 1
 # We now have an app that supports different views of data
 
 - We will distinguish what we are looking at by varying the URL
-- The home page of `/` will always show the todo items list
-- A url like `/items/42` will show the details of item `42`
+- The home page of "`/`" will always show the todo items list
+- A url like "`/items/42`" will show the details of item `42`
 
 ---
 
@@ -118,7 +118,7 @@ export function TodoList() {
       'https://one-list-api.herokuapp.com/items?access_token=cohort42'
     )
 
-    if (response.code === 200) {
+    if (response.status === 200) {
       setTodoItems(response.data)
     }
   }
@@ -321,13 +321,13 @@ export function App() {
 
 # Now, rather than putting the JSX right in here, make a component
 
-```jsx
+```javascript
 function TodoItemPage() {
   return <p>This would be the details of item 42!</p>
 }
 ```
 
-```jsx
+```html
 <Route path="/items/:id">
   <TodoItemPage />
 </Route>
@@ -396,14 +396,18 @@ const [todoItem, setTodoItem] = useState({
 
 ```jsx
 useEffect(
-  async function () {
-    const response = await axios.get(
-      `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
-    )
+  function () {
+    async function loadItems() {
+      const response = await axios.get(
+        `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
+      )
 
-    if (response.code === 200) {
-      setTodoItem(response.data)
+      if (response.status === 200) {
+        setTodoItem(response.data)
+      }
     }
+
+    loadItems()
   },
   [params.id]
 )
@@ -441,7 +445,7 @@ function TodoItemPage() {
         `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
       )
 
-      if (response.code === 200) {
+      if (response.status === 200) {
         setTodoItem(response.data)
       }
     },
@@ -498,7 +502,7 @@ async function deleteTodoItem() {
     `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
   )
 
-  if (response.code === 204) {
+  if (response.status === 204) {
     // Send the user back to the homepage
     history.push('/')
   }

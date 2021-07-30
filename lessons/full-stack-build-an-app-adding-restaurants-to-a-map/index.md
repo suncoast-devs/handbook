@@ -112,8 +112,8 @@ Let's add some restaurants to our database and see what results we get for
 geocoded addresses. Enter some restaurants along with addresses you know and
 then check, using `pgcli` that there are values for `latitude` and `longitude`
 
-Let's also update our `seeds.sql` to add geocoded locations for our example
-restaurants
+Let's also update our `exampledata.sql` to add geocoded locations for our
+example restaurants
 
 ```sql
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latitude", "Longitude") VALUES ('Thoughtbeat', 'Inverse zero administration benchmark', '07 Meadow Vale Drive', '314-651-9791', 27.7970127, -82.6403897);

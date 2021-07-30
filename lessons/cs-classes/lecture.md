@@ -59,7 +59,7 @@ namespace EmployeeDatabase
       }
     }
 
-    static int computeMonthlySalaryFromYearly(int yearlySalary)
+    static int ComputeMonthlySalaryFromYearly(int yearlySalary)
     {
       return yearlySalary / 12;
     }
@@ -74,7 +74,7 @@ namespace EmployeeDatabase
 
       int salary = PromptForInteger("What is your yearly salary (in dollars)? ");
 
-      int monthlySalary = computeMonthlySalaryFromYearly(salary);
+      int monthlySalary = ComputeMonthlySalaryFromYearly(salary);
 
       Console.WriteLine($"Hello, {name} you make {monthlySalary} dollars per month.");
     }
@@ -84,19 +84,18 @@ namespace EmployeeDatabase
 
 ---
 
-What if we wanted to add information about a second employee? Certainly one
-approach would be to add a second set of variables such as:
+What if we wanted to add information about a second employee? Certainly one approach would be to add a second set of variables such as:
 
 ```csharp
 var name1 = PromptForString("What is your name? ");
 int department1 = PromptForInteger("What is your department number? ");
 int salary1 = PromptForInteger("What is your yearly salary (in dollars)? ");
-int monthlySalary1 = computeMonthlySalaryFromYearly(salary1);
+int monthlySalary1 = ComputeMonthlySalaryFromYearly(salary1);
 
 var name2 = PromptForString("What is your name? ");
 int department2 = PromptForInteger("What is your department number? ");
 int salary2 = PromptForInteger("What is your yearly salary (in dollars)? ");
-int monthlySalary2 = computeMonthlySalaryFromYearly(salary2);
+int monthlySalary2 = ComputeMonthlySalaryFromYearly(salary2);
 ```
 
 ---
@@ -114,7 +113,7 @@ If we removed something from `names` we'd have to be sure to remove the correspo
 
 # Put related data in the same state
 
-To group related we consider them all part of the same `state`.
+To group related data we consider them all part of the same `state`.
 
 In this case the `state` is about an `Employee` who has individual attributes:
 
@@ -140,8 +139,7 @@ In this case the `state` is about an `Employee` who has individual attributes:
 
 ---
 
-If we had a few of these `Employee` things around we might also see they could
-have their own, specific, values for each of these attributes.
+If we had a few of these `Employee` things around we might also see they could have their own, specific values for each of these attributes.
 
 ```
 +---------------------------+       +------------------------------+
@@ -166,7 +164,7 @@ Keep track of this data together!
 
 ## Class Syntax
 
-Lets take our idea of a _employee_ in this system and write some syntax to help us.
+Let's take our idea of an _employee_ in this system and write some syntax to help us.
 
 # `class`
 
@@ -181,7 +179,7 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
 // v    v
   class Employee
   {
-    // public means "this can be seen outside of the class
+    // public means "this can be seen outside of the class"
     // |
     // |   Type
     // |   |
@@ -213,7 +211,7 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
         Name = newName;
         Department = newDepartment;
         Salary = newSalary;
-        MonthlySalary = newSalary;
+        MonthlySalary = newMonthlySalary;
     }
   }
 
@@ -223,12 +221,12 @@ Lets take our idea of a _employee_ in this system and write some syntax to help 
 
 # Properties
 
-These represent the `DATA` part of `state and `data`.
+These represent the `DATA` part of `state` and `data`.
 
 Accessible both inside the class and outside.
 
 ```csharp
-// public means "this can be seen outside of the class
+// public means "this can be seen outside of the class"
 // |   Type
 // |   |      Name of property
 // v   v      v
@@ -269,7 +267,7 @@ public Employee(string newName, int newDepartment, int newSalary, int newMonthly
   Name = newName;
   Department = newDepartment;
   Salary = newSalary;
-  MonthlySalary = newSalary;
+  MonthlySalary = newMonthlySalary;
 }
 ```
 
@@ -285,7 +283,7 @@ public Employee(string newName, int newDepartment, int newSalary, int newMonthly
 
 ```csharp
 var graceHopper = new Employee("Grace Hopper", 100, 240000, 20000);
-Console.WriteLine(adaLovelace.Department); // Will show 100
+Console.WriteLine(graceHopper.Department); // Will show 100
 
 var elonMusk = new Employee("Elon Musk", 42, 120000, 10000);
 Console.WriteLine(elonMusk.Department); // Will show 42
@@ -312,7 +310,7 @@ Console.WriteLine(elonMusk.Department); // Will show 42
 // v    v
   class Employee
   {
-    // public means "this can be seen outside of the class
+    // public means "this can be seen outside of the class"
     // |
     // |   Type
     // |   |
@@ -364,7 +362,7 @@ secondEmployee.Name = "Grace Hopper";
 
 ---
 
-# What to our instances look like?
+# What do our instances look like?
 
 ```
 +-----------------------------+       +--------------------------------+
@@ -379,7 +377,7 @@ secondEmployee.Name = "Grace Hopper";
 
 ---
 
-# [fit] Lets fill in the rest of the properties.
+# [fit] Let's fill in the rest of the properties.
 
 ```csharp
 var firstEmployee = new Employee();
@@ -430,7 +428,7 @@ var secondEmployee = new Employee {
   Department = 100,
   Salary = 240000,
   MonthlySalary = 20000
-}
+};
 ```
 
 ---
@@ -442,7 +440,7 @@ var secondEmployee = new Employee {
 # So far we have seen how `class`-es:
 
 - Store data, which we call `state`, in attributes we call `properties`.
-- Are the template that describes what data
+- Are the template that describes what data is used
 - Create _instances_, called `objects`
 - Are like cookie cutters, where `object`s are like the cookies
 
@@ -452,7 +450,7 @@ var secondEmployee = new Employee {
 
 ---
 
-The code has a method `computeMonthlySalaryFromYearly` that accesses our object's property and does some math.
+The code has a method `ComputeMonthlySalaryFromYearly` that accesses our object's property and does some math.
 
 We also have a _property_ named `MonthlySalary`.
 
@@ -490,7 +488,7 @@ var secondEmployee = new Employee {
   Name = "Grace Hopper",
   Department = 100,
   Salary = 240000,
-}
+};
 ```
 
 ---
@@ -575,9 +573,9 @@ This would output `0`. Notice we did not have to redeclare `Name`, or `Departmen
 
 ---
 
-Inheriting allows is to both _add_ new state and behavior and _override_ behavior from the base class.
+Inheriting allows us to both _add_ new state and behavior and _override_ behavior from the base class.
 
-_Inheritance_ is a powerful but it is used less often in favor of other techniques such as
+_Inheritance_ is a powerful tool but it is used less often in favor of other techniques such as
 
 - _extensions_
 - _mixins_

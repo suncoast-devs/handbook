@@ -7,14 +7,14 @@ In this project, you will use C# to model [a deck of playing cards](https://en.w
 
 ## Objectives
 
-- Demonstrate usage of arrays to model resources.
+- Demonstrate usage of `List` or arrays to model resources.
 - Understand and implement algorithms.
 - Understand loops.
 
 ## Requirements
 
 - Your deck should contain 52 unique cards.
-- All cards should be represented as as string such as "Ace of Hearts"
+- All cards should be represented as a string such as "Ace of Hearts"
 - There are four suits: "Clubs", "Diamonds", "Hearts", and "Spades".
 - There are 13 ranks: "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10",
   "Jack", "Queen", and "King".
@@ -69,7 +69,10 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 
 ### Resources
 
-- [List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
+- [Microsoft documentation on List](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.list-1?view=netcore-3.1)
+- [Handbook Array and List](https://handbook.suncoast.io/cs-arrays)
+- [Handbook Loops](https://handbook.suncoast.io/cs-loops)
+- [Handbook List quick reference](https://handbook.suncoast.io/lessons/misc-quick-reference/cs-list)
 
 ### Explorer Mode
 
@@ -80,7 +83,7 @@ dotnet new sdg-console -o AllCardsOnDeckCS
 ## Adventure Mode
 
 - In addition to displaying the top two cards, also store these two "dealt" cards in a variable named `playerHand`. Consider what _type_ of variable `playerHand` will have to be.
-- Implement a way to deal cards into two _different_ hands.
+- Implement a way to two deal cards each into two _different_ hands.
 
 ## Epic Mode
 

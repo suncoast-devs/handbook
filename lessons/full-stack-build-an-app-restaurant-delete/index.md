@@ -37,9 +37,9 @@ and finally, a button that is rendered only if the current user-id matches:
 
 ```jsx
 {
-  restaurant.userId === getUserId() && (
+  restaurant.userId === getUserId() ? (
     <button onClick={handleDelete}>Delete</button>
-  )
+  ) : null
 }
 ```
 

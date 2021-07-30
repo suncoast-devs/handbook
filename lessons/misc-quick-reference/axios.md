@@ -25,8 +25,7 @@ via:
 
 ```javascript
 const response = await axios({
-  url:
-    'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
 })
 ```
 
@@ -69,11 +68,10 @@ property of the object.
 
 ```javascript
 const response = await axios({
-  url:
-    'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
 })
 
-if (response.code === 200) {
+if (response.status === 200) {
   const items = response.data
 
   // ... process the items here ...
@@ -92,12 +90,11 @@ const newOneListItem = {
 
 const response = await axios({
   method: 'POST',
-  url:
-    'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
   data: newOneListItem,
 })
 
-if (response.code === 201) {
+if (response.status === 201) {
   // ... process the data here ...
 }
 ```
