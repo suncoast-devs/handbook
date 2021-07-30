@@ -2,16 +2,16 @@
 title: Using C# Classes to Create a Database
 ---
 
-In this lesson we will be using `class`es and `List<>` to create an example
+In this lesson, we will be using `class`es and `List<>` to create an example
 database to manage employees. We will create a menu system that will allow us to
-`C`reate, `R`ead, `U`update, and `D`elete employees from this `List`
+`C`reate, `R`ead, `U`update, and `D`elete employees from this `List.`
 
-# Reviewing the code we will start with.
+# Reviewing the starting code.
 
 We will make a new project: `dotnet new sdg-console -o SuncoastHumanResources`
 
-This is the code we will start with. It defines an `Employee` class and contains
-code to input the details of a single employee.
+The code below is our starting point. It defines an `Employee` class and
+contains code to input the details of a single employee.
 
 ```csharp
 using System;
@@ -81,10 +81,11 @@ namespace SuncoastHumanResources
 }
 ```
 
-While this is good, it isn't quite great. First of all we can only store one
-employee so our Employee Database is not very useful. To improve it, let's add a
-menu system to prompt the user to add, search, and delete employees. We will
-keep all these employees in a `List` and use `class`es to organize our code.
+While this is a good start, it lacks features. Most significantly, we can only
+store one employee, so our Employee Database is not very useful. To improve it,
+let's add a menu system to prompt the user to add, search, and delete employees.
+We will keep all these employees in a `List` and use `class`es to organize our
+code.
 
 ## Adding a `List` to store our employees
 
@@ -94,16 +95,16 @@ The `List` we will create will look like this:
 var employees = new List<Employee>();
 ```
 
-We name the variable `employees`, the plural of `employee` to give us the hint
-that this variable stores a collection of things. While this isn't a mandate by
-the language, choosing good names for our variables is a quality of a good
-developer and a habit we should start early. We define this variable as a `List`
-of things that will all be instances of our `Employee` class.
+We name the variable `employees`, the plural of `employee` to hint that this
+variable stores a collection of things. While this isn't a mandate by the
+language, choosing good names for our variables is a quality of a good developer
+and a habit we should start early. We define this variable as a `List` of things
+that will all be instances of our `Employee` class.
 
-To put an employee in our list we use the code: `employees.Add(employee)` where
+To put an employee in our list, we use the code: `employees.Add(employee)` where
 `employee` is an instance of `Employee`
 
-Now our code looks like:
+Now our code looks like this:
 
 ```csharp
 using System;
@@ -180,11 +181,11 @@ namespace SuncoastHumanResources
 
 To make a menu, we'll introduce a `keepGoing` variable which will track if the
 user wishes to continue in our program. We will use this variable in a `while`
-loop to determine when to stop the loop. Inside the loop we will show a prompt
+loop to determine when to stop the loop. Inside the loop, we will show a prompt
 and use the existing code to ask the user for details on a new employee.
 
-This allows us to continuously add more employees to our list until the user
-quits
+The menu allows the user to add employees to our list until they select the
+option to quit.
 
 ```csharp
 using System;
@@ -251,7 +252,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -348,7 +349,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -384,11 +385,12 @@ namespace SuncoastHumanResources
 
 ## Find an employee by name
 
-Adding another menu option to find an employee by name. First we prompt for the
-name to look for. We use a `foreach` loop to look for an employee with a
-matching name. If we find one we update a variable named `foundEmployee` which
-otherwise will have the value `null`. Then if `foundEmployee` is `null` we tell
-the user no match was found, otherwise we show the details of `foundEmployee`.
+Adding another menu option to find an employee by name. First, we prompt for the
+name to search. We use a `foreach` loop to look for an employee with a matching
+name. If we find one, we update a variable named `foundEmployee` which otherwise
+will have the value `null`. After the loop is done if `foundEmployee` is `null`,
+we show the user a message; otherwise, we display the details of
+`foundEmployee`.
 
 ```csharp
 using System;
@@ -449,13 +451,14 @@ namespace SuncoastHumanResources
       var employees = new List<Employee>();
 
       // Should we keep showing the menu?
+
       var keepGoing = true;
 
       DisplayGreeting();
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (F)ind an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -465,7 +468,7 @@ namespace SuncoastHumanResources
           keepGoing = false;
         } else if (choice == "F") {
           // Ask for the name of an employee
-          var name = PromptForString("What name are you looking for: ");
+          var name = PromptForString("What name are you looking for? ");
 
           // Make a new variable to store the found employee, initializing
           // to null which will indicate no match found
@@ -515,7 +518,7 @@ namespace SuncoastHumanResources
 
 ## Improving this code by adding `LINQ`
 
-We can add `using System.Linq` to the top of our code we utilize
+We can add `using System.Linq` to the top of our code, then we can utilize
 `FirstOrDefault` for our searching code.
 
 ```C#
@@ -523,7 +526,7 @@ We can add `using System.Linq` to the top of our code we utilize
 var name = PromptForString("What name are you looking for: ");
 
 // Make a new variable to store the found employee, initializing
-// to null which will indicate no match found
+// to null, which will indicate no match found
 Employee foundEmployee = employees.FirstOrDefault(employee => employee.Name == name);
 
 // If the foundEmployee is still null, nothing was found
@@ -540,27 +543,29 @@ if (foundEmployee == null) {
 These are two other features that our employee database might need. We'll leave
 these to you to add to the application if you'd like to try.
 
-# Refactoring the database features into their own class
+# Refactoring the database features into a class
 
-The functions for adding, searching, and getting all the employees from the list
-are scattered through the main code. Let's pull that code into a specific class
-to manage the list.
+The functions for adding, searching, and displaying all the employees from the
+list exist in the main code. Extracting the code into a specific class to manage
+the list will increase the code's clarity and give specific places to implement
+new features.
 
 We start by creating a class `EmployeeDatabase` and move our `List<Employee>`
 inside. We make this class property `private` since we do not want code outside
-of the class to be able to access it. All the use must come from the methods we
-create and allow as `public`. We then create methods to perform the common
-actions we need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of
-these methods _receives_ data it needs, and return the data it _provides_. This
-essentially creates an API (Application Programming Interface) for how to use
+of the class to access it. All the usage must come from the methods we create
+and allow as `public`. We then develop methods to perform the common actions we
+need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of these methods
+_receives_ data it needs and returns the data it _provides_. These methods
+essentially create an API (Application Programming Interface) for how to use
 this code.
 
-By creating a class `EmployeeDatabase` we have isolated the code that has to do
-with the list of employees. This allows the database implementation to change
-without modifying the code that uses it. For instance, we could load and save
-the data from a data file. Any time we can change one part of the system, the
-employee database, without having to change other parts of the code (the menu
-system) we have created a good _decoupling_ of our system's parts.
+By creating a class `EmployeeDatabase`, we have isolated the code that has to do
+with the list of employees. The organization of the class allows the database
+implementation to change without modifying the code that uses it. For instance,
+we could load and save the data from a data file. Any time we can change one
+part of the system, for example, the employee database, without changing other
+parts of the code, for example, the menu system, we have created a good
+_decoupling_ of our system's components.
 
 ```csharp
 using System;
@@ -663,7 +668,7 @@ namespace SuncoastHumanResources
 
       // While the user hasn't said QUIT yet
       while (keepGoing) {
-        // Inert a blank line then prompt them and get their answer (force uppercase)
+        // Insert a blank line then prompt them and get their answer (force uppercase)
         Console.WriteLine();
         Console.Write("What do you want to do? (A)dd an employee or (S)how all the employees or (F)ind an employee or (Q)uit: ");
         var choice = Console.ReadLine().ToUpper();
@@ -673,7 +678,7 @@ namespace SuncoastHumanResources
           keepGoing = false;
         } else if (choice == "F") {
           // Ask for the name of an employee
-          var name = PromptForString("What name are you looking for: ");
+          var name = PromptForString("What name are you looking for? ");
 
           // Make a new variable to store the found employee, or null if not found
           Employee foundEmployee = database.FindOneEmployee(name);

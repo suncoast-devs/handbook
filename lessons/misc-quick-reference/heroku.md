@@ -13,7 +13,7 @@ Heroku CLI.
 
 Sometimes you need to restart your application on Heroku. This might be because
 you've changed something other than something that is updated by
-`git push heroku HEAD:master`.
+`git push heroku HEAD:main`.
 
 To restart:
 
@@ -84,6 +84,9 @@ let users access your system.
 
 ```shell
 heroku pg:reset
+```
+
+```shell
 heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 ```
 
@@ -93,6 +96,9 @@ heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 
 ```shell
 heroku pg:reset
+```
+
+```shell
 heroku pg:push SuperAwesomeAppDatabase DATABASE_URL
 ```
 

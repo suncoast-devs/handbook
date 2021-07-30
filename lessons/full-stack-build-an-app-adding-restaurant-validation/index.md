@@ -19,6 +19,9 @@ We can add an _annotation_ named
 to both the `Name` and `Address` field in our `Restaurant.cs` to indicate these
 attributes are mandatory.
 
+Using the optional `(ErrorMessage = "Message")` you can customize the error
+message.
+
 ```csharp
 using System.ComponentModel.DataAnnotations;
 
@@ -33,7 +36,7 @@ namespace TacoTuesday.Models
 
         public string Description { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "You must provide an address.")]
         public string Address { get; set; }
 
         public string Telephone { get; set; }

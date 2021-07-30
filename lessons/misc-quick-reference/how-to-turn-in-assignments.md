@@ -21,6 +21,9 @@ In the terminal, run:
 
 ```shell
 git add .
+```
+
+```shell
 git commit -m "Done with explorer mode."
 ```
 

@@ -105,8 +105,7 @@ Console.WriteLine("Hi, this is code after the loop");
 
 # Pretending we are .NET
 
-It is often helpful to imagine we are .NET and walk through the code and see it
-how the computer does
+It is often helpful to imagine we are .NET and walk through the code and see it how the computer does
 
 ```csharp
 var names = new List<string>() { "Mark", "Paula", "Sandy" };
