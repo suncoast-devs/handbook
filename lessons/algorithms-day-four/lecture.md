@@ -94,7 +94,7 @@ Think of it as a "rough draft" of your algorithm.
 
 ---
 
-# [fit] THe only way to improve our algorithm skills is ...
+# [fit] The only way to improve our algorithm skills is ...
 
 - Practice
 
