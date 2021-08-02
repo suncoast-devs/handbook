@@ -126,7 +126,7 @@ up the border sides. The options are:
 
 |         |                                                                                                                                                                                                                             |
 | ------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| stretch | The default; the side images are stretched to fill the borders. This generally looks terrible and pixellated, so is not recommended.                                                                                        |
+| stretch | The default; the side images are stretched to fill the borders. This generally looks terrible and pixelated, so is not recommended.                                                                                        |
 | repeat  | The side images are repeated until the borders are filled. Depending on circumstances, this might look ok, but you can get left with unsightly image fragments.                                                             |
 | round   | The side images are repeated until the borders are filled, and they are all stretched slightly so that no fragments appear.                                                                                                 |
 | space   | The side images are repeated until the borders are filled, and a small amount of spacing is added between each copy such that no fragments appear. This value is only supported in Safari (9+) and Internet Explorer (11+). |
