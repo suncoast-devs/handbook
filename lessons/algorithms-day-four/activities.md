@@ -57,7 +57,7 @@ the case of the example above, you would the given `RRGBRGBB` you should return
 
 When writing math formulas, we work in what is known as "infix" notation. For
 instance `5 + ((1 + 2) * 4) - 3`. We can use the
-[PEDMAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics) rule.
+[PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics) rule.
 (Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)
 
 However, there is another way to represent these operations. This is known as
