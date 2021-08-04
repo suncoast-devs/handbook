@@ -23,6 +23,16 @@ We will make a new project: **`dotnet new sdg-console -o SuncoastHumanResources`
 
 - Defines an `Employee` class and contains code to input the details of a single employee.
 
+<br/>
+
+You can use
+
+```
+sdg warp SuncoastHumanResources
+```
+
+to download this code (after you `cd` into the project)
+
 ---
 
 [.autoscale: true]
