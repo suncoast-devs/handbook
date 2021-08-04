@@ -3,7 +3,7 @@ title: CSS Details
 order: 4
 ---
 
-Now that we have some basic terminology, lets review the different kinds of
+Now that we have some basic terminology, let's review the different kinds of
 _selectors_ we can use in our CSS _rules_
 
 |                     |                                                                                                                                                                                                                                                                               |
@@ -15,5 +15,5 @@ _selectors_ we can use in our CSS _rules_
 | Combinators         | These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of `div`s, or paragraphs that come directly after headings. |
 | Multiple selectors  | Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.                                                    |
 
-Lets go through these selectors and learn how we can effectively target content
+Let's go through these selectors and learn how we can effectively target content
 in our HTML to apply CSS styles.

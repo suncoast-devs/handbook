@@ -26,7 +26,7 @@ element's background.
 | [`background`](https://developer.mozilla.org/en-US/docs/Web/CSS/background)                       | Shorthand for specifying the above five properties on one line.                                                                   |
 | [`background-size`](https://developer.mozilla.org/en-US/docs/Web/CSS/background-size)             | Allows a background image to be resized dynamically                                                                               |
 
-Now lets look at how to use these features in detail.
+Now let's look at how to use these features in detail.
 
 ## The basics: color, image, position, repeat
 
