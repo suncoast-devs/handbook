@@ -20,7 +20,7 @@ In this assignment, you will be creating a console application that manages a zo
 ### Setup
 
 ```shell
-dotnet new sdg-console -o JurasicPark
+dotnet new sdg-console -o JurassicPark
 ```
 
 ### Explorer Mode
