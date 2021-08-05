@@ -1,11 +1,9 @@
 theme: Next,1
 
-<!-- prettier-ignore-start -->
-
-
 # [fit] Reading and Writing Files
 
 ---
+
 # [fit] Persistance
 
 ---
@@ -28,15 +26,15 @@ However, this data is only stored in the computer's memory and thus when we stop
 
 # [fit] What is a "file"?
 
-A sequence of characters (really more accurately **`bytes`**)
+A sequence of characters (really more accurately `bytes`)
 
-Similar to how a **`string`** is also just a sequence of characters.
+Similar to how a `string` is also just a sequence of characters.
 
 ---
 
 # [fit] Like a string but BIGGER
 
-Our **`strings`** have typically been fairly small.
+Our `strings` have typically been fairly small.
 
 Files can be quite large.
 
@@ -53,6 +51,7 @@ Often called the _file format_.
 [.column]
 
 Many to choose from
+
 - `CSV`
 - `JSON`
 - `XML`
@@ -64,7 +63,7 @@ Many to choose from
 
 [.column]
 
-We will start with **`CSV`**
+We will start with `CSV`
 
 ---
 
@@ -101,13 +100,22 @@ The CSV file also allows us to have a first row (aka header) that describes the 
 
 Console app to keep track of a list of numbers
 
+```
+dotnet new sdg-console -o NumberTracker
+```
+
+```
+cd NumberTracker
+sdg warp NumberTracker
+```
+
 ---
 
 # [fit] Using 3rd Party Libraries
 
-We don't have to write the code for processing **`CSV``**
+We don't have to write the code for processing `CSV`
 
-But it also doesn't come _"out of the box"_ from **`C#`** or **`.NET`**
+But it also doesn't come _"out of the box"_ from `C#` or `.NET`
 
 ---
 
@@ -117,9 +125,9 @@ But it also doesn't come _"out of the box"_ from **`C#`** or **`.NET`**
 
 # [fit] Nuget
 
-Packages for **`C#`** and **`.NET`** are cataloged at `nuget.org`.
+Packages for `C#` and `.NET` are cataloged at `nuget.org`.
 
-There is a *LOT* there.
+There is a _LOT_ there.
 
 Not all of it quality.
 
@@ -180,6 +188,8 @@ var fileWriter = new StreamWriter("numbers.csv");
 # [fit] Using the stream
 
 Now that we have a way to send information to a file, we need some code that knows how to write in the CSV format.
+
+---
 
 ## Enter `CsvWriter`
 
@@ -337,8 +347,16 @@ else
 # Alternate algorithm:
 
 - Create an empty list of numbers.
-- If there is a file, use StreamReader + CsvReader to *replace* the contents of the list
+- If there is a file, use StreamReader + CsvReader to _replace_ the contents of the list
 
 ---
 
-<!-- prettier-ignore-end -->
+# Could we make the same update to SuncoastHumanResources?
+
+- Add the loading and unloading code
+- Except instead of `<int>` we will process `<Employee>`
+- We also need to include the first row of header information
+
+---
+
+# Code!
