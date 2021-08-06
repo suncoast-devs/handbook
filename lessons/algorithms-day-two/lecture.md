@@ -326,7 +326,7 @@ The largest number in a list is either:
 
 - The first number in a list
 - **or**
-- If other numbers are remaining in the list ... the largest number in the remainder of the list
+- If other numbers are remaining in the list ... the largest number is in the remainder of the list
 
 ---
 
@@ -364,7 +364,7 @@ Find largest number in:
 
 # Example
 
-- Largest number of `66,48` is either `68`
+- Largest number of `66,48` is either `66`
 - **or**
 - Largest number in `48`
 
@@ -429,7 +429,7 @@ Middle is `21` and `25`, so median is: `23`
 
 [.build-lists: true]
 
-# 0, 1, few, $$ \infty $$
+# 0, 1, few, $$ \infinity $$
 
 - Solving a problem with _zero_ inputs is typically easy
 - Solving a problem with _one_ input is typically easy
@@ -440,13 +440,13 @@ Middle is `21` and `25`, so median is: `23`
 
 ---
 
-# [fit] Use "0, 1, few, $$ \infty $$" in your thinking process
+# [fit] Use "0, 1, few, $$ \infinity $$" in your thinking process
 
 - Perhaps start with an input size of "a few."
 - Use your intuition to understand the problem
 - Don't forget about `0` and `1` inputs
   - (sometimes the problem has a curveball here)
-- See if your intuition still works with $$ \infty $$
+- See if your intuition still works with $$ \infinity $$
 
 ---
 
@@ -468,7 +468,7 @@ _"If something is true"_ or _"If something is false"_ help determine if or when 
 # [fit] Loop with counting
 
 - "Do the following X times"
-- "Do the following until X is less-then/more-than/equal to Y"
+- "Do the following until X is less-than/more-than/equal to Y"
 
 ---
 
