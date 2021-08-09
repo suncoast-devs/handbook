@@ -18,8 +18,8 @@ translate into database tables and relationships.
 When working on a business problem, we should be on the lookout for statements
 that reveal the types and structure of data we want to manage.
 
-> "Keep track of students, the courses the students are taking, and the
-> course's teacher."
+> "Keep track of students, the courses the students are taking, and the course's
+> teacher."
 
 > "Record the customer's order, the items on each order, and which of the
 > customer's addresses to ship to."
@@ -41,16 +41,10 @@ guide us. We should be looking for:
 The first component of an ERD is an entity. These typically represent the major
 _nouns_ of our system.
 
-> "Keep track of students, the courses the students are taking, and the
-> course's teacher."
+> "Keep track of students, the courses the students are taking, and the course's
+> teacher."
 
-```
-+---------------+      +---------------+      +---------------+
-|               |      |               |      |               |
-|    Student    |      |     Course    |      |    Teacher    |
-|               |      |               |      |               |
-+---------------+      +---------------+      +---------------+
-```
+![](./assets/erd1.png)
 
 ### Attributes
 
@@ -58,15 +52,7 @@ Next, we will determine the attributes of each of these nouns. These would be
 things like "the student's name," "the student's age," "the student's birthday,"
 "the course's name," "the course's description," and "the teacher's name."
 
-```
-+-------------+      +---------------+      +-----------+
-|  Student    |      |   Course      |      |  Teacher  |
-+-------------+      +---------------+      +-----------+
-|  Name       |      |   Name        |      |  Name     |
-|  Age        |      |   Description |      |           |
-|  Birthday   |      |               |      |           |
-+-------------+      +---------------+      +-----------+
-```
+![](./assets/erd2.png)
 
 You'll notice that all the attributes are singularly named and store a single
 value. If we had a multiple-value attribute of an entity, say multiple phone
@@ -77,34 +63,20 @@ the attribute represents. `Name,` for instance, would be text while `Age` is a
 number, and `Birthday` is a date. These data types will become column types
 eventually in our database.
 
+![](./assets/erd4.png)
+
 ### Relationships
 
 After identifying the entities and their attributes, we can identify the
 relationships.
 
-```
-+-------------+                     +--------------+                   +-----------+
-|  Student    |                     |  Course      |                   |  Teacher  |
-+-------------+                     +--------------+                   +-----------+
-|  Name       |                     |  Name        |                   |  Name     |
-|  Age        | <-- enrolled in --> |  Description | <-- taught by --> |           |
-|  Birthday   |                     |              |                   |           |
-+-------------+                     +--------------+                   +-----------+
-```
+![](./assets/erd3.png)
 
 If we determine that a relationship, in this case, _enrolled in_ needs extra
 data stored along with it, say the date the student enrolled, we'll create
 another entity to hold that.
 
-```
-+-------------+                     +--------------+                          +--------------+                   +-----------+
-|  Student    |                     |  Enrollment  |                          |  Course      |                   |  Teacher  |
-+-------------+                     +--------------+                          +--------------+                   +-----------+
-|  Name       |                     |  Date        |                          |  Name        |                   |  Name     |
-|  Age        | <-- has many -->    |              | <-- assigned to one -->  |  Description | <-- taught by --> |           |
-|  Birthday   |                     |              |                          |              |                   |           |
-+-------------+                     +--------------+                          +--------------+                   +-----------+
-```
+![](./assets/erd5.png)
 
 ## Translating to our database
 
