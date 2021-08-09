@@ -103,6 +103,7 @@ order: 2
 |  7  | Convert the score                                          | https://www.codewars.com/kata/5b6c220fa0a661fbf200005d        | JS Only                             |
 |  7  | Computer problem series #1: Fill the Hard Disk Drive       | https://www.codewars.com/kata/5d49c93d089c6e000ff8428c        |                                     |
 |  7  | Complementary DNA                                          | https://www.codewars.com/kata/554e4a2f232cdd87d9000038        |                                     |
+|  7  | Collatz Conjecture Length                                  | https://www.codewars.com/kata/53d6387b83db278202000802        |                                     |
 |  6  | supermarket queue                                          | https://www.codewars.com/kata/57b06f90e298a7b53d000a86        |                                     |
 |  6  | Strongest Number                                           | https://www.codewars.com/kata/5d16af632cf48200254a6244        |                                     |
 |  6  | RPN                                                        | https://www.codewars.com/kata/52f78966747862fc9a0009ae        |                                     |
