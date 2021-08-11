@@ -8,11 +8,10 @@ theme: Next,1
 
 JavaScript has `for` loops we can use for enumerating the elements of an array.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
-function logSomeColor(color, index)
-{
+function logSomeColor(color: string, index: number) {
   console.log(`The color at position ${index} is ${color}`)
 }
 
@@ -27,7 +26,7 @@ colors.forEach(logSomeColor)
 
 - Each element of this new array to be the equal to the **length** of the string at the corresponding index of the original array.
 
-```javascript
+```typescript
 [               [
   'red',    =>    3,
   'green',  =>    5,
@@ -37,7 +36,7 @@ colors.forEach(logSomeColor)
 
 ---
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 // Code here
@@ -55,7 +54,7 @@ We will start by doing this in a very manual way.
 
 Begin by creating a new array to receive the individual elements.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -65,7 +64,7 @@ const lengths = []
 
 Then we will setup the `forEach` loop
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -81,10 +80,10 @@ colors.forEach(function (color) {
 
 [.code-highlight: 6-8]
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
-const lengths = []
+const lengths: number[] = []
 
 colors.forEach(function (color) {
   const lengthOfColor = color.length
@@ -111,10 +110,10 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 [.column]
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
-const lengths = []
+const lengths: number[] = []
 
 colors.forEach(function (color) {
   const lengthOfColor = color.length
@@ -127,8 +126,8 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 [.column]
 
-```javascript
-const uppercased = []
+```typescript
+const uppercased: string[] = []
 
 colors.forEach(function (color) {
   const uppercase = color.toUpperCase()
@@ -145,7 +144,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 [.code-highlight: 3-8]
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(function (color) {
@@ -159,7 +158,7 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 ---
 
-```javascript
+```typescript
 const uppercased = colors.map(function (color) {
   const uppercase = color.toUpperCase()
 
@@ -182,7 +181,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 We can simplify the code a little if we remove the temporary variables.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(function (color) {
@@ -198,7 +197,7 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 We can also use `arrow functions`
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(color => color.length)
@@ -222,7 +221,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 If we wish to create a new array but only retain _some_ of the elements from the original array we can use `filter`
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const longColors = colors.filter(color => color.length > 3)
@@ -238,7 +237,7 @@ This is very similar to `C# Where` from LINQ.
 
 ^ To use the classic example of adding up a list of numbers. Reduce takes at least two parameters, the first being the reducing function, and the second being the initial value. The reducing function takes at least two arguments itself, the first being the accumulator and the second being the current element from the array.
 
-```javascript
+```typescript
 const numbers = [100, 42, 13]
 
 const total = numbers.reduce((total, number) => total + number, 0)
