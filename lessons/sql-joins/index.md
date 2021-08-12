@@ -167,8 +167,8 @@ movies with a _G_ rating)
 When describing our database it is often usual to have a visualization of the
 structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
 
-The ERD of our movies and ratings looks like the following. (_NOTE_ We'll add
-in the actors soon...)
+The ERD of our movies and ratings looks like the following. (_NOTE_ We'll add in
+the actors soon...)
 
 ```
 +----------------------------+         +-----------------------+
@@ -333,9 +333,9 @@ matching `ratings` row the information will be `null`
 
 ### Many to Many
 
-For the list of actors in the cast we might say "A movie has many actors"
-but also "An actor has appeared in many movies." In this case we need to
-relate these two tables in a different way.
+For the list of actors in the cast we might say "A movie has many actors" but
+also "An actor has appeared in many movies." In this case we need to relate
+these two tables in a different way.
 
 The ERD of this looks like:
 
@@ -368,9 +368,8 @@ The ERD of this looks like:
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on
 either of the tables. In this case we need a third table, commonly referred to
 as a _join table_ to store the relationships. In this table, we will place two
-foreign keys, one to the left (movies) and the other to the right (actors).
-We attempt to name this table based on the relationship between the two
-tables.
+foreign keys, one to the left (movies) and the other to the right (actors). We
+attempt to name this table based on the relationship between the two tables.
 
 In this case we are trying to represent the relationship between a movie and the
 actors. We could call this relationship `Roles`
@@ -545,16 +544,16 @@ UPDATE "Roles" SET "CharacterName" = 'Will Turner' WHERE "Id" IN (1);
 UPDATE "Roles" SET "CharacterName" = 'Legolas' WHERE "Id" IN (2,3,4);
 
 -- Warwick Davis played Filius Flitwick in Harry Potter (5)
-UPDATE "Roles" SET "CharacterName" = 'Filius Flitwick' WHERE "Id" IN 5;
+UPDATE "Roles" SET "CharacterName" = 'Filius Flitwick' WHERE "Id" IN (5);
 
 -- Warwick Davis played Marvin in Hitchhikers (6)
-UPDATE "Roles" SET "CharacterName" = 'Marvin' WHERE "Id" IN 6;
+UPDATE "Roles" SET "CharacterName" = 'Marvin' WHERE "Id" IN (6);
 
 -- Martin Freeman played Bilbo in all three Hobbit movies (IDs 7, 8, and 9)
 UPDATE "Roles" SET "CharacterName" = 'Bilbo' WHERE "Id" IN (7,8,9);
 
 -- Martin Freeman played Arthur Dent in Hitchhikers Guide to the Galaxy (role ID 10)
-UPDATE "Roles" SET "CharacterName" = 'Arthur Dent' WHERE "Id" IN 10;
+UPDATE "Roles" SET "CharacterName" = 'Arthur Dent' WHERE "Id" IN (10);
 ```
 
 Let's see what our query looks like now:
