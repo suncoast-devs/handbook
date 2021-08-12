@@ -4,7 +4,7 @@ order: 1
 ---
 
 Whether you are a student learning to write clean code, a full-time developer
-working with a team, or a freelancer starting controlling the projects you work
+working with a team, or a freelancer starting to control the projects you work
 on, it is essential to make sure you are taking care of your health. As our
 lives become more complicated, balancing work, family, friends, and other
 responsibilities, we forget about taking care of our own basic needs.
@@ -105,7 +105,7 @@ make sure the screen is not too close to your face and put the display either at
 eye level or slightly lower.
 
 **Glare-blocking tinted computer glasses** There are a variety of frame styles
-with varying shades of tinting, and prices range greatly to help you find the
+with varying shades of tinting, even prescription tinted, and prices range greatly to help you find the
 right pair for you.
 
 **[F.lux](https://justgetflux.com/)** is a program that adjusts a display's
@@ -114,7 +114,7 @@ respite for the eyes. F.lux reduces eye strain during night-time use, helping to
 minimize the disruption of sleep patterns.
 
 **Get your eyes checked** Having your eyes checked on a scheduled basis will
-help identify problems early
+help identify problems early.
 
 ### Hand Care
 
@@ -138,7 +138,7 @@ keyboard. Then use your entire arm, not just your wrist, when moving the mouse.
 a lighter touch to help reduce the wear and tear on your fingers and wrist.
 
 **Mix up your work to relax your hands** Find other tasks that you can work on
-to give you a break away from the keyboard when doing those tasks time the time
+to give you a break away from the keyboard, when doing those tasks give yourself time
 to allow your arms to relax and rest in a different position than you would at
 the keyboard.
 

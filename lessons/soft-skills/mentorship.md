@@ -5,7 +5,7 @@ order: 4
 
 ## Give Ownership
 
-Studies have shown time and again that employees that take ownership of their work are more motivated and happier with their job. Give them ownership of the code they write and with that will come greater motivation to succeed. This in turn produces a higher quality product. That may mean they add a library they are familiar with or they use a development pattern that makes sense to them. Once a junior makes a connection between their work and the product a senior developer will only need to guide them in the right direction, instead of holding their hand all along the way.
+Studies have shown time and again that employees that take ownership of their work are more motivated and happier with their job. Give them ownership of the code they write and with that will come greater motivation to succeed. This in turn produces a higher quality product. That may mean they add a library they are familiar with or they use a development pattern that makes sense to them. Once a junior makes a connection between their work and the product, a senior developer will only need to guide them in the right direction, instead of holding their hand all along the way.
 
 ## Put them in a Position to Succeed
 

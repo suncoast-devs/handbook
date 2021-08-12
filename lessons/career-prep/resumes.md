@@ -17,7 +17,7 @@ If you have a preferred name, it is recommended you still use your full name, bu
 
 ### Email
 
-Having a professional email address is vital. You want to keep in mind that an employer may this email to schedule an interview, send over an offer for employment, and any paperwork you need to complete. Here are some does and don'ts of email:
+Having a professional email address is vital. You want to keep in mind that an employer may use this email to schedule an interview, send over an offer for employment, and any paperwork you need to complete. Here are some dos and don'ts of email:
 
 Do:
 - Use a professional email address
@@ -123,11 +123,11 @@ Need more examples on how to list your Education: [How to List Education on a Re
 
 ## Bonus - Volunteering
 
-Listing volunteering and community service programs that you are involved in can help employers know what passions you have outside of work. Adding your volunteering is not mandatory, so if you are running out of space, leave it off but be sure to talks about them during each interview.
+Listing volunteering and community service programs that you are involved in can help employers know what passions you have outside of work. Adding your volunteering is not mandatory, so if you are running out of space, leave it off but be sure to talk about them during each interview.
 
 Need more examples on how to list Volunteering on your Resume: [How to List Volunteer Work on Your Resume](https://www.indeed.com/career-advice/resumes-cover-letters/listing-volunteer-work-on-a-resume-with-example)
 
-## Resume Lenght: One-page vs. Two page
+## Resume Length: One-page vs. Two page
 
 So you have written your resume, formatted it to your liking, and now realize that it takes up multiple pages. The length of your resume depends on the amount of information you need to share.
 

@@ -40,10 +40,10 @@ LinkedIn shows only the first three lines of your profile summary (around 290-31
 - Why do you love your work?
 
 ### Experience
-The Experience section should contain detailed descriptions of your work or other professional experiences. You now have an opportunity to list details that you may have had to cut out of your resume do to the need to save space. Just remember it is ok to remove older positions that are no longer relevant in your career once you have built up your accomplishments.
+The Experience section should contain detailed descriptions of your work or other professional experiences. You now have an opportunity to list details that you may have had to cut out of your resume due to the need to save space. Just remember it is ok to remove older positions that are no longer relevant in your career once you have built up your accomplishments.
 
 ### Education
-Your education section says a lot about you, but you don't have to list every level of education you received. Remember to keep it professional listing the schools/colleges/universities which matter and relate your profession.
+Your education section says a lot about you, but you don't have to list every level of education you received. Remember to keep it professional listing the schools/colleges/universities which matter and relate to your profession.
 
 While adding a school in your education section, consider supplying any additional information that may be useful, such as:
 - Extracurricular activities you participated while attending that school/college in Activities and Societies text box.
@@ -67,7 +67,7 @@ To get recommendations, you need to ask people to give you recommendations. A su
 There are 9 different types of accomplishments you can list:
 - Certifications
 - Courses
-- Honour and awards
+- Honor and awards
 - Languages
 - Patents
 - Projects
