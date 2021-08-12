@@ -166,7 +166,7 @@ The `DbContext` is what allows us to connect to our database and relate our mode
 
 # Walk through
 
-We then define a property `Movies` (plural) which we state is of type `DbSet<Movie>`.
+We then define a property `Movies` (plural) of type `DbSet<Movie>`.
 
 The `Movie` here is the model we wish to relate and `Movies` corresponds to the `Movies` table in our database.
 

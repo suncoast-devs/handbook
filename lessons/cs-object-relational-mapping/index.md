@@ -222,11 +222,13 @@ Let's walk through this class. It is derived from `DbContext` which is provided
 by EF Core. The `DbContext` is what allows us to connect to our database and
 relate our models to tables.
 
-We then define a property `Movies` (plural) which we state is of type
-`DbSet<Movie>`. The `Movie` here is the model we wish to relate and `Movies`
-corresponds to the `Movies` table in our database. `DbSet` will act much like
-our `List` collection but has much more knowledge of how to read and write from
-the database.
+We then define a property `Movies` (plural) of type `DbSet<Movie>`. A `DbSet`
+will function similar to a `List` but have abilities to work with the data
+coming from the database. Specifically, we can use `LINQ` with a `DbSet` in the
+same ways we worked with `LINQ` and `List`. The `Movie` here is the model we
+wish to relate and `Movies` corresponds to the `Movies` table in our database.
+`DbSet` will act much like our `List` collection but has much more knowledge of
+how to read and write from the database.
 
 Finally, we **override** a method required by `EF Core` that tells us how to
 connect to the database. EF Core will call this method to setup the connection
