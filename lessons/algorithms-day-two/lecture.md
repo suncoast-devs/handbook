@@ -429,7 +429,7 @@ Middle is `21` and `25`, so median is: `23`
 
 [.build-lists: true]
 
-# 0, 1, few, $$ \infinity $$
+# 0, 1, few, $$ \infty $$
 
 - Solving a problem with _zero_ inputs is typically easy
 - Solving a problem with _one_ input is typically easy
@@ -440,13 +440,13 @@ Middle is `21` and `25`, so median is: `23`
 
 ---
 
-# [fit] Use "0, 1, few, $$ \infinity $$" in your thinking process
+# [fit] Use "0, 1, few, $$ \infty $$" in your thinking process
 
 - Perhaps start with an input size of "a few."
 - Use your intuition to understand the problem
 - Don't forget about `0` and `1` inputs
   - (sometimes the problem has a curveball here)
-- See if your intuition still works with $$ \infinity $$
+- See if your intuition still works with $$ \infty $$
 
 ---
 
