@@ -5,7 +5,7 @@ tags: ['c-sharp', 'console', 'sql', 'ef-core']
 
 # Rhythm's gonna get you
 
-For this project, we will model and create a database. We are starting a record label company, and we a place to store our bands, albums, and eventually songs. You are creating a console app that stores our information in a database.
+For this project, we will model and create a database. We are starting a record label company, and we need a place to store our bands, albums, and eventually songs. You are creating a console app that stores our information in a database.
 
 ## Objectives
 
