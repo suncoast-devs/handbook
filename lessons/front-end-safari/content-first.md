@@ -371,7 +371,7 @@ are `<label>` elements that correspond to their input:
 
 # Applying some semantic structure to our application
 
-As every developer knows, the first attempt we make to strucutre our code, or in
+As every developer knows, the first attempt we make to structure our code, or in
 this case a web page, may not be our sole attempt. We may find that as we need
 to style the page that this structure will change. By giving ourselves some
 structure we can start to see the areas where we can apply styles.
