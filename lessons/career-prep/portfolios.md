@@ -36,7 +36,7 @@ When choosing projects for your portfolio, pick at least three to five of your f
 
 If a project isn't working 100% because you are still working on it, add a note that it is a work in progress. Even go as far as to add wording around what the end goal is or what features you plan to add.
 
-After graduation or when looking for new positions, start working on a  freelance or real-world projects that you can add to your portfolio. Your work should be a mix of what you have done and what you want to do.
+After graduation or when looking for new positions, start working on freelance or real-world projects that you can add to your portfolio. Your work should be a mix of what you have done and what you want to do.
 
 The most import things to remember about your projects are:
 - Don't present anything you aren't proud of
@@ -44,7 +44,7 @@ The most import things to remember about your projects are:
 
 So what information should you provide when showcasing your projects:
 Show the details and the big picture, write a description that gives an overview of the project and add small details about code you are proud you wrote.
-Is it mobile-friendly? Talk about what you did to make the transitions between screen-sized work smoothly. Show an example of it working on a mobile device.
+Is it mobile-friendly? Talk about what you did to make the transitions between screen-sizes work smoothly. Show an example of it working on a mobile device.
 Did you build it with another developer or a team? Talk about how you worked together and the lessons you learned during the process.
 
 ## Building your portfolio from scratch vs. Templates

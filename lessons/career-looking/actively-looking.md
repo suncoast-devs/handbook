@@ -67,11 +67,10 @@ first or next position.
         <li>Email</li>
         <li>LinkedIn</li>
         <li>GitHub</li>
-        <li>Portfolio</li>
       </ul>
     </li>
     <li>Have you updated your Skills?</li>
-    <li>Have you displayed 3 -5 projects?</li>
+    <li>Have you displayed 3 - 5 projects?</li>
     <li>Is your design responsive?</li>
     <li>Has your Portfolio been reviewed by two people?</li>
   </ul>
@@ -140,7 +139,7 @@ first or next position.
   <summary>Step 10: Push to Github 3-5 days a week, stay active!</summary>
   <ul>
     <li>Employers, especially developers that interview you will want to see that you
-  are actively building, learning, and</li>
+  are actively building, learning, and developing</li>
   </ul>
 </details>
 

@@ -18,7 +18,7 @@ Check out her suggestions and some resources I pulled from it in the thread:
 
 2. Build with a friend or group. When you start a project alone, it's easy to
    give up when you feel lost and unsure of what to do next. With a friend or
-   group, you can figure it out & help each other get unstuck We're working on
+   group, you can figure it out & help each other get unstuck. We're working on
    creating groups to do this in the
    [@codebookclub](https://twitter.com/CodeBookClub)
 
@@ -35,7 +35,7 @@ Check out her suggestions and some resources I pulled from it in the thread:
 5. Use [@codepen](https://twitter.com/CodePen) or
    [@codesandbox](https://twitter.com/codesandbox) to start off. Starting your
    own project can be overwhelming because of so many tasks you have to do to
-   even get it live. Using one of the both is a good way to quickly get your
+   even get it live. Using one or both is a good way to quickly get your
    project up and running and sharable.
 
 6. Starting a coding project can be like standing at the foot of a mountain,
