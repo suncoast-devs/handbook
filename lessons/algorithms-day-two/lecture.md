@@ -326,7 +326,7 @@ The largest number in a list is either:
 
 - The first number in a list
 - **or**
-- If other numbers are remaining in the list ... the largest number in the remainder of the list
+- If other numbers are remaining in the list ... the largest number is in the remainder of the list
 
 ---
 
@@ -364,7 +364,7 @@ Find largest number in:
 
 # Example
 
-- Largest number of `66,48` is either `68`
+- Largest number of `66,48` is either `66`
 - **or**
 - Largest number in `48`
 
@@ -468,7 +468,7 @@ _"If something is true"_ or _"If something is false"_ help determine if or when 
 # [fit] Loop with counting
 
 - "Do the following X times"
-- "Do the following until X is less-then/more-than/equal to Y"
+- "Do the following until X is less-than/more-than/equal to Y"
 
 ---
 

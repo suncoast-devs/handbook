@@ -757,7 +757,7 @@ Given a word, which is just a sequence of letters, make a new word with the same
 |         |         |
 | ------- | ------- |
 | zebra   | arbez   |
-| word    | dwow    |
+| word    | drow    |
 | rotator | rotator |
 
 ^
@@ -782,7 +782,7 @@ Start by using a specific example...
     3. Put the current letter at the end of the new word
     4. If there is a previous letter,
        make the previous letter the current letter
-       letter and start back at 3.
+       and start back at 3.
     5. When there are no more letters in the word, our
        new word is the answer.
 
@@ -912,7 +912,7 @@ https://www.flickr.com/photos/91604813@N03/8439070389/in/photolist-dRJrBB-s4K1VU
 
 # [fit] Algorithm Complexity
 
-^ How do we know how "good" or algorithm is?
+^ How do we know how "good" our algorithm is?
 
 ---
 
@@ -957,7 +957,7 @@ When we speak of algorithm complexity, what are we measuring?
 
 ![fit](assets/binary-and-linear-search-animations.gif)
 
-^ Binary search we half the amount of comparisons we need to do each time we
+^ Binary search: we half the amount of comparisons we need to do each time we
 make a decision. This is worst case log(n)
 
 ^ The linear search has to compare every element until it finds it. Worst case
@@ -1221,7 +1221,7 @@ returning to the starting city at the end?
 
 ![fit autoplay mute loop](assets/wrap-it-up.gif)
 
-^ Lets wrap this up
+^ Let's wrap this up
 
 ---
 

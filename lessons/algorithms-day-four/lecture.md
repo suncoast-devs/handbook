@@ -13,7 +13,7 @@ theme: Next, 1
     What data or resources exist within the statement?
     What data or results exist within the statement?
     Is it possible to simplify the problem by dividing it into simpler cases?
-    Do you know any hand-written way to solve the problem?
+    Do you know any hand-written ways to solve the problem?
 
 ---
 
@@ -52,7 +52,7 @@ It does not matter; find what works best for **you**
 
 The more problems you solve, the more similar they become.
 
-We'll fill up our "bag of tricks" with techniques that can we can apply.
+We'll fill up our "bag of tricks" with techniques that we can apply.
 
 <br/>
 
@@ -94,7 +94,7 @@ Think of it as a "rough draft" of your algorithm.
 
 ---
 
-# [fit] THe only way to improve our algorithm skills is ...
+# [fit] The only way to improve our algorithm skills is ...
 
 - Practice
 
