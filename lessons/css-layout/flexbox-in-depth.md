@@ -35,7 +35,7 @@ understand how flexbox works.
 
 <CodePen>
 
-To get started, lets look at this example
+To get started, let's look at this example
 
 <pre data-lang='html'>
 {`
@@ -601,7 +601,7 @@ div {
 
 ## Let's take it a level higher! -- Nesting flex boxes
 
-Lets take a look at this more complex layout
+Let's take a look at this more complex layout
 
 <CodePen defaultTab='results'>
 
