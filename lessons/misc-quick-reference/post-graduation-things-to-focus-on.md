@@ -60,6 +60,12 @@ to what kind of questions you might see.
 You have come very far during the cohort, but your learning can't stop with
 graduation.
 
+### Learn a little bit of Computer Science
+
+If you want to learn some of the academic view of the software world, check out
+the resources at
+[Teach Yourself Computer Science](https://teachyourselfcs.com/).
+
 ### Attending meetups
 
 Meetups are a great way to meet new people, learn new ideas and see projects and
