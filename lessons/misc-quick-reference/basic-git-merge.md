@@ -1,5 +1,5 @@
 ---
-title: Basic Git Merge Instructions
+title: Git Merge Instructions
 ---
 
 ## How to merge one branch into another.
