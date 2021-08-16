@@ -97,24 +97,24 @@ it's better to be consistent than to go in spurts.
 | :---------------------------------------------------------------------------------------------------------------------------------------- |
 | Add a few "v2" features to your capstone                                                                                                  |
 | Update your portfolio                                                                                                                     |
-| go back and rebuild a few homework assignments (or your capstone!) that you want to revisit now that you have more knowledge than before. |
-| go back and do epic mode for a couple of homework.                                                                                        |
+| Go back and rebuild a few homework assignments (or your capstone!) that you want to revisit now that you have more knowledge than before. |
+| Go back and do epic mode for a couple of homework.                                                                                        |
 | Build a second [capstone sized project](https://suncoast.io/handbook/curriculum/final-project/project-ideas/)                             |
 
 You have a foundation of web programming. To grow those skills, start taking a
 took at these topics. To learn new topics, always build small sample projects
 demonstrating the idea and then apply them to a past project.
 
-| Advanced Topics                                                    |
-| :----------------------------------------------------------------- |
-| Test_Driven Development                                            |
-| Design Patterns, such as Singleton and Factory                     |
-| Big O notation                                                     |
-| SOLID                                                              |
-| Functioning Programming Fundamentals ( monads, immutability, etc.) |
-| Serverless Sites                                                   |
-| Continuous integration/deployment                                  |
-| UI/UX                                                              |
+| Advanced Topics                                |
+| :--------------------------------------------- |
+| Test Driven Development                        |
+| Design Patterns, such as Singleton and Factory |
+| Big O notation                                 |
+| SOLID                                          |
+| Functioning Programming Fundamentals           |
+| Serverless Sites                               |
+| Continuous integration/deployment              |
+| UI/UX                                          |
 
 ### More technologies
 
@@ -125,17 +125,17 @@ project using the new ideas.
 
 | Other techs            | language             | what is it?                                     |
 | ---------------------- | -------------------- | ----------------------------------------------- |
-| Redux                  | front-end            | state management                                |
-| Typescript             | front-end            | strongly-typed JavaScript                       |
-| Progressive web apps   | front-end            | makes your web apps feel more like a native app |
-| Gatsby                 | front-end            | static site generator                           |
-| Next.js                | front-end            | static site generator                           |
-| Electron               | front-end            | Create desktop apps with JavaScript             |
-| React Native           | front-end            | Create native apps with JavaScript              |
-| Web Assembly           | front-end            | An alternative to JavaScript                    |
-| Angular                | front-end            | An alternative to React                         |
-| Vue                    | front-end            | An alternative to React                         |
-| -                      | -                    |
+| Redux                  | Front-end            | state management                                |
+| Typescript             | Front-end            | strongly-typed JavaScript                       |
+| Progressive web apps   | Front-end            | makes your web apps feel more like a native app |
+| Gatsby                 | Front-end            | static site generator                           |
+| Next.js                | Front-end            | static site generator                           |
+| Electron               | Front-end            | Create desktop apps with JavaScript             |
+| React Native           | Front-end            | Create native apps with JavaScript              |
+| Web Assembly           | Front-end            | An alternative to JavaScript                    |
+| Angular                | Front-end            | An alternative to React                         |
+| Vue                    | Front-end            | An alternative to React                         |
+| -                      | -                    |                                                 |
 | Blazor                 | .NET                 | Use C# instead of JavaScript                    |
 | Razor                  | .NET                 | Use C# to create dynamic HTML                   |
 | Blazor Server          | .NET                 | A new real-time app framework                   |
@@ -144,25 +144,25 @@ project using the new ideas.
 | Xamarin                | .NET                 | Create native apps with C#                      |
 | Worker Service         | .NET                 | Have your server do stuff in the background     |
 | Signalr                | .NET                 | Real-time web apps in ASP.nET                   |
-| -                      | -                    |
+| -                      | -                    |                                                 |
 | Azure                  | DevOps               | Cloud hosting service                           |
 | AWS                    | DevOps               | Cloud hosting service                           |
 | Kubernetes             | DevOps               | A way to manage Docker deployments              |
 | Docker                 | DevOps               | Containerize your apps                          |
-| CI Server              | DevOps               | COntinuously deploy new features                |
-| -                      | -                    |
-| Ruby and Ruby on Rails | other web frameworks |
-| Java and Sprint        | other web frameworks |
-| Python and Django      | other web frameworks |
-| Node and Express       | other web frameworks |
+| CI Server              | DevOps               | Continuously deploy new features                |
+| -                      | -                    |                                                 |
+| Ruby and Ruby on Rails | Other web frameworks |                                                 |
+| Java and Sprint        | Other web frameworks |                                                 |
+| Python and Django      | Other web frameworks |                                                 |
+| Node and Express       | Other web frameworks |                                                 |
 
 During this time, you might try to learn all the things after graduation, **but
 that might not be the best path to success.**
 
-We would recommend only start to learn a new technology if :
+We would recommend only start to learn a new technology if:
 
-- the technology solves a problem you have in a project
-- you are going after a job that has that as a "nice to have" or "requirement."
+- The technology solves a problem you have in a project
+- You are going after a job that has that as a "nice to have" or "requirement."
 - You need a short break from what you are currently working on.
 
 ### Give back!
@@ -178,7 +178,7 @@ great way to help reinforce areas you'd like to practice.
 Stay active and be proactive during the job search. Staying active will help
 speed up the process and keep you occupied during your search.
 
-### Be patience
+### Have patience
 
 This process takes time. That is an unfortunate reality of the hunt. During the
 job hunt, patience is your best friend. Realize this is a process, and companies
