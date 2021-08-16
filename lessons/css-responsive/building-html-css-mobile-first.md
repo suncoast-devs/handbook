@@ -68,7 +68,7 @@ emerging.
       <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
       <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
       <li>
-        <a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
+        <a href="mailto:margaret-hamilton@example.com">Margaret Hamilton</a>
       </li>
     </ul>
   </aside>
@@ -117,7 +117,7 @@ emerging.
 
 ## Apply CSS for the mobile view
 
-Now we will add styling to the page to represent the format of the page in it's
+Now we will add styling to the page to represent the format of the page in its
 narrow, mobile view. By adding a little more CSS to our page we have a closer
 representation of the design.
 
@@ -163,7 +163,7 @@ section {
   padding: 0 2rem;
 }
 
-/* Put a little marging above and below the aside, which has the names of our team members */
+/* Put a little margin above and below the aside, which has the names of our team members */
 aside {
   margin: 2rem 0;
 }
@@ -185,11 +185,11 @@ aside ul li a {
 
 ## Adding more content and changing style when the page is wider.
 
-When the page is wider lets make a number of changes:
+When the page is wider let's make a number of changes:
 
-1. When wider, lets put the list of team members on the side. We'll make this
+1. When wider, let's put the list of team members on the side. We'll make this
    happen via `flexbox`
-2. When wider, lets replace our text at the top of the page with our logo
+2. When wider, let's replace our text at the top of the page with our logo
 
 To achieve this we can add CSS rules to our page that only apply under certain
 conditions. We do this with a new element called a `media query` -- The _media
@@ -231,7 +231,7 @@ will **not** be applied to the page.
       <li><a href="mailto:ada-lovelace@example.com">Ada Lovelace</a></li>
       <li><a href="mailto:alan-turing@example.com">Alan Turing</a></li>
       <li>
-        <a href="mailto:margret-hamilton@example.com">Margaret Hamilton</a>
+        <a href="mailto:margaret-hamilton@example.com">Margaret Hamilton</a>
       </li>
     </ul>
   </aside>
@@ -320,7 +320,7 @@ section {
   padding: 0 2rem;
 }
 
-/* Put a little marging above and below the aside, which has the names of our team members */
+/* Put a little margin above and below the aside, which has the names of our team members */
 aside {
   margin: 2rem 0;
 }
@@ -364,7 +364,7 @@ aside ul li a {
     width: 35%;
   }
 
-  /* Make the main part of the content the remainder of the width and use a sligihtly larger font */
+  /* Make the main part of the content the remainder of the width and use a slightly larger font */
   main {
     font-size: 1.5rem;
     width: 65%;
@@ -378,7 +378,7 @@ aside ul li a {
 
 We can also adjust the content itself under different media query conditions.
 
-When the page is wider lets show the team member's email addresses as well as
+When the page is wider let's show the team member's email addresses as well as
 adding an icon.
 
 In order to do this we will add a data-email attribute to each team member's a
@@ -418,7 +418,7 @@ pseudo selector.
 ```
 
 To best see the results, click on the _codepen_ icon to open the page full
-width, then slowing shrink the width of the page to see the effect of the CSS
+width, then slowly shrink the width of the page to see the effect of the CSS
 for the `aside`.
 
 ```html
@@ -447,7 +447,7 @@ for the `aside`.
       <li>
         <a
           data-email="margaret-hamilton@example.com"
-          href="mailto:margret-hamilton@example.com"
+          href="mailto:margaret-hamilton@example.com"
           >Margaret Hamilton</a
         >
       </li>
@@ -538,7 +538,7 @@ section {
   padding: 0 2rem;
 }
 
-/* Put a little marging above and below the aside, which has the names of our team members */
+/* Put a little margin above and below the aside, which has the names of our team members */
 aside {
   margin: 2rem 0;
 }
@@ -582,7 +582,7 @@ aside ul li a {
     width: 35%;
   }
 
-  /* Make the main part of the content the remainder of the width and use a sligihtly larger font */
+  /* Make the main part of the content the remainder of the width and use a slightly larger font */
   main {
     font-size: 1.5rem;
     width: 65%;

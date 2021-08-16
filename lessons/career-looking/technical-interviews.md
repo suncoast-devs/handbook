@@ -29,7 +29,7 @@ You don't always have to have the right answer, use this as an opportunity to as
 
 ### Problem Solving
 
-Like learning how you perform under pressure, interviewers want to see how you react if you reach something you don't know or understand. The interviewer wants to know if you ask questions, stare at your computer, saying nothing, or erupt in frustration. 
+Like learning how you perform under pressure, interviewers want to see how you react if you reach something you don't know or understand. The interviewer wants to know if you ask questions, stare at your computer, say nothing, or erupt in frustration. 
 
 How you handle pressure is a crucial indicator of how you might be as a teammate and what the team would have to work with should you run into an issue once hired.
 
@@ -124,7 +124,7 @@ Take-Home assessments are an opportunity to work on a challenge on your own time
 Take-home assessments will come with a timeline if the interviewer doesn't mention the due date YOU need to ask. Never assume a due date because that could knock you out of an opportunity because you missed a deadline. In addition to a set time to get the challenge completed take-home assessments are often vague, they may not tell you how to style the project, or what layout they are expecting. These are decisions you will need to make and support if questioned about them afterward.
 
 Here are some tips to help you:
-- It's out to ask questions if there is something you don't understand, but only ask for the necessary information to make it work
+- It's okay to ask questions if there is something you don't understand, but only ask for the necessary information to make it work
 - Work consistently, push to GitHub so you can show you worked continuously, and you pushed up your code. Pushing your code to GitHub will give them an idea of how you manage your time. Time management skills are something every development lead will want to see from you.
 - Document carefully
     - Create a README with the prject title and a link to the deployed site.
@@ -140,4 +140,4 @@ Resources:
 
 - [Guide to Understanding the Technical Interview (With Tips and Examples)](https://www.indeed.com/career-advice/interviewing/technical-interview)
 
-_Special thank you to [Dylan Attal - COhort XII](https://www.linkedin.com/in/dylanattal/) and [Nick Weber - Cohort XV](https://www.linkedin.com/in/nicholasryanweber/) for providing the information used for this page
+_Special thank you to [Dylan Attal - Cohort XII](https://www.linkedin.com/in/dylanattal/) and [Nick Weber - Cohort XV](https://www.linkedin.com/in/nicholasryanweber/) for providing the information used for this page

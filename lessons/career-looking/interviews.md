@@ -15,7 +15,7 @@ The Job Search is your starting point; this is where you apply for positions.
 
 Here are some other portions of the Handbook that you may find helpful,
 
-- [Actively Look for jobs](../career-looking/actively-looking) to help get your
+- [Actively Looking for Jobs](../career-looking/actively-looking) to help get your
   job search started.
 - Also, [Decoding Job Descriptions](../career-looking/decoding-job-desc) will
   help you figure out what the job description can tell you about the company
@@ -52,7 +52,7 @@ So what are some of the Dos and Don'ts during the Job Search Process?
         <li>Having your information on your resume will ensure that an employer can get a hold of you during the entire process</li>
       </ul>
     </li>
-    <li>Let numbers/stats speak loudly instead Highlights
+    <li>Let numbers/stats speak loudly instead of Highlights
       <ul>
         <li>If you have percentages, dollar amounts, or other stats to help support your accomplishments be sure to use them</li>
       </ul>
@@ -154,7 +154,7 @@ So what are companies/teams looking for during a technical interview?
 - Technical interviews also help determine your level of understanding and
   experience.
 
-What are the Do and Don'ts for Technical Interviews?
+What are the Dos and Don'ts for Technical Interviews?
 
 <details>
   <summary>Do</summary>
@@ -170,7 +170,7 @@ What are the Do and Don'ts for Technical Interviews?
     </li>
     <li>Walkthrough the solution before you code
       <ul>
-        <li>YNo matter what the issue or what answer you choose, make sure to think out loud! If you have different ways of solving the problem, talk through the options before deciding which to use.</li>
+        <li>No matter what the issue or what answer you choose, make sure to think out loud! If you have different ways of solving the problem, talk through the options before deciding which to use.</li>
         <li>Talking out the problem helps the interviewer see and understand your thought process.</li>
         <li>Also, the interviewer may recommend one solution over the others because he or she knows that the others may have certain pitfalls or may be outside of the scope of the interview.</li>
       </ul>
@@ -215,7 +215,7 @@ The Face-to-Face Interview is an opportunity for you to interview the
 company/team as much as they are interviewing you. You will also have a chance
 to see the office location and possibly get a tour while you are there.
 
-What are the Do and Don'ts for Face-to-Face Interviews?
+What are the Dos and Don'ts for Face-to-Face Interviews?
 
 <details>
   <summary>Do</summary>
@@ -258,7 +258,7 @@ What are the Do and Don'ts for Face-to-Face Interviews?
 <details>
   <summary>Don't</summary>
   <ul>
-    <li>Show up and hour early/late
+    <li>Show up an hour early/late
       <ul>
         <li>Respect their time</li>
         <li>Companies may not have a place for you to sit if you show up an hour early, if that happens, find a local coffee shop to sit at until it is closer to your appointment or worse case, stay in your car.</li>
@@ -320,8 +320,8 @@ news or during negotiations.
     <li>Play hard-ball or be evasive with your pay
       <ul>
         <li>You don't have to give an exact salary, but have a range that you can accept and keep your number in the middle</li>
-        <li>Understand not all companies are not able to negotiate salaries for every position</li>
-        <li>Be ready for a company to walk away if you come off stubborn or willing to work with them</li>
+        <li>Understand not all companies are able to negotiate salaries for every position</li>
+        <li>Be ready for a company to walk away if you come off stubborn or unwilling to work with them</li>
       </ul>
     </li>
     <li>Take it personally

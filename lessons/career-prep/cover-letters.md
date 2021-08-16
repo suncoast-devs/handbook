@@ -19,10 +19,10 @@ It is easy to create a template for your cover letters to save time, but there i
 Use your first sentence to grab the attention of the person reading it. Communicate how you can help to solve the problems, identify your skills, experience, and achievements. Whatever you do, avoid saying, “I’m applying for the role of XXX.”
 
 ## Identify how you found out about the opportunity
-If you have a connection that thought you would be a good fit for the position, be sure to mention them. Having a connection can help break move the process along faster.
+If you have a connection that thought you would be a good fit for the position, be sure to mention them. Having a connection can help break the ice or move the process along faster.
 
 ## Customize the subject line 
-If the job position mentions a code or specific wording, you should use the subject line is where you include it. Otherwise, be sure to mention the position title.
+If the job position mentions a code or specific wording, you should include it in the subject line. Otherwise, be sure to mention the position title.
 
 ## Use keywords mentioned in the job description
 Talk about the skills that you have that relate to the position and how you can impact it. Don’t just throw keywords in without a purpose in the hope that your application gets picked up in any applicant tracking software (ATS) – it is possible to overuse keywords.
@@ -31,7 +31,7 @@ Talk about the skills that you have that relate to the position and how you can 
 Use your cover letter to describe additional details that you weren’t able to squeeze onto the single page of your resume. A cover letter gives you the freedom to use full sentences—instead of bullet points—so use them to expand upon your resume points and tell the story of why you’re the perfect fit for the company
 
 ## Don’t Let Your Fear of Bragging Get in the Way
-Imagine you’re someone else writing a letter about yourself. Think from the perspective of a friend, mentor, or previous employer—someone who would only sing your praises—and then write the letter from her point of view
+Imagine you’re someone else writing a letter about yourself. Think from the perspective of a friend, mentor, or previous employer—someone who would only sing your praises—and then write the letter from their point of view
 
 ## Have Someone Gut Check It
 Have a friend take a look at your cover letter, and ask him or her two questions: 
