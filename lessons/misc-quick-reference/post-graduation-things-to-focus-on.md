@@ -66,6 +66,16 @@ If you want to learn some of the academic view of the software world, check out
 the resources at
 [Teach Yourself Computer Science](https://teachyourselfcs.com/).
 
+### Online Resources
+
+- [Frontend Masters](https://frontendmasters.com/courses/#all)
+- [LearnCode.academy - Youtube playlist](https://www.youtube.com/user/learncodeacademy/playlists)
+- [Udemy - Complete JavaScript Course](https://www.udemy.com/the-complete-javascript-course)
+- [Udemy - React 2nd edition](https://www.udemy.com/react-2nd-edition/)
+- [Academind - Youtube playlist](https://www.youtube.com/channel/UCSJbGtTlrDami-tDGPUV9-w/playlists)
+- [Pluralsight](https://app.pluralsight.com/library/)
+- [JavaScript30](https://javascript30.com/)
+
 ### Attending meetups
 
 Meetups are a great way to meet new people, learn new ideas and see projects and
