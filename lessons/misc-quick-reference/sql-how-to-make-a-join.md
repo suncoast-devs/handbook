@@ -1,5 +1,5 @@
 ---
-title: How to make a SQL JOIN
+title: SQL Joins
 ---
 
 Knowing how to join tables together and use where clauses is an essential aspect
