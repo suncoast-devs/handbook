@@ -59,7 +59,7 @@ Theme: Next,1
 
 ---
 
-# [fit] Lets create a method
+# [fit] Let's create a method
 
 ^ The next slide will be the code we will be working with
 

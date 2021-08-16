@@ -91,7 +91,7 @@ index = (index + 1) % 5 // 1 + 1 is 2 -- 2 % 5 = 2
 console.log(`index is ${index}`)
 ```
 
-Lets see this in a loop:
+Let's see this in a loop:
 
 ```js
 for (let index = 0; index < 20; index++) {

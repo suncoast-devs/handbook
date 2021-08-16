@@ -45,7 +45,7 @@ single concept (maybe named a `Person`) we need to introduce the idea of a
   - e.g. `name = "Gavin"`
   - e.g. `score = 42`
   - e.g. instance of a string: `name = String.new("Gavin")`
-- But we can make our own classes. Lets make one to keep track of information
+- But we can make our own classes. Let's make one to keep track of information
   about my dog.
 
   ```ruby

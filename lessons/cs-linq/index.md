@@ -33,8 +33,8 @@ Func<int, int> MultiplyBy2 = value => value * 2;
 
 Let's break this down and see how it works in a similar way. First the data type
 for `MultiplyBy2` is `Func<int, int>` -- The first `int` in the `<>` is the type
-of argument the _function_ takes in. The last `int` represents the kind of return
-value the _function_ produces. We are then assigning this variable the
+of argument the _function_ takes in. The last `int` represents the kind of
+return value the _function_ produces. We are then assigning this variable the
 following: `value => value * 2`. This small bit of code is called an
 `expression`
 
@@ -56,8 +56,8 @@ Func<Employee, string, bool> EmployeeHasName = (employee, name) => employee.Name
 In this case we are telling our _function_ that it first takes an `Employee`
 object, secondarily it takes a `string` and finally it returns a `bool`. The
 expression defines the `Employee` (first) variable to be named `employee` and
-the `string` (second) variable to be called `name`. Finally the expression itself 
-returns a `bool` since that is what we would get if we evaluated
+the `string` (second) variable to be called `name`. Finally the expression
+itself returns a `bool` since that is what we would get if we evaluated
 `employee.Name == name` as the `==` will always give us either `true` or
 `false`.
 
@@ -75,8 +75,8 @@ passed to other methods.
 
 ## Using LINQ and expressions.
 
-Lets return to our expression example of using the `MultiplyBy2`. Suppose we had
-a list such as:
+Let's return to our expression example of using the `MultiplyBy2`. Suppose we
+had a list such as:
 
 ```csharp
 var scores = new List<int> { 42, 100, 98, 15 };
@@ -523,8 +523,7 @@ var movies = new List<Movie>()
 
 ## How many movies are there?
 
-To determine how many movies there are, we can ask the collection for its
-count:
+To determine how many movies there are, we can ask the collection for its count:
 
 ```csharp
 Console.WriteLine($"There are {movies.Count()} total movies");

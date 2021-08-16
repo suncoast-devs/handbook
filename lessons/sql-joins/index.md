@@ -60,7 +60,7 @@ We now have a column `Id` that the database will ensure is unique and identifies
 the row (`PRIMARY KEY`) and is automatically generated sequentially by the
 database (`SERIAL`)
 
-#### Lets add some movies to our database:
+#### Let's add some movies to our database:
 
 ```sql
 INSERT INTO "Movies" ("Title",  "PrimaryDirector", "YearReleased", "Genre")
@@ -120,7 +120,7 @@ CREATE TABLE "Ratings" (
 );
 ```
 
-#### Lets insert some ratings:
+#### Let's insert some ratings:
 
 ```sql
 INSERT INTO "Ratings" ("Description") VALUES ('G');
@@ -141,7 +141,7 @@ CREATE TABLE "Actors" (
 );
 ```
 
-#### Lets also insert some actors
+#### Let's also insert some actors
 
 ```sql
 INSERT INTO "Actors" ("FullName", "Birthday")

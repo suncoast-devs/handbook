@@ -42,9 +42,9 @@ manually updating the user interface.
 
 ## What if the user interface was simply a representation of state?
 
-Lets take our simple example of the counter. What if we did not have to manually
-adjust the user interface each time we changed the counter? That is what if the
-logic flow was as follows:
+Let's take our simple example of the counter. What if we did not have to
+manually adjust the user interface each time we changed the counter? That is
+what if the logic flow was as follows:
 
 ```
 initialize counter to 0
@@ -68,7 +68,7 @@ The idea is this:
 Our user interface is really nothing more than a user friendly way to show and
 update the state of our data.
 
-Lets look at a more complex example.
+Let's look at a more complex example.
 
 ```
 
@@ -128,7 +128,7 @@ What if the logic was:
 
 ## What do we need in order to support this?
 
-Lets look at what the data behind this looks like:
+Let's look at what the data behind this looks like:
 
 ```
     State               <=== Transform ===>      User Interface

@@ -182,7 +182,7 @@ ul li.not-allowed-click {
 
 ---
 
-# Lets add an "X" to one of our cells and mark it as `taken`
+# Let's add an "X" to one of our cells and mark it as `taken`
 
 ---
 

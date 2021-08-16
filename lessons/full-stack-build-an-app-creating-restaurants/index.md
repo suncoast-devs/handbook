@@ -60,7 +60,7 @@ We set the value to the part of the object corresponding to the name of the
 object we are building. We also set a unique method to handle input/textarea
 changes.
 
-Lets implement one of the handling methods, `handleAddress`:
+Let's implement one of the handling methods, `handleAddress`:
 
 ```javascript
 function handleAddress(event) {

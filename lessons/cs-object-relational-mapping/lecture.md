@@ -263,7 +263,7 @@ optionsBuilder.UseLoggerFactory(loggerFactory);
 
 Our database has other tables we could add to our system: `Ratings`, `Roles`, and `Actors`.
 
-Lets add a model for our ratings.
+Let's add a model for our ratings.
 
 ```csharp
 class Rating
