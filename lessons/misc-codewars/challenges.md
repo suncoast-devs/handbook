@@ -72,6 +72,7 @@ order: 2
 |  7  | Stones on the Table                                        | https://www.codewars.com/kata/5f70e4cce10f9e0001c8995a        | JS Only                             |
 |  7  | Square every digit                                         | https://www.codewars.com/kata/546e2562b03326a88e000020        |                                     |
 |  7  | SQL Basics: Simple JOIN                                    | https://www.codewars.com/kata/5802e32dd8c944e562000020        | SQL Only                            |
+|  7  | Sort the Vowels!                                           | https://www.codewars.com/kata/59e49b2afc3c494d5d00002a        | JS Only                             |
 |  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
 |  7  | Shortest Word                                              | https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9        |                                     |
 |  7  | Say Me Please Operations                                   | https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d        |                                     |
@@ -87,6 +88,7 @@ order: 2
 |  7  | Largest pair sum in array                                  | https://www.codewars.com/kata/556196a6091a7e7f58000018        |                                     |
 |  7  | Insert Dashes                                              | https://www.codewars.com/kata/55960bbb182094bc4800007b        |                                     |
 |  7  | Highest and Lowest                                         | https://www.codewars.com/kata/554b4ac871d6813a03000035        |                                     |
+|  7  | Hex to Decimal                                             | https://www.codewars.com/kata/57a4d500e298a7952100035d        |                                     |
 |  7  | Get the Middle Character                                   | https://www.codewars.com/kata/56747fd5cb988479af000028        |                                     |
 |  7  | Form the hightest                                          | https://www.codewars.com/kata/5a4ea304b3bfa89a9900008e        |                                     |
 |  7  | Find the middle element                                    | https://www.codewars.com/kata/545a4c5a61aa4c6916000755        |                                     |
