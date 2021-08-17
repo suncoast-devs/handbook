@@ -634,7 +634,7 @@ switch (expression) {
 
 # Functions
 
-In JavaScript, named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
+In JavaScript, named groups of code that perform a specific behavior are called `functions` (whereas in `C#` we called them `methods`).
 
 Also, these `functions` do not need to be in `classes`.
 
@@ -679,7 +679,7 @@ function square(number) {
 
 > If it quacks like a duck, and it walks like a duck, it must be a duck
 
-Our `square` method will work for any variable type where `*`behaves the way we like.
+Our `square` method will work for any variable type where `*` behaves the way we like.
 
 ---
 
@@ -853,7 +853,7 @@ We'll run this program in Visual Studio, and we'll see the following output.
 
 # Notice
 
-- The debugger is showing us all the variables we can see when we reach the `debugger statement and our program paused.
+- The debugger is showing us all the variables we can see when we reach the debugger statement and our program paused.
 - The variable `variableFromInnerScope` is shown in the list of `Local Variables`.
 - The variable `variableFromOuterScope` is listed in the section marked `closure`.
 - This is because that variable was "captured" by the function when it was defined.
@@ -869,7 +869,7 @@ We can create a more complex example to demonstrate that these functions do "rem
 # Doing work later but still having access to variables
 
 - Create an array of people. Each person will have a name, a birthday, and a number of milliseconds we should wait before showing their information.
-- Use javaScript's `setTimeout` to do the waiting.
+- Use JavaScript's `setTimeout` to do the waiting.
 - Since `setTimeout` calls a function **later**, this will help prove that the function is really "remembering" its values.
 
 ---
@@ -925,7 +925,7 @@ function printPersonInfo(person) {
 
 ```javascript
 people.forEach(function (person) {
-  // Inside here we have access to the `person` variable here. The `person` variable is
+  // Inside here we have access to the `person` variable. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the
   // function, it is a new creation of that variable.
 
@@ -956,7 +956,7 @@ people.forEach(function (person) {
 - When code calls `printPersonInfo` for the first time, `person` is
   `Alan Turing`
 - The second time, the closure captures `person` being equal to `Ada Lovelace`
-- Then `Grace Hooper`
+- Then `Grace Hopper`
 - Finally `Donald Knuth`.
 
 ![right fit](./assets/closure-complex.gif)
