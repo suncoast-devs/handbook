@@ -100,7 +100,7 @@ order: 2
 |  7  | Don't give me 5                                            | https://www.codewars.com/kata/5813d19765d81c592200001a        |                                     |
 |  7  | Disemvowel Troll                                           | https://www.codewars.com/kata/52fba66badcd10859f00097e        |                                     |
 |  7  | Descending Order                                           | https://www.codewars.com/kata/5467e4d82edf8bbf40000155        |                                     |
-|  7  | Cryptanalysis Word Patterns                                | https://www.codewars.com/kata/5f3142b3a28d9b002ef58f5e        |                                     |
+|  7  | Cryptanalysis Word Patterns                                | https://www.codewars.com/kata/5f3142b3a28d9b002ef58f5e        | JS Only                             |
 |  7  | Counting Elements                                          | https://www.codewars.com/kata/5569b10074fe4a6715000054        | Requires Dictionary in C#           |
 |  7  | Convert the score                                          | https://www.codewars.com/kata/5b6c220fa0a661fbf200005d        | JS Only                             |
 |  7  | Computer problem series #1: Fill the Hard Disk Drive       | https://www.codewars.com/kata/5d49c93d089c6e000ff8428c        |                                     |
