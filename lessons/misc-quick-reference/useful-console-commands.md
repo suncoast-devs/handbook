@@ -1,5 +1,5 @@
 ---
-title: The Shell
+title: Useful Console Commands
 ---
 
 Developers typically like working on the command line (shell). The shell is a
