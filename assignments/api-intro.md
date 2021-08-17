@@ -45,8 +45,6 @@ Read the documentation on this API: https://one-list-api.herokuapp.com/
 Choose your access token from your first and last name. For example `jane-doe`
 or `ron-swanson`.
 
-> NOTE: To attach images of your screenshots, use a service such as [PostImage](https://postimages.org/) to upload your images and get a URL to paste into the homework comments.
-
 - Use `Insomnia` to insert 6 items in the list associated with your access token. Attach screenshots of the request and results screen.
 - Use `Insomnia` to mark 2 of these items complete. Attach screenshots of the request and result screen.
 - Use `Insomnia` to delete 1 of the non-complete items. Attach screenshots of the request and result screen.
