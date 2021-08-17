@@ -31,8 +31,6 @@ In this project, you will practice accessing an API. You'll see how an API reque
 | Star Wars API                                                                    | https://swapi.dev                                 |
 | Harvard Art Museum API (this one requires an API key, but set up is very simple) | https://www.harvardartmuseums.org/collections/api |
 
-> NOTE: To attach images of your screenshots, use a service such as [PostImage](https://postimages.org/) to upload your images and get a URL to paste into the homework comments.
-
 - After choosing your API **read** the documentation.
 - Use the `Insomnia` tool to make a few queries of the API.
 - Capture screenshots from `Insomnia` showing your request and the response output.
