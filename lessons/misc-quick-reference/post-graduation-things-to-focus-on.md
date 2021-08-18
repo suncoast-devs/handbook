@@ -66,6 +66,10 @@ If you want to learn some of the academic view of the software world, check out
 the resources at
 [Teach Yourself Computer Science](https://teachyourselfcs.com/).
 
+This youtube author walks through computer science papers and tries to explain
+the ideas in an approachable way:
+[Vivek Haldar](https://www.youtube.com/c/VivekHaldar/videos)
+
 ### Online Resources
 
 - [Frontend Masters](https://frontendmasters.com/courses/#all)
