@@ -44,10 +44,9 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
     - CountryOfOrigin
     - NumberOfMembers
     - Website
-    - Style
+    - Genre
     - IsSigned
     - ContactName
-    - ContactPhoneNumber
 
   - Songs
 
@@ -74,7 +73,7 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
 
 ### Adventure Mode
 
-- Track the individual members of a band. Since musicians play in several different groups, create a new table called `Musicians` and make it a _many to many_ relationships with a Band.
+- Track the individual members of a band. Since musicians play in several different bands, create a new table called `Musicians` and make it a _many to many_ relationships with a Band.
 
 - Add the following menu options
   - View albums in a genre
