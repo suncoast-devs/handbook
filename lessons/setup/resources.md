@@ -5,6 +5,21 @@ order: 70
 
 # Additional Resources
 
+## Download documentation offline
+
+There are several good tools for downloading language, framework, and library
+documentation to have searchable, offline docs.
+
+For the Mac, check out [Dash](https://kapeli.com/dash) and
+[DevDocs](https://github.com/egoist/devdocs-desktop). DevDocs can be installed
+via: `brew install --cask devdocs`
+
+For Windows, try [Velocity](https://velocity.silverlakesoftware.com/)
+
+For Linux, try [Zeal](https://zealdocs.org/)
+
+DevDocs is available offline in your browser at [devdocs.io](https://devdocs.io)
+
 ## VS Code
 
 - [VS Code can do that?!](https://vscodecandothat.com)
