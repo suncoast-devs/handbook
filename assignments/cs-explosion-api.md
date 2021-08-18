@@ -11,7 +11,7 @@ tags: ['c-sharp', 'console', 'api', 'codewars']
 ## Requirements
 
 - Before starting your assignment, solve these codewars:
-  - Reverse String [https://www.codewars.com/kata/5168bb5dfe9a00b126000018](https://www.codewars.com/kata/5168bb5dfe9a00b126000018)
+  - Reverse String [https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/csharp](https://www.codewars.com/kata/5168bb5dfe9a00b126000018/train/csharp)
   - Digits Explosion [https://www.codewars.com/kata/digits-explosion](https://www.codewars.com/kata/digits-explosion)
   - Mumbling [https://www.codewars.com/kata/mumbling](https://www.codewars.com/kata/mumbling)
 - TOP TIP: Reverse String is easier than Digits Explosion. Digits Explosion is probably easier than Mumbling. Start in that order!
@@ -28,7 +28,6 @@ dotnet new sdg-api -o ExplosionAPI
 
 ### Explorer Mode
 
-- Create a new `webapi` api project
 - Create a controller for `ReverseString`
   - Create a new Controller called `ReverseStringController`
   - This will have one `HttpGet` method
