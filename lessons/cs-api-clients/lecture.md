@@ -315,7 +315,23 @@ class Item
 
 ---
 
-# Make the output pretty
+# Make the output pretty (_OPTIONAL_)
+
+Out output has been boring. Here is one thing we could add to make it more exciting.
+
+```
+------------------------------------------------
+| one                           | two  | three |
+------------------------------------------------
+| Console Tables                | 2    | 3     |
+------------------------------------------------
+| Can output our data in tables | Neat | oh    |
+------------------------------------------------
+```
+
+---
+
+# ConsoleTables
 
 ```shell
 dotnet add package ConsoleTables
@@ -387,8 +403,6 @@ else
 
 # Add a menu
 
-^ This starts in the `continued.md` lesson section
-
 ---
 
 # Show all
@@ -419,6 +433,8 @@ while (keepGoing)
     }
 }
 ```
+
+---
 
 # Fetching a specific todo item
 
