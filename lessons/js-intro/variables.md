@@ -69,7 +69,7 @@ name = "Jane";
 
 Most of the time we are able to declare a variable and assign a value at the
 same time. However, it is sometimes useful to declare the variable and assign
-it's value later. Once we introduce conditions and functions we will see cases
+its value later. Once we introduce conditions and functions we will see cases
 of this.
 
 # Types
@@ -215,4 +215,4 @@ The Boolean type has two literal values: `true` and `false`.
 
 ---
 
-Now we have data, we need ways to manipulate the variables
+Now that we have data, we need ways to manipulate the variables

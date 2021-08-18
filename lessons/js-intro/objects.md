@@ -79,13 +79,6 @@ This notation is also very useful when property names are to be dynamically
 determined (when the property name is not determined until runtime). Examples
 are as follows:
 
-An object property name can be any valid JavaScript string, or anything that can
-be converted to a string, including the empty string. However, any property name
-that is not a valid JavaScript identifier (for example, a property name that has
-a space or a hyphen, or that starts with a number) can only be accessed using
-the square bracket notation. This notation is also very useful when property
-names are to be dynamically determined (when the property name is not determined
-until runtime). Examples are as follows:
 
 ```javascript
 let anObject = new Object()
@@ -185,7 +178,7 @@ let myOtherCar = {
 ```
 
 Much better, we've saved one line of code, however, it now doesn't matter how
-many property/value paris `myCar` has since they are all now part of
+many property/value pairs `myCar` has since they are all now part of
 `myOtherCar` since this is effectively what JavaScript is doing for us:
 
 ```javascript
