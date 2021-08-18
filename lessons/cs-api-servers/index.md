@@ -248,8 +248,8 @@ each time.
 
 ## Accepting input
 
-When we were reviewing APIs we said that APIs need to handle a few questions, the
-first was:
+When we were reviewing APIs we said that APIs need to handle a few questions,
+the first was:
 
 - What is the input that needs to be sent?
 
@@ -309,9 +309,9 @@ The other way we discussed giving information to an API was as part of the URL
 itself.
 
 Let's make an API for rolling die. We will start with making an endpoint
-`/dice`. To follow our convention we will make a `DiceController.cs` file (e.g.
-the `dice` from `/dice` is converted to CamelCase and we tack on `Controller`)
-and inside we define a `DiceController` class.
+`/api/Dice`. To follow our convention we will make a `DiceController.cs` file
+(e.g. the `Dice` from `/Dice` is converted to CamelCase and we tack on
+`Controller`) and inside we define a `DiceController` class.
 
 ```csharp
 using System;
@@ -328,21 +328,21 @@ namespace BasicApi.Controllers
 ```
 
 Now we will define our method to handle the `GET`. However, we want to specify
-the number of sides our die has within the URL. That is a request to `/dice/6`
-would roll a 6-sided die and return us a random number. However if we sent a
-`GET` to `/dice/20` we'd be rolling a 20-sided die.
+the number of sides our die has within the URL. That is a request to
+`/api/Dice/6` would roll a 6-sided die and return us a random number. However if
+we sent a `GET` to `/api/Dice/20` we'd be rolling a 20-sided die.
 
 Somehow we must tell the _route_ part of `[HttpGet]` that we'd like to have part
 of the URL be _variable_ and tell it what we want to call that specific part of
 the URL. In this case a good name for that part is `sides`.
 
 We can modify the `[HttpGet]` with parenthesis to specify additional parts of
-the URL beyond the `/dice` base. However if we use `{}` we can tell .NET that
-we'd match anything and whatever is supplied in the URL we want to name it. In
-this case we specify our attribute as `HttpGet("{sides}")`. We read this as "In
-the `/dice` endpoint here is the method to handle GET requests that look like
-/dice/6 and /dice/20 and dice/99999, but we refer to the 6, 20, or 99999 as
-`sides`"
+the URL beyond the `/api/Dice` base. However if we use `{}` we can tell .NET
+that we'd match anything and whatever is supplied in the URL we want to name it.
+In this case we specify our attribute as `HttpGet("{sides}")`. We read this as
+"In the `/api/Dice` endpoint here is the method to handle GET requests that look
+like /api/Dice/6 and /api/Dice/20 and /api/Dice/99999, but we refer to the 6,
+20, or 99999 as `sides`"
 
 Just like for query parameters, we define a method argument to receive this
 data. We name it the same as what we wrote inside `{}`, in this case `sides`.
@@ -388,8 +388,8 @@ namespace BasicApi.Controllers
 }
 ```
 
-Give it a try. Use `Insomnia` to visit `https://localhost:5001/dice/6` and see
-what you roll! It should be a random die roll between `1` and `6`
+Give it a try. Use `Insomnia` to visit `https://localhost:5001/api/Dice/6` and
+see what you roll! It should be a random die roll between `1` and `6`
 
 There will be another change if you look over at the `Header` tab. The
 `Content-Type` has changed. We are now returning `application/json`. This is
@@ -401,8 +401,8 @@ Let's return some more complex data. Let's roll many die.
 ## Rolling more than one die.
 
 Let's combine the URL pattern with a query parameter of the number of die we
-wish to roll. So our URL will look like `/dice/6?count=4` to roll `4` die with
-`6` sides.
+wish to roll. So our URL will look like `/api/Dice/6?count=4` to roll `4` die
+with `6` sides.
 
 First let's add the query parameter to our arguments:
 `public int Roll(int sides, int count)` and since we will be returning more than
@@ -450,7 +450,7 @@ namespace BasicApi.Controllers
 }
 ```
 
-Using the url `/dice/4?count=6` we will see a result like this:
+Using the url `/api/Dice/4?count=6` we will see a result like this:
 
 ![](./assets/roll-4-6.png)
 
@@ -459,8 +459,8 @@ rolls. Try generating more rolls by increasing the `count=` or alter the number
 of sides of the die.
 
 What happens if no `count` is given? If for instance you use
-`https://localhost:5001/dice/20`? Oops, we get back an empty array. Luckily `C#`
-allows us to specify a default value for an argument if it is not supplied.
+`https://localhost:5001/api/Dice/20`? Oops, we get back an empty array. Luckily
+`C#` allows us to specify a default value for an argument if it is not supplied.
 
 ```csharp
 public List<int> Roll(int sides, int count = 1)`

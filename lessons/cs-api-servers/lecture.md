@@ -442,9 +442,9 @@ The other way we discussed giving information to an API was as part of the URL i
 
 Let's make an API for rolling die
 
-We will start with making and endpoint `/dice`.
+We will start with making and endpoint `/api/Dice`.
 
-To follow our convention we will make a `DiceController.cs` file (e.g. the `dice` from `/dice` is converted to CamelCase and we tack on `Controller`) and inside we define a `DiceController` class.
+To follow our convention we will make a `DiceController.cs` file (e.g. the `dice` from `/api/Dice` is converted to CamelCase and we tack on `Controller`) and inside we define a `DiceController` class.
 
 ---
 
@@ -521,7 +521,7 @@ But wait, this time we are returning an `int` -- what are we going to get in the
 
 # Rolling multiple die!
 
-Let's combine the URL pattern with a query parameter of the number of die we wish to roll. So our URL will look like `/dice/6?count=4` to roll `4` die with `6` sides.
+Let's combine the URL pattern with a query parameter of the number of die we wish to roll. So our URL will look like `/api/Dice/6?count=4` to roll `4` die with `6` sides.
 
 ---
 
@@ -592,7 +592,7 @@ public List<int> Roll(int sides, int count)
 
 ---
 
-# `/dice/6?count=4`
+# `/api/Dice/6?count=4`
 
 ![fit inline](./assets/roll-4-6.png)
 
