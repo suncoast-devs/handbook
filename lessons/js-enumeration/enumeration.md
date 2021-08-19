@@ -30,8 +30,8 @@ index of the current element.
 # Transforming values
 
 Let's suppose we wanted, instead of `console.log` values we wanted to build a
-new array of values from our array of colors. And suppose what we wanted each
-element of this new array to be the equal to the length of the string at the
+new array of values from our array of colors. And suppose we wanted each
+element of this new array to be equal to the length of the string at the
 corresponding index of the original array.
 
 That is:
@@ -66,7 +66,7 @@ colors.forEach(function (color) {
 ```
 
 Now we will concentrate on the code inside the loop. Here we want to take the
-individual color and compute it's length. Then _append_ that to the `lengths`
+individual color and compute its length. Then _append_ that to the `lengths`
 array.
 
 ```javascript
@@ -162,7 +162,7 @@ const uppercased = colors.map(function (color) {
 console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 ```
 
-We can also reduce the code by changing to using `arrow functions`
+We can also reduce the code by changing it to use `arrow functions`
 
 ```javascript
 const colors = ['red', 'green', 'blue']
@@ -315,4 +315,4 @@ const answer = Object.entries(myHobbies).map(
 ### Others
 
 See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for
-other iterators such as `some`, `every`, and `reduce-right`
+other iterators such as `some`, `every`, and `reduce-right`.
