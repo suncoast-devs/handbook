@@ -86,7 +86,7 @@ as specific as the CSS selectors we have previously learned.
 ### Fetching more than one element at once
 
 > _NOTE_ : `querySelector` returns only the first element that matches the
-> query. If you want all the elements that match that selector, you will to use
+> query. If you want all the elements that match that selector, you will want to use
 > `querySelectorAll`
 
 ```javascript

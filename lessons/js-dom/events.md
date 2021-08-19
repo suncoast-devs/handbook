@@ -4,7 +4,7 @@ order: 2
 ---
 
 We have talked about JavaScript by itself, but in order for us to use our
-scripts on the page we need to attach our functions to events that they browser
+scripts on the page we need to attach our functions to events that the browser
 fires. Our JavaScript doesn't run until the browser tells our script to. The
 browser gives us [`events`](https://developer.mozilla.org/en-US/docs/Web/Events)
 that we can listen with our JavaScript. We can now have code say "when a user
@@ -16,7 +16,7 @@ events are browser triggered.
 ```
 - When a user hovers over this table row, give that row a special css class.
 - When a user clicks this button, increment a counter
-- When a the page is loaded, create these HTML elements
+- When the page is loaded, create these HTML elements
 - When the browser losses internet, display an error message
 ```
 
@@ -38,7 +38,7 @@ document.addEventListener('click', function () {
 
 > [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 > represents any web page loaded in the browser and serves as an entry point
-> into the web page's content, which is the DOM
+> into the web page's content, which is the DOM.
 
 ## Listening to events on elements
 

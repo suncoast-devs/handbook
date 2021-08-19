@@ -423,8 +423,8 @@ firstListItem.classList.toggle('small')
 We can now:
 
 - Find an element
-- Get it's content
-- Change it's content
+- Get its content
+- Change its content
 - Add classes, remove classes, toggle classes
 
 How can we interact with the element? Functions!
