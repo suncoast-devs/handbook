@@ -29,7 +29,7 @@ See the Wikipedia page about
 ### Setup
 
 ```shell
-app-app --beta RoshamboJS
+degit $GITHUB_USER/html-css-ts-project-template RoshamboJS
 ```
 
 ### Explorer Mode

@@ -20,7 +20,7 @@ For the data, you will use the API [available here](https://ratesapi.io/)
 ### Setup
 
 ```shell
-app-app --gamma-hooks CurrencyConverter
+degit $GITHUB_USER/react-project-template CurrencyConverter
 ```
 
 ### Explorer Mode

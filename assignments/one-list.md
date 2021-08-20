@@ -25,7 +25,7 @@ Read the [documentation](https://one-list-api.herokuapp.com)
 ### Setup
 
 ```shell
-app-app --gamma-hooks OneListFrontEnd
+degit $GITHUB_USER/react-project-template OneListFrontEnd
 ```
 
 ### Explorer Mode

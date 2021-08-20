@@ -80,19 +80,18 @@ class HelloWorld extends React.Component {
 When this component is presented on the page it will render
 `<div>Hello, World</div>`
 
-## How does app-app help us use React Components?
+## How does our template help us use React Components?
 
 React Components can represent the **entire** web page, or be mixed in with
 static content of the page.
 
-In the code we write with `app-app` we will use React to generate all of the
-content on the page via components. React is very powerful for this but it is
-good to know that you can also add a small component to an existing non-React
+In the code we write with our app template we will use React to generate all of
+the content on the page via components. React is very powerful for this but it
+is good to know that you can also add a small component to an existing non-React
 project just as easily.
 
-The template SDG uses from `app-app` will generate an `index.html` file that
-looks like the following (only the `<body>` is shown and only the relevant
-parts)
+The template SDG uses will generate an `index.html` file that looks like the
+following (only the `<body>` is shown and only the relevant parts)
 
 ```html
 <body>
@@ -103,8 +102,8 @@ parts)
 If we rendered this without JavaScript it would be an empty page. It is thus up
 to JavaScript to connect our React code to our HTML.
 
-In our SDG template from `app-app` we include an `index.js` -- this script loads
-React and a component we provide named `App`
+In our SDG template we include a `main.js` -- this script loads React and a
+component we provide named `App`
 
 ```js
 import React from 'react'
@@ -134,11 +133,10 @@ browser **can** understand.
 
 # Build a simple React application
 
-Let's generate a new `app-app` project using the `gamma` stack that will set up
-a new React project.
+Let's generate a new project that will set up a new React project.
 
 ```shell
-app-app --gamma ReactArticles
+degit $GITHUB_USER/react-project-template ReactArticles
 ```
 
 This is some sample HTML we will work to create and learn how React Components

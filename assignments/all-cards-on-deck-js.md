@@ -51,7 +51,7 @@ for i from n - 1 down to 1 do:
 ### Setup
 
 ```shell
-app-app --alpha AllCardsOnDeckJS
+degit $GITHUB_USER/html-css-ts-project-template AllCardsOnDeckJS
 ```
 
 ### Explorer Mode

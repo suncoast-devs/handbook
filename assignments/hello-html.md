@@ -19,12 +19,12 @@ You will create a simple website that will showcase one of your passions. This i
 ### Setup
 
 ```shell
-app-app --alpha HelloHTML
+degit $GITHUB_USER/html-css-ts-project-template HelloHTML
 ```
 
 ### Explorer Mode
 
-- use `app-app HelloWorld` to create your first website.
+- Create your first website.
 - Compose a short essay (just a couple paragraphs at most) about a hobby you either enjoy or would like to learn about. We might expand on this page in future assignments, so pick something fun!
 - Put your short essay into an HTML page, using appropriate semantic HTML elements. Perhaps use some paragraphs and lists.
 - Add some appropriate images to your page.

@@ -22,7 +22,6 @@ must be changed with purpose.
 
 - Finalize the idea for your capstone
 - Create wire frames for your capstone project
-- Using `app-app`to start implementing your HTML
 
 ## Requirements
 

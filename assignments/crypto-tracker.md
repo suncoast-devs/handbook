@@ -34,7 +34,7 @@ https://s2.coinmarketcap.com/static/img/coins/16x16/${coin.id}.png
 ### Setup
 
 ```shell
-app-app --gamma-hooks ColorPickerHooks
+degit $GITHUB_USER/react-project-template ColorPickerHooks
 ```
 
 ### Explorer Mode

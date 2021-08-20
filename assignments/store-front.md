@@ -19,7 +19,7 @@ about the component structure of the page, and create reusable components.
 ### Setup
 
 ```shell
-app-app --delta-hooks StoreFront
+degit $GITHUB_USER/react-project-template StoreFront
 ```
 
 ### Explorer Mode

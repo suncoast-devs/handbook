@@ -55,7 +55,7 @@ Then you can dynamically set the `backgroundColor` of an element in your compone
 ### Setup
 
 ```shell
-app-app ColorPicker
+degit $GITHUB_USER/react-project-template ColorPicker
 ```
 
 ## Resources

@@ -20,7 +20,7 @@ dotnet new sdg-console -o ApiClient
 For JavaScript:
 
 ```shell
-app-app --beta ApiClient
+degit $GITHUB_USER/html-css-ts-project-template ApiClient
 ```
 
 ### Explorer Mode
@@ -45,7 +45,7 @@ app-app --beta ApiClient
 | Harvard Art Museum API (this one requires an API key, but set up is very simple) | https://www.harvardartmuseums.org/collections/api |
 
 - After choosing your API **read** the documentation.
-- Create a new application for accessing the API. (For `C#` use `sdg-console`, for `JS` use `app-app`)
+- Create a new application for accessing the API.
 - For `C#` create a class to store information that comes back from your API.
 - Write code to query the API and show results.
 - If your API has more than one endpoint (URL) support a few options, perhaps by creating a menu system in your application.

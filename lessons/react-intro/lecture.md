@@ -82,25 +82,24 @@ return <div>Hello, World!</div>
 
 ---
 
-# How does app-app help us use React Components?
+# How does our template help us use React Components?
 
-- `app-app` for React is inspired by `create-react-app` which is the default tool for generating React projects.
+- Our template for React is inspired by `vite` which is a tool for generating web based projects.
 - React Components can represent the **entire** web page, or be mixed in with static content of the page.
-- `app-app` turns our whole page/app/site over to React
 
 ---
 
-# Let's create a new app-app React project
+# Let's create a new React project
 
 ```
-app-app --gamma ReactArticles
+degit $GITHUB_USER/react-project-template ReactArticles
 ```
 
 ---
 
 # HTML file
 
-The template SDG uses from `app-app` will generate an `index.html` file that looks like the following (only the `<body>` is shown and only the relevant parts)
+The template SDG uses will generate an `index.html` file that looks like the following (only the `<body>` is shown and only the relevant parts)
 
 ```html
 <body>
@@ -118,7 +117,7 @@ If we rendered this without JavaScript it would be an empty page. It is thus up 
 
 # User Interface all in JavaScript
 
-In our SDG template from `app-app` we include an `index.js` -- this script loads React and a component we provide named `App`
+In our SDG template we include an `main.js` -- this script loads React and a component we provide named `App`
 
 ```js
 import React from 'react'

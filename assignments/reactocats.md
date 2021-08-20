@@ -10,7 +10,6 @@ You'll identify the main `Component`s on the page and create React components fo
 ## Objectives
 
 - Learn to identify parts of a web site as `Component`s
-- Use `app-app` (GAMMA stack) to build a React project
 - Understand and use React components
 
 ## Stretch Objectives
@@ -20,7 +19,7 @@ You'll identify the main `Component`s on the page and create React components fo
 ### Setup
 
 ```shell
-app-app --gamma Reactocats
+degit $GITHUB_USER/react-project-template Reactocats
 ```
 
 ## Resources
@@ -32,7 +31,6 @@ app-app --gamma Reactocats
 
 ### Explorer Mode
 
-- Create your React app using `app-app` `GAMMA`
 - If you have done the non-React version of octodex, use your existing HTML as the `render()` method of your `App` component. Otherwise, figure out the main components of the page and implement the `render()` method of `App` -- Don't forget to replace `class=` with `className=`
 - Your CSS should be in `index.scss` -- feel free to copy your previous project's css if you have done the non-React version of this assignment.
 - Create a component for an `Octocat`
@@ -57,5 +55,3 @@ app-app --gamma Reactocats
 - Put the `array` of Octocats in an `octocats.json` file and `import` that into your app.
 - _OR_
 - Use the `fetch` API to retrieve the list of Octocats from [this api](https://sdg-octodex.herokuapp.com/) instead
-
-

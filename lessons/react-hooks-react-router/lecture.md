@@ -45,7 +45,7 @@ theme: Next, 1
 
 # Two ways to get started
 
-- Create a brand new app using `app-app --delta-hooks` (has React Router built-in)
+- Create a brand new app using `degit $GITHUB_USER/react-project-template` (has React Router built-in)
 - Add it to an existing app via `npm install`
   - `npm install react-router react-router-dom`
 

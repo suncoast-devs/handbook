@@ -13,16 +13,10 @@ Today, we are starting our journey into JavaScript. For this assignment, you wil
 - Practice creating variables
 - Practice working with user input
 
-## Requirements
-
-Create your project using `app-app` with the `beta` stack
-
-Remove all the code inside `main.js` and start with a fresh and empty file.
-
 ### Setup
 
 ```
-app-app --beta VariablesJS
+degit $GITHUB_USER/html-css-ts-project-template VariablesJS
 ```
 
 ### Explorer Mode
@@ -59,6 +53,7 @@ app-app --beta VariablesJS
     - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate an array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor, you will need to format the collection of numbers as a JavaScript array.
     - Place these numbers into a properly formatted array named `numbers`.
     - Determine the following using one (or more) JavaScript `for` loops:
+
       - Find the smallest number in the array and place the answer in a variable named `smallest`
       - Find the largest number in the array and place the answer in a variable named `largest`
       - Find the sum of all the numbers in the array and place the answer in a variable named `arraySum`

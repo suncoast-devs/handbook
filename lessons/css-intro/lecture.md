@@ -61,8 +61,6 @@ p {
 }
 ```
 
-^ Show this code in an app-app
-
 ---
 
 # Vocabulary

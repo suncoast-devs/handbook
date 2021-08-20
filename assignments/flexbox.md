@@ -18,7 +18,7 @@ Now that we have learned the power of flexbox we will apply it to the sites we a
 ### Setup
 
 ```shell
-app-app --alpha TheDailyKitteh
+degit $GITHUB_USER/html-css-ts-project-template TheDailyKitteh
 ```
 
 ## Additional Resources
