@@ -62,7 +62,7 @@ The rules of a React component are:
 
 ## What is JSX?
 
-JSX is an extension to JavaScript that allows us to an HTML-like syntax in our
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our
 JavaScript code that will be turned into DOM at run-time. By using JSX we can
 dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
 style.
@@ -357,7 +357,7 @@ This means our `NewsArticle` component is rendering itself.
 ## Composition
 
 This is the idea of `composition` -- we are now defining a component, that has
-it's own content, that we can embed into another component, in this case the
+its own content, that we can embed into another component, in this case the
 `App`.
 
 ## Update the `NewsArticle`
@@ -662,7 +662,7 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-In our [lesson on JavaScript iteration](/lessons/js-iteration] we can
+In our [lesson on JavaScript iteration](/lessons/js-iteration] we 
 demonstrated that `map` can turn an array of one type of element (say a
 JavaScript object in this case) into an array of another type of element,
 (<NewsArticle/> in this case)
@@ -750,7 +750,7 @@ is important to know.
 > of the app, but must be unique for this array)
 
 Well, now it is handy that we had that `id` attribute of our JSON objects! We
-will us that `id` as out key!
+will us that `id` as our key!
 
 ```javascript
 import React, { Component } from 'react'

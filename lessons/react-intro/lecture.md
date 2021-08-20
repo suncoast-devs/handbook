@@ -58,7 +58,7 @@ It was developed by Facebook around 2011/2012 and was released as an [open sourc
 
 # What is JSX?
 
-JSX is an extension to JavaScript that allows us to an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](lessons/js-ui-as-state) style.
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](lessons/js-ui-as-state) style.
 
 ---
 
@@ -180,7 +180,7 @@ This is some sample HTML we will work to create and learn how React Components c
 
 # Start with `hard coded` content
 
-We'll take our HTML and place it _ALL_ inside the `render` method of ou `App`
+We'll take our HTML and place it _ALL_ inside the `render` method of our `App`
 
 ```javascript
 import React, { Component } from 'react'
@@ -358,7 +358,7 @@ Add this right inside `<main>`
 
 # Composition
 
-This is the idea of `composition` -- we are now defining a component, that has it's own content, that we can embed into another component, in this case the `App`.
+This is the idea of `composition` -- we are now defining a component, that has its own content, that we can embed into another component, in this case the `App`.
 
 ---
 
@@ -421,7 +421,7 @@ class App extends Component {
 
 # Make many NewsArticles!
 
-We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structure as we want.
+We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structures as we want.
 
 ```javascript
 import React, { Component } from 'react'

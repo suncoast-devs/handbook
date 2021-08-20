@@ -43,7 +43,7 @@ rover.bark()
 
 ---
 
-# Along come classes
+# Along came classes
 
 - Allows for a more common syntax
 - Familiar to Object Oriented developers from other languages (C++, C#, Java, Python, Ruby, etc)

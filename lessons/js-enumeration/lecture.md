@@ -23,7 +23,7 @@ colors.forEach(logSomeColor)
 
 # Transforming values
 
-- Instead of `console.log` lets build a _new array_
+- Instead of `console.log` let's build a _new array_
 
 - Each element of this new array to be the equal to the **length** of the string at the corresponding index of the original array.
 
@@ -250,4 +250,4 @@ console.log(total) // [ 155 ]
 
 ### Others
 
-See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`
+See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`.
