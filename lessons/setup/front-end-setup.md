@@ -76,3 +76,26 @@ npm install --global prettier
 ```
 
 <SectionSeparator />
+
+# vite
+
+This is a tool we use to generate our web projects, run our code, and generate a
+production version that we will deploy to `Netlify`.
+
+## Installation
+
+```shell
+npm install --global vite
+```
+
+# degit
+
+This is the tool we will use to download the templates we will customize for
+ourselves. It is a general tool that can download a git repository to your
+computer and allow you to make a new git/GitHub history for it.
+
+## Installation
+
+```shell
+npm install --global degit
+```
