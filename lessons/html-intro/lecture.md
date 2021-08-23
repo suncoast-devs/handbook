@@ -518,8 +518,7 @@ milk eggs bread hummus
 
 # Unordered List Container
 
-Every unordered list starts off with a `<ul>` element — this wraps around all
-the list items:
+Every unordered list starts off with a `<ul>` element — this wraps around all the list items:
 
 ```html
 <ul>
