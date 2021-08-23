@@ -26,7 +26,19 @@ git init
 git add .
 git commit -m "Initial commit"
 hub create
-git push
+git push origin HEAD
+```
+
+### Run your project
+
+```shell
+npm start
+```
+
+### Deployment
+
+```shell
+npm run deploy
 ```
 
 ### Explorer Mode
