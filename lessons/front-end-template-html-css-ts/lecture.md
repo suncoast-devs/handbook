@@ -320,3 +320,95 @@ When we start with `TypeScript` we will use the same template.
 We'll create a _separate_ template when we start with **React**
 
 ---
+
+# Using your template
+
+```shell
+cd ~/sdg
+degit YOUR-GITHUB-GOES-HERE-DONT-TYPE-THIS/html-css-ts-project-template   FirstSampleProject
+```
+
+(e.g.)
+
+```shell
+cd ~/sdg
+degit jane-doe/html-css-ts-project-template FirstSampleProject   FirstSampleProject
+cd
+```
+
+---
+
+# This will make a new, clean, empty, NON GIT, repository
+
+Make this a git repository
+
+```
+cd FirstSampleProject
+git init
+```
+
+---
+
+# Make a first initial commit to capture the base template
+
+```shell
+git add .
+git commit -m "Initial commit"
+```
+
+---
+
+# Turn this into a GitHub project
+
+```shell
+hub create
+```
+
+---
+
+# Push our first commit to GitHub
+
+```shell
+git push
+```
+
+---
+
+# All together now...
+
+```shell
+degit YOUR-GITHUB-GOES-HERE-DONT-TYPE-THIS/html-css-ts-project-template   FirstSampleProject
+cd FirstSampleProject
+npm install
+git init
+git add .
+git commit -m "Initial commit"
+hub create
+git push
+```
+
+---
+
+# Running the project!
+
+We will use `npm start` to run the project itself. This is similar to `npm watch run` from `C#`
+
+```shell
+npm start
+```
+
+---
+
+# Open the browser
+
+The terminal will give you the URL where the application is running, typically `http://localhost:3000`
+
+Open that URL in your browser.
+
+---
+
+# Update some code
+
+You should see the browser _automatically refresh_!
+
+---
