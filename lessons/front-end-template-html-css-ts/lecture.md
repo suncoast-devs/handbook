@@ -369,7 +369,7 @@ hub create
 # Push our first commit to GitHub
 
 ```shell
-git push
+git push origin HEAD
 ```
 
 ---
@@ -384,7 +384,7 @@ git init
 git add .
 git commit -m "Initial commit"
 hub create
-git push
+git push origin HEAD
 ```
 
 ---
