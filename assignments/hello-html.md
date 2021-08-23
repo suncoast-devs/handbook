@@ -20,6 +20,13 @@ You will create a simple website that will showcase one of your passions. This i
 
 ```shell
 degit $GITHUB_USER/html-css-ts-project-template HelloHTML
+cd HelloHTML
+npm install
+git init
+git add .
+git commit -m "Initial commit"
+hub create
+git push
 ```
 
 ### Explorer Mode
