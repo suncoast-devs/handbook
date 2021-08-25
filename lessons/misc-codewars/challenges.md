@@ -73,7 +73,7 @@ order: 2
 |  7  | Square every digit                                         | https://www.codewars.com/kata/546e2562b03326a88e000020        |                                     |
 |  7  | SQL Basics: Simple JOIN                                    | https://www.codewars.com/kata/5802e32dd8c944e562000020        | SQL Only                            |
 |  7  | Sort the Vowels!                                           | https://www.codewars.com/kata/59e49b2afc3c494d5d00002a        | JS Only                             |
-|  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        |                                     |
+|  7  | Simple Consecutive Pairs                                   | https://www.codewars.com/kata/5a3e1319b6486ac96f000049        | JS Only                             |
 |  7  | Shortest Word                                              | https://www.codewars.com/kata/57cebe1dc6fdc20c57000ac9        |                                     |
 |  7  | Say Me Please Operations                                   | https://www.codewars.com/kata/5b5e0c0d83d64866bc00001d        |                                     |
 |  7  | Return The Missing Element                                 | https://www.codewars.com/kata/5299413901337c637e000004        |                                     |
