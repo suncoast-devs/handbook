@@ -23,6 +23,7 @@ degit $GITHUB_USER/html-css-ts-project-template TheDailyKitteh
 
 ## Additional Resources
 
+- Flexbox [examples](https://www.quackit.com/css/flexbox/examples)
 - CSS-Tricks guide to [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - CSS-Tricks guide to [grids](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Flexbox Visual Guide](https://marina-ferreira.github.io/tutorials/css/flexbox/)
