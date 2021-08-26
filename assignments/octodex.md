@@ -43,7 +43,6 @@ degit $GITHUB_USER/html-css-ts-project-template Octodex
 ## Adventure Mode
 
 - Add a tablet display to accommodate a tablet screen size
-- Add a laptop display to accommodate a tablet screen size.
 - For the responsiveness of your cats, if you used flexbox for explorer mode, now use grids, if you grids, now use flexbox.
 
 ## Epic Mode
