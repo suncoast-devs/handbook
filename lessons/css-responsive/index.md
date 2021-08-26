@@ -36,8 +36,7 @@ out to be a nightmare.
 It is usually much better to create a single version of your code which doesn't
 care about what browser or platform is accessing the site. This tends to be
 termed responsive design or adaptive design, two related but different
-approaches. For a discussion on the differences between the two, read
-[Responsive design versus adaptive design](https://developer.mozilla.org/en-US/docs/Archive/Apps/Design/UI_layout_basics/Responsive_design_versus_adaptive_design).
+approaches.
 
 There are disadvantages to this approach as well. If the content, layout, and
 functionality need to change greatly for different devices, it may not be such a
