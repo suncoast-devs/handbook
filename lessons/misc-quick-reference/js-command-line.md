@@ -34,8 +34,8 @@ experiences an unhandled exception or the script terminates.
 If your script needs information from the user they can specify it on the
 command line.
 
-Lets say your program intends to add two numbers together and you'd like them to
-input those on the command line:
+Let's say your program intends to add two numbers together and you'd like them
+to input those on the command line:
 
 ```shell
 node program.js 999 42

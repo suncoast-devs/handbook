@@ -10,7 +10,7 @@ Core concepts:
   - `Representational State Transfer` (ReST)
   - Provides a standard for specifing resources over HTTP in a predictable way
   - Standard set of URLs and verbs that perform actions on resources
-  - Lets say we were managing data for some `Team`s.
+  - Let's say we were managing data for some `Team`s.
   - Rails will generate, if we specify `resources :teams` in our `routes.rb` a
     set of routes for us to perform all the `CRUD` actions.
   - Those routes are:

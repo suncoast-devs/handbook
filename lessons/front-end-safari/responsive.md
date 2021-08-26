@@ -7,7 +7,7 @@ Now that we have our styling and layout we can turn to the format of our page in
 different viewpoints.
 
 Since we took a `mobile-first` approach here we can add a
-[`media query`](/lessons/css-response/media-query-details) to our code to being
+[`media query`](/lessons/css-response/media-query-details) to our code to begin
 to reformat it for a wider viewport.
 
 ```css

@@ -19,7 +19,7 @@ For tonight, I want you to show off what you favorite music is. You will be crea
 ### Setup
 
 ```shell
-app-app --delta-hooks MusicMadness
+degit $GITHUB_USER/react-project-template MusicMadness
 ```
 
 ### Explorer Mode

@@ -58,7 +58,7 @@ which are friendlier than the Rails default scaffold.
 
 - When you identify a thing our application manages we can use the Rails
   scaffold system to generate migrations, models, views, controllers.
-- Lets say we are building an app to manage Books. We identify these attributes
+- Let's say we are building an app to manage Books. We identify these attributes
   of a book to track:
   - title
   - author

@@ -21,7 +21,7 @@ Remember the addition of `node-sass` to the project's dependencies.
 ### Setup
 
 ```shell
-app-app --delta-hooks Sassy
+degit $GITHUB_USER/react-project-template Sassy
 ```
 
 ### Explorer Mode

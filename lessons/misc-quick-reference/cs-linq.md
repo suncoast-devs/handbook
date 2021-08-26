@@ -44,7 +44,7 @@ Example:
 
 ```csharp
 // Make a list of strings when each string contains the year it's corresponding Movie was released, a comma, and the title of the Movie.
-var yearAndMovie = movies.Select(movie => $"{movie.ReleaseDate.Year}, {movie.Name} ");
+var yearAndMovie = movies.Select(movie => $"{movie.ReleasedDate.Year}, {movie.Name} ");
 ```
 
 > Select, and many of the methods listed here, have a form where the expression
@@ -52,7 +52,7 @@ var yearAndMovie = movies.Select(movie => $"{movie.ReleaseDate.Year}, {movie.Nam
 
 ```csharp
 // Make a list of strings where each string contains the year the corresponding Movie was released, a comma, the title of the Movie, and the index in the original list.
-var yearAndMovie = movies.Select((movie, index) => $"{movie.ReleaseDate.Year}, {movie.Name}, at index {index} ");
+var yearAndMovie = movies.Select((movie, index) => $"{movie.ReleasedDate.Year}, {movie.Name}, at index {index} ");
 ```
 
 ### Where
@@ -81,7 +81,7 @@ A good example is to be able to take a list and turn it into a total
 
 ```csharp
 // Find the total revenue for all movies
-var totalRevenue = movies.Aggregate(0, (currentTotal, movie) => currentTotal + movie.TotalRevenue);
+var totalRevenue = movies.Aggregate(0.0, (currentTotal, movie) => currentTotal + movie.TotalRevenue);
 ```
 
 > NOTE: Aggregate is one of the most difficult of these methods to understand.
@@ -178,7 +178,7 @@ var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTick
 
 ```csharp
 // Get the last item in the list that costs more than 10. If no movie costs more than 10, then `lastMovieCostingMoreThanTenDollars` will be `null`
-var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTicket > 10);
+var lastMovieCostingMoreThanTenDollars = movies.LastOrDefault(movie => movie.PricePerTicket > 10);
 ```
 
 ### Distinct
@@ -246,7 +246,7 @@ var alphabetically = movies.OrderBy(movie => movie.Name);
 
 ```csharp
 // Makes a new list sorted by alphabetically by title, then by release year if they have the same Title
-var sorted = movies.OrderBy(movie => movie.Name).ThenBy(movie => move.DateReleased);
+var sorted = movies.OrderBy(movie => movie.Name).ThenBy(movie => movie.ReleasedDate);
 ```
 
 ## RemoveAll

@@ -41,7 +41,7 @@ Jason
 
 ![fit](./assets/jason-paragraph.png)
 
-^ This tells the browser that this is an entire paragraph, which in the browser will make the text appear on it's own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_
+^ This tells the browser that this is an entire paragraph, which in the browser will make the text appear on its own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_
 
 ---
 
@@ -93,7 +93,7 @@ The following is incorrect
 
 [.autoscale: true]
 
-# Browser are too good
+# Browsers are too good
 
 Browsers are very forgiving of invalid HTML (even if your instructors or teammates are not)
 
@@ -155,7 +155,7 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 
 ---
 
-# Lets break this down
+# Let's break this down
 
 ---
 
@@ -238,7 +238,7 @@ The `<html>` element. This element wraps all the content on the entire page, and
 
 [.column]
 
-The `<head>` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style our content, character set declarations, and more.
+The `<head>` element. This element acts as a container for all the stuff you want to include on the HTML page that isn't the content you are showing to your page's viewers. This includes things like keywords and a page description that you want to appear in search results, CSS to style your content, character set declarations, and more.
 
 [.column]
 
@@ -468,7 +468,7 @@ It's really up to you what exactly the elements involved represent, as long as t
 
 # Why do we need semantics?
 
-Semantics are relied on everywhere around us — we rely on previous experience to tell us what the function of everyday objects is; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop", and a green traffic light to mean "go".
+Semantics are relied on everywhere around us — we rely on previous experience to tell us what the function of everyday objects are; when we see something, we know what its function will be. So, for example, we expect a red traffic light to mean "stop", and a green traffic light to mean "go".
 
 ---
 
@@ -518,8 +518,7 @@ milk eggs bread hummus
 
 # Unordered List Container
 
-Every unordered list starts off with a `<ul>` element — this wraps around all
-the list items:
+Every unordered list starts off with a `<ul>` element — this wraps around all the list items:
 
 ```html
 <ul>
@@ -609,7 +608,7 @@ It is perfectly ok to nest one list inside another one. You might want to have s
 
 # Nested Lists
 
-The last two bullets are very closely related to the one before them. Lets put that list inside the fourth bullet.
+The last two bullets are very closely related to the one before them. Let's put that list inside the fourth bullet.
 
 ```html
 <ol>
@@ -634,13 +633,13 @@ The last two bullets are very closely related to the one before them. Lets put t
 
 We can create plain text, paragraphs, and lists of items now. However we can only create these on one page.
 
-Lets add links between pages.
+Let's add links between pages.
 
 ---
 
 # Links
 
-Links (also known as Hyperlinks) are what makes the Web a Web — they allow us to link our documents to any other document (or other resource) we want to
+Links (also known as Hyperlinks) are what makes the Web a Web — they allow us to link our documents to any other document (or other resource) we want to.
 
 Just about any web content can be converted to a link, so that when clicked it will make the web browser go to another web address (URL).
 

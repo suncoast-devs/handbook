@@ -31,7 +31,7 @@ Here is an example implementation of this assignment:
 ### Setup
 
 ```shell
-app-app Minesweeper
+degit $GITHUB_USER/react-project-template Minesweeper
 ```
 
 ## Additional Resources

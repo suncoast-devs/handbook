@@ -30,7 +30,7 @@ a location and gets that location's weather.
 ### Setup
 
 ```
-app-app --beta WeatherFrontEnd
+degit $GITHUB_USER/html-css-ts-project-template WeatherFrontEnd
 ```
 
 ### Explorer Mode

@@ -57,7 +57,7 @@ devices will be used in, and the kinds of tasks users most commonly want to
 perform on mobiles. A phrase you'll read in a few places is "one eyeball, one
 thumb", referring to how much of the user's attention you are likely to have. Of
 course, your users will be concentrating on what they're doing, but they are
-likely to be in a car with bad lighting, or in a noisy bar with the sport on TV
+likely to be in a car with bad lighting, or in a noisy bar with sports on the TV
 in the background! You need to consider this, and again make sure your
 content/functionality is simple, legible and distraction-free as much as
 possible.

@@ -68,9 +68,9 @@ function HelloWorld() {
 
 ## What is JSX?
 
-JSX is an extension to JavaScript that allows us to an HTML-like syntax in our
-JavaScript code that will be turned into DOM at run-time. By using JSX we can
-dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in
+our JavaScript code that will be turned into DOM at run-time. By using JSX we
+can dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
 style.
 
 ## Simplest React Component
@@ -103,6 +103,8 @@ into plain JavaScript.
 
 ## How do we use React Components?
 
+## How does our template help us use React Components?
+
 React Components can represent the **entire** web page, or be mixed in with
 static content of the page.
 
@@ -111,9 +113,8 @@ content on the page via components. React is very powerful for this but it is
 good to know that you can also add a small component to an existing non-React
 project just as easily.
 
-The template SDG uses from `app-app` will generate an `index.html` file that
-looks like the following (only the `<body>` is shown and only the relevant
-parts)
+The template SDG uses will generate an `index.html` file that looks like the
+following (only the `<body>` is shown and only the relevant parts)
 
 ```html
 <body>
@@ -124,8 +125,8 @@ parts)
 If we rendered this without JavaScript it would be an empty page. It is thus up
 to JavaScript to connect our React code to our HTML.
 
-In our template we include an `main.tsx` -- this script loads React and a
-component named `App`
+In our SDG template we include a `main.tsx` -- this script loads React and a
+component we provide named `App`
 
 ```js
 import React from 'react'
@@ -161,6 +162,12 @@ browser **can** understand.
 # Build a simple React application
 
 Let's generate a new project that will set up a new React project.
+
+```shell
+degit $GITHUB_USER/react-project-template ReactArticles
+```
+
+> > > > > > > master
 
 This is some sample HTML we will work to create and learn how React Components
 can help simplify our code.
@@ -682,10 +689,10 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-In our [lesson on JavaScript iteration](/lessons/js-iteration] we can
-demonstrated that `map` can turn an array of one type of element (say a
-JavaScript object in this case) into an array of another type of element,
-(<NewsArticle/> in this case)
+In our [lesson on JavaScript iteration](/lessons/js-iteration] we demonstrated
+that `map` can turn an array of one type of element (say a JavaScript object in
+this case) into an array of another type of element, (<NewsArticle/> in this
+case)
 
 So what is happening here is a transformation from the first array to the
 second.
@@ -767,8 +774,7 @@ is important to know.
 > (i.e. that same key can be in another array-to-component map in another part
 > of the app, but must be unique for this array)
 
-Wasn't it fortunte that we ensured our JSON objects had that `id` attribute! We
-will us that `id` as our key!
+Well, now it is handy that we had that `id` attribute of our JSON objects!
 
 ```javascript
 import React from 'react'

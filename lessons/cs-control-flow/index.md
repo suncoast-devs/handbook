@@ -4,9 +4,9 @@ assignments:
   - cs-all-cards-on-deck
 ---
 
-If we just write lines of code one after another, we would have no
-way to make decisions and take different paths in our code. To allow us this
-flexibility we have the idea of `flow control` statements.
+If we just write lines of code one after another, we would have no way to make
+decisions and take different paths in our code. To allow us this flexibility we
+have the idea of `flow control` statements.
 
 The first and more simple of these is the `if` statement.
 
@@ -218,7 +218,7 @@ This is where a _loop_ style control flow helps us. The first we will see is the
 The `while` statement repeats the code inside the `{ }` braces as long as the
 condition supplied remains true.
 
-Lets say we want to ask the the user their name and greet them until the user
+Let's say we want to ask the the user their name and greet them until the user
 enters the text `quit`. The code would look like this:
 
 ```csharp

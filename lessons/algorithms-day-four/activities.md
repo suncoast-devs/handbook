@@ -13,9 +13,9 @@ Given any amount of change from zero cents to 99 cents, determine the minimum
 number of coins to make change. Consider only quarters, dimes, nickels, and
 pennies.
 
-For example: 6 cents = 1 penny, 1 nickle, 0 dimes, 0 quarters 11 cents = 1
-penny, 0 nickles, 1 dime, 0 quarters 43 cents = 3 pennies, 1 nickle, 1 dime, 1
-quarter
+For example: 6 cents = 1 penny, 1 nickle, 0 dimes, 0 quarters 
+11 cents = 1 penny, 0 nickles, 1 dime, 0 quarters 
+43 cents = 3 pennies, 1 nickle, 1 dime, 1 quarter
 
 ## Colorful Triangles
 
@@ -31,7 +31,7 @@ with only a single color, is generated.
 The different possibilities are:
 
 ```
-Colour here:        G G        B G        R G        B R
+Color here:        G G        B G        R G        B R
 Becomes color:      G          R          B          G
 ```
 
@@ -57,7 +57,7 @@ the case of the example above, you would the given `RRGBRGBB` you should return
 
 When writing math formulas, we work in what is known as "infix" notation. For
 instance `5 + ((1 + 2) * 4) - 3`. We can use the
-[PEDMAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics) rule.
+[PEMDAS](https://en.wikipedia.org/wiki/Order_of_operations#Mnemonics) rule.
 (Parentheses, Exponents, Multiplication/Division, Addition/Subtraction)
 
 However, there is another way to represent these operations. This is known as

@@ -24,7 +24,7 @@ title: Building Web Applications with Sinatra
   `/` URL `"Hello World"` - Whatever the block returns returns becomes the body
   of the page
 
-- Lets make an _APP_
+- Let's make an _APP_
 
   ```ruby
   require 'sinatra'
@@ -66,12 +66,12 @@ title: Building Web Applications with Sinatra
   end
   ```
 
-### Lets put or items into a database
+### Let's put or items into a database
 
 - Combining `SQL` + `activerecord` + `sinatra`
-- Lets add the 'activerecord' gem to our sinatra app
+- Let's add the 'activerecord' gem to our sinatra app
 - `require 'active_record'`
-- Lets create a database:
+- Let's create a database:
 
   ```shell
   createdb items
@@ -85,7 +85,7 @@ title: Building Web Applications with Sinatra
   CREATE TABLE items(id serial, text text, complete bool);
   ```
 
-- Lets update our app to show us the items in our database
+- Let's update our app to show us the items in our database
 
   ```ruby
   require 'active_record'
@@ -120,7 +120,7 @@ title: Building Web Applications with Sinatra
   end
   ```
 
-- Lets add an endpoint to create a item
+- Let's add an endpoint to create a item
 
   ```ruby
 

@@ -63,7 +63,7 @@ columns and rows by setting a `grid-gap`.
 
 <CodePen>
 
-On the example above we allowed the grid to organize the each child element by
+On the example above we allowed the grid to organize each child element by
 placing them inside the next available grid cell. You can override this default
 behavior specifying a `grid-column` and a `grid-row`.
 

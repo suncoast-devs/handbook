@@ -230,7 +230,7 @@ import { useDropzone } from 'react-dropzone'
 ```
 
 The dropzone component is expecting a method to call when a file is dropped onto
-a visible target in the UI. Lets add the method for that:
+a visible target in the UI. Let's add the method for that:
 
 ```javascript
 function onDropFile(acceptedFiles) {

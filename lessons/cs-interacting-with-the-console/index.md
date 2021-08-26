@@ -4,10 +4,10 @@ assignments:
   - cs-variables
 ---
 
-When writing applications that interact with a user the simplest method is
-using a `console` application. In these applications, we can output information
-to the user and read `string`s of information from the user. All completed in the same console
-used to launch our application.
+When writing applications that interact with a user the simplest method is using
+a `console` application. In these applications, we can output information to the
+user and read `string`s of information from the user. All completed in the same
+console used to launch our application.
 
 ## What would this look like?
 
@@ -20,7 +20,7 @@ Here is an example of the input and output of the code we are going to write:
 All of the code we are going to use begins with `Console` and as the name
 suggests this is the part of `C#` that allows us to interact with the user.
 
-Lets start with outputting a message to our user:
+Let's start with outputting a message to our user:
 
 ```csharp
 Console.WriteLine("Welcome to my program");
@@ -48,9 +48,9 @@ to the next line.
 Console.Write("What is your name? ");
 ```
 
-This code will print the prompt, the `?`, and a blank space, leaving the cursor on the
-same line. This is a good experience for the user since it places the cursor on
-the same line.
+This code will print the prompt, the `?`, and a blank space, leaving the cursor
+on the same line. This is a good experience for the user since it places the
+cursor on the same line.
 
 ## Reading information from the console
 

@@ -8,7 +8,7 @@ CSS rules will have selectors matching the same element. In such cases, which
 CSS rule "wins", and ends up being the one that is finally applied to the
 element? This is controlled by a mechanism called the Cascade; this is also
 related to inheritance (elements will take some property values from their
-parents, but not others). Lets define what the CSS cascade is, what specificity
+parents, but not others). Let's define what the CSS cascade is, what specificity
 is, what importance is, and how properties inherit from different rules.
 
 The final style for an element can be specified in many different places, which

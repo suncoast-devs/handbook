@@ -42,7 +42,7 @@ document.querySelector('button')?.addEventListener('click', function (event) {
 })
 ```
 
-This would a specific class on the element on and off. In this case we are using
+This would turn a specific class on the element on and off. In this case we are using
 the presence of the class to indicate the state.
 
 We could implement the case of _update a counter when a separate button is
@@ -66,9 +66,9 @@ manually updating the user interface.
 
 ## What if the user interface was simply a representation of state?
 
-Lets take our simple example of the counter. What if we did not have to manually
-adjust the user interface each time we changed the counter? That is what if the
-logic flow was as follows:
+Let's take our simple example of the counter. What if we did not have to
+manually adjust the user interface each time we changed the counter? That is
+what if the logic flow was as follows:
 
 ```
 initialize counter to 0
@@ -92,7 +92,7 @@ The idea is this:
 Our user interface is really nothing more than a user friendly way to show and
 update the state of our data.
 
-Lets look at a more complex example.
+Let's look at a more complex example.
 
 ```
 
@@ -152,7 +152,7 @@ What if the logic was:
 
 ## What do we need in order to support this?
 
-Lets look at what the data behind this looks like:
+Let's look at what the data behind this looks like:
 
 ```
     State               <=== Transform ===>      User Interface
@@ -274,6 +274,6 @@ transformation of some internal state to a user interface.
 ## Coding style
 
 This approach leads to a specific coding style that we will use to build many
-web applications. We won't be writing HTML embedded in interpolated stings since
+web applications. We won't be writing HTML embedded in interpolated strings since
 that becomes unmanageable very quickly. We'll be using a front end library named
 [`React`](https://reactjs.org)

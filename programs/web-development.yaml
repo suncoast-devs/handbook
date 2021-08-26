@@ -19,6 +19,7 @@ modules:
       - algorithms-day-two
       - algorithms-day-three
       - algorithms-day-four
+      - algorithms-resources
   - c-sharp:
     title: Introduction to Programming with C#
     lessons:
@@ -61,7 +62,7 @@ modules:
   - front-end-fundamentals:
     title: Fundamentals of Front-end Web Development
     lessons:
-      # - environment-setup
+      - front-end-template-html-css-ts
       - html-intro
       - css-intro
       - css-layout
@@ -73,12 +74,12 @@ modules:
       - js-event-loop
       - js-ui-as-state
       - js-modules
+      - front-end-template-react
       - react-intro
       - react-assets
       # react-events -- needs work
       - js-fetch
       - react-state
-      - react-state-with-fetch
       - react-state-flow
       - react-hooks-use-effect
       - react-hooks-react-router

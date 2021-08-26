@@ -28,7 +28,7 @@ more comfortable with CSS.
 ### Setup
 
 ```shell
-app-app --beta TravelSite
+degit $GITHUB_USER/html-css-ts-project-template TravelSite
 ```
 
 ### Explorer Mode

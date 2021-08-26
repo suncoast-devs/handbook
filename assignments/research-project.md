@@ -33,7 +33,6 @@ _Not extensive, and not limited to_
   - useReducer and useContext
   - HTML5 Canvas for rendering graphics
   - Games in JavaScript using Phaser
-  - How to build react app without `create react app` or SDG's `app-app` - build from scratch
   - Typescript
   - Vue vs React
   - Angular vs React

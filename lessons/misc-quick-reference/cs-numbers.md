@@ -146,7 +146,7 @@ index = (index + 1) % 5;  // 1 + 1 is 2 -- 2 % 5 = 2
 Console.WriteLine($"index is {index}");
 ```
 
-Lets see this in a loop:
+Let's see this in a loop:
 
 ```csharp
 for(var index = 0; index < 20; index++)

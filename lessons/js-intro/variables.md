@@ -188,6 +188,11 @@ name = 'Jane'
 const name = 'Jane' // name contains the value 'Jane' and we avoid any issue with `undefined`
 ```
 
+Most of the time we are able to declare a variable and assign a value at the
+same time. However, it is sometimes useful to declare the variable and assign
+its value later. Once we introduce conditions and functions we will see cases of
+this.
+
 # More Types
 
 ## Basic Types
@@ -357,4 +362,4 @@ const learningTypeScriptIsHard = false
 
 ---
 
-Now we have data, we need ways to manipulate the variables
+Now that we have data, we need ways to manipulate the variables

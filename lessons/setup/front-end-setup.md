@@ -44,14 +44,15 @@ Before continuing, you **MUST** sign up for a _FREE_ account with
 
 ## Installation
 
-From Terminal, run the following command (the current directory does not
-matter):
+From Terminal, and in any directory, run the following command:
 
 ```shell
 npm install --global netlify-cli
 ```
 
 ## Setup
+
+From Terminal, and in any directory, run the following command:
 
 ```shell
 netlify login
@@ -71,8 +72,41 @@ code.
 
 ## Installation
 
+From Terminal, and in any directory, run the following command:
+
 ```shell
 npm install --global prettier
 ```
 
 <SectionSeparator />
+
+# vite
+
+Check [this](https://www.dictionary.com/browse/vite) for the pronuciation. It is pronounced to rhyme with _meat_.
+
+This is a tool we use to generate our web projects, run our code, and generate a
+production version that we will deploy to `Netlify`.
+
+## Installation
+
+From Terminal, and in any directory, run the following command:
+
+```shell
+npm install --global vite
+```
+
+<SectionSeparator />
+
+# degit
+
+This is the tool we will use to download the templates we will customize for
+ourselves. It is a general tool that can download a git repository to your
+computer and allow you to make a new git/GitHub history for it.
+
+## Installation
+
+From Terminal, and in any directory, run the following command:
+
+```shell
+npm install --global degit
+```

@@ -18,8 +18,8 @@ smart, computers are simple machines that really only understand 1 very simple
 command at a time. The advantage that computers have over people is that they
 run those simple commands _really_ fast.
 
-Most of we do when we write code is one of two actions: storing data or
-manipulating data. Let's start with a storing data.
+Most of what we do when we write code is one of two actions: storing data or
+manipulating data. Let's start with storing data.
 
 ## Comments
 

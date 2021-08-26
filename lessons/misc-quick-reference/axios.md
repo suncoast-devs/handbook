@@ -139,8 +139,8 @@ but the most direct ones are:
 
 ## Setting default global headers
 
-Lets say you wanted to send a header for authorization on every request once you
-are logged in. `axios` allows you to specify default values for headers and
+Let's say you wanted to send a header for authorization on every request once
+you are logged in. `axios` allows you to specify default values for headers and
 other configurations.
 
 ```javascript

@@ -801,7 +801,7 @@ switch (expression) {
 
 # Functions
 
-In TypeScript, named groups of code that perform a specific behavior are called `functions`. (whereas in `C#` we called them `methods`)
+In TypeScript, named groups of code that perform a specific behavior are called `functions` (whereas in `C#` we called them `methods`).
 
 Also, these `functions` do not need to be in `classes`.
 
@@ -1041,7 +1041,7 @@ We'll run this program in Visual Studio, and we'll see the following output.
 
 # Notice
 
-- The debugger is showing us all the variables we can see when we reach the `debugger statement and our program paused.
+- The debugger is showing us all the variables we can see when we reach the debugger statement and our program paused.
 - The variable `variableFromInnerScope` is shown in the list of `Local Variables`.
 - The variable `variableFromOuterScope` is listed in the section marked `closure`.
 - This is because that variable was "captured" by the function when it was defined.
@@ -1112,7 +1112,7 @@ function printPersonInfo(person) {
 
 ```typescript
 people.forEach(function (person) {
-  // Inside here we have access to the `person` variable here. The `person` variable is
+  // Inside here we have access to the `person` variable. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the
   // function, it is a new creation of that variable.
 
@@ -1143,7 +1143,7 @@ people.forEach(function (person) {
 - When code calls `printPersonInfo` for the first time, `person` is
   `Alan Turing`
 - The second time, the closure captures `person` being equal to `Ada Lovelace`
-- Then `Grace Hooper`
+- Then `Grace Hopper`
 - Finally `Donald Knuth`.
 
 ![right fit](./assets/closure-complex.gif)

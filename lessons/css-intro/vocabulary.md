@@ -9,7 +9,7 @@ At its most basic level, CSS consists of two building blocks:
   features (e.g. font, width, background color) you want to change.
 - **Values**: Each specified property is given a value, which indicates how you
   want to change those stylistic features (e.g. what you want to change the
-  font, width or background color to.)
+  font, width, or background color to.)
 
 A property paired with a value is called a _CSS declaration_. CSS declarations
 are put within CSS Declaration Blocks. And finally, CSS declaration blocks are
@@ -24,7 +24,7 @@ This example uses four types of tags in the HTML, `h1`, `p`, `ul` and `li`
 
 It also uses four `CSS Rules` to define styles for those tags.
 
-Next, lets take a look at the structure of these CSS Rules and Declarations.
+Next, let's take a look at the structure of these CSS Rules and Declarations.
 
 <pre data-lang='html'>
 {`
@@ -51,7 +51,7 @@ Next, lets take a look at the structure of these CSS Rules and Declarations.
 <pre data-lang='css'>
 {`
 h1 {
-  colour: blue;
+  color: blue;
   background-color: yellow;
   border: 1px solid black;
 }

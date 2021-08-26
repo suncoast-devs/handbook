@@ -66,7 +66,7 @@ Following our guide of teaching you currently deployed technolody but with an ey
 
 # What is JSX?
 
-JSX is an extension to JavaScript that allows us to an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](lessons/js-ui-as-state) style.
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](lessons/js-ui-as-state) style.
 
 ---
 
@@ -82,21 +82,15 @@ function HelloWorld() {
 
 # HTML in our JS?!?
 
-```javascript
-return <p>Hello, World!</p>
-```
-
 ---
 
 # Transpiling
 
-Transpiling turns one language/format to another.
-
 ```javascript
 return <p>Hello, World!</p>
 ```
 
-Becomes:
+becomes
 
 ```javascript
 function HelloWorld() {
@@ -104,14 +98,22 @@ function HelloWorld() {
 }
 ```
 
-Try the [Babel REPL](https://babeljs.io/repl) to see how JSX is transformed.
-
 ---
 
-# How do we use React Components?
+# How does our template help us use React Components?
 
+- Our template for React is inspired by `vite` which is a tool for generating web based projects.
 - React Components can represent the **entire** web page, or be mixed in with static content of the page.
-- Our project will turn our whole page/app/site over to React
+
+```javascript
+return <p>Hello, World!</p>
+```
+
+# Let's create a new React project
+
+```shell
+degit $GITHUB_USER/react-project-template ReactArticles
+```
 
 ---
 
@@ -135,7 +137,7 @@ If we rendered this without JavaScript it would be an empty page. It is thus up 
 
 # User Interface all in JavaScript
 
-In our SDG template we include an `main.tsx` -- this script loads React and a component named `App`
+In our SDG template we include an `main.tsx` -- this script loads React and a component we provide named `App`
 
 ```js
 import React from 'react'
@@ -196,7 +198,7 @@ This is some sample HTML we will work to create and learn how React Components c
 
 # Start with `hard coded` content
 
-We'll take our HTML and place it _ALL_ inside the `render` method of ou `App`
+We'll take our HTML and place it _ALL_ inside the `render` method of our `App`
 
 ```javascript
 import React from 'react'
@@ -369,7 +371,7 @@ Add this right inside `<main>`
 
 # Composition
 
-This is the idea of `composition` -- we are now defining a component, that has it's own content, that we can embed into another component, in this case the `App`.
+This is the idea of `composition` -- we are now defining a component, that has its own content, that we can embed into another component, in this case the `App`.
 
 ---
 
@@ -426,7 +428,7 @@ function App() {
 
 # Make many NewsArticles!
 
-We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structure as we want.
+We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structures as we want.
 
 ```javascript
 import React from 'react'

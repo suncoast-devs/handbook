@@ -1,5 +1,5 @@
 ---
-title: Algorithms
+title: Algorithm Resources
 ---
 
 These resources are curated to help developers of all skill levels get more
@@ -7,7 +7,7 @@ familiar with algorithms, both in theory and in practice. These might be
 challenging, but investing time into studying and practicing algorithms will
 help anyone be a better developers and problem solvers.
 
-## Websites
+## Websites To Practice Algorithms for Code
 
 - [CodeWars](https://www.codewars.com/dashboard)
 - [HackerRank](https://www.hackerrank.com/dashboard)
@@ -17,7 +17,6 @@ help anyone be a better developers and problem solvers.
 
 - [What's an algorithm? - David J. Malan](https://www.youtube.com/watch?v=6hfOvs8pY1k)
 - [Intro to Algorithms: Crash Course Computer Science](https://www.youtube.com/watch?v=rL8X2mlNHPM)
--
 
 ## Podcasts
 

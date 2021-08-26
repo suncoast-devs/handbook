@@ -19,7 +19,7 @@ For this assignment, you are creating a simple interactive scoreboard for your f
 ### Setup
 
 ```shell
-app-app --beta Scoreboard
+degit $GITHUB_USER/html-css-ts-project-template Scoreboard
 ```
 
 ### Explorer Mode

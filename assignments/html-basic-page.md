@@ -24,7 +24,7 @@ To start, you will need to start with the HTML and content.
 ### Setup
 
 ```shell
-app-app --alpha StartsWithHTML
+degit $GITHUB_USER/html-css-ts-project-template StartsWithHTML
 ```
 
 ### Explorer Mode

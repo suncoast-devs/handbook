@@ -37,7 +37,7 @@ documentation on their usage.
 ### [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 
 > Represents introductory content, typically a group of introductory or
-> navigational aids. It may contain some heading elements but also a logo, a
+> navigational aids. It may contain some heading elements but could also contain a logo, a
 > search form, an author name, and other elements.
 
 ---
@@ -75,7 +75,7 @@ documentation on their usage.
 
 ### [figcaption](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figcaption)
 
-> Represents a caption or legend for the rest of the contents its parent
+> Represents a caption or legend for the rest of the contents of its parent
 > `<figure>` element, if any.
 
 ---

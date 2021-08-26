@@ -8,10 +8,10 @@ theme: Next,1
 
 ---
 
-# Roles of the API Sever
+# Roles of the API Server
 
 - Present a consistent, well thought out, series of API Endpoints (URLs) to allow interaction with data.
-- Interact with all the necessary datasources. Primarly, but not limited to, databases.
+- Interact with all the necessary datasources. Primarily, but not limited to, databases.
 - Provide authentication to ensure users are who they say they are.
 - Provide authorization to ensure users are restricted based on their roles.
 
@@ -75,7 +75,7 @@ Models/
 
 ---
 
-# appsetings.json and appsetings.Develoment.json
+# appsetings.json and appsetings.Development.json
 
 These files configure certain features such as logging (we'll talk more about logging later) and which hosts (computers) are allowed to connect.
 
@@ -83,7 +83,7 @@ These files configure certain features such as logging (we'll talk more about lo
 
 # Startup.cs
 
-This file controls the startup of the part of our system that handles receiving requests from clients and sending results. Lets walk through the code and discuss all the important pieces.
+This file controls the startup part of our system that handles receiving requests from clients and sending results. Let's walk through the code and discuss all the important pieces.
 
 ---
 
@@ -267,7 +267,7 @@ Most of this code looks familiar.
 
 - We are defining a public method that returns a `string`
 - It is named `SayHello`
-- It's work is to simply return the string `"Hello, World."`
+- Its work is to simply return the string `"Hello, World."`
 
 ---
 
@@ -308,7 +308,7 @@ Application started. Press Ctrl+C to shut down.
 
 Well this is different!
 
-Our app is not going to interact with the console anymore. _Goodby Console.WriteLine_
+Our app is not going to interact with the console anymore. _Goodbye Console.WriteLine_
 
 Instead our app is telling us that it is running a **Server** and we can see it on the URL `http://localhost:5000`
 
@@ -346,7 +346,7 @@ Let's put that in our browser.
 
 ## Making our response more dynamic.
 
-If we want to see different data coming back for each request, lets include the current date and time in the greeting.
+If we want to see different data coming back for each request, let's include the current date and time in the greeting.
 
 We change the implementation of the method to:
 
@@ -440,11 +440,11 @@ public string SayHello(string who)
 
 The other way we discussed giving information to an API was as part of the URL itself.
 
-Lets make an API for rolling die
+Let's make an API for rolling die
 
-We will start with making and endpoint `/dice`.
+We will start with making and endpoint `/api/Dice`.
 
-To follow our convention we will make a `DiceController.cs` file (e.g. the `dice` from `/dice` is converted to CamelCase and we tack on `Controller`) and inside we define a `DiceController` class.
+To follow our convention we will make a `DiceController.cs` file (e.g. the `dice` from `/api/Dice` is converted to CamelCase and we tack on `Controller`) and inside we define a `DiceController` class.
 
 ---
 
@@ -521,13 +521,13 @@ But wait, this time we are returning an `int` -- what are we going to get in the
 
 # Rolling multiple die!
 
-Let's combine the URL pattern with a query parameter of the number of die we wish to roll. So our URL will look like `/dice/6?count=4` to roll `4` die with `6` sides.
+Let's combine the URL pattern with a query parameter of the number of die we wish to roll. So our URL will look like `/api/Dice/6?count=4` to roll `4` die with `6` sides.
 
 ---
 
 # Add the query parameter
 
-First lets add the query parameter to our arguments:
+First let's add the query parameter to our arguments:
 
 ```csharp
 public int Roll(int sides, int count)
@@ -541,7 +541,7 @@ Since we will be returning more than one value we will change our return type.
 
 Since we are returning a collection of integers, we'll return a `List<int>`.
 
-In our method we will create a new `List` and then populate many random rolls of the die. of rolls.
+In our method we will create a new `List` and then populate many random rolls of the die.
 
 ---
 
@@ -592,7 +592,7 @@ public List<int> Roll(int sides, int count)
 
 ---
 
-# `/dice/6?count=4`
+# `/api/Dice/6?count=4`
 
 ![fit inline](./assets/roll-4-6.png)
 

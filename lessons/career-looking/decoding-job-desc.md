@@ -67,12 +67,12 @@ work independently, detail-oriented, and analytical skills.
 
 There are times when the information provided in a job description can feel like
 they are telling you about the company when they are just using exciting things
-to draw you in. It takes practice to decide what is telling you the company’s
+to draw you in. It takes practice to decide what the description is telling you the company’s
 “Narrative” vs. just selling you neat “Characteristics.”
 
 So what exactly is the difference between a narrative and characteristics?
 
-A narrative should help you understand what story are they trying to tell
+A narrative should help you understand what story they are trying to tell
 
 - Who are they as a company?
 - What do they do?
