@@ -1,6 +1,6 @@
 Theme: Next, 1
 
-# [fit] JavaScript and the DOM
+# [fit] TypeScript and the DOM
 
 ---
 
@@ -20,7 +20,6 @@ As always, we will start with static HTML and CSS
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Tic Tac Toe</title>
     <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="/screen.css" />
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
@@ -35,7 +34,7 @@ As always, we will start with static HTML and CSS
       <li></li>
       <li></li>
     </ul>
-    <script src="/main.js" charset="utf-8"></script>
+    <script type="module" src="/src/main.ts" charset="utf-8"></script>
   </body>
 </html>
 ```
@@ -137,7 +136,7 @@ ul {
 
 ---
 
-# Style the li, in our case, the Tic Tac Toe cell
+# [fit] Style the li, in our case, the Tic Tac Toe cell
 
 ```css
 ul li {
@@ -164,7 +163,7 @@ ul li {
 
 ---
 
-# Add styles for cells that are _taken_ and _not-allowed_
+# [fit] Add styles for cells that are _taken_ and _not-allowed_
 
 ```css
 ul li.taken {
@@ -186,13 +185,13 @@ ul li.not-allowed-click {
 
 ---
 
-# If we could somehow dynamically change the content.
+# [fit] Could we dynamically change the content?
 
-Time to make our page reactive by adding in JavaScript that interacts with the browser's content
+Time to make our page reactive by adding in TypeScript that interacts with the browser's content
 
 ---
 
-# JavaScript, when run in the browser, has access to the DOM (Document Object Model)
+# TypeScript, when run in the browser, has access to the DOM (Document Object Model)
 
 Remember that `Elements` view in the web developer's tool?
 
@@ -200,13 +199,13 @@ That isn't our `index.html` file! The browser's interpretation of the content in
 
 ---
 
-# But wait! We know how to use `objects` in JavaScript!
+# But wait! We know how to use `objects` in TypeScript!
 
 If we had a way to access those _live_ objects in our code, we could adjust them.
 
 If we can adjust them, the browser would show us the updated view!
 
-Enter the `DOM` and the JavaScript `DOM` API!
+Enter the `DOM` and the TypeScript `DOM` API!
 
 ---
 
@@ -265,11 +264,13 @@ document
 
 ---
 
-# There are many functions the `document'can do, but'querySelector` is the most basic
+# So many options!
+
+### There are many functions the `document` can do, but `querySelector` is the most basic
 
 ---
 
-## Looks for the _FIRST_ matching element
+# [fit] `querySelector` Looks for the _FIRST_ matching element
 
 ```
 document.querySelector( ... css selector syntax as a string ...)
@@ -451,7 +452,7 @@ function handleClickSquare() {
 
 ---
 
-# We can teach the `firstListItem` object new tricks
+# [fit] We can teach the `firstListItem` object new tricks
 
 ```js
 //
@@ -603,16 +604,19 @@ The loop adds an event listener to each item!
 
 ---
 
-# Done playing in the console, to the editor!
+# [fit] Done playing in the console, to the editor and TypeScript!
 
-Now that we have some experience let us put it in our actual javascript file!
+Now that we have some experience let us put it in our actual TypeScript file!
 
 ---
 
-# Comment out `main.js` and bring our code over.
+# Bring our code over to `main.ts`
 
 ```js
-function handleClickSquare(event) {
+import './style.css'
+
+function handleClickSquare(event: MouseEvent) {
+  // Get the target of the click
   const thingClickedOn = event.target
 
   thingClickedOn.textContent = 'X'
@@ -625,13 +629,57 @@ allSquares.forEach(square =>
 )
 ```
 
+> There are red-squiggles!
+
+---
+
+# [fit] Telling TypeScript to check!
+
+[.column]
+
+```js
+import './style.css'
+
+// Defines a method for us to handle the click
+function handleClickSquare(event: MouseEvent) {
+  // Get the target of the click
+  const thingClickedOn = event.target
+
+  // If the thing clicked on is an LI Element
+  // - This does several things:
+  // - 1. Checks that the target isn't null
+  // - 2. Let's TypeScript know that *inside* this if statement
+  //      the thingClickedOn is an LI element, and thus we can
+  //      change its textContent
+  if (thingClickedOn instanceof HTMLLIElement) {
+    thingClickedOn.textContent = 'X'
+  }
+}
+
+const allSquares = document.querySelectorAll('li')
+
+allSquares.forEach(square =>
+  square.addEventListener('click', handleClickSquare)
+)
+```
+
+[.column]
+
+Hover over thingClickedOn before and after the `if`!
+
+TypeScript allows for _type narrowing_.
+
+The more we tell/test the more TypeScript can know!
+
 ---
 
 # [fit] Load the page and see our logic works each time we reload the page!
 
 ---
 
-# But our game isn't great. `X` keeps getting to take squares!
+# But our game isn't great.
+
+`X` keeps getting to take squares!
 
 We should toggle between players!
 
@@ -644,10 +692,12 @@ let currentPlayer = 'X'
 ```
 
 ```js
-function handleClickSquare(event) {
+function handleClickSquare(event: MouseEvent) {
   const thingClickedOn = event.target
 
-  thingClickedOn.textContent = currentPlayer
+  if (thingClickedOn instanceof HTMLLIElement) {
+    thingClickedOn.textContent = currentPlayer
+  }
 }
 ```
 
@@ -666,6 +716,32 @@ if (currentPlayer === 'X') {
   currentPlayer = 'X'
 }
 ```
+
+---
+
+# But what if we made a mistake!
+
+```js
+// If currentPlayer is precisely the text 'X', make the currentPlayer 'O'
+if (currentPlayer === 'X') {
+  currentPlayer = 'O'
+} else {
+  // Otherwise it was already 'O', so make it an 'X'
+  currentPlayer = 'Y'
+}
+```
+
+---
+
+# Make the definition of `currentPlayer` more specific!
+
+```typescript
+let currentPlayer: 'X' | 'O' = 'X'
+```
+
+    This means that currentPlayer is a string, but can *only* be the string X or the string O
+
+    TypeScript will check to make sure this is always true in our code, but only during coding and compiling!
 
 ---
 
@@ -820,39 +896,14 @@ Our `handleClickSquare` is waiting for it!
 
 Since the `event.target` will be the clicked `li`, all our code will work!
 
-... Almost :(
-
 ---
 
 # It is possible to click on the `ul` itself. Click on the gaps between squares.
 
-How do we handle this?
+Luckily our instance on type safety helps us! We are already testing for clicks against an `<li>`!
 
 ---
 
-# We can detect the clicked element
-
-```js
-console.log(event.target.nodeName)
-```
-
-The element might be the `LI,` but it could also be the `UL` depending on where the click happened.
-
----
-
-# Guard clause to the rescue again
-
-```js
-if (event.target.nodeName !== 'LI') {
-  console.log('We did not click on an LI')
-  return
-}
-```
-
-Now we proceed if the element clicked was a `li`
-
-And we need _ONE_ eventListener on the parent `ul`
-
-Event bubbling can reduce the amount of code, but it can be tricky.
+# Event bubbling can reduce the amount of code, but it can be tricky.
 
 ---

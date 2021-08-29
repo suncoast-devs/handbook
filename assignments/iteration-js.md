@@ -1,6 +1,6 @@
 ---
-title: Iteration in JavaScript
-tags: ['javascript', 'enumeration']
+title: Iteration in TypeScript
+tags: ['typescript', 'enumeration']
 ---
 
 ## Objectives
@@ -10,14 +10,14 @@ tags: ['javascript', 'enumeration']
 
 ## Instructions
 
-1. Fork [this repository](https://github.com/suncoast-devs/js-iteration) to your own account.
+1. Fork [this repository](https://github.com/suncoast-devs/ts-iteration) to your own account.
 2. Change into your projects directory:
-3. Clone your repository: `hub clone js-iteration`
-4. Change into your project's directory: `cd js-iteration`
+3. Clone your repository: `hub clone ts-iteration`
+4. Change into your project's directory: `cd ts-iteration`
 5. Install the dependencies: `npm install`
 6. Open in your editor: `code .`
 7. Start the test runner: `npm test`
-8. In VS Code, open the file: `src/functions.js` and work on functions until tests pass.
+8. In VS Code, open the file: `src/functions.ts` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
 
 ## Explorer Mode
@@ -33,7 +33,7 @@ tags: ['javascript', 'enumeration']
   - Your method must accept an array and a callback function.
   - Example for your `_map`:
 
-  ```js
+  ```typescript
   const numbers = [1, 2, 3, 4, 5]
 
   const doubled = _map(numbers, function (number) {
@@ -44,7 +44,7 @@ tags: ['javascript', 'enumeration']
   const increased = _map(numbers, function (number) {
     return number + 2
   })
-  // increated needs to be [2,3,4,5,6]
+  // increased needs to be [2,3,4,5,6]
   ```
 
   - `map`
@@ -58,7 +58,7 @@ tags: ['javascript', 'enumeration']
 ## Additional Resources
 
 Reference the documentation on DevDocs to find what kind of helpful functions
-might already be in JavaScript.
+might already be in TypeScript.
 
 - [String Functions on DevDocs](https://devdocs.io/javascript/global_objects/string).
 - [Array Functions on DevDocs](http://devdocs.io/javascript/global_objects/array).

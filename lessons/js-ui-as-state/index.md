@@ -4,8 +4,8 @@ assignment:
   - roshambo-js
 ---
 
-In [the lesson on using JavaScript to modify the DOM](/lessons/js-dom) we
-discussed how to use JavaScript to find and manipulate user interface elements.
+In [the lesson on using TypeScript to modify the DOM](/lessons/js-dom) we
+discussed how to use TypeScript to find and manipulate user interface elements.
 Two examples of this are _toggle the state of an element each time we click it_
 and _update a counter when a separate button is clicked_. In each of these cases
 we are modifying some `state` of the user interface when responding to some
@@ -14,9 +14,31 @@ change.
 We could implement the case of _toggle the state of an element each time we
 click it_ as:
 
-```javascript
-document.querySelector('button').addEventListener('click', function (event) {
-  event.target.classList.toggle('enabled')
+```typescript
+import './style.css'
+
+const buttonElement = document.querySelector('button')
+
+if (buttonElement) {
+  buttonElement.addEventListener('click', function (event) {
+    const clickedElement = event.target as HTMLElement
+
+    if (clickedElement) {
+      clickedElement.classList.toggle('enabled')
+    }
+  })
+}
+```
+
+We can use
+[optional chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+to shorten the code:
+
+```typescript
+document.querySelector('button')?.addEventListener('click', function (event) {
+  const target = event.target as HTMLElement | null
+
+  target?.classList.toggle('enabled')
 })
 ```
 
@@ -26,14 +48,16 @@ the presence of the class to indicate the state.
 We could implement the case of _update a counter when a separate button is
 clicked_ as:
 
-```javascript
+```typescript
 let counter = 0
 
-document.querySelector('button').addEventListener('click', function (event) {
+document.querySelector('button')?.addEventListener('click', function () {
   counter++
 
-  const counterElement = document.querySelector('.counterElement')
-  counterElement.innerText = counter
+  const counterElement = document.querySelector<HTMLElement>('.counterElement')
+  if (counterElement) {
+    counterElement.innerText = `${counter}`
+  }
 })
 ```
 
@@ -164,9 +188,15 @@ would only need to update the variables (_state_) in our application.
 
 ## What might this code look like?
 
-```js
+```typescript
+interface Transaction {
+  account: string
+  amount: number
+  details: string
+}
+
 // Or maybe load these from a file or an API
-const transactions = []
+const transactions: Transaction[] = []
 
 function render() {
   const checking = transactions
@@ -187,14 +217,26 @@ function render() {
     <button>Make Deposit</button>
   `
 
-  document.querySelector('body').innerHTML = html
-  document.querySelector('button').addEventListener('click', function () {
-    // Make a new transaction and add it
-    const newTransaction = new Transaction({ amount: 50, account: 'Checking' })
-    transactions.push(newTransaction)
+  const body = document.querySelector('body')
+  if (body) {
+    body.innerHTML = html
+  }
 
-    render()
-  })
+  const button = document.querySelector('button')
+
+  if (button) {
+    button.addEventListener('click', function () {
+      // Make a new transaction and add it
+      const newTransaction: Transaction = {
+        amount: 50,
+        account: 'Checking',
+        details: 'Payment for Work',
+      }
+      transactions.push(newTransaction)
+
+      render()
+    })
+  }
 }
 ```
 

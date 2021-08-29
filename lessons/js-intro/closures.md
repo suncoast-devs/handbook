@@ -5,16 +5,17 @@ order: 6
 
 ## Closures
 
-> NOTE: "What is a closure in JavaScript?" is often an interview question.
+> NOTE: "What is a closure in JavaScript/TypeScript?" is often an interview
+> question.
 
-Closures in JavaScript are a way to create a function that has access to the
+Closures in TypeScript are a way to create a function that has access to the
 variables and functions defined in the outer scope.
 
 What does this mean? We can try a few examples.
 
 ## Simple example
 
-```javascript
+```typescript
 const variableFromOuterScope = "Wow, I'm from the outer scope"
 
 function thisFunctionActsLikeAClosure() {
@@ -48,12 +49,18 @@ do "remember" their values.
 
 First, we will create an array of people. Each person will have a name, a
 birthday, and a number of milliseconds we should wait before showing their
-information. We'll use javaScript's `setTimeout` to do the waiting. Since
+information. We'll use TypeScript's `setTimeout` to do the waiting. Since
 `setTimeout` calls a function **later** this will help prove that the function
 is really "remembering" its values.
 
-```javascript
-const people = [
+```typescript
+type Person = {
+  name: string
+  birthDate: string
+  delayMilliseconds: number
+}
+
+const people: Person[] = [
   {
     name: 'Alan Turing',
     birthDate: 'June 23, 1912',
@@ -80,8 +87,8 @@ const people = [
 Then we will create a method that accepts a person variable and prints out
 details about them.
 
-```javascript
-function printPersonInfo(person) {
+```typescript
+function printPersonInfo(person: Person) {
   console.log(`${person.name} was born on ${person.birthDate}`)
 }
 ```
@@ -91,7 +98,7 @@ each person in the array. However, we will call this method from inside a call
 to `setTimeout`. `setTimeout` is a function that creates a timer that will call
 the supplied function later.
 
-```javascript
+```typescript
 people.forEach(function (person) {
   // Inside here we have access to the `person` variable here. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the

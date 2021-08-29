@@ -73,7 +73,6 @@ modules:
       - js-dom
       - js-event-loop
       - js-ui-as-state
-      - js-classes
       - js-modules
       - front-end-template-react
       - react-intro
@@ -82,7 +81,6 @@ modules:
       - js-fetch
       - react-state
       - react-state-flow
-      - react-hooks
       - react-hooks-use-effect
       - react-hooks-react-router
   - full-stack-development:

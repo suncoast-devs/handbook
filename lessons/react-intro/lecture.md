@@ -46,13 +46,21 @@ It was developed by Facebook around 2011/2012 and was released as an [open sourc
 
 ---
 
+# We will teach you hooks
+
+Following our guide of teaching you currently deployed technolody but with an eye on the future...
+
+... we are teaching you hooks. However, if you start a `class` based project you'll be able to pick that up.
+
+---
+
 # What does a Component look like
 
 ## The rules of a React component are:
 
-- It must `extend React.Component`
-- It must have a `render()` method that returns JSX
-- The JSX that `render()` returns must consist of _exactly_ one main element, with other elements contained within. We'll see this more later.
+- It must be named following the `PascalCase` style.
+- It must be a function (`function` style or arrow-style) that returns JSX.
+- The JSX returned must consist of _exactly_ one main element, with other elements contained within. We'll see this more later.
 
 ---
 
@@ -65,10 +73,8 @@ JSX is an extension of JavaScript that allows us to use an HTML-like syntax in o
 # Simplest React Component
 
 ```javascript
-class HelloWorld extends React.Component {
-  render() {
-    return <div>Hello, World!</div>
-  }
+function HelloWorld() {
+  return <p>Hello, World!</p>
 }
 ```
 
@@ -76,8 +82,20 @@ class HelloWorld extends React.Component {
 
 # HTML in our JS?!?
 
+---
+
+# Transpiling
+
 ```javascript
-return <div>Hello, World!</div>
+return <p>Hello, World!</p>
+```
+
+becomes
+
+```javascript
+function HelloWorld() {
+  return React.createElement('p', null, 'Hello, World')
+}
 ```
 
 ---
@@ -87,11 +105,13 @@ return <div>Hello, World!</div>
 - Our template for React is inspired by `vite` which is a tool for generating web based projects.
 - React Components can represent the **entire** web page, or be mixed in with static content of the page.
 
----
+```javascript
+return <p>Hello, World!</p>
+```
 
 # Let's create a new React project
 
-```
+```shell
 degit $GITHUB_USER/react-project-template ReactArticles
 ```
 
@@ -117,7 +137,7 @@ If we rendered this without JavaScript it would be an empty page. It is thus up 
 
 # User Interface all in JavaScript
 
-In our SDG template we include an `main.js` -- this script loads React and a component we provide named `App`
+In our SDG template we include an `main.tsx` -- this script loads React and a component we provide named `App`
 
 ```js
 import React from 'react'
@@ -132,7 +152,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 # ReactDOM is the glue between HTML and JavaScript
 
-React connects an existing `DOM` element to a component with the `ReactDOM` method. Here we state that the element with the `id` of `root` will be replaced with the component `App` that we `import` from the `App.jsx` file.
+React connects an existing `DOM` element to a component with the `ReactDOM` method. Here we state that the element with the `id` of `root` will be replaced with the component `App` that we `import` from the `App.tsx` file.
 
 Typically we will not have to adjust the `index.html` or the `index.js` files. We will start writing our code in our `App.jsx` file.
 
@@ -140,11 +160,9 @@ Typically we will not have to adjust the `index.html` or the `index.js` files. W
 
 # JSX Files and _transpiling_
 
-You may have noticed that we define our React Components in files that end in `.jsx` instead of `.js`.
+You may have noticed that we define our React Components in files that end in `.tsx` instead of `.ts`.
 
-The `.jsx` extension allows our editors and our code management tools to know we are using the `JSX` extensions.
-
-Browsers do not understand `JSX` by default so a [transpile](https://en.wikipedia.org/wiki/Source-to-source_compiler) step takes place automatically. This step turns our `JSX` into plain `JavaScript` that a browser **can** understand.
+The `.tsx` extension allows our editors and our code management tools to know we are using the `JSX` extensions.
 
 ---
 
@@ -183,40 +201,37 @@ This is some sample HTML we will work to create and learn how React Components c
 We'll take our HTML and place it _ALL_ inside the `render` method of our `App`
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <article className="intro-article">
-            <h2 className="article-title">SDG Announces Hackathon!</h2>
-            <p>
-              SDG announces the 2020 Summer Hackathon. Join us for an exciting
-              weekend
-            </p>
-            <a className="read-more" href="#here">
-              read more about SDG Announces Hackathon!
-            </a>
-          </article>
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <article className="intro-article">
+          <h2 className="article-title">SDG Announces Hackathon!</h2>
+          <p>
+            SDG announces the 2020 Summer Hackathon. Join us for an exciting
+            weekend
+          </p>
+          <a className="read-more" href="#here">
+            read more about SDG Announces Hackathon!
+          </a>
+        </article>
 
-          <article className="intro-article">
-            <h2 className="article-title">
-              Student Graduation is Right Around the Corner
-            </h2>
-            <p>
-              Our next cohort of students will be graduating in just over a
-              week.
-            </p>
-            <a className="read-more" href="#here">
-              read more about Student Graduation is Right Around the Corner
-            </a>
-          </article>
-        </main>
-      </div>
-    )
-  }
+        <article className="intro-article">
+          <h2 className="article-title">
+            Student Graduation is Right Around the Corner
+          </h2>
+          <p>
+            Our next cohort of students will be graduating in just over a week.
+          </p>
+          <a className="read-more" href="#here">
+            read more about Student Graduation is Right Around the Corner
+          </a>
+        </article>
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -313,7 +328,7 @@ import React from 'react'
 # Next, we will make our component:
 
 ```javascript
-export class NewsArticle extends React.Component {
+export function NewsArticle() {
   // Code here
 }
 ```
@@ -322,15 +337,13 @@ The `export` at the beginning of that line, tells JavaScript we wish to share th
 
 ---
 
-# Add a default render method
+# Add a return
 
 For now, as a test, we'll have it just make a `<div>` with some text
 
 ```javascript
-export class NewsArticle extends React.Component {
-  render() {
-    return <div>Something</div>
-  }
+export function NewsArticle() {
+  return <div>Something</div>
 }
 ```
 
@@ -338,7 +351,7 @@ export class NewsArticle extends React.Component {
 
 # Prepare `App` to use `NewsArticle`
 
-In `App.jsx` add:
+In `App.tsx` add:
 
 ```javascript
 import { NewsArticle } from './components/NewsArticle'
@@ -369,22 +382,18 @@ Let's take one example of the news article we have and make it the `render` meth
 ```javascript
 import React from 'react'
 
-export class NewsArticle extends React.Component {
-  render() {
-    return (
-      <article className="intro-article">
-        <h2 className="article-title">
-          Student Graduation is Right Around the Corner
-        </h2>
-        <p>
-          Our next cohort of students will be graduating in just over a week.
-        </p>
-        <a className="read-more" href="#here">
-          read more about Student Graduation is Right Around the Corner
-        </a>
-      </article>
-    )
-  }
+export function NewsArticle() {
+  return (
+    <article className="intro-article">
+      <h2 className="article-title">
+        Student Graduation is Right Around the Corner
+      </h2>
+      <p>Our next cohort of students will be graduating in just over a week.</p>
+      <a className="read-more" href="#here">
+        read more about Student Graduation is Right Around the Corner
+      </a>
+    </article>
+  )
 }
 ```
 
@@ -401,19 +410,17 @@ You should notice that our app now has **THREE** articles. The first comes from 
 Let's remove the other two hardcoded `<article>`s leaving only our `<NewsArticle/>`
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle />
+      </main>
+    </div>
+  )
 }
 ```
 
@@ -424,22 +431,20 @@ class App extends Component {
 We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structures as we want.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="all-main-content">
-        <main>
-          <NewsArticle />
-          <NewsArticle />
-          <NewsArticle />
-          <NewsArticle />
-        </main>
-      </div>
-    )
-  }
+function App() {
+  return (
+    <div className="all-main-content">
+      <main>
+        <NewsArticle />
+        <NewsArticle />
+        <NewsArticle />
+        <NewsArticle />
+      </main>
+    </div>
+  )
 }
 
 export default App
@@ -474,9 +479,9 @@ We can add properties to our components by specifying them in a very similar way
 
 # Using props in a component
 
-All the properties added in the _USAGE_ of a component is present to us inside a component with `this.props`
+All the properties added in the _USAGE_ of a component is present to us inside a component via an argument we will name `props`
 
-So our `title` is in a variable named `this.props.title` and our `body` is in a variable called `this.props.body`
+So our `title` is in a variable named `props.title` and our `body` is in a variable called `props.body`
 
 In the places where we have hard coded data we can replace with variables
 
@@ -495,18 +500,16 @@ We can replace all the hardcoded text with values from `this.props`
 ```javascript
 import React from 'react'
 
-export class NewsArticle extends React.Component {
-  render() {
-    return (
-      <article className="intro-article">
-        <h2 className="article-title">{this.props.title}</h2>
-        <p>{this.props.body}</p>
-        <a className="read-more" href="#here">
-          read more about {this.props.title}
-        </a>
-      </article>
-    )
-  }
+export function NewsArticle() {
+  return (
+    <article className="intro-article">
+      <h2 className="article-title">{props.title}</h2>
+      <p>{props.body}</p>
+      <a className="read-more" href="#here">
+        read more about {props.title}
+      </a>
+    </article>
+  )
 }
 ```
 
@@ -609,22 +612,20 @@ const newsArticlesFromData = articles.map(article => (
 Since we now have an array of the `<NewsArticle/>` we can simply place them where we want them in place of the hardcoded data.
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    const newsArticlesFromData = articles.map(article => (
-      <NewsArticle title={article.title} body={article.body} />
-    ))
+function App() {
+  const newsArticlesFromData = articles.map(article => (
+    <NewsArticle title={article.title} body={article.body} />
+  ))
 
-    return (
-      <div className="all-main-content">
-        <main>{newsArticlesFromData}</main>
-      </div>
-    )
-  }
+  return (
+    <div className="all-main-content">
+      <main>{newsArticlesFromData}</main>
+    </div>
+  )
 }
 
 export default App
@@ -647,22 +648,20 @@ There is one other thing we need to do. If you look in your console you will see
 ---
 
 ```javascript
-import React, { Component } from 'react'
+import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
 import articles from './articles'
 
-class App extends Component {
-  render() {
-    const newsArticlesFromData = articles.map(article => (
-      <NewsArticle key={article.id} title={article.title} body={article.body} />
-    ))
+function App() {
+  const newsArticlesFromData = articles.map(article => (
+    <NewsArticle key={article.id} title={article.title} body={article.body} />
+  ))
 
-    return (
-      <div className="all-main-content">
-        <main>{newsArticlesFromData}</main>
-      </div>
-    )
-  }
+  return (
+    <div className="all-main-content">
+      <main>{newsArticlesFromData}</main>
+    </div>
+  )
 }
 
 export default App
