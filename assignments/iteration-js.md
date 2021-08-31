@@ -16,13 +16,13 @@ tags: ['typescript', 'enumeration']
 4. Change into your project's directory: `cd ts-iteration`
 5. Install the dependencies: `npm install`
 6. Open in your editor: `code .`
-7. Start the test runner: `npm test`
+7. Start the test runner: `npm start`
 8. In VS Code, open the file: `src/functions.ts` and work on functions until tests pass.
 9. Commit and push your work to GitHub.
 
 ## Explorer Mode
 
-- As you write each function and make them pass the `npm test` screen will show your progress.
+- As you write each function and make them pass the `npm start` screen will show your progress.
 - Work until all the tests are passing
 
 ## Epic Mode
