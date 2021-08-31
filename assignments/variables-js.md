@@ -5,7 +5,7 @@ tags: ['javascript', 'console']
 
 # Let's get started
 
-Today, we are starting our journey into JavaScript. For this assignment, you will be making a program that demonstrates some JavaScript fundamentals.
+Today, we are starting our journey into TypeScript. For this assignment, you will be making a program that demonstrates some TypeScript fundamentals.
 
 ## Objectives
 
@@ -37,7 +37,7 @@ degit $GITHUB_USER/html-css-ts-project-template VariablesJS
 
   - Converting String Input Into Numbers
 
-    - Input two numbers from the user. Convert each resulting `string` from `window.prompt` to a `float` using [parseFloat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseFloat). Save the first value in a variable named `firstOperand` and the second value in a variable named `secondOperand`.
+    - Input two numbers from the user. Convert each resulting `string` from `window.prompt` to a `number` using [Number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number). Save the first value in a variable named `firstOperand` and the second value in a variable named `secondOperand`.
 
   - Doing Math
 
@@ -50,9 +50,9 @@ degit $GITHUB_USER/html-css-ts-project-template VariablesJS
 
   - Using Arrays
 
-    - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate an array of random numbers. NOTE: That format isn't ready for JavaScript. In your editor, you will need to format the collection of numbers as a JavaScript array.
+    - Use [this page](https://www.random.org/integers/?num=100&min=10000&max=50000&col=5&base=10&format=plain&rnd=new) to generate an array of random numbers. NOTE: That format isn't ready for TypeScript. In your editor, you will need to format the collection of numbers as a TypeScript array.
     - Place these numbers into a properly formatted array named `numbers`.
-    - Determine the following using one (or more) JavaScript `for` loops:
+    - Determine the following using one (or more) TypeScript `for` loops:
 
       - Find the smallest number in the array and place the answer in a variable named `smallest`
       - Find the largest number in the array and place the answer in a variable named `largest`
