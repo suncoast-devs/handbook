@@ -27,14 +27,20 @@ To attach a function to an event, we use an
 like this:
 
 ```javascript
+// Do something when the document itself loads
 document.addEventListener('load', function () {
   console.log('loaded')
 })
 
+// Do something if you click ANYWHERE in the document...
 document.addEventListener('click', function () {
   console.log('click')
 })
 ```
+
+These examples are on the `document` itself. Typically we want events to work
+from specific elements. To do that we'll need to use `querySelector` or
+`querySelectorAll`
 
 > [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 > represents any web page loaded in the browser and serves as an entry point
