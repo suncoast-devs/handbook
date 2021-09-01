@@ -61,10 +61,10 @@ JavaScript also has `types`, some of which will be familiar.
 # But JavaScript is loosely typed!
 
 ```js
-let number = 42
+let score = 42
 
 // WHAT? This ok in JavaScript!?
-number = 'Mary'
+score = 'Mary'
 ```
 
 ---
@@ -127,7 +127,7 @@ Around 2018 the language and the tooling started becoming good enough for mass a
 
 ---
 
-# See: https://2020.stateofjs.com/en-US/technologies/javascript-flavors/
+# See: [this artcile](https://2020.stateofjs.com/en-US/technologies/javascript-flavors/)
 
 ---
 
@@ -182,7 +182,7 @@ TypeScript is a _SUPER SET_ of JavaScript
 
 - We can declare types for all our variables
 
-- We can declare types our own types!
+- We can declare our own types!
 
 ---
 
@@ -205,7 +205,7 @@ Like `C#` we can declare literal values.
 - Numbers: `0`, `117` and `-345` but also `3.1415` and `-42.123`
 - Strings: `"This is a sentence"` `'This is a sentence'` \`This is a sentence\`
 - Boolean: `true` and `false`
-- Arrays: `["French Roast", "Colombian", "Kona"]` and `["Shuttle", 42, true, "Thing"]`
+- Arrays: `["French Roast", "Columbian", "Kona"]` and `["Shuttle", 42, true, "Thing"]`
 - Objects: `{name: "Sandy", enrolled: true}`
 
 ---
@@ -222,13 +222,13 @@ Standard to use `camelCase` for our variable names.
 
 **Four** ways to declare a variable
 
-| Method            | Description                                                                             |
-| ----------------- | --------------------------------------------------------------------------------------- |
-| `var`             | Declares a variable function or globally scoped, optionally initializing it to a value. |
-| `let`             | Declares a block-scoped, local variable, optionally initializing it to a value.         |
-| `const`           | Declares a block-scoped, read-only named constant.                                      |
-| undeclared global | Without var, let, or const, we create a global variable                                 |
-|                   |                                                                                         |
+| Method            | Description                                                                                   |
+| ----------------- | --------------------------------------------------------------------------------------------- |
+| `var`             | Declares a variable to be function or globally scoped, optionally initializing it to a value. |
+| `let`             | Declares a block-scoped, local variable, optionally initializing it to a value.               |
+| `const`           | Declares a block-scoped, read-only named constant.                                            |
+| undeclared global | Without var, let, or const, we create a global variable                                       |
+|                   |                                                                                               |
 
 ---
 
@@ -477,7 +477,7 @@ const message = `Congratulations, ${answer} is correct. You have ${score} points
 
 # Objects
 
-Similar to other languages as a combination of state and behavior.
+Similar to other languages objects are a combination of state and behavior.
 
 In TypeScript, an object is a standalone entity with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, and a material. In the same way, TypeScript objects can have properties, which define their characteristics.
 
@@ -872,7 +872,7 @@ colors.forEach(color => console.log(color))
 
 # More about iterating
 
-For more details on how to manipulate arrays, including adding and removing elements, see the [quick reference guide](/lessons/misc-quick-reference/js-arrays) on arrays.
+For more details on how to manipulate arrays, including adding and removing elements, see the [quick reference guide](https://handbook.suncoast.io/lessons/misc-quick-reference/js-arrays) on arrays.
 
 ---
 
@@ -1297,7 +1297,13 @@ We can create a more complex example to demonstrate that these functions do "rem
 ---
 
 ```typescript
-const people = [
+type Person = {
+  name: string
+  birthDate: string
+  delayMilliseconds: number
+}
+
+const people: Person[] = [
   {
     name: 'Alan Turing',
     birthDate: 'June 23, 1912',
@@ -1328,7 +1334,7 @@ const people = [
 Then we will create a method that accepts a person variable and prints out details about them.
 
 ```typescript
-function printPersonInfo(person) {
+function printPersonInfo(person: Person) {
   console.log(`${person.name} was born on ${person.birthDate}`)
 }
 ```
@@ -1345,7 +1351,7 @@ function printPersonInfo(person) {
 ---
 
 ```typescript
-people.forEach(function (person) {
+people.forEach(function (person: Person) {
   // Inside here we have access to the `person` variable. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the
   // function, it is a new creation of that variable.

@@ -57,7 +57,7 @@ Begin by creating a new array to receive the individual elements.
 ```typescript
 const colors = ['red', 'green', 'blue']
 
-const lengths = []
+const lengths: number[] = []
 ```
 
 [.column]
@@ -67,7 +67,7 @@ Then we will setup the `forEach` loop
 ```typescript
 const colors = ['red', 'green', 'blue']
 
-const lengths = []
+const lengths: number[] = []
 
 colors.forEach(function (color) {
   // Code here
@@ -249,4 +249,4 @@ console.log(total) // [ 155 ]
 
 ### Others
 
-See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`.
+See the [quick reference guide](https://handbook.suncoast.io/lessons/misc-quick-reference/js-arrays) for other iterators such as `some`, `every`, and `reduce-right`.
