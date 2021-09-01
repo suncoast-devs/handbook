@@ -520,7 +520,7 @@ function handleClickSquare(event) {
 
 ---
 
-# Every time our browser handles an event, we are `addEventListener` handling...
+# Every time our browser handles an event
 
 ... we get our function called _AND_ we get an `event` object!
 
