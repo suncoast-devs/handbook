@@ -26,9 +26,8 @@ degit $GITHUB_USER/html-css-ts-project-template Scoreboard
 
 #### Part 1:
 
-- Create a new project using the `beta` stack and implement the design using the given HTML & CSS.
 - Update the CSS to improve the styling based on your own design and tastes.
-- Avoid updating the HTML too much, try to use existing elements and classes. However, do add new classes or elements for your design or your JavaScript if needed.
+- Avoid updating the HTML too much, try to use existing elements and classes. However, do add new classes or elements for your design or your TypeScript if needed.
 - Assign an event to the input fields to automatically change the team's name as the user types.
 - Assign click events to the buttons to update the corresponding values on the page. The score buttons should adjust the current score by a "hard-coded" value.
 - Deploy your site.
