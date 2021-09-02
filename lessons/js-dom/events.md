@@ -27,20 +27,16 @@ To attach a function to an event, we use an
 like this:
 
 ```javascript
-// Do something when the document itself loads
-document.addEventListener('load', function () {
-  console.log('loaded')
+const firstButtonOnPage = document.querySelector('button')
+firstButtonOnPage.addEventListener('click', function () {
+  console.log('Thanks for clicking the button!')
 })
 
-// Do something if you click ANYWHERE in the document...
-document.addEventListener('click', function () {
-  console.log('click')
+const firstInputFieldOnPage = document.querySelector('input')
+firstInputFieldOnPage.addEventListener('input', function () {
+  console.log('You typed something in that input!')
 })
 ```
-
-These examples are on the `document` itself. Typically we want events to work
-from specific elements. To do that we'll need to use `querySelector` or
-`querySelectorAll`
 
 > [`document`](https://developer.mozilla.org/en-US/docs/Web/API/Document)
 > represents any web page loaded in the browser and serves as an entry point
@@ -81,7 +77,7 @@ Let's console log the target. If we were to look at this in the developer tools
 we could see all the details of the element itself.
 
 ```javascript
-function displayMatches(event) {
+function displayMatches(event: MouseEvent) {
   console.log(event.target)
   console.log("Some button with the class 'submit' was clicked")
 }
@@ -89,6 +85,107 @@ function displayMatches(event) {
 const button = document.querySelector('.submit')
 button.addEventListener('click', displayMatches)
 ```
+
+### How do we know what type to declare our `event` argument as?
+
+From the TypeScript documentation for `event` here is the type of the event
+
+| Event                    | Type                         |
+| ------------------------ | ---------------------------- |
+| abort                    | UIEvent                      |
+| animationcancel          | AnimationEvent               |
+| animationend             | AnimationEvent               |
+| animationiteration       | AnimationEvent               |
+| animationstart           | AnimationEvent               |
+| auxclick                 | MouseEvent                   |
+| beforeinput              | InputEvent                   |
+| blur                     | FocusEvent                   |
+| canplay                  | Event                        |
+| canplaythrough           | Event                        |
+| change                   | Event                        |
+| click                    | MouseEvent                   |
+| close                    | Event                        |
+| compositionend           | CompositionEvent             |
+| compositionstart         | CompositionEvent             |
+| compositionupdate        | CompositionEvent             |
+| contextmenu              | MouseEvent                   |
+| cuechange                | Event                        |
+| dblclick                 | MouseEvent                   |
+| drag                     | DragEvent                    |
+| dragend                  | DragEvent                    |
+| dragenter                | DragEvent                    |
+| dragleave                | DragEvent                    |
+| dragover                 | DragEvent                    |
+| dragstart                | DragEvent                    |
+| drop                     | DragEvent                    |
+| durationchange           | Event                        |
+| emptied                  | Event                        |
+| ended                    | Event                        |
+| error                    | ErrorEvent                   |
+| focus                    | FocusEvent                   |
+| focusin                  | FocusEvent                   |
+| focusout                 | FocusEvent                   |
+| formdata                 | FormDataEvent                |
+| gotpointercapture        | PointerEvent                 |
+| input                    | Event                        |
+| invalid                  | Event                        |
+| keydown                  | KeyboardEvent                |
+| keypress                 | KeyboardEvent                |
+| keyup                    | KeyboardEvent                |
+| load                     | Event                        |
+| loadeddata               | Event                        |
+| loadedmetadata           | Event                        |
+| loadstart                | Event                        |
+| lostpointercapture       | PointerEvent                 |
+| mousedown                | MouseEvent                   |
+| mouseenter               | MouseEvent                   |
+| mouseleave               | MouseEvent                   |
+| mousemove                | MouseEvent                   |
+| mouseout                 | MouseEvent                   |
+| mouseover                | MouseEvent                   |
+| mouseup                  | MouseEvent                   |
+| pause                    | Event                        |
+| play                     | Event                        |
+| playing                  | Event                        |
+| pointercancel            | PointerEvent                 |
+| pointerdown              | PointerEvent                 |
+| pointerenter             | PointerEvent                 |
+| pointerleave             | PointerEvent                 |
+| pointermove              | PointerEvent                 |
+| pointerout               | PointerEvent                 |
+| pointerover              | PointerEvent                 |
+| pointerup                | PointerEvent                 |
+| progress                 | ProgressEvent                |
+| ratechange               | Event                        |
+| reset                    | Event                        |
+| resize                   | UIEvent                      |
+| scroll                   | Event                        |
+| securitypolicyviolation  | SecurityPolicyViolationEvent |
+| seeked                   | Event                        |
+| seeking                  | Event                        |
+| select                   | Event                        |
+| selectionchange          | Event                        |
+| selectstart              | Event                        |
+| stalled                  | Event                        |
+| submit                   | Event                        |
+| suspend                  | Event                        |
+| timeupdate               | Event                        |
+| toggle                   | Event                        |
+| touchcancel              | TouchEvent                   |
+| touchend                 | TouchEvent                   |
+| touchmove                | TouchEvent                   |
+| touchstart               | TouchEvent                   |
+| transitioncancel         | TransitionEvent              |
+| transitionend            | TransitionEvent              |
+| transitionrun            | TransitionEvent              |
+| transitionstart          | TransitionEvent              |
+| volumechange             | Event                        |
+| waiting                  | Event                        |
+| webkitanimationend       | Event                        |
+| webkitanimationiteration | Event                        |
+| webkitanimationstart     | Event                        |
+| webkittransitionend      | Event                        |
+| wheel                    | WheelEvent                   |
 
 Let's extend our usage to another kind of element, an input, and another event,
 the `input` event.
@@ -108,10 +205,13 @@ the `<p>` tag to the contents of the input.
 const inputElement = document.querySelector('input')
 const paragraphElement = document.querySelector('p')
 
-const updateParagraph = event => {
-  const currentInputValue = event.target.value
+function updateParagraph(event: Event) {
+  const elementChanged = event.target
 
-  paragraphElement.innerText = currentInputValue
+  if (elementChanged instanceof HTMLInputElement) {
+    const currentInputValue = elementChanged.value
+    paragraphElement.innerText = currentInputValue
+  }
 }
 
 inputElement.addEventListener('input', updateParagraph)
@@ -145,10 +245,13 @@ A first attempt might be:
 const inputElements = document.querySelectorAll('input')
 const paragraphElement = document.querySelector('p')
 
-const updateParagraph = event => {
-  const currentInputValue = event.target.value
+function updateParagraph(event: Event) {
+  const elementChanged = event.target
 
-  paragraphElement.innerText = currentInputValue
+  if (elementChanged instanceof HTMLInputElement) {
+    const currentInputValue = elementChanged.value
+    paragraphElement.innerText = currentInputValue
+  }
 }
 
 // Attach event listeners to each one
@@ -180,10 +283,13 @@ Since the `div` is the parent of all the `inputs` we can put our listener there!
 const divElement = document.querySelector('div')
 const paragraphElement = document.querySelector('p')
 
-const updateParagraph = event => {
-  const currentInputValue = event.target.value
+function updateParagraph(event: Event) {
+  const elementChanged = event.target
 
-  paragraphElement.innerText = currentInputValue
+  if (elementChanged instanceof HTMLInputElement) {
+    const currentInputValue = elementChanged.value
+    paragraphElement.innerText = currentInputValue
+  }
 }
 
 // Attach event listeners to each one
