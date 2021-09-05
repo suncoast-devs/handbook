@@ -12,7 +12,7 @@ importing various data is very helpful.
 
 ## What can we import?
 
-Our development and build tools come with various `loaders` to able to import
+Our development and build tools come with various `loaders` to be able to import
 various data types. If there is a type of data we need to support we can either
 find an existing loader and add it to our project **or** we can write our own
 since a loader is nothing more than some TypeScript (or JavaScript) code that
@@ -41,7 +41,8 @@ The correct method is to `import` the image first:
 import image from '../my-awesome-image.png'
 ```
 
-This provides you `string` containing the **path** to the image to use in code.
+This provides you a `string` containing the **path** to the image to use in
+code.
 
 ```jsx
   return  <img src={image}/>
@@ -62,7 +63,7 @@ projects) so that our build tool can add these features:
    The checksum is a value that changes _any_ time the contents of the file
    change. We do this because we'd like to **cache** the images for a long time
    on our client's browsers. By having a checksum we can set a _long_ caching
-   time but ensure that the cient fetches a fresh image when we change the
+   time but ensure that the client fetches a fresh image when we change the
    contents. Since the image will have a new file name when the contents change,
    we achieve both caching and freshness.
 2. It also allows the **deploy** process to only upload the images that are
