@@ -55,7 +55,7 @@ It comes from the standard React library.
 
 1. Hooks should all begin with the word `use` and follow `camelCase` names.
 
-1. Hooks must be called in the same order each time a compontent renders. The easiest way to guarantee this is to not place a `useXXXX` hook inside of a conditional, or have any "guard clauses" **before** the use of a hook method.
+1. Hooks must be called in the same order each time a component renders. The easiest way to guarantee this is to not place a `useXXXX` hook inside of a conditional, or have any "guard clauses" **before** the use of a hook method.
 
 ---
 
@@ -412,7 +412,7 @@ function CounterWithName() {
 
 # handleChangeInput
 
-- Declare the `event` as a data type that indicates this is a `React.ChangeEvent` on an element that is an `HTMLInputElement`
+- Declare the `event` as a data type that indicates this is a `React.ChangeEvent` on an element that is a `HTMLInputElement`
 - Allows `event.target` and `event.target.value` to have
   types.
 
@@ -455,7 +455,7 @@ const [price, setPrice] = useState<number>()
 
 This is the reason that we **strongly** recommend always using an initial value for all of your `useState` hooks.
 
-If you _cannot_ set an initial value you must be consider the impact that allowing an `undefined` value in a state variable will have.
+If you _cannot_ set an initial value you must consider the impact that allowing an `undefined` value in a state variable will have.
 
 ---
 

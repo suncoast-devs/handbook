@@ -49,7 +49,7 @@ component that can change over time. It comes from the standard React library
 and follows the standard hook rules which are:
 
 1. Hooks should all begin with the word `use` and follow `camelCase` names.
-1. Hooks must be called in the same order each time a compontent renders. The
+1. Hooks must be called in the same order each time a component renders. The
    easiest way to guarantee this is to not place a `useXXXX` hook inside of a
    conditional, or have any "guard clauses" **before** the use of a hook method.
 
@@ -254,7 +254,7 @@ Both of these approaches show that if there were **some** way to change the
 state the UI would automatically update to display the new value of the counter!
 
 > NOTE: This is an important step. For this example, it seems simple. Later we
-> will be dealing with much morxe complex state variables and changing the value
+> will be dealing with much more complex state variables and changing the value
 > to see how our component "reacts" will be more critical.
 
 # Step 4 - Connect actions
@@ -397,8 +397,8 @@ specify a type:
 const [counter, setCounter] = useState(0)
 ```
 
-However, TypeScript knows that `counter` is an `number` and `setCounter` is a
-function that accepts a `number` as an argument.
+TypeScript knows that `counter` is a `number` and `setCounter` is a function
+that accepts a `number` as an argument.
 
 This is because the React developers provided type information for all of their
 code. They also made their code, such as `useState` able to provide type
@@ -425,13 +425,13 @@ const [price, setPrice] = useState<number>()
 In this case the type of `price` is actually `undefined | number`. That is,
 `price` can either have the value of `undefined` **OR** any `number`. This is
 very powerful but only if this is the programmers intent. If you never intend
-for `price` to `undefined` then we should disallow this by specifying an inital
-value.
+for `price` to be `undefined` then we should disallow this by specifying an
+initial value.
 
 This is the reason that we **strongly** recommend always using an initial value
 for all of your `useState` hooks. If you _cannot_ set an initial value you must
-be consider the impact that allowing an `undefined` value in a state variable
-will have.
+consider the impact that allowing an `undefined` value in a state variable will
+have.
 
 ## Adding more state
 
@@ -477,7 +477,7 @@ function CounterWithName() {
 # handleChangeInput
 
 In this function we need to specifically declare the `event` as a data type that
-indicates this is a `React.ChangeEvent` on an element that is an
+indicates this is a `React.ChangeEvent` on an element that is a
 `HTMLInputElement`. This allows `event.target` and `event.target.value` to have
 types. Without this specific code for `event`, TypeScript cannot ensure that
 `event.target`isn't possibly`null`as well as recognize
