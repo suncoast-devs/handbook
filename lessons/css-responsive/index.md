@@ -7,14 +7,14 @@ tags:
 order: 1
 ---
 
-Now that we can create a semantic web page, style it with CSS, and control it's
+Now that we can create a semantic web page, style it with CSS, and control its
 layout with CSS layout technologies this lesson will cover how to cope with the
 reality that visitors to our page/application will use many different devices
-that are different sizes, pixel densities, and pehaps even with different
+that are different sizes, pixel densities, and perhaps even with different
 capabilities.
 
 Being able to _respond_ to these differences while maintaining a single code
-base gives us the best change of providing all our users the best experience.
+base gives us the best chance of providing all our users the best experience.
 
 ## Learning Objectives
 
@@ -36,8 +36,7 @@ out to be a nightmare.
 It is usually much better to create a single version of your code which doesn't
 care about what browser or platform is accessing the site. This tends to be
 termed responsive design or adaptive design, two related but different
-approaches. For a discussion on the differences between the two, read
-[Responsive design versus adaptive design](https://developer.mozilla.org/en-US/docs/Archive/Apps/Design/UI_layout_basics/Responsive_design_versus_adaptive_design).
+approaches.
 
 There are disadvantages to this approach as well. If the content, layout, and
 functionality need to change greatly for different devices, it may not be such a

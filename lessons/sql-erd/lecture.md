@@ -50,13 +50,7 @@ The first component of an ERD is an entity. These typically represent the signif
 
 ---
 
-```
-+---------------+      +---------------+      +---------------+
-|               |      |               |      |               |
-|    Student    |      |     Course    |      |    Teacher    |
-|               |      |               |      |               |
-+---------------+      +---------------+      +---------------+
-```
+![fit](./assets/erd1.png)
 
 ---
 
@@ -75,15 +69,7 @@ These would be things like
 
 ---
 
-```
-+-------------+      +---------------+      +-----------+
-|  Student    |      |   Course      |      |  Teacher  |
-+-------------+      +---------------+      +-----------+
-|  Name       |      |   Name        |      |  Name     |
-|  Age        |      |   Description |      |           |
-|  Birthday   |      |               |      |           |
-+-------------+      +---------------+      +-----------+
-```
+![fit](./assets/erd2.png)
 
 ---
 
@@ -98,10 +84,14 @@ You'll notice that all the attributes are **singular** named and store **a singl
 In addition to the names of the attributes, we may also capture the type of data the attribute represents.
 
 - `Name` is text
-- `Age` is a number
+- `Age` is a number/integer
 - `Birthday` is a date
 
 These data types will become column types eventually in our database.
+
+---
+
+![fit](./assets/erd3.png)
 
 ---
 
@@ -109,31 +99,15 @@ These data types will become column types eventually in our database.
 
 After identifying the entities and their attributes, we can identify the relationships
 
-```
-+-------------+                     +--------------+                   +-----------+
-|  Student    |                     |  Course      |                   |  Teacher  |
-+-------------+                     +--------------+                   +-----------+
-|  Name       |                     |  Name        |                   |  Name     |
-|  Age        | <-- enrolled in --> |  Description | <-- taught by --> |           |
-|  Birthday   |                     |              |                   |           |
-+-------------+                     +--------------+                   +-----------+
-```
+![inline](./assets/erd4.png)
 
 ---
 
 # Some relationships take more work (and entities)
 
-If we determine that a relationship, in this case, _enrolled in_ needs extra data stored along with it, say the student enrolled, we'll create another entity to hold it.
+If we determine that a relationship, in this case, _enrolled in_ needs extra data stored along with it, say the date the student enrolled, we'll create another entity to hold it.
 
-```
-+-------------+                  +--------------+                 +--------------+                   +-----------+
-|  Student    |                  |  Enrollment  |                 |  Course      |                   |  Teacher  |
-+-------------+                  +--------------+                 +--------------+                   +-----------+
-|  Name       |                  |  Date        |    assigned     |  Name        |                   |  Name     |
-|  Age        | <-- has many --> |              | <-- to one -->  |  Description | <-- taught by --> |           |
-|  Birthday   |                  |              |                 |              |                   |           |
-+-------------+                  +--------------+                 +--------------+                   +-----------+
-```
+![inline](./assets/erd5.png)
 
 ---
 

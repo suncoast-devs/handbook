@@ -135,7 +135,7 @@ const [game, setGame] = useState({
 - We will need to know the row and column
 
 ```js
-function handleClickCell(row, column) {
+function handleClickCell(row: number, column: number) {
   console.log(`You clicked on row ${row} and column ${column}`)
 }
 ```
@@ -154,7 +154,7 @@ function App() {
     winner: null,
   })
 
-  function handleClickCell(row, column) {
+  function handleClickCell(row: number, column: number) {
     console.log(`You clicked on row ${row} and column ${column}`)
   }
 
@@ -199,7 +199,7 @@ async function handleNewGame() {
     }
   )
 
-  if (response.status === 201) {
+  if (response.ok) {
     // Get the response as JSON
     const newGame = await response.json()
 
@@ -263,7 +263,7 @@ async function handleNewGame() {
 # Update handleClickCell
 
 ```jsx
-async function handleClickCell(row, column) {
+async function handleClickCell(row: number, column: number) {
   // Generate the URL we need
   const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${id}`
 
@@ -277,7 +277,7 @@ async function handleClickCell(row, column) {
     body: JSON.stringify(body),
   })
 
-  if (response.status === 201) {
+  if (response.ok) {
     // Get the response as JSON
     const newGame = await response.json()
 
@@ -395,3 +395,108 @@ if (
 - Step 5c - Update the state
 
 - Step 6 - Refine dynamic nature of UI based on state data
+
+---
+
+# Refining our TypeScript
+
+- `response.json()` returns `any` so data sent to `setGame` has a data type of `any`
+- also don't have a very flexible data type for our `game` state
+
+---
+
+# Game state
+
+```typescript
+type Game = {
+  board: [
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' '],
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' '],
+    ['X' | 'O' | ' ', 'X' | 'O' | ' ', 'X' | 'O' | ' ']
+  ]
+  id: null | number
+  winner: null | string
+}
+```
+
+---
+
+# [fit] Game state with type for each square
+
+```typescript
+type Square = 'X' | 'O' | ' '
+
+type Game = {
+  board: [
+    [Square, Square, Square],
+    [Square, Square, Square],
+    [Square, Square, Square]
+  ]
+  id: null | number
+  winner: null | string
+}
+```
+
+---
+
+# Row, Row, Row (your :boat:)
+
+```typescript
+type Square = 'X' | 'O' | ' '
+type Row = [Square, Square, Square]
+
+type Game = {
+  board: [Row, Row, Row]
+  id: null | number
+  winner: null | string
+}
+```
+
+---
+
+# Board type for game state
+
+```typescript
+type Square = 'X' | 'O' | ' '
+type Row = [Square, Square, Square]
+type Board = [Row, Row, Row]
+
+type Game = {
+  board: Board
+  id: null | number
+  winner: null | string
+}
+```
+
+---
+
+# Using game state
+
+```typescript
+const [game, setGame] = useState<Game>({
+  board: [
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+    [' ', ' ', ' '],
+  ],
+  id: null,
+  winner: null,
+})
+```
+
+---
+
+# Using game state
+
+```typescript
+const newGame = (await response.json()) as Game
+```
+
+---
+
+# Warning!
+
+- `TypeScript` only checks types while in development mode!
+
+- When we **RUN** our application, all of the type information is stripped away and nothing is checked.
+- This might be improved in future versions

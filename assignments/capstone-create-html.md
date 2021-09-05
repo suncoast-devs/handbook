@@ -14,10 +14,6 @@ Time seems to speed up as we approach the final stretch.
 
 - Create the HTML and CSS for the final project
 
-## Requirements
-
-- Using `app-app` to start implementing your HTML
-
 ### Explorer Mode
 
 - Create the HTML and CSS version of your wireframes. Stay as true as

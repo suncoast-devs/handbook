@@ -2,7 +2,7 @@
 title: The Event Loop
 ---
 
-The browser, and JavaScript are inherently asynchronous environments. That is
+The browser, and JavaScript are inherently asynchronous environments. This means
 various tasks can be happening at the same time.
 
 - How does the browser support this?

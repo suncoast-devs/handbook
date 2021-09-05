@@ -26,7 +26,7 @@ theme: Next, 1
 
 ---
 
-# [fit] Lets make our first `C#` project together!
+# [fit] Let's make our first `C#` project together!
 
 ![inline](./assets/lets-do-this.gif)
 

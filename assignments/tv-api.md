@@ -26,7 +26,7 @@ This will use an API, and few pages to display what is currently showing.
 ### Setup
 
 ```shell
-app-app --delta-hooks StayInAndWatchTV
+degit $GITHUB_USER/react-project-template StayInAndWatchTV
 ```
 
 ### Explorer Mode

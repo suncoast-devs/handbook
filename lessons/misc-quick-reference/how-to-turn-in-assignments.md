@@ -21,6 +21,9 @@ In the terminal, run:
 
 ```shell
 git add .
+```
+
+```shell
 git commit -m "Done with explorer mode."
 ```
 
@@ -33,7 +36,19 @@ Push our local commits to GitHub:
 git push
 ```
 
-### Step 2: Turning your code in.
+### Step 2: If this is a front end project, deploy your code
+
+```shell
+npm run deploy
+```
+
+### Step 3: Add the deployed URL to your github project.
+
+Open your github project
+Click the _gear_ icon next to "About"
+Edit the `website` field and past the URL you received from the deployment step.
+
+### Step 4: Turning your code in.
 
 Once you have your code deployed and pushed to GitHub, visit Nexus and bring up
 the assignment. Click the `Turn In` button. Select the GitHub repository you

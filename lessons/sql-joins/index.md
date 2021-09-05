@@ -1,5 +1,5 @@
 ---
-title: Introduction to joins
+title: Introduction to Joins
 assignments:
   - sql-joins
 ---
@@ -60,7 +60,7 @@ We now have a column `Id` that the database will ensure is unique and identifies
 the row (`PRIMARY KEY`) and is automatically generated sequentially by the
 database (`SERIAL`)
 
-#### Lets add some movies to our database:
+#### Let's add some movies to our database:
 
 ```sql
 INSERT INTO "Movies" ("Title",  "PrimaryDirector", "YearReleased", "Genre")
@@ -120,7 +120,7 @@ CREATE TABLE "Ratings" (
 );
 ```
 
-#### Lets insert some ratings:
+#### Let's insert some ratings:
 
 ```sql
 INSERT INTO "Ratings" ("Description") VALUES ('G');
@@ -129,7 +129,7 @@ INSERT INTO "Ratings" ("Description") VALUES ('PG-13');
 INSERT INTO "Ratings" ("Description") VALUES ('R');
 ```
 
-Lets also add a table to keep information about our actors. For this table we
+Let's also add a table to keep information about our actors. For this table we
 want to know the full name of the actor and their birthday. We'll also create an
 `id` that is a `PRIMARY KEY` and is `SERIAL`
 
@@ -141,7 +141,7 @@ CREATE TABLE "Actors" (
 );
 ```
 
-#### Lets also insert some actors
+#### Let's also insert some actors
 
 ```sql
 INSERT INTO "Actors" ("FullName", "Birthday")
@@ -167,8 +167,8 @@ movies with a _G_ rating)
 When describing our database it is often usual to have a visualization of the
 structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
 
-The ERD of our movies and ratings looks likes the following. (_NOTE_ We'll add
-in the actors soon...)
+The ERD of our movies and ratings looks like the following. (_NOTE_ We'll add in
+the actors soon...)
 
 ```
 +----------------------------+         +-----------------------+
@@ -182,7 +182,7 @@ in the actors soon...)
 +----------------------------+
 ```
 
-Lets add a new column to our `Movies` to indicate _WHICH_ rating is associated
+Let's add a new column to our `Movies` to indicate _WHICH_ rating is associated
 to each row representing a movie.
 
 The column we are adding is a `RatingId` that is an integer since this is the
@@ -218,9 +218,9 @@ Now we can specify the `RatingId` associated to each movie when we insert the
 movie.
 
 ```sql
-UPDATE "Movies" SET "RatingId" = 2 WHERE "Id" in (10);
-UPDATE "Movies" SET "RatingId" = 3 WHERE "Id" in (1, 2, 3, 4, 5, 6, 7, 8,9 );
-UPDATE "Movies" SET "RatingId" = 4 WHERE "Id" in (11, 12, 13 );
+UPDATE "Movies" SET "RatingId" = 2 WHERE "Id" IN (10);
+UPDATE "Movies" SET "RatingId" = 3 WHERE "Id" IN (1, 2, 3, 4, 5, 6, 7, 8, 9 );
+UPDATE "Movies" SET "RatingId" = 4 WHERE "Id" IN (11, 12, 13 );
 ```
 
 ### Joining tables
@@ -284,8 +284,8 @@ table involved.
 ```sql
 SELECT *
 FROM "Movies"
-JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id";
-WHERE "Ratings"."Description" = 'R'
+JOIN "Ratings" ON "Movies"."RatingId" = "Ratings"."Id"
+WHERE "Ratings"."Description" = 'R';
 ```
 
 ```
@@ -333,9 +333,9 @@ matching `ratings` row the information will be `null`
 
 ### Many to Many
 
-For the list of actors in the cast we might say "A movie has many cast members"
-but also "A cast member has appeared in many movies." In this case we need to
-relate these two tables in a different way.
+For the list of actors in the cast we might say "A movie has many actors" but
+also "An actor has appeared in many movies." In this case we need to relate
+these two tables in a different way.
 
 The ERD of this looks like:
 
@@ -368,9 +368,8 @@ The ERD of this looks like:
 In the case of a _many-to-many_ relationship we cannot place the foreign keys on
 either of the tables. In this case we need a third table, commonly referred to
 as a _join table_ to store the relationships. In this table, we will place two
-foreign keys, one to the left (movies) and the other to the right (to the
-actor.) We attempt to name this table based on the relationship between the two
-tables.
+foreign keys, one to the left (movies) and the other to the right (actors). We
+attempt to name this table based on the relationship between the two tables.
 
 In this case we are trying to represent the relationship between a movie and the
 actors. We could call this relationship `Roles`
@@ -413,7 +412,7 @@ CREATE TABLE "Roles" (
 ```
 
 _Create cast membership for Orlando Bloom in Pirates & LOTR. The three LOTR
-movies are `id` 7, 8 and 9. The Pirates movie is `id` 2. Orlando Bloom's id is
+movies are `id` 7, 8, and 9. The Pirates movie is `id` 2. Orlando Bloom's id is
 1_
 
 _NOTE_: In the queries below, `--` is a SQL comments (like a JavaScript `//`)
@@ -447,16 +446,16 @@ _Create cast membership for Martin Freeman (`actor` `id` is 3) in the Hobbit
 (`movie` `ids` are 4, 5, and 6) & Hitchhikers (`movie` `id` 10)_
 
 ```sql
--- The movie "The Hobbit: An Unexpected Journey" had the actor Martin Freeman
+-- The movie "The Hobbit: An Unexpected Journey" had the actor "Martin Freeman"
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (4,3);
 
--- The movie "The Hobbit: The Desolation of Smaug" had the actor Martin Freeman
+-- The movie "The Hobbit: The Desolation of Smaug" had the actor "Martin Freeman"
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (5,3);
 
--- The movie "The Hobbit: The Battle of the Five Armies" had the actor Martin Freeman
+-- The movie "The Hobbit: The Battle of the Five Armies" had the actor "Martin Freeman"
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (6,3);
 
--- The movie "Hitchhikers Guide to the Galaxy" had the actor Martin Freeman
+-- The movie "Hitchhikers Guide to the Galaxy" had the actor "Martin Freeman"
 INSERT INTO "Roles" ("MovieId", "ActorId") VALUES (10,3);
 ```
 
@@ -539,22 +538,22 @@ Now lets update the roles for all of our actors
 
 ```sql
 -- Orlando Bloom played Will Turner in Pirates (ID 1)
-UPDATE "Roles" set "CharacterName" = 'Will Turner' where "Id" in (1);
+UPDATE "Roles" SET "CharacterName" = 'Will Turner' WHERE "Id" IN (1);
 
 -- Orlando Bloom played Legolas in the Lord of the Rings movies
-UPDATE "Roles" set "CharacterName" = 'Legolas' where "Id" in (2,3,4);
+UPDATE "Roles" SET "CharacterName" = 'Legolas' WHERE "Id" IN (2,3,4);
 
 -- Warwick Davis played Filius Flitwick in Harry Potter (5)
-UPDATE "Roles" set "CharacterName" = 'Filius Flitwick' where "Id" = 5;
+UPDATE "Roles" SET "CharacterName" = 'Filius Flitwick' WHERE "Id" IN (5);
 
 -- Warwick Davis played Marvin in Hitchhikers (6)
-UPDATE "Roles" set "CharacterName" = 'Marvin' where "Id" = 6;
+UPDATE "Roles" SET "CharacterName" = 'Marvin' WHERE "Id" IN (6);
 
 -- Martin Freeman played Bilbo in all three Hobbit movies (IDs 7, 8, and 9)
-UPDATE "Roles" set "CharacterName" = 'Bilbo' where "Id" IN (7,8,9);
+UPDATE "Roles" SET "CharacterName" = 'Bilbo' WHERE "Id" IN (7,8,9);
 
 -- Martin Freeman played Arthur Dent in Hitchhikers Guide to the Galaxy (role ID 10)
-UPDATE "Roles" set "CharacterName" = 'Arthur Dent' where "Id" = 10;
+UPDATE "Roles" SET "CharacterName" = 'Arthur Dent' WHERE "Id" IN (10);
 ```
 
 Let's see what our query looks like now:

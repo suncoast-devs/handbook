@@ -1,5 +1,5 @@
 ---
-title: Object-Oriented Programing in C#
+title: Object-Oriented Programming in C#
 assignments:
   - cs-blackjack
 ---
@@ -113,7 +113,6 @@ this case the `state` is about an `Employee` who has individual attributes such
 as their `name`, their `department`, their `salary` and something we compute
 named `monthlySalary`.
 
-
 A diagram of this might look like:
 
 ```
@@ -154,8 +153,8 @@ an employee database.
 
 ## Class Syntax
 
-Lets take our idea of an _employee_ in this system and write some syntax to help
-us.
+Let's take our idea of an _employee_ in this system and write some syntax to
+help us.
 
 ```
 ---------------------

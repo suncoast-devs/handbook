@@ -20,7 +20,7 @@ In this assignment, you will be creating a console application that manages a zo
 ### Setup
 
 ```shell
-dotnet new sdg-console -o JurasicPark
+dotnet new sdg-console -o JurassicPark
 ```
 
 ### Explorer Mode
@@ -38,7 +38,7 @@ dotnet new sdg-console -o JurasicPark
 - Keep track of your dinosaurs in a `List<Dinosaur>`.
 - When the console application runs, it should let the user choose one of the following actions:
   - `View`
-    - This command will show the all the dinosaurs in the list, ordered by `WhenAcquired`. If there aren't any dinosaurs in the park then print out a message that there aren't any.
+    - This command will ask the user if they wish to see the dinosaurs in `Name` or `EnclosureNumber` order. Based on that choice, the list of dinosaurs should be shown in the correct order. If there no dinosaurs in the park, print out a special message to the user.
   - `Add`
     - This command will let the user type in the information for a dinosaur and add it to the list. Prompt for the `Name`, `Diet Type`, `Weight` and `Enclosure Number`, but the `WhenAcquired` must be supplied by the code.
   - `Remove`

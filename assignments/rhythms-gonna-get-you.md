@@ -5,7 +5,7 @@ tags: ['c-sharp', 'console', 'sql', 'ef-core']
 
 # Rhythm's gonna get you
 
-For this project, we will model and create a database. We are starting a record label company, and we a place to store our bands, albums, and eventually songs. You are creating a console app that stores our information in a database.
+For this project, we will model and create a database. We are starting a record label company, and we need a place to store our bands, albums, and eventually songs. You are creating a console app that stores our information in a database.
 
 ## Objectives
 
@@ -44,10 +44,9 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
     - CountryOfOrigin
     - NumberOfMembers
     - Website
-    - Style
+    - Genre
     - IsSigned
     - ContactName
-    - ContactPhoneNumber
 
   - Songs
 
@@ -74,7 +73,7 @@ dotnet new sdg-console -o RhythmsGonnaGetYou
 
 ### Adventure Mode
 
-- Track the individual members of a band. Since musicians play in several different groups, create a new table called `Musicians` and make it a _many to many_ relationships with a Band.
+- Track the individual members of a band. Since musicians play in several different bands, create a new table called `Musicians` and make it a _many to many_ relationships with a Band.
 
 - Add the following menu options
   - View albums in a genre

@@ -61,8 +61,6 @@ p {
 }
 ```
 
-^ Show this code in an app-app
-
 ---
 
 # Vocabulary
@@ -198,7 +196,7 @@ Selects all elements using that tag.
 
 ```html
 <p>What kind of ice cream do you like?</p>
-<div>I like chocolate`.</div>
+<div>I like chocolate.</div>
 <p>I prefer VANILLA!</p>
 ```
 
@@ -272,7 +270,7 @@ The ID selector consists of a hash/pound/octothorpe symbol `#`, followed by the 
 
 # Pseudo Class
 
-- Specifies style applies only when element is in a certain state.
+- Specifies style applied only when element is in a certain state.
 
 - Added to the end of a selector, preceded by a colon `:`
 
@@ -385,7 +383,7 @@ Good for things that are already measured in pixels, like the size of an image. 
 
 This is _relative_ to the font-size of the parent.
 
-This can be confusing if a rule of `2em` is applied to different elements who's parent's `font-size` has been customized.
+This can be confusing if a rule of `2em` is applied to different elements whose parent's `font-size` has been customized.
 
 In this case `2em` of padding won't be the same amount.
 
@@ -419,7 +417,7 @@ What happens if multiple rules apply?
 
 What properties are inherited from their parent elements?
 
-Lets define what the CSS cascade is, what specificity is, what importance is, and how properties inherit from different rules.
+Let's define what the CSS cascade is, what specificity is, what importance is, and how properties inherit from different rules.
 
 ---
 
@@ -955,7 +953,7 @@ article p {
 ```
 
 label {
-  /* Display the label as block so it is on it's own line */
+  /* Display the label as block so it is on its own line */
   display: block;
   /* UPPERCASE */
   text-transform: uppercase;
@@ -964,14 +962,14 @@ label {
   font-size: 0.75rem;
   /* Increase the spacing between letters */
   letter-spacing: 0.05rem;
-  /* Adjsut the text color */
+  /* Adjust the text color */
   color: #7c7c7c;
 }
 
 input {
   /* Adjust the text color */
   color: #2b303a;
-  /* Make the input take 100% of it's available container */
+  /* Make the input take 100% of its available container */
   width: 100%;
   /* Round the corners */
   border-radius: 0.25rem;
@@ -993,7 +991,7 @@ button {
   background-color: #d64933;
   /* Adjust the text color */
   color: #eee5e9;
-  /* remove the border */
+  /* Remove the border */
   border: none;
   /* Adjust the padding, top/bottom and left/right */
   padding: 0.25rem 0.5rem;

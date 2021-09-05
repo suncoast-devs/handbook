@@ -19,7 +19,7 @@ Run the generator to create a boilerplate project, and change into that
 directory:
 
 ```shell
-app-app --alpha hello-world
+degit $GITHUB_USER/html-css-ts-project-template hello-world
 cd hello-world
 ```
 

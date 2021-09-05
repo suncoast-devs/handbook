@@ -24,7 +24,7 @@ For this assignment, you will be reproducing a website.
 ### Setup
 
 ```shell
-app-app --delta-hooks AstroClub
+degit $GITHUB_USER/react-project-template AstroClub
 ```
 
 ### Explorer Mode

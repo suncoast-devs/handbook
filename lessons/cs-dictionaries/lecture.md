@@ -42,6 +42,8 @@ And we can add information like this:
 playerScores.Add("Robbie Lakeman", 1_247_700);
 ```
 
+---
+
 # Finding information in a Dictionary
 
 We can look up information with the same `[]` bracket syntax.
@@ -54,11 +56,13 @@ var score = playerScores["Robbie Lakeman"];
 
 # Missing Keys
 
-However, if we look up a key that doesn't exist, we receive an exception, and our
-program stops. Later on, we'll see how to avoid, as well as handle, these kinds
-of errors.
+However, if we look up a key that doesn't exist, we receive an exception, and our program stops. Later on, we'll see how to avoid, as well as handle, these kinds of errors.
 
-For now, we can ask the `Dictionary` if it has a key.
+---
+
+# Missing Keys
+
+We can ask the `Dictionary` if it has a key.
 
 ```csharp
 var hasKey = playerScores.ContainsKey("Billy Mitchell"); // false
@@ -81,8 +85,8 @@ playerScores["Robbie Lakeman"] = 1_247_800;
 # Keys are case sensitive (value-sensitive)
 
 Since `string`s are case-sensitive, we need to be careful when using them as keys.
-The value at `playerScores["Robbie Lakeman"]` is different from the value at
-`playerScores["robbie lakeman"]`.
+
+The value at `playerScores["Robbie Lakeman"]` is different from the value at `playerScores["robbie lakeman"]`.
 
 ---
 

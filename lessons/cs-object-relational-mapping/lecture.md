@@ -8,7 +8,7 @@ theme: Next, 1
 
 We would like to use a relational database in our systems.
 
-However, our systems are Object Oriented. We aren't coding in the landscape of tables, and rows, but lists and objects.
+However, our systems are Object Oriented. We aren't coding in the landscape of tables and rows, but lists and objects.
 
 ---
 
@@ -166,7 +166,7 @@ The `DbContext` is what allows us to connect to our database and relate our mode
 
 # Walk through
 
-We then define a property `Movies` (plural) which we state is of type `DbSet<Movie>`.
+We then define a property `Movies` (plural) of type `DbSet<Movie>`.
 
 The `Movie` here is the model we wish to relate and `Movies` corresponds to the `Movies` table in our database.
 
@@ -182,7 +182,7 @@ Finally, we **override** a method required by `EF Core` that tells us how to con
 
 EF Core will call this method to setup the connection to the database.
 
-In here we tell the options we are using a postgres database (`UseNpgsql`) and that the database is named `SuncoastMovies` and is on our local machine.
+The code in `OnConfiguring` tells EF to use a postgres database (`UseNpgsql`) named `SuncoastMovies` located on our local machine.
 
 ---
 
@@ -238,7 +238,7 @@ foreach (var movie in context.Movies)
 
 ---
 
-Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we receive instances of our `Movie` class we can use to output information such as each movie object's title: `movie.title`. 
+Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we receive instances of our `Movie` class we can use to output information such as each movie object's title: `movie.Title`. 
 
 ---
 
@@ -263,7 +263,7 @@ optionsBuilder.UseLoggerFactory(loggerFactory);
 
 Our database has other tables we could add to our system: `Ratings`, `Roles`, and `Actors`.
 
-Lets add a model for our ratings.
+Let's add a model for our ratings.
 
 ```csharp
 class Rating

@@ -58,7 +58,7 @@ So how does the browser know to find the `IP Address` of `handbook.suncoast.io`?
 
 It uses a service known as `DNS` (`Domain Name Services`).
 
-Every client you have a preset list of `IP Addresses` that are equipped to perform a translation of a domain name like `handbook.suncoast.io` into its address `104.248.50.87`.
+Every client has a preset list of `IP Addresses` that are equipped to perform a translation of a domain name like `handbook.suncoast.io` into its IP address `104.248.50.87`.
 
 The `DNS` process allows your computer to quickly translate the address.
 

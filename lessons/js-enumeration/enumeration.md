@@ -9,7 +9,7 @@ When we [learned about arrays in JavaScript](/lessons/js-intro/arrays) we saw
 that the `forEach` method is very helpful for iterating through the contents of
 an array.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 colors.forEach(function (color, index) {
   console.log(`The color at position ${index} is ${color}`)
@@ -30,13 +30,13 @@ index of the current element.
 # Transforming values
 
 Let's suppose we wanted, instead of `console.log` values we wanted to build a
-new array of values from our array of colors. And suppose what we wanted each
-element of this new array to be the equal to the length of the string at the
+new array of values from our array of colors. And suppose we wanted each
+element of this new array to be equal to the length of the string at the
 corresponding index of the original array.
 
 That is:
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 // Code here
@@ -47,7 +47,7 @@ const lengths = [3, 5, 4]
 We will start by doing this in a very manual way. Begin by creating a new array
 to receive the individual elements.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -55,7 +55,7 @@ const lengths = []
 
 Then we will setup the `forEach` loop
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -66,10 +66,10 @@ colors.forEach(function (color) {
 ```
 
 Now we will concentrate on the code inside the loop. Here we want to take the
-individual color and compute it's length. Then _append_ that to the `lengths`
+individual color and compute its length. Then _append_ that to the `lengths`
 array.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -92,7 +92,7 @@ generic way. If we needed to have another array except the transformation is now
 the names of the colors in _UPPERCASE_ we would need to re-implement the entire
 loop.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = []
@@ -118,7 +118,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 To remedy this, JavaScript supplies a method with precisely this behavior: `map`
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(function (color) {
@@ -146,7 +146,7 @@ Notice only a few small changes to our code.
 
 We can simplify the code a little if we remove the temporary variables.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(function (color) {
@@ -162,9 +162,9 @@ const uppercased = colors.map(function (color) {
 console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 ```
 
-We can also reduce the code by changing to using `arrow functions`
+We can also reduce the code by changing it to use `arrow functions`
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(color => {
@@ -184,7 +184,7 @@ And now that we are using `arrow functions` we can apply a rule that allows us
 an even more concise syntax when the arrow function **only** contains a return
 statement.
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const lengths = colors.map(color => color.length)
@@ -209,7 +209,7 @@ resemblance of the `Select` statement. In fact `Select` from C# and `map` from
 If we wish to create a new array but only retain _some_ of the elements from the
 original array we can use `filter`
 
-```javascript
+```typescript
 const colors = ['red', 'green', 'blue']
 
 const longColors = colors.filter(color => color.length > 3)
@@ -227,7 +227,7 @@ initial value. The reducing function takes at least two arguments itself, the
 first being the accumulator and the second being the current element from the
 array.
 
-```javascript
+```typescript
 const numbers = [100, 42, 13]
 
 const total = numbers.reduce((total, number) => total + number, 0)
@@ -244,7 +244,7 @@ the **keys** of the object. We can use this array to `map`, and `filter`.
 
 For instance, suppose we were given the following object:
 
-```javascript
+```typescript
 const myHobbies = {
   pandas: {
     title: 'Panda Bears',
@@ -265,13 +265,13 @@ by the title. That is given the object above we would want something like
 
 We can't do `myHobbies.map` but we can do this:
 
-```javascript
+```typescript
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
 ```
 
 And now we can use that to map
 
-```javascript
+```typescript
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
 
 const answer = keys.map(key => {
@@ -281,38 +281,52 @@ const answer = keys.map(key => {
 })
 ```
 
+There is a downside to this approach. The variable `hobby` will be defined as
+`any`. This is because TypeScript can't determine the type.
+
 There is another way to work with objects and that is `Object.entries` --
 `entries` gives us back an array-of-arrays. The first element of each array is
 the key, and the second is the value. This allows us to avoid the value lookup.
 
-```javascript
+```typescript
 const entries = Object.entries(myHobbies) // [['pandas', { title: ...., description: ...}], ['miniatures', { title: ..., description: ...}]
 
 const answer = entries.map(entry => {
-  return `${entry[0]} - ${entry[1].title}`
+  return `${entry[0]} - ${entry[1].title} ${entry[1].description}`
 })
 ```
 
 Using destructuring we can avoid the `entry[0]` and `entry[1]` code and give our
 variables better names:
 
-```javascript
+```typescript
 const entries = Object.entries(myHobbies) // [['pandas', { title: ...., description: ...}], ['miniatures', { title: ..., description: ...}]
 
 const answer = entries.map(([key, value]) => {
-  return `${key} - ${value.title}`
+  var title = value.title
+  var description = value.description
+
+  return `${key} - ${title} ${description}`
 })
 ```
 
 And we can reduce the code a bit further:
 
-```javascript
+```typescript
 const answer = Object.entries(myHobbies).map(
-  ([key, value]) => `${key} - ${value.title}`
+  ([key, value]) => `${key} - ${value.title} ${value.description}`
+)
+```
+
+We could also use a better name for the `value` variable:
+
+```typescript
+const answer = Object.entries(myHobbies).map(
+  ([key, hobby]) => `${key} - ${hobby.title} ${hobby.description}`
 )
 ```
 
 ### Others
 
 See the [quick reference guide](/lessons/misc-quick-reference/js-arrays) for
-other iterators such as `some`, `every`, and `reduce-right`
+other iterators such as `some`, `every`, and `reduce-right`.

@@ -19,7 +19,7 @@ For this we can use **`comments`** in our code.
 var shipName = "Heart of Gold";
 
 // We need to know how many characters there are in order to center the text on the screen.
-var characterCount = shipName.length;
+var characterCount = shipName.Length;
 
 /*
   Build a Turboencabulator

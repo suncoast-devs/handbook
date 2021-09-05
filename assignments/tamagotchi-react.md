@@ -37,7 +37,7 @@ To do so:
 ### Setup
 
 ```shell
-app-app --delta-hooks TamagotchiFrontEnd
+degit $GITHUB_USER/react-project-template TamagotchiFrontEnd
 ```
 
 ### Explorer Mode

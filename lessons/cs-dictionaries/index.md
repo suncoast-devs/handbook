@@ -80,7 +80,7 @@ foreach (var playerScore in playerScores)
 }
 ```
 
-Since each element in the dictionary has a key part and a valu part, the
+Since each element in the dictionary has a key part and a value part, the
 variable `playerScore` will have a type known as a `KeyValuePair`. The
 `KeyValuePair` has two properties, the `Key` and the `Value`. In our example the
 `Key` is a `string` and the `Value` is an `int`. This is because the

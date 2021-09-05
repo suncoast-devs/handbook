@@ -35,7 +35,7 @@ understand how flexbox works.
 
 <CodePen>
 
-To get started, lets look at this example
+To get started, let's look at this example
 
 <pre data-lang='html'>
 {`
@@ -601,7 +601,7 @@ div {
 
 ## Let's take it a level higher! -- Nesting flex boxes
 
-Lets take a look at this more complex layout
+Let's take a look at this more complex layout
 
 <CodePen defaultTab='results'>
 
@@ -791,6 +791,7 @@ Flexbox can be a challenging concept to master. Here are some references we feel
 will be good to review:
 
 - [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)
+- [Flexbox Defense - a Game for Learning Flexbox](http://www.flexboxdefense.com/)
 - [A Complete Guide to Flexbox - by CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Flexbox Visual Guide Tutorial](https://marina-ferreira.github.io/tutorials/css/flexbox/)
 

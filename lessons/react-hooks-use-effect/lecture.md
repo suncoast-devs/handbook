@@ -695,7 +695,7 @@ async function toggleCompleteStatus() {
 
 # Look at the similarity in the branches!
 
-The only difference is that if the `props.complete` is true, we send `false` -- and if it is `true` we send `false`
+The only difference is that if the `props.complete` is true, we send `false` -- and if it is `false` we send `true`
 
 Simplify:
 

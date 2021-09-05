@@ -68,7 +68,7 @@ In the example we saw above, this line was included:
 ```
 
 This element simply specifies the document's character encoding — the character
-set that the document is permitted to use. utf-8 is a universal character set
+set that the document is permitted to use. The utf-8 is a universal character set
 that includes pretty much any character from any human language. This means that
 your web page will be able to handle displaying any language; it's therefore a
 good idea to set this on every web page you create! For example, your page could

@@ -84,8 +84,7 @@ namespace EmployeeDatabase
 
 ---
 
-What if we wanted to add information about a second employee? Certainly one
-approach would be to add a second set of variables such as:
+What if we wanted to add information about a second employee? Certainly one approach would be to add a second set of variables such as:
 
 ```csharp
 var name1 = PromptForString("What is your name? ");
@@ -140,8 +139,7 @@ In this case the `state` is about an `Employee` who has individual attributes:
 
 ---
 
-If we had a few of these `Employee` things around we might also see they could
-have their own, specific values for each of these attributes.
+If we had a few of these `Employee` things around we might also see they could have their own, specific values for each of these attributes.
 
 ```
 +---------------------------+       +------------------------------+

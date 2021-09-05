@@ -28,7 +28,7 @@ the features to delete and updating an employee.
 ### Setup
 
 ```shell
-app-app --delta-hooks EmployeeDirectoryFrontEnd
+degit $GITHUB_USER/react-project-template EmployeeDirectoryFrontEnd
 ```
 
 ### Explorer Mode

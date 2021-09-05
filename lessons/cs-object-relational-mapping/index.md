@@ -84,7 +84,7 @@ Framework Core_ (EF Core, or EF) has a number of classes and helper tools to
 make our lives easier. In this next section we will introduce the basics we need
 to get started.
 
-## Lets use an existing database
+## Let's use an existing database
 
 In our lesson on SQL Joins we had a database setup that looks like this:
 
@@ -139,7 +139,7 @@ dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
 
 ### Define our first Model
 
-We will begin by accessing the list of _movies_ from our database from our `C#`
+We will begin by accessing the list of _movies_ from our database using our `C#`
 code.
 
 Before we can do that we need to teach `C#` about the structure of a movie. We
@@ -222,11 +222,13 @@ Let's walk through this class. It is derived from `DbContext` which is provided
 by EF Core. The `DbContext` is what allows us to connect to our database and
 relate our models to tables.
 
-We then define a property `Movies` (plural) which we state is of type
-`DbSet<Movie>`. The `Movie` here is the model we wish to relate and `Movies`
-corresponds to the `Movies` table in our database. `DbSet` will act much like
-our `List` collection but has much more knowledge of how to read and write from
-the database.
+We then define a property `Movies` (plural) of type `DbSet<Movie>`. A `DbSet`
+will function similar to a `List` but have abilities to work with the data
+coming from the database. Specifically, we can use `LINQ` with a `DbSet` in the
+same ways we worked with `LINQ` and `List`. The `Movie` here is the model we
+wish to relate and `Movies` corresponds to the `Movies` table in our database.
+`DbSet` will act much like our `List` collection but has much more knowledge of
+how to read and write from the database.
 
 Finally, we **override** a method required by `EF Core` that tells us how to
 connect to the database. EF Core will call this method to setup the connection
@@ -336,7 +338,7 @@ foreach (var movie in context.Movies)
 
 Again, translated to SQL this would be `SELECT * FROM MOVIES`. However, here we
 receive instances of our `Movie` class we can use to output information such as
-each movie object's title: `movie.title`.
+each movie object's title: `movie.Title`.
 
 ```
 There are 14 movies!
@@ -353,7 +355,7 @@ There is a movie named The Lord of the Rings: The Fellowship of the Ring
 There is a movie named The Lord of the Rings: The Two Towers
 There is a movie named Cujo
 There is a movie named It
-There is a movie named Ity
+There is a movie named It
 ```
 
 So our application now looks like this:
@@ -471,7 +473,7 @@ There is a movie named Hitchhikers Guide to the Galaxy
 Our database has other tables we could add to our system: `Ratings`, `Roles`,
 and `Actors`.
 
-Lets add a model for our ratings.
+Let's add a model for our ratings.
 
 ```csharp
 class Rating
@@ -514,7 +516,7 @@ Now when we access the `movies` we are going to generate a **JOIN** to the
 Now we can change our loop to also show the `rating` if it has one.
 
 ```csharp
-const moviesWithRatings = context.movies.Include(movie => movie.Rating);
+var moviesWithRatings = context.Movies.Include(movie => movie.Rating);
 foreach (var movie in moviesWithRatings)
 {
   if (movie.Rating == null)
@@ -626,7 +628,7 @@ namespace SuncoastMovies
       var movieCount = context.Movies.Count();
       Console.WriteLine($"There are {movieCount} movies!");
 
-      const moviesWithRatings = context.movies.Include(movie => movie.Rating);
+      var moviesWithRatings = context.Movies.Include(movie => movie.Rating);
       foreach (var movie in moviesWithRatings)
       {
         if (movie.Rating == null)
@@ -655,7 +657,7 @@ public List<Role> Roles { get; set; }
 ```
 
 We are telling the `Movie` that it has a _list_ of related `Roles`. Since we
-have setup or relationships with appropriate SQL syntax, EF Core can determine
+have setup our relationships with appropriate SQL syntax, EF Core can determine
 how to join these tables together.
 
 ```csharp
@@ -1096,7 +1098,7 @@ namespace SuncoastMovies
             }
             else
             {
-              Console.WriteLine($"No movie with title {titleOfMovieToDelete} to update");
+              Console.WriteLine($"No movie with title {titleOfMovieToDelete} to delete");
             }
             break;
         }

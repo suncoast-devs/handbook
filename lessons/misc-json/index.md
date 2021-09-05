@@ -118,7 +118,7 @@ array, or another object). The object closes with a `}`.
 
 ## Flexibility
 
-The flexibility of the JSON format comes from it's simplicity and lack of
+The flexibility of the JSON format comes from its simplicity and lack of
 assumptions about the contents of our data. You will notice that there is no
 data type for Dates, Times, images, or other more complex structures. These
 representations of these types of data is up to the developer to specify how

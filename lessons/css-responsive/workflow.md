@@ -4,7 +4,7 @@ order: 3
 ---
 
 When getting started on a new application it is useful to start with a sketch of
-the site. Starting this sketch in a narrow mobile size will help you reflect on
+the site. Starting with this sketch in a narrow mobile size will help you reflect on
 the core aspects of the site as we mentioned.
 
 ## Start with a sketch
@@ -54,7 +54,7 @@ the application.
 
 ## Ready to make HTML and CSS?
 
-When we are reading to make the HTML and CSS for our application we will start
+When we are ready to make the HTML and CSS for our application we will start
 coding with our browser in a configuration that is a mobile device size.
 
 There are a few ways to do this. The first is to configure your editor and your

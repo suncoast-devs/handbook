@@ -34,7 +34,7 @@ General Rules:
 - If dealer goes over 21 the dealer loses.
 
 - The player should have two choices: "Hit" and "Stand."
-- Consider Aces to be worth 11, never 1.
+- Consider Aces to be worth 11, never one.
 - The app should display the winner. For this mode, the winner is who is closer to a blackjack (21) without going over.
 - Ties go to the DEALER.
 - There should be an option to play again. This should start a new game with a new full deck of 52 shuffled cards and new empty hands for the dealer and the player.
@@ -42,7 +42,7 @@ General Rules:
 ### Adventure Mode
 
 - Reveal one of the house's cards to the player when cards dealt.
-- Consider aces be worth one _or_ eleven.
+- Consider aces be worth one _or_ 11.
 - Allow the player to ["Split"](https://blog.betway.com/casino/blackjack-strategy-101-how-do-you-split-in-blackjack/).
 - Improve the win requirements. From Wikipedia:
   > Players win by not busting and having a total higher than the dealer, or not

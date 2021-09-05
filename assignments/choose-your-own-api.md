@@ -20,13 +20,13 @@ _NOTE_ You'll need to choose one with `Auth` being `No` or `apiKey` since we
 haven't covered `OAuth` authentication yet.
 
 _NOTE_ You'll also need to check to see if the API will work from your browser.
-You can do a quick check by making a small `app-app`, doing an `axios.get` or
+You can do a quick check by making a small project, doing an `axios.get` or
 `fetch` of one API URL and see if you get browser errors.
 
 ### Setup
 
 ```shell
-app-app APIClientReact
+degit $GITHUB_USER/react-project-template APIClientReact
 ```
 
 ### Explorer Mode

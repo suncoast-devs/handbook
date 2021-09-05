@@ -23,7 +23,7 @@ Create a simple calculator that allows the user to add, multiply, subtract, and 
 ### Setup
 
 ```shell
-app-app ReactCalculator
+degit $GITHUB_USER/react-project-template ReactCalculator
 ```
 
 ### Explorer Mode

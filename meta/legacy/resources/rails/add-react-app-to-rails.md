@@ -39,7 +39,7 @@ _Choice B_ - if you are creating a _NEW_ react application
 
 ```shell
 # Only run this if you are making a BRAND NEW react app
-app-app --gamma client
+degit $GITHUB_USER/react-project-template client
 ```
 
 _NOTE_ Do _not_ choose to create a GitHub project if prompted

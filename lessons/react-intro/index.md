@@ -68,9 +68,9 @@ function HelloWorld() {
 
 ## What is JSX?
 
-JSX is an extension to JavaScript that allows us to an HTML-like syntax in our
-JavaScript code that will be turned into DOM at run-time. By using JSX we can
-dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in
+our JavaScript code that will be turned into DOM at run-time. By using JSX we
+can dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
 style.
 
 ## Simplest React Component
@@ -111,9 +111,8 @@ content on the page via components. React is very powerful for this but it is
 good to know that you can also add a small component to an existing non-React
 project just as easily.
 
-The template SDG uses from `app-app` will generate an `index.html` file that
-looks like the following (only the `<body>` is shown and only the relevant
-parts)
+The template SDG uses will generate an `index.html` file that looks like the
+following (only the `<body>` is shown and only the relevant parts)
 
 ```html
 <body>
@@ -161,6 +160,12 @@ browser **can** understand.
 # Build a simple React application
 
 Let's generate a new project that will set up a new React project.
+
+```shell
+degit $GITHUB_USER/react-project-template ReactArticles
+```
+
+# Initial HTML
 
 This is some sample HTML we will work to create and learn how React Components
 can help simplify our code.
@@ -312,7 +317,13 @@ Let's start that process.
 
 ## Creating a `NewsArticle` component.
 
-Let's create a new file in the `components` directory and name it
+As we work on creating components it is a good practice to place the files in a
+`components` directory within the `src` directory. While this isn't required it
+is often considered best practices.
+
+If your project doesn't already have a `components` directory, make one now.
+
+Then create a new file in the `components` directory and name it
 `NewsArticle.tsx`. If you do not already have a `components` directory in your
 project, you should make one and then create `NewsArticle.tsx` inside.
 
@@ -485,14 +496,25 @@ function. The `props` argument is an object whose keys are the names of the
 properties. In our case this is `props.title` and `props.body` -- the
 corresponding values are supplied as well.
 
+When defining the `props` argument we need to define the types for this object.
+We will create a `type` named `NewsArticleProps` and declare that the `title`
+property shall be a `string` and the `body` property shall be a `string` as
+well. When defining the component function we'll declare that `props` has a type
+of `NewsArticleProps`
+
 We can use these in our component by using an _interpolation_ method within JSX.
 This is much like string interpolation in plain JavaScript but the syntax is
 slightly different:
 
-```javascript
+```typescript
 import React from 'react'
 
-export function NewsArticle(props) {
+type NewsArticleProps = {
+  title: string
+  body: string
+}
+
+export function NewsArticle(props: NewsArticleProps) {
   return (
     <article className="intro-article">
       <h2 className="article-title">{props.title}</h2>
@@ -584,7 +606,7 @@ We will be using this in our `App.tsx` so let's import it!
 ```javascript
 import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
-import articles from './articles'
+import articles from './articles.json'
 
 function App() {
   return (
@@ -610,10 +632,10 @@ function App() {
 export default App
 ```
 
-The line `import articles from './articles'` will read the JSON file and make
-its contents available as the variable `articles`! No parsing required! This is
-because the environment comes with a **`loader`** for JSON files and it knows
-how to read and parse them for us!
+The line `import articles from './articles.json'` will read the JSON file and
+make its contents available as the variable `articles`! No parsing required!
+This is because the environment comes with a **`loader`** for JSON files and it
+knows how to read and parse them for us!
 
 Let's use that data to build up an array of `<NewsArticle/>` components.
 
@@ -625,7 +647,7 @@ Since we want one `<NewsArticle/>` that is related to each element of the
 ```javascript
 import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
-import articles from './articles'
+import articles from './articles.json'
 
 function App() {
   const newsArticlesFromData = articles.map(article => (
@@ -665,10 +687,10 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-In our [lesson on JavaScript iteration](/lessons/js-iteration] we can
-demonstrated that `map` can turn an array of one type of element (say a
-JavaScript object in this case) into an array of another type of element,
-(<NewsArticle/> in this case)
+In our [lesson on JavaScript iteration](/lessons/js-iteration] we demonstrated
+that `map` can turn an array of one type of element (say a JavaScript object in
+this case) into an array of another type of element, (<NewsArticle/> in this
+case)
 
 So what is happening here is a transformation from the first array to the
 second.
@@ -720,7 +742,7 @@ where we want them in place of the hardcoded data.
 ```javascript
 import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
-import articles from './articles'
+import articles from './articles.json'
 
 function App() {
   const newsArticlesFromData = articles.map(article => (
@@ -750,13 +772,12 @@ is important to know.
 > (i.e. that same key can be in another array-to-component map in another part
 > of the app, but must be unique for this array)
 
-Wasn't it fortunte that we ensured our JSON objects had that `id` attribute! We
-will us that `id` as our key!
+Well, now it is handy that we had that `id` attribute of our JSON objects!
 
 ```javascript
 import React from 'react'
 import { NewsArticle } from './components/NewsArticle'
-import articles from './articles'
+import articles from './articles.json'
 
 function App() {
   const newsArticlesFromData = articles.map(article => (

@@ -312,7 +312,7 @@ p actor.movies
 
 ## Sneak peek at using this for APIs
 
-Lets get all the `Movie` objects and print the resulting array of these movies
+Let's get all the `Movie` objects and print the resulting array of these movies
 as JSON.
 
 ```ruby

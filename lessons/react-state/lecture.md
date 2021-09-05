@@ -55,7 +55,7 @@ It comes from the standard React library.
 
 1. Hooks should all begin with the word `use` and follow `camelCase` names.
 
-1. Hooks must be called in the same order each time a compontent renders. The easiest way to guarantee this is to not place a `useXXXX` hook inside of a conditional, or have any "guard clauses" **before** the use of a hook method.
+1. Hooks must be called in the same order each time a component renders. The easiest way to guarantee this is to not place a `useXXXX` hook inside of a conditional, or have any "guard clauses" **before** the use of a hook method.
 
 ---
 
@@ -153,7 +153,7 @@ export function Counter() {
 - Sets initial value (e.g. `0`)
 - `useState` always returns an array with two entries
 
----
+Add our first hook, known as `useState`.
 
 [.autoscale: true]
 
@@ -189,13 +189,13 @@ export function Counter() {
 ```
 <!-- prettier-ignore-end -->
 
-Creates two local variables
-First is the value of the counter
-Second is a function that allows us to change the counter
+^ Creates two local variables
+^ First is the value of the counter
+^ Second is a function that allows us to change the counter
 
 ---
 
-# Simplify (using Destructuring Assignment)
+# [fit] Simplify (using Destructuring Assignment)
 
 ```jsx
 export function Counter() {
@@ -220,6 +220,7 @@ export function Counter() {
 
 - See that the UI changes when the state is modified
 
+<!-- prettier-ignore-start -->
 ```jsx
 export function Counter() {
   const [counter, setCounter] = useState(42)
@@ -232,23 +233,22 @@ export function Counter() {
   )
 }
 ```
+<!-- prettier-ignore-end -->
 
 ---
 
 # Step 4 - Connect actions
 
-[.column]
-
 - Create a `handleXXXX` function to handle events.
 - We will define this _INSIDE_ our function. Whoa! Nested functions!
 
-[.column]
+---
 
 ```jsx
 export function Counter() {
   const [counter, setCounter] = useState(42)
 
-  function handleClickButton(event) {
+  function handleClickButton(event: MouseEvent) {
     event.preventDefault()
 
     console.log('Clicked!')
@@ -263,12 +263,15 @@ export function Counter() {
 }
 ```
 
----
+# [fit] Ah, so much more room for activities...
 
 # [fit] Event handlers still receive **event** object
 
+- Except now we **must** provide a specific type.
+- Type depends on what _kind_ of handler this is.
+
 ```jsx
-function handleClickButton(event) {
+function handleClickButton(event: MouseEvent) {
   event.preventDefault()
 
   console.log('Clicked!')
@@ -321,7 +324,7 @@ Showing how to _prevent the default behavior_, not typically needed outside of l
 export function Counter() {
   const [counter, setCounter] = useState(42)
 
-  function handleClickButton(event) {
+  function handleClickButton(event: MouseEvent) {
     event.preventDefault()
 
     // Increment
@@ -370,6 +373,100 @@ function CounterWithName() {
 }
 ```
 
+- We are associating the event, `onClick` with the function `handleClickButton`.
+- The `onClick` is actually a property of the DOM element.
+- We assign that property to the function itself.
+
+---
+
+# Adding more state
+
+What if we also wanted to keep track of a person's name on the counter?
+
+With `hooks`, we will make two **independent** states that each track a single piece of information.
+
+---
+
+```jsx
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+  const [name, setName] = useState('Susan')
+
+  function handleButtonClick() {
+    setCounter(counter + 1)
+  }
+
+  function handleChangeInput(event: React.ChangeEvent<HTMLInputElement>) {
+    setName(event.target.value)
+  }
+
+  return (
+    <div>
+      <p>
+        Hi there {name} The counter is {counter}
+      </p>
+      <button onClick={handleButtonClick}>Count!</button>
+      <p>
+        <input type="text" value={name} onChange={handleChangeInput} />
+      </p>
+    </div>
+  )
+}
+```
+
+---
+
+# handleChangeInput
+
+- Declare the `event` as a data type that indicates this is a `React.ChangeEvent` on an element that is a `HTMLInputElement`
+- Allows `event.target` and `event.target.value` to have
+  types.
+
+- For our button, we want to:
+  - Get the current count
+  - Increment it
+  - Update the state
+
+# A note on types
+
+function handleClickButton(event) {
+event.preventDefault()
+
+You may have noticed that when declaring these variables we did **not** have to specify a type:
+
+```typescript
+const [counter, setCounter] = useState(0)
+```
+
+---
+
+If we did not provide an initial state, React would **not** be able to infer the type. Here is an example of that type of `useState`
+
+```typescript
+const [price, setPrice] = useState()
+```
+
+- TypeScript will set a type of `undefined` to `price`.
+- When we try to `setPrice(42)` (or any other number) we'll receive a TypeScript error that we cannot assign `number` to `undefined`.
+
+---
+
+In the case where we do **not** provide an initial value to `useState` we _should_ provide a type.
+
+```typescript
+const [price, setPrice] = useState<number>()
+```
+
+`price` has a type of `undefined | number`.
+
+---
+
+# Always set default state value
+
+This is the reason that we **strongly** recommend always using an initial value for all of your `useState` hooks.
+
+If you _cannot_ set an initial value you must consider the impact that allowing an `undefined` value in a state variable will have.
+
 ---
 
 # Steps:
@@ -383,5 +480,3 @@ function CounterWithName() {
 - Step 4 - Connect actions
 
 - Step 5 - Update state
-
----

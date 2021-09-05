@@ -8,58 +8,84 @@ Theme: Next, 1
 
 ---
 
-[.column]
-
 ```jsx
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-export class App extends Component {
-  state = {
+type Square = 'X' | 'O' | ' '
+type Row = [Square, Square, Square]
+type Board = [Row, Row, Row]
+
+type Game = {
+  board: Board
+  id: null | number
+  winner: null | string
+}
+
+```
+
+---
+
+```typescript
+function App() {
+  const [game, setGame] = useState<Game>({
     board: [
       [' ', ' ', ' '],
       [' ', ' ', ' '],
       [' ', ' ', ' '],
     ],
+    id: null,
     winner: null,
-  }
+  })
 ```
 
 ---
 
-```jsx
-handleClickCell = async (row, column) => {
+```typescript
+async function handleClickCell(row: number, column: number) {
   if (
-    this.state.id === undefined ||
-    this.state.winner ||
-    this.state.board[row][column] !== ' '
+    // No game id
+    game.id === undefined ||
+    // A winner exists
+    game.winner ||
+    // The space isn't blank
+    game.board[row][column] !== ' '
   ) {
     return
   }
 
-  console.log(`I clicked on row ${row} and column ${column}`)
+  // Generate the URL we need
+  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${game.id}`
 
-  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${this.state.id}`
-
+  // Make an object to send as JSON
   const body = { row: row, column: column }
+```
 
+---
+
+```typescript
+  // Make a POST request to make a move
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(body),
   })
 
-  if (response.status === 201) {
-    const game = await response.json()
+  if (response.ok) {
+    console.log('x')
+    // Get the response as JSON
+    const newGame = (await response.json()) as Game
 
-    this.setState(game)
+    // Make that the new state!
+    setGame(newGame)
   }
 }
 ```
 
 ---
 
-```jsx
-handleNewGame = async () => {
+```typescript
+async function handleNewGame() {
+  // Make a POST request to ask for a new game
   const response = await fetch(
     'https://sdg-tic-tac-toe-api.herokuapp.com/game',
     {
@@ -68,51 +94,52 @@ handleNewGame = async () => {
     }
   )
 
-  if (response.status === 201) {
-    const game = await response.json()
+  if (response.ok) {
+    // Get the response as JSON
+    const newGame = (await response.json()) as Game
 
-    this.setState(game)
+    // Make that the new state!
+    setGame(newGame)
   }
 }
 ```
 
 ---
 
-```jsx
-render() {
-  const header = this.state.winner
-    ? `Winner is ${this.state.winner}`
-    : 'Tic Tac Toe'
-
-  return (
-    <div>
-      <h1>
-        {header} - <button onClick={this.handleNewGame}>NEW GAME</button>
-      </h1>
-      <ul>
-        <li className={this.state.board[0][0] === ' ' ? '' : 'taken'} onClick={() => this.handleClickCell(0, 0)}>
-          {this.state.board[0][0]}
-        </li>
-        <li className={this.state.board[0][0] === ' ' ? '' : 'taken'} onClick={() => this.handleClickCell(0, 1)}>
-          {this.state.board[0][1]}
-        </li>
-        <li className={this.state.board[0][0] === ' ' ? '' : 'taken'} onClick={() => this.handleClickCell(0, 2)}>
-          {this.state.board[0][2]}
-        </li>
-       {/* Other rows removed for readability */}
-      </ul>
-    </div>
-  )
-}
+```typescript
+const header = game.winner ? `${game.winner} is the winner` : 'Tic Tac Toe'
 ```
 
 ---
 
-# Lots of repeated code in the `li` for game cells
+```jsx
+return (
+  <div>
+    <h1>
+      {header} - <button onClick={handleNewGame}>New</button>
+    </h1>
+    <ul>
+      {game.board.map((boardRow, rowIndex) => {
+        return boardRow.map((cell, columnIndex) => {
+          return (
+            <li
+              key={columnIndex}
+              className={cell === ' ' ? '' : 'taken'}
+              onClick={() => handleClickCell(rowIndex, columnIndex)}
+            >
+              {cell}
+            </li>
+          )
+        })
+      })}
+    </ul>
+  </div>
+)
+```
 
 ---
 
-# Let us extract a component!
+# Let us extract a component for each cell!
 
 ---
 
@@ -122,17 +149,15 @@ render() {
 - What else is needed?
 
 ```jsx
-export class Cell extends Component {
-  render() {
-    return (
-      <li
-        className={this.state.board[0][0] === ' ' ? '' : 'taken'}
-        onClick={() => this.handleClickCell(0, 0)}
-      >
-        {this.state.board[0][0]}
-      </li>
-    )
-  }
+export function Cell() {
+  return (
+    <li
+      className={cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(rowIndex, columnIndex)}
+    >
+      {cell}
+    </li>
+  )
 }
 ```
 
@@ -140,9 +165,9 @@ export class Cell extends Component {
 
 # Needed
 
-- row
-- column
-- the board
+- rowIndex
+- columnIndex
+- cell
 - something to handle clicking the cell
 
 ---
@@ -164,44 +189,50 @@ export class Cell extends Component {
 ---
 
 ```jsx
-export class Cell extends Component {
-  render() {
-    return (
-      <li
-        className={this.props.value === ' ' ? '' : 'taken'}
-        onClick={this.handleClickCell}
-      >
-        {this.props.value}
-      </li>
-    )
-  }
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
+}
+
+export function Cell(props) {
+  return (
+    <li
+      className={props.cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(props.rowIndex, props.columnIndex)}
+    >
+      {props.cell}
+    </li>
+  )
 }
 ```
 
 ---
 
-# Define a local click handler
+Define a local click handler
 
 ```jsx
-export class Cell extends Component {
-  handleClickCell = () => {
-    console.log(`You clicked on ${this.props.row} and ${this.props.column}`)
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
+}
+
+export function Cell(props) {
+  function handleClickCell() {
+    console.log(`You clicked on ${props.rowIndex} and ${props.columnIndex}`)
   }
 
-  render() {
-    return (
-      <li
-        className={this.props.value === ' ' ? '' : 'taken'}
-        onClick={this.handleClickCell}
-      >
-        {this.props.value}
-      </li>
-    )
-  }
+  return (
+    <li
+      className={props.cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(props.rowIndex, props.columnIndex)}
+    >
+      {props.cell}
+    </li>
+  )
 }
 ```
-
-- Do not need the inline-arrow-function trick!
 
 ---
 
@@ -209,17 +240,18 @@ export class Cell extends Component {
 
 ```jsx
 <ul>
-  <Cell row={0} column={0} value={this.state.board[0][0]} />
-  <Cell row={0} column={1} value={this.state.board[0][1]} />
-  <Cell row={0} column={2} value={this.state.board[0][2]} />
-
-  <Cell row={1} column={0} value={this.state.board[1][0]} />
-  <Cell row={1} column={1} value={this.state.board[1][1]} />
-  <Cell row={1} column={2} value={this.state.board[1][2]} />
-
-  <Cell row={2} column={0} value={this.state.board[2][0]} />
-  <Cell row={2} column={1} value={this.state.board[2][1]} />
-  <Cell row={2} column={2} value={this.state.board[2][2]} />
+  {game.board.map((boardRow, rowIndex) => {
+    return boardRow.map((cell, columnIndex) => {
+      return (
+        <Cell
+          key={columnIndex}
+          cell={cell}
+          rowIndex={rowIndex}
+          columnIndex={columnIndex}
+        />
+      )
+    })
+  })}
 </ul>
 ```
 
@@ -235,7 +267,7 @@ export class Cell extends Component {
 
 # State down
 
-- We are sending the state DOWN by doing something like `value={this.state.board[0][2]}`
+- We are sending the state DOWN by doing something like `cell={cell}`
 - This _sends_ the **PARENT**'s state to the **CHILD** as `props`
 
 ---
@@ -250,17 +282,13 @@ export class Cell extends Component {
 ---
 
 ```jsx
-<Cell row={0} column={0} value={this.state.board[0][0]} recordMove={this.recordMove} />
-<Cell row={0} column={1} value={this.state.board[0][1]} recordMove={this.recordMove} />
-<Cell row={0} column={2} value={this.state.board[0][2]} recordMove={this.recordMove} />
-
-<Cell row={1} column={0} value={this.state.board[1][0]} recordMove={this.recordMove} />
-<Cell row={1} column={1} value={this.state.board[1][1]} recordMove={this.recordMove} />
-<Cell row={1} column={2} value={this.state.board[1][2]} recordMove={this.recordMove} />
-
-<Cell row={2} column={0} value={this.state.board[2][0]} recordMove={this.recordMove} />
-<Cell row={2} column={1} value={this.state.board[2][1]} recordMove={this.recordMove} />
-<Cell row={2} column={2} value={this.state.board[2][2]} recordMove={this.recordMove} />
+<Cell
+  key={columnIndex}
+  cell={cell}
+  rowIndex={rowIndex}
+  columnIndex={columnIndex}
+  recordMove={recordMove}
+/>
 ```
 
 ---
@@ -272,11 +300,16 @@ export class Cell extends Component {
 ---
 
 ```js
-handleClickCell = () => {
-  console.log(`You clicked on ${this.props.row} and ${this.props.column}`)
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
+  recordMove: (rowIndex: number, columnIndex: number)
+}
 
+function handleClickCell() {
   // Send the event UPwards by calling the `recordMove` function we were given
-  this.props.recordMove(this.props.row, this.props.column)
+  props.recordMove(props.rowIndex, props.columnIndex)
 }
 ```
 
@@ -392,18 +425,18 @@ so the UI draws the
 
 ---
 
-# Explore some cleanup using JavaScript syntax sugar
+# Explore some cleanup using TypeScript syntax sugar
 
 - Object shortcut
 
-```js
+```typescript
 const body = { row: row, column: column }
 ```
 
 - The key name `row` is the same as the name of the variable holding the value `row`
 - Shortcut (structuring the object):
 
-```js
+```typescript
 const body = { row, column }
 ```
 
@@ -415,27 +448,7 @@ const body = { row, column }
 
 ---
 
-# `this.props.row`, `this.props.value`, `this.prop.recordMove`, ...
-
-```jsx
-export class Cell extends Component {
-  handleClickCell = () => {
-    console.log(`You clicked on ${this.props.row} and ${this.props.column}`)
-    this.props.recordMove(this.props.row, this.props.column)
-  }
-
-  render() {
-    return (
-      <li
-        className={this.props.value === ' ' ? '' : 'taken'}
-        onClick={this.handleClickCell}
-      >
-        {this.props.value}
-      </li>
-    )
-  }
-}
-```
+# `props.rowIndex`, `props.columnIndex`, `props.cell`, `props.recordMove`, ...
 
 ---
 
@@ -473,29 +486,25 @@ Notice the `{ }` braces are on the _left_, and the object is on the _right_
 
 # Back to our `Cell`
 
-[.column]
-
 ```jsx
-handleClickCell = () => {
-  const { row, column, recordMove } = this.props
-
-  console.log(`You clicked on ${row} and ${column}`)
-  recordMove(row, column)
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
 }
-```
 
-[.column]
-
-```jsx
-render() {
-  const { value } = this.props
+export function Cell(props) {
+  function handleClickCell() {
+    // Send the event UPwards by calling the `recordMove` function we were given
+    props.recordMove(props.rowIndex, props.columnIndex)
+  }
 
   return (
     <li
-      className={value === ' ' ? '' : 'taken'}
-      onClick={this.handleClickCell}
+      className={props.cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(props.rowIndex, props.columnIndex)}
     >
-      {value}
+      {props.cell}
     </li>
   )
 }
@@ -503,7 +512,73 @@ render() {
 
 ---
 
-# Destructuring `this.props` at the top of a function
+# Destructuring `props` at the top of a function
+
+---
+
+```jsx
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
+}
+
+export function Cell(props) {
+  const { rowIndex, columnIndex, cell, recordMove} = props
+
+  function handleClickCell() {
+    // Send the event UPwards by calling the `recordMove` function we were given
+    recordMove(rowIndex, columnIndex)
+  }
+
+  return (
+    <li
+      className={cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(rowIndex, columnIndex)}
+    >
+      {cell}
+    </li>
+  )
+}
+```
+
+---
+
+We can destructure the props right in the function declaration.
+
+```jsx
+type CellProps = {
+  rowIndex: number
+  columnIndex: number
+  cell: string
+}
+
+export function Cell({ rowIndex, columnIndex, cell, recordMove}) {
+  function handleClickCell() {
+    // Send the event UPwards by calling the `recordMove` function we were given
+    recordMove(rowIndex, columnIndex)
+  }
+
+  return (
+    <li
+      className={cell === ' ' ? '' : 'taken'}
+      onClick={() => handleClickCell(rowIndex, columnIndex)}
+    >
+      {cell}
+    </li>
+  )
+}
+```
+
+---
 
 - ... makes it feel like the properties are nice local variables.
 - ... and that syntax is sometimes more straightforward and tidier.
+
+---
+
+# [fit] State ↓
+
+<br/>
+
+# [fit] Events ↑

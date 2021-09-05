@@ -76,7 +76,7 @@ If you hot-link photos from the internet, be sure to include a valid link back t
 ### Setup
 
 ```shell
-app-app --delta-hooks PhotoGallery
+degit $GITHUB_USER/react-project-template PhotoGallery
 ```
 
 ### Explorer Mode

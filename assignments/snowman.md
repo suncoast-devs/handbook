@@ -26,7 +26,7 @@ project:
 ### Setup
 
 ```shell
-app-app --gamma-hooks Snowman
+degit $GITHUB_USER/react-project-template Snowman
 ```
 
 ### Explorer Mode

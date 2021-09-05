@@ -18,11 +18,12 @@ Now that we have learned the power of flexbox we will apply it to the sites we a
 ### Setup
 
 ```shell
-app-app --alpha TheDailyKitteh
+degit $GITHUB_USER/html-css-ts-project-template TheDailyKitteh
 ```
 
 ## Additional Resources
 
+- Flexbox [examples](https://www.quackit.com/css/flexbox/examples)
 - CSS-Tricks guide to [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - CSS-Tricks guide to [grids](https://css-tricks.com/snippets/css/complete-guide-grid/)
 - [Flexbox Visual Guide](https://marina-ferreira.github.io/tutorials/css/flexbox/)
@@ -30,7 +31,8 @@ app-app --alpha TheDailyKitteh
 
 ## Recommended Practice:
 
-- https://flexboxfroggy.com/
+- [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)
+- [Flexbox Defense - a Game for Learning Flexbox](http://www.flexboxdefense.com/)
 - http://cssgridgarden.com/
 
 ### Explorer Mode

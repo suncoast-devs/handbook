@@ -2,80 +2,72 @@
 title: React Assets
 ---
 
----
-
 ## Using `import` to load assets
 
----
+We've seen that we can `import` TypeScript code into the current file/module.
+We've also seen that we can `import` JSON data from a file into a variable.
 
-## React apps use Webpack
+The fact that our development tools give us various `loaders` to deal with
+importing various data is very helpful.
 
----
+## What can we import?
 
-## Webpack is a tool for packaging assets
+Our development and build tools come with various `loaders` to be able to import
+various data types. If there is a type of data we need to support we can either
+find an existing loader and add it to our project **or** we can write our own
+since a loader is nothing more than some TypeScript (or JavaScript) code that
+describes how to read the file and provide a JavaScript object in response.
 
-- JavaScript
-- JSON (JavaScript Object Notation)
-  - a lightweight data-interchange format, representing javascript object in
-    text
-  - It is easy for humans to read and write. It is easy for machines to parse
-    and generate
+- TypeScript code
+- JSON
 - Images
 - Fonts
 - CSS
 
----
+## Importing images in a React application
 
-## Webpack comes with various `loaders` to able to import various data types
+Your first inclination to deal with images in JSX will be to write code like the
+following:
 
----
-
-## Webpack pulls from our source and helps generate JavaScript for the browser
-
----
-
-## When we import an image
-
-```javascript
-import photo from './skywalker.png'
+```jsx
+<img src="../images/my-awesome-image.png" alt="Awesomeness Defined" />
 ```
 
-##### We get a string representing the path to the image to use in code
+However, you will find that this doesn't work in development or in production.
+
+The correct method is to `import` the image first:
 
 ```javascript
-render() {
-  return (
-   <ul>
-     <li>
-       <img src={photo}/>
-     </li>
-   </ul>
-  )
+import image from '../my-awesome-image.png'
+```
+
+This provides you a `string` containing the **path** to the image to use in
+code.
+
+```jsx
+  return  <img src={image}/>
 }
 ```
 
----
+## Why do we import images?
 
-## When we import a JSON file
+This seems like a big difference to how we dealt with images in plain HTML and
+CSS projects. We use this method in our React (and other TypeScript/JavaScript
+projects) so that our build tool can add these features:
 
-```javascript
-import octocats from `./cats.json`
-```
-
-##### We get a JSON object we can access and use
-
-```javascript
-render() {
-  const cats = octocats.map(cat => {
-    return <Octocat name={cat.name} image={cat.image}/>
-  })
-
-  return (
-    <div>
-      {cats}
-    </div>
-  )
-}
-```
-
----
+1. It ensures that the file name for the image is "slugged". Slugging means that
+   it takes some unique value and makes that part of the image path. You'll
+   notice that the string in `image` isn't just `my-awesome-image.png` but
+   something like `my-awesome-image-dea415f.png` (and maybe even a longer
+   string). That bit of text after the file name is the "checksum" of the file.
+   The checksum is a value that changes _any_ time the contents of the file
+   change. We do this because we'd like to **cache** the images for a long time
+   on our client's browsers. By having a checksum we can set a _long_ caching
+   time but ensure that the client fetches a fresh image when we change the
+   contents. Since the image will have a new file name when the contents change,
+   we achieve both caching and freshness.
+2. It also allows the **deploy** process to only upload the images that are
+   _used_ in the code. Unused images won't have an `import` and thus won't be
+   included in the deployment to our hosting system.
+3. Some loaders will do image optimizations to ensure the file is as small as
+   possible.
