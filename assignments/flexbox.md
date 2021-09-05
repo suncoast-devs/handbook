@@ -31,7 +31,8 @@ degit $GITHUB_USER/html-css-ts-project-template TheDailyKitteh
 
 ## Recommended Practice:
 
-- https://flexboxfroggy.com/
+- [Flexbox Froggy - a Game for Learning Flexbox](https://flexboxfroggy.com/)
+- [Flexbox Defense - a Game for Learning Flexbox](http://www.flexboxdefense.com/)
 - http://cssgridgarden.com/
 
 ### Explorer Mode
