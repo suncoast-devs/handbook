@@ -10,7 +10,7 @@ network.
 The fetch() method takes one mandatory argument, the path to the resource you
 want to fetch. It returns a `Promise` that resolves to the Response to that
 request, whether it is successful or not. You can also optionally pass in an
-object as the second argument which will be options on how fetch behaves.
+object as the second argument which will also give options on how fetch behaves.
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all')
@@ -35,7 +35,7 @@ Promise {<pending>}
 
 - We cannot use this `promise` directly, we must "resolve" the promise
 - Think of a `promise` as an _IOU_
-- A `promise` is an _asynchronous_ _IOU_ that will a supplied function when the
+- A `promise` is an _asynchronous_ _IOU_ that will supply a function when the
   _IOU_ is ready to redeem.
 - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
