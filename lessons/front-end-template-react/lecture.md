@@ -124,7 +124,7 @@ body {
 
 # `package.json`
 
-## [fit] Individual changes (example file on the next slide)
+## [fit] Individual changes for scripts
 
 [.column]
 Update the `scripts` section to include:
@@ -134,6 +134,18 @@ Update the `scripts` section to include:
 "predeploy": "npm run build",
 "deploy": "netlify deploy --prod --dir=dist",
 ```
+
+To view your app on the local network, use:
+
+```
+"start": "vite --host",
+```
+
+---
+
+# `package.json`
+
+## [fit] Configure the code formatting tool
 
 [.column]
 Add this section:
@@ -153,7 +165,7 @@ Add this section:
 # `package.json`
 
 ```json
-{{
+{
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
@@ -255,6 +267,7 @@ export default defineConfig({
 
 ```shell
     npm install --save-dev "prettier"
+    npm install --save-dev "vite-plugin-linter"
     npm install --save-dev "@typescript-eslint/parser"
     npm install --save-dev "eslint-plugin-react-hooks"
     npm install --save-dev "eslint"
@@ -262,8 +275,12 @@ export default defineConfig({
     npm install --save-dev "eslint-plugin-react"
     npm install --save-dev "eslint-config-react-app"
     npm install --save-dev "eslint-plugin-jsx-a11y"
-    npm install --save-dev "eslint-plugin-prettier"
+    npm install --save-dev "eslint-plugin-prettier@3.4.1"
 ```
+
+^ NOTE: The version lock to eslint-plugin-prettier for 3.4.1 is due to a potential bug in 4.0.0
+
+^ With version 4.0.0 we see: `TypeError: Error while loading rule 'prettier/prettier': context.getPhysicalFilename is not a function`
 
 ---
 
