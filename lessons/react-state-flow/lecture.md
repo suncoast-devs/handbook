@@ -10,8 +10,6 @@ Theme: Next, 1
 
 ```jsx
 import React, { useState } from 'react'
-import { NewsArticle } from './components/NewsArticle'
-import articles from './articles.json'
 
 type Square = 'X' | 'O' | ' '
 type Row = [Square, Square, Square]
@@ -450,7 +448,7 @@ const body = { row, column }
 
 ---
 
-# `props.rowIndex`, `props.columnIndex`, `props.cell`, `prop.recordMove`, ...
+# `props.rowIndex`, `props.columnIndex`, `props.cell`, `props.recordMove`, ...
 
 ---
 
