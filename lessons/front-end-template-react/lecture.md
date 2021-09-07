@@ -4,6 +4,27 @@ theme: Next, 1
 
 ---
 
+[.autoscale: true]
+
+# [fit] Getting started - SHORTCUT MODE
+
+To skip the rest of this setup and simply _duplicate_ what SDG already setup:
+
+```shell
+cd ~/sdg
+degit suncoast-devs/react-project-template
+cd react-project-template
+git init
+git add .
+git commit -m "Initial commit"
+hub create
+git push origin HEAD
+```
+
+And you will have your own copy of SDG's project template.
+
+---
+
 # [fit] Getting started
 
 In the same directory where you create projects:
