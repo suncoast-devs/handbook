@@ -5,7 +5,7 @@ order: 2
 
 # Getting Started
 
-With any application, we should start by gathering the general use stories for
+With any application, we should start by gathering the general user stories for
 our application. In this case, we would like to collect all the taco producers
 in town in an organized way while allowing users to rank and review them.
 
