@@ -98,8 +98,8 @@ function handleDescription(event) {
 
 However, if you notice, we added a field `name` to each of the inputs that have
 the field's name. We were careful to name these after the object's properties.
-Thus we can use this to create a **single** handle method that reusable amongst
-all the `onChange` events for string based state:
+Thus we can use this to create a **single** handle method that is reusable
+amongst all the `onChange` events for string based state:
 
 ```javascript
 function handleStringFieldChange(event) {
