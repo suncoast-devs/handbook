@@ -86,7 +86,7 @@ and
 
 ## Handling the star rating
 
-We implment the star rating as a series of radio buttons. To use these radio
+We implement the star rating as a series of radio buttons. To use these radio
 buttons to update the `star` property of the `newReview` state remove the
 `value` attribute and introduce a `checked` attribute. Do this to each of the
 radio buttons:
