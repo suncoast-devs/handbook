@@ -11,7 +11,7 @@ We can now add support for restaurant reviews.
 
 The first thing we will do is add a `POCO` model representing the `Review`.
 Notice we include the `RestaurantId` since one `Review` _belongs to_ one
-`Restaurant`. We also set a default date for the CreatedAt and make it's `set`
+`Restaurant`. We also set a default date for the CreatedAt and make its `set`
 method _private_ so that it cannot be set via the API.
 
 ```csharp
@@ -83,10 +83,10 @@ else
 }
 ```
 
-so that now each restaurant will also include an **array** of reviews.
+So that now each restaurant will also include an **array** of reviews.
 
 > NOTE: This is not the most efficient implementation. Imagine if our site
-> because popular and started to receive heavy traffic. To display our homepage
+> became popular and started to receive heavy traffic. To display our homepage
 > we would be fetching all the restaurants _AND_ the complete list of reviews to
 > count them. We'll review more efficient approaches in a later step. For now
 > we'll go with this approach. Remember to focus on working code before perfect
