@@ -1,7 +1,5 @@
 theme: Next, 1
 
----
-
 # JavaScript Modules
 
 ---
@@ -74,8 +72,10 @@ The short answer? [Kind of.](https://caniuse.com/#feat=es6-module)
 
 ## What does a module look like?
 
+[.column]
+
 ```typescript
-// lib/randomInteger.js
+// lib/randomInteger.ts
 function randomInteger(min: number, max: number) {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -84,8 +84,12 @@ function randomInteger(min: number, max: number) {
 }
 
 export default randomInteger
+```
 
-// main.js
+[.column]
+
+```typescript
+// main.ts
 import randomInteger from './lib/randomInteger'
 
 const role = randomInteger(0, 6) + 1
@@ -97,7 +101,7 @@ console.log(`You just rolled a ${role}!`)
 ## Modules can export more than one thing
 
 ```typescript
-// lib/util.js
+// util.ts
 export function squareRoot(number: number) {
   return Math.sqrt(number)
 }
@@ -109,13 +113,43 @@ export function square(x: number) {
 export function diagonalLength(x: number, y: number) {
   return squareRoot(square(x) + square(y))
 }
+```
 
-// main.js
-import { diagonalLength } from './lib/util'
+---
+
+## Importing from a module by name
+
+```typescript
+// main.ts
+import { diagonalLength } from './util'
 
 console.log(diagonalLength(4, 3)) // -> 5
 ```
 
 ---
 
+## Renaming a named export!
+
+```typescript
+// main.ts
+import { diagonalLength as pythagoreanLength } from './util'
+
+console.log(pythagoreanLength(4, 3)) // -> 5
+```
+
+---
+
+## [fit] Importing the default *and* something by name
+
+```typescript
+import React, { useState } from 'react'
+```
+
+- Imports the default export and names it `React`
+- Imports a named export named `useState`
+
+---
+
 ## See, modules are easy!
+
+## 😉

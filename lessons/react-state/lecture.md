@@ -112,11 +112,10 @@ Here is the code to create the state variables and display their value. We'll th
 
 ```jsx
 export function Counter() {
-  // prettier-ignore
-  const counterValueAndSetMethod /* this is an array */ = useState( 0 /* initial state */)
+  const valueAndSetMethod /* <- array */ = useState(0 /* initial state */)
 
-  const counter = counterValueAndSetMethod[0]
-  const setCounter = counterValueAndSetMethod[1]
+  const counter = valueAndSetMethod[0]
+  const setCounter = valueAndSetMethod[1]
 
   return (
     <div>
@@ -131,13 +130,12 @@ export function Counter() {
 
 [.code-highlight: 2-2]
 
-<!-- prettier-ignore-start -->
 ```jsx
 export function Counter() {
-  const counterValueAndSetMethod /* this is an array */ = useState( 0 /* initial state */)
+  const valueAndSetMethod /* <- array */ = useState(0 /* initial state */)
 
-  const counter = counterValueAndSetMethod[0]
-  const setCounter = counterValueAndSetMethod[1]
+  const counter = valueAndSetMethod[0]
+  const setCounter = valueAndSetMethod[1]
 
   return (
     <div>
@@ -147,13 +145,58 @@ export function Counter() {
   )
 }
 ```
-<!-- prettier-ignore-end -->
 
 - Declares we are going to use some state (e.g. `useState`)
 - Sets initial value (e.g. `0`)
 - `useState` always returns an array with two entries
 
-Add our first hook, known as `useState`.
+---
+
+[.code-highlight: 3-5]
+
+```jsx
+export function Counter() {
+  const valueAndSetMethod /* <- array */ = useState(0 /* initial state */)
+
+  const counter = valueAndSetMethod[0]
+  const setCounter = valueAndSetMethod[1]
+
+  return (
+    <div>
+      <p>The counter is {counter}</p>
+      <button>Count!</button>
+    </div>
+  )
+}
+```
+
+- The first value of the array is the current value
+- The second value is a function used to change the value
+
+---
+
+[.code-highlight: 9-9]
+
+```jsx
+export function Counter() {
+  const valueAndSetMethod /* <- array */ = useState(0 /* initial state */)
+
+  const counter = valueAndSetMethod[0]
+  const setCounter = valueAndSetMethod[1]
+
+  return (
+    <div>
+      <p>The counter is {counter}</p>
+      <button>Count!</button>
+    </div>
+  )
+}
+```
+
+- We can use the value to show the current State
+- Later we'll see how to _chagne_ the state
+
+---
 
 [.autoscale: true]
 
@@ -164,34 +207,6 @@ Add our first hook, known as `useState`.
 1. Value given to `useState` in parenthesis is used as the initial value only the first time the component's instance is rendered. Even if the component is rendered again due to a state change, the state's value isn't reset to the initial value.
 
 2. `useState` always returns an _array_ with exactly _two_ elements. The **first** element is the _current value of the state_ and the **second** element is _a function that can change the value of this state_
-
----
-
-# Using the `useState` return value
-
-[.code-highlight: 4-6]
-
-<!-- prettier-ignore-start -->
-```jsx
-export function Counter() {
-  const counterValueAndSetMethod /* this is an array */ = useState( 0 /* initial state */)
-
-  const counter = counterValueAndSetMethod[0]
-  const setCounter = counterValueAndSetMethod[1]
-
-  return (
-    <div>
-      <p>The counter is {counter}</p>
-      <button>Count!</button>
-    </div>
-  )
-}
-```
-<!-- prettier-ignore-end -->
-
-^ Creates two local variables
-^ First is the value of the counter
-^ Second is a function that allows us to change the counter
 
 ---
 
@@ -263,7 +278,7 @@ export function Counter() {
 }
 ```
 
-# [fit] Ah, so much more room for activities...
+---
 
 # [fit] Event handlers still receive **event** object
 
@@ -278,16 +293,16 @@ function handleClickButton(event: MouseEvent) {
 }
 ```
 
-Showing how to _prevent the default behavior_, not typically needed outside of links and form submit.
+> NOTE: We are showing how to _prevent the default behavior_, not typically needed outside of links and form submits.
 
 ---
 
 # Connect the event
 
-# [fit] Goodbye `addEventListener`
+    Goodbye addEventListener
 
-```html
-<button onClick="{handleClickButton}">Increment</button>
+```jsx
+<button onClick={handleClickButton}>Increment</button>
 ```
 
 - We are associating the event, `onClick` with the function `handleClickButton`.
@@ -300,6 +315,38 @@ Showing how to _prevent the default behavior_, not typically needed outside of l
 
 - `onXXXXX` or `handleXXXXX` named methods (e.g. `onClick`, `onChange`, `handleClick`, etc.)
 - `_buttonClick` -- because the `_` looks like a _"handle"_ attached to the word `buttonClick`
+
+---
+
+# [fit] Declaring handling functions _inline_
+
+```jsx
+<button
+  onClick={function (event) {
+    event.preventDefault()
+
+    console.log('Clicked!')
+  }}
+>
+  Increment
+</button>
+```
+
+---
+
+# Benefits
+
+Don't need to declare a type! TypeScript will automatically make `event` a type of `React.MouseEvent<HTMLButtonElement, MouseEvent>`, an even more specific type than we used!
+
+# Downsides
+
+Code that is more than one or two lines really clutters up the JSX
+
+---
+
+# [fit] Can use arrow functions for very nice `one liners`
+
+- We'll see these in a moment
 
 ---
 
@@ -357,6 +404,8 @@ export function Counter() {
 
 # Simplify the code
 
+[.column]
+
 ```jsx
 function CounterWithName() {
   const [counter, setCounter] = useState(0)
@@ -373,9 +422,57 @@ function CounterWithName() {
 }
 ```
 
+[.column]
+
 - We are associating the event, `onClick` with the function `handleClickButton`.
 - The `onClick` is actually a property of the DOM element.
 - We assign that property to the function itself.
+
+---
+
+# Inline function
+
+```jsx
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+
+  function handleButtonClick() {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <div>
+      <button
+        onClick={function () {
+          setCounter(counter + 1)
+        }}
+      >
+        Count!
+      </button>
+    </div>
+  )
+}
+```
+
+---
+
+# Arrow function
+
+```jsx
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+
+  function handleButtonClick() {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <div>
+      <button onClick={() => setCounter(counter + 1)}>Count!</button>
+    </div>
+  )
+}
+```
 
 ---
 
@@ -392,10 +489,6 @@ function CounterWithName() {
   const [counter, setCounter] = useState(0)
   const [name, setName] = useState('Susan')
 
-  function handleButtonClick() {
-    setCounter(counter + 1)
-  }
-
   function handleChangeInput(event: React.ChangeEvent<HTMLInputElement>) {
     setName(event.target.value)
   }
@@ -405,7 +498,7 @@ function CounterWithName() {
       <p>
         Hi there {name} The counter is {counter}
       </p>
-      <button onClick={handleButtonClick}>Count!</button>
+      <button onClick={() => setCounter(counter + 1)}>Count!</button>
       <p>
         <input type="text" value={name} onChange={handleChangeInput} />
       </p>
@@ -418,19 +511,72 @@ function CounterWithName() {
 
 # handleChangeInput
 
-- Declare the `event` as a data type that indicates this is a `React.ChangeEvent` on an element that is a `HTMLInputElement`
-- Allows `event.target` and `event.target.value` to have
-  types.
+- `event` is a `React.ChangeEvent` on an `HTMLInputElement` element
 
 - For our button, we want to:
   - Get the current count
   - Increment it
   - Update the state
 
-# A note on types
+---
 
-function handleClickButton(event) {
-event.preventDefault()
+# Inline function
+
+```jsx
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+  const [name, setName] = useState('Susan')
+
+  return (
+    <div>
+      <p>
+        Hi there {name} The counter is {counter}
+      </p>
+      <button onClick={() => setCounter(counter + 1)}>Count!</button>
+      <p>
+        <input
+          type="text"
+          value={name}
+          onChange={function (event) {
+            setName(event.target.value)
+          }}
+        />
+      </p>
+    </div>
+  )
+}
+```
+
+---
+
+# Arrow function
+
+```jsx
+function CounterWithName() {
+  const [counter, setCounter] = useState(0)
+  const [name, setName] = useState('Susan')
+
+  return (
+    <div>
+      <p>
+        Hi there {name} The counter is {counter}
+      </p>
+      <button onClick={() => setCounter(counter + 1)}>Count!</button>
+      <p>
+        <input
+          type="text"
+          value={name}
+          onChange={event => setName(event.target.value)}
+        />
+      </p>
+    </div>
+  )
+}
+```
+
+---
+
+# A note on types
 
 You may have noticed that when declaring these variables we did **not** have to specify a type:
 

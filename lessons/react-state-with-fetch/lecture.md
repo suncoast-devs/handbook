@@ -4,14 +4,18 @@ Theme: Next, 1
 
 ---
 
-# A more complex example: Tic Tac Toe With an API
+# [fit] A more complex example
+
+# [fit] [Tic Tac Toe With an Expert API](https://sdg-tic-tac-toe-api.herokuapp.com/)
 
 ---
 
 # Step 1 - Static Implementation
 
 ```jsx
-function App() {
+import React from 'react'
+
+export function App() {
   return (
     <div>
       <h1>
@@ -30,6 +34,110 @@ function App() {
       </ul>
     </div>
   )
+}
+```
+
+---
+
+# Step 1 - ALL THE CSS
+
+```css
+:root {
+  /* CSS Variables for all the font colors and sizes. Try changing these! */
+  --header-background: #5661b3;
+  --header-text-color: #fff9c2;
+  --header-font-size: 2rem;
+  --square-font-size: calc(8 * var(--header-font-size));
+  --square-text-color: #5661b3;
+  --square-background-color: #e6e8ff;
+  --square-border: 3px solid var(--square-text-color);
+
+  font: 16px / 1 sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+h1 {
+  /* center the header */
+  text-align: center;
+
+  /* Use a sans serif font with a little spacing and color */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.4rem;
+  font-size: var(--header-font-size);
+  color: var(--header-text-color);
+
+  /* Remove margins and set a little padding */
+  margin: 0;
+  padding: var(--header-font-size);
+
+  /* Set a background color for the header */
+  background-color: var(--header-background);
+}
+
+ul,
+li {
+  /* Be gone margins! */
+  margin: 0;
+  padding: 0;
+
+  /* and list styles */
+  list-style: none;
+}
+
+ul {
+  /* Make the height of the list equal to the height of the page MINUS the height taken by the header */
+  height: calc(100vh - 3 * var(--header-font-size));
+
+  /* Display the list as a 3 column and three row grid */
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+
+  /* Add a little gap between to allow the background color through */
+  gap: 1rem;
+
+  /* Set the background color that will show through the gap */
+  background-color: var(--square-text-color);
+}
+
+ul li {
+  /* Use a monospace font */
+  font-family: monospace;
+  font-size: var(--square-font-size);
+
+  /* Style the background color of the item */
+  background-color: var(--square-background-color);
+
+  /* Make the cursor a pointer by default */
+  cursor: pointer;
+
+  /* Center the text in the LI */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Don't let the squares become too small */
+  min-width: 3rem;
+  min-height: 10rem;
+}
+
+ul li.taken {
+  cursor: not-allowed;
+}
+
+ul li.small {
+  font-size: 4rem;
+}
+
+ul li.not-allowed-click {
+  background-color: red;
 }
 ```
 
@@ -73,7 +181,9 @@ function App() {
 [.column]
 
 ```jsx
-function App() {
+import React, { useState } from 'react'
+
+export function App() {
   const [game, setGame] = useState({
     board: [
       [' ', ' ', ' '],
@@ -107,7 +217,7 @@ function App() {
 
 ---
 
-# Step 3: Try manually changing the state
+# [fit] Step 3: Try manually changing the state
 
 [.column]
 
@@ -143,7 +253,9 @@ function handleClickCell(row: number, column: number) {
 ---
 
 ```jsx
-function App() {
+import React, { useState } from 'react'
+
+export function App() {
   const [game, setGame] = useState({
     board: [
       [' ', ' ', ' '],
@@ -201,10 +313,10 @@ async function handleNewGame() {
 
   if (response.ok) {
     // Get the response as JSON
-    const newGame = await response.json()
+    const newGameState = await response.json()
 
     // Make that the new state!
-    setGame(newGame)
+    setGame(newGameState)
   }
 }
 ```
@@ -265,7 +377,7 @@ async function handleNewGame() {
 ```jsx
 async function handleClickCell(row: number, column: number) {
   // Generate the URL we need
-  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${id}`
+  const url = `https://sdg-tic-tac-toe-api.herokuapp.com/game/${game.id}`
 
   // Make an object to send as JSON
   const body = { row: row, column: column }
@@ -279,10 +391,10 @@ async function handleClickCell(row: number, column: number) {
 
   if (response.ok) {
     // Get the response as JSON
-    const newGame = await response.json()
+    const newGameState = await response.json()
 
     // Make that the new state!
-    setGame(game)
+    setGame(newGameState)
   }
 }
 ```
@@ -400,8 +512,10 @@ if (
 
 # Refining our TypeScript
 
-- `response.json()` returns `any` so data sent to `setGame` has a data type of `any`
-- also don't have a very flexible data type for our `game` state
+- `response.json()` returns `any`!
+- The data could be: `number | string| boolean | null | object | Array`
+- TypeScript has no way to know.
+- We can define some types to get _some_ type checking
 
 ---
 
@@ -489,7 +603,7 @@ const [game, setGame] = useState<Game>({
 # Using game state
 
 ```typescript
-const newGame = (await response.json()) as Game
+const newGameState = (await response.json()) as Game
 ```
 
 ---
@@ -497,6 +611,6 @@ const newGame = (await response.json()) as Game
 # Warning!
 
 - `TypeScript` only checks types while in development mode!
-
-- When we **RUN** our application, all of the type information is stripped away and nothing is checked.
-- This might be improved in future versions
+- If the API returns something _NOT_ in the shape of a `Game` we will have no safety.
+- We'd have to write our own validation functions (and we might want to do that if we want to be :100: sure)
+- This might be improved in future versions of TypeScript.

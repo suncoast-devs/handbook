@@ -195,7 +195,6 @@ Add this section:
     "vite": "^2.4.2"
   }
 }
-
 ```
 
 ---
@@ -275,7 +274,6 @@ export default defineConfig({
     npm install --save-dev "eslint-plugin-react"
     npm install --save-dev "eslint-config-react-app"
     npm install --save-dev "eslint-plugin-jsx-a11y"
-    npm install --save-dev "eslint-plugin-prettier@3.4.1"
 ```
 
 ^ NOTE: The version lock to eslint-plugin-prettier for 3.4.1 is due to a potential bug in 4.0.0
@@ -344,12 +342,12 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended',
-    'plugin:prettier/recommended', // Make sure this is always the last element in the array.
+    // Uncomment this next line if you want to check your code for accessibility issues!
+    // 'plugin:jsx-a11y/recommended',
+    'prettier', // Make sure this is always the last element in the array.
   ],
-  plugins: ['prettier'],
+  plugins: [],
   rules: {
-    'prettier/prettier': ['error', {}, {}],
     'react/react-in-jsx-scope': 'off',
     'jsx-a11y/accessible-emoji': 'off',
     'react/prop-types': 'off',

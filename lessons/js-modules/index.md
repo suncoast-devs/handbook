@@ -75,7 +75,7 @@ The short answer? [Kind of.](https://caniuse.com/#feat=es6-module)
 ## What does a module look like?
 
 ```typescript
-// lib/randomInteger.js
+// lib/randomInteger.ts
 function randomInteger(min: number, max: number) {
   min = Math.ceil(min)
   max = Math.floor(max)
@@ -85,7 +85,7 @@ function randomInteger(min: number, max: number) {
 
 export default randomInteger
 
-// main.js
+// main.ts
 import randomInteger from './lib/randomInteger'
 
 const role = randomInteger(0, 6) + 1
@@ -97,7 +97,7 @@ console.log(`You just rolled a ${role}!`)
 ## Modules can export more than one thing
 
 ```typescript
-// lib/util.js
+// lib/util.ts
 export function squareRoot(number: number) {
   return Math.sqrt(number)
 }
@@ -110,7 +110,7 @@ export function diagonalLength(x: number, y: number) {
   return squareRoot(square(x) + square(y))
 }
 
-// main.js
+// main.ts
 import { diagonalLength } from './lib/util'
 
 console.log(diagonalLength(4, 3)) // -> 5

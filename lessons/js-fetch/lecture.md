@@ -1,30 +1,47 @@
+theme: Next,1
+
+# Fetching Data From Remote Servers
+
 ---
-title: Fetching Data From Remote Servers
+
+The Fetch API provides an interface for fetching resources, primarily across the network.
+
 ---
 
-The Fetch API provides an interface for fetching resources, primarily across the
-network.
+# Using
 
-## Using
+The `Fetch API` is provided in the browser as a method named `fetch`
 
-The fetch() method takes one mandatory argument, the path to the resource you
-want to fetch. It returns a `Promise` that resolves to the Response to that
-request, whether it is successful or not. You can also optionally pass in an
-object as the second argument which will also give options on how fetch behaves.
+Takes at _least_ one argument: a string representing the `URL` to access.
+
+---
+
+# Make a sample TypeScript app for demonstration or use RunJS
+
+---
+
+# Example
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all')
 ```
 
-- This will access the _Countries_ and fetch a list of all countries.
+This will access the _Countries_ and fetch a list of all countries.
 
-- But if we just log this response we will see something that we cannot directly
-  use
+---
+
+# What do we receive?
+
+If log this response we will see something that we cannot directly use.
+
+[.column]
 
 ```javascript
 let response = fetch('https://restcountries.eu/rest/v2/all')
 console.log(response)
 ```
+
+[.column]
 
 ```
 Promise {<pending>}
@@ -33,10 +50,15 @@ Promise {<pending>}
  [[PromiseValue]]: undefined
 ```
 
+---
+
+# [fit] JavaScript `Promise` is like `Task` from `C#`
+
+---
+
 - We cannot use this `promise` directly, we must "resolve" the promise
 - Think of a `promise` as an _IOU_
-- A `promise` is an _asynchronous_ _IOU_ that will supply a function when the
-  _IOU_ is ready to redeem.
+- A `promise` is an _asynchronous_ _IOU_ that will supply a function when the _IOU_ is ready to redeem.
 - To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
 
 ```javascript
@@ -45,7 +67,9 @@ fetch('https://restcountries.eu/rest/v2/all').then(response => {
 })
 ```
 
-- The response here is _still_ not quite usable:
+---
+
+# The response here is _still_ not quite usable:
 
 ```
 Response {type: "cors", url: "https://restcountries.eu/rest/v2/all/", redirected: true, status: 200, ok: true, …}
@@ -60,10 +84,16 @@ type: "cors"
 url: "https://restcountries.eu/rest/v2/all/"
 ```
 
-- This is because the response _body_ itself must be _converted_ into a form we
-  can use.
-- Fortunately, the `response` object gives us a method to gain access to the
-  JSON:
+---
+
+# Deserialize...
+
+[.column]
+
+- This is because the response _body_ itself must be _converted_ into a form we can use.
+- Fortunately, the `response` object gives us a method to gain access to the JSON:
+
+[.column]
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all')
@@ -75,7 +105,9 @@ fetch('https://restcountries.eu/rest/v2/all')
   })
 ```
 
-- This returns usable information!
+---
+
+# This returns usable information!
 
 <!-- prettier-ignore -->
 ```typescript
@@ -88,14 +120,33 @@ fetch('https://restcountries.eu/rest/v2/all')
 ]
 ```
 
-## Improving the use of `fetch`
+---
 
-Promises can often be challenging to use and JavaScript has implemented a way to
-make asynchronous calls into synchronous calls. Similar to `C#`'s
-`async / await` system we can add `await` to a call that returns a promise. For
-any function that has done so we have to mark the method as `async`.
+# Improving the use of `fetch`
 
-So our `fetch` call above becomes:
+- Promises can often be challenging to use
+- JavaScript has implemented a way to make asynchronous calls into synchronous calls.
+- Similar to `C#`'s `async / await` system we can add `await` to a call that returns a promise.
+
+---
+
+# Example
+
+```javascript
+function countries() {
+  const response = await fetch('https://restcountries.eu/rest/v2/all')
+
+  // Check if the response is valid before decoding
+  if (response.ok) {
+    const json = await response.json()
+    console.log(json)
+  }
+}
+```
+
+^ But we will have a problem, we can only use `await` if the function is `async`
+
+---
 
 ```javascript
 async function countries() {
@@ -108,14 +159,16 @@ async function countries() {
 }
 ```
 
+---
+
 ## Making a POST request
 
-Making a `POST` request will require us to supply a second argument containing
-options. The first required option is the `method`. We may also need to supply
-headers such as the `content-type` and perhaps some authentication information
-such as an API key or a token. Finally if the request requires a body, we
-specify it in the correct format. Here we take a JavaScript object and turn it
-into JSON format.
+- Supply a second argument, an object of options
+- First property is required, and is the `method`
+- May also need to provide an object containing `headers`
+- If this is a `POST` we'll need a `body` in the correct format
+
+---
 
 ```javascript
 async function createOneListItem() {
@@ -145,6 +198,17 @@ async function createOneListItem() {
 }
 ```
 
+---
+
 ## PUT, PATCH, DELETE, etc.
 
 The HTTP verbs will work similarly to the `POST`
+
+---
+
+# Fetch API is simple, powerful, but awkward to use
+
+We'll be looking at some alternatives:
+
+- [axios](https://github.com/axios/axios)
+- [react-query](https://react-query.tanstack.com/)

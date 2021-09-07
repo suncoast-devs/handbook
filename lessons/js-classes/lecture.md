@@ -230,3 +230,156 @@ class Dog {
 ```
 
 ---
+
+# Understanding `this`
+
+^ With thanks to: https://stackoverflow.com/a/51675487
+
+---
+
+# [fit] `this` in JavaScript (and thus TypeScript) is different.
+
+- Understanding `this` is challenging
+- It is often a _gotcha_ interview question
+- Easiest way to remember a good answer is:
+  - `this` is always the object that called a function
+  - *OR* if the function is an arrow function, it is the object
+    in scope when the function was defined
+
+---
+
+# 🤯
+
+---
+
+# Example time
+
+---
+
+```typescript
+const objectOne = {
+  theIdentifier: 'object number one',
+  someMethod() {
+    console.log(this.theIdentifier)
+    console.log(this)
+  }
+}
+
+objectOne.someMethod()
+```
+
+# [fit] See that this would log `object number one` and `objectOne` as the object
+
+---
+
+```typescript
+const detachedMethod = objectOne.someMethod
+detachedMethod()
+```
+
+# [fit] This logs `undefined` and `window` as the object
+
+---
+
+# [fit] `Window` (the global object) is the *caller*
+
+---
+
+# Now with classes
+
+```typescript
+class Example {
+  theIdentifier = 'object number one'
+
+  someMethod() {
+    console.log('---- this ----')
+    console.log(this)
+    console.log('---- this.theIdentifier ----')
+    console.log(this.theIdentifier)
+  }
+}
+
+const objectOne = new Example()
+objectOne.someMethod()
+```
+
+---
+
+# Detach the method
+
+```typescript
+const detachedMethod = objectOne.someMethod
+detachedMethod()
+```
+
+# `this` becomes `undefined`
+
+---
+
+# Binding `this`
+
+We can use `bind` to tell the object what `this` is when called:
+
+```typescript
+const detachedMethodBound = objectOne.someMethod.bind(objectOne)
+detachedMethodBound()
+```
+
+---
+
+# Binding to whatever variable we like
+
+```typescript
+const objectTwo = new Example()
+objectTwo.theIdentifier = 'whatever'
+
+const detachedMethodBound = objectOne.someMethod.bind(objectTwo)
+detachedMethodBound()
+```
+
+---
+
+# Arrow functions!!
+
+Arrow function definition will bind `this` to the object.
+
+```typescript
+class Example {
+  theIdentifier = 'object number one'
+
+  someMethod = () => {
+    console.log('---- this ----')
+    console.log(this)
+    console.log('---- this.theIdentifier ----')
+    console.log(this.theIdentifier)
+  }
+}
+
+const objectOne = new Example()
+
+const detachedMethod = objectOne.someMethod
+detachedMethod()
+```
+
+---
+
+# Where would this come up?!?
+
+When using `class` style React components, or using `class`es with `addEventListener` style coding.
+
+---
+
+# How to avoid the `this` confusion.
+
+1. Prefer arrow functions when needed
+2. Prefer React `function` based programming over `class` based programming
+
+---
+
+# Is this something a new junior developer needs to worry about?
+
+1. Not really
+2. Only to be able to respond to a tricking question during a job interview.
+
+
+
