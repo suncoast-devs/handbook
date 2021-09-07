@@ -43,11 +43,11 @@ theme: Next, 1
 
 ---
 
-# Two ways to get started
+# Add it to an existing app
 
-- Create a brand new app using `degit $GITHUB_USER/react-project-template` (has React Router built-in)
-- Add it to an existing app via `npm install`
-  - `npm install react-router react-router-dom`
+```shell
+npm install react-router react-router-dom
+```
 
 ---
 
@@ -57,7 +57,7 @@ theme: Next, 1
 
 # Adding the packages is not enough
 
-- We need to update our `index.js` to add _React Router_ support.
+- We need to update our `main.tsx` to add _React Router_ support.
 
 ---
 

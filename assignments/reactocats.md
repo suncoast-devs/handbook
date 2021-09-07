@@ -24,7 +24,8 @@ degit $GITHUB_USER/react-project-template Reactocats
 
 ## Resources
 
-- [React Tutorial - Do parts 1, 2, 3, and 4, then stop. YOU MAY WANT TO WALK THROUGH THIS FIRST]https://reactjs.org/docs/hello-world.html)
+- [React Tutorial - Do parts 1, 2, 3, and 4, then stop. YOU MAY WANT TO WALK THROUGH THIS FIRST](https://reactjs.org/docs/hello-world.html)
+- [React Tutorial but with Function components and hooks](https://reactwithhooks.netlify.app/)
 - [React Documentation](https://reactjs.org/docs/getting-started.html)
 - [.map, .reduce & .filter, Oh My!](https://www.datchley.name/working-with-collections/)
 - [Array.prototype.map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)

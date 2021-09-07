@@ -66,7 +66,7 @@ Following our guide of teaching you currently deployed technolody but with an ey
 
 # What is JSX?
 
-JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](lessons/js-ui-as-state) style.
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](https://handbook.suncoast.io/lessons/js-ui-as-state) style.
 
 ---
 
@@ -114,7 +114,7 @@ return <p>Hello, World!</p>
 # Let's create a new React project
 
 ```shell
-degit $GITHUB_USER/react-project-template ReactArticles
+degit suncoast-devs/react-project-template ReactArticles
 ```
 
 ---
@@ -156,7 +156,7 @@ ReactDOM.render(<App />, document.getElementById('root'))
 
 React connects an existing `DOM` element to a component with the `ReactDOM` method. Here we state that the element with the `id` of `root` will be replaced with the component `App` that we `import` from the `App.tsx` file.
 
-Typically we will not have to adjust the `index.html` or the `index.js` files. We will start writing our code in our `App.tsx` file.
+Typically we will not have to adjust the `index.html` or the `main.tsx` files. We will start writing our code in our `App.tsx` file.
 
 ---
 
@@ -537,7 +537,7 @@ export function NewsArticle(props) {
 
 Now our `App.tsx` has no warnings or errors, but our `NewsArticle` does.
 
-We need to tell TypeScript the `shape` of the `props` variable, otherwise it will be defined as `any`. We will try to avoid `any` wherever we can.
+We need to tell TypeScript the `shape` of the `props` variable, otherwise it will be defined as `any`. We will try to avoid "`any`" wherever we can.
 
 ---
 
@@ -677,7 +677,7 @@ Note that we get a warning/error.
 Missing "key" prop for element in iterator. eslint(react/jsx-key)
 ```
 
-Any time we dynamically generate JSX in an iterator (e.g. `map`) we need to give it a *unique* identifier so React can efficiently track/change the JSX when updating.
+Any time we dynamically generate JSX in an iterator (e.g. `map`) we need to give it a _unique_ identifier so React can efficiently track/change the JSX when updating.
 
 See [this React documentation article](https://reactjs.org/docs/lists-and-keys.html) for more details
 
