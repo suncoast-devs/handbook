@@ -194,7 +194,7 @@ export function Counter() {
 ```
 
 - We can use the value to show the current State
-- Later we'll see how to _chagne_ the state
+- Later we'll see how to _change_ the state
 
 ---
 
@@ -263,7 +263,7 @@ export function Counter() {
 export function Counter() {
   const [counter, setCounter] = useState(42)
 
-  function handleClickButton(event: MouseEvent) {
+  function handleClickButton(event: React.MouseEvent) {
     event.preventDefault()
 
     console.log('Clicked!')
@@ -361,7 +361,7 @@ Code that is more than one or two lines really clutters up the JSX
 [.column]
 
 - For our button, we want to:
-  - Get the current count
+  - Get the current counter
   - Increment it
   - Update the state
 
@@ -375,10 +375,10 @@ export function Counter() {
     event.preventDefault()
 
     // Increment
-    const newCount = count + 1
+    const newCounter = counter + 1
 
     // Tell React there is a new value for the count
-    setCount(newCount)
+    setCount(newCounter)
   }
 
   return (
@@ -394,7 +394,7 @@ export function Counter() {
 
 # Warning! Warning!
 
-> NOTE: After `setCount` does not change `count` right away. The value isn't changed until React gets a chance to update state **AFTER** our function is done.
+> NOTE: After `setCounter` does not change `counter` right away. The value isn't changed until React gets a chance to update state **AFTER** our function is done.
 
 > This often confuses new React developers. We'll see this again when we use more complex state
 
