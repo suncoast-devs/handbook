@@ -12,7 +12,7 @@ To skip the rest of this setup and simply _duplicate_ what SDG already setup:
 
 ```shell
 cd ~/sdg
-degit suncoast-devs/react-project-template
+degit suncoast-devs/react-project-template react-projet-template
 cd react-project-template
 git init
 git add .
@@ -116,6 +116,12 @@ _and_
 
 ---
 
+# `src/App.css`
+
+Delete this file
+
+---
+
 # `src/index.css`
 
 Rename the file to `src/index.scss`
@@ -190,7 +196,7 @@ Add this section:
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && eslint --ext .tsx,.ts . && vite build",
     "serve": "vite preview",
     "start": "vite",
     "predeploy": "npm run build",
@@ -319,6 +325,7 @@ export default defineConfig(configEnv => ({
     reactRefresh(),
     checker({ typescript: true }),
     linterPlugin({
+      disableForBuild: true,
       include: ['./src/**/*.ts', './src/**/*.tsx'],
       linters: [
         new EsLinter({
@@ -376,6 +383,17 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': 'off',
   },
 }
+```
+
+---
+
+# [fit] Add a file to configure paths and files not to check
+
+Add an `.eslintignore` to the root of the project
+
+```
+dist/
+node_modules/
 ```
 
 ---
