@@ -55,24 +55,3 @@ function AwesomeImage() {
 }
 ```
 
----
-
-# [fit] What is that funny file name in the imported string?
-
-Ensures that the file name for the image is "slugged".
-
-Slugging means that it takes some unique value and makes that part of the image path.
-
-hat bit of text after the file name is the "checksum" of the file.
-
-The checksum is a value that changes _any_ time the contents of the file change.
-
----
-
-# Why use slugs/checksums?
-
-We do this because we'd like to **cache** the images for a long time on our client's browsers.
-
-By having a checksum we can set a _long_ caching time but ensure that the client fetches a fresh image when we change the contents.
-
-Since the image will have a new file name when the contents change, we achieve both caching and freshness!
