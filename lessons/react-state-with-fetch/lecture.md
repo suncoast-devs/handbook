@@ -476,16 +476,24 @@ if (
 
 # Dynamically set the class name
 
-- If the cell is not empty, set the class to `taken`
+If the cell is not empty, set the class to `taken`
 
+[.code-highlight: 5-10]
 ```jsx
-<li
-  key={columnIndex}
-  className={cell === ' ' ? '' : 'taken'}
-  onClick={() => handleClickCell(rowIndex, columnIndex)}
->
-  {cell}
-</li>
+<ul>
+  {game.board.map((boardRow, rowIndex) => {
+    return boardRow.map((cell, columnIndex) => {
+      return (
+        <li
+          key={columnIndex}
+          className={cell === ' ' ? undefined : 'taken'}
+          onClick={() => handleClickCell(rowIndex, columnIndex)}>
+          {cell}
+        </li>
+      )
+    })
+  })}
+</ul>
 ```
 
 ---
