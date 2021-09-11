@@ -65,6 +65,7 @@ degit $GITHUB_USER/react-project-template ColorPickerHooks
 
 ### Explorer Mode
 
+- Use only one component, your `App` to contain the state values and the user interface.
 - Represent the three values, `hue`, `saturation`, and `lightness` with hooks.
 - Add three sliders that update their respective values (`hue`, `saturation`, and `lightness`).
 - Display the color on the screen, in both text (i.e. `hsl(50, 8%, 20%)`) and the actual color as a background color on an element.
