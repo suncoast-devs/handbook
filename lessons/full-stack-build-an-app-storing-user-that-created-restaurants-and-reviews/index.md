@@ -100,7 +100,7 @@ async function handleFormSubmit(event) {
 }
 ```
 
-Then we will make similar updates in the `ReviewsControler`. Update
+Then we will make similar updates in the `ReviewsController`. Update
 `Restaurant.jsx` to have an `errorMessage` state and display. Then update
 `Restaurant.jsx` to handle the error result.
 
