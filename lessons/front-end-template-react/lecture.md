@@ -298,6 +298,7 @@ export default defineConfig({
     npm install --save-dev "eslint-plugin-react-hooks"
     npm install --save-dev "eslint"
     npm install --save-dev "eslint-config-prettier"
+    npm install --save-dev "eslink-plugin-prettier@3.4.1"
     npm install --save-dev "eslint-plugin-react"
     npm install --save-dev "eslint-config-react-app"
     npm install --save-dev "eslint-plugin-jsx-a11y"
@@ -330,7 +331,7 @@ export default defineConfig(configEnv => ({
       linters: [
         new EsLinter({
           configEnv: configEnv,
-          serveOptions: { formatter: 'visualstudio' },
+          serveOptions: { cache: false, formatter: 'visualstudio' },
         }),
         new TypeScriptLinter(),
       ],
