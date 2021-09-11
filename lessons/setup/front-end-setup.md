@@ -3,6 +3,18 @@ title: Front-End Setup
 order: 50
 ---
 
+# RunJS
+
+RunJS is an application that allows us to run, and inspect,
+JavaScript/TypeScript code. It is useful for trying out new features, working
+through parts of an algorithm for a project or a codewar, or just analyzing why
+some JavaScript/TypeScript code doesn't work.
+
+## Installation
+
+Visit [https://runjs.app/](https://runjs.app/) and download/install for the
+platform of your choice.
+
 # Firefox
 
 We recommend using [Firefox](https://firefox.com) during this course.
@@ -82,7 +94,8 @@ npm install --global prettier
 
 # vite
 
-Check [this](https://www.dictionary.com/browse/vite) for the pronuciation. It is pronounced to rhyme with _meat_.
+Check [this](https://www.dictionary.com/browse/vite) for the pronuciation. It is
+pronounced to rhyme with _meat_.
 
 This is a tool we use to generate our web projects, run our code, and generate a
 production version that we will deploy to `Netlify`.
