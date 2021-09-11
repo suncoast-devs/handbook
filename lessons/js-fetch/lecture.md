@@ -174,7 +174,7 @@ async function countries() {
 async function createOneListItem() {
   const response = await fetch(
     // URL
-    'https://one-list.herokuapp.com?access_token=illustriousvoyage',
+    'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
 
     // Options
     {
@@ -193,7 +193,8 @@ async function createOneListItem() {
 
   if (response.ok) {
     // Process the response
-    const json = response.json()
+    const json = await response.json()
+    console.log(json)
   }
 }
 ```
