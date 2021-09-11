@@ -67,7 +67,7 @@ To determine the user, we'll add a call to `getUser` from `auth.js`
 const user = getUser()
 ```
 
-and then we can use that in place of the user's name hardcoded name:
+and then we can use that in place of the user's hardcoded name:
 
 ```jsx
 {
