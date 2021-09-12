@@ -172,7 +172,7 @@ export const isLoggedIn = () => {
   return getUserId() !== undefined
 }
 
-// Returns the user id of the logged in user, null otherwise
+// Returns the user id if the logged in user, null otherwise
 export const getUserId = () => {
   const auth = authFromStorage()
 
