@@ -4,9 +4,9 @@ order: 70
 ---
 
 Pre-work is material that ensures you have the necessary foundation required for
-the course. Starting learning before the program is like training for a
+the course. Starting lto learn before the program is like training for a
 marathon. You don't show up the day of the race and start; you need to train
-beforehand. In our program, your brain is the muscle that needs to train. This
+beforehand. In our program, your brain is the muscle that needs to train, this
 pre-work is training for your brain.
 
 # Starting in the Back
@@ -28,8 +28,8 @@ and `.NET`.
 that use the `.NET` ecosystem, `C#` is a common, flexible, and ubiquitous
 language.
 
-There are a several resources here that can help you learn some basics of `C#`
-and `.NET`. We feel that this
+There are several resources here that can help you learn some basics of `C#` and
+`.NET`. We feel that this
 [four hour video from `freeCodeCamp` and Giraffe Academy is a great start](https://www.youtube.com/watch?v=GhQdlIFylQ8).
 If you do nothing else in this section do watch this video. Don't try to type
 along with the video or even worry about understanding everything that is
@@ -40,7 +40,7 @@ For an interactive tutorial, check out [LearnCS.org](http://www.learncs.org/)
 
 For a longer, and more technical introduction, this video from Microsoft:
 [C# Fundamentals for Absolute Beginners](https://channel9.msdn.com/Series/CSharp-Fundamentals-for-Absolute-Beginners)
-is worth a viewing.
+is worth viewing.
 
 If you have 30+ hours to dedicate (and it may take you much longer) you can work
 through a lesson at
@@ -50,10 +50,10 @@ through a lesson at
 
 ## Start With the HTML and CSS
 
-Start with some HTML and CSS. HTML and CSS are the essentially what the web is
-all about. HTML and CSS are what the user sees and interacts with the most.
-Since these two languages are fundamental, this is the best place to get your
-feet wet.
+Start with some HTML and CSS. HTML and CSS are essentially what the web is all
+about. HTML and CSS are what the user sees and interacts with the most. Since
+these two languages are fundamental, this is the best place to get your feet
+wet.
 
 ### Basics
 
@@ -70,7 +70,7 @@ feet wet.
 
 ## Add Some Life With JavaScript
 
-JavaScript allows to create interactive and dynamic websites. This is what
+JavaScript allows you to create interactive and dynamic websites. This is what
 brings our websites to life. This will also help us learn the fundamentals of
 how computers run lines of code. JavaScript runs on the client side, which means
 the users computer. Every website that you have visited, uses JavaScript in some
