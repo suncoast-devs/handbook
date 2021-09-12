@@ -46,7 +46,7 @@ get yourself started we suggest a few preparation steps.
 First, watch [this video](https://www.youtube.com/watch?v=cDA3_5982h8) where a
 father works with his two children to create an algorithm for making peanut
 butter and jelly sandwiches. Could you do better? (feel free to substitute any
-type of sandwich) Perhaps get a friend of family member to review your attempts!
+type of sandwich) Perhaps get a friend or family member to review your attempts!
 The more strict they are, like the father in the video, the better.
 
 Next, we recommend a game to play. This game, while styled for young ones, is an
