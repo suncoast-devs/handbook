@@ -148,7 +148,7 @@ Since there is no watch array, there is nothing for `useEffect` to ever see.
 
 ---
 
-# Putting `useEffect` and `useState` to use
+# Using `useEffect` and `useState`
 
 ## Build an app to use the `OneList API`
 
@@ -446,6 +446,30 @@ useEffect(async function () {
 
 ---
 
+# TypsScript issues
+
+We cannot use an `async` function directly in `useEffect`
+
+The solution is to define the `async` function _INSIDE_ and then call it.
+
+```tsx
+useEffect(function () {
+  async function loadItems() {
+    const response = await axios.get(
+      'https://one-list-api.herokuapp.com/items?access_token=cohort42'
+    )
+
+    if (response.status === 200) {
+      console.log(response.data)
+    }
+  }
+
+  loadItems()
+}, [])
+```
+
+---
+
 # Step 5 - Update state
 
 - Make our default state an empty array again
@@ -465,6 +489,28 @@ useEffect(async function () {
     setTodoItems(response.data)
   }
 }, [])
+```
+
+---
+
+# TypeScript ... again
+
+Now our `todoItems` is of type `never[]` because our default state is `[]`.
+
+We need to teach `TypeScript` the shape of our API.
+
+```ts
+type TodoItemType = {
+  id: number
+  text: string
+  complete: boolean
+  updated_at: Date
+  created_at: Date
+}
+```
+
+```ts
+const [todoItems, setTodoItems] = useState<TodoItemType[]>([])
 ```
 
 ---
@@ -503,17 +549,19 @@ const [newTodoText, setNewTodoText] = useState('')
 - Since this `input` is inside a `form` we will get an `onSubmit` for the form!
 
 ```js
-function handleCreateNewTodoItem(event) {
-  // Don't do the normal form submit (which would cause the page to refresh)
-  // since we are going to do our own thing
-  event.preventDefault()
-
+function handleCreateNewTodoItem() {
   console.log(`Time to create a todo: ${newTodoText}`)
 }
 ```
 
 ```jsx
-<form onSubmit={handleCreateNewTodoItem}>
+<form onSubmit={function(event) {
+  // Don't do the normal form submit (which would cause the page to refresh)
+  // since we are going to do our own thing
+  event.preventDefault()
+
+  handleCreateNewTodoItem()
+}}>
 ```
 
 ---
@@ -521,11 +569,7 @@ function handleCreateNewTodoItem(event) {
 # Update `handleCreateNewTodoItem` to submit
 
 ```js
-async function handleCreateNewTodoItem(event) {
-  // Don't do the normal form submit (which would cause the page to refresh)
-  // since we are going to do our own thing
-  event.preventDefault()
-
+async function handleCreateNewTodoItem() {
   const response = await axios.post(
     'https://one-list-api.herokuapp.com/items?access_token=cohort42',
     { item: { text: newTodoText } }
@@ -591,25 +635,28 @@ setNewTodoText('')
 
 > Now we are giving the items some behavior, so it might be time to refactor those into a component!
 
+> We can reuse our TodoItemType for our `props`
+
 ---
 
 ```jsx
-export function TodoItem(props) {
-  return <li className={props.complete ? 'completed' : ''}>{props.text}</li>
+type TodoItemProps = {
+  todoItem: TodoItemType,
+}
+
+export function TodoItem(props: TodoItemProps) {
+  return (
+    <li className={props.todoItem.complete ? 'completed' : ''}>
+      {props.todoItem.text}
+    </li>
+  )
 }
 ```
 
 ```jsx
 <ul>
   {todoItems.map(function (todoItem) {
-    return (
-      <TodoItem
-        key={todoItem.id}
-        id={todoItem.id}
-        complete={todoItem.complete}
-        text={todoItem.text}
-      />
-    )
+    return <TodoItem key={todoItem.id} todoItem={todoItem} />
   })}
 </ul>
 ```
@@ -619,17 +666,17 @@ export function TodoItem(props) {
 # [fit] We can now add a click handler on the `li` inside the `TodoItem` component
 
 ```jsx
-export function TodoItem(props) {
+export function TodoItem(props: TodoItemProps) {
   function toggleCompleteStatus() {
     console.log('Clicked!')
   }
 
   return (
     <li
-      className={props.complete ? 'completed' : ''}
+      className={props.todoItem.complete ? 'completed' : ''}
       onClick={toggleCompleteStatus}
     >
-      {props.text}
+      {props.todoItem.text}
     </li>
   )
 }
@@ -669,9 +716,9 @@ We want to send a `PUT` request to the API that looks like this if the item _is_
 
 ```js
 async function toggleCompleteStatus() {
-  if (props.complete) {
+  if (props.todoItem.complete) {
     const response = await axios.put(
-      `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
+      `https://one-list-api.herokuapp.com/items/${props.todoItem.id}?access_token=cohort42`,
       { item: { complete: false } }
     )
 
@@ -680,7 +727,7 @@ async function toggleCompleteStatus() {
     }
   } else {
     const response = await axios.put(
-      `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
+      `https://one-list-api.herokuapp.com/items/${props.todoItem.id}?access_token=cohort42`,
       { item: { complete: true } }
     )
 
@@ -702,8 +749,8 @@ Simplify:
 ```js
 async function toggleCompleteStatus() {
   const response = await axios.put(
-    `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
-    { item: { complete: !props.complete } }
+    `https://one-list-api.herokuapp.com/items/${props.todoItem.id}?access_token=cohort42`,
+    { item: { complete: !props.todoItem.complete } }
   )
 
   if (response.status === 200) {
@@ -727,17 +774,20 @@ async function toggleCompleteStatus() {
 Extract the code used in the `useEffect` to make a function we can share.
 
 ```js
-async function loadAllTodoItems() {
-  const response = await axios.get(
-    'https://one-list-api.herokuapp.com/items?access_token=cohort42'
-  )
+function loadAllItems() {
+  async function loadItems() {
+    const response = await axios.get(
+      'https://one-list-api.herokuapp.com/items?access_token=cohort42'
+    )
 
-  if (response.status === 200) {
-    setTodoItems(response.data)
+    if (response.status === 200) {
+      setTodoItems(response.data)
+    }
   }
+  loadItems()
 }
 
-useEffect(loadAllTodoItems, [])
+useEffect(loadAllItems, [])
 ```
 
 Now we have a function we can share with the `TodoItem` via props
@@ -747,13 +797,20 @@ Now we have a function we can share with the `TodoItem` via props
 # [fit] Add it to the props supplied to the `TodoItem`
 
 ```jsx
-<TodoItem
-  key={todoItem.id}
-  id={todoItem.id}
-  complete={todoItem.complete}
-  text={todoItem.text}
-  reloadItems={loadAllTodoItems}
-/>
+<TodoItem key={todoItem.id} todoItem={todoItem} reloadItems={loadAllItems} />
+```
+
+---
+
+# [fit] And add `reloadItems` to `TodoItemProps`
+
+This type definition says "reloadItems is a function that takes no arguments and returns nothing"
+
+```ts
+type TodoItemProps = {
+  todoItem: TodoItemType
+  reloadItems: () => void
+}
 ```
 
 ---
@@ -763,8 +820,8 @@ Now we have a function we can share with the `TodoItem` via props
 ```js
 async function toggleCompleteStatus() {
   await axios.put(
-    `https://one-list-api.herokuapp.com/items/${props.id}?access_token=cohort42`,
-    { item: { complete: !props.complete } }
+    `https://one-list-api.herokuapp.com/items/${props.todoItem.id}?access_token=cohort42`,
+    { item: { complete: !props.todoItem.complete } }
   )
 
   props.reloadItems()
@@ -776,17 +833,13 @@ async function toggleCompleteStatus() {
 # We can use this to cleanup `handleCreateNewTodoItem`
 
 ```js
-async function handleCreateNewTodoItem(event) {
-  // Don't do the normal form submit (which would cause the page to refresh)
-  // since we are going to do our own thing
-  event.preventDefault()
-
+async function handleCreateNewTodoItem() {
   await axios.post(
     'https://one-list-api.herokuapp.com/items?access_token=cohort42',
-    { item: { complete: !complete } }
+    { item: { text: newTodoText } }
   )
 
-  loadAllTodoItems()
+  loadAllItems()
 
   setNewTodoText('')
 }
@@ -803,21 +856,24 @@ Refactor using destructuring!
 ---
 
 ```jsx
-export function TodoItem(props) {
-  const { id, text, complete, reloadItems } = props
+export function TodoItem(props: TodoItemProps) {
+  const { todoItem, reloadItems } = props
 
   async function toggleCompleteStatus() {
     await axios.put(
-      `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`,
-      { item: { complete: !complete } }
+      `https://one-list-api.herokuapp.com/items/${todoItem.id}?access_token=cohort42`,
+      { item: { complete: !todoItem.complete } }
     )
 
     reloadItems()
   }
 
   return (
-    <li className={complete ? 'completed' : ''} onClick={toggleCompleteStatus}>
-      {text}
+    <li
+      className={todoItem.complete ? 'completed' : ''}
+      onClick={toggleCompleteStatus}
+    >
+      {todoItem.text}
     </li>
   )
 }
@@ -839,7 +895,7 @@ export function TodoItem(props) {
 can become:
 
 ```js
-export function TodoItem({ id, text, complete, reloadItems }) {
+export function TodoItem({ todoItem, reloadItems }: TodoItemProps) {
 ```
 
 Furthermore, this looks like our function takes _arguments_ -- but it is really _destructuring_ props!
@@ -847,7 +903,36 @@ Furthermore, this looks like our function takes _arguments_ -- but it is really 
 ---
 
 ```jsx
-export function TodoItem({ id, text, complete, reloadItems }) {
+export function TodoItem({ todoItem, reloadItems }: TodoItemProps) {
+  async function toggleCompleteStatus() {
+    await axios.put(
+      `https://one-list-api.herokuapp.com/items/${todoItem.id}?access_token=cohort42`,
+      { item: { complete: !todoItem.complete } }
+    )
+
+    reloadItems()
+  }
+
+  return (
+    <li
+      className={todoItem.complete ? 'completed' : ''}
+      onClick={toggleCompleteStatus}
+    >
+      {todoItem.text}
+    </li>
+  )
+}
+```
+
+---
+
+# [fit] Destructure the destructured
+
+```tsx
+export function TodoItem({
+  todoItem: { id, text, complete },
+  reloadItems,
+}: TodoItemProps) {
   async function toggleCompleteStatus() {
     await axios.put(
       `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`,

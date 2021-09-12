@@ -8,7 +8,7 @@ Theme: Next, 1
 
 ---
 
-```jsx
+```typescript
 import React, { useState } from 'react'
 
 type Square = 'X' | 'O' | ' '
@@ -20,7 +20,6 @@ type Game = {
   id: null | number
   winner: null | string
 }
-
 ```
 
 ---
@@ -195,7 +194,7 @@ type CellProps = {
   cell: string
 }
 
-export function Cell(props) {
+export function Cell(props: CellProps) {
   return (
     <li
       className={props.cell === ' ' ? '' : 'taken'}
@@ -218,7 +217,7 @@ type CellProps = {
   cell: string
 }
 
-export function Cell(props) {
+export function Cell(props: CellProps) {
   function handleClickCell() {
     console.log(`You clicked on ${props.rowIndex} and ${props.columnIndex}`)
   }
@@ -299,12 +298,12 @@ export function Cell(props) {
 
 ---
 
-```js
+```ts
 type CellProps = {
   rowIndex: number
   columnIndex: number
   cell: string
-  recordMove: (rowIndex: number, columnIndex: number)
+  recordMove: (rowIndex: number, columnIndex: number) => void
 }
 
 function handleClickCell() {

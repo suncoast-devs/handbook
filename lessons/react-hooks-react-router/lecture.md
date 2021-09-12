@@ -47,6 +47,7 @@ theme: Next, 1
 
 ```shell
 npm install react-router react-router-dom
+npm install --save-dev @types/react-router @types/react-router-dom
 ```
 
 ---
@@ -79,11 +80,13 @@ import { BrowserRouter as Router } from 'react-router-dom'
 
 ![right](https://media.giphy.com/media/4PvmF62Tl3KLe/giphy.gif)
 
-```js
+```jsx
 ReactDOM.render(
-  <Router>
-    <App />
-  </Router>,
+  <React.StrictMode>
+    <Router>
+      <App />
+    </Router>
+  </React.StrictMode>,
   document.getElementById('root')
 )
 ```
@@ -94,8 +97,6 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 # We are now ready to use React Router!
 
-- P.S. This is the only difference between `delta` and `gamma` -- we do this setup for you...
-
 ---
 
 # Time to get a bit more organized!
@@ -104,98 +105,7 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 # Our main `App` has too much in it.
 
-- Let us refactor the `ul` out into its own component, moving all the state stuff with it
-
----
-
-```jsx
-export function TodoList() {
-  const [todoItems, setTodoItems] = useState([])
-  const [newTodoText, setNewTodoText] = useState('')
-
-  async function loadAllTodoItems() {
-    const response = await axios.get(
-      'https://one-list-api.herokuapp.com/items?access_token=cohort42'
-    )
-
-    if (response.status === 200) {
-      setTodoItems(response.data)
-    }
-  }
-
-  useEffect(loadAllTodoItems, [])
-
-  async function handleCreateNewTodoItem(event) {
-    //Do not do the normal form submit (which would cause the page to refresh)
-    // since we are going to do our own thing
-    event.preventDefault()
-
-    await axios.post(
-      'https://one-list-api.herokuapp.com/items?access_token=cohort42',
-      {
-        item: {
-          text: newTodoText,
-        },
-      }
-    )
-
-    loadAllTodoItems()
-
-    setNewTodoText('')
-  }
-
-  return (
-    <div>
-      <ul>
-        {todoItems.map(function (todoItem) {
-          return (
-            <TodoItem
-              key={todoItem.id}
-              id={todoItem.id}
-              complete={todoItem.complete}
-              text={todoItem.text}
-              reloadItems={loadAllTodoItems}
-            />
-          )
-        })}
-      </ul>
-      <form onSubmit={handleCreateNewTodoItem}>
-        <input
-          type="text"
-          placeholder="Whats up?"
-          value={newTodoText}
-          onChange={function (event) {
-            setNewTodoText(event.target.value)
-          }}
-        />
-      </form>
-    </div>
-  )
-}
-```
-
----
-
-```jsx
-export function App() {
-  return (
-    <div className="app">
-      <header>
-        <h1>One List</h1>
-      </header>
-      <main>
-        <TodoList />
-      </main>
-      <footer>
-        <p>
-          <img src={logo} height="42" alt="logo" />
-        </p>
-        <p>&copy; 2020 Suncoast Developers Guild</p>
-      </footer>
-    </div>
-  )
-}
-```
+- Let us refactor the `ul` and the `form` out into its own component, moving all the state stuff with it
 
 ---
 
@@ -204,7 +114,7 @@ export function App() {
 - But how does this help us?
 - Well, we can now tell our app to only render this if the URL is `/`
 
-```html
+```jsx
 <main>
   <Switch>
     <Route path="/">
@@ -230,7 +140,7 @@ export function App() {
 - The `path="/"` means "If the path **starts with** `/`"
 - If we want it to be **exact** we have to tell it
 
-```html
+```jsx
 <main>
   <Switch>
     <Route exact path="/">
@@ -254,14 +164,14 @@ export function App() {
 
 [.column]
 
-```html
+```jsx
 <main>
   <Switch>
     <Route exact path="/">
       <TodoList />
     </Route>
     <Route path="*">
-      <p>Ooops, I don't know about that URL</p>
+      <p>Ooops, that URL is unknown</p>
     </Route>
   </Switch>
 </main>
@@ -290,7 +200,7 @@ export function App() {
   </Route>
   <Route path="/items/42">This would be the details of item 42!</Route>
   <Route path="*">
-    <p>Ooops, I don't know about that URL</p>
+    <p>Ooops, that URL is unknown</p>
   </Route>
 </Switch>
 ```
@@ -312,7 +222,7 @@ export function App() {
     <p>This would be the details of item 42!</p>
   </Route>
   <Route path="*">
-    <p>Ooops, I don't know about that URL</p>
+    <p>Ooops, that URL is unknown</p>
   </Route>
 </Switch>
 ```
@@ -327,7 +237,7 @@ function TodoItemPage() {
 }
 ```
 
-```html
+```jsx
 <Route path="/items/:id">
   <TodoItemPage />
 </Route>
@@ -339,10 +249,11 @@ function TodoItemPage() {
 
 - React Router hooks!
 - `useParams()`
+- Add a TypeScript type inside `<>` to declare what our params are
 
 ```jsx
 function TodoItemPage() {
-  const params = useParams()
+  const params = useParams<{id: string}>()
 
   return <p>This would be the details of item {params.id}!</p>
 }
@@ -360,7 +271,7 @@ function TodoItemPage() {
                      +----->-------->-------->---------+
                                                        |
 function TodoItemPage() {                              v
-  const params = useParams()                           |
+  const params = useParams<{id: string}>()             |
                                                        v
   return <p>This would be the details of item {params.id}!</p>
 }
@@ -383,6 +294,8 @@ const [todoItem, setTodoItem] = useState({
   id: undefined,
   text: '',
   complete: false,
+  created_at: undefined,
+  updated_at: undefined,
 })
 ```
 
@@ -432,22 +345,28 @@ return (
 
 ```jsx
 function TodoItemPage() {
+  const params = useParams<{ id: string }>()
   const [todoItem, setTodoItem] = useState({
     id: undefined,
     text: '',
     complete: false,
+    created_at: undefined,
+    updated_at: undefined,
   })
-  const params = useParams()
 
   useEffect(
-    async function () {
-      const response = await axios.get(
-        `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
-      )
+    function () {
+      async function loadItems() {
+        const response = await axios.get(
+          `https://one-list-api.herokuapp.com/items/${params.id}?access_token=cohort42`
+        )
 
-      if (response.status === 200) {
-        setTodoItem(response.data)
+        if (response.status === 200) {
+          setTodoItem(response.data)
+        }
       }
+
+      loadItems()
     },
     [params.id]
   )
@@ -481,8 +400,8 @@ async function deleteTodoItem() {
 
 # Add a handler
 
-```html
-<button onClick="{deleteTodoItem}">Delete</button>
+```jsx
+<button onClick={deleteTodoItem}>Delete</button>
 ```
 
 ---
@@ -527,13 +446,13 @@ we can use
 
 We can generate those links dynamically:
 
-```html
+```jsx
 <Link to={`/items/${id}`}
 ```
 
 ---
 
-```js
+```jsx
 return (
   <li className={complete ? 'completed' : ''} onClick={toggleCompleteStatus}>
     {text}

@@ -84,6 +84,7 @@ modules:
       - react-state-flow
       - react-hooks-use-effect
       - react-hooks-react-router
+      - react-query
   - full-stack-development:
     title: Full-stack Application Development
     lessons:
