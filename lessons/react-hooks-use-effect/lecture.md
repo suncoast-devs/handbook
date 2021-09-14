@@ -6,9 +6,7 @@ theme: Next,1
 
 `useState` covers the basics of adding a piece of state and providing a means of updating it.
 
-The class lifecycle methods `componentDidMount` and `componentDidUpdate` provide a way to _invoke code as a side effect of a component mounting or updating_.
-
-So, in order for hooks to replace class-based components, we need a way to listen to state value changes and invoke code as a side-effect...
+We need a way to listen to state value changes and invoke code as a side-effect...
 
 ---
 
@@ -19,14 +17,6 @@ So, in order for hooks to replace class-based components, we need a way to liste
 ---
 
 # `useEffect` for **side** effects
-
----
-
-We are looking for a way to replace each of these class based lifecycle methods:
-
-- componentDidUpdate
-- componentDidMount
-- componentWillReceiveProps
 
 ---
 
@@ -125,8 +115,8 @@ useEffect(
 # Notice the _effect_ function runs the first time too!
 
 - This is because `useEffect` will always run _at least_ once!
-- The first time, it serves the purpose of our `componentDidMount` lifecycle
-- Future calls are for `componentDidUpdate` or `componentWillReceiveProps` since the "watch" array could also contain props!
+- The first time, it acts like a function that runs when a component mounts.
+- Future calls detect when state or props change. NOTE, the "watch" array could also contain props!
 
 ---
 

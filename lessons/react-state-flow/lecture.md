@@ -258,7 +258,7 @@ export function Cell(props: CellProps) {
 
 # But how do we dispatch the API and update the state?
 
-- The value is a read-only `prop` in the `Cell`
+- The `cell` is a read-only `prop` in the `Cell`
 - If we did call the API in the cell, how can we _transport_ the state to the parent?
 - Whatever to do?
 
@@ -321,9 +321,9 @@ function handleClickCell() {
 |       App      |               |    Cell      |
 |                |               |              |
 |  State:        |               | Props:       |
-|   value  ------------------------> value      |
-|   id           |               |   row        |
-|   winner       |               |   column     |
+|   board[r][c] ----------------->   cell       |
+|   row          |               |   row        |
+|   column       |               |   column     |
 |                |     +-----------> recordMove |
 |  Functions:    |     |         |              |
 |   recordMove --------+         +--------------+
@@ -343,7 +343,7 @@ function handleClickCell() {
 Cell Receives Click
 Calls local onClick
 
-Calls this.props.recordMoveProp
+Calls props.recordMove
 which is a function.
 
 But the function is *FROM*
@@ -368,7 +368,7 @@ components to replace
 the old ones
 
 There are new values
-for `this.props.value`
+for `props.cell`
 so the UI draws the
 *current* game.
 
