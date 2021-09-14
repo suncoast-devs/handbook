@@ -53,7 +53,7 @@ dotnet add package CloudinaryDotNet
 
 ## Creating a controller for uploading files
 
-As we will consider uploads as a resource, we will create a `UploadsController`
+As we will consider uploads as a resource, we will create an `UploadsController`
 with a single `POST` endpoint for creating uploads.
 
 ```csharp
@@ -81,7 +81,7 @@ namespace TacoTuesday.Controllers
         private readonly string CLOUDINARY_API_SECRET;
 
         // Constructor that receives a reference to your database context
-        // and stores it in _context for you to use in your API methods
+        // and stores it in _context_ for you to use in your API methods
         public UploadsController(IConfiguration config)
         {
             CLOUDINARY_CLOUD_NAME = config["CLOUDINARY_CLOUD_NAME"];
@@ -180,7 +180,7 @@ var uploadParams = new ImageUploadParams()
 // Upload the file to the server
 ImageUploadResult result = await cloudinaryClient.UploadLargeAsync(uploadParams);
 
-// If the status code is a "OK" then the upload was accepted so we will return
+// If the status code is an "OK" then the upload was accepted so we will return
 // the URL to the client
 if (result.StatusCode == HttpStatusCode.OK)
 {
@@ -276,7 +276,7 @@ async function onDropFile(acceptedFiles) {
   console.log(fileToUpload)
 
   // Create a formData object so we can send this
-  // to the API that is expecting som form data.
+  // to the API that is expecting some form data.
   const formData = new FormData()
 
   // Append a field that is the form upload itself
@@ -390,4 +390,4 @@ Update the `Restaurant` component to display the restaurant image, if present.
 }
 ```
 
-<GithubCommitView repo="suncoast-devs/TacoTuesday" commit="ab7d80de04ac895e1e3355ee424dbaad71b5e319" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ab7d80de04ac895e1e3355ee424dbaad71b5e319" />

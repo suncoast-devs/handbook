@@ -160,4 +160,4 @@ Change the avatar code to this, and remove the static avatar import.
 }
 ```
 
-<GithubCommitView repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>
