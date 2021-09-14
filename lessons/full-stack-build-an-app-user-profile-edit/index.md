@@ -82,7 +82,7 @@ export function EditUser() {
     console.log(fileToUpload)
 
     // Create a formData object so we can send this
-    // to the API that is expecting som form data.
+    // to the API that is expecting some form data.
     const formData = new FormData()
 
     // Append a field that is the form upload itself

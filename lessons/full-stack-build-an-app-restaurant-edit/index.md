@@ -13,7 +13,7 @@ itself.
 We will begin by creating the basic structure of the restaurant edit in
 `EditRestaurant.jsx`
 
-## Creating `EditRestuarant.jsx`
+## Creating `EditRestaurant.jsx`
 
 ```jsx
 import React, { useState } from 'react'
@@ -78,7 +78,7 @@ export function EditRestaurant() {
     console.log(fileToUpload)
 
     // Create a formData object so we can send this
-    // to the API that is expecting som form data.
+    // to the API that is expecting some form data.
     const formData = new FormData()
 
     // Append a field that is the form upload itself
@@ -214,7 +214,7 @@ const id = params.id
 ```
 
 This will get the `id` from the route parameters. Even though we haven't written
-the `<Route>` we know it will have a `:id` in the paramters.
+the `<Route>` we know it will have an `:id` in the parameters.
 
 Next, we add a `useEffect` to find and load this restaurant. This implementation
 is in `Restaurant.jsx`, so we can essentially copy it from there
@@ -247,7 +247,7 @@ if (!restaurant.id) {
 
 ## Update our routes in `App.jsx`
 
-We'll add the following route to allow a path to the `EditRestuarant` component.
+We'll add the following route to allow a path to the `EditRestaurant` component.
 
 ```jsx
 <Route exact path="/restaurants/:id/edit">

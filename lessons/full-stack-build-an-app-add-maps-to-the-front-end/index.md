@@ -221,4 +221,4 @@ from our API.
 > `heroku config:set REACT_APP_MAPBOX_TOKEN="xxxx"` with your specific key in
 > place of `xxxx` at least once before you deploy.
 
-<GithubCommitView repo="suncoast-devs/TacoTuesday" commit="214d9cf08635e7026b8657d51e6843b339b8118b" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="214d9cf08635e7026b8657d51e6843b339b8118b" />

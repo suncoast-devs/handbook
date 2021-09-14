@@ -13,9 +13,9 @@ Remove the line
 `[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]`
 from the `UploadsController`.
 
-Of course, this means anyone who wishes to upload content and store it on our
-Cloudinary. For now, this is ok. However, before deploying this to the public,
-we should increase the security of this code.
+Of course, this means anyone who wishes to can upload content and store it on
+our Cloudinary. For now, this is ok. However, before deploying this to the
+public, we should increase the security of this code.
 
 ## Adding the photo URL to the User model
 
@@ -57,7 +57,7 @@ async function onDropFile(acceptedFiles) {
   console.log(fileToUpload)
 
   // Create a formData object so we can send this
-  // to the API that is expecting som form data.
+  // to the API that is expecting some form data.
   const formData = new FormData()
 
   // Append a field that is the form upload itself
@@ -160,4 +160,4 @@ Change the avatar code to this, and remove the static avatar import.
 }
 ```
 
-<GithubCommitView repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>

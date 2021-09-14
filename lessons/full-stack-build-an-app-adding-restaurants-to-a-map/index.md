@@ -14,7 +14,7 @@ into an address, is known as
 When _geocoding_ an address, we are often turning the address's text, its street
 number, and name, along with the city, state, and zip/postal code, into a pair
 of numbers. These decimal numbers,
-[`latitutde` and `longitude`](https://www.timeanddate.com/geography/longitude-latitude.html)
+[`latitude` and `longitude`](https://www.timeanddate.com/geography/longitude-latitude.html)
 describe a single position on the surface of the planet.
 
 ## Adding columns to store a coordinate
@@ -53,12 +53,12 @@ dotnet add package Geocoding.Microsoft
 
 The `Geocoding` package comes with support for other services other than
 Microsoft, but this is the one we will use in this lesson. Each of the geocoding
-systems requires an account and an API key. Microsoft's signup process is one of
-the easiest, and we'll choose that to proceed. To sign up for a key, follow
+systems requires an account and an API key. Microsoft's sign up process is one
+of the easiest, and we'll choose that to proceed. To sign up for a key, follow
 [these procedures](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key)
 
 Similar to our `JWT_KEY` we will have to add a secret for this API. We'll call
-the sercret `BING_MAPS_KEY` and access it in our `RestaurantsController`:
+the secret `BING_MAPS_KEY` and access it in our `RestaurantsController`:
 
 To save the key in secrets:
 
@@ -79,7 +79,7 @@ To access the key from the controller:
 private readonly string BING_MAPS_KEY;
 
 // Constructor that receives a reference to your database context
-// and stores it in _context for you to use in your API methods
+// and stores it in _context_ for you to use in your API methods
 public RestaurantsController(DatabaseContext context, IConfiguration config)
 {
     _context = context;
@@ -87,7 +87,7 @@ public RestaurantsController(DatabaseContext context, IConfiguration config)
 }
 ```
 
-Now that we have added this library and setup an API key, lets add some code to
+Now that we have added this library and setup an API key, let's add some code to
 `PostRestaurant` just before `restaurant.UserId = GetCurrentUserId();`
 
 ```csharp
