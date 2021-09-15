@@ -399,6 +399,19 @@ node_modules/
 
 ---
 
+# [fit] Add a file to setup Netlify to work with React Router
+
+When we get to React Router we will need to configure Netlify to serve our projects `index.html` for any URL the user refreshes their browser on.
+
+To this:
+
+- Create a directory named `public` at the root of your project
+- **INSIDE** that directory, place a file named `_redirects` with the following content:
+
+```
+/* /index.html 200
+```
+
 # [fit] Capture initial version of our customized template
 
 ```shell
