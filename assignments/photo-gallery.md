@@ -25,22 +25,22 @@ Using the JSON data below as a starter, build a photo gallery app. Here's
     "photos": [
       {
         "title": "Panda Waving",
-        "imageURL": "https://things-i-like.netlify.com/images/baby_panda.jpg",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/baby_panda.jpg",
         "sourceURL": "https://codeburst.io/pandas-for-data-stuff-code-challenge-7972207a8294"
       },
       {
         "title": "Großer Panda im Ocean Park, Hongkong",
-        "imageURL": "https://things-i-like.netlify.com/images/grosser_panda.jpg",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/grosser_panda.jpg",
         "sourceURL": "https://en.wikipedia.org/wiki/Giant_panda"
       },
       {
         "title": "Wild pandas get a boost; the iconic species has been upgraded from 'endangered' to 'vulnerable.'",
-        "imageURL": "https://things-i-like.netlify.com/images/tree_panda.png",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/tree_panda.png",
         "sourceURL": "https://www.worldwildlife.org/magazine/issues/spring-2017/articles/wild-pandas-get-a-boost--2"
       },
       {
         "title": "Sacred Warrior, by Adrian Smith",
-        "imageURL": "https://things-i-like.netlify.com/images/rising_sun.png",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/ising_sun.png",
         "sourceURL": "https://www.artstation.com/adrian-smith/albums/1298277"
       }
     ]
@@ -51,17 +51,17 @@ Using the JSON data below as a starter, build a photo gallery app. Here's
     "photos": [
       {
         "title": "City of Kings",
-        "imageURL": "https://things-i-like.netlify.com/images/city_of_kings.jpg",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/city_of_kings.jpg",
         "sourceURL": "https://www.instagram.com/p/Btv-0uYH8Xc"
       },
       {
         "title": "Blood Rage, Ram Clan",
-        "imageURL": "https://things-i-like.netlify.com/images/ram_clan.jpg",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/ram_clan.jpg",
         "sourceURL": "https://www.instagram.com/p/BjRKLqYh4gK"
       },
       {
         "title": "Cormac the Druid, work in progress",
-        "imageURL": "https://things-i-like.netlify.com/images/cormac.jpg",
+        "imageURL": "https://raw.githubusercontent.com/suncoast-devs/handbook/master/assignments/assets/photo-gallery/cormac.jpg",
         "sourceURL": "https://www.instagram.com/p/BnW2QrWDaky"
       }
     ]
