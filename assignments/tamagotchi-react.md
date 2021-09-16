@@ -11,7 +11,7 @@ Your front end's functionality will include the four parts of a web app: create,
 
 - Deploy your API.
 - Create a front-end that implements CRUD features against your existing API.
-- Practice React: `useState`, `useEffect`, and `React Router`
+- Practice React: `useState`, `useEffect`, maybe 'React Query', and `React Router`
 
 ## **_ BEFORE YOU GET STARTED _**
 
@@ -20,15 +20,6 @@ Before you get started on any of the following, you _must_ deploy your API assig
 To do so:
 
 1. Navigate to your old assignment.
-1. Open it in Visual Studio Code
-1. Open the file `Models/DatabaseContext.cs`
-1. Near the very end of the file, find this line `return $"server={connectionParts[2]};database={connectionParts[4]};User Id={connectionParts[0]};password={connectionParts[1]};port={connectionParts[3]}";`
-1. Replace it with `return $"server={connectionParts[2]};SSL Mode=Require;Trust Server Certificate=true;database={connectionParts[4]};User Id={connectionParts[0]};password={connectionParts[1]};port={connectionParts[3]}";`
-1. Save the file
-1. Either from Visual Studio _OR_ the command line, git add and commit that change
-1. At the command line: `dotnet build --configuration Release` -- STOP and ask for help if this shows an error
-1. `dropdb TamagotchiAPI` -- STOP and ask for help if this shows an error _OTHER THAN_ `database "TamagotchiAPIDatabase" does not exist`
-1. `dotnet ef database update` -- STOP and ask for help if this shows an error
 1. Open the file `STUDENT.md` and follow the instructions for `To SETUP deployment to Heroku`
 1. Once you have successfully deployed your application: Use the Insomnia app to work with your API. At a minimum, use your API endpoints to create and list your Pets
 
@@ -68,3 +59,4 @@ degit $GITHUB_USER/react-project-template TamagotchiFrontEnd
 ### Epic Mode
 
 Add a user interface on the home page to sort your pets by their name, hunger level, or happiness level.
+
