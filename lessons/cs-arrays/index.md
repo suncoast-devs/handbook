@@ -66,8 +66,7 @@ a list of data. Even more fortunate, it is conveniently named: `List`
 
 ## Lists
 
-Lists are more flexible than arrays while maintaining some of the key
-features.
+Lists are more flexible than arrays while maintaining some of the key features.
 
 To create a list of strings with some data:
 
@@ -170,8 +169,8 @@ Console.WriteLine($"Our list now has {listOfScores.Count} elements"); // Prints 
 
 This method looks for an element that matches the value we supply. If the value
 is in the list, we receive the `0-based-index` of the element. That is, if the
-value is found in the very first position we receive `0` as the result. If it is
-in the second position we receive `1`. returned if it is found. If the value is
+value is found in the very first position we receive `0` as the result. If the
+value is found in the second position we receive `1` returned. If the value is
 not in the list, the special value `-1` is returned. Since `-1` can never be a
 valid index it indicates _"not found"_
 
@@ -185,14 +184,14 @@ listOfScores.Add(44);
 var indexOfFiftyFive = listOfScores.IndexOf(55);
 Console.WriteLine($"Found 55 at index {indexOfFiftyFive}"); // Prints 2
 
-var indexOfFourtyTwo = listOfScores.IndexOf(42);
-Console.WriteLine($"Didn't find 42 so this index is {indexOfFourtyTwo}"); // Prints -1
+var indexOfFortyTwo = listOfScores.IndexOf(42);
+Console.WriteLine($"Didn't find 42 so this index is {indexOfFortyTwo}"); // Prints -1
 ```
 
 ### Insert
 
-Inserts a new value at the index specified. The first value supplied to `Insert`
-is the index position and the second element is the value to insert.
+Inserts a new value at the index specified. The first element supplied to
+`Insert` is the index position and the second element is the value to insert.
 
 ```csharp
 var listOfScores = new List<int>();
