@@ -61,7 +61,7 @@ playerScores["Robbie Lakeman"] = 1_247_800;
 ```
 
 This syntax will overwrite the existing value with the new one. If there was no
-value for `"Robby Lakeman"` then we would be setting a new value.
+value for `"Robbie Lakeman"` then we would be setting a new value.
 
 ### Keys are case sensitive (value-sensitive)
 
