@@ -81,11 +81,13 @@ const [todoItems, setTodoItems] = useState<TodoItemType[]>([])
 // Function to return the axios data.
 
 async function getTodos() {
-  return (
-    await axios.get<TodoItemType[]>(
-      'https://one-list-api.herokuapp.com/items?access_token=cohort42'
-    )
-  ).data
+  //                               This describes the format of `data`
+  //                               vvvvvvvvvvvvvv
+  const response = await axios.get<TodoItemType[]>(
+    'https://one-list-api.herokuapp.com/items?access_token=cohort22'
+  )
+
+  return response.data
 }
 ```
 
@@ -97,13 +99,13 @@ async function getTodos() {
 //
 //    The data returned from axios
 //       |
-//       |    Function to let us reload the data (renamed)
-//       |       |
-//       |       |                            Unique identifier for this query
-//       |       |                               |
-//       |       |                               |     Function that returns a Promise
-//       |       |                               |       |
-//       v       v                               v       v
+//       |              Function to let us reload the data (renamed)
+//       |                 |
+//       |                 |                  Unique identifier for this query
+//       |                 |                     |
+//       |                 |                     |     Function that returns a Promise
+//       |                 |                     |       |
+//       v                 v                     v       v
 const { data: todoItems, refetch } = useQuery('todos', getTodos)
 ```
 
@@ -119,12 +121,10 @@ const { data: todoItems, refetch } = useQuery('todos', getTodos)
 
 # [fit] Notice we get an "object is possibly undefined"
 
-Add a guard clause before the `return`
+Add a default value for the todoItems
 
 ```typescript
-if (!todoItems) {
-  return <div>Loading</div>
-}
+const { data: todoItems = [], refetch } = useQuery('todos', getTodos)
 ```
 
 ---
@@ -132,13 +132,13 @@ if (!todoItems) {
 # [fit] We can also detect when the query is actively loading
 
 ```typescript
-const { data: todoItems, refetch, isLoading } = useQuery('todos', getTodos)
+const { data: todoItems = [], refetch, isLoading } = useQuery('todos', getTodos)
 
 // ...
 // ...
 // ...
 
-if (!todoItems || isLoading) {
+if (isLoading) {
   return <div>Loading</div>
 }
 ```
@@ -163,12 +163,12 @@ if (!todoItems || isLoading) {
 ---
 
 ```typescript
-function getOneTodo(id: string) {
-  return (
-    await axios.get<TodoItemType>(
-      `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`
-    )
-  ).data
+async function getOneTodo(id: string) {
+  const response = await axios.get<TodoItemType>(
+    `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort22`
+  )
+
+  return response.data
 }
 ```
 
@@ -218,9 +218,19 @@ const todoItemMutation = useMutation((newTodoText: string) =>
 )
 ```
 
+or
+
+```typescript
+const todoItemMutation = useMutation(function (newTodoText: string) {
+  return createNewTodoItem(newTodoText)
+})
+```
+
 ---
 
 # Use the mutation where we'd want the todo item created
+
+The arguments to `mutate` become the arguments to our mutation function.
 
 ```typescript
 todoItemMutation.mutate(newTodoText)
@@ -240,7 +250,7 @@ todoItemMutation.mutate(newTodoText)
 const todoItemMutation = useMutation(
   (newTodoText: string) => createNewTodoItem(newTodoText),
   {
-    onSettled: function () {
+    onSuccess: function () {
       refetch()
 
       setNewTodoText('')
@@ -264,11 +274,13 @@ function handleCreateNewTodoItem() {
 Define a method
 
 ```typescript
-async function toggleItemComplete(id: number, complete: boolean) {
-  return await axios.put(
-    `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`,
+async function toggleItemComplete(id: number | undefined, complete: boolean) {
+  const response = axios.put(
+    `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort22`,
     { item: { complete: !complete } }
   )
+
+  return response
 }
 ```
 
@@ -276,7 +288,7 @@ async function toggleItemComplete(id: number, complete: boolean) {
 
 ```typescript
 const toggleMutation = useMutation(() => toggleItemComplete(id, complete), {
-  onSettled: function () {
+  onSuccess: function () {
     reloadItems()
   },
 })
@@ -298,9 +310,11 @@ Define function:
 
 ```typescript
 async function deleteOneTodo(id: string) {
-  return await axios.delete(
-    `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort42`
+  const response = await axios.delete(
+    `https://one-list-api.herokuapp.com/items/${id}?access_token=cohort22`
   )
+
+  return response
 }
 ```
 
@@ -310,7 +324,7 @@ async function deleteOneTodo(id: string) {
 
 ```typescript
 const deleteMutation = useMutation((id: string) => deleteOneTodo(id), {
-  onSettled: function () {
+  onSuccess: function () {
     // Send the user back to the homepage
     history.push('/')
   },
@@ -326,6 +340,14 @@ async function deleteTodoItem() {
   deleteMutation.mutate(params.id)
 }
 ```
+
+---
+
+# Benefit: organize all the API code in one place: `api.ts`
+
+- Create a module: `api.ts`
+- Move all the get/load functions into that file
+- Now we have one single place where all API logic is located
 
 ---
 
@@ -361,7 +383,7 @@ function useDeleteItemMutation(id: string) {
   const history = useHistory()
 
   return useMutation(() => deleteOneTodo(id), {
-    onSettled: function () {
+    onSuccess: function () {
       // Send the user back to the homepage
       history.push('/')
     },
@@ -424,7 +446,7 @@ export function TodoItemPage() {
     deleteMutation.mutate()
   }
 
-  if (!todoItem || isLoading) {
+  if (isLoading) {
     return <div>Loading...</div>
   }
 
@@ -455,7 +477,7 @@ export function useDeleteItemMutation(id: string) {
   const history = useHistory()
 
   return useMutation(() => deleteOneTodo(id), {
-    onSettled: function () {
+    onSuccess: function () {
       // Send the user back to the homepage
       history.push('/')
     },
@@ -468,8 +490,8 @@ export function useDeleteItemMutation(id: string) {
 # Leave UI code in the UI
 
 ```typescript
-export function useDeleteItemMutation(id: string, onSettled: () => void) {
-  return useMutation(() => deleteOneTodo(id), { onSettled })
+export function useDeleteItemMutation(id: string, onSuccess: () => void) {
+  return useMutation(() => deleteOneTodo(id), { onSuccess })
 }
 ```
 
