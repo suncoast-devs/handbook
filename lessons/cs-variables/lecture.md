@@ -284,7 +284,7 @@ var remainder = firstNumber % secondNumber;
 
 ```C#
 var answer = 2 + 3 * 4; // 14
-var answer2 = (2 + 3) * 4; // 19
+var answer2 = (2 + 3) * 4; // 20
 ```
 
 > NOTE: There are other order of operations in code. We may see some of those later.
