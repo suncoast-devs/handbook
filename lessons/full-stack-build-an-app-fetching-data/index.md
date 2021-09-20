@@ -147,7 +147,7 @@ restaurants on our home page.
 ## Files Updated
 
 <!-- Loading restaurants from the API -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="eb044cd" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2442afc0ecdb14edcb7b4dbe544ee399ae594a2c" />
 
 ## Refactor
 
@@ -183,4 +183,4 @@ function RestaurantList() {
 ## Files Updated
 
 <!-- Refactors restaurant in a list into its own component -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="9a495d88520057d211aceb303522f23c3ff8fb78"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ad2d3f1b2b58423350fc0c6faccefd24be7fa2a9"/>
