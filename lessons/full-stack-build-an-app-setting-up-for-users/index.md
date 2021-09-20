@@ -153,4 +153,4 @@ dotnet ef database update
 ```
 
 <!-- Creates User Model -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="52835acd14728f0ca26a99621e264b9dfe30fdb6"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="1f8664a7d03172982c1e60be0346c2d7505f9818"/>

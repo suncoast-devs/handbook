@@ -80,4 +80,4 @@ will get a nice error in the UI when someone attempts to use an email address
 that exists.
 
 <!-- Prevents duplicate user emails -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="8a582f0eded0dff52c722cb2f30493da0ebfbcdb"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="b60850f97cced8ba4279d4e5205beaae4a9e57e4"/>

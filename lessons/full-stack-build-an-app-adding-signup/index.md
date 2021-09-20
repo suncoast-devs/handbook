@@ -114,7 +114,7 @@ Change the `<form>` element to use our new mutation:
 >
 ```
 
-We will also add a route in `App.jsx`
+We will also add a route in `App.tsx`
 
 ```jsx
 <Route path="/signup">
@@ -132,4 +132,4 @@ And with this, we have the ability for users to sign up for our app!
 
 <!-- Update the signup comonent to create a user -->
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="e921d402b70701208882254964a9b14b3f5433cb"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="63e8169f7295ff0b9cc19ae3a22c1aeb3f3c4877"/>

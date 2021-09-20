@@ -54,4 +54,4 @@ and ensures you only include the most critical elements.
 ## Files Updated
 
 <!-- Initial static HTML and CSS -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="0500e876eb84b93ed171aed45fba46dd1b65a6ad"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="d4be83bb3901f51626833e4ae925ae277aa877f6"/>

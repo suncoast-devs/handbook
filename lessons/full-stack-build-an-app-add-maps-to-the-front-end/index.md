@@ -44,7 +44,7 @@ VITE_APP_MAPBOX_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 > `dotnet watch run`
 
 Once we have installed the library, signed up for a key, and set our API key in
-configuration, we will update our `Restaurants.jsx` component to show a map.
+configuration, we will update our `Restaurants.tsx` component to show a map.
 
 ## Adding the map to the UI
 
@@ -247,4 +247,4 @@ from our API.
 > place of `xxxx` at least once before you deploy.
 
 <!-- Adds maps to user inteface -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="214d9cf08635e7026b8657d51e6843b339b8118b" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="999fc9a23964684316c468b6c9d17519c66ead59" />

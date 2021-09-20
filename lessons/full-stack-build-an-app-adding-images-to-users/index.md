@@ -183,4 +183,4 @@ Change the avatar code to this, and remove the static avatar import.
 ```
 
 <!-- Adds the ability to upload an avatar for a user -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="6eeab0b8d0a20990b8358f8177a5f23295783e7f"/>

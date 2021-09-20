@@ -119,4 +119,4 @@ JSX for logged-in users.
 ```
 
 <!-- Adds user interface to show sign up, sign in, logout and user's name -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="4158f56ddae6bd5f1e7a2ea3d72d1992f18fbe73"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ac47d10d493c28666474678cc9b3c51ca55e9f55"/>

@@ -226,7 +226,7 @@ cd ..
 This adds a react component library that has great support for dragging and
 dropping files into our UI.
 
-Then we will import this component on our `NewRestaurant.jsx` page:
+Then we will import this component on our `NewRestaurant.tsx` page:
 
 ```javascript
 import { useDropzone } from 'react-dropzone'

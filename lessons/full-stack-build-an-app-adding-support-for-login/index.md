@@ -280,4 +280,4 @@ doesn't correspond to an account to see the error messages.
 Next we'll connect the user interface to these controllers.
 
 <!-- Adds a sessions controller -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="e2d7504189850b89b6c80a0f3702f0b51d0af4d6" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="fa9f88fd9cfaa50008b7af5bfab1884586de76e3" />

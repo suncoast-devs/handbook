@@ -32,7 +32,7 @@ Where `...` is the implementation of the listing of restaurants.
 # Using `react-query`
 
 In this demonstration we will use the
-[react-query]https://www.npmjs.com/package/react-query() library to integrate
+[react-query](https://www.npmjs.com/package/react-query) library to integrate
 with our backend api.
 
 Before we can begin working with the library we first need to install it.
@@ -77,7 +77,7 @@ Open `types.ts` and add:
 
 ```ts
 export type RestaurantType = {
-  id: string
+  id: number
   name: string
   description: string
   address: string
@@ -85,7 +85,7 @@ export type RestaurantType = {
 }
 ```
 
-Now in `Restaurants.jsx` we can add:
+Now in `Restaurants.tsx` we can add:
 
 ```javascript
 function Restaurants() {
@@ -98,10 +98,6 @@ function Restaurants() {
       return response.json()
     }
   )
-
-  if (!restaurants) {
-    return <></>
-  }
 
   console.log({restaurants})
 
@@ -120,19 +116,21 @@ function Restaurants() {
 # Transform static list into dynamic list
 
 Next, we will change our static list of a few sample restaurants to use
-`restaurants.map(restaurant =>` to generate the list dynamically.
+`restaurants.map(function(restaurant) {` to generate the list dynamically.
 
-> NOTE: We can't yet compute and display the number of starts, so we will leave
+> note: we can't yet compute and display the number of starts, so we will leave
 > that hard-coded for now.
 
 ```javascript
-function RestaurantList() {
-  const [restaurants, setRestaurants] = useState([])
+function restaurantlist() {
+  const [restaurants, setrestaurants] = usestate([])
 
   return (...
      ... other content
-     {restaurants.map(restaurants => (
-       ... the code for a single restaurant
+     {restaurants.map(function(restaurants) {
+       return (
+         ... the code for a single restaurant
+       )
      ))}
      ... other content
 }
@@ -147,7 +145,7 @@ restaurants on our home page.
 ## Files Updated
 
 <!-- Loading restaurants from the API -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2442afc0ecdb14edcb7b4dbe544ee399ae594a2c" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="bd18683c61b93cd22c7c22470f461636adbb2450" />
 
 ## Refactor
 
@@ -183,4 +181,4 @@ function RestaurantList() {
 ## Files Updated
 
 <!-- Refactors restaurant in a list into its own component -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ad2d3f1b2b58423350fc0c6faccefd24be7fa2a9"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="4928a22c1fae76dbabc2beb0ae5dc39937169f12"/>

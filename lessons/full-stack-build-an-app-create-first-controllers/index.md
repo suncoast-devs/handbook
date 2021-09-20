@@ -111,4 +111,4 @@ anything to do with our backend API resources.
 ## Files Updated
 
 <!-- Adds restaurants controller -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="1f6fb99c4f309b5bda8f27f34dd35e4d8e44092e" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="432f70c8f391ff7a453b5906cdd9f51ac296567b" />

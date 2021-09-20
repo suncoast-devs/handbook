@@ -8,7 +8,7 @@ order: 30
 Let us add a page and feature to allow the user to update their profile.
 
 The first thing we will do is to create the component for editing a user. This
-will look a lot like the `SignUp.jsx` component.
+will look a lot like the `SignUp.tsx` component.
 
 Here are some notable differences:
 
@@ -19,7 +19,7 @@ Here are some notable differences:
 1. When we get a positive API response, we use `window.location` to force a full
    page refresh, so we fetch fresh auth information to display (name and avatar)
 
-## `EditUser.jsx`
+## `EditUser.tsx`
 
 ```jsx
 import React, { useState } from 'react'
@@ -192,7 +192,7 @@ export function EditUser() {
 }
 ```
 
-## App.jsx changes
+## App.tsx changes
 
 We'll add a profile link in the navigation.
 

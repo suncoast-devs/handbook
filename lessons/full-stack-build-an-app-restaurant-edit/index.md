@@ -11,9 +11,9 @@ the information about a restaurant into the state before showing the form
 itself.
 
 We will begin by creating the basic structure of the restaurant edit in
-`EditRestaurant.jsx`
+`EditRestaurant.tsx`
 
-## Creating `EditRestaurant.jsx`
+## Creating `EditRestaurant.tsx`
 
 ```jsx
 import React, { useState } from 'react'
@@ -217,7 +217,7 @@ This will get the `id` from the route parameters. Even though we haven't written
 the `<Route>` we know it will have an `:id` in the parameters.
 
 Next, we add a `useEffect` to find and load this restaurant. This implementation
-is in `Restaurant.jsx`, so we can essentially copy it from there
+is in `Restaurant.tsx`, so we can essentially copy it from there
 
 ```javascript
 useEffect(() => {
@@ -245,7 +245,7 @@ if (!restaurant.id) {
 }
 ```
 
-## Update our routes in `App.jsx`
+## Update our routes in `App.tsx`
 
 We'll add the following route to allow a path to the `EditRestaurant` component.
 
@@ -255,9 +255,9 @@ We'll add the following route to allow a path to the `EditRestaurant` component.
 </Route>
 ```
 
-## Using the route from `Restaurant.jsx`
+## Using the route from `Restaurant.tsx`
 
-Next, we will add an `Edit` button on the `Restaurant.jsx` page to send us to
+Next, we will add an `Edit` button on the `Restaurant.tsx` page to send us to
 the `/restaurants/:id/edit` URL. We only show this link if the user is logged in
 and the user id for this restaurant is the same as the logged-in user.
 

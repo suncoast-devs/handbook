@@ -127,4 +127,5 @@ stars, importing the `stars` component.
 And now we have a reusable component showing the correct number of stars for any
 restaurant.
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="10910543eb814283f66a4d6219ab74acad953b5a" />
+<!-- Correctly shows the stars based on real data -->
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="91782fd284d3015d4b887af96820b4f3760166b3" />

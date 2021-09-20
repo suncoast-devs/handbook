@@ -155,7 +155,7 @@ The contents of `auth.ts` give some useful client-side methods to:
 - Logout
 
 The template added an `auth.ts` at the top level of your front end, right next
-to the `App.jsx`.
+to the `App.tsx`.
 
 The contents of the `auth.ts` are:
 
@@ -240,7 +240,7 @@ function authFromStorage(): LoginSuccess {
 Now in the `SignIn.tsx` we can uncomment the `recordAuthentication(apiResponse)`
 and add the corresponding import.
 
-Add a route to the `SignIn` component in our `App.jsx`
+Add a route to the `SignIn` component in our `App.tsx`
 
 ```jsx
 <Route exact path="/signin">
@@ -255,4 +255,4 @@ and a link in the navigation
 ```
 
 <!-- Adds sign in to user interface -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="b15644571a55a4394b76fc40ba825b480a9ad387" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="5968ebcca2dd0baea0cc9792ec6225ec1522fe53" />

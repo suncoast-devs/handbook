@@ -90,4 +90,5 @@ Update `Restaurant.tsx`:
 headers: { 'content-type': 'application/json', Authorization: authHeader() },
 ```
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="daeda98595fc934676dbaf93adbdb6a1bfcd685e" />
+<!-- Adds UserID tracking to restaurants and reviews -->
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="3a877e2922527510890b46fac05157c4ea6cfc82" />

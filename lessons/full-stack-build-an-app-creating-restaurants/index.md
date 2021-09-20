@@ -248,4 +248,4 @@ populated
 ## Files Updated
 
 <!-- Makes NewRestaurant page function and introduces some basic routing -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2ce30a647b64f1dd680e15ce1c413c83f3ef280b"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="47776727f139c359a66b5a3d71db53c2bfe13d1c"/>

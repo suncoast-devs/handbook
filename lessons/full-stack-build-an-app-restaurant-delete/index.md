@@ -8,7 +8,7 @@ order: 31
 When a user views a restaurant they created, we can add a delete button to
 remove the restaurant.
 
-## Update the `Restaurant.jsx`
+## Update the `Restaurant.tsx`
 
 We start by adding `history` (for redirecting)
 

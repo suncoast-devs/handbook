@@ -7,7 +7,7 @@ order: 11
 
 ## Setting up a route
 
-We can add a route to view a specific restaurant in `App.jsx`
+We can add a route to view a specific restaurant in `App.tsx`
 
 ```jsx
 export function App() {
