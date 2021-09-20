@@ -116,7 +116,38 @@ psql --file=Models/exampledata.sql TacoTuesdayDatabase
 
 ## Updating the interface to return the list of reviews
 
-We can now use that to count these in the user interface in `Restaurants.jsx`
+First we need to add a type definition for a review in `types.ts`
+
+```typescript
+export type ReviewType = {
+  id: number | undefined
+  summary: string
+  body: string
+  stars: number
+  createdAt: Date
+  restaurantId: number
+}
+```
+
+Then we can update the `RestaurantType` to reflect that it has an _optional_
+array of `ReviewType`
+
+```typescript
+export type RestaurantType = {
+  id: string | undefined
+  name: string
+  description: string
+  address: string
+  telephone: string
+  reviews?: ReviewType[]
+}
+```
+
+The `?` after `reviews` means that this property is optional and thus `reviews`
+might be undefined.
+
+We can now use that to count these in the user interface in
+`SingleRestaurantFromList.tsx`
 
 Change the hardcoded:
 
@@ -125,8 +156,12 @@ Change the hardcoded:
 ```
 
 ```jsx
-({props.restaurant.reviews.length})
+({restaurant?.reviews?.length || 0})
 ```
+
+The `?` after `reviews` here means \_try to access reviews, and if it is
+undefined then don't bother trying to access `.length`, let the expression be
+`undefined`. In this case the `||` will allow us to show a `0` instead.
 
 Now add similar `Include` code in the controller with `GetRestaurant`
 
@@ -135,9 +170,9 @@ Now add similar `Include` code in the controller with `GetRestaurant`
 var restaurant = await _context.Restaurants.Include(restaurant => restaurant.Reviews).Where(restaurant => restaurant.Id == id).FirstOrDefaultAsync();
 ```
 
-Then in the `Restaurant.jsx` we will add `reviews: []` to our default state so
-that our initial state will have an empty array of reviews. We are going to use
-the `reviews` property of the restaurant object to render each individual
+Then in the `Restaurant.tsx` we will add `reviews: []` to our `NullRestaurant`
+so that our initial state will have an empty array of reviews. We are going to
+use the `reviews` property of the restaurant object to render each individual
 review. This is why having an "empty" representation of the restaurant in the
 state is useful.
 
@@ -148,7 +183,7 @@ Change the hardcoded:
 ```
 
 ```jsx
-({restaurant.reviews.length})
+({restaurant.reviews?.length || 0})
 ```
 
 Updating the JSX for showing the list of reviews, we use `map` to loop over the
@@ -171,7 +206,7 @@ Replace the contents of `<ul className="reviews">` with:
       <div className="meta">
         <span
           className="stars"
-          style={{ '--rating': review.stars }}
+          style={{ '--rating': review.stars } as CSSStarsProperties}
           aria-label={`Star rating of this location is ${review.stars} out of 5.`}
         ></span>
         <time>{review.createdAt}</time>
@@ -191,4 +226,5 @@ You will also notice that there are some features we haven't finished.
 
 We will come back and revise this in a later step.
 
+<!-- Add support for reviews -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="5a9081b64a4c203d34df4ba9b2689e2c13908d8f" />

@@ -102,7 +102,6 @@ modules:
       - full-stack-build-an-app-add-support-for-reviews
       - full-stack-build-an-app-create-reviews
       - full-stack-build-an-app-formatting-dates
-      - full-stack-build-an-app-creating-a-layout
       - full-stack-build-an-app-setting-up-for-users
       - full-stack-build-an-app-adding-create-user-controller
       - full-stack-build-an-app-adding-signup
@@ -117,7 +116,7 @@ modules:
       - full-stack-build-an-app-add-maps-to-the-front-end
       - full-stack-build-an-app-adding-images-to-restaurants
       - full-stack-build-an-app-adding-images-to-users
-      - full-stack-build-an-app-user-profile-edit
+      # - full-stack-build-an-app-user-profile-edit
       - full-stack-build-an-app-restaurant-delete
       - full-stack-build-an-app-review-delete
       - full-stack-build-an-app-restaurant-edit

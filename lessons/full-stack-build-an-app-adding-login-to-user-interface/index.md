@@ -5,15 +5,33 @@ order: 21
 
 # Adding Login to the User Interface
 
-Turning to the `SignIn.jsx` component, we will make similar changes to the work
-we did to `SignUp.jsx`
+Turning to the `SignIn.tsx` component, we will make similar changes to the work
+we did to `SignUp.tsx`
 
-The first step is to add state to store the user and an error message:
+The first step is to add types. We'll need a type to hold the form information
+and we'll also need a type for the data that is returned from the login API.
+Then state to store the user and an error message:
 
-```javascript
-const [errorMessage, setErrorMessage] = useState()
+```typescript
+export type LoginUserType = {
+  email: string
+  password: string
+}
 
-const [user, setUser] = useState({
+export type LoginSuccess = {
+  token: string
+  user: {
+    id: number
+    fullName: string
+    email: string
+  }
+}
+```
+
+```typescript
+const [errorMessage, setErrorMessage] = useState('')
+
+const [user, setUser] = useState<LoginUserType>({
   email: '',
   password: '',
 })
@@ -29,8 +47,8 @@ We can add a `<p>` tag to show the error message:
 
 then we will add a function to handle the user's input in the fields:
 
-```javascript
-function handleStringFieldChange(event) {
+```typescript
+function handleStringFieldChange(event: React.ChangeEvent<HTMLInputElement>) {
   const value = event.target.value
   const fieldName = event.target.name
 
@@ -42,39 +60,51 @@ function handleStringFieldChange(event) {
 
 then add a function to submit the form:
 
-```javascript
-async function handleFormSubmit(event) {
-  event.preventDefault()
-
+```typescript
+async function loginUser(user: LoginUserType): Promise<LoginSuccess> {
   const response = await fetch('/api/Sessions', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     body: JSON.stringify(user),
   })
 
-  const apiResponse = await response.json()
-
-  if (apiResponse.status === 400) {
-    setErrorMessage(Object.values(apiResponse.errors).join(' '))
+  if (response.ok) {
+    return response.json()
   } else {
-    // TODO, record the login
-    // recordAuthentication(apiResponse)
-    window.location.assign('/')
+    return await response.json()
   }
 }
 ```
 
 Now update the fields and the form to call the handling functions as needed.
 
----
+# Mutation
 
-This page is much like the `Signup` page except for the `handleFormSubmit` code
-handling a successful API request
+This page is much like the `Signup` page except for how we'll handle the
+mutation result.
 
-```javascript
-// TODO, record the login
-// recordAuthentication(apiResponse)
-window.location.assign('/')
+```typescript
+const loginUserMutation = useMutation(loginUser, {
+  onSuccess: function (apiResponse) {
+    // TODO: record the authentication information we receive
+
+    // recordAuthentication(apiResponse)
+    window.location.assign('/')
+  },
+  onError: function (error: APIError) {
+    setErrorMessage(Object.values(error.errors).join(' '))
+  },
+})
+```
+
+```jsx
+<form
+  onSubmit={function (event) {
+    event.preventDefault
+
+    loginUserMutation.mutate(user)
+  }}
+>
 ```
 
 Notice we use `window.location` to redirect the user instead of `history.push`.
@@ -113,9 +143,9 @@ any authentication data. For this reason, we will use `window.location` to force
 a page reload rather than `history.push`, which would do a local, non-reload
 navigation.
 
-## `auth.js`
+## `auth.ts`
 
-The contents of `auth.js` give some useful client-side methods to:
+The contents of `auth.ts` give some useful client-side methods to:
 
 - Determine if the user is logged in
 - Fetch the user's ID
@@ -124,12 +154,12 @@ The contents of `auth.js` give some useful client-side methods to:
 - Store the authentication info `recordAuthentication`
 - Logout
 
-The template added an `auth.js` at the top level of your front end, right next
+The template added an `auth.ts` at the top level of your front end, right next
 to the `App.jsx`.
 
-The contents of the `auth.js` are:
+The contents of the `auth.ts` are:
 
-```javascript
+```typescript
 // Returns an object that can be included in `fetch`
 // headers to include the required bearer token
 // for authentication
@@ -141,15 +171,15 @@ The contents of the `auth.js` are:
 //    headers: { 'content-type': 'application/json', ...authHeader() },
 //    body: JSON.stringify(thing)
 // })
-//
-export const authHeader = () => {
+
+import { LoginSuccess } from './types'
+
+// Returns the Authorization header for the the currently logged in in user.
+// If there is no authorization data, we'll return an empty object
+export function authHeader() {
   const auth = authFromStorage()
 
-  return auth.token
-    ? {
-        Authorization: `Bearer ${auth.token}`,
-      }
-    : {}
+  return auth.token ? `Bearer ${auth.token}` : null
 }
 
 // Save the authentication received from the API
@@ -160,7 +190,7 @@ export const authHeader = () => {
 //
 // This is typically called from a login component
 //
-export const recordAuthentication = auth => {
+export function recordAuthentication(auth: LoginSuccess) {
   localStorage.setItem('auth', JSON.stringify(auth))
 }
 
@@ -168,12 +198,12 @@ export const recordAuthentication = auth => {
 //
 // Returns TRUE if there is an active user id, FALSE otherwise
 //
-export const isLoggedIn = () => {
+export function isLoggedIn() {
   return getUserId() !== undefined
 }
 
 // Returns the user id if the logged in user, null otherwise
-export const getUserId = () => {
+export function getUserId() {
   const auth = authFromStorage()
 
   return auth.user && auth.user.id
@@ -186,7 +216,7 @@ export const getUserId = () => {
 // const user = getUser()
 // console.log(user.fullName)
 //
-export const getUser = () => {
+export function getUser() {
   const auth = authFromStorage()
 
   return auth.user
@@ -194,29 +224,20 @@ export const getUser = () => {
 
 // Removes the authentication data, effectively "forgetting" the
 // session information and logging the user out.
-export const logout = () => {
+export function logout() {
   localStorage.removeItem('auth')
 }
 
 // Local method to fetch and decode the auth data from local storage
 // If there is no local storage value, returns an empty object
-const authFromStorage = () => {
+function authFromStorage(): LoginSuccess {
   const auth = localStorage.getItem('auth')
 
   return auth ? JSON.parse(auth) : {}
 }
-
-export const updateUserAuth = updatedUser => {
-  const auth = authFromStorage()
-
-  auth.user.fullName = updatedUser.fullName
-  auth.user.photoURL = updatedUser.photoURL
-
-  recordAuthentication(auth)
-}
 ```
 
-Now in the `SignIn.jsx` we can uncomment the `recordAuthentication(apiResponse)`
+Now in the `SignIn.tsx` we can uncomment the `recordAuthentication(apiResponse)`
 and add the corresponding import.
 
 Add a route to the `SignIn` component in our `App.jsx`
@@ -233,4 +254,5 @@ and a link in the navigation
 <Link to="/signin">Sign In</Link>
 ```
 
+<!-- Adds sign in to user interface -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="b15644571a55a4394b76fc40ba825b480a9ad387" />

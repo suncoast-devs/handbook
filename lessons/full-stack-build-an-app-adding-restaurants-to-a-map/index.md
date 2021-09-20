@@ -122,4 +122,5 @@ INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latit
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latitude", "Longitude") VALUES ('Avaveo', 'Persistent zero defect process improvement', '2 Clarendon Junction', '715-663-5265', 27.7717197, -82.6522627);
 ```
 
+<!-- Adds geocoding of new restaurants -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="6fe6841e3ec1dae9ce3dfe6ae37baef23a099535" />

@@ -29,22 +29,101 @@ function Restaurants() {
 
 Where `...` is the implementation of the listing of restaurants.
 
-We can now introduce a state to store the list of restaurants.
+# Using `react-query`
+
+In this demonstration we will use the
+[react-query]https://www.npmjs.com/package/react-query() library to integrate
+with our backend api.
+
+Before we can begin working with the library we first need to install it.
+
+From the `ClientApp` directory (e.g. where you would run `npm start`)
+
+```shell
+npm install react-query
+```
+
+# Configuring `react-query`
+
+To use the library we will need to add some configuration to `main.tsx`
+
+```jsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.scss'
+import { App } from './App'
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+const queryClient = new QueryClient()
+
+ReactDOM.render(
+  <React.StrictMode>
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+```
+
+# Using `react-query` to load a list of restaurants
+
+We can now introduce a query to load the list of restaurants.
+
+However, we must first define a TypeScript `type` to specify the structure of
+the data we'll be receiving from the API.
+
+Open `types.ts` and add:
+
+```ts
+export type RestaurantType = {
+  id: string
+  name: string
+  description: string
+  address: string
+  telephone: string
+}
+```
+
+Now in `Restaurants.jsx` we can add:
 
 ```javascript
 function Restaurants() {
-  const [restaurants, setRestaurants] = useState([])
+
+  const { data: restaurants = [] } = useQuery<RestaurantType[]>(
+    'restaurants',
+    async function () {
+      const response = await fetch('/api/restaurants')
+
+      return response.json()
+    }
+  )
+
+  if (!restaurants) {
+    return <></>
+  }
+
+  console.log({restaurants})
 
   return (... implementation omitted for space ...)
 }
 ```
 
-> NOTE: we initialize this to an empty array since the list of restaurants from
-> the API will be an array of restaurant objects. We want our default state to
-> represent "no data," so an empty array is a correct choice.
+> NOTE: In this code `const { data: restaurants = [] } =` we are destructuring
+> the return of `react-query` to get the `data` property and **renaming** it
+> `restaurants`. Then with `= []` we are ensuring that if `useQuery` returns a
+> `restaurants` that is `undefined` then we will sue an empty array
+
+> NOTE: The `console.log({ restaurants })` is a temporary debug statement we use
+> to test that we are correctly loading data from our API
+
+# Transform static list into dynamic list
 
 Next, we will change our static list of a few sample restaurants to use
-`restaurants.map(restaurant =>` to generate the list dynamically
+`restaurants.map(restaurant =>` to generate the list dynamically.
+
+> NOTE: We can't yet compute and display the number of starts, so we will leave
+> that hard-coded for now.
 
 ```javascript
 function RestaurantList() {
@@ -59,53 +138,22 @@ function RestaurantList() {
 }
 ```
 
-The code should render an _empty_ list of restaurants at first.
-
-## Fetching data
-
-Now we will use the `fetch` method to load the list of restaurants from our API.
-We will do this via the `useEffect` method. We will create a `useEffect` with an
-empty dependency array so that the function executes only once when the
-component is first added to the page.
-
-```javascript
-function RestaurantList() {
-  const [restaurants, setRestaurants] = useState([])
-
-  useEffect(() => {
-    async function loadRestaurants() {
-      const response = await fetch('/api/restaurants')
-
-      if (response.ok) {
-        const json = await response.json()
-
-        setRestaurants(json)
-      }
-    }
-
-    loadRestaurants()
-  }, [])
-
-  return (...
-     ... other content
-     {restaurants.map(restaurant => (
-       ... the code for a single restaurant
-     ))}
-     ... other content
-}
-```
-
 If we have done this successfully, we have a dynamically generated list of
 restaurants on our home page.
 
+> NOTE: We can now remove the `console.log({ restaurants })` since we have
+> confidence the code is working properly.
+
 ## Files Updated
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="961549d" />
+<!-- Loading restaurants from the API -->
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="eb044cd" />
 
 ## Refactor
 
 At this point, we can refactor the code for a single restaurant into its own
-component.
+component. We will put this in a file `SingleRestaurantFromList.tsx` in the
+`components` directory
 
 ```jsx
 function SingleRestaurantFromList(props) {
@@ -116,26 +164,23 @@ function SingleRestaurantFromList(props) {
 }
 
 function RestaurantList() {
-  const [restaurants, setRestaurants] = useState([])
-
-  useEffect(() => {
-    fetch('/api/Restaurants')
-      .then(response => response.json())
-      .then(apiData => {
-        setRestaurants(apiData)
-      })
-  }, [])
+  ... other content ...
 
   return (...
      ... other content
-     {restaurants.map(restaurant => (
-       <SingleRestaurantFromList key={restaurant.id} restaurant={restaurant} />
-     ))}
+     <ul className="results">
+        {restaurants.map((restaurant) => (
+          <SingleRestaurantFromList
+            key={restaurant.id}
+            restaurant={restaurant}
+          />
+        ))}
+      </ul>
      ... other content
 }
 ```
 
 ## Files Updated
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="f91a8f165c67dfb0953236f15eabc748b8c7ffd2"/>
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="111f27f779bfde4004500ee2017160104c1b5805"/>
+<!-- Refactors restaurant in a list into its own component -->
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="9a495d88520057d211aceb303522f23c3ff8fb78"/>

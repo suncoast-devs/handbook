@@ -45,7 +45,58 @@ INSERT INTO "Reviews" ("RestaurantId", "CreatedAt", "Summary", "Body", "Stars", 
 INSERT INTO "Reviews" ("RestaurantId", "CreatedAt", "Summary", "Body", "Stars", "UserId") VALUES (1, '2020-01-01 18:23:55', 'Mmmmm, good', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima modi impedit quisquam sit, saepe enim placeat a vero voluptas asperiores atque laudantium in, nobis sunt blanditiis dignissimos. Deleniti, esse optio!', 4, 1);
 ```
 
-Then in the `Restaurant.jsx` we can access the `user` information.
+Update the `ReviewType` to indicate we know the associated user:
+
+```typescript
+export type ReviewType = {
+  id: number | undefined
+  summary: string
+  body: string
+  stars: number
+  createdAt: Date
+  restaurantId: number
+  user: {
+    id: number
+    fullName: string
+    email: string
+  }
+}
+```
+
+This will cause an issue with our existing use for creating a state. For now
+we'll create a new type `NewReviewType` to handle this:
+
+```typescript
+export type NewReviewType = {
+  id: number | undefined
+  summary: string
+  body: string
+  stars: number
+  createdAt: Date
+  restaurantId: number
+}
+```
+
+In `Restaurant.tsx`:
+
+```typescript
+const [newReview, setNewReview] = useState<NewReviewType>({
+  id: undefined,
+  body: '',
+  stars: 5,
+  summary: '',
+  createdAt: new Date(),
+  restaurantId: Number(id),
+})
+```
+
+also
+
+```typescript
+async function submitNewReview(review: NewReviewType) {
+```
+
+Then in the `Restaurant.tsx` we can access the `user` information.
 
 ```jsx
 <div className="author">
@@ -53,4 +104,5 @@ Then in the `Restaurant.jsx` we can access the `user` information.
 </div>
 ```
 
+<!-- Showing the name of the person who created the review -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="d79bf02d642a7b23b36817e9e7e983dbc5be6951" />

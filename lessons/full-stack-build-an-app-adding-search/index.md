@@ -62,28 +62,31 @@ Then we will update the `<input>` tag
 />
 ```
 
-## Update the useEffect to take the filterText into consideration
+## Update the useQuery to take the filterText into consideration
+
+- First we change the unique identifier for the query to
+  `['restaurants', filterText]`. This allows any caching that `react-query` does
+  to be dependent on our filter text.
+- Then we dynamically change the URL based on the filter. If there is no
+  filterText we use the default URL, otherwise we send a query parameter with
+  our filter text.
 
 ```javascript
-useEffect(() => {
-  async function loadRestaurants() {
-    const url =
+const { data: restaurants } = useQuery<RestaurantType[]>(
+  ['restaurants', filterText],
+  async function () {
+    const response = await fetch(
       filterText.length === 0
-        ? `/api/Restaurants`
-        : `/api/Restaurants?filter=${filterText}`
+        ? '/api/restaurants'
+        : `/api/restaurants?filter=${filterText}`
+    )
 
-    const response = await fetch(url)
-    if (response.ok) {
-      const json = await response.json()
-
-      setRestaurants(json)
-    }
+    return response.json()
   }
-
-  loadRestaurants()
-}, [filterText])
+)
 ```
 
 ## Files Updated
 
+<!-- Adds restaurant searching -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="262ebfe319472f288b4bfc7ecc416de896fc962e"/>

@@ -5,10 +5,10 @@ order: 25
 
 # Stars
 
-Let's update both the `Restaurant.jsx` and `Restaurants.jsx` to show the correct
-average review stars for a restaurant.
+Let's update both the `SingleRestaurantFromList.tsx` and `Restaurants.tsx` to
+show the correct average review stars for a restaurant.
 
-## `Restaurant.jsx`
+## `Restaurant.tsx`
 
 Before the `return` that renders the component, we will compute the average
 ranking of stars. We begin by using `reduce` to total up the number of stars.
@@ -23,7 +23,7 @@ const totalStars = restaurant.reviews.reduce(
 
 const averageStars = totalStars / restaurant.reviews.length
 
-const averageStarsToOneDecimalPlace = averageStars.toFixed(1)
+const averageStarsToOneDecimalPlace = Number(averageStars.toFixed(1))
 ```
 
 Then we update the display of stars:
@@ -59,81 +59,64 @@ const averageStars =
 In this style, we compare the length of the review array, and if it is zero, we
 set the `averageStars` to `0`, otherwise setting it equal to the average.
 
-We can do this same change in `Restaurants.jsx`, except our restaurant variable
-here is `props.restaurant`
+We can do this same change in `Restaurants.tsx`
 
 ```javascript
-const totalStars = props.restaurant.reviews.reduce(
+const totalStars = restaurant.reviews.reduce(
   (starRatingSum, review) => starRatingSum + review.stars,
   0
 )
 
 const averageStars =
-  props.restaurant.reviews.length === 0
-    ? 0
-    : totalStars / props.restaurant.reviews.length
+  restaurant.reviews.length === 0 ? 0 : totalStars / restaurant.reviews.length
 
-const averageStarsToOneDecimalPlace = averageStars.toFixed(1)
+const averageStarsToOneDecimalPlace = Number(averageStars.toFixed(1))
 ```
 
 # Extracting a component for reuse
 
 We can now consider _extracting a component_ for the stars!
 
-The first thing we'll do is create the component in the `Restaurants.jsx` code.
+The first thing we'll do is create the component in the `Restaurants.tsx` code.
 
 ```jsx
-function Stars(props) {
-  const totalStars = props.restaurant.reviews.reduce(
+import React from 'react'
+import { CSSStarsProperties, RestaurantType } from '../types'
+
+export function Stars({ restaurant }: { restaurant: RestaurantType }) {
+  const totalStars = restaurant.reviews.reduce(
     (starRatingSum, review) => starRatingSum + review.stars,
     0
   )
 
   const averageStars =
-    props.restaurant.reviews.length === 0
-      ? 0
-      : totalStars / props.restaurant.reviews.length
+    restaurant.reviews.length === 0 ? 0 : totalStars / restaurant.reviews.length
 
-  const averageStarsToOneDecimalPlace = averageStars.toFixed(1)
+  const averageStarsToOneDecimalPlace = Number(averageStars.toFixed(1))
 
   return (
     <span
       className="stars"
-      style={{ '--rating': averageStarsToOneDecimalPlace }}
+      style={
+        { '--rating': averageStarsToOneDecimalPlace } as CSSStarsProperties
+      }
       aria-label={`Star rating of this location is ${averageStarsToOneDecimalPlace} out of 5.`}
     ></span>
   )
 }
+
 ```
 
 Then we can use this in place of the `<span>` for stars and get rid of the
 computation of the variables.
 
 ```jsx
-function SingleRestaurantFromList(props) {
-  return (
-    <li>
-      <h2>
-        <Link to={`/restaurants/${props.restaurant.id}`}>
-          {props.restaurant.name}
-        </Link>
-      </h2>
-      <p>
-        <Stars restaurant={props.restaurant} />(
-        {props.restaurant.reviews.length})
-      </p>
-      <address>{props.restaurant.address}</address>
-    </li>
-  )
-}
+<p>
+  <Stars restaurant={restaurant} />({restaurant.reviews.length})
+</p>
 ```
 
-We can then use Visual Studio Code's refactor to move the `Stars` to its own
-file. The file will be in the `pages` folder. Since this component doesn't
-represent a page, we should move it to the `components` folder meant for
-reusable components.
-
-Now we can do a similar refactoring in the `Restaurant.jsx` file. First, remove
+Now we can do a similar refactoring in the `Restaurant.tsx` file. First, remove
 the computation variables and then replace the `<span>` used for showing the
 stars, importing the `stars` component.
 

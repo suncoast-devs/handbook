@@ -34,7 +34,7 @@ also serve as a location for values such as API keys.
 > our front-end app setup prefers.
 
 ```text
-REACT_APP_MAPBOX_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+VITE_APP_MAPBOX_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 > NOTE: Replace xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your token assigned to your
@@ -78,7 +78,7 @@ style to be absolutely positioned to work with our CSS.
     style={{ position: 'absolute' }}
     width="100%"
     height="100%"
-    mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+    mapboxApiAccessToken={import.meta.env.VITE_APP_MAPBOX_TOKEN as string}
   >
     <div style={{ position: 'absolute', left: 10 }}>
       <NavigationControl />
@@ -86,6 +86,8 @@ style to be absolutely positioned to work with our CSS.
   </ReactMapGL>
 </section>
 ```
+
+Remove the `import` of our example map image.
 
 You will notice that we are taking all the attributes of our `viewport` state
 and **spreading** them into the `ReactMapGL`. We carefully chose the name of
@@ -107,11 +109,7 @@ takes new values for a viewport change. And since our `setViewport` is exactly
 such a function we can use it by adding this to `ReactMapGL`
 
 ```jsx
-<ReactMapGL
-  {...viewport}
-  onViewportChange={setViewport}
-  mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-></ReactMapGL>
+onViewportChange = { setViewport }
 ```
 
 Try dragging, pinching, and zooming the map!
@@ -132,24 +130,50 @@ anything we like; here, we just use the existing emoji character. We could use
 text, an image, or any other react component as the marker representation.
 
 ```jsx
-<ReactMapGL
-  {...viewport}
-  onViewportChange={setViewport}
-  mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
->
-  {restaurants.map(restaurant => (
-    <Marker
-      key={restaurant.id}
-      latitude={restaurant.latitude}
-      longitude={restaurant.longitude}
-    >
-      <span role="img" aria-label="taco">
-        🌮
-      </span>
-    </Marker>
-  ))}
-</ReactMapGL>
+<section className="map">
+  <ReactMapGL
+    {...viewport}
+    style={{ position: 'absolute' }}
+    width="100%"
+    height="100%"
+    onViewportChange={setViewport}
+    mapboxApiAccessToken={import.meta.env.VITE_APP_MAPBOX_TOKEN as string}
+  >
+    <div style={{ position: 'absolute', left: 10 }}>
+      <NavigationControl />
+    </div>
+    {restaurants.map((restaurant) => (
+      <Marker
+        key={restaurant.id}
+        latitude={restaurant.latitude}
+        longitude={restaurant.longitude}
+      >
+        <span role="img" aria-label="taco">
+          🌮
+        </span>
+      </Marker>
+    ))}
+  </ReactMapGL>
+</section>
 ```
+
+## Extend the `RestaurantType` to include a latitude and longitude
+
+```typescript
+export type RestaurantType = {
+  id: string | undefined
+  name: string
+  description: string
+  address: string
+  telephone: string
+  latitude: number
+  longitude: number
+  reviews: ReviewType[]
+}
+```
+
+Update other components that now use this type and give a default value for the
+latitude and longitude
 
 ## Adding interaction to the map
 
@@ -160,8 +184,9 @@ To do that, we will add another state variable to track the
 variable is `null`, no restaurant is selected on the map. When this variable is
 **not** null, the value is the restaurant we want to show.
 
-```javascript
-const [selectedMapRestaurant, setSelectedMapRestaurant] = useState(null)
+```typescript
+const [selectedMapRestaurant, setSelectedMapRestaurant] =
+  useState<RestaurantType | null>(null)
 ```
 
 Then just before we render our array of `<Marker>`, we will add this code:
@@ -218,7 +243,8 @@ Now we have a zoomable, draggable, and clickable map that represents data pulled
 from our API.
 
 > NOTE: If you are going to deploy this with Heroku, you'll need to run
-> `heroku config:set REACT_APP_MAPBOX_TOKEN="xxxx"` with your specific key in
+> `heroku config:set VITE_APP_MAPBOX_TOKEN="xxxx"` with your specific key in
 > place of `xxxx` at least once before you deploy.
 
+<!-- Adds maps to user inteface -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="214d9cf08635e7026b8657d51e6843b339b8118b" />

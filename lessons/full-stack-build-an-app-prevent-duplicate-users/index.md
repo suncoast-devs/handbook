@@ -52,7 +52,6 @@ public async Task<ActionResult<User>> PostUser(User user)
 {
     try
     {
-
         // Indicate to the database context we want to add this new record
         _context.Users.Add(user);
         await _context.SaveChangesAsync();
@@ -80,4 +79,5 @@ Since we are generating the error in the same format as validation errors, we
 will get a nice error in the UI when someone attempts to use an email address
 that exists.
 
+<!-- Prevents duplicate user emails -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="8a582f0eded0dff52c722cb2f30493da0ebfbcdb"/>

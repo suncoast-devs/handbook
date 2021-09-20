@@ -12,18 +12,10 @@ is **not logged in**
 
 ```jsx
 {
-  isLoggedIn() ? null : (
-    <Link className="btn btn-success mr-2" to="/signin">
-      Sign in
-    </Link>
-  )
+  isLoggedIn() ? null : <Link to="/signin">Sign in</Link>
 }
 {
-  isLoggedIn() ? null : (
-    <Link className="btn btn-success mr-2" to="/signup">
-      Sign up
-    </Link>
-  )
+  isLoggedIn() ? null : <Link to="/signup">Sign up</Link>
 }
 ```
 
@@ -34,14 +26,21 @@ the boolean logic, which is the `<Link>` -- If the value is `true` JavaScript
 renders that. React renders a value of `true` as nothing. This code effectively
 only shows the links if the user is **not** logged in.
 
-We can add a `Sign out` button after the form:
+We can add a `Sign out` button.
 
 ```jsx
 {
   isLoggedIn() ? (
-    <span className="link" onClick={handleLogout}>
+    <a
+      href="/"
+      className="link"
+      onClick={function (event) {
+        event.preventDefault()
+        handleLogout()
+      }}
+    >
       Sign out
-    </span>
+    </a>
   ) : null
 }
 ```
@@ -50,7 +49,7 @@ This code only shows the logout button if the user **is logged in**.
 
 We will also add a method to handle the logout:
 
-```jsx
+```typescript
 function handleLogout() {
   logout()
 
@@ -119,4 +118,5 @@ JSX for logged-in users.
 }
 ```
 
+<!-- Adds user interface to show sign up, sign in, logout and user's name -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="4158f56ddae6bd5f1e7a2ea3d72d1992f18fbe73"/>

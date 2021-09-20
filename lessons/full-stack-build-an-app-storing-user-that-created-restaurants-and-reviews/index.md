@@ -66,43 +66,15 @@ restaurant.UserId = GetCurrentUserId();
 ```
 
 Finally, lets send our authorization header token when making the request in
-`NewRestaurant.jsx`. The `...authHeader()` means to take all the information
+`NewRestaurant.tsx`. The `...authHeader()` means to take all the information
 that `authHeader` returns and add those keys and corresponding values to the
 collection of headers.
 
 ```javascript
-headers: { 'content-type': 'application/json', ...authHeader() },
+headers: { 'content-type': 'application/json', Authorization: authHeader() },
 ```
 
-And update our logic to handle `401` not authorized.
-
-```javascript
-async function handleFormSubmit(event) {
-  event.preventDefault()
-
-  const response = await fetch('/api/Restaurants', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...authHeader() },
-    body: JSON.stringify(newRestaurant),
-  })
-
-  if (response.status === 401) {
-    setErrorMessage('Not Authorized')
-  } else {
-    if (response.status === 400) {
-      const json = await response.json()
-
-      setErrorMessage(Object.values(json.errors).join(' '))
-    } else {
-      history.push('/')
-    }
-  }
-}
-```
-
-Then we will make similar updates in the `ReviewsController`. Update
-`Restaurant.jsx` to have an `errorMessage` state and display. Then update
-`Restaurant.jsx` to handle the error result.
+Then we will make similar updates in the `ReviewsController`.
 
 To assign a user to the review, we will add this code to the _beginning_ of the
 `PostReview` implementation:
@@ -112,35 +84,10 @@ To assign a user to the review, we will add this code to the _beginning_ of the
 review.UserId = GetCurrentUserId();
 ```
 
+Update `Restaurant.tsx`:
+
 ```javascript
-async function handleNewReviewSubmit(event) {
-  event.preventDefault()
-
-  const response = await fetch(`/api/Reviews`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json', ...authHeader() },
-    body: JSON.stringify(newReview),
-  })
-
-  if (response.status === 401) {
-    setErrorMessage('Not Authorized')
-  } else {
-    const json = await response.json()
-
-    if (response.status === 400) {
-      setErrorMessage(Object.values(json.errors).join(' '))
-    } else {
-      setNewReview({
-        ...newReview,
-        body: '',
-        summary: '',
-        stars: 0,
-      })
-
-      fetchRestaurant()
-    }
-  }
-}
+headers: { 'content-type': 'application/json', Authorization: authHeader() },
 ```
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="daeda98595fc934676dbaf93adbdb6a1bfcd685e" />

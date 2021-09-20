@@ -117,22 +117,57 @@ error.
 Let's create a state variable to hold an error text.
 
 ```
-const [errorMessage, setErrorMessage] = useState()
+const [errorMessage, setErrorMessage] = useState('')
 ```
 
-Then in the `fetch` method, we can detect the `apiResponse.status === 400` and
-set the error message. If there is not an error, we redirect as we once did.
+We will update the `submitNewRestaurant` to throw an error if it gets a result
+that is not a success.
 
-```javascript
-if (response.status === 400) {
-  setErrorMessage(Object.values(json.errors).join(' '))
-} else {
-  history.push('/')
+```typescript
+async function submitNewRestaurant(restaurantToCreate: RestaurantType) {
+  const response = await fetch('/api/Restaurants', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(restaurantToCreate),
+  })
+
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 ```
 
-Now we can use the value `errorMessage` to optionally display an `alert`
-bootstrap element to the user.
+We can define a type to represent the structure of the response our API gives
+when it returns an error. This goes in `types.ts`
+
+```typescript
+export type APIError = {
+  errors: Record<string, string[]>
+  status: number
+  title: string
+  traceId: string
+  type: string
+}
+```
+
+Then in the mutation we will setup an `onError` handler to catch this error and
+update the UI.
+
+```typescript
+const createNewRestaurant = useMutation(submitNewRestaurant, {
+  onSuccess: function () {
+    history.push('/')
+  },
+  onError: function (apiError: APIError) {
+    setErrorMessage(Object.values(apiError.errors).join(' '))
+  },
+})
+```
+
+Now we can use the value `errorMessage` to optionally display an alert to the
+user. We can put this above the button, or at the top of the form
 
 ```jsx
 {
@@ -160,4 +195,5 @@ some popular React forms libraries that add these capabilities for you.
 
 ## Files Updated
 
+<!-- Adds some validation of restaurant fields -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2ec3292267e91ce26675e278ed99a6f8c19287d2" />

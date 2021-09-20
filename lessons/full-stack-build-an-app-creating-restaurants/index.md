@@ -31,8 +31,8 @@ but the rest of the attributes are what we want to generate. This indicates that
 we could use a single state variable that was an object with this shape. That
 is:
 
-```javascript
-const [newRestaurant, setNewRestaurant] = useState({
+```typescript
+const [newRestaurant, setNewRestaurant] = useState<RestaurantType>({
   name: '',
   description: '',
   address: '',
@@ -46,13 +46,13 @@ just `POST` this object to the API.
 We will change each `<input>` and `textarea` to include a `value=` property and
 an `onChange` property:
 
-```html
+```jsx
 <input
   type="text"
   className="form-control"
   name="name"
-  value="{newRestaurant.name}"
-  onChange="{handleName}"
+  value={newRestaurant.name}
+  onChange={handleName}
 />
 ```
 
@@ -63,7 +63,7 @@ changes.
 Let's implement one of the handling methods, `handleAddress`:
 
 ```javascript
-function handleAddress(event) {
+function handleAddress(event: React.ChangeEvent<HTMLInputElement>) {
   const newAddressText = event.target.value
 
   const updatedRestaurant = { ...newRestaurant, address: newAddressText }
@@ -83,8 +83,8 @@ existing `newRestaurant` object but with a new value for the `address`
 
 This pattern will repeat for the other form fields:
 
-```javascript
-function handleDescription(event) {
+```typescript
+function handleDescription(event: React.ChangeEvent<HTMLInputElement>) {
   const newDescriptionText = event.target.value
 
   const updatedRestaurant = {
@@ -101,8 +101,10 @@ the field's name. We were careful to name these after the object's properties.
 Thus we can use this to create a **single** handle method that is reusable
 amongst all the `onChange` events for string based state:
 
-```javascript
-function handleStringFieldChange(event) {
+```typescript
+function handleStringFieldChange(
+  event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) {
   const value = event.target.value
   const fieldName = event.target.name
 
@@ -120,54 +122,85 @@ Finally, let's handle the case of submitting the form. Instead of adding an
 event handles all the ways a form may be submitted (e.g., pressing enter in an
 input field)
 
-```html
-<form onSubmit="{handleFormSubmit}"></form>
+```jsx
+<form onSubmit={handleFormSubmit}></form>
 ```
 
-The implementation of `handleFormSubmit` must use the `fetch` API to `POST` an
-object to the server and await a result.
+The implementation of `handleFormSubmit` will use a `react-query` `mutation` to
+create the new restaurant.
 
-```javascript
-async function handleFormSubmit(event) {
-  event.preventDefault()
+First, setup a method to submit the new restaurant. Since this method will
+receive the restaurant to create it can exist outside of the component
+definition
 
+```typescript
+async function submitNewRestaurant(restaurantToCreate: RestaurantType) {
   const response = await fetch('/api/Restaurants', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(newRestaurant),
+    body: JSON.stringify(restaurantToCreate),
   })
 
-  if (response.ok) {
-    // ... code for when we have created a restaurant ...
-  }
+  return response.json()
 }
 ```
 
-We must tell the event that we do not want the `form` to execute its normal
-processing, which would be to submit data to the server. We did not fully
-configure the `<form>` element to do that, and we are essentially **replacing**
-its behavior. `preventDefault` stops that default behavior from happening. We
-haven't had to stop the normal behavior for many events we have dealt with since
-it doesn't impact us.
+Then we can setup the `mutation`
 
-This `fetch` usage is much like our `GET` except we add a second parameter that
-is an object specifying that we wish to use the `POST` method (verb), that we
-are sending `application/json` type data, and finally, a serialized JSON body.
+```typescript
+const createNewRestaurant = useMutation(submitNewRestaurant)
+```
 
-Once done, we process the JSON response.
+Finally, our form submit handler becomes:
+
+```typescript
+async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault()
+
+  createNewRestaurant.mutate(newRestaurant)
+}
+```
 
 # Time to add some React Router
+
+> NOTE: If you do not have _React Router_ installed in your template, you will
+> need to do this step first:
+
+In your `ClientApp` directory:
+
+```
+npm install react-router react-router-dom npm install --save-dev
+@types/react-router @types/react-router-dom
+```
 
 It is now time to start to route our pages. We'd like the `Restaurants` page to
 be at our home path of `/` and the `NewRestaurant` page to be at a path of
 `/new`. Then when we add a restaurant, we will redirect the user back to the
 home page.
 
+If you need to update `main.tsx`
+
+```jsx
+ReactDOM.render(
+  <React.StrictMode>
+    <Router>
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+```
+
 First, we will set up the routes in our App.
 
 ```jsx
 export function App() {
+  ... other code ...
+
   return (
+    ... other code ...
     <Switch>
       <Route exact path="/">
         <Restaurants />
@@ -176,12 +209,13 @@ export function App() {
         <NewRestaurant />
       </Route>
     </Switch>
+    ... other code ...
   )
 }
 ```
 
-Now in both the `Restaurants` and `NewRestaurant` pages, let us update the
-button in the header to be a correct link.
+In the `App` component, let us update the button in the header to be a correct
+link.
 
 ```jsx
 <Link to="/new">
@@ -192,26 +226,19 @@ button in the header to be a correct link.
 Returning to our `NewRestaurant` component, we can now have the user redirected
 to the home page after submitting their new restaurant.
 
-To do this we change handleFormSubmit to call `history.push('/')` after
-submitting the API request.
+To do this we change our mutation to call `history.push('/')` after submitting
+the API request.
 
-We also add `const history = useHistory()` to the top of the `NewRestaurant`
-component and import `useHistory` from `react-router-dom`
+We also add `const history = useHistory()` to use the `history` object from
+`react-router`
 
 ```javascript
-async function handleFormSubmit(event) {
-  event.preventDefault()
-
-  const response = await fetch('/api/Restaurants', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(newRestaurant),
-  })
-
-  if (response.ok) {
+const history = useHistory()
+const createNewRestaurant = useMutation(submitNewRestaurant, {
+  onSuccess: function () {
     history.push('/')
-  }
-}
+  },
+})
 ```
 
 Now, if you click on `+ Restaurant`, type in details for a restaurant and click
@@ -220,4 +247,5 @@ populated
 
 ## Files Updated
 
+<!-- Makes NewRestaurant page function and introduces some basic routing -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2ce30a647b64f1dd680e15ce1c413c83f3ef280b"/>

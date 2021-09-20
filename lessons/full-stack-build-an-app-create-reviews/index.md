@@ -30,28 +30,29 @@ than `PostReview`
 
 ## Update the user interface
 
-In `Restaurant.jsx` we will add a state to track the fields of the review.
+In `Restaurant.tsx` we will add a state to track the fields of the review.
 
-```javascript
-const [newReview, setNewReview] = useState({
+```typescript
+const [newReview, setNewReview] = useState<ReviewType>({
+  id: undefined,
   body: '',
+  stars: 5,
   summary: '',
-  restaurantId: id,
+  createdAt: new Date(),
+  restaurantId: Number(id),
 })
 ```
 
-Notice that we include, by default, the related restaurant id. Including the
-restaurant's id will be required by the API to associate the review to the
-correct restaurant.
-
-We will also have to change `const id = params.id` to
-`const id = Number(params.id)` to ensure that the `id` value is an integer since
-the backend API will demand this.
+Notice that we include, by default, the related restaurant id, converted to a
+number. Including the restaurant's id will be required by the API to associate
+the review to the correct restaurant.
 
 Then we will create a method to track the changes of the text input fields:
 
 ```javascript
-function handleNewReviewTextFieldChange(event) {
+function handleNewReviewTextFieldChange(
+  event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+) {
   const name = event.target.name
   const value = event.target.value
 
@@ -103,7 +104,7 @@ radio buttons:
 Then we will define a method to handle clicking on the radio button:
 
 ```javascript
-function handleStarRadioButton(newStars) {
+function handleStarRadioButton(newStars: number) {
   setNewReview({ ...newReview, stars: newStars })
 }
 ```
@@ -128,57 +129,80 @@ state variable follows the data we are inputting in the form.
 
 ## Handle submitting the form
 
-Create a method to handle the form submit
+Create a function to submit the review:
 
-```javascript
-async function handleNewReviewSubmit(event) {
-  event.preventDefault()
-
+```typescript
+async function submitNewReview(review: ReviewType) {
   const response = await fetch(`/api/Reviews`, {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(newReview),
+    body: JSON.stringify(review),
   })
+
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw await response.json()
+  }
 }
 ```
 
-and
+Then we can make a new mutation to call the function:
+
+```typescript
+const createNewReview = useMutation(submitNewReview, {
+  onSuccess: function () {
+    // ?
+  },
+})
+```
 
 ```jsx
-<form onSubmit={handleNewReviewSubmit}>
+<form
+  onSubmit={function (event) {
+    event.preventDefault()
+    createNewReview.mutate(newReview)
+  }}
+>
 ```
 
 If you use the app at this point, you can put in a new review and submit it.
 Doing so will submit the review, but you'll have to refresh the page to see the
 change.
 
-Then we will move `fetchRestaurant` from outside of the `useEffect` method so
-both the `useEffect` and `handleNewReviewSubmit` can access it.
+We can add `refetch` to the `useQuery` for the restaurant and use that to
+refetch the restaurant and all the reviews.
 
-We also clear out the new restaurant fields. We'll add one more
-`setNewRestaurant` after the `fetchNewRestaurant` in `handleNewReviewSubmit`
+```typescript
+const { refetch, data: restaurant = NullRestaurant } =
+```
 
-```javascript
-async function handleNewReviewSubmit(event) {
-  event.preventDefault()
+```typescript
+const createNewReview = useMutation(submitNewReview, {
+  onSuccess: function () {
+    refetch()
+  },
+})
+```
 
-  const response = await fetch(`/api/Reviews`, {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    body: JSON.stringify(newReview),
-  })
+We also clear out the new restaurant fields.
 
-  if (response.ok) {
+```typescript
+const createNewReview = useMutation(submitNewReview, {
+  onSuccess: function () {
+    refetch()
     setNewReview({
       ...newReview,
       body: '',
+      stars: 5,
       summary: '',
-      stars: 0,
+      createdAt: new Date(),
     })
-
-    fetchRestaurant()
-  }
-}
+  },
+})
 ```
 
+# Try adding a few reviews!
+
+<!-- Create reviews -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2846af285197f794d5e482f88ebb068b8ab4d4d5" />

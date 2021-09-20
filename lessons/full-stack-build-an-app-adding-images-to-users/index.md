@@ -33,12 +33,51 @@ dotnet ef migrations add AddPhotoURLToUser
 dotnet ef database update
 ```
 
+## Update our `types.ts`
+
+Add `photoURL` to our types
+
+```typescript
+export type NewUserType = {
+  fullName: string
+  email: string
+  password: string
+  photoURL: string
+}
+
+export type LoginUserType = {
+  email: string
+  password: string
+  photoURL: string
+}
+
+export type LoginSuccess = {
+  token: string
+  user: {
+    id: number
+    fullName: string
+    email: string
+    photoURL: string
+  }
+}
+```
+
+Clean up any warnings/errors this causes.
+
 ## Updating the SignUp page
 
-Then we will import this component on our `SignUp.jsx` page:
+Then we will import this component on our `SignUp.tsx` page:
 
 ```javascript
 import { useDropzone } from 'react-dropzone'
+```
+
+Add the use of dropzone:
+
+```typescript
+const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  onDrop: onDropFile,
+})
 ```
 
 We'll add a state to track if we are uploading:
@@ -47,56 +86,39 @@ We'll add a state to track if we are uploading:
 const [isUploading, setIsUploading] = useState(false)
 ```
 
+Also copy over the `uploadFile` code from `NewRestaurant.tsx` - Copying the code
+is ok for now. We can clean this up later.
+
+Also add a mutation:
+
+```typescript
+const uploadFileMutation = useMutation(uploadFile, {
+  onSuccess: function (apiResponse: UploadResponse) {
+    const url = apiResponse.url
+
+    setNewUser({ ...newUser, photoURL: url })
+  },
+
+  onError: function (error: string) {
+    setErrorMessage(error)
+  },
+
+  onSettled: function () {
+    setIsUploading(false)
+  },
+})
+```
+
 The dropzone component is expecting a method to call when a file is dropped onto
 a visible target in the UI. Let's add the method for that:
 
 ```javascript
-async function onDropFile(acceptedFiles) {
+async function onDropFile(acceptedFiles: File[]) {
   // Do something with the files
   const fileToUpload = acceptedFiles[0]
-  console.log(fileToUpload)
 
-  // Create a formData object so we can send this
-  // to the API that is expecting some form data.
-  const formData = new FormData()
-
-  // Append a field that is the form upload itself
-  formData.append('file', fileToUpload)
-
-  try {
-    setIsUploading(true)
-
-    // Use fetch to send an authorization header and
-    // a body containing the form data with the file
-    const response = await fetch('/api/Uploads', {
-      method: 'POST',
-      headers: {
-        ...authHeader(),
-      },
-      body: formData,
-    })
-
-    setIsUploading(false)
-
-    // If we receive a 200 OK response, set the
-    // URL of the photo in our state so that it is
-    // sent along when creating the user,
-    // otherwise show an error
-    if (response.status === 200) {
-      const apiResponse = await response.json()
-
-      const url = apiResponse.url
-
-      setNewUser({ ...newUser, photoURL: url })
-    } else {
-      setErrorMessage('Unable to upload image')
-    }
-  } catch (error) {
-    // Catch any network errors and show the user we could not process their upload
-    console.debug(error)
-    setErrorMessage('Unable to upload image')
-    setIsUploading(false)
-  }
+  setIsUploading(true)
+  uploadFileMutation.mutate(fileToUpload)
 }
 ```
 
@@ -160,4 +182,5 @@ Change the avatar code to this, and remove the static avatar import.
 }
 ```
 
+<!-- Adds the ability to upload an avatar for a user -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="272ff13148267773004bdf444348b1e2496226ce"/>

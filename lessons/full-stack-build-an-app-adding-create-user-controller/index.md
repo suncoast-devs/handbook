@@ -31,4 +31,5 @@ public async Task<ActionResult<User>> PostUser(User user)
 }
 ```
 
+<!-- Adds a users controller -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="5fd14abd9de11f1e488b38cc100b04ae3448db90"/>

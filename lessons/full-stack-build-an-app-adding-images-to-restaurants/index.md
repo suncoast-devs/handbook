@@ -206,6 +206,9 @@ public string PhotoURL { get; set; }
 
 ```shell
 dotnet ef migrations add AddPhotoURLToRestaurant
+```
+
+```shell
 dotnet ef database update
 ```
 
@@ -233,7 +236,7 @@ The dropzone component is expecting a method to call when a file is dropped onto
 a visible target in the UI. Let's add the method for that:
 
 ```javascript
-function onDropFile(acceptedFiles) {
+function onDropFile(acceptedFiles: File[]) {
   // Do something with the files
   const fileToUpload = acceptedFiles[0]
   console.log(fileToUpload)
@@ -267,14 +270,10 @@ Replace the existing form input field for a photo with the following:
 Try dragging and dropping a file on that part of the UI. When you drop a file
 you will see the details of your dropped file logged by the `onDropFile` method.
 
-Now we can update `onDropFile` to process the upload.
+Next we will create a function to handle uploading of our file:
 
-```javascript
-async function onDropFile(acceptedFiles) {
-  // Do something with the files
-  const fileToUpload = acceptedFiles[0]
-  console.log(fileToUpload)
-
+```typescript
+async function uploadFile(fileToUpload: File) {
   // Create a formData object so we can send this
   // to the API that is expecting some form data.
   const formData = new FormData()
@@ -282,35 +281,67 @@ async function onDropFile(acceptedFiles) {
   // Append a field that is the form upload itself
   formData.append('file', fileToUpload)
 
-  try {
-    // Use fetch to send an authorization header and
-    // a body containing the form data with the file
-    const response = await fetch('/api/Uploads', {
-      method: 'POST',
-      headers: {
-        ...authHeader(),
-      },
-      body: formData,
-    })
+  // Use fetch to send an authorization header and
+  // a body containing the form data with the file
+  const response = await fetch('/api/Uploads', {
+    method: 'POST',
+    headers: {
+      Authorization: authHeader(),
+    },
+    body: formData,
+  })
 
-    // If we receive a 200 OK response, set the
-    // URL of the photo in our state so that it is
-    // sent along when creating the restaurant,
-    // otherwise show an error
-    if (response.status === 200) {
-      const apiResponse = await response.json()
-
-      const url = apiResponse.url
-
-      setNewRestaurant({ ...newRestaurant, photoURL: url })
-    } else {
-      setErrorMessage('Unable to upload image')
-    }
-  } catch {
-    // Catch any network errors and show the user we could not process their upload
-    console.debug(error)
-    setErrorMessage('Unable to upload image')
+  if (response.ok) {
+    return response.json()
+  } else {
+    throw 'Unable to upload image!'
   }
+}
+```
+
+Then we will create a mutation for this function:
+
+```typescript
+const uploadFileMutation = useMutation(uploadFile, {
+  onSuccess: function (apiResponse: UploadResponse) {
+    const url = apiResponse.url
+
+    setNewRestaurant({ ...newRestaurant, photoURL: url })
+  },
+
+  onError: function (error: string) {
+    setErrorMessage(error)
+  },
+})
+```
+
+Now we can update `onDropFile` to process the upload.
+
+```javascript
+async function onDropFile(acceptedFiles: File[]) {
+  // Do something with the files
+  const fileToUpload = acceptedFiles[0]
+
+  uploadFileMutation.mutate(fileToUpload)
+}
+```
+
+## Update types
+
+We'll now need to add `photoURL` to the `RestaurantType` and adjust any issues
+this introduces.
+
+```typescript
+export type RestaurantType = {
+  id: string | undefined
+  name: string
+  description: string
+  address: string
+  telephone: string
+  latitude: number
+  longitude: number
+  photoURL: string
+  reviews: ReviewType[]
 }
 ```
 
@@ -328,13 +359,16 @@ and back to false when complete.
 
 ```javascript
 setIsUploading(true)
-
-// The `fetch` code is here
-
-setIsUploading(false)
 ```
 
-Also add `setIsUploading(false)` to the catch block.
+Then we will add an `onSettled` for our mutation. This will run regardless of
+success or failure.
+
+```javascript
+onSettled: function () {
+  setIsUploading(false)
+},
+```
 
 Then create a variable to hold the drop zone message:
 
@@ -390,4 +424,5 @@ Update the `Restaurant` component to display the restaurant image, if present.
 }
 ```
 
+<!-- Adds photo uploading -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="ab7d80de04ac895e1e3355ee424dbaad71b5e319" />

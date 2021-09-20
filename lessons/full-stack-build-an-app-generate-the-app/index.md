@@ -24,15 +24,22 @@ From your command line in the directory where you've stored your other
 assignments, execute the following command
 
 ```shell
-dotnet new sdg-react -o TacoTuesday
+dotnet new sdg-react-no-client-app -o TacoTuesday
 ```
 
-## `ClientApp` uses `npm`
+## Generate a `ClientApp`
 
-When adding third-party libraries to our front end, we will be using `npm`.
+```shell
+degit YOUR-GITHUB-ACCOUNT-HERE/react-project-template ClientApp
+```
 
-You must also run those commands **from the ClientApp folder**. So before any
-`npm install` commands you must first `cd ClientApp`
+```shell
+git add .
+```
+
+```shell
+git commit -m "Initial ClientApp"
+```
 
 ## Running the application
 
@@ -44,18 +51,26 @@ dotnet watch run
 
 and then in the second:
 
-(You may need to `cd` again to your project if the new terminal/PowerShell starts in your "home" folder)
+(You may need to `cd` again to your project if the new terminal/PowerShell
+starts in your "home" folder)
 
 ```shell
 cd ClientApp
 npm start
 ```
 
+## Visit your app
+
+Open your browser and visit `http://localhost:5000`, this is the URL we will use
+to view our full stack web application.
+
 ## Setting the JWT Key
 
 You may see a page that says: `You do not have a valid JWT_KEY.`
 
-To resolve this, you can run `dotnet user-secrets init` followed by the
-`dotnet user-secrets set` command given on that page.
+To resolve this warning, follow the instructions on the screen, restart
+`dotnet watch run` and reload your browser at `http://localhost:5000` -- You
+should see your default front end template's content.
 
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="cd14c5c3e43c53e566bd048c83c30f4783c899c4" />
+<!-- Initial Commit -->
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="29b8ca279a640861ccb77cc080d73a352abf6d78" />

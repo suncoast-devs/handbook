@@ -87,10 +87,10 @@ namespace TacoTuesday.Models
     {
         public int Id { get; set; }
 
-        [Required("You must provide your name")]
+        [Required(ErrorMessage = "You must provide your name")]
         public string FullName { get; set; }
 
-        [Required("You must provide your email")]
+        [Required(ErrorMessage = "You must provide your email")]
         public string Email { get; set; }
 
         [JsonIgnore]
@@ -152,4 +152,5 @@ After validating the migration looks good, run it:
 dotnet ef database update
 ```
 
+<!-- Creates User Model -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="52835acd14728f0ca26a99621e264b9dfe30fdb6"/>
