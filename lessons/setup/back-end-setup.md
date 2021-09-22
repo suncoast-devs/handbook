@@ -72,6 +72,10 @@ dotnet new --install SDG.templates.Web.API
 dotnet new --install SDG.templates.Web.React
 ```
 
+```shell
+dotnet new --install SDG.templates.Web.React.NoClientApp
+```
+
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
 ### Add dotnet tools to path

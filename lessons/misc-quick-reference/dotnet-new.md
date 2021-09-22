@@ -24,6 +24,7 @@ dotnet new --install SDG.templates.Console
 dotnet new --install SDG.templates.Console.Database
 dotnet new --install SDG.templates.Web.API
 dotnet new --install SDG.templates.Web.React
+dotnet new --install SDG.templates.Web.React.NoClientApp
 ```
 
 ## Using
