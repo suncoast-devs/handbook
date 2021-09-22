@@ -23,11 +23,16 @@ rest of the directories.
 From your command line in the directory where you've stored your other
 assignments, execute the following command
 
+(replace MyApp with your application name, e.g. `TacoTuesday`)
+
 ```shell
-dotnet new sdg-react-no-client-app -o TacoTuesday
+dotnet new sdg-react-no-client-app -o MyApp
 ```
 
 ## Generate a `ClientApp`
+
+After doing a `cd` to change directory into your project's folder (e.g.
+`cd TacoTuesday`) you can generate your client app.
 
 ```shell
 degit YOUR-GITHUB-ACCOUNT-HERE/react-project-template ClientApp

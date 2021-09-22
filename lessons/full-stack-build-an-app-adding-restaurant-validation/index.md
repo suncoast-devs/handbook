@@ -31,12 +31,12 @@ namespace TacoTuesday.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage="You must provide a name")]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "You must provide an address.")]
+        [Required(ErrorMessage = "You must provide an address")]
         public string Address { get; set; }
 
         public string Telephone { get; set; }
@@ -171,7 +171,7 @@ user. We can put this above the button, or at the top of the form
 
 ```jsx
 {
-  errorMessage ? <p>{errorMessage}</p> : null
+  errorMessage ? <p className="form-error">{errorMessage}</p> : null
 }
 ```
 
@@ -192,6 +192,25 @@ with a red border and adding the error text next to the field.
 
 We'll leave this as an exercise for the reader. Also, you may want to look into
 some popular React forms libraries that add these capabilities for you.
+
+## Update the `<a>` link to the home page
+
+Change this:
+
+```html
+<a href="/">
+  <i className="fa fa-home"></i>
+</a>
+```
+
+to
+
+```jsx
+<Link to="/">
+  <i className="fa fa-home"></i>
+</Link>
+
+```
 
 ## Files Updated
 

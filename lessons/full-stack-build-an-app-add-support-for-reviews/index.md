@@ -26,7 +26,9 @@ namespace TacoTuesday.Models
         public string Body { get; set; }
         public int Stars { get; set; }
         public DateTime CreatedAt { get; private set; } = DateTime.Now;
+
         public int RestaurantId { get; set; }
+        public Restaurant Restaurant { get; set; }
     }
 }
 ```

@@ -246,5 +246,5 @@ from our API.
 > `heroku config:set VITE_APP_MAPBOX_TOKEN="xxxx"` with your specific key in
 > place of `xxxx` at least once before you deploy.
 
-<!-- Adds maps to user inteface -->
+<!-- Adds maps to user interface -->
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="999fc9a23964684316c468b6c9d17519c66ead59" />

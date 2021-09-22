@@ -63,7 +63,7 @@ changes.
 Let's implement one of the handling methods, `handleAddress`:
 
 ```javascript
-function handleAddress(event: React.ChangeEvent<HTMLInputElement>) {
+function handleAddress(event: React.ChangeEvent<HTMLTextAreaElement>) {
   const newAddressText = event.target.value
 
   const updatedRestaurant = { ...newRestaurant, address: newAddressText }
@@ -168,8 +168,12 @@ async function handleFormSubmit(event: React.FormEvent<HTMLFormElement>) {
 
 In your `ClientApp` directory:
 
+```shell
+npm install react-router react-router-dom
 ```
-npm install react-router react-router-dom npm install --save-dev
+
+```shell
+npm install --save-dev
 @types/react-router @types/react-router-dom
 ```
 

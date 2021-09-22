@@ -130,6 +130,6 @@ And we will also add a button to our main navigation.
 
 And with this, we have the ability for users to sign up for our app!
 
-<!-- Update the signup comonent to create a user -->
+<!-- Update the signup component to create a user -->
 
 <GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="63e8169f7295ff0b9cc19ae3a22c1aeb3f3c4877"/>
