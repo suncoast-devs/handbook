@@ -78,4 +78,4 @@ To resolve this warning, follow the instructions on the screen, restart
 should see your default front end template's content.
 
 <!-- Initial Commit -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="29b8ca279a640861ccb77cc080d73a352abf6d78" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="519ab836f82c8ab8ca3a36f1fae0d173b2869da1" />

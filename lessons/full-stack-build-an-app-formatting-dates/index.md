@@ -53,9 +53,7 @@ pass that and the format string to the `format` function from `date-fns`
 
 ```jsx
 <time>
-  {review.createdAt
-    ? format(new Date(review.createdAt), dateFormat)
-    : null}
+  {review.createdAt ? format(new Date(review.createdAt), dateFormat) : null}
 </time>
 ```
 
@@ -70,4 +68,4 @@ example of how to perform this type of logic.
 ---
 
 <!-- Formats dates -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="bd9b06020eb28baf2591d3698c9d29b2dc16e4a6" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="7f6be20cc388e06eaaf78281ebdd555c8af3a69e" />

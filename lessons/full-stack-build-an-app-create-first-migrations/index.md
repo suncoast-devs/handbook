@@ -120,4 +120,4 @@ psql --file=Models/exampledata.sql TacoTuesdayDatabase
 > timestamps
 
 <!-- Created Restaurants models, tables, and seeds -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="627d5ac099687703d1d616ecaba51346194aab00" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="455d9f6ae7609d2b9ae5f17b632338079227e71f" />

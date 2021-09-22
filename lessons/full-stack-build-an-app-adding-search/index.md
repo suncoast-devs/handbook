@@ -89,4 +89,4 @@ const { data: restaurants = [] } = useQuery<RestaurantType[]>(
 ## Files Updated
 
 <!-- Adds restaurant searching -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="1c69361a52c6295487fb86e1ef099ccd86623a49"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="6db5ed8c7f0ae579f7a161da765211d175504866"/>

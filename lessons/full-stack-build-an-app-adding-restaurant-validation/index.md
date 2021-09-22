@@ -209,10 +209,9 @@ to
 <Link to="/">
   <i className="fa fa-home"></i>
 </Link>
-
 ```
 
 ## Files Updated
 
 <!-- Adds some validation of restaurant fields -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="2253d9ba68715f324c92a823135e3e649e93ee0e" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="f67a90870791aefd00cd35175734051d85e36a96" />

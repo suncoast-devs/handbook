@@ -133,8 +133,8 @@ export type ReviewType = {
 
 > NOTE: `createdAt` is a `string` because there is no `Date` type in JSON.
 
-Then we can update the `RestaurantType` to reflect that it has an array
-of `ReviewType`
+Then we can update the `RestaurantType` to reflect that it has an array of
+`ReviewType`
 
 ```typescript
 export type RestaurantType = {
@@ -247,4 +247,4 @@ You will also notice that there are some features we haven't finished.
 We will come back and revise this in a later step.
 
 <!-- Add support for reviews -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="919cd65140bd2677f96501685a981c7609ae6d7f" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="dc10de7a92063fa67bbc1de382406ecf2c6fba7a" />

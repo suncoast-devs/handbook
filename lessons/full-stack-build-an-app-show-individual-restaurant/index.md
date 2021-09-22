@@ -123,4 +123,4 @@ Replace it with:
 ```
 
 <!-- Implements showing a single restaurant -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="323c05bd5b0db947bc0b5c6c8f13b3a9bbca456d" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="e63f2dce5b98b57f4c7535838cdf0a530df59953" />

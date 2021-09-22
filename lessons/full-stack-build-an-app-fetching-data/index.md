@@ -85,9 +85,11 @@ export type RestaurantType = {
 }
 ```
 
-We make the `id` **optional** by adding a trailing `?` to the name of the property.
+We make the `id` **optional** by adding a trailing `?` to the name of the
+property.
 
-This field is optional because we won't always have an `id` field. For example, when creating a new restaurant.
+This field is optional because we won't always have an `id` field. For example,
+when creating a new restaurant.
 
 Now in `Restaurants.tsx` we can add:
 
@@ -149,7 +151,7 @@ restaurants on our home page.
 ## Files Updated
 
 <!-- Loading restaurants from the API -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="bd18683c61b93cd22c7c22470f461636adbb2450" />
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="baec0177adf65531c7fb0683445d939afef9d57c" />
 
 ## Refactor
 
@@ -185,4 +187,4 @@ function RestaurantList() {
 ## Files Updated
 
 <!-- Refactors restaurant in a list into its own component -->
-<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="4928a22c1fae76dbabc2beb0ae5dc39937169f12"/>
+<GithubCommitViewer repo="suncoast-devs/TacoTuesday" commit="b3e5601f5b3500dff6b593c849d5a8bed9a48b99"/>
