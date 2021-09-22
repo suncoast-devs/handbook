@@ -137,6 +137,47 @@ but the most direct ones are:
 }
 ```
 
+## Destructuring axios response
+
+Instead of accessing properties of the `response` object such as this:
+
+```javascript
+const response = await axios({
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+})
+const items = response.data
+
+if (response.status === 200) {
+  console.log(items)
+}
+```
+
+we can destructure the object during assignment.
+
+```javascript
+const { status, data } = await axios({
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+})
+const items = data
+
+if (status === 200) {
+  console.log(items)
+}
+```
+
+We can even **rename** a destructured variable to avoid having to do
+`const items = data`
+
+```javascript
+const { status, data: items } = await axios({
+  url: 'https://one-list-api.herokuapp.com/items?access_token=illustriousvoyage',
+})
+
+if (status === 200) {
+  console.log(items)
+}
+```
+
 ## Setting default global headers
 
 Let's say you wanted to send a header for authorization on every request once

@@ -36,9 +36,9 @@ In this case `result` is `10.5`.
 
 ## `%`
 
-This is known as the modulo operator. The result of `firstNumber % secondNumber`
-is equal to whatever the remainder would be if we divided `secondNumber` into
-`firstNumber`.
+This is known as the **REMAINDER** operator. The result of
+`firstNumber % secondNumber` is equal to whatever the remainder would be if we
+divided `secondNumber` into `firstNumber`.
 
 Taking our above example:
 
@@ -53,7 +53,20 @@ const remainder = firstNumber % secondNumber
 In this case `result` is `10.5` and `remainder` is `2`. The remainder is `2`
 because as we divide 4 into `42` we can only do so `10` times, leaving `2` over.
 
-### Modulo is useful for things like determining if a number is even or odd.
+### CAUTION: Remainder with negative numbers!
+
+```js
+const firstNumber = -42
+const secondNumber = 4
+
+const result = firstNumber / secondNumber
+const remainder = firstNumber % secondNumber
+```
+
+In this case, `result` is `-10.5` and `remainder` is `-2`! NOTE, in some
+languages the `%` means a `modulus` and will always be _positive_
+
+### Remainder/% is useful for things like determining if a number is even or odd.
 
 ```js
 const isThreeEven = 3 % 2 == 0 // False

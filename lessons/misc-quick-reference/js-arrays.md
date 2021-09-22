@@ -2,6 +2,42 @@
 title: JavaScript Arrays
 ---
 
+## Spread Operator and Arrays
+
+We can make a new array from the elements of an existing array using the
+`spread` operator (`...`)
+
+```javascript
+const words = ['Wind', 'Rain', 'Fire']
+
+const otherWords = [...words]
+```
+
+You can think of `...words` to mean `take all the contents of `words` and put
+them right here.
+
+```
+const words =      ['Wind', 'Rain', 'Fire']
+                      |       |       |
+                      |       |       |
+                      v       v       v
+const otherWords = [      ...words          ]
+const otherWords = [ 'Wind', 'Rain', 'Fire' ]
+```
+
+We can also add entries **before** and **after** the spread.
+
+```javascript
+const words = ['Wind', 'Rain', 'Fire']
+
+const otherWords = ['Before', ...words, 'After']
+// otherWords is now ['Before', 'Wind', 'Rain', 'Fire', 'After']
+```
+
+This is often useful to make a _copy_ of an array:
+`const copyOfArray = [...array]` or append to an array:
+`const newArrayWithWordAppended = [...array, newWord]`
+
 ## `join(delimiter = ',')`
 
 Joins all elements of an array into a string. Without any argument the list will
@@ -11,9 +47,9 @@ be joined with a `,`
 const words = new Array('Wind', 'Rain', 'Fire')
 const sentence = words.join(' - ') // sentence is "Wind - Rain - Fire"
 
-const otherSentence = myArray.join() // otherSentence is "Wind,Rain,Fire"
+const otherSentence = words.join() // otherSentence is "Wind,Rain,Fire"
 
-const wordsTogether = myArray.join('') // wordsTogether is "WindRainFire"
+const wordsTogether = words.join('') // wordsTogether is "WindRainFire"
 ```
 
 ## `push()`
@@ -60,7 +96,7 @@ Extracts a section of an array and returns a new array.
 
 ```javascript
 const myArray = new Array('a', 'b', 'c', 'd', 'e')
-myArray = myArray.slice(1, 4) // starts at index 1 and extracts all elements until index 3, returning [ "b", "c", "d"]
+const mySlice = myArray.slice(1, 4) // starts at index 1 and extracts all elements until index 3, mySlice is [ "b", "c", "d"] while myArray remains ['a', 'b', 'c', 'd', 'e']
 ```
 
 ## `splice(index, count_to_remove, addElement1, addElement2, ...)`
@@ -116,6 +152,17 @@ const sortFunction = function (a, b) {
 
 const myArray = ['three', 'four', 'one']
 const sortedArray = myArray.sort(sortFunction)
+// sortedArray now has [ 'one', 'four', 'three' ]
+```
+
+> NOTE, we could use this more brief code: for `sortFunction` :
+> `return a.length - b.length`
+
+> NOTE: We could also write this:
+
+```javascript
+const myArray = ['three', 'four', 'one']
+const sortedArray = myArray.sort((a, b) => a.length - b.length)
 // sortedArray now has [ 'one', 'four', 'three' ]
 ```
 
@@ -188,8 +235,8 @@ that satisfies the provided testing function.
 
 ```javascript
 const numbers = [42, 100, 19, 33, 66, 50]
-const firstNumberMoreThan100 = numbers.findIndex(number => number > 50)
-console.log(firstNumberMoreThan100) // Logs 100
+const firstNumberMoreThan50 = numbers.find(number => number > 50)
+console.log(firstNumberMoreThan50) // Logs 100
 ```
 
 ## `findIndex(callback)`
@@ -198,8 +245,8 @@ Returns the index of the element for which the callback returns true.
 
 ```javascript
 const numbers = [42, 100, 19, 33, 66, 50]
-const indexOfFirstNumberMoreThan100 = numbers.findIndex(number => number > 50)
-console.log(indexOfFirstNumberMoreThan100) // Logs 1 (the index of the `100`)
+const indexOfFirstNumberMoreThan50 = numbers.findIndex(number => number > 50)
+console.log(indexOfFirstNumberMoreThan50) // Logs 1 (the index of the `100`)
 ```
 
 ## `includes(element)`
@@ -265,7 +312,7 @@ or the entire array they are available as optional parameters.
 ```javascript
 const numbers = [10, 20, 30]
 
-const total = a.reduce((totalSoFar, number) => totalSoFar + number, 0)
+const total = numbers.reduce((totalSoFar, number) => totalSoFar + number, 0)
 console.log(total) // Prints 60
 ```
 
@@ -337,6 +384,6 @@ Joins two or more arrays and returns a new array.
 
 ```javascript
 const myArray = new Array('1', '2', '3')
-myArray = myArray.concat('a', 'b', 'c')
-// myArray is now ["1", "2", "3", "a", "b", "c"]
+myNewArray = myArray.concat('a', 'b', 'c')
+// myNewArray is now ["1", "2", "3", "a", "b", "c"]
 ```
