@@ -77,11 +77,11 @@ Change the logic in `GetRestaurants` to:
 ```csharp
 if (filter == null)
 {
-    return await _context.Restaurants.OrderBy(restaurant => restaurant.Name).Include(restaurant => restaurant.Reviews).ToListAsync();
+    return await _context.Restaurants.OrderBy(restaurant => restaurant.Id).Include(restaurant => restaurant.Reviews).ToListAsync();
 }
 else
 {
-    return await _context.Restaurants.OrderBy(restaurant => restaurant.Name).Where(restaurant => restaurant.Name.Contains(filter)).Include(restaurant => restaurant.Reviews).ToListAsync();
+    return await _context.Restaurants.OrderBy(restaurant => restaurant.Id).Where(restaurant => restaurant.Name.Contains(filter)).Include(restaurant => restaurant.Reviews).ToListAsync();
 }
 ```
 
@@ -122,31 +122,55 @@ First we need to add a type definition for a review in `types.ts`
 
 ```typescript
 export type ReviewType = {
-  id: number | undefined
+  id?: number
   summary: string
   body: string
   stars: number
-  createdAt: Date
+  createdAt?: string
   restaurantId: number
 }
 ```
 
-Then we can update the `RestaurantType` to reflect that it has an _optional_
-array of `ReviewType`
+> NOTE: `createdAt` is a `string` because there is no `Date` type in JSON.
+
+Then we can update the `RestaurantType` to reflect that it has an array
+of `ReviewType`
 
 ```typescript
 export type RestaurantType = {
-  id: string | undefined
+  id?: number
   name: string
   description: string
   address: string
   telephone: string
-  reviews?: ReviewType[]
+  reviews: ReviewType[]
 }
 ```
 
-The `?` after `reviews` means that this property is optional and thus `reviews`
-might be undefined.
+Then in the `Restaurant.tsx` we will add `reviews: []` to our `NullRestaurant`
+so that our initial state will have an empty array of reviews.
+
+```typescript
+const NullRestaurant: RestaurantType = {
+  name: '',
+  address: '',
+  description: '',
+  telephone: '',
+  reviews: [],
+}
+```
+
+And in `NewRestaurant.tsx` we will need to update the default state:
+
+```typescript
+const [newRestaurant, setNewRestaurant] = useState<RestaurantType>({
+  name: '',
+  description: '',
+  address: '',
+  telephone: '',
+  reviews: [],
+})
+```
 
 We can now use that to count these in the user interface in
 `SingleRestaurantFromList.tsx`
@@ -158,12 +182,8 @@ Change the hardcoded:
 ```
 
 ```jsx
-({restaurant?.reviews?.length || 0})
+({props.restaurant.reviews.length})
 ```
-
-The `?` after `reviews` here means \_try to access reviews, and if it is
-undefined then don't bother trying to access `.length`, let the expression be
-`undefined`. In this case the `||` will allow us to show a `0` instead.
 
 Now add similar `Include` code in the controller with `GetRestaurant`
 
@@ -172,20 +192,18 @@ Now add similar `Include` code in the controller with `GetRestaurant`
 var restaurant = await _context.Restaurants.Include(restaurant => restaurant.Reviews).Where(restaurant => restaurant.Id == id).FirstOrDefaultAsync();
 ```
 
-Then in the `Restaurant.tsx` we will add `reviews: []` to our `NullRestaurant`
-so that our initial state will have an empty array of reviews. We are going to
-use the `reviews` property of the restaurant object to render each individual
-review. This is why having an "empty" representation of the restaurant in the
-state is useful.
+We are going to use the `reviews` property of the restaurant object to render
+each individual review. This is why having an "empty" representation of the
+restaurant in the state is useful.
 
 Change the hardcoded:
 
 ```
-2,188
+(2,188)
 ```
 
 ```jsx
-({restaurant.reviews?.length || 0})
+({restaurant.reviews.length})
 ```
 
 Updating the JSX for showing the list of reviews, we use `map` to loop over the

@@ -77,13 +77,17 @@ Open `types.ts` and add:
 
 ```ts
 export type RestaurantType = {
-  id: number
+  id?: number
   name: string
   description: string
   address: string
   telephone: string
 }
 ```
+
+We make the `id` **optional** by adding a trailing `?` to the name of the property.
+
+This field is optional because we won't always have an `id` field. For example, when creating a new restaurant.
 
 Now in `Restaurants.tsx` we can add:
 

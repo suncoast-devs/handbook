@@ -123,7 +123,7 @@ event handles all the ways a form may be submitted (e.g., pressing enter in an
 input field)
 
 ```jsx
-<form onSubmit={handleFormSubmit}></form>
+<form onsubmit={handleformsubmit}></form>
 ```
 
 The implementation of `handleFormSubmit` will use a `react-query` `mutation` to
@@ -173,8 +173,7 @@ npm install react-router react-router-dom
 ```
 
 ```shell
-npm install --save-dev
-@types/react-router @types/react-router-dom
+npm install --save-dev @types/react-router @types/react-router-dom
 ```
 
 It is now time to start to route our pages. We'd like the `Restaurants` page to
@@ -183,6 +182,10 @@ be at our home path of `/` and the `NewRestaurant` page to be at a path of
 home page.
 
 If you need to update `main.tsx`
+
+```typescript
+import { BrowserRouter as Router } from 'react-router-dom'
+```
 
 ```jsx
 ReactDOM.render(

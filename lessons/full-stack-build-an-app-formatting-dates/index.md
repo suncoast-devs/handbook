@@ -15,11 +15,11 @@ application, we will use `date-fns` to format dates.
 
 To add the javascript library, use the following steps:
 
-- Stop `dotnet watch run`
-- `cd ClientApp`
-- `npm install date-fns`
-- `cd ..`
-- `dotnet watch run`
+From the `ClientApp` directory:
+
+```shell
+npm install date-fns
+```
 
 The [format](https://date-fns.org/v2.14.0/docs/format) function from `date-fns`
 has useful configuration options.
@@ -52,7 +52,11 @@ Then to use this, we need to convert `review.createdAt` to a `Date` object and
 pass that and the format string to the `format` function from `date-fns`
 
 ```jsx
-<time>{format(new Date(review.createdAt), dateFormat)}</time>
+<time>
+  {review.createdAt
+    ? format(new Date(review.createdAt), dateFormat)
+    : null}
+</time>
 ```
 
 Another excellent option might use a relative time (e.g. `20 days ago`) if the

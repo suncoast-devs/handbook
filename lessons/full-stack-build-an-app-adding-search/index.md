@@ -43,7 +43,7 @@ else
 
 ## Updating the UI to allow for filtering
 
-First, let's update the `NavBar` to contain a state for the filter text.
+First, let's update `Restaurants.tsx` to contain a state for the filter text.
 
 ```javascript
 const [filterText, setFilterText] = useState('')
@@ -72,7 +72,7 @@ Then we will update the `<input>` tag
   our filter text.
 
 ```javascript
-const { data: restaurants } = useQuery<RestaurantType[]>(
+const { data: restaurants = [] } = useQuery<RestaurantType[]>(
   ['restaurants', filterText],
   async function () {
     const response = await fetch(

@@ -61,7 +61,6 @@ our object when there is no data being returned from `react query`
 
 ```typescript
 const NullRestaurant: RestaurantType = {
-  id: undefined,
   name: '',
   address: '',
   description: '',
@@ -109,8 +108,18 @@ We will update the `SingleRestaurantFromList` to make the name a clickable
 
 ```jsx
 <h2>
-  <Link to={`/restaurants/${restaurant.id}`}>{restaurant.name}</Link>
+  <Link to={`/restaurants/${props.restaurant.id}`}>{restaurant.name}</Link>
 </h2>
+```
+
+# Update the restaurant page `<a>` link for home
+
+Replace it with:
+
+```jsx
+<Link to="/">
+  <i className="fa fa-home"></i>
+</Link>
 ```
 
 <!-- Implements showing a single restaurant -->

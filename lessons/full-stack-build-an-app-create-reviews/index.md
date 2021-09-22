@@ -34,11 +34,9 @@ In `Restaurant.tsx` we will add a state to track the fields of the review.
 
 ```typescript
 const [newReview, setNewReview] = useState<ReviewType>({
-  id: undefined,
   body: '',
   stars: 5,
   summary: '',
-  createdAt: new Date(),
   restaurantId: Number(id),
 })
 ```
@@ -103,7 +101,7 @@ radio buttons:
 
 Then we will define a method to handle clicking on the radio button:
 
-```javascript
+```typescript
 function handleStarRadioButton(newStars: number) {
   setNewReview({ ...newReview, stars: newStars })
 }
@@ -196,7 +194,6 @@ const createNewReview = useMutation(submitNewReview, {
       body: '',
       stars: 5,
       summary: '',
-      createdAt: new Date(),
     })
   },
 })

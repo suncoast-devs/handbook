@@ -43,7 +43,7 @@ git add .
 ```
 
 ```shell
-git commit -m "Initial ClientApp"
+git commit -m "Initial Commit"
 ```
 
 ## Running the application

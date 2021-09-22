@@ -31,12 +31,12 @@ namespace TacoTuesday.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage="You must provide a name")]
+        [Required(ErrorMessage="You must provide a name.")]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "You must provide an address")]
+        [Required(ErrorMessage = "You must provide an address.")]
         public string Address { get; set; }
 
         public string Telephone { get; set; }
