@@ -8,14 +8,7 @@ order: 24
 Our design shows the name of the reviewer along with the review. Let's add
 support for that.
 
-The first thing we will do is to add an accessor for the associated user in
-`Review.cs`
-
-```csharp
-public User User { get; set; }
-```
-
-Then in the `RestaurantController` we will modify the `HttpGet` for a _single_
+In the `RestaurantController` we will modify the `HttpGet` for a _single_
 restaurant to include the `User` in the list of associated models we fetch.
 
 ```csharp

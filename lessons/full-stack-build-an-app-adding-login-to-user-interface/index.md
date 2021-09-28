@@ -71,7 +71,7 @@ async function loginUser(user: LoginUserType): Promise<LoginSuccess> {
   if (response.ok) {
     return response.json()
   } else {
-    return await response.json()
+    throw await response.json()
   }
 }
 ```
@@ -100,7 +100,7 @@ const loginUserMutation = useMutation(loginUser, {
 ```jsx
 <form
   onSubmit={function (event) {
-    event.preventDefault
+    event.preventDefault()
 
     loginUserMutation.mutate(user)
   }}
@@ -153,9 +153,6 @@ The contents of `auth.ts` give some useful client-side methods to:
 - Get the elements needed for an authentication header for `fetch`
 - Store the authentication info `recordAuthentication`
 - Logout
-
-The template added an `auth.ts` at the top level of your front end, right next
-to the `App.tsx`.
 
 The contents of the `auth.ts` are:
 

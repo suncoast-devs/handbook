@@ -3,7 +3,7 @@ title: Storing the User that Created Restaurants and Reviews
 order: 23
 ---
 
-# Storing the User that Created Restaurant and Reviews
+# Storing the User that Created Restaurants and Reviews
 
 If we want to store the user that created a restaurant or a review, we need to
 add some details to the models. Specifically, we will need to store the `UserId`
@@ -13,6 +13,7 @@ Add the following to both `Restaurant` and `Review`
 
 ```csharp
 public int UserId { get; set; }
+public User User { get; set; }
 ```
 
 Once added, we can run a single migration that will update both of these tables.
