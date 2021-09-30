@@ -129,6 +129,7 @@ demonstrating the idea and then apply them to a past project.
 | Serverless Sites                               |
 | Continuous integration/deployment              |
 | UI/UX                                          |
+| GIT/Source control                             |
 
 ### More technologies
 

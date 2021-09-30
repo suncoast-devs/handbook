@@ -6,6 +6,7 @@ title: Podcasts
 
 - [Programming Subreddit](https://reddit.com/r/programming/)
 - [hacker news](https://news.ycombinator.com/)
+- [Medium](https://medium.com/)
 
 ## Algorithms
 
