@@ -27,7 +27,7 @@ if (someBooleanCondition) {
   // Code if the condition is true
 }
 else {
-  // code if the condition is false
+  // Code if the condition is false
 }
 ```
 
@@ -218,7 +218,7 @@ This is where a _loop_ style control flow helps us. The first we will see is the
 The `while` statement repeats the code inside the `{ }` braces as long as the
 condition supplied remains true.
 
-Let's say we want to ask the the user their name and greet them until the user
+Let's say we want to ask the user their name and greet them until the user
 enters the text `quit`. The code would look like this:
 
 ```csharp
