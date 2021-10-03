@@ -177,7 +177,7 @@ Let us make a `class` for this `Employee` structure.
 ```csharp
 class Employee
 {
-  // public means "this can be seen outside of the class
+  // public means "this can be seen outside of the class"
   // |
   // |   Type
   // |   |
@@ -612,7 +612,7 @@ class Employee
 
 The definition of this method should seem familiar to our previous encounter
 with methods. However, you will notice we no longer have the parameters to the
-method as we do for `ComputeMonthySalaryFromYearly`. When defining a class's
+method as we do for `ComputeMonthlySalaryFromYearly`. When defining a class's
 methods, we have access to all the other attributes of the specific object!
 
 That is, any method on a class, when called for a specific object, can ask "Who
