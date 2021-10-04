@@ -4,9 +4,9 @@ assignments:
   - cs-all-cards-on-deck
 ---
 
-Often in programming, we need to perform a task repeatedly or we need to
-process all of the items in some collection. For these situations we can use the
-idea of `loops`.
+Often in programming, we need to perform a task repeatedly or we need to process
+all of the items in some collection. For these situations we can use the idea of
+`loops`.
 
 Let's say we want to perform some statement, or statements, `10` times. We could
 do this with the `while` control flow statement as follows:
@@ -68,7 +68,7 @@ for (var index = 0; index < names.Length; index++) {
 }
 ```
 
-In this case we start the `index` at 0 since our array index start at `0`. And
+In this case we start the `index` at 0 since our array index starts at `0`. And
 we want to keep the loop going as long as the index stays _less_ than the length
 of the array (again, since array indexes start at `0` and end one index _before_
 the value of their length).
