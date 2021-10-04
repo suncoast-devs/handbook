@@ -165,7 +165,7 @@ The contents of the `auth.ts` are:
 //
 // fetch('/api/Thing', {
 //    method: 'POST',
-//    headers: { 'content-type': 'application/json', ...authHeader() },
+//    headers: { 'content-type': 'application/json', Authorization: authHeader() },
 //    body: JSON.stringify(thing)
 // })
 
@@ -176,7 +176,7 @@ import { LoginSuccess } from './types'
 export function authHeader() {
   const auth = authFromStorage()
 
-  return auth.token ? `Bearer ${auth.token}` : null
+  return auth.token ? `Bearer ${auth.token}` : ''
 }
 
 // Save the authentication received from the API

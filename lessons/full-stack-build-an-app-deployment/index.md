@@ -65,13 +65,13 @@ heroku config:set CLOUDINARY_CLOUD_NAME=REPLACE-THIS
 heroku config:set CLOUDINARY_API_KEY=REPLACE-THIS
 heroku config:set CLOUDINARY_API_SECRET=REPLACE-THIS
 heroku config:set BING_MAPS_KEY=REPLACE-THIS
-heroku config:set REACT_APP_MAPBOX_TOKEN=REPLACE-THIS
+heroku config:set VITE_APP_MAPBOX_TOKEN=REPLACE-THIS
 ```
 
 ## `git push heroku HEAD:main`
 
 This command will push your code **JUST** to Heroku for hosting. This means when
-you make a change, you should push to GitHub as normal (e.g. `git push master`)
+you make a change, you should push to GitHub as normal (e.g. `git push`)
 and also to Heroku (e.g. `git push heroku HEAD:main`).
 
 You will notice that after the typical messages you get from a `git push`, your

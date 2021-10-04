@@ -93,10 +93,6 @@ namespace TacoTuesday.Controllers
         //
         // Creates a new uploaded file
         //
-        // The `body` of the request is parsed and then made available to us as a User
-        // variable named user. The controller matches the keys of the JSON object the client
-        // supplies to the names of the attributes of our User POCO class. This represents the
-        // new values for the record.
         //
         [HttpPost]
         [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
@@ -212,6 +208,33 @@ dotnet ef migrations add AddPhotoURLToRestaurant
 dotnet ef database update
 ```
 
+## Update types
+
+We'll now need to add `photoURL` to the `RestaurantType` and adjust any issues
+this introduces.
+
+```typescript
+export type RestaurantType = {
+  id: string | undefined
+  name: string
+  description: string
+  address: string
+  telephone: string
+  latitude: number
+  longitude: number
+  photoURL: string
+  reviews: ReviewType[]
+}
+```
+
+We'll also need a type for handining API results:
+
+```typescript
+export type UploadResponse = {
+  url: string
+}
+```
+
 ## Updating the user interface to upload a photo when creating a restaurant
 
 To allow a user to upload a file to our restaurant, we'll use a fancy
@@ -323,25 +346,6 @@ async function onDropFile(acceptedFiles: File[]) {
   const fileToUpload = acceptedFiles[0]
 
   uploadFileMutation.mutate(fileToUpload)
-}
-```
-
-## Update types
-
-We'll now need to add `photoURL` to the `RestaurantType` and adjust any issues
-this introduces.
-
-```typescript
-export type RestaurantType = {
-  id: string | undefined
-  name: string
-  description: string
-  address: string
-  telephone: string
-  latitude: number
-  longitude: number
-  photoURL: string
-  reviews: ReviewType[]
 }
 ```
 

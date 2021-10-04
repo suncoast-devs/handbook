@@ -5,7 +5,7 @@ order: 25
 
 # Stars
 
-Let's update both the `SingleRestaurantFromList.tsx` and `Restaurants.tsx` to
+Let's update both the `SingleRestaurantFromList.tsx` and `Restaurant.tsx` to
 show the correct average review stars for a restaurant.
 
 ## `Restaurant.tsx`
@@ -59,7 +59,7 @@ const averageStars =
 In this style, we compare the length of the review array, and if it is zero, we
 set the `averageStars` to `0`, otherwise setting it equal to the average.
 
-We can do this same change in `Restaurants.tsx`
+We can do this same change in `SingleRestaurantFromList.tsx`
 
 ```javascript
 const totalStars = restaurant.reviews.reduce(
