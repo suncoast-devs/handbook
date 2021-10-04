@@ -37,7 +37,7 @@ if (someBooleanCondition) {
   // Code if the condition is true
 }
 else {
-  // code if the condition is false
+  // Code if the condition is false
 }
 ```
 
@@ -204,7 +204,6 @@ switch (name)
 }
 ```
 
-
 ---
 
 # Case conditionals
@@ -272,7 +271,7 @@ The `while` statement repeats the code inside the `{ }` braces as long as the co
 
 [.column]
 
-Ask the the user their name and greet them until the user enters the text `quit`. The code would look like this:
+Ask the user their name and greet them until the user enters the text `quit`. The code would look like this:
 
 [.column]
 
@@ -287,5 +286,3 @@ while (name != "quit") {
   name = Console.ReadLine();
 }
 ```
-
-
