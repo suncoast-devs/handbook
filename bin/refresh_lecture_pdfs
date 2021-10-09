@@ -1,0 +1,9 @@
+#!/bin/bash
+
+GIT_ROOT=$(git rev-parse --show-toplevel)
+
+for lesson in $(find ${GIT_ROOT}/lessons -name lecture.md | awk -F/ '{ print $(NF-1) }'); do
+  if [ "${GIT_ROOT}/lessons/${lesson}/lecture.md" -nt "${GIT_ROOT}/web/static/lectures/${lesson}-lecture.pdf" ]; then
+    "${GIT_ROOT}"/bin/lectures-to-pdf "$lesson"
+  fi
+done

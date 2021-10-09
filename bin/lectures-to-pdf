@@ -1,8 +1,54 @@
 #!/bin/bash
 
-SPECIFIC_LECTURE="$1"
+function generate_pdf() {
+  lesson_name=$1
+  lecture_path=$2
+  destination=$3
+
+  if [ -z "${lecture_path}" ]; then
+    echo "No lecture path supplied"
+    exit
+  fi
+
+  if [ -z "${destination}" ]; then
+    echo "No destination supplied"
+    exit
+  fi
+
+  # Ensure the target directory exists
+  mkdir -p "${destination}"
+
+  pdf_file="${destination}/${lesson_name}-lecture.pdf"
+
+  echo "Writing ${pdf_file}"
+
+  TEMPFILE="${lecture_path}.themehack.md"
+  trap 'rm -f ${TEMPFILE}' EXIT
+  sed 's/^theme:.*/theme: Next, 9/ig' <"$lecture_path" >"$TEMPFILE"
+
+  osascript <<EOF
+    on run argv
+        set md_file to "$TEMPFILE"
+        set md_file to POSIX file md_file
+        set out_file to "$pdf_file"
+        set out_file to POSIX file out_file
+        tell application "Deckset"
+            activate
+            open file md_file
+            tell document 1
+                activate
+                export to out_file printAllSteps true includePresenterNotes false
+            end tell
+            quit
+        end tell
+    end run
+EOF
+}
 
 GIT_ROOT=$(git rev-parse --show-toplevel)
+LESSON_NAME="$1"
+LECTURE_FILE="${GIT_ROOT}"/lessons/"${LESSON_NAME}"/lecture.md
 
-find "${GIT_ROOT}/lessons/${SPECIFIC_LECTURE}" -name lecture.md -exec "${GIT_ROOT}/bin/lecture-to-pdf" {} "${GIT_ROOT}/web/static/lectures/" \;
-
+if [ -f "${LECTURE_FILE}" ]; then
+  generate_pdf "${LESSON_NAME}" "${LECTURE_FILE}" "${GIT_ROOT}/web/static/lectures"
+fi
