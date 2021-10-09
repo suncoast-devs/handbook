@@ -600,7 +600,7 @@ var movies = new List<Movie>();
       {
             Id = 10,
             Name = "Everything I Can See From Here",
-            Tagline = "Synchronised 24/7 utilisation",
+            Tagline = "Synchronized 24/7 utilization",
             ReleasedDate = DateTime.Parse("7/26/2012"),
             Screenings = 84,
             PricePerTicket = 4,
@@ -714,7 +714,7 @@ var movies = new List<Movie>();
       {
             Id = 18,
             Name = "The Clinic",
-            Tagline = "Polarised regional solution",
+            Tagline = "Polarized regional solution",
             ReleasedDate = DateTime.Parse("4/20/2013"),
             Screenings = 128,
             PricePerTicket = 8,
@@ -746,7 +746,7 @@ var movies = new List<Movie>();
       {
             Id = 20,
             Name = "Tarzan",
-            Tagline = "Polarised intangible productivity",
+            Tagline = "Polarized intangible productivity",
             ReleasedDate = DateTime.Parse("12/31/2006"),
             Screenings = 105,
             PricePerTicket = 19,
@@ -837,9 +837,7 @@ var totalRevenue = movies.Aggregate(0.0,
 
 ## Sum
 
-In this example we first take all the movies and use `Select` to generate a new
-list of all the revenues. Then we use `Sum` to add up the values. This is
-conceptually simpler than `Aggregate`
+In this example we first take all the movies and use `Select` to generate a new list of all the revenues. Then we use `Sum` to add up the values. This is conceptually simpler than `Aggregate`
 
 ```csharp
 var allRevenues = movies.Select(movie => movie.TotalRevenue);
@@ -881,7 +879,9 @@ var areAnyOldMovies = movies.Any(
 
 # Count
 
-> Returns `an integer` of items, the count of elements for which the expression returns `true`.
+> Returns `an integer` of items, the count of elements within the list.
+> If an expression is used, returns an integer of items the count of elements for which the
+> expression returns true.
 
 ---
 

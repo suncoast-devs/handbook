@@ -82,7 +82,7 @@ had a list such as:
 var scores = new List<int> { 42, 100, 98, 15 };
 ```
 
-and suppose our task was to make a new variable equal to a list with all those
+And suppose our task was to make a new variable equal to a list with all those
 values doubled? Well good for us that we have an `expression` that can do just
 that!
 
@@ -128,7 +128,7 @@ Well this is certainly nice, but let's get our new friend `LINQ` involved.
 
 One of the methods that `LINQ` will give to our list is called `Select`. What
 `Select` does is go through each entry in our list, and using an `expression`
-convert each element to a new value based on what that expression does. Every
+converts each element to a new value based on what that expression does. Every
 new value is then added to a new `List` and returned. Whoa! That is exactly what
 our code above is doing! Let's simplify this code by using our new `Select`
 capability.
@@ -215,7 +215,7 @@ Which method we will reach for when writing code depends on the behavior we are
 looking for. We must simply find the appropriate method and supply it an
 expression that does the work we want to do.
 
-Later on we are going to see how `LINQ` works equally well on `List` stored in
+Later on we are going to see how `LINQ` works equally well on a `List` stored in
 memory and rows of a database. Thus learning how to effectively use `LINQ` is a
 skill we will re-use quite often in our `C#` programming.
 
@@ -367,7 +367,7 @@ var movies = new List<Movie>()
     {
         Id = 10,
         Name = "Everything I Can See From Here",
-        Tagline = "Synchronised 24/7 utilisation",
+        Tagline = "Synchronized 24/7 utilization",
         ReleasedDate = DateTime.Parse("7/26/2012"),
         Screenings = 84,
         PricePerTicket = 4,
@@ -471,7 +471,7 @@ var movies = new List<Movie>()
     {
         Id = 18,
         Name = "The Clinic",
-        Tagline = "Polarised regional solution",
+        Tagline = "Polarized regional solution",
         ReleasedDate = DateTime.Parse("4/20/2013"),
         Screenings = 128,
         PricePerTicket = 8,
@@ -497,7 +497,7 @@ var movies = new List<Movie>()
     {
         Id = 20,
         Name = "Tarzan",
-        Tagline = "Polarised intangible productivity",
+        Tagline = "Polarized intangible productivity",
         ReleasedDate = DateTime.Parse("12/31/2006"),
         Screenings = 105,
         PricePerTicket = 19,
@@ -552,7 +552,7 @@ var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 Console.WriteLine($"There are {popularMovies.Count()} popular movies");
 ```
 
-## Combine where and select to get the names of the movies with more than 100 screeenings
+## Combine where and select to get the names of the movies with more than 100 screenings
 
 ```csharp
 var popularMovies = movies.Where(movie => movie.Screenings >= 100);
