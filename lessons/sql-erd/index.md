@@ -49,17 +49,17 @@ _nouns_ of our system.
 ### Attributes
 
 Next, we will determine the attributes of each of these nouns. These would be
-things like "the student's name," "the student's age," "the student's birthday,"
-"the course's name," "the course's description," and "the teacher's name."
+things like "the student's name", "the student's age", "the student's birthday",
+"the course's name", "the course's description", and "the teacher's name".
 
 ![](./assets/erd2.png)
 
 You'll notice that all the attributes are singularly named and store a single
 value. If we had a multiple-value attribute of an entity, say multiple phone
-numbers for a `Teacher,` we'd create another entity to track those.
+numbers for a `Teacher`, we'd create another entity to track those.
 
 In addition to the names of the attributes, we may also capture the type of data
-the attribute represents. `Name,` for instance, would be text while `Age` is a
+the attribute represents. `Name`, for instance, would be text while `Age` is a
 number, and `Birthday` is a date. These data types will become column types
 eventually in our database.
 
@@ -82,9 +82,9 @@ another entity to hold that.
 
 If we take the time to map out the entities, attributes, and relations in an ERD
 diagram we can begin to see the data structure in our application. ERD diagrams
-also serve as good documentation for your project and allow you to review with
-the various _stakeholders_ since the diagrams are also easy for non-developers
-to understand (perhaps with a little help).
+also serve as good documentation for your project and allow you to review the
+project with the various _stakeholders_ since the diagrams are also easy for
+non-developers to understand (perhaps with a little help).
 
 ## Resources
 

@@ -3,10 +3,11 @@ title: Terminology
 order: 1000
 ---
 
-| Term | Definition |
-| ---- | ---------- |
-| Entity Relationship Diagram (ERD) | ---------- |
-| Entities | ---------- |
-| Attributes| ---------- |
-| Relationships | ---------- |
-| Relational Database | ---------- |
+| Term                                              | Definition                                                                                                                                                                                                                                                                                                                           |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Entity Relationship Diagram (ERD)                 | A way to represent the structure of our program (e.g. business) entities in a way that we can                                                                                                                                                                                                                                        |
+| translate into database tables and relationships. |
+| Entities                                          | The first component of an ERD, that is typically represented by the major _nouns_ of our system (e.g. "Keep track of `students`, the `courses` the students are taking, and the course's `teacher`.").                                                                                                                               |
+| Attributes                                        | Characteristics/Properties of each Entity that we want to keep information of in our program, these are singularly named and store a single value (e.g. These would be things like "the student's name", "the student's age", "the student's birthday", "the course's name", "the course's description", and "the teacher's name".). |
+| Relationships                                     | How the Entities in our Diagram are connected to each other (e.g. A student is `enrolled in` a course and a course is `taught by` a teacher.).                                                                                                                                                                                       |
+| Relational Database                               | Represents the data in a tabular form of rows and columns. Each column in a table represents an Attribute of the Entity. Each row in a table represents a record, the data associated with an Entity.                                                                                                                                |

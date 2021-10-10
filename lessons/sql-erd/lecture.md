@@ -65,7 +65,7 @@ These would be things like
 - "the student's birthday"
 - "the course's name"
 - "the course's description"
-- "the teacher's name."
+- "the teacher's name"
 
 ---
 
