@@ -77,7 +77,7 @@ A true or false value. These are just the literals `true` and `false`
 ## Null
 
 Similar to a `null` in C# or JavaScript, a literal indicating no value.
-Represented by `null`
+Represented by `null`.
 
 ## Array
 
@@ -120,9 +120,9 @@ array, or another object). The object closes with a `}`.
 
 The flexibility of the JSON format comes from its simplicity and lack of
 assumptions about the contents of our data. You will notice that there is no
-data type for Dates, Times, images, or other more complex structures. These
-representations of these types of data is up to the developer to specify how
-they will be represented using the primitive types JSON provides.
+data type for Dates, Times, images, or other more complex structures. The
+representations for these data types are up to the developer to specify how they
+will be represented, using the primitive types JSON provides.
 
 ## Prevalence
 

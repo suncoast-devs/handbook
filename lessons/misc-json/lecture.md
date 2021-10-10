@@ -75,9 +75,7 @@ A simple string in JSON is represented as a sequence of characters surrounded by
 
 # Numbers
 
-A number in JSON is represented as an optional `-` followed by some digits, a
-decimal place, and digits for the fractional component. Optionally there can be
-an exponent.
+A number in JSON is represented as an optional `-` followed by some digits, a decimal place, and digits for the fractional component. Optionally there can be an exponent.
 
 ```
 42
@@ -97,7 +95,7 @@ A true or false value. These are just the literals `true` and `false`
 
 # Null
 
-Similar to a `null` in C# or JavaScript, a literal indicating no value. Represented by `null`
+Similar to a `null` in C# or JavaScript, a literal indicating no value. Represented by `null`.
 
 ---
 
@@ -139,13 +137,7 @@ Begins with a `{`. Key names are in double-quotes. Followed by a colon and then 
 ```json
 {
   "class-size": 5,
-  "students": [
-                "Mary",
-                "Elizabeth",
-                "Mark",
-                "Sam",
-                "Tom"
-              ],
+  "students": ["Mary", "Elizabeth", "Mark", "Sam", "Tom"],
   "full": true,
   "completed": false
 }
@@ -159,7 +151,7 @@ The flexibility of the JSON format comes from its simplicity and lack of assumpt
 
 You will notice that there is no data type for Dates, Times, images, or other more complex structures.
 
-These representations of these types of data is up to the developer to specify how they will be represented using the primitive types JSON provides.
+The representations for these data types are up to the developer to specify how they will be represented, using the primitive types JSON provides.
 
 **NOTE** this is also a weakness and downside to JSON.
 
@@ -171,7 +163,6 @@ These representations of these types of data is up to the developer to specify h
 
 JSON has become the lingua-franca, or default, data format on the web.
 
-Most systems we receive data from, and send data to, will be using JSON as the data format. 
+Most systems we receive data from, and send data to, will be using JSON as the data format.
 
 As we work with APIs and build backend servers we will be using JSON as our data format.
-
