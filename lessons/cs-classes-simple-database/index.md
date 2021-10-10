@@ -4,7 +4,7 @@ title: Using C# Classes to Create a Database
 
 In this lesson, we will be using `class`es and `List<>` to create an example
 database to manage employees. We will create a menu system that will allow us to
-`C`reate, `R`ead, `U`update, and `D`elete employees from this `List.`
+`C`reate, `R`ead, `U`pdate, and `D`elete employees from this `List.`
 
 # Reviewing the starting code.
 
@@ -555,7 +555,7 @@ inside. We make this class property `private` since we do not want code outside
 of the class to access it. All the usage must come from the methods we create
 and allow as `public`. We then develop methods to perform the common actions we
 need, `GetAllEmployees`, `FindOneEmployee`, `AddEmployee`. Each of these methods
-_receives_ data it needs and returns the data it _provides_. These methods
+_receives_ the data it needs and returns the data it _provides_. These methods
 essentially create an API (Application Programming Interface) for how to use
 this code.
 

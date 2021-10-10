@@ -9,7 +9,7 @@ theme: Next, 1
   - **C**reate
   - **R**ead
   - **U**pdate
-  - **D** elete
+  - **D**elete
 
 ---
 
@@ -131,7 +131,7 @@ var employees = new List<Employee>();
 ```
 
 - Naming variables is important
-- The convention we follow is collections use pluralized names. `employees` is a hint that the variable is a collection.
+- `employees` is a hint that the variable is a collection. The convention we follow for collections is to use pluralized names.
 
 ---
 
@@ -184,7 +184,7 @@ while (keepGoing) {
 
 # [fit] Add an option to show all the employees
 
-To work on the **`R`**ead part of the application we'll add an option to read all the employees.
+To work on the **`R`**ead part of the application we'll add an option to read all of the employees.
 
 This is often the next simplest feature of the code to write since we only need to "loop" and "print".
 
@@ -209,7 +209,7 @@ if (choice == "Q") {
 
 ---
 
-# Add the code to show all the employees
+# Add the code to show all of the employees
 
 ```csharp
 // Loop through each employee
@@ -226,7 +226,7 @@ foreach(var employee in employees) {
 
 The other part of **`R`**eading from the database is to search for a specific item.
 
-We will add an option to find a specific employee by matching the name
+We will add an option to find a specific employee by matching the name.
 
 ---
 
