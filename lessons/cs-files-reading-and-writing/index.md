@@ -177,11 +177,11 @@ the `CsvWriter` class to do so.
 var csvWriter = new CsvWriter(fileWriter, CultureInfo.InvariantCulture);
 ```
 
-This class takes two arguments, first the object, in our case the
-`fileWriter` where the information is going, and second some information on how
-to format various values. This `CultureInfo.InvariantCulture` indicates that we
-do not want any specific formatting of strings or numbers in our file. (e.g.
-don't format numbers like `12000` as `12,000` or `12.000`)
+This class takes two arguments, first the object, in our case the `fileWriter`
+where the information is going, and second some information on how to format
+various values. This `CultureInfo.InvariantCulture` indicates that we do not
+want any specific formatting of strings or numbers in our file (e.g. don't
+format numbers like `12000` as `12,000` or `12.000`).
 
 This object processes our list of numbers.
 
