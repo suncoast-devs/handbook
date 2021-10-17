@@ -42,7 +42,7 @@ production, or even uses the name of a movie that has existed in the past. So if
 we used the title to uniquely identify it we would run into many issues.
 
 Fortunately databases provide their own way of supplying a unique value for each
-row in the database. We call this `SERIAL` column.
+row in the database. We call this the `SERIAL` column.
 
 So when creating our Movie table we will use this schema:
 
@@ -164,7 +164,7 @@ a "One to Many" relationship. That is, a movie has one rating (e.g. the movie
 _Bambi_ is rated _G_), but a rating applies to many movies (e.g. there are many
 movies with a _G_ rating)
 
-When describing our database it is often usual to have a visualization of the
+When describing our database it is often useful to have a visualization of the
 structure. These diagrams are called _Entity Relationship Diagrams_, or `ERD`s
 
 The ERD of our movies and ratings looks like the following. (_NOTE_ We'll add in
@@ -372,7 +372,7 @@ foreign keys, one to the left (movies) and the other to the right (actors). We
 attempt to name this table based on the relationship between the two tables.
 
 In this case we are trying to represent the relationship between a movie and the
-actors. We could call this relationship `Roles`
+actors. We could call this relationship `Roles`.
 
 ```sql
 CREATE TABLE "Roles" (
@@ -467,7 +467,7 @@ relations to each of these tables, it acts as the link in the chain between the
 two tables.
 
 Notice for the `actors` entry Orlando Bloom there are multiple entries in
-`roles` since he has appeared in several of our `movies`
+`roles` since he has appeared in several of our `movies`.
 
 ```sql
 SELECT "Movies"."Title", "Actors"."FullName"
