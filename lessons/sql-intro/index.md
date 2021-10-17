@@ -62,7 +62,7 @@ concept of `ACID` (which stands for
   at once and either all of them fail, or all of them succeed. For instance, if
   our application is a banking application and we want to withdraw $10 from
   Andy's account and add it to Barbara's account, we might first write a
-  statement to decrease Andy's balance by 10. Then a second statement to 
+  statement to decrease Andy's balance by 10. Then a second statement to
   increase Barbara's balance by 10. If these two statements aren't guaranteed to
   succeed in pairs we have the possibility that we would decrease Andy's balance
   without correspondingly increasing Barbara's. In an `atomic` system, either we
@@ -78,7 +78,7 @@ concept of `ACID` (which stands for
 
 - Isolation - This allows for multiple database requests to be handled
   concurrently (e.g. reading and writing to multiple tables/rows at the same
-  time) This feature is what allows databases to be a great choice for
+  time). This feature is what allows databases to be a great choice for
   multi-user systems.
 
 - Durability - This ensures that once data is written to the database, the
@@ -93,11 +93,12 @@ NoSQL.
 
 SQL is a table-based storage paradigm, that stores data arranged in an
 Excel-like format, that focuses on normalizing our data by focusing on
-relationships and structure. This is often referred to as "Relational Databases"
+relationships and structure. This is often referred to as "Relational
+Databases".
 
-NoSQL can be thought of as the opposite of SQL. At a high level, a NoSQL database
-stores data in a form other than the table structure. This looseness of data
-structure allows developers to more freely control what and how the data is
+NoSQL can be thought of as the opposite of SQL. At a high level, a NoSQL
+database stores data in a form other than the table structure. This looseness of
+data structure allows developers to more freely control what and how the data is
 stored. NoSQL databases have become popular with the rise of data science and
 big data.
 
@@ -122,9 +123,9 @@ For instance, let's imagine we are designing and building a system to manage
 books for a library. We could create a database named `Library` and in that
 database, there would be one table, called `Books`.
 
-In this `Books` table, we would design columns that represent the specific
-data about books we wish to track. Each row in the `Books` table would represent
-a unique book in our collection.
+In this `Books` table, we would design columns that represent the specific data
+about books we wish to track. Each row in the `Books` table would represent a
+unique book in our collection.
 
 ### String Columns
 
@@ -141,7 +142,8 @@ In a database, we have a few choices for the data type:
 
 - `char(N)` - The `N` represents the largest number of characters this column
   can store. If we supply _less_ than `N` characters the rest of the column will
-  be padded with spaces. This ensures the column is _always_ `N` characters long
+  be padded with spaces. This ensures the column is _always_ `N` characters
+  long.
 - `varchar(N)` - Again the `N` represents the largest number of characters the
   column can store, however, the width of the data is variable. If we supply
   _less_ than `N` characters the column is _not_ filled with spaces.
@@ -158,7 +160,7 @@ For a column like `YearPublished` we can use a numeric type.
 There are several types of numeric types and they may vary based on the specific
 database engine you are using.
 
-For us Postgres provides the types smallint, integer, and bigint store whole
+For us Postgres provides the types smallint, integer, and bigint to store whole
 numbers.
 
 The type integer is the common choice, as it offers the best balance between
