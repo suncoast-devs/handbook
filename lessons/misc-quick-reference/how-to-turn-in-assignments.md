@@ -44,9 +44,8 @@ npm run deploy
 
 ### Step 3: Add the deployed URL to your github project.
 
-Open your github project
-Click the _gear_ icon next to "About"
-Edit the `website` field and past the URL you received from the deployment step.
+Open your github project. Click the _gear_ icon next to "About". Edit the
+`website` field and paste the URL you received from the deployment step.
 
 ### Step 4: Turning your code in.
 
@@ -57,6 +56,6 @@ state of your work. For example if you had any issues or challenges, this is
 where you would document those.
 
 After you have turned in your code, your instructor evaluates your work, and
-leave any comments. If deemed incomplete or unaccepted the instructor re-opens
-the issue with a list of items to complete before turning in the assignment
-again.
+will leave any comments. If deemed incomplete or unaccepted the instructor
+re-opens the issue with a list of items to complete before turning in the
+assignment again.
