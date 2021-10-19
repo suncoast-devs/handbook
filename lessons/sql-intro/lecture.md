@@ -60,7 +60,7 @@ table, but the `Email` field is blank, we do not allow the row. The validation u
 
 # [fit] Isolation
 
-Isolation allows for multiple database requests to be handled concurrently (e.g., reading and writing to multiple tables/rows at the same time)
+Isolation allows for multiple database requests to be handled concurrently (e.g., reading and writing to multiple tables/rows at the same time).
 
 ---
 
@@ -108,7 +108,7 @@ In this `Books` table, we would design columns representing the specific data ab
 - `YearPublished`
 - `Genre`
 
-In a language such as JavaScript, Ruby, or C# we would naturally define some of these as a `string`
+In a language such as JavaScript, Ruby, or C# we would naturally define some of these as a `string`.
 
 In a database, we have a few choices for the data type.
 
@@ -116,7 +116,7 @@ In a database, we have a few choices for the data type.
 
 `char(N)`
 
-The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters, spaces will fill the remaining space. The appended spaces ensures the column is _always_ `N` characters long
+The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters, spaces will fill the remaining space. The appended spaces ensures the column is _always_ `N` characters long.
 
 ---
 
@@ -144,7 +144,7 @@ Rows are where our data is stored.
 
 Each row represents one instance of a "thing", in our case one "book".
 
-> Much like one `object` is an instance of a class (_this is an important concept_)
+> Much like one `object` is an instance of a class (_this is an important concept_).
 
 In our example, a row of data would contain 'The Cat in the Hat' (`Title`), 'Dr. Suess' (`Author`), and 'kids' (`Genre`).
 
@@ -223,7 +223,7 @@ We call the statements we ask a database to do for us a `query`, even if the sta
 
 ### CREATE TABLE
 
-Let's start by creating the table with only the `Title`, `PrimaryAuthor`, and the `YearPublished` columns for our `Books`
+Let's start by creating the table with only the `Title`, `PrimaryAuthor`, and the `YearPublished` columns for our `Books`.
 
 ```sql
 CREATE TABLE "Books" (
@@ -247,11 +247,11 @@ CREATE TABLE "Books" (
 
 # Other types
 
-| Type      | Description                                                                                             |
-| --------- | ------------------------------------------------------------------------------------------------------- |
-| BOOLEAN   | Stores a `true` or `false` value                                                                        |
-| DATE      | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data |
-| TIMESTAMP | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data |
+| Type      | Description                                                                                              |
+| --------- | -------------------------------------------------------------------------------------------------------- |
+| BOOLEAN   | Stores a `true` or `false` value.                                                                        |
+| DATE      | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data. |
+| TIMESTAMP | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data. |
 
 ---
 
@@ -450,7 +450,7 @@ The above update statement will update all rows that have `ColumnB = 'some value
 
 # NOTE
 
-The same syntax for `WHERE` clauses from `SELECT` apply here. We can use multiple conditions and combine them with `AND` and `OR`
+The same syntax for `WHERE` clauses from `SELECT` apply here. We can use multiple conditions and combine them with `AND` and `OR`.
 
 > Word of warning. If the `WHERE` clause is left off, it will update all rows.
 

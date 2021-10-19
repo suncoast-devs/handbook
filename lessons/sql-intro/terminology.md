@@ -3,33 +3,34 @@ title: Terminology
 order: 1000
 ---
 
-| Term | Definition |
-| ---- | ---------- |
-| Structured Query Language | ---------- |
-| Database | ---------- |
-| Serialization | ---------- |
-| Atomicity | ---------- |
-| Consistency | ---------- |
-| Isolation | ---------- |
-| Durability | ---------- |
-| SQL | ---------- |
-| NoSQL | ---------- |
-| Schema | ---------- |
-| char(N) | ---------- |
-| varchar(N) | ---------- |
-| text | ---------- |
-| smallint | ---------- |
-| integer | ---------- |
-| bigint | ---------- |
-| boolean | ---------- |
-| Date | ---------- |
-| timestamp | ---------- |
-| query | ---------- |
-| CREATE TABLE | ---------- |
-| ALTER TABLE | ---------- |
-| INSERT | ---------- |
-| SELECT | ---------- |
-| SELECT * | ---------- |
-| WHERE | ---------- |
-| UPDATE | ---------- |
-| DELETE | ---------- |
+| Term                                                                              | Definition                                                                                                                                                                                                                                  |
+| --------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Structured Query Language                                                         | A descriptive computer language designed for updating, retrieving, and calculating data in table-based databases.                                                                                                                           |
+| Database                                                                          | A structured way to store lots of information.                                                                                                                                                                                              |
+| Serialization                                                                     | Take the information we have stored in memory and represent it as a series of characters/bytes that can be stored in a file.                                                                                                                |
+| Atomicity                                                                         | Updates to the database allow for multiple changes to execute at once. Either all of them fail, or all of them succeed.                                                                                                                     |
+| Consistency                                                                       | Any rules the database enforces are applied when asking for changes.                                                                                                                                                                        |
+| Isolation                                                                         | This allows for multiple database requests to be handled concurrently (e.g. reading and writing to multiple tables/rows at the same time). This feature is what allows databases to be a great choice for multi-user systems.               |
+| Durability                                                                        | Ensures that once data is written to the database, the database does not lose the information in the case of a database, computer, or system crash.                                                                                         |
+| SQL                                                                               | a table-based storage paradigm, that stores data arranged in an Excel-like format, that focuses on normalizing our data by focusing on                                                                                                      |
+| relationships and structure. This is often referred to as "Relational Databases". |
+| NoSQL                                                                             | Can be thought of as the opposite of SQL. At a high level, a NoSQL database stores data in a form other than the table structure.This looseness of data structure allows developers to more freely control what and how the data is stored. |
+| Schema                                                                            | The structure of a table that is represented by columns and constraints.                                                                                                                                                                    |
+| char(N)                                                                           | The `N` represents the largest number of characters this column can store. If we supply _less_ than `N` characters the rest of the column will be padded with spaces. This ensures the column is _always_ `N` characters long.              |
+| varchar(N)                                                                        | The `N` represents the largest number of characters the column can store, however, the width of the data is variable. If we supply _less_ than `N` characters the column is _not_ filled with spaces.                                       |
+| text                                                                              | Allows for a variable number of characters, but has a much larger limit than what a `char` or `varchar` can support. In some cases many megabytes, or gigabytes of text.                                                                    |
+| smallint                                                                          | Generally only used if disk space is at a premium.                                                                                                                                                                                          |
+| integer                                                                           | The common choice, as it offers the best balance between range, storage size, and performance.                                                                                                                                              |
+| bigint                                                                            | Designed to be used when the range of the integer type is insufficient.                                                                                                                                                                     |
+| boolean                                                                           | Stores a `true` or `false` value.                                                                                                                                                                                                           |
+| Date                                                                              | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data.                                                                                                                                    |
+| timestamp                                                                         | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data.                                                                                                                                    |
+| query                                                                             | What we call the statements we ask a database to do for us, even if the statement's purpose is to create tables, or delete rows.                                                                                                            |
+| CREATE TABLE                                                                      | Creating a table to store our information. This table will have rows (data) and columns (structure). (e.g. CREATE TABLE "Books" ("Title" TEXT NOT NULL, "PrimaryAuthor" TEXT, "YearPublished" INT,"Id" SERIAL PRIMARY KEY);)                |
+| ALTER TABLE                                                                       | Modifying a table after the table has been created. (e.g. ALTER TABLE "Books" ADD COLUMN "Genre" VARCHAR(15);)                                                                                                                              |
+| INSERT                                                                            | To create a new row in our database. (e.g. INSERT INTO "TableName" ("ColumnA", "ColumnB", "ColumnC") VALUES ('columnAValue', 'columnBValue', 'columnCValue');)                                                                              |
+| SELECT                                                                            | Statements that allow us to query and return a new view of the data. (e.g. SELECT "Title" FROM "Books";)                                                                                                                                    |
+| SELECT \*                                                                         | This query will give us back all the columns (`*`) from all the rows in the table. Regardless of how many rows there are. (e.g. SELECT \* FROM "Books";)                                                                                    |
+| WHERE                                                                             | Filter down our table to only see rows that satisfy the conditions supplied. (e.g. SELECT "Title", "PrimaryAuthor" FROM "Books" WHERE "Genre" = 'horror';)                                                                                  |
+| UPDATE                                                                            | To change data in our database. (e.g. UPDATE "TableName" SET "ColumnA" = 'new value' WHERE "ColumnB" = 'some value';)                                                                                                                       |
+| DELETE                                                                            | To remove one or many rows from our database. (e.g. DELETE FROM "Books" WHERE "YearPublished" = 1995;)                                                                                                                                      |
