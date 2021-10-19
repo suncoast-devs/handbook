@@ -40,7 +40,7 @@ pgcli SuncoastMovies
 # SERIAL Data Type
 
 - Databases provide their own way of supplying a unique value for each row in the database.
-- In `Postgres` We call this SERIAL column.
+- In `Postgres` we call this the SERIAL column.
 - A `SERIAL` data type will begin at `1` and increase for each new row.
 - Values are never reused or repeated.
 
@@ -131,7 +131,7 @@ INSERT INTO "Ratings" ("Description") VALUES ('R');
 
 - Let's also add a table to keep information about our actors.
 - For this table we want to know the full name of the actor and their birthday.
-- We'll also create an `Id` that is a `PRIMARY KEY` and is `SERIAL`
+- We'll also create an `Id` that is a `PRIMARY KEY` and is `SERIAL`.
 
 ```sql
 CREATE TABLE "Actors" (
