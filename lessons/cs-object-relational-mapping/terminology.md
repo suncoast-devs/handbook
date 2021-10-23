@@ -3,11 +3,13 @@ title: Terminology
 order: 1000
 ---
 
-| Term | Definition |
-| ---- | ---------- |
-| Object Relational Mapper (ORM) | ---------- |
-| Entity Framework Core (EF Core or EF) | ---------- |
-| POCO | ---------- |
-| Logger | ---------- |
-| Migrations | ---------- |
-
+| Term                                  | Definition                                                                                                                                                                                                                                                                      |
+| ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Object Relational Mapper (ORM)        | The purpose of an ORM is to seamlessly translate between the language of lists/objects to tables/rows. With an ORM we can continue to use all of our familiar `C#` ideas and allow the ORM to take care of the details of the appropriate _SQL_ and _relational database_ work. |
+| Entity Framework Core (EF Core or EF) | Is an open-source ORM framework for .NET applications supported by Microsoft. It enables developers to work with data using objects of domain specific classes without focusing on the underlying database tables and columns where this data is stored.                        |
+| POCO                                  | Plain Old C# Objects that we can directly relate to our database.                                                                                                                                                                                                               |
+| Logger                                | Code that receives events from the system and then outputs a descriptive text describing the event. In our case, the interactions with the database.                                                                                                                            |
+| Migrations                            | A set of code, or configuration, that describe incremental changes to the database that _migrate_ the design of the database from a previous configuration to a new one.                                                                                                        |
+| int[] && int[]                        | Overlap — returns true if arrays have at least one common element. (e.g. SELECT \* FROM "Players" WHERE "Scores" && ARRAY [98, 100];)                                                                                                                                           |
+| int[] @> int[]                        | Contains — returns true if left array contains right array. (e.g. SELECT \* FROM "Players" WHERE "Scores" @> ARRAY [98];)                                                                                                                                                       |
+| int[] <@ int[]                        | Contained — returns true if left array is contained in right array. (e.g. SELECT \* FROM "Players" WHERE "Scores" <@ ARRAY [95,92,96,97,98,100];)                                                                                                                               |

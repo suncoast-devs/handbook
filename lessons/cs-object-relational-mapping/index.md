@@ -38,7 +38,7 @@ data storage process.
 - Isolation - Changes are processed concurrently (at the same time) however the
   state of the database would be the same if we processed the changes
   sequentially. This allows for us to ensure data safety while ensuring many
-  users can update the system at the same time
+  users can update the system at the same time.
 - Durability - Once a change has been recognized by the database it remains
   changed even in the case of a system failure (power loss, crash, etc.) That
   is, once the database tells us it has the data safely stored, we can believe
@@ -115,7 +115,7 @@ In our lesson on SQL Joins we had a database setup that looks like this:
       +------------------------+               +-------------------------+
 ```
 
-and we are eventually going to represent these relationships in our `C#` code.
+We are eventually going to represent these relationships in our `C#` code.
 
 > If you have not read that lesson, or you have not generated a database from
 > that lesson, and you intend on coding-along, stop now and create that
@@ -130,7 +130,7 @@ as well as output information.
 dotnet new sdg-console -o SuncoastMovies
 ```
 
-we will also need to add the Entity Framework library to our project
+We will also need to add the Entity Framework library to our project.
 
 ```shell
 cd SuncoastMovies
@@ -682,7 +682,7 @@ namespace SuncoastMovies
     // This is the related object we can use from our code (if properly used with Include)
     public Rating Rating { get; set; }
 
-    // This is the related list of roles we an use (if properly used with Include)
+    // This is the related list of roles we can use (if properly used with Include)
     public List<Role> Roles { get; set; }
   }
 
@@ -714,7 +714,7 @@ namespace SuncoastMovies
     public string FullName { get; set; }
     public DateTime Birthday { get; set; }
 
-    // This is the related list of roles we an use (if properly used with Include)
+    // This is the related list of roles we can use (if properly used with Include)
     public List<Role> Roles { get; set; }
   }
 
@@ -926,7 +926,7 @@ namespace SuncoastMovies
     // This is the related object we can use from our code (if properly used with Include)
     public Rating Rating { get; set; }
 
-    // This is the related list of roles we an use (if properly used with Include)
+    // This is the related list of roles we can use (if properly used with Include)
     public List<Role> Roles { get; set; }
   }
 
@@ -958,7 +958,7 @@ namespace SuncoastMovies
     public string FullName { get; set; }
     public DateTime Birthday { get; set; }
 
-    // This is the related list of roles we an use (if properly used with Include)
+    // This is the related list of roles we can use (if properly used with Include)
     public List<Role> Roles { get; set; }
   }
 
