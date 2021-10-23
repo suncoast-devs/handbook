@@ -24,13 +24,12 @@ Interacting with our operating system comes in two parts. The first is the
 `terminal program` we use to run that shell. You can think of the `terminal`
 like your browser and the `shell` like the web page it contains.
 
-Different operating systems use different tools for both of the `terminal` and
-the `shell`. For instance, on Mac OS we use the `Terminal` application to
-interact with our shell of either `bash` or `zsh` (depending on your OS
-version). On Linux, we use a terminal application that varies based on which
-version of Linux you are using. However, the shell is typically again either
-`bash` or `zsh`. On Windows, both the terminal and shell are called
-`PowerShell`.
+Different operating systems use different tools for both the `terminal` and the
+`shell`. For instance, on Mac OS we use the `Terminal` application to interact
+with our shell of either `bash` or `zsh` (depending on your OS version). On
+Linux, we use a terminal application that varies based on which version of Linux
+you are using. However, the shell is typically either `bash` or `zsh`. On
+Windows, both the terminal and shell are called `PowerShell`.
 
 The commands might be slightly different across all operating systems, but the
 ideas are the same.
@@ -64,9 +63,9 @@ Use `pwd` to help you see where you currently are in your terminal.
 
 This command allows us to create a new directory (_folder_) from the terminal.
 The directory is created within whatever directory is currently active. (use
-`pwd` to check if you need)
+`pwd` to check if you need to)
 
-- When do use `mkdir`?
+- When to use `mkdir`?
 
 Use this command to create a new directory. We can, and should, make new folders
 to help us manage our projects.
@@ -93,7 +92,7 @@ To navigate our computer, we need to be able to change directories and navigate
 our file structure. The file structure on our system is similar to a tree. When
 using your desktop user interface (Finder, Windows Explorer, etc.) and we open a
 new folder, we say: we are going down into the new folder. To go down into a new
-directory from the shell, we use the command `cd`
+directory from the shell, we use the command `cd`.
 
 The `cd` command changes our current working directory to the new directory.
 Switching directories is roughly equal to double-clicking a folder in your
@@ -138,7 +137,7 @@ cd family-pictures
     - `disney-world-2018`
 
 The above command changes my current directory to be `family-pictures`. If you
-want to navigate down further into `disney-world-2018` you can use `cd` again
+want to navigate down further into `disney-world-2018` you can use `cd` again:
 
 ```shell
 cd disney-world-2018
@@ -184,7 +183,7 @@ So to open the current directory's content in VS Code you use:
 code .
 ```
 
-- When do use `code`?
+- When to use `code`?
 
 Use this when you want to open a file or project and write or edit code or
 files.
@@ -198,7 +197,7 @@ files.
 Node is a runtime for javascript. Using node, we can run javascript on our
 machines without having to be in a browser.
 
-- When do use `node`?
+- When to use `node`?
 
 We typically use this for running JavaScript code interactively (as a `REPL`) or
 to run a JavaScript code file. We use this in one of two ways.
@@ -220,15 +219,15 @@ use node to run other tools.
 
 - What does it do?
 
-`npm` stands for "node package manager." This program is a way for us to install
+`npm` stands for "node package manager". This program is a way for us to install
 tools and packages.
 
-- When do use `npm`?
+- When to use `npm`?
 
 You use npm to install new tools in the command line from time to time.
 
 Generally, you need to run this command when dealing with project setups or to
-use new tools
+use new tools.
 
 ### git
 
@@ -245,7 +244,7 @@ Git is different than [GitHub](http://github.com). GitHub is a web-based
 provider of a git, whereas git is the underlying tool. Github runs git, and we
 save our changes to our code to GitHub using git.
 
-- When do use git?
+- When to use git?
 
 You want to use `git` to save your changes. The most common tasks with git are
 usually "making a commit" or "pushing to GitHub". Git can do much more. The
@@ -318,20 +317,20 @@ Windows
 This command opens your present working directory in your file explorer for you.
 Even though the shell is robust, sometimes the file explorer is easier to use.
 
-- When do use start/open?
+- When to use start/open?
 
 We use this when we need to see the current directory in our file explorer.
 
 ### Stopping long-running tasks
 
-pressing both `control` and `c` - commonly denoted as `ctrl + c`
+Pressing both `control` and `c` - commonly denoted as `ctrl + c`.
 
 - What does it do?
 
 Sometimes when we are running tasks in our shell, we want to stop the task as it
 is running. Using this shortcut, we stop tasks that are already running.
 
-- When do use ctrl+c?
+- When to use ctrl+c?
 
 You need to stop the program you are running and return to being able to type
 commands in your shell.
