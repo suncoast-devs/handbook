@@ -155,7 +155,7 @@ The `CNAME` means canonical name, or that `new-fp-shed.wg1.b.yahoo.com` is the
 real name of `yahoo.com`. Then that name is resolved and we see that there are
 **4** addresses for that name.
 
-DNS makes for remarkably dynamic and resilient service.
+DNS makes for a remarkably dynamic and resilient service.
 
 ## Making Connections
 
@@ -192,7 +192,7 @@ Let's try connecting like the browser does.
 For this, we will be using a tool named `netcat`.
 
 On Mac OS install it with: `brew install netcat` On Linux it is likely
-`sudo apt install netcat`. On Windows: `scoop install netcat`
+`sudo apt install netcat`. On Windows: `scoop install netcat`.
 
 To connect: `nc handbook.suncoast.io 80`
 
