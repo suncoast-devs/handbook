@@ -27,27 +27,26 @@ CREATE TABLE "Books" (
 
 ### Column types
 
-These are the most common column types, but they certainly aren't the only ones
+These are the most common column types, but they certainly aren't the only ones.
 
-| Type       | Description                                                                                             |
-| ---------- | ------------------------------------------------------------------------------------------------------- |
-| CHAR(N)    | A "string" that stores up to N characters, the rest padded with spaces                                  |
-| VARCHAR(N) | A "string" that stores up to N characters, the rest is NOT padded with spaces                           |
-| TEXT       | A "string" that can store a very long string of characters and is the most flexible                     |
-| INT        | Stores an integer value                                                                                 |
-| NUMERIC    | Stores a number with values of any precision and scale that can be stored                               |
-| BOOLEAN    | Stores a `true` or `false` value                                                                        |
-| DATE       | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data |
-| TIMESTAMP  | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data |
+| Type       | Description                                                                                              |
+| ---------- | -------------------------------------------------------------------------------------------------------- |
+| CHAR(N)    | A "string" that stores up to N characters, the rest padded with spaces.                                  |
+| VARCHAR(N) | A "string" that stores up to N characters, the rest is NOT padded with spaces.                           |
+| TEXT       | A "string" that can store a very long string of characters and is the most flexible.                     |
+| INT        | Stores an integer value.                                                                                 |
+| NUMERIC    | Stores a number with values of any precision and scale that can be stored.                               |
+| BOOLEAN    | Stores a `true` or `false` value.                                                                        |
+| DATE       | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data. |
+| TIMESTAMP  | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data. |
 
 ### NULL versus NOT NULL
 
 By default all the column types above are `NULLable` meaning that you do not
 have to specify a value and thus can be the special value `NULL` that means
-_"lacks a value_"
+_"lacks a value_".
 
-If you want a column that must be supplied, add `NOT NULL` to it's
-specification.
+If you want a column that must be supplied, add `NOT NULL` to its specification.
 
 Example:
 
@@ -64,7 +63,7 @@ CREATE TABLE "Books" (
 To create a primary key column we add the qualifier `PRIMARY KEY`. It is also
 useful to use the `SERIAL` type which creates an automatically increasing
 integer for each row inserted. This allows us to **omit** that column and allow
-the database to supply it and automatically keep track of it
+the database to supply it and automatically keep track of it.
 
 ```sql
 CREATE TABLE "Books" (
@@ -100,10 +99,10 @@ VALUES ('The Lost World', 'Michael Crichton', 1995, 'sci-fi');
 
 ## SELECT data
 
-To selected data:
+To select data:
 
 ```sql
-SELECT <column names>
+SELECT <column name(s)>
 FROM <table name>
 ```
 
@@ -114,7 +113,7 @@ SELECT "Title", "YearPublished"
 FROM "Books";
 ```
 
-You can also use the special name `*` to mean _All Columns_
+You can also use the special name `*` to mean _All Columns_.
 
 ```sql
 SELECT *
@@ -154,7 +153,7 @@ To see all the books published by `Michael Crichton`:
 ```sql
 SELECT *
 FROM "Books"
-WHERE "Primary Author" = 'Michael Critchton';
+WHERE "PrimaryAuthor" = 'Michael Crichton';
 ```
 
 ## SELECT data but order the results
@@ -201,7 +200,7 @@ Example:
 > updated.
 
 Example, change the `Genre` into `children horror` for all the books where the
-`PrimaryAuther` is `R. L. Stine`
+`PrimaryAuthor` is `R. L. Stine`
 
 ```sql
 UPDATE "Books" SET "Genre" = 'children horror' WHERE "PrimaryAuthor" = 'R. L. Stine';
@@ -228,9 +227,9 @@ WHERE "ColumnB" = 'some value'
 Example:
 
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be
-> delete.
+> deleted.
 
-Example, to delete all the rows where the `PrimaryAuther` is `R. L. Stine`
+Example, to delete all the rows where the `PrimaryAuthor` is `R. L. Stine`
 
 ```sql
 DELETE FROM "Books"  WHERE "PrimaryAuthor" = 'R. L. Stine';
@@ -284,7 +283,7 @@ ALTER TABLE "Books" ALTER COLUMN "YearPublished" TYPE TEXT;
 To add a foreign key to an existing table:
 
 ```sql
-ALTER TABLE "ExistingTableNameHere" ADD COLUMN "SinuglarNameOfOtherTableFollowedById" INTEGER NULL REFERENCES "NameOfOtherTableHere" ("Id");
+ALTER TABLE "ExistingTableNameHere" ADD COLUMN "SingularNameOfOtherTableFollowedById" INTEGER NULL REFERENCES "NameOfOtherTableHere" ("Id");
 ```
 
 Example of adding a column to `Books` to relate to the `Ratings` table.
