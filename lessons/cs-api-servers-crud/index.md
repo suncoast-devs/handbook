@@ -12,8 +12,8 @@ this lesson, we will build an application to keep track of our game nights!
 
 Let us create an API to manage our game nights. When creating a game night, we'd
 like to track the name of the game we will play, the name of the person hosting
-the event, their address, the date and time the game will start, and the minimum
-and the maximum number of people the game can support.
+the event, their address, the date and time the game will start, the minimum and
+the maximum number of people the game can support.
 
 ## API Definition
 
@@ -24,28 +24,28 @@ and to follow a standard convention.
 We are going to treat our games as a resource we can manage. We will follow
 these guidelines while building our API:
 
-- GameNight is the model we are going to manage
+- GameNight is the model we are going to manage.
 - If an endpoint uses the GET verb, we expect the endpoint to return the same
   resource each time and not modify it. NOTE: the data inside may change (e.g.
   we may update the address or date) but the resource, the GameNight, is still
   the same. When we say "the same resource" we don't mean the contents, but
-  rather the concept (the GameNight with ID 1)
+  rather the concept (the GameNight with ID 1).
 - If an endpoint uses POST/PUT/DELETE it will modify the resource in some way.
 - POST will modify the "list of all game nights" resource by adding a new
   GameNight.
-- PUT will modify a specific game by supplying new values
+- PUT will modify a specific game by supplying new values.
 - DELETE will modify a specific game night by removing it from the "list of all
-  game nights"
+  game nights".
 
 Thus we will end up with an API with these endpoints:
 
-| Endpoint                | Purpose                                                                                                                           |
-| ----------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
-| GET /GameNights         | Gets a list of all games                                                                                                          |
-| GET /GameNights/{id}    | Gets the single specific game given by its id                                                                                     |
-| POST /GameNights        | Creates a new game, assigning a new ID for the game. The properties of the game are given as JSON in the BODY of the request      |
-| PUT /GameNights/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request |
-| DELETE /GameNights/{id} | Deletes the specific game given by its id                                                                                         |
+| Endpoint                | Purpose                                                                                                                            |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| GET /GameNights         | Gets a list of all games.                                                                                                          |
+| GET /GameNights/{id}    | Gets the single specific game given by its id.                                                                                     |
+| POST /GameNights        | Creates a new game, assigning a new ID for the game. The properties of the game are given as JSON in the BODY of the request.      |
+| PUT /GameNights/{id}    | Updates the single specific game given by its id. The updated properties of the game are given by JSON in the BODY of the request. |
+| DELETE /GameNights/{id} | Deletes the specific game given by its id.                                                                                         |
 
 > This is a very typical pattern of API for a CRUD-style application. These URL
 > patterns and VERB combinations are enough of a pattern that we can typically
@@ -135,8 +135,8 @@ public class GameNight
 ## Next step, inform our `DatabaseContext` of this model
 
 In our [lesson on ef core](/lessons/cs-object-relational-mapping) we didn't have
-a separate file for our `DatabaseContext` however, in most apps, it lives in
-its own file, and you will find it in the `Models` folder here as well.
+a separate file for our `DatabaseContext` however, in most apps, it lives in its
+own file, and you will find it in the `Models` folder here as well.
 
 After this code:
 
@@ -145,7 +145,7 @@ public partial class DatabaseContext : DbContext
 {
 ```
 
-add this statement to let the `DatabaseContext` know we want to track
+Add this statement to let the `DatabaseContext` know we want to track
 `GameNight` in a `GameNights` table:
 
 ```csharp
@@ -161,8 +161,6 @@ public partial class DatabaseContext : DbContext
 > database.
 
 Since we just added a new model, we need to create a migration.
-
-"`shell dotnet ef migrations add AddGameNights
 
 ```shell
 dotnet ef migrations add AddGameNights
@@ -472,7 +470,7 @@ private readonly DatabaseContext _context;
 This declares a private (can't be seen outside of this class) readonly (can't be
 changed) database context named `_context`. This property of the controller will
 be supplied each time a request is made. The way this is supplied is through
-`Dependency Injection` with the `constructor`
+`Dependency Injection` with the `constructor`.
 
 #### Constructor
 
@@ -712,8 +710,8 @@ public async Task<IActionResult> DeleteGameNight(int id)
 
 ### Checking for valid data
 
-Our Game Nights wouldn't be fun without fellow players. Let's add a validation to
-ensure at least two players are present at each game night.
+Our Game Nights wouldn't be fun without fellow players. Let's add a validation
+to ensure at least two players are present at each game night.
 
 To add this validation we'll update the methods that create and update a
 `GameNight`. We'd like to reject any request that has a `MinimumPlayers` less
