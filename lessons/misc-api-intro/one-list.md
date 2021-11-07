@@ -19,7 +19,7 @@ Each URL we investigate will have an `access_token` and this will allow us to
 maintain different lists for different users.
 
 The examples below are based on the
-[online documention](https://one-list-api.herokuapp.com/) of the One List API.
+[online documentation](https://one-list-api.herokuapp.com/) of the One List API.
 
 ## `GET` `/items?access_token={access_token}`
 
@@ -56,14 +56,14 @@ We would see output similar to:
 We see that each item has six fields, `id`, `text`, `complete`, `user_id`,
 `created_at`, and `updated_at`.
 
-| field      | description                                                            |
-| ---------- | ---------------------------------------------------------------------- |
-| id         | The unique identifier for this column. It will be an increasing value. |
-| text       | The description of the todo                                            |
-| complete   | A boolean indicating if we consider the todo complete                  |
-| user_id    | Identifies the user/list and should be the same for any `access_token` |
-| created_at | The timestamp when the item was created                                |
-| updated_at | The timestamp when the item was last updated                           |
+| field      | description                                                             |
+| ---------- | ----------------------------------------------------------------------- |
+| id         | The unique identifier for this column. It will be an increasing value.  |
+| text       | The description of the todo.                                            |
+| complete   | A boolean indicating if we consider the todo complete.                  |
+| user_id    | Identifies the user/list and should be the same for any `access_token`. |
+| created_at | The timestamp when the item was created.                                |
+| updated_at | The timestamp when the item was last updated.                           |
 
 ## Get a specific item
 

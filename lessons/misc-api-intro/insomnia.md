@@ -37,7 +37,7 @@ as my URL and leave the `GET` option in place.
 
 When I click on the `Send` button I'll get a response from the API. You will see
 on the right hand side the response code of `200` and the body of the response,
-an empty `JSON` array
+an empty `JSON` array.
 
 ![](./assets/get-response.png)
 
@@ -49,7 +49,7 @@ Let's change our request to send the API an item.
 
 Remembering the documentation (or checking
 [the docs](https://one-list-api.herokuapp.com) as a reference) we see we need to
-change our verb to `POST`
+change our verb to `POST`.
 
 ![](./assets/post-dropdown.png)
 
@@ -57,7 +57,7 @@ Next we tell the API we are sending JSON by selecting a BODY type:
 
 ![](./assets/post-body-type.png)
 
-and once we do we get an input area to type in our JSON request.
+And once we do we get an input area to type in our JSON request.
 
 ![](./assets/json-request-body.png)
 
@@ -69,7 +69,7 @@ Once we hit `Send` we can see the API response.
 
 ![](./assets/post-request-response.png)
 
-Notice in this case the http code is `201 Created`
+Notice in this case the http code is `201 Created`.
 
 ## Other tabs in the response area
 
@@ -100,6 +100,6 @@ the entries the API has for us:
 
 ## Reading one item, updating, and deleting
 
-Try using the Insomia tool to create a request to fetch a single item, update an
-item, and delete an item. Become familiar with sending requests and seeing how
-to fill in a URL, a body and seeing the results of your API requests.
+Try using the Insomnia tool to create a request to fetch a single item, update
+an item, and delete an item. Become familiar with sending requests and seeing
+how to fill in a URL, a body and seeing the results of your API requests.
