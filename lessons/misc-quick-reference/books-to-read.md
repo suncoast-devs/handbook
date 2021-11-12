@@ -2,13 +2,13 @@
 title: Books to Read
 ---
 
+## This is, perhaps, the best book ever written about how computers and code actually work
+
+- [Code](https://smile.amazon.com/Code-Language-Computer-Developer-Practices-ebook/dp/B00JDMPOK2/ref=sr_1_1)
+
 ## This is a great "career" book. It talks about the habits good developers have
 
 - [The Pragmatic Programmer](https://smile.amazon.com/Pragmatic-Programmer-Journeyman-Master/dp/020161622X/ref=sr_1_1)
-
-## A great, deep, background on how computers and code actually work
-
-- [Code](https://smile.amazon.com/Code-Language-Computer-Developer-Practices-ebook/dp/B00JDMPOK2/ref=sr_1_1)
 
 ## Interesting book on secrecy/cryptograph
 
