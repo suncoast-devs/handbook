@@ -228,7 +228,7 @@ will represent as `text/plain`.
 If we want to see different data coming back for each request, let's include the
 current date and time in the greeting.
 
-We change the implemention of the method to:
+We change the implementation of the method to:
 
 ```csharp
 [HttpGet]
@@ -275,7 +275,7 @@ public string SayHello(string who)
 
 If you use the URL `https://localhost:5001/helloworld?who=Paula` you will
 receive back the message `Hello, Paula. It is currently 4/28/2020 10:15:30 PM`
-(except you'll see the current time).
+(except you'll see the current date and time).
 
 What if we left out the query parameter and just sent
 `https://localhost:5001/helloworld`. In this case there won't be any `who` to
@@ -333,8 +333,8 @@ the number of sides our die has within the URL. That is a request to
 we sent a `GET` to `/api/Dice/20` we'd be rolling a 20-sided die.
 
 Somehow we must tell the _route_ part of `[HttpGet]` that we'd like to have part
-of the URL be _variable_ and tell it what we want to call that specific part of
-the URL. In this case a good name for that part is `sides`.
+of the URL be a _variable_ and tell it what we want to call that specific part
+of the URL. In this case a good name for that part is `sides`.
 
 We can modify the `[HttpGet]` with parenthesis to specify additional parts of
 the URL beyond the `/api/Dice` base. However if we use `{}` we can tell .NET
@@ -348,7 +348,7 @@ Just like for query parameters, we define a method argument to receive this
 data. We name it the same as what we wrote inside `{}`, in this case `sides`.
 Previously we used `string` as the type. Here, however, we want this to be a
 number so we can define `sides` as `int`. Since we are also returning a number,
-we define the return type is `int`. We'll name our method `Roll`
+we define the return type as `int`. We'll name our method `Roll`
 
 ```csharp
 [HttpGet("{sides}")]
