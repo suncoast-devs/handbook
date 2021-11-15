@@ -44,7 +44,7 @@ https://handbook.suncoast.io
 
 ---
 
-#  IP Address
+# IP Address
 
 - Once the browser realizes you wish to visit `handbook.suncoast.io` it must figure out how to address the server.
 
@@ -66,7 +66,7 @@ The `DNS` process allows your computer to quickly translate the address.
 
 - Checks defined DNS server.
 - Likely your local router.
-- Sees if it is recently resolved, given "Time To Live" (TTL)
+- Sees if it is recently resolved, given "Time To Live" (TTL).
 - If not, check's its DNS server. Typically your ISP.
 
 ---
@@ -77,7 +77,7 @@ The `DNS` process allows your computer to quickly translate the address.
 
 # Let's lookup a few addresses
 
-> NOTE: use `nslookup` if `dig` isn't available
+> NOTE: Use `nslookup` if `dig` isn't available.
 
 ```
 dig handbook.suncoast.io
@@ -203,10 +203,10 @@ Host: handbook.suncoast.io
 
 [.column]
 
-| Range | Guide |
-| ----- | ---------------------- |
-| `200-299` | `Everything ok` |
-| `300-399` | `Go elsewhere` |
+| Range     | Guide            |
+| --------- | ---------------- |
+| `200-299` | `Everything ok`  |
+| `300-399` | `Go elsewhere`   |
 | `400-499` | `Client mistake` |
 | `500-599` | `Server mistake` |
 
@@ -216,12 +216,12 @@ Host: handbook.suncoast.io
 
 - Common headers:
 
-| Header | Meaning |
-| ------ | ------- |
-| `Date` |  _Timestamp on Server_ |
-| `Content-Type` | _How should this content be interpreted_ |
-| `Content-Length` | _How long is this content in bytes_ |
-| `Last-Modified` | _When was this content last modified_ |
+| Header           | Meaning                                  |
+| ---------------- | ---------------------------------------- |
+| `Date`           | _Timestamp on Server_                    |
+| `Content-Type`   | _How should this content be interpreted_ |
+| `Content-Length` | _How long is this content in bytes_      |
+| `Last-Modified`  | _When was this content last modified_    |
 
 ---
 
@@ -230,4 +230,3 @@ Host: handbook.suncoast.io
 - `curl`
 - `http` (httpie)
 - `Insomnia`
-
