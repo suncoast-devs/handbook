@@ -11,7 +11,7 @@ theme: Next,1
 # Roles of the API Server
 
 - Present a consistent, well thought out, series of API Endpoints (URLs) to allow interaction with data.
-- Interact with all the necessary datasources. Primarily, but not limited to, databases.
+- Interact with all the necessary data sources. Primarily, but not limited to, databases.
 - Provide authentication to ensure users are who they say they are.
 - Provide authorization to ensure users are restricted based on their roles.
 
@@ -75,7 +75,7 @@ Models/
 
 ---
 
-# appsetings.json and appsetings.Development.json
+# appsettings.json and appsettings.Development.json
 
 These files configure certain features such as logging (we'll talk more about logging later) and which hosts (computers) are allowed to connect.
 
@@ -203,7 +203,7 @@ It also gives us a hint as to the purpose of the code defined within.
 
 This annotation tells `ASP.NET` that this class is a "Controller".
 
-When our applicaiton starts up `ASP.NET` will look for all the controllers that can possibly handle a request.
+When our application starts up `ASP.NET` will look for all the controllers that can possibly handle a request.
 
 ```csharp
 [ApiController]
@@ -245,7 +245,7 @@ public class HelloWorldController : ControllerBase
 
 # Handling our first request!
 
-The simplest thing we can possbily do is the equivalent of the first `C#` program we wrote.
+The simplest thing we can possibly do is the equivalent of the first `C#` program we wrote.
 
 `Hello World`
 
@@ -405,7 +405,7 @@ If you use the URL `https://localhost:5001/helloworld?who=Paula` you will receiv
 Hello, Paula. It is currently 4/28/2020 10:15:30 PM
 ```
 
-(except you'll see the current time)
+(except you'll see the current date and time)
 
 ---
 
@@ -442,7 +442,7 @@ The other way we discussed giving information to an API was as part of the URL i
 
 Let's make an API for rolling die
 
-We will start with making and endpoint `/api/Dice`.
+We will start with making an endpoint `/api/Dice`.
 
 To follow our convention we will make a `DiceController.cs` file (e.g. the `dice` from `/api/Dice` is converted to CamelCase and we tack on `Controller`) and inside we define a `DiceController` class.
 
