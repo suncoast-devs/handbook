@@ -9,15 +9,15 @@ assignments:
 In [this lesson](/lessons/misc-api-intro) we discussed the idea of an API which
 operates over the internet via HTTP.
 
-In this current lesson we will build a console application that will interact with the
-`One List API` to manage todo lists. All of the information about the todo items
-will be stored in the API itself. In this way our console application will be
-considered a `client` of the API. In other lessons we will build full web page
-applications that also serve as a client that runs in our browser. We could also
-develop a mobile phone application in Android or iOS that could also access this
-API. In this way the API is _agnostic_ to its client. As long as the client
-software (in this case our `C#` console application) complies with the API
-requirements it will work with the API. This is why APIs are so powerful and
+In this current lesson we will build a console application that will interact
+with the `One List API` to manage todo lists. All of the information about the
+todo items will be stored in the API itself. In this way our console application
+will be considered a `client` of the API. In other lessons we will build full
+web page applications that also serve as a client that runs in our browser. We
+could also develop a mobile phone application in Android or iOS that could also
+access this API. In this way the API is _agnostic_ to its client. As long as the
+client software (in this case our `C#` console application) complies with the
+API requirements it will work with the API. This is why APIs are so powerful and
 help power the modern internet.
 
 ## Creating our one list API client.
@@ -61,9 +61,9 @@ to, and receiving information from, a remote service (web site, API, etc) on the
 internet is not _instantaneous_. There is always going to be some amount of
 delay as the request is constructed, sent out by our computer, it traverses the
 various connections over the internet on its way to the destination server,
-received, parsed, executed, response created, and then the response traverses the
-return path through the internet back to our computer. Due to the inherent and
-unpredictable delay in sending requests and receiving a response the code we
+received, parsed, executed, response created, and then the response traverses
+the return path through the internet back to our computer. Due to the inherent
+and unpredictable delay in sending requests and receiving a response the code we
 write for interacting with such services should be `a-synchronous`. The term
 _synchronous_ means "at the same time" and in this context we could also
 interpret it as "stop and wait for this to be done." Thus the idea of
@@ -76,9 +76,9 @@ synchronous event when our browsers give us a "wait" cursor (spinning wheel,
 etc) when a web page freezes. That does not provide a great user experience.
 
 The idea of async methods will become very common as we write code that
-interacts with remote resources such as HTTP APIs or even our own databases. That
-the .NET core team made these methods asynchronous allows us the flexibility to
-make our applications as responsive as possible.
+interacts with remote resources such as HTTP APIs or even our own databases.
+That the .NET core team made these methods asynchronous allows us the
+flexibility to make our applications as responsive as possible.
 
 However, learning to deal with `async` methods requires an even longer detour
 than we want to take at this time. Fortunately the `C#` and `dotnet` team
@@ -86,9 +86,9 @@ provided a way to allow us to tell these `async` methods that we'd just prefer
 to wait for them to be done.
 
 For this we introduce a new keyword, the `await` keyword. When we put this
-keyword in front of any function call we make that is `async` we tell the code
-that we wish for it to make the `async` as it would but to immediately just wait
-for it to be complete and return the result. In this way we turn something
+keyword in front of any function call that is `async` we tell the code that we
+wish for it to make the `async` as it would but to immediately just wait for it
+to be complete and return the result. In this way we turn something
 _asynchronous_ into something _synchronous_. This does mean, however, that our
 code will **pause** while the function is running and may make our application
 seem unresponsive.
@@ -117,7 +117,8 @@ namespace OneListClient
 }
 ```
 
-If we were to look in our editor or try to run this code we will notice an error.
+If we were to look in our editor or try to run this code we will notice an
+error.
 
 ```
 The 'await' operator can only be used within an async method. Consider marking this method with the 'async' modifier and changing its return type to 'Task'
@@ -245,7 +246,7 @@ there must be a way we can take data we send **to** an API and format it in JSON
 and there must also be a way to take information **from** an API and convert it
 from JSON to `C#` objects we are familiar with.
 
-Fortunately there is a process knows as `serialization` and `de-serialization`,
+Fortunately there is a process known as `serialization` and `de-serialization`,
 coming from the idea that we are taking data and turning it into a series of
 characters, like a JSON string. Serialization is the process of taking an object
 (an array, a string, a number, a date, an array of objects, or any complex data
@@ -538,9 +539,9 @@ namespace OneListClient
 }
 ```
 
-You may have noticed we gave the `CompletedStatus` a more tradition `C#` name in
-`CapitalCase` styling. We can do the same for the other fields with a little bit
-of work.
+You may have noticed we gave the `CompletedStatus` a more traditional `C#` name
+in `CapitalCase` styling. We can do the same for the other fields with a little
+bit of work.
 
 But first we will make yet another detour.
 
@@ -642,7 +643,7 @@ dotnet add package ConsoleTables
 ```
 
 The
-[documentation for ConsoleTables](https://github.com/khalidabuhakmeh/ConsoleTables)
+[Documentation for ConsoleTables](https://github.com/khalidabuhakmeh/ConsoleTables)
 shows us how to create a table with headers, add rows, and output the table
 itself.
 
@@ -712,7 +713,7 @@ namespace OneListClient
 }
 ```
 
-and now our output looks like this:
+And now our output looks like this:
 
 ```
 +--------------------------------------------------------+----------------------+---------------+
@@ -919,5 +920,5 @@ namespace OneListClient
 
 Our todo list app is really going places!
 
-Next up, let's add a little menu system that will let us get a list of items, get
-a specific item by its ID, add an item, and remove an item.
+Next up, let's add a little menu system that will let us get a list of items,
+get a specific item by its ID, add an item, and remove an item.

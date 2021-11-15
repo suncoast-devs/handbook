@@ -38,7 +38,7 @@ are a few things to notice:
 2. We've moved the code for getting a list of all the items to a method
    `ShowAllItems` - Notice we need to _pass_ it the `token` so we have access to
    it. Also notice that we have to tell the `Main` method to `await` its
-   completion since it is now marked `async.
+   completion since it is now marked `async`.
 3. The `client` variable is also moved into `ShowAllItems`.
 
 ```csharp
@@ -253,11 +253,11 @@ In order to do this we need to take another detour.
 
 ## DETOUR: Exceptions
 
-We must _handle the exception_ that this code is causing (called _throwing\_\_.)
-When code we use _"throws"\_ an exception it is saying to the system "I could
-not do the requested process and I'm raising the white flag in defeat hoping
-that someone who called **me** can handle this!" We do this by wrapping the code
-in a special syntax called `try/catch`.
+We must _handle the exception_ that this code is causing (called _throwing_.)
+When we use _"throws"_ an exception, it is saying to the system "I could not do
+the requested process and I'm raising the white flag in defeat hoping that
+someone who called **me** can handle this!" We do this by wrapping the code in a
+special syntax called `try/catch`.
 
 ```csharp
 try
@@ -492,8 +492,7 @@ static async Task AddOneItem(string token, Item newItem)
 {
     var client = new HttpClient();
 
-    // Generate a URL specifically referencing the endpoint for getting a single
-    // todo item and provide the id we were supplied
+    // Generate a URL specifically referencing the endpoint for adding a todo item
     var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
     // Take the `newItem` and serialize it into JSON
@@ -537,10 +536,10 @@ marks the body as JSON content.
 Finally we can `await client.PostAsync(url, jsonBodyAsContent)` to send the
 `POST` request to the URL.
 
-Next we ask the `response` for its `Content` and get a _stream_ from it which
-we then send to our friend the _deserializer_ who in turn gives us an `Item`.
-This is the `item` that is being returned from the API. We get this item so that
-we can show the newly created item to the user (which would include its ID,
+Next we ask the `response` for its `Content` and get a _stream_ from it which we
+then send to our friend the _deserializer_ who in turn gives us an `Item`. This
+is the `item` that is being returned from the API. We get this item so that we
+can show the newly created item to the user (which would include its ID,
 creation time, etc.)
 
 Using this feature would look like this:
@@ -656,8 +655,7 @@ namespace OneListClient
         {
             var client = new HttpClient();
 
-            // Generate a URL specifically referencing the endpoint for getting a single
-            // todo item and provide the id we were supplied
+            // Generate a URL specifically referencing the endpoint for adding a todo item
             var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
             // Take the `newItem` and serialize it into JSON
@@ -819,7 +817,7 @@ static async Task UpdateOneItem(string token, int id, Item updatedItem)
     var jsonBodyAsContent = new StringContent(jsonBody);
     jsonBodyAsContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-    // Send the POST request to the URL and supply the JSON body
+    // Send the PUT request to the URL and supply the JSON body
     var response = await client.PutAsync(url, jsonBodyAsContent);
 
     // Get the response as a stream.
@@ -996,8 +994,7 @@ namespace OneListClient
         {
             var client = new HttpClient();
 
-            // Generate a URL specifically referencing the endpoint for getting a single
-            // todo item and provide the id we were supplied
+            // Generate a URL specifically referencing the endpoint for adding a todo item
             var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
             // Take the `newItem` and serialize it into JSON
@@ -1043,7 +1040,7 @@ namespace OneListClient
             var jsonBodyAsContent = new StringContent(jsonBody);
             jsonBodyAsContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            // Send the POST request to the URL and supply the JSON body
+            // Send the PUT request to the URL and supply the JSON body
             var response = await client.PutAsync(url, jsonBodyAsContent);
 
             // Get the response as a stream.

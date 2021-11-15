@@ -112,8 +112,7 @@ namespace OneListClient
         {
             var client = new HttpClient();
 
-            // Generate a URL specifically referencing the endpoint for getting a single
-            // todo item and provide the id we were supplied
+            // Generate a URL specifically referencing the endpoint for adding a todo item
             var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
             // Take the `newItem` and serialize it into JSON
@@ -159,7 +158,7 @@ namespace OneListClient
             var jsonBodyAsContent = new StringContent(jsonBody);
             jsonBodyAsContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
 
-            // Send the POST request to the URL and supply the JSON body
+            // Send the PUT request to the URL and supply the JSON body
             var response = await client.PutAsync(url, jsonBodyAsContent);
 
             // Get the response as a stream.
@@ -493,8 +492,7 @@ namespace OneListClient
         {
             var client = new HttpClient();
 
-            // Generate a URL specifically referencing the endpoint for getting a single
-            // todo item and provide the id we were supplied
+            // Generate a URL specifically referencing the endpoint for adding a todo item
             var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
             var body = ConvertItemToHttpBody(newItem);
@@ -517,7 +515,7 @@ namespace OneListClient
 
             var body = ConvertItemToHttpBody(updatedItem);
 
-            // Send the POST request to the URL and supply the JSON body
+            // Send the PUT request to the URL and supply the JSON body
             var response = await client.PutAsync(url, body);
 
             var item = await ConvertResponseToItem(response);

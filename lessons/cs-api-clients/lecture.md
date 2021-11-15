@@ -317,7 +317,7 @@ class Item
 
 # Make the output pretty (_OPTIONAL_)
 
-Out output has been boring. Here is one thing we could add to make it more exciting.
+Our output has been boring. Here is one thing we could add to make it more exciting.
 
 ```
 ------------------------------------------------
@@ -564,8 +564,7 @@ static async Task AddOneItem(string token, Item newItem)
 {
     var client = new HttpClient();
 
-    // Generate a URL specifically referencing the endpoint for getting a single
-    // todo item and provide the id we were supplied
+    // Generate a URL specifically referencing the endpoint for adding a todo item
     var url = $"https://one-list-api.herokuapp.com/items?access_token={token}";
 
     // Take the `newItem` and serialize it into JSON
