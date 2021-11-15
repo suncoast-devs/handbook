@@ -6,7 +6,7 @@ theme: Next,1
 
 # Writing API servers that manage data
 
-- Let's create an API server that can perform CRUD actions on some collection of data
+- Let's create an API server that can perform CRUD actions on some collection of data.
 
 ---
 
@@ -39,12 +39,12 @@ The first thing we should do is design our API to support all of these and to fo
 
 We will follow these guidelines while building our API:
 
-- GameNight is the model we are going to manage
+- GameNight is the model we are going to manage.
 - If an endpoint uses the `GET` verb we expect the endpoint to return the same resource each time and not modify it.
 - If an endpoint uses `POST/PUT/DELETE` it will modify the resource in some way.
 - `POST` will modify the "list of all games" resource by adding a new GameNight.
-- `PUT` will modify a specific game night by supplying new values
-- `DELETE` will modify a specific game night by removing it from the "list of all game nights"
+- `PUT` will modify a specific game night by supplying new values.
+- `DELETE` will modify a specific game night by removing it from the "list of all game nights".
 
 ---
 
@@ -82,7 +82,7 @@ dotnet new sdg-api -o GameNightWithFriends
 
 # Generating an ERD
 
-Our ERD for this application is simple since it is only dealing with a single entity: a `GameNight`
+Our ERD for this application is simple since it is only dealing with a single entity: a `GameNight`.
 
 ```
 +-------------------------+
@@ -146,7 +146,7 @@ public partial class DatabaseContext : DbContext
 {
 ```
 
-add this statement to let the `DatabaseContext` know we want to track `GameNight` in a `GameNights` table:
+Add this statement to let the `DatabaseContext` know we want to track `GameNight` in a `GameNights` table:
 
 ```csharp
 public partial class DatabaseContext : DbContext
