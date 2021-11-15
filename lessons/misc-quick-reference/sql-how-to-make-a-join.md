@@ -2,8 +2,8 @@
 title: SQL Joins
 ---
 
-Knowing how to join tables together and use where clauses is an essential aspect
-to learning to effectively use SQL.
+Knowing how to join tables together and use `WHERE` clauses is an essential
+aspect to learning to effectively use SQL.
 
 Let's build up some guides to the process using an example.
 
@@ -26,7 +26,7 @@ We'll start with this [ERD](/lessons/sql-erd)
 The first thing we need to do is gather up the tables that will be involved in
 this task. This is similar to gathering all the tools we need for a home
 improvement project, the hammer, the screwdriver, the tape measure, etc. Or
-gathering up all the kitchen utensils we need for making a recipie, the blender,
+gathering up all the kitchen utensils we need for making a recipe, the blender,
 the pots and pans, the baking sheet, etc.
 
 Here we know we have an order number, and we see the `OrderNumber` column on
@@ -36,15 +36,15 @@ We see the name of a product so the `Name` field on `Products` indicates that
 the `Products` table will be involved.
 
 We also see that order quantities are on the `ProductOrders` table so we'll see
-that table will be involved.
+that the `ProductOrders` table will be involved.
 
 ## Join those tables together
 
 Now we need to `JOIN` all those tables together!
 
-Every join of multiple tables always **STARTS** with a table we wil make our
-`FROM` table. Since `OrderQuantity` is the value we want, it makes sense to
-start with that table.
+Every join of multiple tables always **STARTS** with a table that we will make
+our `FROM` table. Since `OrderQuantity` is the value we want, it makes sense to
+start with the table that attribute is located on.
 
 ```sql
 SELECT "ProductOrders"."OrderQuantity"
@@ -112,9 +112,9 @@ joined data. We will only see the `OrderQuantity` from `ProductOrders` for order
 
 # General process
 
-1. Identify all the columns that you need in the RESULTS
-2. Identify all the columns that you need to FILTER BY
-3. Use those to identify all the tables that will be involved in the query
+1. Identify all the columns that you need in the RESULTS.
+2. Identify all the columns that you need to FILTER BY.
+3. Use those to identify all the tables that will be involved in the query.
 4. Choose one table to start with, this decision will vary depending on what you
    are selecting from. Realistically you can start with any table, but one that
    is more "in the middle" of the ERD diagram will be better.
