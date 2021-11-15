@@ -38,9 +38,9 @@ One of the crucial parts of the job search is the interview. Because the
 interview is essential, it is vital to be ready and prepped. Each interview is
 different, and each company does the process their way. Still, there are some
 strategies to prepare for the journey. Take advantage of the time, momentum, and
-peers to prep for this process.
+your peers to prep for this process.
 
-Code katas are a great way to prop for technical interviews and whiteboard
+Code katas are a great way to prep for technical interviews and whiteboard
 problems.
 
 We recommend:
@@ -116,7 +116,7 @@ it's better to be consistent than to go in spurts.
 | Build a second [capstone sized project](https://suncoast.io/handbook/curriculum/final-project/project-ideas/)                             |
 
 You have a foundation of web programming. To grow those skills, start taking a
-took at these topics. To learn new topics, always build small sample projects
+look at these topics. To learn new topics, always build small sample projects
 demonstrating the idea and then apply them to a past project.
 
 | Advanced Topics                                |
@@ -158,7 +158,7 @@ project using the new ideas.
 | Serverless             | .NET/Backend         | Create functions instead of servers             |
 | Xamarin                | .NET                 | Create native apps with C#                      |
 | Worker Service         | .NET                 | Have your server do stuff in the background     |
-| Signalr                | .NET                 | Real-time web apps in ASP.nET                   |
+| Signalr                | .NET                 | Real-time web apps in ASP.NET                   |
 | -                      | -                    |                                                 |
 | Azure                  | DevOps               | Cloud hosting service                           |
 | AWS                    | DevOps               | Cloud hosting service                           |
@@ -172,7 +172,7 @@ project using the new ideas.
 | Node and Express       | Other web frameworks |                                                 |
 
 During this time, you might try to learn all the things after graduation, **but
-that might not be the best path to success.**
+that might not be the best path to success**.
 
 We would recommend only start to learn a new technology if:
 
