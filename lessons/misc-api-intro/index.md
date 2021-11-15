@@ -13,7 +13,7 @@ two pieces of code need to agree on:
 - What is the output that will be returned?
 - What is the format of the output?
 
-All of this together describes an `A`pplication `P`rogramming `I`interface, or
+All of this together describes an `A`pplication `P`rogramming `I`nterface, or
 `API`. The secret is that as we've been writing methods we've already been
 writing and _using_ APIs!
 

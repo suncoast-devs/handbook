@@ -20,7 +20,7 @@ The two pieces of code need to agree on:
 
 ---
 
-All of this together describes an `A`pplication `P`rogramming `I`interface, or `API`.
+All of this together describes an `A`pplication `P`rogramming `I`nterface, or `API`.
 
 The **secret** is that as we've been writing methods we've already been writing and _using_ APIs!
 
@@ -48,13 +48,13 @@ int AddTwoNumbers(int firstNumber, int secondNumber)
 
 #### Let's apply our list:
 
-|  |  |
-| --- | --- |
-| What is the input that needs to be sent? | `firstNumber and secondNumber` |
-| What is the format of the input? | `firstNumber is an integer and secondNumber is an integer` |
-| What is the name/location/identity of the code to run? | `The method is called AddTwoNumbers` |
-| What is the output that will be returned? | `The sum of the two numbers we gave` |
-| What is the format of the output? | `A single int` |
+|                                                        |                                                            |
+| ------------------------------------------------------ | ---------------------------------------------------------- |
+| What is the input that needs to be sent?               | `firstNumber and secondNumber`                             |
+| What is the format of the input?                       | `firstNumber is an integer and secondNumber is an integer` |
+| What is the name/location/identity of the code to run? | `The method is called AddTwoNumbers`                       |
+| What is the output that will be returned?              | `The sum of the two numbers we gave`                       |
+| What is the format of the output?                      | `A single int`                                             |
 
 ^ These same questions apply any time two pieces of code communicate in some way. Even our simple use of C# language features adhere to this rule. It also applies when the code we are asking to run isn't logically or physically located inside our own application, or even on our own computer!
 
@@ -84,13 +84,13 @@ We will typically access these APIs over the internet and thus the answer to our
 
 We'll be looking at all the different options, but let's take a look at the simplest option, one that just gives us back a single quote.
 
-| Question | Answer |
-| --- | --- |
-| What is the input that needs to be sent? | `None` |
-| What is the format of the input? | `None` |
+| Question                                                  | Answer                                              |
+| --------------------------------------------------------- | --------------------------------------------------- |
+| What is the input that needs to be sent?                  | `None`                                              |
+| What is the format of the input?                          | `None`                                              |
 | What is the name/location/identity of the code to be run? | `http://ron-swanson-quotes.herokuapp.com/v2/quotes` |
-| What is the output that will be returned? | `A list of quotes from Ron` |
-| What is the format of the output? | `A JSON array of strings` |
+| What is the output that will be returned?                 | `A list of quotes from Ron`                         |
+| What is the format of the output?                         | `A JSON array of strings`                           |
 
 ---
 
@@ -189,13 +189,13 @@ http --verbose http://ron-swanson-quotes.herokuapp.com/v2/quotes/5
 
 The answers to our API questions are now:
 
-| Question | Answer |
-| ---- | --- |
-| What is the input that needs to be sent? | `Count of quotes` |
-| What is the format of the input? | `as part of the URL` |
+| Question                                                  | Answer                                                      |
+| --------------------------------------------------------- | ----------------------------------------------------------- |
+| What is the input that needs to be sent?                  | `Count of quotes`                                           |
+| What is the format of the input?                          | `as part of the URL`                                        |
 | What is the name/location/identity of the code to be run? | `http://ron-swanson-quotes.herokuapp.com/v2/quotes/<count>` |
-| What is the output that will be returned? | `A list of quotes from Ron` |
-| What is the format of the output? | `A JSON array (of length 5) of strings` |
+| What is the output that will be returned?                 | `A list of quotes from Ron`                                 |
+| What is the format of the output?                         | `A JSON array (of length 5) of strings`                     |
 
 ---
 
@@ -369,10 +369,10 @@ However, we do not specify a body since no additional information is needed to f
 
 Each API URL (known as an _end point_) has different answers to our _API questions_
 
-| | |
-| --- | --- |
-| What is the input that needs to be sent? | `Any URL parameters, like {id} and query parameters like {access_token} as well as the body of the request if required` |
-| What is the format of the input? | `The body will be in JSON format` |
-| What is the name/location/identity of the code to be run? | `This will be the URL and the specific verb to use` |
-| What is the output that will be returned? | `The response body and the response code` |
-| What is the format of the output? | `The body will be in JSON and the response code will be a number` |
+|                                                           |                                                                                                                         |
+| --------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| What is the input that needs to be sent?                  | `Any URL parameters, like {id} and query parameters like {access_token} as well as the body of the request if required` |
+| What is the format of the input?                          | `The body will be in JSON format`                                                                                       |
+| What is the name/location/identity of the code to be run? | `This will be the URL and the specific verb to use`                                                                     |
+| What is the output that will be returned?                 | `The response body and the response code`                                                                               |
+| What is the format of the output?                         | `The body will be in JSON and the response code will be a number`                                                       |
