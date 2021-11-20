@@ -13,9 +13,9 @@ Given any amount of change from zero cents to 99 cents, determine the minimum
 number of coins to make change. Consider only quarters, dimes, nickels, and
 pennies.
 
-For example: 6 cents = 1 penny, 1 nickle, 0 dimes, 0 quarters 
-11 cents = 1 penny, 0 nickles, 1 dime, 0 quarters 
-43 cents = 3 pennies, 1 nickle, 1 dime, 1 quarter
+For example: 6 cents = 1 penny, 1 nickle, 0 dimes, 0 quarters; 11 cents = 1
+penny, 0 nickles, 1 dime, 0 quarters; 43 cents = 3 pennies, 1 nickle, 1 dime, 1
+quarter;
 
 ## Colorful Triangles
 
@@ -50,8 +50,7 @@ R R G B R G B B
 
 You will be given the first row of the triangle as a string, and it is your job
 to return the final color, which would appear in the bottom row as a string. In
-the case of the example above, you would the given `RRGBRGBB` you should return
-`G`.
+the case of the example above, given `RRGBRGBB` you should return `G`.
 
 ## Calculator
 
@@ -73,4 +72,4 @@ To evaluate this, you would take the sequence `1 2 +` and turn that into a `3`,
 then apply the `4 *` (12), then we would apply `5 +`, and finally `- 3`
 
 Your job is to create a calculator which evaluates expressions in Reverse Polish
-notation. The value of the RPN above is `14`
+notation. The value of the RPN above is `14`.
