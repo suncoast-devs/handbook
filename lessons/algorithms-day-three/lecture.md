@@ -36,7 +36,7 @@ theme: Next, 1
 
 ---
 
-# Take an example. Encode the phrase CODES
+# Take an example. Encode the phrase "CODES"
 
 ---
 
@@ -186,7 +186,7 @@ Take the example of a shift of 3.
 
 ---
 
-# Encoding the phrase CODES
+# Encoding the phrase "CODES"
 
 It works just like when using a substitution cipher.
 
@@ -378,7 +378,7 @@ Consider the index divided by 26, but only the remainder.
 
 # Example: ROT13
 
-- Simple Caeser Cipher with offset 13 (half the alphabet)
+- Simple Caesar Cipher with offset 13 (half the alphabet)
 - No need to use a _negative_ code to decipher (since `26 - 13` is `13`)
 - Try [here](https://rot13.com/)
 - It was used for a while during the early days of the internet to avoid spoilers. Everything was plaintext.
