@@ -15,8 +15,8 @@ The Job Search is your starting point; this is where you apply for positions.
 
 Here are some other portions of the Handbook that you may find helpful,
 
-- [Actively Looking for Jobs](../career-looking/actively-looking) to help get your
-  job search started.
+- [Actively Looking for Jobs](../career-looking/actively-looking) to help get
+  your job search started.
 - Also, [Decoding Job Descriptions](../career-looking/decoding-job-desc) will
   help you figure out what the job description can tell you about the company
   and position.
@@ -28,12 +28,12 @@ So what are some of the Dos and Don'ts during the Job Search Process?
   <ul>
     <li>Stand-out
       <ul>
-        <li>Use your resume, LinkedIn, GitHub, etc. to show off your skills and experience</li>
+        <li>Use your resume, LinkedIn, GitHub, etc. to show off your skills and experience.</li>
       </ul>
     </li>
     <li>Be consistent
       <ul>
-        <li>Use consistent wording and a consistent picture wherever possible, so employers know they have the right person</li>
+        <li>Use consistent wording and a consistent picture wherever possible, so employers know they have the right person.</li>
       </ul>
     </li>
     <li>Say the important stuff first
@@ -49,18 +49,18 @@ So what are some of the Dos and Don'ts during the Job Search Process?
     </li>
     <li>Put contact info on your resume
       <ul>
-        <li>Having your information on your resume will ensure that an employer can get a hold of you during the entire process</li>
+        <li>Having your information on your resume will ensure that an employer can get a hold of you during the entire process.</li>
       </ul>
     </li>
     <li>Let numbers/stats speak loudly instead of Highlights
       <ul>
-        <li>If you have percentages, dollar amounts, or other stats to help support your accomplishments be sure to use them</li>
+        <li>If you have percentages, dollar amounts, or other stats to help support your accomplishments be sure to use them.</li>
       </ul>
     </li>
     <li>Make sure you have a clear hierarchy and use whitespace wisely 
       <ul>
-        <li>Use bullet points over paragraphs</li>
-        <li>Have a resume that is easy to read, identify areas of importance, and easy to scan</li>
+        <li>Use bullet points over paragraphs.</li>
+        <li>Have a resume that is easy to read, identify areas of importance, and easy to scan.</li>
       </ul>
     </li>
   </ul>
@@ -72,7 +72,7 @@ So what are some of the Dos and Don'ts during the Job Search Process?
     <li>Use cliches, gimmicks, or objectives:
       <ul>
         <li>Avoid overused phrases such as "passionate", "go-getter", "ninja", "warrior", and "unicorn".</li>
-        <li>Stay away from resumes printed on unusual objects or delivered in a theatrical way</li>
+        <li>Stay away from resumes printed on unusual objects or delivered in a theatrical way.</li>
         <li>Avoid objectives that don't show your skills, such as "To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills."</li>
       </ul>
     </li>
@@ -99,23 +99,23 @@ So what are some of the Dos and Don'ts during the Phone Interview?
   <ul>
     <li>Be on time, in a comfortable location
       <ul>
-        <li>Avoid taking the call from your car; you won't be comfortable, and it will show</li>
+        <li>Avoid taking the call from your car; you won't be comfortable, and it will show.</li>
       </ul>
     </li>
     <li>Have a laptop or notebook for taking notes on things you find interesting or don't know </li>
     <li>Do your homework
       <ul>
-        <li>Find the company's narrative and gather background info about what they do</li>
+        <li>Find the company's narrative and gather background info about what they do.</li>
       </ul>
     </li>
-    <li>Use a professional, but casual/ interested tone
+    <li>Use a professional, but casual/interested tone
       <ul>
         <li>Show you interest in the position and company</li>
       </ul>
     </li>
     <li>Tell a (short) story
       <ul>
-        <li>Describe experiences and learning opportunities that helps the interview team learn more about you</li>
+        <li>Describe experiences and learning opportunities that helps the interview team learn more about you.</li>
       </ul>
     </li>
   </ul>
@@ -124,7 +124,7 @@ So what are some of the Dos and Don'ts during the Phone Interview?
 <details>
   <summary>Don't</summary>
   <ul>
-    <li>Badmouth a previous job/ competitor
+    <li>Badmouth a previous job/competitor
       <ul>
         <li>How you talk about past employers or competitors gives a peek into how you might talk about the company/team you are interviewing with should you get hired and one day leave.</li>
         <li>After you leave an employer, try to find positive aspects of working there. Consider talking about how the experience helped you grow vs. why it was a bad experience.</li>
@@ -132,12 +132,12 @@ So what are some of the Dos and Don'ts during the Phone Interview?
     </li>
     <li>Talk too much/too little
       <ul>
-        <li>Having too many moments of silence, or someone who doesn't let anyone else talk can lead to an awkward and very uncomfortable interview</li>
+        <li>Having too many moments of silence, or someone who doesn't let anyone else talk can lead to an awkward and very uncomfortable interview.</li>
       </ul>
     </li>
     <li>Hold out for one company, interview as many as you can
       <ul>
-        <li>You are not the only applicant they are interviewing so don't let them be the only company you are pursuing</li>
+        <li>You are not the only applicant they are interviewing so don't let them be the only company you are pursuing.</li>
       </ul>
     </li>
   </ul>
@@ -159,7 +159,7 @@ What are the Dos and Don'ts for Technical Interviews?
 <details>
   <summary>Do</summary>
   <ul>
-    <li>Be on time, sit in a comfortable location if you are interviewing virtually</li>
+    <li>Be on time, sit in a comfortable location if you are interviewing virtually.</li>
     <li>Do your homework
       <ul>
         <li>Google interview questions</li>
@@ -168,7 +168,7 @@ What are the Dos and Don'ts for Technical Interviews?
         <li><a href="https://www.google.com/search?ei=4yn5XprZOoXj_Ab9hJcQ&q=react+interview+questions&oq=react+interview+questions&gs_lcp=CgZwc3ktYWIQAzIGCAAQBxAeMgQIABBDMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjIGCAAQBxAeMgYIABAHEB4yBggAEAcQHjoICAAQBxAKEB46CggAEAgQBxAKEB46BAgAEA06BAgAEApQvaoCWPrTAmC-2AJoAHAAeACAAY0BiAHrDJIBBDAuMTSYAQCgAQGqAQdnd3Mtd2l6&sclient=psy-ab&ved=0ahUKEwja1sr71qXqAhWFMd8KHX3CBQIQ4dUDCAw&uact=5">React.js Interview Questions</a></li>
       </ul>
     </li>
-    <li>Walkthrough the solution before you code
+    <li>Walk-through the solution before you code
       <ul>
         <li>No matter what the issue or what answer you choose, make sure to think out loud! If you have different ways of solving the problem, talk through the options before deciding which to use.</li>
         <li>Talking out the problem helps the interviewer see and understand your thought process.</li>
@@ -184,19 +184,19 @@ What are the Dos and Don'ts for Technical Interviews?
   <ul>
     <li>Try to write the best code of your life
       <ul>
-        <li>It's better to give a simple answer that the interviewer can follow and help with than create overcomplicated code</li>
+        <li>It's better to give a simple answer that the interviewer can follow and help with than create overcomplicated code.</li>
       </ul>
     </li>
     <li>Try to impress the interviewer(s) with your skills
       <ul>
-        <li>Trying to use every trick in the book can come to give a wrong impression</li>
-        <li>Often times it can highlight things you don't 100% understand how to use properly</li>
+        <li>Trying to use every trick in the book can come to give a wrong impression.</li>
+        <li>Often times it can highlight things you don't 100% understand how to use properly.</li>
       </ul>
     </li>
     <li>Stay silent or talk over the interviewer(s)
       <ul>
-        <li>If you don't speak, they don't know how your mind solves problems</li>
-        <li>When you talk over interviewers, it can give the impression that you are not a team player or think you know more than the interviewer</li>
+        <li>If you don't speak, they don't know how your mind solves problems.</li>
+        <li>When you talk over interviewers, it can give the impression that you are not a team player or think you know more than the interviewer.</li>
       </ul>
     </li>
   </ul>
@@ -223,7 +223,7 @@ What are the Dos and Don'ts for Face-to-Face Interviews?
     <li>Be friendly with everyone you meet
       <ul>
         <li>Whether it is someone you bump into in an elevator or the receptionist, you want to make sure you are giving a good impression.</li>
-        <li>You don't want to make the wrong impression that could get back to the interview team</li>
+        <li>You don't want to make the wrong impression that could get back to the interview team.</li>
       </ul>
     </li>
     <li>Dress one notch above the culture but be sure to feel confident
@@ -247,9 +247,9 @@ What are the Dos and Don'ts for Face-to-Face Interviews?
     <li>Don't undersell your value and knowledge but be truthful.
       <ul>
         <li>If you have read an article or watched a video but don't have experience try saying <i>"I've heard of it"</i></li>
-        <li>If you have followed a tutorial or tried creating a project on your own try saying <i>"I've played around with it I've built things with it, but not production level"</i></li>
+        <li>If you have followed a tutorial or tried creating a project on your own try saying <i>"I've played around with it" or "I've built things with it, but not production level"</i></li>
         <li>If you have used it for a few times try saying <i>"I've used it on a few projects and had a _____ experience because _____ ."</i></li>
-        <li>If you have contributed to an open-source project say <i>"I've actually contributed to that projects"</i> and then watch the excitement in their eyes!</li>
+        <li>If you have contributed to an open-source project say <i>"I've actually contributed to ______ projects"</i> and then watch the excitement in their eyes!</li>
       </ul>
     </li>
   </ul>
@@ -295,10 +295,10 @@ news or during negotiations.
         <li><a href="https://www.thebalancecareers.com/job-offer-thank-you-letter-sample-2063974">Job Offer Thank You Letter and Email Samples</a></li>
       </ul>
     </li>
-    <li>Be honest about other interviews/ deadlines
+    <li>Be honest about other interviews/deadlines
       <ul>
         <li>If you have another offer or expect one to come in, be honest about it.</li>
-        <li>It is ok to ask for some time to consider your options, be sure to confirm exactly how long you do have</li>
+        <li>It is ok to ask for some time to consider your options, be sure to confirm exactly how long you do have.</li>
       </ul>
     </li>
     <li>Negotiate respectfully
@@ -319,15 +319,15 @@ news or during negotiations.
   <ul>
     <li>Play hard-ball or be evasive with your pay
       <ul>
-        <li>You don't have to give an exact salary, but have a range that you can accept and keep your number in the middle</li>
-        <li>Understand not all companies are able to negotiate salaries for every position</li>
-        <li>Be ready for a company to walk away if you come off stubborn or unwilling to work with them</li>
+        <li>You don't have to give an exact salary, but have a range that you can accept and keep your number in the middle.</li>
+        <li>Understand not all companies are able to negotiate salaries for every position.</li>
+        <li>Be ready for a company to walk away if you come off stubborn or unwilling to work with them.</li>
       </ul>
     </li>
     <li>Take it personally
       <ul>
-        <li>There's nothing worse than a job candidate who tries to justify a salary negotiation due to their personal situation</li>
-        <li>Companies must keep it about the industry standards, the responsibility level and your qualifications</li>
+        <li>There's nothing worse than a job candidate who tries to justify a salary negotiation due to their personal situation.</li>
+        <li>Companies must keep it about the industry standards, the responsibility level and your qualifications.</li>
       </ul>
     </li>
     <li>Beg for a second chance

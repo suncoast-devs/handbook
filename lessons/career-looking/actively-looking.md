@@ -24,7 +24,6 @@ first or next position.
     <li>Have you added any Volunteer Experience?</li>
     <li>Do you have your Skills listed for endorsements?</li>
     <li>Have you listed any projects under Accomplishments?</li>
-    <li>Do you have your Skills listed for endorsements?</li>
     <li>Have you asked for Recommendations?
       <ul>
         <li>Reach out to Coworkers/Supervisors</li>
@@ -33,7 +32,7 @@ first or next position.
     </li>
     <li>Have you added Interests?
     <ul>
-        <li>Add some of the companies you are interested in</li>
+        <li>Add some of the companies you are interested in.</li>
       </ul></li>
     <li>Have you personalized your URL to remove the junk numbers at the end?</li>
   </ul>
@@ -96,7 +95,7 @@ first or next position.
 </details>
 
 <details>
-  <summary>Step 6: Sign up for job alerts via key sites, including Indeed, Dice and LinkedIn</summary>
+  <summary>Step 6: Sign up for job alerts via key sites, including Indeed, Dice, and LinkedIn</summary>
   <ul>
     <li>Find more job posting sites on the<a href="../career-looking/job-resources"> Job Search Resources</a></li>
   </ul>
@@ -128,7 +127,7 @@ first or next position.
     <li>Use <a href="https://www.trello.com"> Trello</a> or another method to track your job
   applications</li>
     <ul>
-      <li>Recent grads using Career Support MUST use Trello to ping Katherine for
+      <li>Recent grads using Career Support MUST use Trello to ping the Campus Director for
     Letters of Recommendation</li>
     </ul>
     <li>Read how at <a href="../career-looking/trello"> Tracking your Applications with Trello</a></li>
@@ -151,7 +150,7 @@ first or next position.
     <li>Write a <a href="../career-prep/cover-letters">Cover Letter</a>
       <ul>
         <li>Include company narrative</li>
-        <li>Speak to why you would be an asset to them/ the position</li>
+        <li>Speak to why you would be an asset to them/the position</li>
         <li>Include a link to your portfolio</li>
         <li>Close with what you hope the next step might be</li>
         <li>Keep it relevant to the position/company</li>
@@ -167,7 +166,7 @@ first or next position.
 <details>
   <summary>Step 12: After You Apply</summary>
   <ul>
-    <li>One Week After Applying - No Interview Scheduled/ No Response
+    <li>One Week After Applying - No Interview Scheduled/No Response
       <ul>
       <li>Ping your Campus Director asking for a recommendation</li>
       <li>See <a href="../career-looking/trello">Tracking your Applications with Trello</a> for help doing this</li>
@@ -203,7 +202,7 @@ first or next position.
         </li>
       </ul>
     </li>
-    <li>One Month after applying/ interviewing
+    <li>One Month after applying/interviewing
       <ul>
         <li>Email to check in to see if the position is still open</li>
         <li>Relate back to why you would be a great fit for the position/company</li>

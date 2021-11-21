@@ -21,8 +21,8 @@ which jobs you want.
 
 Job titles for similar positions can vary drastically from company to company,
 making it difficult to decide if the job is right for you based on the title.
-Job titles could have levels such as “Developer I,” “Junior Developer,” or be
-listed merely as “Developer.”
+Job titles could have levels such as “Developer I”, “Junior Developer”, or be
+listed merely as “Developer”.
 
 ## Job Summary/Description
 
@@ -41,7 +41,7 @@ should expect daily. The responsibilities/duties are usually listed in order
 from most important to least important.
 
 As you read through responsibilities/duties, make a list of the one you’ve done
-in your previous jobs
+in your previous jobs.
 
 ## Qualifications and Skills
 
@@ -67,8 +67,8 @@ work independently, detail-oriented, and analytical skills.
 
 There are times when the information provided in a job description can feel like
 they are telling you about the company when they are just using exciting things
-to draw you in. It takes practice to decide what the description is telling you the company’s
-“Narrative” vs. just selling you neat “Characteristics.”
+to draw you in. It takes practice to decide what the description is telling you
+the company’s “Narrative” vs. just selling you neat “Characteristics.”
 
 So what exactly is the difference between a narrative and characteristics?
 
@@ -163,7 +163,7 @@ What are you looking for in an employer?
 
   - Did you find the company narrative? Does it speak to you?
   - Dig a bit more into their work, code, and team
-  - LI, GitHub, FB, Twitter, Meetups, and community
+  - LinkedIn, GitHub, FB, Twitter, Meetups, and community
   - Put time into the application process
   - Update your resume to fit the position
 

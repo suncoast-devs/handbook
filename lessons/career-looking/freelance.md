@@ -123,7 +123,7 @@ industry, and the corporate culture of a potential future workplace
 ### Every Interview is Valuable
 
 Give it your best effort 100% of the time. You never know where it could lead
-you
+you.
 
 ## Be Confident. Be True. Be You.
 
