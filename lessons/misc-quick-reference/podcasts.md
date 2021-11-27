@@ -10,7 +10,7 @@ title: Podcasts
 
 ## Algorithms
 
-- [Design and analysis of Algoritms](https://player.fm/series/design-and-analysis-of-algorithms-fall-2008)
+- [Design and analysis of Algorithms](https://player.fm/series/design-and-analysis-of-algorithms-fall-2008)
 - [Algorithm Design and Analysis](https://player.fm/series/algorithm-design-and-analysis)
 - [Introduction to Algorithms](https://player.fm/series/introduction-to-algorithms-2011)
 
