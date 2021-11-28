@@ -3,7 +3,7 @@ title: History of Programming Languages
 ---
 
 In the same way human languages develop and are influenced by previous
-lagnauges, software languages have lineage and history.
+languages, software languages have lineage and history.
 
 The languages we use in our courses here (`C#`, `JavaScript`, and others) are
 influenced by their part of the language family tree.
