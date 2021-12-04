@@ -13,7 +13,7 @@ const words = ['Wind', 'Rain', 'Fire']
 const otherWords = [...words]
 ```
 
-You can think of `...words` to mean `take all the contents of `words` and put
+You can think of `...words` to mean `take all the contents of` words and put
 them right here.
 
 ```
@@ -96,7 +96,7 @@ Extracts a section of an array and returns a new array.
 
 ```javascript
 const myArray = new Array('a', 'b', 'c', 'd', 'e')
-const mySlice = myArray.slice(1, 4) // starts at index 1 and extracts all elements until index 3, mySlice is [ "b", "c", "d"] while myArray remains ['a', 'b', 'c', 'd', 'e']
+const mySlice = myArray.slice(1, 3) // starts at index 1 and extracts all elements until index 3, mySlice is [ "b", "c", "d"] while myArray remains ['a', 'b', 'c', 'd', 'e']
 ```
 
 ## `splice(index, count_to_remove, addElement1, addElement2, ...)`
