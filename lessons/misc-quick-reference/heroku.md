@@ -6,8 +6,9 @@ title: Heroku command line tools
 
 The Heroku command line tool comes with many great tools.
 
-There is also [documentation](https://devcenter.heroku.com/articles/heroku-cli)
-Heroku CLI.
+There is also the
+[documentation](https://devcenter.heroku.com/articles/heroku-cli) for the Heroku
+CLI.
 
 ## Restart my application
 
@@ -53,9 +54,9 @@ You can end your session with the `exit` command.
 
 ## Pull a copy of your Heroku database to your local database
 
-Your app has it's **own** distinct database on Heroku. If you want a copy of
-that database, it's tables and rows, you can pull **DOWN** the database from
-Heroku to your local database by using `pg:pull`
+Your app has its **own** distinct database on Heroku. If you want a copy of that
+database, its tables and rows, you can pull **DOWN** the database from Heroku to
+your local database by using `pg:pull`.
 
 ```shell
 heroku pg:pull DATABASE_URL my-database-name-goes-here-instead-of-this
@@ -78,9 +79,9 @@ Perhaps you have spent a lot of time perfecting your database locally, and now
 you want to send all that data to Heroku to have it use the same data.
 
 You can do this, but **NOTE** that this will **ERASE** any data on the server
-and replace it with your local data. This means anything users added will
-**LOST** when you do this. So this is a command you typically do once before you
-let users access your system.
+and replace it with your local data. This means anything users have added will
+be **LOST** when you do this. So this is a command you typically do once before
+you let users access your system.
 
 ```shell
 heroku pg:reset
@@ -126,7 +127,7 @@ DATABASE_URL:                postgres://esrunvboymjglt:21df9cf6292cdcdcdcdf386cf
 JWT_KEY:                     13452347538945723894123456757239485723948572349587234958723945872345
 ```
 
-> NOTE: Your values will be different depending on your specific application
+> NOTE: Your values will be different depending on your specific application.
 
 ## Set a configuration value on Heroku
 
@@ -138,7 +139,7 @@ heroku config:set AWS_KEY=123456789
 ```
 
 > NOTE: Your application will automatically reload when you run this command so
-> it will see the new values
+> it will see the new values.
 
 ## Open my production application in the browser
 
