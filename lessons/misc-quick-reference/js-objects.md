@@ -24,9 +24,9 @@ const myHobbies = {
 }
 ```
 
-And we needed to turn this into an array containing the name of the key followed
-by the title. That is given the object above we would want something like
-`['pandas - Panda Bears', 'miniatures - Miniature Painting']`
+And we need to turn this into an array containing the name of the key followed
+by the title. Given the object above we would want something like
+`['pandas - Panda Bears', 'miniatures - Miniature Painting']`.
 
 We can't do `myHobbies.map` but we can do this:
 
