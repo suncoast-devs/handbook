@@ -39,7 +39,7 @@ git init
 ## Add files to be committed
 
 This command tells git to add all the files in the directory to a commit. NOTE,
-you will have to do a `git commit` later to actually make the commit
+you will have to do a `git commit` later to actually make the commit.
 
 ```shell
 git add .
@@ -62,7 +62,7 @@ git stash
 ```
 
 The command alone won't stash untracked (new) files, to stash those at the same
-time use `--include-untracked`
+time use `--include-untracked`.
 
 ```shell
 git stash --include-untracked
@@ -70,7 +70,7 @@ git stash --include-untracked
 
 ## Show a list of stashes
 
-Shows you the list of stashes you've stored
+Shows you the list of stashes you've stored.
 
 ```shell
 git stash list
@@ -78,7 +78,7 @@ git stash list
 
 ## Apply a stash
 
-Brings back code from a specific stash
+Brings back code from a specific stash.
 
 ```shell
 git stash apply "Name of stash"
@@ -99,7 +99,7 @@ git commit -m "Your descriptive commit message"
 ## Amend a previous commit
 
 As long as the commit has not been `git push` yet you may change the message
-(and the contents)
+(and the contents).
 
 ```shell
 git commit -amend -m "Your corrected descriptive commit message"
@@ -125,7 +125,7 @@ git pull
 ## Pull down a specific branch from a specific remote
 
 Pull from original repo to update local (you can also use `upstream master` if
-you have multiple branches)
+you have multiple branches).
 
 ```shell
 git pull origin master
@@ -135,7 +135,7 @@ git pull origin master
 
 Clone an existing repository from a URL to a local directory. This will make a
 copy of the code from the URL and put it in a directory based on the last part
-of the URL
+of the URL.
 
 ```shell
 git clone <url to repository>
@@ -164,7 +164,7 @@ git checkout master
 
 ## Switch to the previous branch
 
-This will checkout the previously active branch
+This will checkout the previously active branch.
 
 ```shell
 git checkout -
@@ -172,7 +172,7 @@ git checkout -
 
 ## Create a new branch
 
-This creates a new branch using the current branch/commit as the starting point
+This creates a new branch using the current branch/commit as the starting point.
 
 ```shell
 git checkout -b newBranchName
@@ -181,7 +181,7 @@ git checkout -b newBranchName
 ## Go back _ONE_ commit
 
 Takes your branch back one commit, but your changes are still in the working
-tree
+tree.
 
 ```shell
 git reset HEAD~1
@@ -190,7 +190,7 @@ git reset HEAD~1
 ## Go back to any commit and lose changes
 
 Takes you back to that specific commit, losing all the commits since then. You
-can use `HEAD~1` to mean "Back one commit from the current commit"
+can use `HEAD~1` to mean "Back one commit from the current commit".
 
 ```shell
 git reset --hard specificCommitName
@@ -198,7 +198,7 @@ git reset --hard specificCommitName
 
 ## How to merge to an existing Branch
 
-This will let you merge changes from `otherBranch` into `branchName`
+This will let you merge changes from `otherBranch` into `branchName`.
 
 ```shell
 git checkout branchName
@@ -209,7 +209,7 @@ git push origin branchName
 # Advanced
 
 If you want to hack on open source projects (including this handbook) you will
-the following steps:
+do the following steps:
 
 ## Fork an existing repo
 
