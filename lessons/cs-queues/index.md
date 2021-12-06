@@ -63,7 +63,7 @@ only remove the first element in a queue.
 ```csharp
 var student = students.Dequeue();
 Console.WriteLine($"Goodbye {student}");
-Console.WriteLine($"There are now {student.Count} students in the queue.");
+Console.WriteLine($"There are now {students.Count} students in the queue.");
 ```
 
 This will print `Goodbye Mary` and `There are now 4 students in the queue.`
