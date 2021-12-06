@@ -19,7 +19,7 @@ Hi there, is this code correct: `var answer = 42;` or do I need to do something 
 This will format the snippet `var answer = 42;` in a stylized manner directly in
 your message!
 
-If you have a longer block you can enclose it in three backtick (\\`) characters
+If you have a longer block you can enclose it in three backtick (\`) characters
 like this:
 
 ````
