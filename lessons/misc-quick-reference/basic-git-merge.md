@@ -8,7 +8,7 @@ There are lots of ways to merge one branch into another. This guide is NOT the
 only way, but it is a good practice.
 
 Let's call the branch where you did your work A, and the destination branch B. A
-typical case is that A will be a feature branch, and B will be "master"
+typical case is that A will be a feature branch, and B will be "master".
 
 ## Step 0: Make sure your branch is pristine and clean
 
@@ -50,7 +50,7 @@ their work into yours -- This is also where we will fix merge conflicts!
 ## Step 3: Let's check your work
 
 This is where you would run your tests, inspect the UI, make sure everything
-that the A branch is supposed to do still works with the latest work from B
+that the A branch is supposed to do still works with the latest work from B.
 
 ## Step 4: Merge your work into "B" to share it with the world
 
@@ -66,6 +66,6 @@ that the A branch is supposed to do still works with the latest work from B
 - Check your work again quickly to make sure everything is still good (it should
   be)
 
-## Step 5: Push!
+## Step 6: Push!
 
 - git push
