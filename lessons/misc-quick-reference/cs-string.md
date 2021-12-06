@@ -235,15 +235,16 @@ StartsWith method.
 ```csharp
 var greeting = "Welcome to our home!"
 
-var beginsWithHello = greeting.BeginsWith("Hello");
+var startsWithHello = greeting.StartsWith("Hello");
 
 // The effect would be:
-// beginsWithHello = false;
+// startsWithHello = false;
 ```
 
 ### Join
 
-We can join an array of strings back into a single string using the `String.Join` method.
+We can join an array of strings back into a single string using the
+`String.Join` method.
 
 ```csharp
 var studentNames = new string[5] {"Marcus", "Emily", "Jason", "Steve", "Julia"};
