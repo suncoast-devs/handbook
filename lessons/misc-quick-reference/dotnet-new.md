@@ -9,7 +9,7 @@ has created a number of templates to assist students with creating projects.
 | -------------------- | -------------------------------------- | ------------------------------------------------------------------------ |
 | sdg-console          | SDG Console App Template               | Runs a console based application _without_ a database                    |
 | sdg-console-database | SDG Console App with Database Template | Same as sdg-console but adds database support                            |
-| sdg-api              | SDG Web API Template                   | Runs an web API based application _without_ a database                   |
+| sdg-api              | SDG Web API Template                   | Runs a web API based application _without_ a database                    |
 | sdg-react            | SDG React + .NET Template              | Combines a web API with Database support and a REACT based front end app |
 
 > NOTE: All of the templates containing database support use the `PostgreSQL`
