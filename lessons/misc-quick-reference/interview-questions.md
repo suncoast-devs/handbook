@@ -5,7 +5,7 @@ title: Interview Questions
 # Collections of General Interview Questions
 
 Below are some general interview questions we've heard from alumni. You may not
-get all, or any, of these questions on an interview and you may not have been
+get all, or any, of these questions in an interview and you may not have been
 exposed to all these terms and ideas. If there is something here you do not
 know, take some time to research the subject.
 
@@ -38,14 +38,14 @@ know, take some time to research the subject.
 - What advice would you give to an entry-level dev?
 - What book do you think everyone on the team should read?
 - If you could master one technology this year, what would it be?
-- How do you organize your code? (module pattern, classical, inheritance?)
+- How do you organize your code? (module pattern, classical, inheritance)
 - What are some of the advantages/disadvantages of writing JavaScript code in a
   language that compiles to JavaScript?
 - What is your favorite Github repo?
 
 ## Zingers/Misc
 
-- Pretending I know nothing, Explain to me how the internet works?
+- Pretending I know nothing, Explain to me how the internet works.
 - What was the last new tech-related skill that you learned? Why? How?
 - Explain to me how to use a seat belt.
 - What do you do when someone disagrees with your idea?
@@ -63,15 +63,15 @@ know, take some time to research the subject.
 - What is your least/most favorite language that you use and why?
 - How would you improve (a technology you have used a lot)?
 - Explain `this` in javascript.
-- Describe or give an example of asynchronous programming?
+- Describe or give an example of asynchronous programming.
 - What is the difference between a div and a span?
 - What is Flexbox? Contrast that to CSS Grid.
 - Name 3 ways to decrease page load (perceived or actual load time).
 - Have you ever used a grid system, and if so, what do you prefer?
-- Explain event delegation
+- Explain event delegation.
 - What is a closure, and how/why would you use one?
 - What is the event loop?
-- Material vs Flat design
+- Material vs Flat design.
 
 ### Web/Design
 
@@ -86,21 +86,21 @@ know, take some time to research the subject.
 ### Back End (C#)
 
 - What is static typing?
-- Explain `var` to me
+- Explain `var` to me.
 - What is your best definition of Object-Oriented Programming?
 - Have you heard of functional programming? How would you explain it?
 - What is SQL?
 - What are Joins?
-- What is Dependency Injection? Why should use it?
-- Tell me about your experience with testing?
+- What is Dependency Injection? Why should you use it?
+- Tell me about your experience with testing.
 
 ### Mid Level Interview:
 
 #### Database
 
-- Compare and contrast Relational and NoSQL and give use cases for both
-- Ever used Graph databases
-- Any sharding experience?
+- Compare and contrast Relational and NoSQL and give use cases for both.
+- Have you ever used Graph databases?
+- Do you have any sharding experience?
 - What is a transactional query and when would I use it?
 
 #### Javascript
@@ -108,21 +108,21 @@ know, take some time to research the subject.
 - Explain “this” in javascript.
 - What is the event loop in javascript?
 - What is a closure, and how/why would you use one?
-- explain == vs ===
+- explain == vs === .
 
 #### General Back End
 
 - What is your least/most favorite language that you use and why?
 - How would you improve (a technology you have used a lot)?
-- Explain MVC vs MVVM vs MVP
+- Explain MVC vs MVVM vs MVP.
 - How much do you know about concurrency and programming?
-- Describe or give an example of asynchronous programming?
+- Describe or give an example of asynchronous programming.
 - Have you ever encountered a scalability issue? How did you solve that?
-- Describe one instance that you used a caching solution before
-- Compare and contrast FP and OOP
-- Inheritance vs Composition?
+- Describe one instance that you used a caching solution before.
+- Compare and contrast FP and OOP.
+- Inheritance vs Composition.
 - What is tail recursion?
-- Horizontal vs Vertical Scaling solutions
+- Horizontal vs Vertical Scaling solutions.
 - What is an idempotent operation?
 - What is Blue-green deployment?
 - Have you used a CI server?
