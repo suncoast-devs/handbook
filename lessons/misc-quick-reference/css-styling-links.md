@@ -1,5 +1,5 @@
 ---
-title: C# Numbers
+title: CSS Styling Links
 ---
 
 # Styling links
@@ -10,7 +10,7 @@ If we have the following HTML:
 <p>Welcome to our page. Click <a href="menu.html">here</a> to see our menu</p>
 ```
 
-and we apply a color such as the following
+We can apply a color such as the following:
 
 ```css
 p {
@@ -18,30 +18,30 @@ p {
 }
 ```
 
-you will notice that the links themselves are not in the specified color. We
+You will notice that the links themselves are not in the specified color. We
 must style `<a>` elements specifically.
 
 ## Various states of a link
 
 A link can be:
 
-|           |                                                                                                         |
-| --------- | ------------------------------------------------------------------------------------------------------- |
-| Unvisited | The `href` has never been visited by this browser                                                       |
-| Visited   | The `href` has been visited by this browser                                                             |
-| Focus     | The user has focused the element, typically by using the `TAB` key to navigate the page to that element |
-| Hover     | The user's pointer is over that link (hovering). Mobile browsers do not necessarily supoprt this        |
-| Active    | The link is clicked, but hasn't transitioned the user to the `href`                                     |
+|           |                                                                                                          |
+| --------- | -------------------------------------------------------------------------------------------------------- |
+| Unvisited | The `href` has never been visited by this browser.                                                       |
+| Visited   | The `href` has been visited by this browser.                                                             |
+| Focus     | The user has focused the element, typically by using the `TAB` key to navigate the page to that element. |
+| Hover     | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.        |
+| Active    | The link is clicked, but hasn't transitioned the user to the `href`.                                     |
 
 ## Pseudo Selectors
 
-| Selector | Description                                                                                             |
-| -------- | ------------------------------------------------------------------------------------------------------- |
-| :link    | The `href` has never been visited by this browser                                                       |
-| :visited | The `href` has been visited by this browser                                                             |
-| :focus   | The user has focused the element, typically by using the `TAB` key to navigate the page to that element |
-| :hover   | The user's pointer is over that link (hovering). Mobile browsers do not necessarily supoprt this        |
-| :active  | The link is clicked, but hasn't transitioned the user to the `href`                                     |
+| Selector | Description                                                                                              |
+| -------- | -------------------------------------------------------------------------------------------------------- |
+| :link    | The `href` has never been visited by this browser.                                                       |
+| :visited | The `href` has been visited by this browser.                                                             |
+| :focus   | The user has focused the element, typically by using the `TAB` key to navigate the page to that element. |
+| :hover   | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.        |
+| :active  | The link is clicked, but hasn't transitioned the user to the `href`.                                     |
 
 ## Mnemonic to remember
 
