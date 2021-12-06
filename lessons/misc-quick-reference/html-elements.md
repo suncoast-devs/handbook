@@ -10,10 +10,10 @@ used more often. We have gathered the list of these elements here with a
 description of where and how to use them.
 
 To see more detail on any of these elements, visit the
-[MDN Element Reference Guide](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+[MDN Element Reference Guide](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 You can also click on any specific element to see a demonstration of the element
-as well as documentation on it's usage.
+as well as documentation on its usage.
 
 ## Semantic Elements
 
@@ -106,7 +106,7 @@ of the enclosed content.
 
 ---
 
-### [h1](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements), through h6
+### [h1](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) through h6
 
 > Represent six levels of section headings. `<h1>` is the highest section level
 > and `<h6>` is the lowest.
@@ -171,7 +171,7 @@ of the enclosed content.
 These elements don't convey any specific semantic meaning and can be used for
 multiple meanings. When there is not a more meaningful semantic element to
 choose, use these. For instance, a `<div>` can be used if an element such as
-`<section>`, `<aside>`, `<header>`, `<footer>`, or other element would be
+`<section>`, `<aside>`, `<header>`, `<footer>`, or other element would not be
 appropriate.
 
 ### [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
