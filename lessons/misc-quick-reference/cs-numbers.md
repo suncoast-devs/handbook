@@ -125,13 +125,13 @@ var index = 0;
 index = (index + 1) % 5;  // 0 + 1 is 1 -- 1 % 5 = 1
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 1 + 1 is 2 -- 1 % 5 = 2
+index = (index + 1) % 5;  // 1 + 1 is 2 -- 2 % 5 = 2
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 2 + 1 is 3 -- 1 % 5 = 3
+index = (index + 1) % 5;  // 2 + 1 is 3 -- 3 % 5 = 3
 Console.WriteLine($"index is {index}");
 
-index = (index + 1) % 5;  // 3 + 1 is 4 -- 1 % 5 = 4
+index = (index + 1) % 5;  // 3 + 1 is 4 -- 4 % 5 = 4
 Console.WriteLine($"index is {index}");
 
 // Here is where the % comes into play, adding one to 4 give 5, but we want this to "wrap around" back to 0.
@@ -187,7 +187,7 @@ Wrapped value is 4 since index is 19
 
 Attempts to convert the given string into an `int` value. The method also takes
 additional arguments that allow for different formats of the string, e.g.
-allowing it to parse numbers with currency symbols like "\$42".
+allowing it to parse numbers with currency symbols like "$42".
 
 If the string _cannot_ be parsed into an integer then an **exception** is
 thrown, FormatException.
@@ -200,7 +200,7 @@ int parsedNumber = int.Parse(someStringVariable);
 
 [MSDN Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.int32.parse?view=netcore-3.1)
 
-## COnverting strings to integers with success/failure
+## Converting strings to integers with success/failure
 
 `bool success = int.TryParse("42", out result)`
 
@@ -278,7 +278,7 @@ Much like the `Convert` we can use the idea of _casting_ to attempt a conversion
 of one data type to another.
 
 To use casting you place the name of the type you are converting to in
-parentheis and place this before the variable you are casting.
+parentheses and place this before the variable you are casting.
 
 For instance:
 
