@@ -25,7 +25,7 @@ var kitty = new Cat();
 ```
 
 In this case `kitty.Name` will be `null`, `kitty.Age` will be `0`, and
-`kitty.HungerLevel` will be 0. Since we did not provide any values for these
+`kitty.HungerLevel` will be `0`. Since we did not provide any values for these
 properties when we made a `new Cat`.
 
 ### Instantiating an object and providing values for properties
@@ -39,7 +39,7 @@ var kitty = new Cat() {
 ```
 
 In this case `kitty.Name` will be `"Fluffy"`, `kitty.Age` will be `3`, and
-`kitty.HungerLevel` will be 5.
+`kitty.HungerLevel` will be `5`.
 
 ### Providing a default value for a property
 
@@ -59,7 +59,7 @@ var kitty = new Cat();
 ```
 
 In this case `kitty.Name` will be `"Unknown Cat"`, `kitty.Age` will be `0`, and
-`kitty.HungerLevel` will be 3.
+`kitty.HungerLevel` will be `3`.
 
 ### Declaring a class with properties and methods
 
