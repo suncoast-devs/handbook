@@ -24,4 +24,4 @@ title: Books to Read
 
 ## This is not really for a junior level coding interview, but might be a good reference anyway. I haven't read it but others have recommended it.
 
-- [Cracking the Coding Interview: 189 Programming Questions and Solutions](https://github.com/gstark/juniors/blob/master/smile.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=pd_sim_14_84)
+- [Cracking the Coding Interview: 189 Programming Questions and Solutions](https://smile.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850/ref=pd_sim_14_84)
