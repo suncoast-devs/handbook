@@ -13,9 +13,9 @@ which is generally the same as the attribute name. As an example, take the
 `disabled` attribute, which you can assign to form input elements if you want
 them to be disabled (greyed out) so the user can't enter any data in them.
 
-As shorthand, it is perfectly allowable to write this as follows (we've also
-included a non-disabled form input element for reference, to give you more of an
-idea what is going on):
+As a shorthand, it is perfectly allowable to write this as follows (we've also
+included a non-disabled form input element for reference to give you more of an
+idea of what is going on):
 
 <pre data-lang='html'>
 {`
