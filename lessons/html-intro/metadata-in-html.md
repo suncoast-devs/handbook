@@ -9,8 +9,8 @@ The head of an HTML document is the part that is not displayed in the web
 browser when the page is loaded. It contains information such as the page
 `<title>`, links to CSS (if you choose to style your HTML content with CSS),
 links to custom favicons, and other metadata (data about the HTML, such as the
-author, and page title that describe the document.) In this article we'll cover
-all of the above and more, in order to give you a good basis for working with
+author, and page title that describe the document.) In this article, we'll cover
+all of the above and more in order to give you a good basis for working with
 markup.
 
 ## What is the HTML head?
@@ -33,8 +33,7 @@ Let's consider this HTML document:
 The HTML head is the contents of the `<head>` element — unlike the contents of
 the `<body>` element (which are displayed on the page when loaded in a browser),
 the head's content is not displayed on the page. Instead, the head's job is to
-contain metadata about the document. In the above example, the head is quite
-small:
+contain metadata about the document. In the above example, the head is small:
 
 ```html
 <head>
@@ -43,7 +42,7 @@ small:
 </head>
 ```
 
-In larger pages however, the head can get quite full. Try going to some of your
+In larger pages, however, the head can get quite full. Try going to some of your
 favorite websites and use the developer tools to check out their head contents.
 Our aim here is not to show you how to use everything that can possibly be put
 in the head, but rather to teach you how to use the major elements that you'll
@@ -68,11 +67,11 @@ In the example we saw above, this line was included:
 ```
 
 This element simply specifies the document's character encoding — the character
-set that the document is permitted to use. The utf-8 is a universal character set
-that includes pretty much any character from any human language. This means that
-your web page will be able to handle displaying any language; it's therefore a
-good idea to set this on every web page you create! For example, your page could
-handle English and Japanese just fine:
+set that the document is permitted to use. The utf-8 is a universal character
+set that includes pretty much any character from any human language. This means
+that your web page will be able to handle displaying any language; it's,
+therefore, a good idea to set this on every web page you create! For example,
+your page could handle English and Japanese just fine:
 
 <img src="https://mdn.mozillademos.org/files/12343/correct-encoding.png"/>
 
