@@ -5,7 +5,7 @@ order: 3
 
 Setting CSS properties to specific values is the core function of the CSS
 language. What is important to remember is that both properties and values are
-case-sensitive in CSS and that the property and value in each pair is separated
+case-sensitive in CSS and that the property and value in each pair are separated
 by a colon (:).
 
 ![](https://mdn.mozillademos.org/files/3665/css%20syntax%20-%20declaration.png)
@@ -26,10 +26,10 @@ Declarations are grouped in blocks, with each set of declarations being wrapped
 by an opening curly brace, `{` and a closing one `}`.
 
 Each declaration contained inside a declaration block has to be separated by a
-semi-colon (`;`), otherwise the code won't work (or will at least give
+semi-colon (`;`) otherwise, the code won't work (or will at least give
 unexpected results.) The last declaration of a block doesn't need to be
-terminated by a semi-colon, though it is often considered good style to do so as
-it prevents forgetting to add it when extending the block with another
+terminated by a semi-colon, though it is often considered a good style to do so
+as it prevents forgetting to add it when extending the block with another
 declaration.
 
 ![](https://mdn.mozillademos.org/files/3667/css%20syntax%20-%20declarations%20block.png)
