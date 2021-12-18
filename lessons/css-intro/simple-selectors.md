@@ -5,7 +5,7 @@ order: 5
 
 <CodePen>
 
-_"simple" selectors_ directly match one or more elements of a document, based on
+_"simple" selectors_ directly match one or more elements of a document based on
 the type of element, `class`, or `id`.
 
 Consider this HTML and CSS.
@@ -41,7 +41,7 @@ div {
 
 <CodePen>
 
-Instead of selecting elements based on the type of tag, we can select elements
+Instead of selecting elements based on the tag type, we can select elements
 based on their `class` property.
 
 The class selector consists of a dot, `.`, followed by a class name. A class
@@ -52,7 +52,7 @@ have multiple class names separated by white space.
 
 Consider this HTML and CSS.
 
-In this case the first list item will be bold, the first two list items will be
+In this case, the first list item will be bold, the first two list items will be
 struck through, and the last item will have no additional styles applied.
 
 <pre data-lang="html">
@@ -92,8 +92,8 @@ to select a single element.
 
 Consider this HTML and CSS.
 
-The greeting of `Good morning` will be in a cursive font while the `Go away`
-text will be in a typewriter style font _and_ be converted to all _UPPERCASE_
+The greeting of `Good morning` will be in a cursive font, while the `Go away`
+text will be in a typewriter style font _and_ be converted to all _UPPERCASE_.
 
 <pre data-lang="html">
   {`
@@ -120,15 +120,15 @@ text will be in a typewriter style font _and_ be converted to all _UPPERCASE_
 ### Universal Simple Selector
 
 The universal selector `*` is the ultimate joker. It allows selecting all
-elements on a page. As it is rarely used to apply a style to every element on a
-page, it is often used in combination with other selectors.
+elements on a page. Since it is rarely used to apply a style to every element on
+a page, it is often used in combination with other selectors.
 
 ### Attribute Selectors
 
 Many HTML tags are configured with attributes. For example, our `<a>` tags
-contain an `href` containing a URL. With attribute selectors we could apply a
+contain a `href` containing a URL. With attribute selectors, we could apply a
 style to all links that are outside of our site, perhaps coloring them
-differently, or providing a background image to indicate the link leaves our
+differently or providing a background image to indicate the link leaves our
 site.
 
 ### Presence and value attribute selectors
