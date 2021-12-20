@@ -4,7 +4,7 @@ title: C# List
 
 A `C#` list is a flexible way to store a series of similar data types in one
 variable. Whenever we need to store a sequence, of say `int` or `string`, or
-even a more complex data type like a `class Movie`, we can use a `List`
+even a more complex data type like a `class Movie`, we can use a `List`.
 
 # List is a _generic_ type
 
@@ -71,7 +71,7 @@ If we know the value of an element in the list we can remove it. The method
 returns `true` if it removed the element and `false` otherwise.
 
 > NOTE: This will remove _all_ the values that match. So in the following code
-> if we had muliple "Bamm Bamm" strings, all of them would be removed.
+> if we had multiple "Bamm Bamm" strings, all of them would be removed.
 
 ```C#
 bool wasRemoved = people.Remove("Bamm Bamm");
@@ -95,7 +95,7 @@ var lastNumber = numbers[4]; // Will be 98
 ```
 
 > NOTE: That the index is 0 based, so the _LAST_ element is at index
-> `numbers.Count -1`, or `5 - 1`, or index `4`.
+> `numbers.Count - 1`, or `5 - 1`, or index `4`.
 
 # Removing all the elements
 
