@@ -5,7 +5,7 @@ order: 11
 
 At some point in your work, you'll find yourself in the situation where multiple
 CSS rules will have selectors matching the same element. In such cases, which
-CSS rule "wins", and ends up being the one that is finally applied to the
+CSS rule "wins" and ends up being the one that is finally applied to the
 element? This is controlled by a mechanism called the Cascade; this is also
 related to inheritance (elements will take some property values from their
 parents, but not others). Let's define what the CSS cascade is, what specificity
@@ -23,7 +23,7 @@ up.
 
 CSS is an abbreviation for Cascading Style Sheets, which indicates that the
 notion of the cascade is important. At its most basic level, it indicates that
-the order of CSS rules matter, but it's more complex than that. What selectors
+the order of CSS rules matters, but it's more complex than that. What selectors
 win out in the cascade depends on three factors (these are listed in order of
 weight — earlier ones will overrule later ones):
 
@@ -41,20 +41,20 @@ come across it in other people's code. However, we strongly recommend that you
 never use it unless you absolutely have to. One situation in which you may have
 to use it is when you are working on a system where you can't edit the core CSS
 modules, and you really want to override a style that can't be overridden in any
-other way. But really, don't use it if you can avoid it, because !important
+other way. But really, don't use it if you can avoid it because !important
 changes the way the cascade normally works, so it can make debugging CSS
-problems really hard to work out, especially in a large stylesheet.
+problems hard to work out, especially in a large stylesheet.
 
 ### Specificity
 
-Specificity is basically a measure of how specific a selector is — how many
-elements it could match. Element selectors have low specificity. Class selectors
-have a higher specificity, so will win against element selectors. ID selectors
-have an even higher specificity, so will win against class selectors.
+Specificity is measured by how specific a selector is — how many elements it
+could match. Element selectors have low specificity. Class selectors have a
+higher specificity, thus will win against element selectors. ID selectors have
+an even higher specificity, thus will win against class selectors.
 
 The amount of specificity a selector has is measured using four different values
-(or components), which can be thought of as thousands, hundreds, tens and ones —
-four single digits in four columns:
+(or components), which can be thought of as thousands, hundreds, tens, and ones
+— four single digits in four columns:
 
 | Column    | Score                                                                                                                                                                           |
 | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -64,8 +64,8 @@ four single digits in four columns:
 | Ones      | Score one in this column for each element selector or pseudo-element contained inside the overall selector.                                                                     |
 
 The following table shows a few isolated examples to get you in the mood. Try
-going through these, and making sure you understand why they have the
-specificity that we have given them.
+going through these and making sure you understand why they have the specificity
+that we have given them.
 
 | Selector                                                     | Thousands | Hundreds | Tens | Ones | Total specificity |
 | ------------------------------------------------------------ | --------- | -------- | ---- | ---- | ----------------- |
@@ -95,8 +95,8 @@ p {
 }
 ```
 
-Whereas in this example the first rule wins because source order is overruled by
-specificity:
+Whereas in this example, the first rule wins because source order is overruled
+by specificity:
 
 ```css
 /* This rule will win since it is more specific */
@@ -109,8 +109,8 @@ p {
 }
 ```
 
-One thing you should bear in mind when considering cascade and specificity, and
-what styles get applied over other styles, is that all this happens at the
+One thing you should bear in mind when considering cascade and specificity and
+what styles get applied over other styles is that all this happens at the
 property level — properties override other properties, but you don't get entire
 rules overriding other rules. When several CSS rules match the same element,
 they are all applied to that element. Only after that are any conflicting
@@ -126,14 +126,14 @@ children, and some won't.
 For example, it makes sense for `font-family` and `color` to be inherited, as
 that makes it easy for you to set a site-wide base font by applying a
 font-family to the `<html>` element; you can then override the fonts on
-individual elements where needed. It would be really annoying to have to set the
-base font separately on every element.
+individual elements where needed. It would be annoying to have to set the base
+font separately on every element.
 
 As another example, it makes sense for `margin`, `padding`, `border`, and
 `background-image` to NOT be inherited. Imagine the styling/layout mess that
 would occur if you set these properties on a container element and had them
 inherited by every single child element, and then had to unset them all on each
-individual element!
+element!
 
 Which properties are inherited by default and which aren't is largely down to
 common sense. If you want to be sure, however, you can consult the

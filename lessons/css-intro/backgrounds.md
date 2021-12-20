@@ -11,7 +11,7 @@ The background of an element is the area that sits underneath an element's
 content, padding, and border.
 
 The background doesn't sit underneath the margin — the margin doesn't count as
-part of the element's area, but rather the area outside the element.
+part of the element's area but rather the area outside the element.
 
 There are many other different properties you can use to manipulate the
 element's background.
@@ -31,7 +31,7 @@ Now let's look at how to use these features in detail.
 ## The basics: color, image, position, repeat
 
 Let's explore a simple example to show how the four most basic properties work —
-you'll use these ones all the time when dealing with backgrounds.
+you'll use these all the time when dealing with backgrounds.
 
 ### Background color
 
@@ -41,15 +41,15 @@ You'll use the background-color property very often:
 
 For a start, the default background color of most elements is not `white` (as
 you might expect) but `transparent` — therefore if you set an element's
-background color to something interesting, but want its child elements to be
+background color to something interesting but want its child elements to be
 white, you'll have to set that explicitly.
 
 In addition, it is important to set a background color as a fallback. Background
 colors are supported pretty much everywhere, whereas more exotic features such
 as background gradients are supported only in newer browsers, plus a background
-image might fail to load for some reason. It is therefore a good idea to set a
-basic background color as well as specifying such features, so the element's
-content is readable no matter what.
+image might fail to load for some reason. It is a good idea to set a basic
+background color as well as specify such features, so the element's content is
+readable no matter what.
 
 <pre data-lang='html'>
 {`
@@ -118,7 +118,7 @@ p {
 <CodePen>
 
 background-repeat allows you to specify how the background image is repeated.
-The default value is repeat which, as you saw above, makes the image keep
+The default value is repeat, which, as you saw above, makes the image keep
 repeating until the whole element background is filled. This isn't what we want
 in this case (although it might be in some cases, e.g.
 repeating-background.html). Other common and widely supported values are:
@@ -161,11 +161,11 @@ p {
 <CodePen>
 
 background-position allows you to position your background image wherever you
-want inside the background. Generally the property will take two values
+want inside the background. Generally, the property will take two values
 separated by a space, which specify the horizontal (`x`) and vertical (`y`)
 coordinates of the image. The top left corner of the image is the origin —
 `(0,0)`. Think of the background as a graph, with the `x` coordinate going
-across from left to right, and the `y` coordinate going from top to bottom.
+across from left to right and the `y` coordinate going from top to bottom.
 
 The property can accept many different value types; the most common ones you'll
 use are:
@@ -177,10 +177,10 @@ use are:
 | Percentages                 | `background-position: 90% 25%`       |
 | Keywords                    | `background-position: right center`. |
 
-We can mix and match these values, for example
-`background-position: 99% center`. Also note that if you only specify one value,
-that value will be assumed to be the horizontal value, and the vertical value
-will default to center.
+We can mix and match these values, for example,
+`background-position: 99% center`. Also, note that if you only specify one
+value, that value will be assumed to be the horizontal value, and the vertical
+value will default to center.
 
 Let's fix up our example.
 
@@ -218,7 +218,7 @@ property, which can take the following values:
 | `fixed`  | Causes an element's background to be fixed to the viewport, so that it doesn't scroll when the page or element content is scrolled. It will always remain in the same position on the screen.                                                                                                                                                            |
 | `local`  | This value was added later on (it is only supported in Internet Explorer 9+, whereas the others are supported in IE4+) because the scroll value is rather confusing and doesn't really do what you want in many cases. The local value fixes the background to the element it is set on, so when you scroll the element, the background scrolls with it. |
 
-The background-attachment property only has an effect when there is content to
+The background-attachment property only has an effect when it is content to
 scroll, so we've made a demo to demonstrate the differences between the three
 values — have a look at background-attachment.html (also see the source code
 here).
@@ -229,10 +229,9 @@ to see how these scroll effects work.
 
 ### Multiple backgrounds
 
-Fairly recently (since Internet Explorer 9) we've had the ability to attach
-multiple backgrounds to a single element. This is a good thing, as multiple
-backgrounds are very useful. You separate your different background definitions
-with commas:
+Fairly recently (since Internet Explorer 9), we could attach multiple
+backgrounds to a single element. This is a good thing, as multiple backgrounds
+are very useful. You separate your different background definitions with commas:
 
 ```css
 p {
@@ -248,9 +247,9 @@ p {
 
 And the backgrounds are stacked on top of one another with the first appearing
 at the top, then the second below it, then the third, etc. This is possibly not
-what you were expecting, so take care. Also note that we've put the fallback
-background color into a separate property declaration, because trying to include
-it in the multiple backgrounds seems to break things.
+what you were expecting, so take care. Also, note that we've put the fallback
+background color into a separate property declaration because trying to include
+it in multiple backgrounds seems to break things.
 
 You can also put multiple values into longhand background-\* properties, for
 example:
@@ -301,7 +300,7 @@ p {
 
 As we mentioned earlier, there is a property available — background-size — which
 allows you to dynamically alter the size of a background image so that it fits
-better into your design. This is very useful in many ways, for example
+better into your design. This is very useful in many ways, for example,
 automatically correcting the size of icons that aren't uploaded correctly. Just
 bear in mind that this isn't supported by Internet Explorer versions lower than
 9, so you can't rely on it if you need to support older browsers. For each
