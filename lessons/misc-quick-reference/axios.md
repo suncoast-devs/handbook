@@ -63,7 +63,7 @@ The `data` will automatically be parsed based on the server's content type
 header. This means we do **not** have to parse the data if we are dealing with a
 typical JSON based api.
 
-If we we trying to use the data from the response we simply access the `data`
+If we are trying to use the data from the response we simply access the `data`
 property of the object.
 
 ```javascript
@@ -127,7 +127,7 @@ but the most direct ones are:
 
   // `data` is the data to be sent as the request body
   // Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
-  // When no `transformRequest` is set, must be of one of the following types:
+  // When no `transformRequest` is set, must be one of the following types:
   // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
   // - Browser only: FormData, File, Blob
   // - Node only: Stream, Buffer
@@ -152,7 +152,7 @@ if (response.status === 200) {
 }
 ```
 
-we can destructure the object during assignment.
+We can destructure the object during assignment.
 
 ```javascript
 const { status, data } = await axios({
