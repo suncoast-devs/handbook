@@ -25,7 +25,7 @@ Jason
 
 ![fit](./assets/jason-plain.png)
 
-^ This is just plain text in the browser. It doesn't have any styling, or any meaning
+^ This is just plain text in the browser. It doesn't have any styling, or any meaning.
 
 ---
 
@@ -41,7 +41,7 @@ Jason
 
 ![fit](./assets/jason-paragraph.png)
 
-^ This tells the browser that this is an entire paragraph, which in the browser will make the text appear on its own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_
+^ This tells the browser that this is an entire paragraph, which in the browser will make the text appear on its own line and have some padding. This means that the paragraph has both _semantics_ and _formatting_.
 
 ---
 
@@ -65,7 +65,7 @@ Jason
 
 # Nesting Elements
 
-To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` element. This indicates, both _semantically_ and _visually_ that the word is to be strongly emphasized
+To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` element. This indicates, both _semantically_ and _visually_ that the word is to be strongly emphasized.
 
 <br/>
 
@@ -79,7 +79,7 @@ To say that Jason is our CEO, we could wrap the word "CEO" in a `<strong>` eleme
 
 # Careful!
 
-You do however need to make sure that your elements are properly nested: in the example above, we opened the p element first, then the strong element, therefore we have to close the strong element first, then the p.
+You will need to make sure that your elements are correctly nested: in the example above, we opened the p element first, then the strong element, which would mean we have to close the strong element first, then the p.
 
 <br/>
 
@@ -95,7 +95,7 @@ The following is incorrect
 
 # Browsers are too good
 
-Browsers are very forgiving of invalid HTML (even if your instructors or teammates are not)
+Browsers are very forgiving of invalid HTML (even if your instructors or teammates are not).
 
 [.column]
 
@@ -165,7 +165,7 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 
 [.column]
 
-> The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other useful things.
+> The doctype. In the mists of time, when HTML was young (about 1991/2), doctypes were meant to act as links to a set of rules that the HTML page had to follow to be considered good HTML, which could mean automatic error checking and other helpful things.
 
 [.column]
 
@@ -190,7 +190,7 @@ HTML elements aren't very useful on their own. Now we'll look at how individual 
 
 [.column]
 
-However, these days no one really cares about them, and they are really just a historical artifact that needs to be included for everything to work right. **`<!DOCTYPE html>`** is the shortest string of characters that counts as a valid doctype; that's all you really need to know.
+However, these days no one cares about them, and they are just historical artifacts that need to be included for everything to work right. **`<!DOCTYPE html>`** is the shortest string of characters that counts as a valid doctype; that's all you need to know.
 
 [.column]
 
@@ -313,7 +313,7 @@ The `<title>` element. This sets the title of your page, which is the title that
 
 [.column]
 
-The `<body>` element. This contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
+The `<body>` element. This element contains all the content that you want to show to web users when they visit your page, whether that's text, images, videos, games, playable audio tracks, or whatever else.
 
 [.column]
 
@@ -336,7 +336,7 @@ The `<body>` element. This contains all the content that you want to show to web
 
 [.column]
 
-In the above examples you may have noticed that a lot of whitespace is included in the code listings — this is not necessary at all; the two following code snippets are equivalent:
+In the above examples, you may have noticed that a lot of whitespace is included in the code listings — this is not necessary at all; the two following code snippets are equivalent:
 
 [.column]
 
@@ -352,7 +352,7 @@ In the above examples you may have noticed that a lot of whitespace is included 
 
 # Whitespace
 
-No matter how much whitespace you use (which can include space characters, but also line breaks), HTML reduces each one down to a single space when rendering.
+No matter how much whitespace you use (which can include space characters but also line breaks), HTML reduces each one down to a single space when rendering.
 
 ---
 
@@ -360,9 +360,9 @@ No matter how much whitespace you use (which can include space characters, but a
 
 > So why use so much whitespace?
 
-The answer is _readability_
+The answer is _readability_.
 
-It is so much easier to understand what is going on in your code if you have it nicely formatted.
+It is much easier to understand what is going on in your code if you have it nicely formatted.
 
 It is up to you what style of formatting you use (how many spaces for each level of indentation, for example), but you should consider formatting it.
 
