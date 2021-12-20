@@ -19,7 +19,7 @@ public class Movie {
 }
 ```
 
-They `List` we will be using is
+The `List` we will be using is
 
 ```csharp
 var movies = new List<Movie>();
@@ -28,10 +28,10 @@ var movies = new List<Movie>();
 ### Things to pay attention to here.
 
 Pay particular attention to both what the method _returns_ (a new list of equal
-length, of equal or smaller, a single item, etc) and the logic the expression
-needs to implement. Understanding how the method works, the kind of data it
-returns, and what is expected of the expression is the key to being able to
-effectively use `LINQ`
+or smaller length, a single item, etc) and the logic the expression needs to
+implement. Understanding how the method works, the kind of data it returns, and
+what is expected of the expression is the key to being able to effectively use
+`LINQ`.
 
 ### Select
 
@@ -43,7 +43,7 @@ We have seen an example of `Select` already. To define `Select`:
 Example:
 
 ```csharp
-// Make a list of strings when each string contains the year it's corresponding Movie was released, a comma, and the title of the Movie.
+// Make a list of strings with each string containing the year the corresponding Movie was released, a comma, and the title of the Movie.
 var yearAndMovie = movies.Select(movie => $"{movie.ReleasedDate.Year}, {movie.Name} ");
 ```
 
@@ -74,10 +74,10 @@ The `Aggregate` method, often called `reduce` in other languages, takes the list
 and processes it down into a single value. Thus why it is often called `reduce`.
 
 > Returns a single value. It starts with a value we will call the
-> `current value`. The given expression gets to use, one a a time, the current
+> `current value`. The given expression gets to use, one at a time, the current
 > value and the item from the list, returning a new `current value`.
 
-A good example is to be able to take a list and turn it into a total
+A good example is to be able to take a list and turn it into a total.
 
 ```csharp
 // Find the total revenue for all movies
@@ -91,7 +91,7 @@ var totalRevenue = movies.Aggregate(0.0, (currentTotal, movie) => currentTotal +
 
 The `FindIndex` statement allows us to detect the first element of a collection
 and return the `index` of that element when found. If no match is found,
-`FindIndex` returns the value `-1`
+`FindIndex` returns the value `-1`.
 
 ```csharp
 // Find the index of the first movie that has over 100 screenings. Will return -1 if there aren't any such movies.
@@ -114,7 +114,7 @@ var areAllOldMovies = movies.All(movie => movie.ReleasedDate.Year < 1965);
 ### Any
 
 > Returns _a boolean_ if there is even a single element in the list that causes
-> the expression to return `true`
+> the expression to return `true`.
 
 ```csharp
 // Figure out if there is even a single old movie (before 1965) in our list
@@ -174,7 +174,7 @@ var lastMovieCostingMoreThanTenDollars = movies.Last(movie => movie.PricePerTick
 ### LastOrDefault
 
 > Returns the _last item_ such that the expression returns `true`. If no item is
-> found, the default value for the type is returned
+> found, the default value for the type is returned.
 
 ```csharp
 // Get the last item in the list that costs more than 10. If no movie costs more than 10, then `lastMovieCostingMoreThanTenDollars` will be `null`
@@ -184,7 +184,7 @@ var lastMovieCostingMoreThanTenDollars = movies.LastOrDefault(movie => movie.Pri
 ### Distinct
 
 > Returns all the distinct items in a list. This is commonly use in conjunction
-> with a `Select`
+> with a `Select`.
 
 ```csharp
 // Make a list of all the distinct movie titles. That is, if two movies have the same title, the title appears once.
@@ -242,21 +242,21 @@ var alphabetically = movies.OrderBy(movie => movie.Name);
 
 ## ThenBy and ThenByDescending
 
-> Used only after an `OrderBy` and resolves any `OrderBy` ties
+> Used only after an `OrderBy` and resolves any `OrderBy` ties.
 
 ```csharp
-// Makes a new list sorted by alphabetically by title, then by release year if they have the same Title
+// Makes a new list sorted alphabetically by title, then by release year if they have the same Title
 var sorted = movies.OrderBy(movie => movie.Name).ThenBy(movie => movie.ReleasedDate);
 ```
 
 ## RemoveAll
 
 > Removes all items that the expression returns `true`, returning a new list _of
-> equal or smaller size_
+> equal or smaller size_.
 
 ```csharp
 // Return a list of all movies, except for, you know, that one, the one with the title we don't speak of.
-var didntHappen = movies.RemoveAll(movie => movie.Name == "Star Wars: Episode I – The Phantom Menace");
+var didNotHappen = movies.RemoveAll(movie => movie.Name == "Star Wars: Episode I – The Phantom Menace");
 ```
 
 Here is
