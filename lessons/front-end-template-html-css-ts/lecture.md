@@ -108,7 +108,7 @@ npm init vite -- html-css-ts-project-template
 ```
 
 - Choose **vanilla** as the _framework_
-- Choose **vainlla-ts** as the _variant_
+- Choose **vanilla-ts** as the _variant_
 
 ---
 
@@ -338,7 +338,7 @@ Perhaps you'll develop a color palette you like to use in each project. Come bac
 
 When we start with `TypeScript` we will use the same template.
 
-We'll create a _separate_ template when we start with **React**
+We'll create a _separate_ template when we start with **React**.
 
 ---
 
@@ -353,18 +353,18 @@ degit YOUR-GITHUB-GOES-HERE-DONT-TYPE-THIS/html-css-ts-project-template   FirstS
 
 ```shell
 cd ~/sdg
-degit jane-doe/html-css-ts-project-template FirstSampleProject   FirstSampleProject
-cd
+degit jane-doe/html-css-ts-project-template FirstSampleProject
 ```
 
 ---
 
 # This will make a new, clean, empty, NON GIT, repository
 
-Make this a git repository
+Make this a git repository:
 
 ```
 cd FirstSampleProject
+npm install
 git init
 ```
 
@@ -412,7 +412,7 @@ git push origin HEAD
 
 # Running the project!
 
-We will use `npm start` to run the project itself. This is similar to `npm watch run` from `C#`
+We will use `npm start` to run the project itself. This is similar to `dotnet watch run` from `C#`.
 
 ```shell
 npm start
@@ -422,7 +422,7 @@ npm start
 
 # Open the browser
 
-The terminal will give you the URL where the application is running, typically `http://localhost:3000`
+The terminal will give you the URL where the application is running, typically `http://localhost:3000`.
 
 Open that URL in your browser.
 
