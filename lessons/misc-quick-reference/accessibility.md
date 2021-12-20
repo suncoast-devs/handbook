@@ -30,8 +30,6 @@ Chrome extensions:
 
 [https://www.w3.org/WAI/intro/accessibility.php](https://www.w3.org/WAI/intro/accessibility.php)
 
-[https://www.adagetechnologies.com/4-compelling-reasons-get-website-ada-wcag-accessible/](https://www.adagetechnologies.com/4-compelling-reasons-get-website-ada-wcag-accessible/)
-
 [https://18f.gsa.gov/](https://18f.gsa.gov/) - example of a well designed and
 accessible website
 
