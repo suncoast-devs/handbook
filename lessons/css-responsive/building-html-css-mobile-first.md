@@ -3,8 +3,8 @@ title: Build a page mobile first.
 order: 4
 ---
 
-In this section we will build a page to display the members of our team and some
-paragraphs of text about them.
+In this section, we will build a page to display the members of our team and
+some paragraphs of text about them.
 
 Here is a sketch of the site we will make:
 
@@ -13,8 +13,8 @@ Here is a sketch of the site we will make:
 ---
 
 We start by placing the content on the page without any concern for the HTML
-structure or CSS style. By getting the content on the page first we can work on
-structure and style in an incremental manner.
+structure or CSS style. By getting the content on the page first, we can
+incrementally work on structure and style
 
 ```html
 Welcome to our site. Super Team. Ada Lovelace Alan Turing Margaret Hamilton
@@ -54,13 +54,11 @@ prompt debugged generator deviation.
 The next step is to apply semantics to the HTML to give the document a
 structure.
 
-Even applying this level of structure we can already see the design of the page
+Even applying this level of structure, we can already see the design of the page
 emerging.
 
 ```html
-<header>
-  Welcome to our site
-</header>
+<header>Welcome to our site</header>
 <section>
   <aside>
     <h3>Super team:</h3>
@@ -79,12 +77,12 @@ emerging.
       femtosecond kilohertz infrared cache developer distributed plasma. Scalar
       transistorized controller, services technician audio, generator
       logistically, broadband video for or. Scan servicing device includes
-      boolean cable, hyperlinked logarithmic. Software bridgeware logistically
+      boolean cable, hyperlinked logarithmic. Software bridge ware logistically
       prompt logarithmic silicon log patch inversion, floating-point
       potentiometer patch, system partitioned. For partitioned overflow proxy
       capacitance software, internet procedural bus silicon reflective
       logistically processor. Debugged, resistor recognition inversion
-      transistorized cable anomoly feedback integer arrray femtosecond software
+      transistorized cable anomaly feedback integer array femtosecond software
       boolean prompt.
     </p>
     <p>
@@ -95,20 +93,20 @@ emerging.
       interface hyperlinked metafile messaging bypass. Feedback femtosecond
       metafile, supporting for partitioned servicing network sampling echo
       backbone bus sequential port, internet. Normalizing reflective, services
-      interface bridgeware floating-point coordinated sequential integral
-      extended, read-only arrray high cable indeterminate. Solution recognition
+      interface bridge ware floating-point coordinated sequential integral
+      extended, read-only array high cable indeterminate. Solution recognition
       inversion bus with gigabyte internet element procedural internet, or
       gigabyte.
     </p>
     <p>
       Echo ethernet floating-point analog in computer plasma indeterminate
-      integral interface inversion element. Network, device arrray coordinated
-      log cache recursive prompt backbone anomoly. Extended cache scan in n-tier
+      integral interface inversion element. Network, device array coordinated
+      log cache recursive prompt backbone anomaly. Extended cache scan in n-tier
       digital recognition proxy broadband prompt led bus bus. Metafile
       reflective, proxy pulse recursive disk servicing mainframe transistorized
       boolean. Bus, infrared ethernet record cable adaptive. Cable inversion
       system interface overflow backbone. Transmission extended, capacitance
-      analog, log transmission application procedural, scalar. Anomoly inversion
+      analog, log transmission application procedural, scalar. Anomaly inversion
       prompt debugged generator deviation.
     </p>
   </main>
@@ -118,7 +116,7 @@ emerging.
 ## Apply CSS for the mobile view
 
 Now we will add styling to the page to represent the format of the page in its
-narrow, mobile view. By adding a little more CSS to our page we have a closer
+narrow, mobile view. By adding a little more CSS to our page, we have a closer
 representation of the design.
 
 ```css
@@ -185,13 +183,13 @@ aside ul li a {
 
 ## Adding more content and changing style when the page is wider.
 
-When the page is wider let's make a number of changes:
+When the page is wider let's make several changes:
 
 1. When wider, let's put the list of team members on the side. We'll make this
    happen via `flexbox`
 2. When wider, let's replace our text at the top of the page with our logo
 
-To achieve this we can add CSS rules to our page that only apply under certain
+To achieve this, we can add CSS rules to our page that only apply under certain
 conditions. We do this with a new element called a `media query` -- The _media
 query_ works by using the `@media` directive and a conditional statement that
 controls when the contained CSS rules apply.
@@ -202,7 +200,7 @@ See the new CSS added at the end and within the
 To see the effect you can either:
 
 - Click the `0.5x` or `0.25x` buttons
-- or click on the codepen icon to open the sample full screen and then adjust
+- Or click on the codepen icon to open the sample full screen and then adjust
   your browser width.
 - If you click on the codepen icon, try resizing your browser to just wider and
   narrower than 800px and you will see the site switch between the two styles.
@@ -221,9 +219,7 @@ directly placed in the CSS file. When the condition is false, those CSS rules
 will **not** be applied to the page.
 
 ```html
-<header>
-  Welcome to our site
-</header>
+<header>Welcome to our site</header>
 <section>
   <aside>
     <h3>Super team:</h3>
@@ -379,18 +375,18 @@ aside ul li a {
 We can also adjust the content itself under different media query conditions.
 
 When the page is wider let's show the team member's email addresses as well as
-adding an icon.
+add an icon.
 
-In order to do this we will add a data-email attribute to each team member's a
-tag. We can then access this data from the CSS and have it displayed in an after
-pseudo selector.
+To do this, we will add a data-email attribute to each team member's a tag. We
+can then access this data from the CSS and have it displayed in an after pseudo
+selector.
 
 ```css
 /* When wider than 1000 pixels, we will create an `after` element for all `a` elements in the team member list */
 /* The content for this will be fetched from the `data-email` attribute */
 @media all and (min-width: 1001px) {
   aside ul li a:after {
-    content: " (" attr(data-email) ")";
+    content: ' (' attr(data-email) ')';
     font-size: 11px;
     font-style: italic;
     color: #666;
@@ -400,7 +396,7 @@ pseudo selector.
 /* When wider than 700 pixels but less than 1000px we will add the word `Email:` before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
-    content: "Email: ";
+    content: 'Email: ';
     font-style: italic;
     color: #666;
   }
@@ -417,14 +413,12 @@ pseudo selector.
 }
 ```
 
-To best see the results, click on the _codepen_ icon to open the page full
-width, then slowly shrink the width of the page to see the effect of the CSS
-for the `aside`.
+To best see the results, click on the _codepen_ icon to open the page to full
+width, then slowly shrink the width of the page to see the effect of the CSS for
+the `aside`.
 
 ```html
-<header>
-  Welcome to our site
-</header>
+<header>Welcome to our site</header>
 <section>
   <aside>
     <h3>Super team:</h3>
@@ -593,7 +587,7 @@ aside ul li a {
 /* The content for this will be fetched from the data-email attribute */
 @media all and (min-width: 1001px) {
   aside ul li a:after {
-    content: " (" attr(data-email) ")";
+    content: ' (' attr(data-email) ')';
     font-size: 11px;
     font-style: italic;
     color: #666;
@@ -603,7 +597,7 @@ aside ul li a {
 /* When wider than 700 pixels but less than 1000px we will add the word Email before the team member name */
 @media all and (max-width: 1000px) and (min-width: 700px) {
   aside ul li a:before {
-    content: "Email: ";
+    content: 'Email: ';
     font-style: italic;
     color: #666;
   }
