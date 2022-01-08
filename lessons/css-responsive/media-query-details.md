@@ -4,7 +4,7 @@ order: 5
 ---
 
 The `@media` rule allows us to define additional CSS to apply based on a
-condition, or a set of conditions.
+condition or a set of conditions.
 
 The `@media` at-rule may be placed at the top level of your code or nested
 inside any other conditional group at-rule.
@@ -12,7 +12,7 @@ inside any other conditional group at-rule.
 ## Media Types
 
 The media condition may start with a media type and an option to indicate if
-this is `only` for this type or for all other types (`not`)
+this is `only` for this type or all other types (`not`).
 
 The types are:
 
@@ -51,7 +51,7 @@ The types are:
 ## Media Features
 
 The remaining portion of the condition concerns the media features. Primarily we
-work with device width, but a number of other features are useful.
+work with device width, but several other features are useful.
 
 | Feature      | Description                                  |
 | ------------ | -------------------------------------------- |
@@ -63,8 +63,8 @@ work with device width, but a number of other features are useful.
 
 There are even more features to use.
 [This article](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) has a
-good list of other, less frequently used, features that are available. It will
-also indicate if these features are widely supported yet.
+good list of other, less frequently used, available features. It will also
+indicate if these features are widely supported yet.
 
 **examples**
 
@@ -90,13 +90,13 @@ also indicate if these features are widely supported yet.
 
 ## What are good _break points_ for various devices?
 
-In the olden days of the internet we would create different pages for specific
+In the olden days of the internet, we would create different pages for specific
 devices. Today we create one site with variations of formatting via CSS and
-media queries. So thus we need to know a good set of pixel sizes to use for our
+media queries. So thus, we need to know a good set of pixel sizes to use for our
 media queries.
 
 We'd like to have a definitive set of media queries to cover all devices.
-Unfortunately this is a tall order when the best we can do is general guidance
+Unfortunately, this is a tall order when the best we can do is general guidance
 for a set of _best practices_ list of media queries.
 
 Thankfully the fine folks at [CSS Tricks](https://css-tricks.com) have a great
