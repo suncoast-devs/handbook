@@ -43,28 +43,28 @@ individual words in a paragraph.
 ---
 
 When you use CSS to create a layout, you are moving the elements away from the
-normal flow, but for many of the elements on your page the normal flow will
+normal flow, but for many of the elements on your page, the normal flow will
 create exactly the layout you need. This is why starting with a well-structured
 HTML document is so important, as you can then work with the way things are laid
 out by default rather than fighting against it.
 
 The methods that can change how elements are laid out in CSS are as follows:
 
-|                         |                                                                                                                                                                                                |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| The `display` property  | Values such as block, inline or inline-block can change how elements behave in normal flow                                                                                                     |
-| Floats                  | Applying a float value such as left can cause block level elements to wrap alongside one side of an element, like the way images sometimes have text floating around them in magazine layouts. |
-| The `position` property | Allows you to precisely control the placement of boxes inside other boxes.                                                                                                                     |
-| Table layout            | Designed for styling the parts of an HTML table can be used on non-table elements using display: table and associated properties.                                                              |
-| Multi-column layout     | Causes the content of a block to layout in columns, as you might see in a newspaper.                                                                                                           |
-|                         |                                                                                                                                                                                                |
+|                         |                                                                                                                                                                                                        |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| The `display` property  | Values such as block, inline, or inline-block can change how elements behave in normal flow.                                                                                                           |
+| Floats                  | Applying a float value such as left can cause block level elements to wrap alongside one side of an element. For example, the way images sometimes have text floating around them in magazine layouts. |
+| The `position` property | Allows you to precisely control the placement of boxes inside other boxes.                                                                                                                             |
+| Table layout            | Designed for styling the parts of an HTML table can be used on non-table elements using display: table and associated properties.                                                                      |
+| Multi-column layout     | Causes the content of a block to layout in columns, as you might see in a newspaper.                                                                                                                   |
+|                         |                                                                                                                                                                                                        |
 
 # The Display Property
 
 Primarily what we will be covering is using the `display` property to control
 flow. Every element in CSS has a default `display` property which gives it a
-natural flow in the page. When discussing customizing a layout the two most
-important values are `display: flex` and `display: grid` In this lesson we will
-primarily cover `display: flex`
+natural flow on the page. When discussing customizing a layout the two most
+important values are `display: flex` and `display: grid`. In this lesson, we
+will primarily cover `display: flex`.
 
 ---
