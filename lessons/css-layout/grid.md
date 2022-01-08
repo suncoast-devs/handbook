@@ -12,13 +12,13 @@ To create a CSS Grid you must apply `display: grid;` to the parent container.
 You can then set the column and row sizes by defining `grid-template-columns`
 and `grid-template-rows`. The children objects will then be placed within the
 grid with `grid-column` and `grid-row`. Space between columns and rows can also
-be controlled with `grid-column-gap`, `grid-row-gap` and `grid-gap`.
+be controlled, with `grid-column-gap`, `grid-row-gap`, and `grid-gap`.
 
 ## Basic example
 
 <CodePen>
 
-On this example we divide the container into three columns of same width by
+In this example, we divide the container into three columns of the same width by
 setting `grid-template-columns` to `auto auto auto`. We also add a gap between
 columns and rows by setting a `grid-gap`.
 
@@ -63,7 +63,7 @@ columns and rows by setting a `grid-gap`.
 
 <CodePen>
 
-On the example above we allowed the grid to organize each child element by
+In the example above, we allowed the grid to organize each child element by
 placing them inside the next available grid cell. You can override this default
 behavior specifying a `grid-column` and a `grid-row`.
 
@@ -167,8 +167,8 @@ Children that occupy the same cell will overlap.
 
 ## Webpage Layout
 
-On this example we can see a popular webpage layout using grid. Note the use of
-an alternative notation: instead of specifying `grid-column` and
+In this example, we can see a popular webpage layout using grid. Note the use of
+an alternative notation instead of specifying `grid-column` and
 `grid-column-end` both are set in `grid-column` and separated by `/`.
 
 <CodePen>
