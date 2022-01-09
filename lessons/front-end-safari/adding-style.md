@@ -5,7 +5,7 @@ order: 2
 
 # Adding styling
 
-Now that we have the basic structure of our page we can start to apply styling
+Now that we have the basic structure of our page, we can start to apply styling
 to the page. The goal here is to turn the plain page with the browser's default
 style into something that looks much more like our original mockup.
 
@@ -13,33 +13,33 @@ style into something that looks much more like our original mockup.
 
 To use an analogy, our HTML is like the skeleton of our body. It provides the
 foundation but does not make us look like who we are. For that, we need CSS to
-apply style to this skeleton.
+apply the style to this skeleton.
 
 ## Return of the blank page problem
 
-When starting to style a page we find that we may have the same question about
+When starting to style a page, we find that we may have the same question about
 how to get started. Here we suggest again starting at the top of the page and
-move down through the content.
+moving down through the content.
 
-As we are moving down through the page we may not make every element perfect but
-perhaps iterate through the page several times. Starting with broad styles such
-as margins and padding, and then refining our style with features such as box
-shadows and colors.
+As we are moving down through the page, we may not make every element perfect
+but perhaps iterate through the page several times. Starting with broad styles
+such as margins and padding, and then refining our style with features such as
+box shadows and colors.
 
 ## Starting with the font and main background and text colors
 
-Noticing there is a specific font choice for the page we can incorporate that at
-the start of our CSS file.
+Noticing there is a specific font choice for the page, we can incorporate that
+at the start of our CSS file.
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Lato:wght@400;700&display=swap');
 ```
 
 We also notice that the background color of our page is not the default bright
-white, but a more muted version. We also notice that the text color is not a
-solid black, but a slightly lighter shade.
+white but a more muted version. We also notice that the text color is not a
+solid black but a slightly lighter shade.
 
-To apply our font choice and colors across all elements we will add this to our
+To apply our font choice and colors across all elements, we will add this to our
 `body` style:
 
 ```css
@@ -55,7 +55,7 @@ of elements. Paragraphs have a default margin, `h1` through `h6` have varying
 font sizes. You may also notice that different browsers have slight variations
 in these styles.
 
-To work around these variations developers have shared some `CSS` files that
+To work around these variations, developers have shared some `CSS` files that
 _normalize_ the styles between browsers. These settings are shared for us to
 use. The project we will use to normalize CSS between browsers has this to say:
 
@@ -71,9 +71,9 @@ To use this we add this line to the beginning of our CSS file:
 
 ## Styling the header and footer
 
-The header and footer have their own background and text color. They also have a
-slight padding to them. Since we used the `header` and `footer` elements to
-enclose these we can apply this CSS.
+The header and footer have their own background color, text color, and slight
+padding. Since we used the `header` and `footer` elements to enclose these we
+can apply this CSS.
 
 ```css
 header,
@@ -85,8 +85,8 @@ footer {
 ```
 
 We also turn the navigation elements in the header into links. Since we don't
-yet have a destination for these links we'll use the placeholder `#` which will
-refer to the current page.
+yet have a destination for these links, we'll use the placeholder `#`, which
+will refer to the current page.
 
 ```html
 <li><a href="#">Home</a></li>
@@ -101,10 +101,10 @@ We notice on the mockup that the part of the page that isn't the header or the
 footer is slightly indented.
 
 To achieve this, let's wrap this part of the page in a `<main>` tag. That is,
-our `body` will only have three child elements, `header`, `main`, and `footer`
+our `body` will only have three child elements, `header`, `main`, and `footer`,
 with all the other content contained within.
 
-Once we do this we can apply some minor styling to the `main` element.
+Once we do this, we can apply some minor styling to the `main` element.
 
 ```css
 main {
@@ -114,9 +114,9 @@ main {
 
 ## Lord Vader Former Handle Anakin -- or Lord Voldemort Fears Hogwarts Alumni
 
-Looking at the details of the page we want to style the links of the page. We
-will apply _psuedo-selector_ styling to the `<a>` elements of the page. That is
-we will format the:
+Looking at the details of the page, we want to style the links of the page. We
+will apply _pseudo-selector_ styling to the `<a>` elements of the page. That is
+we, will format the attributes of these links:
 
 - Link
 - Visited
@@ -124,10 +124,9 @@ we will format the:
 - Hover
 - Active
 
-attributes of these links. As CSS order is important we will ensure that we
-define them in this order. Thus the
-[mnemonic](https://en.wikipedia.org/wiki/Mnemonic) above to help us to remember
-all of the pseudo-selectors and their proper order.
+CSS order is important, we will ensure that we define them in this order. Thus
+the [mnemonic](https://en.wikipedia.org/wiki/Mnemonic) above helps us to
+remember all of the pseudo-selectors and their proper order.
 
 Here we add `text-decoration` and `color` to indicate visual styling and colors
 for links. We also define a slightly different style for links in the header.
@@ -154,8 +153,8 @@ header a:visited {
 
 We are using lists in a few places and need to remove the standard styling
 queues the browser provides. We also notice that the text in the header is
-always in uppercase and we can apply a text transformation to ensure that is
-always true.
+always in uppercase, and we can apply a text transformation to ensure that this
+is always true.
 
 ```css
 ul {
@@ -170,7 +169,7 @@ header li {
 
 ## Headers
 
-Looking at the various headers in the application we notice that they apply a
+Looking at the various headers in the application, we notice that they apply a
 slightly different font choice and weight. They also lack the margin the default
 browser is applying.
 
@@ -189,7 +188,7 @@ h6 {
 
 ## Styling the blog article
 
-The blog articles contain specific styling so we can apply those
+The blog articles contain specific styling, so we can apply those.
 
 ```css
 article {
@@ -212,7 +211,7 @@ article p {
 
 ## Formatting the content in the footer
 
-Let's apply some styling to the labels in the footer
+Let's apply some styling to the labels in the footer.
 
 ```css
 label {
@@ -225,12 +224,12 @@ label {
 }
 ```
 
-By making the labels into `display: block` we allow them to fill the line they
+By making the labels into `display: block`, we allow them to fill the line they
 are on. We transform them into uppercase, apply a bold weight, make the text
 slightly smaller, increase the letter spacing, and give them a slightly
 different text color.
 
-Next, let's format the inputs in the form
+Next, let's format the inputs in the form.
 
 ```css
 input {
@@ -247,7 +246,7 @@ inputs take up 100% of their parent's width, add some border-radius to the input
 themselves, remove the border, and apply some inner padding to give the text
 some visual separation.
 
-However, when we do this we also format the form button. We can reapply the
+However, when we do this, we also format the form button. We can reapply the
 normal button style by adding:
 
 ```css
@@ -274,7 +273,7 @@ button {
 This applies a different font, sets the background and text color, removes the
 borders, applies padding, and some border-radius.
 
-To apply the style to the _heart_ in our text we will wrap it in a
+To apply the style to the _heart_ in our text, we will wrap it in a
 `<span class="hearts">` and then apply this style:
 
 ```css
@@ -287,10 +286,10 @@ To apply the style to the _heart_ in our text we will wrap it in a
 
 # Styling images
 
-Noticing the featured images have a border and shadow we would like to style
+Noticing the featured images have a border and shadow, we would like to style
 them.
 
-To do so we'll change this markup:
+To do so, we'll change this markup:
 
 ```html
 <img src="http://placekitten.com/640/480" alt="An Animal" />
@@ -312,7 +311,7 @@ to this:
 
 We add the `<div>` to add the `feature` class to this section of the page. This
 allows us to style the contents specifically. We then wrap each of the `<img>`
-with a parent `<figure>` which we will use to apply the padding and the
+with a parent `<figure>`, which we will use to apply the padding and the
 box-shadow.
 
 ```css
@@ -336,17 +335,17 @@ figure img {
 
 # Better, but not yet perfect
 
-While the page is much better with an application of CSS it is not yet exactly
+While the page is much better with an application of CSS, it is not yet exactly
 what we want. Next, we will look at adjusting the general layout of the page and
-certain elements within. To do this we will be using CSS `flexbox` and CSS
+certain elements within. To do this, we will be using CSS `flexbox` and CSS
 `grid` techniques.
 
-We should also remember that `better, but not yet perfect` is a good goal to
-work towards when dealing with CSS. Often we will feel like poor Peter Griffin
-in this image:
+We should also remember that `better but not yet perfect` is a good goal to work
+towards when dealing with CSS. Often we will feel like poor Peter Griffin in
+this image:
 
 ![](./assets/blindssuck.gif)
 
 If we seek to incrementally improve our CSS, apply updates without adding
-extraneous markup, and reviewing each change we can add style to our pages
-without losing our patience.
+extraneous markup, and review each change, we can add style to our pages without
+losing our patience.
