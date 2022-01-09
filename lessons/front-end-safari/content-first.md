@@ -7,19 +7,19 @@ order: 1
 
 When starting any page design, or any creative effort, one of the largest
 challenges is what our first step should be. This is often called the "blank
-page problem." In web design we are sometimes given a mock-up we are trying to
+page problem." In web design, we are sometimes given a mock-up we are trying to
 implement, or we have a visual design in mind but we are unsure how to get
 started.
 
 One way to combat this problem is to simply get all of the content onto the page
 before we start deciding how to organize or style it.
 
-In the case of our Safari web site, we might look at the site and start to get
+In the case of our Safari website, we might look at the site and start to get
 the content in our HTML file.
 
 ## First, the text
 
-Looking at the content we might get something like the following:
+Looking at the content, we might get something like the following:
 
 ```
 # Safari
@@ -62,11 +62,11 @@ Donate
 
 We collect our text in a
 [`markdown`](https://guides.github.com/features/mastering-markdown/) file as a
-way to gather our content. Next, let's organize this into some simple HTML
+way to gather our content. Next, let's organize this into some simple HTML.
 
 ## Next, the HTML
 
-As a first pass of our HTML we might generate the content with a minimal amount
+As a first pass of our HTML, we might generate the content with a minimal amount
 of elements:
 
 ```html
@@ -153,7 +153,7 @@ The very first section of content:
 </ul>
 ```
 
-Appears to be the header of the page. So let's surround this with a `<header>`
+Appears to be the header of the page. So let's surround this with an `<header>`
 element. This element has no specific styling but does have a _semantic_ meaning
 that indicates that this part of the page is an important heading.
 
@@ -170,7 +170,7 @@ that indicates that this part of the page is an important heading.
 ```
 
 Next, we notice that we might want to make all of the elements in the header a
-kind of page navigation. That is clicking on each of those elements would take
+kind of page navigation. That is clicking, on each of those elements would take
 us to various pages, or even just part of this page. So we will wrap the content
 again inside a `<nav>` element.
 
@@ -290,7 +290,7 @@ grouping. This will come in useful when we start to apply styles.
 
 ## Footer
 
-As we organized the top of the page we can organize the elements at the bottom
+As we organized the top of the page, we can organize the elements at the bottom
 of the page. We will first surround the content in a `footer` element. This
 element, like the `header` element, provides a semantic clue that this
 information is subordinate information found at the bottom.
@@ -373,8 +373,8 @@ are `<label>` elements that correspond to their input:
 
 As every developer knows, the first attempt we make to structure our code, or in
 this case a web page, may not be our sole attempt. We may find that as we need
-to style the page that this structure will change. By giving ourselves some
-structure we can start to see the areas where we can apply styles.
+to style the page, that this structure will change. By giving ourselves some
+structure, we can start to see the areas where we can apply styles.
 
 We need to strike a balance here. Applying too much structure will make our
 design rigid and difficult to change and style. At the same time, applying too
@@ -385,8 +385,8 @@ with practice.
 
 # Our final page structure
 
-Here is what our page looks like so far and below that the HTML we are starting
-with.
+Here is what our page looks like so far, and below that is the HTML we are
+starting with.
 
 ![](assets/content-only.jpg)
 
