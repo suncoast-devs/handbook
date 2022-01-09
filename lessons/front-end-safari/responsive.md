@@ -3,10 +3,10 @@ title: Responsive
 order: 4
 ---
 
-Now that we have our styling and layout we can turn to the format of our page in
-different viewpoints.
+Now that we have our styling and layout, we can turn to the format of our page
+in different viewpoints.
 
-Since we took a `mobile-first` approach here we can add a
+Since we took a `mobile-first` approach here, we can add a
 [`media query`](/lessons/css-response/media-query-details) to our code to begin
 to reformat it for a wider viewport.
 
@@ -40,7 +40,7 @@ giving the header a more horizontal look and feel.
 
 ## Make the featured images into a grid
 
-By adding the following CSS inside the media query we can format the gallery
+By adding the following CSS inside the media query, we can format the gallery
 into a grid and apply some gap in between the elements.
 
 ```css
@@ -113,7 +113,7 @@ Give the footer more space when wider.
 }
 ```
 
-To format the sections of the footer to change their alignment we will add some
+To format the sections of the footer to change their alignment, we will add some
 classes to help us. We add a `call-to-action`, `join`, `donation`, and
 `built-with-love` class to some parts of the footer.
 
@@ -159,7 +159,7 @@ classes to help us. We add a `call-to-action`, `join`, `donation`, and
 ```
 
 Then we will add these styles inside our media query. This will set our
-`call-to-action` to flex and space in-between the join and donation sections. We
+`call-to-action` to flex and space in between the join and donation sections. We
 set the built-with-love to move that text to the center.
 
 ```css
@@ -194,7 +194,7 @@ applied.
 ```
 
 Then outside the media query, we will add this selector to set a maximum width
-of some of the portions of the content. This ensures that as we widen the page
+of some of the portions of the content. This ensures that as we widen the page,
 these elements won't grow wider than the specified size.
 
 ```css
