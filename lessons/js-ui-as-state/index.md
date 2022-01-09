@@ -4,12 +4,12 @@ assignment:
   - roshambo-js
 ---
 
-In [the lesson on using TypeScript to modify the DOM](/lessons/js-dom) we
+In [the lesson on using TypeScript to modify the DOM](/lessons/js-dom), we
 discussed how to use TypeScript to find and manipulate user interface elements.
 Two examples of this are _toggle the state of an element each time we click it_
-and _update a counter when a separate button is clicked_. In each of these cases
-we are modifying some `state` of the user interface when responding to some
-change.
+and _updating a counter when a separate button is clicked_. In each of these
+cases, we are modifying some `state` of the user interface when responding to
+some change.
 
 We could implement the case of _toggle the state of an element each time we
 click it_ as:
@@ -42,10 +42,10 @@ document.querySelector('button')?.addEventListener('click', function (event) {
 })
 ```
 
-This would turn a specific class on the element on and off. In this case we are using
-the presence of the class to indicate the state.
+This would turn a specific class on the element on and off. In this case, we are
+using the presence of the class to indicate the state.
 
-We could implement the case of _update a counter when a separate button is
+We could implement the case of _updating a counter when a separate button is
 clicked_ as:
 
 ```typescript
@@ -89,8 +89,8 @@ The idea is this:
 
 ```
 
-Our user interface is really nothing more than a user friendly way to show and
-update the state of our data.
+Our user interface is nothing more than a user-friendly way to show and update
+the state of our data.
 
 Let's look at a more complex example.
 
@@ -115,14 +115,14 @@ Let's look at a more complex example.
 Assume the user clicks the `Make Deposit Button` -- This is the logic we _might_
 apply
 
-- Wait for transaction button click
+- Wait for the transaction button click
 - Add a transaction to the list
 - Recompute a new total balance
 - Find the correct balance element (checking or savings)
 - Update that with the new total
 - Add the transaction to the UI
 
-And then see the following
+And then see the following:
 
 ```
 
@@ -146,7 +146,7 @@ And then see the following
 
 What if the logic was:
 
-- Wait for transaction button click
+- Wait for the transaction button click
 - Add a transaction to the list
 - Redisplay the UI
 
@@ -174,17 +174,17 @@ Let's look at what the data behind this looks like:
 ```
 
 If we step back and look at our list of transactions as an `array` (or `List`)
-of `<li>` we would see that they match the elements of our transactions array.
+of `<li>`, we would see that they match the elements of our transactions array.
 
 If we could use `map` to transform the array of `transaction` objects in our
-`array` into a series of `li`s contained within the `ul` then this would be a
+`array` into a series of `li`s contained within the `ul`, then this would be a
 repeatable process that could happen any time our list of transactions was
 updated.
 
 The same is true of the `checking` variable. If the user interface was simply
-drawn based on the variables, either directly in the case of `checking` or using
-a tool like `map` in the case of `transactions` then to update the interface we
-would only need to update the variables (_state_) in our application.
+drawn based on the variables either directly in the case of `checking` or using
+a tool like `map` in the case of `transactions`, then to update the interface,
+we would only need to update the variables (_state_) in our application.
 
 ## What might this code look like?
 
@@ -240,8 +240,8 @@ function render() {
 }
 ```
 
-So now each time we change our `transactions` we can _redraw_ the user
-interface. When an event happens we update our _state_ and then ask our
+So now, each time we change our `transactions`, we can _redraw_ the user
+interface. When an event happens, we update our _state_ and then ask our
 interface to render itself.
 
 We have a setup that looks like this:
@@ -256,24 +256,24 @@ We have a setup that looks like this:
 
 ## State feeds UI, UI feeds state
 
-In this approach we have almost a circular nature. That is, our `state`
+In this approach, we have almost a circular nature. That is, our `state`
 (variables) will force a redrawing of our user interface. Our user interface
 will react to events that happen and call our `callback` _update_ methods. Those
-callbacks will then update state which will cause our user interface to update.
+callbacks will then update state, which will cause our user interface to update.
 
 ## Start to look at applications differently
 
 Start to look at your favorite web applications and see if you can picture what
 the internal state objects look like for it? How do those get **transformed**
-into user interface elements. How do the events on the page update that state?
-For example `gmail` (or whatever web email you might use) is simply a
+into user interface elements? How do the events on the page update that state?
+For example, `Gmail` (or whatever web email you might use) is simply a
 visualization of a collection of emails. They may be categorized (`filter`) and
-counted (`reduce`) and displayed in a `<table>` (`map`) but it is still a
+counted (`reduce`) and displayed in a `<table>` (`map`), but it is still a
 transformation of some internal state to a user interface.
 
 ## Coding style
 
 This approach leads to a specific coding style that we will use to build many
-web applications. We won't be writing HTML embedded in interpolated strings since
-that becomes unmanageable very quickly. We'll be using a front end library named
-[`React`](https://reactjs.org)
+web applications. We won't be writing HTML embedded in interpolated strings
+since that becomes unmanageable very quickly. We'll be using a front-end library
+named [`React`](https://reactjs.org).
