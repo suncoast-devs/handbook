@@ -22,7 +22,7 @@ header ul {
 ```
 
 This will place all the list items on the same visual row. However, we want the
-elements to be aligned in the center so we revise this CSS:
+elements to be aligned in the center, so we revise this CSS:
 
 ```css
 header ul {
@@ -31,7 +31,7 @@ header ul {
 }
 ```
 
-Finally we can add some visual interest by adding some letter spacing with this
+Finally, we can add some visual interest by adding some letter-spacing with this
 revision:
 
 ```css
@@ -52,15 +52,15 @@ header li {
 ```
 
 This is great, but we see that the elements are not in the center. Because we
-have left margin on the very first item we are beginning `1rem` of space from
+have left margin on the very first item, we are beginning `1rem` of space from
 the center.
 
 To solve this we could put a class on this item and _remove_ the margin.
 However, we can strive to avoid adding specific classes when existing CSS
 techniques can help.
 
-To address all the elements _except_ the first element we can use a
-`pseudo-selector`
+To address all the elements _except_ the first element, we can use a
+`pseudo-selector`.
 
 ```css
 header li:not(:first-child) {
@@ -70,8 +70,8 @@ header li:not(:first-child) {
 
 Here we apply two selectors, the first being `not` and then `:first-child`. In
 this way, we are indicating that we want this `margin-left` on all the `li`
-elements within the `header` that are **NOT** the first child. So in this case
-it is the elements, for "Our animals", "Blog" and "About" but _NOT_ the element
+elements within the `header` that are **NOT** the first child. So, in this case,
+it is the elements, for "Our animals", "Blog", and "About" but _NOT_ the element
 "Home"
 
 Another way to represent this is with an adjacency selector.
@@ -89,7 +89,7 @@ which is **not** preceded by any element.
 Both of these serve to format our list.
 
 Let's put the `h1` in the center. Since this is a single element _and_ is a text
-element we can style it as such:
+element, we can style it as such:
 
 ```css
 header h1 {
@@ -100,7 +100,7 @@ header h1 {
 ## Formatting the gallery of images
 
 We'd like to format the gallery of images of "Our New Friends" in a nice grid.
-To do so we will identify the `ul` by changing:
+To do so, we will identify the `ul` by changing:
 
 ```html
 <ul>
@@ -157,5 +157,5 @@ and then applying some grid styling:
 # Conclusion
 
 Applying `display: flex` and `display: grid` are powerful ways to arrange our
-content with layouts that used to be very complex. With just a few lines of CSS
+content with layouts that used to be very complex. With just a few lines of CSS,
 we have adjusted the header and gallery display to a more pleasing format.
