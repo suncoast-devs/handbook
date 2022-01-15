@@ -10,8 +10,8 @@ from which you wish to call it.
 
 ## Defining functions
 
-A function definition (also called a function declaration, or function
-statement) consists of the `function` keyword, followed by:
+A function definition (also called a function declaration or function statement)
+consists of the `function` keyword, followed by:
 
 - The name of the function.
 - A list of parameters to the function, enclosed in parentheses and separated by
@@ -23,7 +23,7 @@ For example, the following code defines a simple function named greet:
 
 ```typescript
 function greet() {
-  console.log('Hello there programmer!')
+  console.log('Hello, there programmer!')
 }
 ```
 
@@ -41,7 +41,7 @@ The syntax is:
 // |     |    |  |
 // v     v    v  v
 function greet() {
-  console.log('Hello there programmer!')
+  console.log('Hello, there programmer!')
 }
 ```
 
@@ -56,12 +56,12 @@ function square(valueToSquare: number) {
 ```
 
 Notice that we **must** supply a value to the `valueToSquare` argument,
-otherwise TypeScript will _assume_ that the variable is of type `any` and we'll
-lose any help the language will provide.
+otherwise, TypeScript will _assume_ that the variable is of type `any` and,
+we'll lose any help the language will provide.
 
-Also notice that we have not declared the type of data the function **returns**.
-This is because TypeScript can also **infer** the type from the `return`
-statement.
+Also, notice that we have not declared the type of data the function
+**returns**. This is because TypeScript can also **infer** the type from the
+`return` statement.
 
 We can also define the return type on the function declaration here:
 
@@ -81,8 +81,8 @@ function square(valueToSquare: number): number {
 
 Defining a function does not execute it. Defining the function simply names the
 function and specifies what to do when the function is called. Calling the
-function actually performs the specified actions with the indicated parameters.
-For example, if you define the function square, you could call it as follows:
+function performs the specified actions with the indicated parameters. For
+example, if you define the function square, you could call it as follows:
 
 ```typescript
 square(5)
@@ -97,10 +97,10 @@ What if we attempt to pass a value that is **not** a number, such as:
 square('a circle')
 ```
 
-In this case `TypeScript` will tell us this is an error. However, if we have not
-configured our tools to not launch our site, or code, in the case of a
+In this case, `TypeScript` will tell us this is an error. However, if we have
+not configured our tools to not launch our site, or code, in the case of a
 TypeScript error, the code will still **run**. Most of the tools we use will put
-this error directly in our path so that we must resolve it.
+this error directly in our path so, we must resolve it.
 
 ## Function expressions
 
@@ -124,9 +124,9 @@ like we assign a `number` or a `string` or any other kind of value.
 In fact, in TypeScript, functions are values themselves and can be passed to
 functions just like any other value.
 
-However, like any other argument in TypeScript we should supply a type! Since
-our argument `func` will be a function that receives a number and returns a
-number we define that type like:
+However, like any other argument in TypeScript, we should supply a type! Since
+our argument, `func` will be a function that receives a number and returns a
+number, we define that type like:
 
 ```
 (value: number) => number
@@ -140,7 +140,7 @@ So our function declaration is:
 function printIt(numbers: number[], func: (value: number) => number) {
 ```
 
-Sometimes the type declaration can become quite complex. In these cases we can
+Sometimes the type declaration can become quite complex. In these cases, we can
 define a new type of our own and give it a name!
 
 ```typescript
@@ -202,7 +202,7 @@ const words = ['hello', 'there']
 printIt(words, upperCase)
 ```
 
-The TypeScript system would immediately tell us that `words` isn't an array of
+The TypeScript system would immediately tell us that `words` aren't an array of
 numbers and cannot be sent to `printIt`!
 
 ![](./assets/printit-error.png)
@@ -234,15 +234,15 @@ function printIt<ValueType>(
 }
 ```
 
-In this case the `<ValueType>` after the `printIt` but before the arguments says
-that `printIt` will work with a generic type of data and we will call that type
-`ValueType`. Further on we say that `values` must be an array of whatever that
-type is. Also, the argument `func` must also be a function that takes that type
+In this case, the `<ValueType>` after the `printIt` but before the arguments
+says that `printIt` will work with a generic type of data and, we will call that
+type `ValueType`. Further on, we say that `values` must be an array of whatever
+that type is. Also, the argument `func` must be a function that takes that type
 and returns that type. As long as the `values` argument and the `func` agree on
-the types, `printIt` will work just fine.
+the types, `printIt` will work fine.
 
 [TypeScript generics](https://www.typescriptlang.org/docs/handbook/2/generics.html)
-are a powerful language feature and places a great deal of power and flexibility
+are a powerful language feature and place a great deal of power and flexibility
 in the hands of the developer. This is an advanced topic and not one that we
 will use often in the course.
 
@@ -258,14 +258,14 @@ language.
 ## Scope
 
 Variables defined inside a function cannot be accessed from anywhere outside the
-function, because the variable is defined only in the scope of the function.
+function because the variable is defined only in the scope of the function.
 However, a function can access all variables and functions defined inside the
 scope in which it is defined. In other words, a function defined in the global
 scope can access all variables defined in the global scope. A function defined
 inside another function can also access all variables defined in its parent
 function and any other variable to which the parent function has access.
 
-example:
+Example:
 
 ```typescript
 const PI = 3.14
@@ -291,7 +291,7 @@ function pies() {
 ## Arrow functions
 
 An arrow function expression has a shorter syntax compared to function
-expressions and are always anonymous.
+expressions and is always anonymous.
 
 Two factors influenced the introduction of arrow functions: shorter functions
 and non-binding of this.
@@ -314,9 +314,9 @@ console.log(elementLengths2) // logs [8, 6, 7, 9]
 ```
 
 The code for `elementLengths2` is shorter and has less code that we refer to as
-_ceremony_, that is, syntax that isn't absolutely necessary.
+_ceremony_, that is, syntax that isn't necessary.
 
-There are some other considerations where arrow functions are better and we will
-cover those in another lesson.
+There are some other considerations where arrow functions are better, and we
+will cover those in another lesson.
 
 ---
