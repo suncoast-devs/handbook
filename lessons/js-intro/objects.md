@@ -7,27 +7,27 @@ order: 9
 
 Objects in TypeScript, just as in other languages like `C#`, can be compared to
 objects in real life. The concept of objects in TypeScript can be understood
-with real life, tangible objects.
+with real-life, tangible objects.
 
-In TypeScript, an object is a standalone entity, with properties and type.
-Compare it with a cup, for example. A cup is an object, with properties. A cup
-has a color, a design, weight, a material it is made of, etc. The same way,
+In TypeScript, an object is a standalone entity with properties and type.
+Compare it with a cup, for example. A cup is an object with properties. A cup
+has a color, a design, weight, a material it is made of, etc. In the same way,
 TypeScript objects can have properties, which define their characteristics.
 
 # Properties
 
 A TypeScript object has properties associated with it. A property of an object
 can be explained as a variable that is attached to the object. Object properties
-are basically the same as ordinary TypeScript variables, except for the
-attachment to objects. The properties of an object define the characteristics of
-the object. You access the properties of an object with a simple dot-notation:
+are the same as ordinary TypeScript variables, except for the attachment to
+objects. The properties of an object define the characteristics of the object.
+You access the properties of an object with a simple dot-notation:
 
 ```typescript
 objectName.propertyName
 ```
 
 Like all TypeScript variables, both the object name (which could be a normal
-variable) and property name are case sensitive. You can define a property by
+variable) and property name are case-sensitive. You can define a property by
 assigning it a value. For example, let's create an object named myCar and give
 it properties named make, model, and year as follows:
 
@@ -39,7 +39,7 @@ myCar.model = 'Mustang'
 myCar.year = 1969
 ```
 
-In TypeScript however, we will receive errors that `make`, `model`, and `year`
+In TypeScript, however, we will receive errors that `make`, `model`, and `year`
 are not properties of `Object` since the default `Object` type does not know
 about them.
 
@@ -56,12 +56,12 @@ const myCar = {
 ```
 
 TypeScript will see that the `myCar` variable is an object with two string
-properties named `make` and `model`, and one number property named `year`.
+properties named `make` and `model` and one number property named `year`.
 
 ![](./assets/car-type.png)
 
-We could continue to make new cars and as long as we kept the same initial
-properties they would all be the same **type**
+We could continue to make new cars, and as long as we kept the same initial
+properties, they would all be the same **type**.
 
 ```typescript
 const theirCar = {
@@ -147,24 +147,16 @@ myCar['model'] = 'Mustang'
 myCar['year'] = 1969
 ```
 
-An object property name can be any valid TypeScript string, or anything that can
+An object property name can be any valid TypeScript string or anything that can
 be converted to a string, including the empty string.
 
 **However, any property name that is not a valid TypeScript identifier (for
-example, a property name that has a space or a hyphen, or that starts with a
+example, a property name that has a space or a hyphen or that starts with a
 number) can only be accessed using the square bracket notation.**
 
 This notation is also very useful when property names are to be dynamically
 determined (when the property name is not determined until runtime). Examples
 are as follows:
-
-An object property name can be any valid TypeScript string, or anything that can
-be converted to a string, including the empty string. However, any property name
-that is not a valid TypeScript identifier (for example, a property name that has
-a space or a hyphen, or that starts with a number) can only be accessed using
-the square bracket notation. This notation is also very useful when property
-names are to be dynamically determined (when the property name is not determined
-until runtime).
 
 ## Warning about the `[]` notation in TypeScript
 
@@ -177,7 +169,7 @@ cautious when using it.
 
 Let's say we had, in a string variable, the name of a property we wish to set on
 an object. However, instead of the case above where we set the value of an
-existing object, (e.g. `myCar[propertyName] = 'Mustang'`) we wanted to create a
+existing object (e.g. `myCar[propertyName] = 'Mustang'`), we wanted to create a
 new object and use the variable to indicate what property to set.
 
 We could do something like this:
@@ -192,8 +184,8 @@ const myOtherCar = {
 
 In this case, `myOtherCar` would be `{ model: 'Mustang'}`.
 
-While this doesn't seem particularly powerful, when combined with the technique
-below we get a fairly powerful pair of features we'll be using later.
+While this doesn't seem particularly powerful when combined with the technique
+below, we get a fairly powerful pair of features we'll be using later.
 
 # Making a new object from an existing one
 
@@ -219,7 +211,7 @@ const myOtherCar = {
 ```
 
 And now we would have a new object, independent of the first, with a different
-year. However, you could imagine that if we had many properties it would be
+year. However, you could imagine that if we had many properties, it would be
 cumbersome to repeat all the keys and values. Fortunately, TypeScript allows for
 a shortcut to "expand" all the keys and values. This is known as the `spread`
 operator and is noted as `...`
@@ -234,7 +226,7 @@ const myOtherCar = {
 ```
 
 Much better, we've saved one line of code, however, it now doesn't matter how
-many property/value paris `myCar` has since they are all now part of
+many property/value pairs `myCar` has since they are all now part of
 `myOtherCar` since this is effectively what TypeScript is doing for us:
 
 ```typescript
@@ -254,7 +246,7 @@ const myOtherCar = {
 }
 ```
 
-You'll notice that the `year` from `myCar` is added to the object. However our
+You'll notice that the `year` from `myCar` is added to the object. However, our
 code outside of the `...myCar` introduces a value for `year` again. Since this
 comes **after** the spread operator, our value of `1971` overrides the one from
 `year: myCar.year`
@@ -288,4 +280,4 @@ In this case, our property/value pair of `year: 1971` would be lost since the
 
 For more details on objects, see
 [this article](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects)
-or this [quick reference guide](/lessons/misc-quick-reference/js-objects)
+or this [quick reference guide](/lessons/misc-quick-reference/js-objects).
