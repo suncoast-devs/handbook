@@ -34,9 +34,9 @@ theme: Next, 1
 
 # Also statement based
 
-Like C# a TypeScript program is composed of a sequence of statements.
+Like C#, a TypeScript program is composed of a sequence of statements.
 
-Like a C# program, these statements may end with a semicolon, `;`. However, these are _optional_ in TypeScript, and we will code without them.
+Like a C# program, these statements may end with a semicolon `;`. However, these are _optional_ in TypeScript, and we will code without them.
 
 Comments are the same as in C#, single lines with `//` and multiple lines with `/*` and `*/`.
 
@@ -107,13 +107,13 @@ And there is a lot of it...
 
 > It is a JavaScript standard meant to ensure the interoperability of web pages across different web browsers.
 
-### Starting in `2015` we've been numbering them by year. (you may still see version numbers used)
+### Starting in `2015`, we've been numbering them by year (you may still see version numbers used).
 
 ---
 
 # ECMAScript has been adding features making JavaScript better!
 
-ECMAScript improvements has displaced _alternative_ languages like CoffeeScript that would _compile to_ JavaScript.
+ECMAScript improvements have displaced _alternative_ languages like CoffeeScript that would _compile to_ JavaScript.
 
 While JavaScript has been getting better, it still lacked a good way of managing data types.
 
@@ -127,7 +127,7 @@ Around 2018 the language and the tooling started becoming good enough for mass a
 
 ---
 
-# See: [this artcile](https://2020.stateofjs.com/en-US/technologies/javascript-flavors/)
+# See: [this article](https://2020.stateofjs.com/en-US/technologies/javascript-flavors/)
 
 ---
 
@@ -158,7 +158,7 @@ Large applications split among many developers are difficult to manage.
 
 <br/>
 
-> TypeScript code converts to JavaScript which runs anywhere JavaScript runs: In a browser, on Node.js or Deno and in your apps.
+> TypeScript code converts to JavaScript, which runs anywhere JavaScript runs: In a browser, on Node.js or Deno, and your apps.
 
 <br/>
 
@@ -168,7 +168,7 @@ Large applications split among many developers are difficult to manage.
 
 # How?
 
-TypeScript is a _SUPER SET_ of JavaScript
+TypeScript is a _SUPERSET_ of JavaScript
 
 - Everything that is JavaScript is also TypeScript (well, almost, and the parts that are not aren't important to us now)
 
@@ -238,7 +238,7 @@ Standard to use `camelCase` for our variable names.
 
 We will always use `let` or `const` in our coding.
 
-When looking at code on the web, e.g., StackOverflow, and blog posts, you will still see `var`.
+When looking at code on the web, e.g., StackOverflow and blog posts, you will still see `var`.
 
 ---
 
@@ -321,7 +321,7 @@ We can see this over in Visual Studio if we have a TypeScript file!
 
 What about an array that has different types of elements?
 
-Unlike `C#`, TypeScript can handle that just fine, and in a very nice way.
+Unlike `C#`, TypeScript can handle that just fine and in a very nice way.
 
 ![fit right](http://3.bp.blogspot.com/-2vVZ7SPGpIg/UFs0TJ5zTdI/AAAAAAAABOA/qT7jRACFolE/s320/IMG_1154.JPG)
 
@@ -365,15 +365,15 @@ const differentKindsOfThings: (string | number)[] = [
 
 # Declaring types explicitly
 
-Once we introduce the idea of TypeScript objects we'll discuss why specifying an explict type is useful.
+Once we introduce the idea of TypeScript objects, we'll discuss why specifying an explicit type is useful.
 
 ---
 
 # Undefined variables
 
-After declaring a variable but before assigning it a value, the variable will contain a special but confusing, value known as `undefined`
+After declaring a variable but before assigning it a value, the variable will contain a special but confusing value known as `undefined`.
 
-The type of the variable will also be `any` which means it will accept a value of **any** kind.
+The type of the variable will also be `any`, which means it will accept a value of **any** kind.
 
 ```typescript
 let name // name contains 'undefined', and is of `any` type
@@ -436,7 +436,7 @@ Follow these rules, and you'll do well:
 
 TypeScript is far more forgiving when converting types.
 
-Valid in `TypeScript` but not allowed in a language like `C#`
+Valid in `TypeScript` but not allowed in a language like `C#`.
 
 ```typescript
 const x = 'The answer is ' + 42 // "The answer is 42"
@@ -477,7 +477,7 @@ const message = `Congratulations, ${answer} is correct. You have ${score} points
 
 # Objects
 
-Similar to other languages objects are a combination of state and behavior.
+Similar to other languages, objects are a combination of state and behavior.
 
 In TypeScript, an object is a standalone entity with properties and type. Compare it with a cup, for example. A cup is an object with properties. A cup has a color, a design, weight, and a material. In the same way, TypeScript objects can have properties, which define their characteristics.
 
@@ -783,7 +783,7 @@ const employees = ['Rivest, Ron', 'Shamir, Adi', 'Adleman, Leonard']
 
 # Wait, what about const?
 
-`const` only refers to the **variable**, not it's contents.
+`const` only refers to the **variable**, not its contents.
 
 It only prevents us from doing
 
@@ -801,7 +801,7 @@ employees.push('Mary')
 
 ---
 
-# [fit] Can you make an unchangable array?
+# [fit] Can you make an unchangeable array?
 
 - Yes, use `ReadOnlyArray<>`
 
@@ -815,13 +815,13 @@ cantChangeTheseValues[0] = 1
 
 # [fit] Editor/Compile time versus Runtime
 
-Editor is screaming at us, browser might show errors, but...
+Editor is screaming at us browser might show errors, but...
 
     !!!
     THE     CODE        STILL           RUNS
     !!!
 
-TypeScript transforms down to JavaScript so while it will complain and warn, it won't _STOP_ you.
+TypeScript transforms down to JavaScript, so while it will complain and warn, it won't _STOP_ you.
 
 > We can turn on some project configurations to _not_ allow our code to run until it is free of these kinds of warnings
 
@@ -905,7 +905,7 @@ if (condition) {
 }
 ```
 
-This works exactly as `C#` except for the different style in how the braces and `else` are formatted.
+This works exactly as `C#` except for the different styles in how the braces and `else` are formatted.
 
 ---
 
@@ -990,7 +990,7 @@ if (answer == message) {
 
 # `===` is typically what we want
 
-In **most** cases `===` is what you want when comparing values.
+In **most** cases, `===` is what you want when comparing values.
 
 There are some exceptions, but they are **very** rare.
 
@@ -1035,7 +1035,7 @@ switch (expression) {
 
 # Functions
 
-In TypeScript, named groups of code that perform a specific behavior are called `functions` (whereas in `C#` we called them `methods`).
+In TypeScript, named groups of code that perform a specific behavior are called `functions` (whereas in `C#`, we called them `methods`).
 
 Also, these `functions` do not need to be in `classes`.
 
@@ -1114,7 +1114,7 @@ const answer = square(4) // answer gets the value 16
 
 # [fit] Functions are just another kind of type!
 
-We say that `functions` in TypeScript are a type just like numbers, strings and booleans.
+We say that `functions` in TypeScript are a type just like numbers, strings, and booleans.
 
 We can assign them names and pass them as arguments.
 
@@ -1352,7 +1352,7 @@ function printPersonInfo(person: Person) {
 
 ```typescript
 people.forEach(function (person: Person) {
-  // Inside here we have access to the `person` variable. The `person` variable is
+  // Inside here, we have access to the `person` variable. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the
   // function, it is a new creation of that variable.
 
@@ -1361,7 +1361,7 @@ people.forEach(function (person: Person) {
     // will remember all the variables that existed that it could see. This includes
     // the `person` variable from the forEach loop.
 
-    // When the function executes **later** (via the `setTimeout`) the
+    // When the function executes **later** (via the `setTimeout`), the
     // fact that this is a "closure" (remembers variables from the outer scope) ensures
     // that each time we call printPersonInfo, the variable `person` will be correct.
     debugger
@@ -1384,7 +1384,7 @@ people.forEach(function (person: Person) {
   `Alan Turing`
 - The second time, the closure captures `person` being equal to `Ada Lovelace`
 - Then `Grace Hopper`
-- Finally `Donald Knuth`.
+- Finally, `Donald Knuth`.
 
 ![right fit](./assets/closure-complex.gif)
 
