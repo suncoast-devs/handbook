@@ -202,7 +202,7 @@ const words = ['hello', 'there']
 printIt(words, upperCase)
 ```
 
-The TypeScript system would immediately tell us that `words` aren't an array of
+The TypeScript system would immediately tell us that `words` isn't an array of
 numbers and cannot be sent to `printIt`!
 
 ![](./assets/printit-error.png)
