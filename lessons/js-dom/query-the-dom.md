@@ -10,7 +10,7 @@ This is how we can update and interact with the HTML that is on our page.
 
 ## What is the DOM?
 
-The `DOM`, or `Document Object Model` is the internal representation the browser
+The `DOM` or `Document Object Model` is the internal representation the browser
 creates after reading our HTML source code and creating the various elements
 that correspond to the structure of the HTML.
 
@@ -24,8 +24,8 @@ You can try updating the DOM yourself by using your browser to load a page and
 change elements, add properties, change the text of an element, or remove an
 element completely.
 
-While this is interesting, and often helpful for debugging, it isn't enough to
-be able to do this from just the developer tools.
+While this is interesting and often helpful for debugging, it isn't enough to be
+able to do this from just the developer tools.
 
 We will be writing JavaScript to do this for us, eventually using existing code
 libraries to help us.
@@ -33,9 +33,9 @@ libraries to help us.
 ## Where does the DOM live in our code?
 
 The various objects that make up our page, our `<h1>` elements, `<p>` elements,
-etc. are all accessible via a special variable the browser provides to our code.
-This variable is named `document` and represents the browser's view of the
-currently rendering `document` (or in other terms, the _page_)
+etc., are all accessible via a special variable the browser provides to our
+code. This variable is named `document` and represents the browser's view of the
+currently rendering `document` (or, in other terms, the _page_).
 
 It is this variable that all of our interactions with the document/page will
 happen.
@@ -45,12 +45,12 @@ document and find elements.
 
 ## Query the DOM
 
-In order to interact with the DOM, we need to query the DOM to find the element
-we want to use.
+To interact with the DOM, we need to query the DOM to find the element we want
+to use.
 
-As we learned with CSS we need a way to specify which element, or set of
-elements, we want to work with. In `CSS` this was the _selector_ and in fact it
-makes an appearance again here.
+As we learned with CSS, we need a way to specify which element, or set of
+elements, we want to work with. In `CSS`, this was the _selector_, and it makes
+an appearance again here.
 
 ### Using CSS Selectors in JavaScript
 
@@ -78,24 +78,24 @@ This code goes to the `document` and finds the first element that has the class
 > _NOTE_: If no match was found at all, then the return will be `null`,
 > indicating there is no match.
 
-Now that we have the `pageHeader` as a variable we use it in our code just like
-any other variable. Notice the parameter to the querySelector function; that is
-the same style of selector we have in CSS. These selectors can be as complex and
-as specific as the CSS selectors we have previously learned.
+Now that we have the `pageHeader` as a variable,, we use it in our code just
+like any other variable. Notice the parameter to the querySelector function;
+that is the same style of selector we have in CSS. These selectors can be as
+complex and as specific as the CSS selectors we have previously learned.
 
 ### Fetching more than one element at once
 
 > _NOTE_ : `querySelector` returns only the first element that matches the
-> query. If you want all the elements that match that selector, you will want to use
-> `querySelectorAll`
+> query. If you want all the elements that match that selector, you will want to
+> use `querySelectorAll`
 
 ```javascript
 const headers = document.querySelectorAll('h1')
 ```
 
-In this case `headers` is a `NodeList` of `HTMLElement`. We cannot do everything
-we can with an array with a `NodeList` but `forEach` will allow us to iterate
-through the list of elements.
+In this case, `headers` are a `NodeList` of `HTMLElement`. We cannot do
+everything we can with an array with a `NodeList`, but `forEach` will allow us
+to iterate through the list of elements.
 
 ```javascript
 const headers = document.querySelectorAll('h1')
@@ -106,11 +106,11 @@ headers.forEach(header => {
 
 ### Adjusting properties on elements
 
-All of the things we can specify via writing HTML can be access and changed
+All of the things we can specify via writing HTML can be accessed and changed
 here.
 
 For instance, if we wanted to change the text content of the `h1` elements we
-found with `querySelector` or `querySelectorAll` we could.
+found with `querySelector` or `querySelectorAll`, we could.
 
 ```javascript
 const header = document.querySelector('h1')
@@ -120,12 +120,12 @@ if (header) {
   // Change the content of the element
   header.textContent = 'This is different text'
 
-  // Add a new class to the list of classes this element
+  // Add a new class to the list of classes, this element
   //  has, which might change what CSS rules apply to it!
   header.classList.add('highlighted')
 }
 ```
 
 There is a long list of properties of elements we can read/adjust. However, we
-will not spend a lot of time at this low level of programming so we won't take
+will not spend a lot of time at this low level of programming so, we won't take
 time to review them all.
