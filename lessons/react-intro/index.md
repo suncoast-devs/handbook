@@ -7,7 +7,7 @@ title: Hello, React
 > <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K" alt="" width="40px" style="display: inline; margin-right: 0.5rem"/>
 > A JavaScript library for building user interfaces
 
-React is the primary front end library/framework we will focus on for this
+React is the primary front-end library/framework we will focus on for this
 course.
 
 It was developed by Facebook around 2011/2012 and was released as an
@@ -34,20 +34,20 @@ One of the main ideas of React is the concept of composing your web application
 from components. A component in React is a combination of state and behavior
 that serve to render elements to the DOM.
 
-When learning HTML and CSS we decomposed our user interface into blocks and
+When learning HTML and CSS, we decomposed our user interface into blocks and
 groups of elements to organize and then style the content of the page. The same
 is true of React Components. We can now also look at our pages as collections of
-React Components. Each of these components can be reused which will help us
+React Components. Each of these components can be reused, which will help us
 reduce code.
 
 ## Class versus Function components
 
 These are the two current ways to create React Components. `class` components
-were introduced first and you will see most documentation relate to this style.
+were introduced first, and you will see most documentation relate to this style.
 However, the React team, and the community as a whole, are migrating to
-`function` based components. In this course we will teach you the function
+`function` based components. In this course, we will teach you the function
 component style. If you continue with React in your career and work on projects
-that use `class` components you won't have much trouble picking up that style.
+that use `class` components, you won't have much trouble picking up that style.
 
 ## What does a Component look like
 
@@ -69,7 +69,7 @@ function HelloWorld() {
 ## What is JSX?
 
 JSX is an extension of JavaScript that allows us to use an HTML-like syntax in
-our JavaScript code that will be turned into DOM at run-time. By using JSX we
+our JavaScript code that will be turned into DOM at run-time. By using JSX, we
 can dynamically generate content and use a [UI as state](lessons/js-ui-as-state)
 style.
 
@@ -81,9 +81,9 @@ function HelloWorld() {
 }
 ```
 
-When this component is presented on the page it will render
-`<p>Hello, World</p>`. This done by a process known as `transpiling` or
-converting JSX into real JavaScript code. When our code is sent to the browser
+When this component is presented on the page, it will render
+`<p>Hello, World</p>`. This is done by a process known as `transpiling` or
+converting JSX into real JavaScript code. When our code is sent to the browser,
 it is first manipulated by the JSX transpiling system.
 `return <p>Hello, World!</p>` is turned into:
 
@@ -106,13 +106,13 @@ into plain JavaScript.
 React Components can represent the **entire** web page, or be mixed in with
 static content of the page.
 
-In the code we write in our projects we will use React to generate all of the
-content on the page via components. React is very powerful for this but it is
+In the code we write in our projects, we will use React to generate all of the
+content on the page via components. React is very powerful for this, but it is
 good to know that you can also add a small component to an existing non-React
 project just as easily.
 
 The template SDG uses will generate an `index.html` file that looks like the
-following (only the `<body>` is shown and only the relevant parts)
+following (only the `<body>` is shown and only the relevant parts).
 
 ```html
 <body>
@@ -120,11 +120,11 @@ following (only the `<body>` is shown and only the relevant parts)
 </body>
 ```
 
-If we rendered this without JavaScript it would be an empty page. It is thus up
+If we rendered this without JavaScript, it would be an empty page. It is thus up
 to JavaScript to connect our React code to our HTML.
 
-In our template we include an `main.tsx` -- this script loads React and a
-component we provide named `App`
+In our template, we include a `main.tsx` -- this script loads React and a
+component we provide named `App`.
 
 ```js
 import React from 'react'
@@ -152,7 +152,7 @@ We will start writing our code in our `App.tsx` file.
 You may have noticed that we define our React Components in files that end in
 `.tsx` instead of `.ts`. The `.tsx` extension allows our editors and our code
 management tools to know we are using the `JSX` extensions. Browsers do not
-understand `JSX` by default so a
+understand `JSX` by default, so a
 [transpile](https://en.wikipedia.org/wiki/Source-to-source_compiler) step takes
 place automatically. This step turns our `JSX` into plain `JavaScript` that a
 browser **can** understand.
@@ -242,17 +242,17 @@ export default App
 ## `class` versus `className`
 
 You may have noticed we used `className=` everywhere in the code instead of
-`class=`. This is because `JSX` uses the `DOM` names for properties whereas
-`HTML` uses a more generic name. In the `DOM` it is the `className` property
+`class=`. This is because `JSX` uses the `DOM` names for properties, whereas
+`HTML` uses a more generic name. In the `DOM`, it is the `className` property
 that `class=` becomes. So we will be using `className` for our class names in
 JSX.
 
-Don't worry, our `console` will warn us of these types of errors when we make
+Don't worry our `console` will warn us of these types of errors when we make
 them.
 
 ## Some CSS to help
 
-Let's use this CSS to make the app look better
+Let's use this CSS to make the app look better.
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -308,7 +308,7 @@ We should see our two articles displayed.
 
 ## Extracting common code into a "component"
 
-Looking at our code we have two `<article>` elements that have the same
+Looking at our code, we have two `<article>` elements that have the same
 structure. It would be nice to have one place in the code where we could define
 this structure and use code to dynamically create them with the correct
 customization.
@@ -317,9 +317,9 @@ Let's start that process.
 
 ## Creating a `NewsArticle` component.
 
-As we work on creating components it is a good practice to place the files in a
-`components` directory within the `src` directory. While this isn't required it
-is often considered best practices.
+As we work on creating components, it is a good practice to place the files in a
+`components` directory within the `src` directory. While this isn't required, it
+is often considered best practice.
 
 If your project doesn't already have a `components` directory, make one now.
 
@@ -333,7 +333,7 @@ We'll add this as the first line:
 import React from 'react'
 ```
 
-This line tells the script we are going to use `React` and it activates the
+This line tells the script we are going to use `React`, and it activates the
 `JSX` template process.
 
 Next, we will make our component:
@@ -344,7 +344,7 @@ export function NewsArticle() {
 }
 ```
 
-the `export` at the beginning of that line, tells JavaScript we wish to share
+The `export` at the beginning of that line tells JavaScript we wish to share
 this class outside of the file. It also exports this function by `name` rather
 than as the _default_ export. See the lesson on JavaScript modules for more on
 the difference between the two. We'll use the export in just a moment.
@@ -361,21 +361,21 @@ Now let's see if we have a working component.
 
 ## Using our new `NewsArticle` from the `App`
 
-Returning to our `App.tsx` we can bring in this component to use. At the top,
-and at the end of the list of `import` we will add
+Returning to our `App.tsx`, we can bring in this component to use. At the top
+and at the end of the list of `import`, we will add:
 
 ```javascript
 import { NewsArticle } from './components/NewsArticle'
 ```
 
 This line tells JavaScript we wish to use the `NewsArticle` component in this
-code, and that it can be found in the file `NewsArticle.tsx` in the `components`
+code and that it can be found in the file `NewsArticle.tsx` in the `components`
 folder. Notice we do not add the extension. The `import` system is smart and can
 tell we mean the `jsx` version. If there were multiple files with the same
-extension we'd have to be more clear.
+extension, we'd have to be more clear.
 
 Finally, we can add this element to our `App`. Let's insert it right inside the
-`<main>`
+`<main>`.
 
 ```html
 <NewsArticle />
@@ -388,8 +388,8 @@ This means our `NewsArticle` component is rendering itself.
 
 ## Composition
 
-This is the idea of `composition` -- we are now defining a component, that has
-it's own content, embedded into another component, in this case the `App`.
+This is the idea of `composition` -- we are now defining a component that has
+its own content embedded into another component, in this case, the `App`.
 
 ## Update the `NewsArticle`
 
@@ -416,8 +416,8 @@ export function NewsArticle() {
 You should notice that our app now has **THREE** articles. The first comes from
 our `<NewsArticle/>` and the other two from the hardcoded elements.
 
-Let's remove the other two hardcoded `<article>`s leaving only our
-`<NewsArticle/>`
+Let's remove the other two hardcoded `<article>`s, leaving only our
+`<NewsArticle/>`.
 
 ```javascript
 import React from 'react'
@@ -436,8 +436,8 @@ function App() {
 export default App
 ```
 
-We should only see one article listed. If we repeat the `<NewsArticle/>` we can
-have as many of the `<article>` structure as we want.
+We should only see one article listed. If we repeat the `<NewsArticle/>`, we can
+have as many of the `<article>` structures as we want.
 
 ```javascript
 import React from 'react'
@@ -484,7 +484,7 @@ we would for regular HTML elements.
 ```
 
 Here we are asking to render three `<NewsArticle/>` components and provide each
-a different set of `properties` or in React terms: `props`
+a different set of `properties` or, in React terms: `props`.
 
 This is great, however, our `<NewsArticle>` still shows the hardcoded data.
 
@@ -493,17 +493,17 @@ This is great, however, our `<NewsArticle>` still shows the hardcoded data.
 When React places our component on the page and calls the method to generate the
 elements, it makes the supplied `props` available in the argument to the
 function. The `props` argument is an object whose keys are the names of the
-properties. In our case this is `props.title` and `props.body` -- the
+properties. In our case, this is `props.title`, and `props.body` -- the
 corresponding values are supplied as well.
 
-When defining the `props` argument we need to define the types for this object.
+When defining the `props` argument, we need to define the types for this object.
 We will create a `type` named `NewsArticleProps` and declare that the `title`
 property shall be a `string` and the `body` property shall be a `string` as
-well. When defining the component function we'll declare that `props` has a type
-of `NewsArticleProps`
+well. When defining the component function, we'll declare that `props` has a
+type of `NewsArticleProps`.
 
 We can use these in our component by using an _interpolation_ method within JSX.
-This is much like string interpolation in plain JavaScript but the syntax is
+This is much like string interpolation in plain JavaScript, but the syntax is
 slightly different:
 
 ```typescript
@@ -528,7 +528,7 @@ export function NewsArticle(props: NewsArticleProps) {
 ```
 
 Now when each of these components is rendered on the page, the unique values for
-`props` are available and we now have a component that is:
+`props` are available, and we now have a component that is:
 
 - **reusable**
 - **customizable**
@@ -601,7 +601,7 @@ eventually come from.
 ]
 ```
 
-We will be using this in our `App.tsx` so let's import it!
+We will be using this in our `App.tsx`, so let's import it!
 
 ```javascript
 import React from 'react'
@@ -633,8 +633,8 @@ export default App
 ```
 
 The line `import articles from './articles.json'` will read the JSON file and
-make its contents available as the variable `articles`! No parsing required!
-This is because the environment comes with a **`loader`** for JSON files and it
+make its contents available as the variable `articles`! No parsing is required!
+This is because the environment comes with a **`loader`** for JSON files, and it
 knows how to read and parse them for us!
 
 Let's use that data to build up an array of `<NewsArticle/>` components.
@@ -642,7 +642,7 @@ Let's use that data to build up an array of `<NewsArticle/>` components.
 ## Transforming data into components
 
 Since we want one `<NewsArticle/>` that is related to each element of the
-`articles` array, we will bring out our friend `map`
+`articles` array, we will bring out our friend `map`.
 
 ```javascript
 import React from 'react'
@@ -687,15 +687,15 @@ const newsArticlesFromData = articles.map(article => (
 ))
 ```
 
-In our [lesson on JavaScript iteration](/lessons/js-iteration] we demonstrated
+In our [lesson on JavaScript iteration](/lessons/js-iteration), we demonstrated
 that `map` can turn an array of one type of element (say a JavaScript object in
-this case) into an array of another type of element, (<NewsArticle/> in this
-case)
+this case) into an array of another type of element (<NewsArticle/> in this
+case).
 
 So what is happening here is a transformation from the first array to the
 second.
 
-> NOTE: We shortened the strings for formatting purposes only
+> NOTE: We shortened the strings for formatting purposes only.
 
 <div style="display: flex; max-width: 5rem; margin: 0; padding: 0">
 
@@ -736,7 +736,7 @@ second.
 
 </div>
 
-Since we now have an array of the `<NewsArticle/>` we can simply place them
+Since we now have an array of the `<NewsArticle/>`, we can simply place them
 where we want them in place of the hardcoded data.
 
 ```javascript
@@ -763,9 +763,9 @@ export default App
 > output since JSX already knows how to deal with arrays, it just outputs each
 > element as if we had hardcoded it.
 
-There is one other thing we need to do. If you look in your console you will see
-a message about each element needing a `key`. There is another React rule that
-is important to know.
+There is one other thing we need to do. If you look in your console, you will
+see a message about each element needing a `key`. There is another React rule
+that is important to know.
 
 > RULE: Each component that is rendered dynamically from an array of data must
 > have a unique `key`. That `key` must only be unique for that array of data.
@@ -801,7 +801,7 @@ with our `NewsArticle` component. In a later lesson, we will learn why this
 ## Conclusion
 
 We now have an application that allows us to add more articles to this listing.
-If we add new data to our `JSON` file and reload the application it _reacts_ to
+If we add new data to our `JSON` file and reload the application, it _reacts_ to
 the new data by rendering more information.
 
 In the following lessons, we will learn how to load data from a remote API, how
