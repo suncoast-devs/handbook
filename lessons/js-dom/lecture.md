@@ -8,7 +8,7 @@ Theme: Next, 1
 
 Let's create an interactive Tic Tac Toe game for two players.
 
-As always, we will start with static HTML and CSS
+As always, we will start with static HTML and CSS.
 
 ---
 
@@ -79,7 +79,7 @@ body {
 
 ```css
 h1 {
-  /* center the header */
+  /* Center the header */
   text-align: center;
 
   /* Use a sans serif font with a little spacing and color */
@@ -187,7 +187,7 @@ ul li.not-allowed-click {
 
 # [fit] Could we dynamically change the content?
 
-Time to make our page reactive by adding in TypeScript that interacts with the browser's content
+Time to make our page reactive by adding in TypeScript that interacts with the browser's content.
 
 ---
 
@@ -238,7 +238,7 @@ const name = window.prompt('Your name?')
 
 # What about interacting with the current "document"?
 
-In the console, type: `document` and press enter
+In the console, type: `document` and press enter.
 
 ```
 document
@@ -266,7 +266,7 @@ document
 
 # So many options!
 
-### There are many functions the `document` can do, but `querySelector` is the most basic
+### There are many functions the `document` can do, but `querySelector` is the most basic.
 
 ---
 
@@ -320,7 +320,7 @@ Since the `li` is empty, we get back an empty string!
 
 ## Update the HTML code to put an `O' in the first li
 
-Rerun the example, and we'll see this code return `"O"`
+Rerun the example, and we'll see this code return `"O"`.
 
 ```js
 firstListItem = document.querySelector('li')
@@ -357,7 +357,7 @@ firstListItem.textContent += '*'
 
 Update the original HTML to put a `taken` class on that first LI.
 
-Now in the console we can do:
+Now in the console, we can do:
 
 ```js
 firstListItem = document.querySelector('li')
@@ -474,7 +474,7 @@ firstListItem.addEventListener('click', handleClickSquare)
 
 This means:
 
-> The list item in the variable `firstListItem` should listen for a specific kind of event, in this case, a `click`, and when it happens, the browser will _CALL BACK_ our `handleClickSquare` function
+> The list item in the variable `firstListItem` should listen for a specific kind of event, in this case, a `click`, and when it happens, the browser will _CALL BACK_ our `handleClickSquare` function.
 
 ---
 
@@ -522,7 +522,7 @@ function handleClickSquare(event) {
 
 # Every time our browser handles an event
 
-... we get our function called _AND_ we get an `event` object!
+... we get our function called _AND_, we get an `event` object!
 
 ---
 
@@ -604,7 +604,7 @@ The loop adds an event listener to each item!
 
 ---
 
-# [fit] Done playing in the console, to the editor and TypeScript!
+# [fit] Done playing in the console, to the editor, and TypeScript!
 
 Now that we have some experience let us put it in our actual TypeScript file!
 
@@ -669,7 +669,7 @@ Hover over thingClickedOn before and after the `if`!
 
 TypeScript allows for _type narrowing_.
 
-The more we tell/test the more TypeScript can know!
+The more we tell/test, the more TypeScript can know!
 
 ---
 
@@ -872,11 +872,11 @@ With these simple tools, we can make any page dynamic.
 
 Remember when we had to add event listeners to _all_ the `LI` to handle the clicks?
 
-We did not know that the `click` on an `li` will move _up_ the DOM tree to the parent, grandparent, and the great grandparent, hoping someone will be `listening` to that event.
+We did not know that the `click` on a `li` will move _up_ the DOM tree to the parent, grandparent, and the great grandparent, hoping someone will be `listening` to that event.
 
 ---
 
-# [fit] Instead of `querySelectorAll('li')` we can get the `ul`
+# [fit] Instead of `querySelectorAll('li')`, we can get the `ul`
 
 Delete the code relating to `allSquares` and replace it:
 
