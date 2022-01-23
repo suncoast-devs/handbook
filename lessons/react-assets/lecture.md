@@ -47,11 +47,10 @@ The correct method is to `import` the image first:
 import image from './images/my-awesome-image.png'
 ```
 
-This provides you a `string` containing the **path** to the image to use in code.
+This provides you with a `string` containing the **path** to the image to use in code.
 
 ```jsx
 function AwesomeImage() {
   return <img src={image} alt="Awesomeness Defined' />
 }
 ```
-
