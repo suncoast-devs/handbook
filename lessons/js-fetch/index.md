@@ -10,7 +10,8 @@ network.
 The fetch() method takes one mandatory argument, the path to the resource you
 want to fetch. It returns a `Promise` that resolves to the Response to that
 request, whether it is successful or not. You can also optionally pass in an
-object as the second argument which will also give options on how fetch behaves.
+object as the second argument, which will also give options on how fetch
+behaves.
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all')
@@ -18,8 +19,8 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 - This will access the _Countries_ and fetch a list of all countries.
 
-- But if we just log this response we will see something that we cannot directly
-  use
+- But if we just log this response, we will see something that we cannot
+  directly use.
 
 ```javascript
 let response = fetch('https://restcountries.eu/rest/v2/all')
@@ -33,11 +34,11 @@ Promise {<pending>}
  [[PromiseValue]]: undefined
 ```
 
-- We cannot use this `promise` directly, we must "resolve" the promise
-- Think of a `promise` as an _IOU_
+- We cannot use this `promise` directly, we must "resolve" the promise.
+- Think of a `promise` as an _IOU_.
 - A `promise` is an _asynchronous_ _IOU_ that will supply a function when the
   _IOU_ is ready to redeem.
-- To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
+- To cash-in on our _IOU_, we call the `then` method of the `promise` as such:
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all').then(response => {
@@ -90,10 +91,10 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 ## Improving the use of `fetch`
 
-Promises can often be challenging to use and JavaScript has implemented a way to
-make asynchronous calls into synchronous calls. Similar to `C#`'s
-`async / await` system we can add `await` to a call that returns a promise. For
-any function that has done so we have to mark the method as `async`.
+Promises can often be challenging to use, and JavaScript has implemented a way
+to make asynchronous calls into synchronous calls. Similar to `C#`'s
+`async / await` system, we can add `await` to a call that returns a promise. For
+any function that has done so, we have to mark the method as `async`.
 
 So our `fetch` call above becomes:
 
@@ -113,7 +114,7 @@ async function countries() {
 Making a `POST` request will require us to supply a second argument containing
 options. The first required option is the `method`. We may also need to supply
 headers such as the `content-type` and perhaps some authentication information
-such as an API key or a token. Finally if the request requires a body, we
+such as an API key or a token. Finally, if the request requires a body, we
 specify it in the correct format. Here we take a JavaScript object and turn it
 into JSON format.
 
@@ -147,4 +148,4 @@ async function createOneListItem() {
 
 ## PUT, PATCH, DELETE, etc.
 
-The HTTP verbs will work similarly to the `POST`
+The HTTP verbs will work similarly to the `POST`.
