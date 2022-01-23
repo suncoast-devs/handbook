@@ -12,7 +12,7 @@ To skip the rest of this setup and simply _duplicate_ what SDG already setup:
 
 ```shell
 cd ~/sdg
-degit suncoast-devs/react-project-template react-projet-template
+degit suncoast-devs/react-project-template react-project-template
 cd react-project-template
 git init
 git add .
