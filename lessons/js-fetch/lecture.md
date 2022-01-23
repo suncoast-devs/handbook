@@ -10,7 +10,7 @@ The Fetch API provides an interface for fetching resources, primarily across the
 
 # Using
 
-The `Fetch API` is provided in the browser as a method named `fetch`
+The `Fetch API` is provided in the browser as a method named `fetch`.
 
 Takes at _least_ one argument: a string representing the `URL` to access.
 
@@ -32,7 +32,7 @@ This will access the _Countries_ and fetch a list of all countries.
 
 # What do we receive?
 
-If log this response we will see something that we cannot directly use.
+If we log this response, we will see something that we cannot directly use.
 
 [.column]
 
@@ -56,10 +56,10 @@ Promise {<pending>}
 
 ---
 
-- We cannot use this `promise` directly, we must "resolve" the promise
-- Think of a `promise` as an _IOU_
+- We cannot use this `promise` directly, we must "resolve" the promise.
+- Think of a `promise` as an _IOU_.
 - A `promise` is an _asynchronous_ _IOU_ that will supply a function when the _IOU_ is ready to redeem.
-- To cash-in on our _IOU_ we call the `then` method of the `promise` as such:
+- To cash-in on our _IOU_, we call the `then` method of the `promise` as such:
 
 ```javascript
 fetch('https://restcountries.eu/rest/v2/all').then(response => {
@@ -124,9 +124,9 @@ fetch('https://restcountries.eu/rest/v2/all')
 
 # Improving the use of `fetch`
 
-- Promises can often be challenging to use
+- Promises can often be challenging to use.
 - JavaScript has implemented a way to make asynchronous calls into synchronous calls.
-- Similar to `C#`'s `async / await` system we can add `await` to a call that returns a promise.
+- Similar to `C#`'s `async / await`, system we can add `await` to a call that returns a promise.
 
 ---
 
@@ -164,9 +164,9 @@ async function countries() {
 ## Making a POST request
 
 - Supply a second argument, an object of options
-- First property is required, and is the `method`
+- First property is required and is the `method`
 - May also need to provide an object containing `headers`
-- If this is a `POST` we'll need a `body` in the correct format
+- If this is a `POST`, we'll need a `body` in the correct format
 
 ---
 
@@ -203,11 +203,11 @@ async function createOneListItem() {
 
 ## PUT, PATCH, DELETE, etc.
 
-The HTTP verbs will work similarly to the `POST`
+The HTTP verbs will work similarly to the `POST`.
 
 ---
 
-# Fetch API is simple, powerful, but awkward to use
+# Fetch API is simple, powerful, and awkward to use
 
 We'll be looking at some alternatives:
 
