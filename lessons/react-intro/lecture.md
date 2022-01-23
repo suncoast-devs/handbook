@@ -32,7 +32,7 @@ It was developed by Facebook around 2011/2012 and was released as an open source
 
 - We can now also look at our pages as collections of React Components.
 
-- Each of these components can be reused which will help us reduce code.
+- Each of these components can be reused, which will help us reduce code.
 
 ---
 
@@ -40,17 +40,17 @@ It was developed by Facebook around 2011/2012 and was released as an open source
 
 - Two styles of React components
 
-- `Class` components came first and most documentation, tutorials, and Stack Overflow answers are using `class`
+- `Class` components came first, and most documentation, tutorials, and Stack Overflow answers are using `class`.
 
-- The other style, `functions/hooks` is the future.
+- The other style, `functions/hooks`, is the future.
 
 ---
 
 # We will teach you hooks
 
-Following our guide of teaching you currently deployed technolody but with an eye on the future...
+Following our guide of teaching, you currently deployed technology, but with an eye on the future...
 
-... we are teaching you hooks. However, if you start a `class` based project you'll be able to pick that up.
+... we are teaching you hooks. However, if you start a `class` based project, you'll be able to pick that up.
 
 ---
 
@@ -66,7 +66,7 @@ Following our guide of teaching you currently deployed technolody but with an ey
 
 # What is JSX?
 
-JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX we can dynamically generate content and use a [UI as state](https://handbook.suncoast.io/lessons/js-ui-as-state) style.
+JSX is an extension of JavaScript that allows us to use an HTML-like syntax in our JavaScript code that will be turned into DOM at run-time. By using JSX, we can dynamically generate content and use a [UI as state](https://handbook.suncoast.io/lessons/js-ui-as-state) style.
 
 ---
 
@@ -102,8 +102,8 @@ function HelloWorld() {
 
 # How does our template help us use React Components?
 
-- Our template for React is inspired by `vite` which is a tool for generating web based projects.
-- React Components can represent the **entire** web page, or be mixed in with static content of the page.
+- Our template for React is inspired by `vite`, which is a tool for generating web based projects.
+- React Components can represent the **entire** web page or be mixed in with static content of the page.
 
 ```javascript
 return <p>Hello, World!</p>
@@ -121,7 +121,7 @@ degit suncoast-devs/react-project-template ReactArticles
 
 # HTML file
 
-The template SDG uses will generate an `index.html` file that looks like the following (only the `<body>` is shown and only the relevant parts)
+The template SDG uses will generate an `index.html` file that looks like the following (only the `<body>` is shown and only the relevant parts).
 
 ```html
 <body>
@@ -133,13 +133,13 @@ The template SDG uses will generate an `index.html` file that looks like the fol
 
 # Where is the User Interface!??
 
-If we rendered this without JavaScript it would be an empty page. It is thus up to JavaScript to connect our React code to our HTML.
+If we rendered this without JavaScript, it would be an empty page. It is thus up to JavaScript to connect our React code to our HTML.
 
 ---
 
 # User Interface all in JavaScript
 
-In our SDG template we include an `main.tsx` -- this script loads React and a component we provide named `App`
+In our SDG template, we include a `main.tsx` -- this script loads React and a component we provide named `App`.
 
 ```js
 import React from 'react'
@@ -204,7 +204,7 @@ This is some sample HTML we will work to create and learn how React Components c
 
 # Start with `hard coded` content
 
-We'll take our HTML and place it _ALL_ inside the `render` method of our `App`
+We'll take our HTML and place it _ALL_ inside the `render` method of our `App`.
 
 ```typescript
 import React from 'react'
@@ -247,17 +247,17 @@ export function App() {
 
 You may have noticed we used `className=` everywhere in the code instead of `class=`.
 
-This is because `JSX` uses the `DOM` names for properties whereas `HTML` uses a more generic name.
+This is because `JSX` uses the `DOM` names for properties, whereas `HTML` uses a more generic name.
 
-In the `DOM` it is the `className` property that `class=` becomes. So we will be using `className` for our class names in JSX.
+In the `DOM`, it is the `className` property that `class=` becomes. So we will be using `className` for our class names in JSX.
 
-Don't worry, our `console` will warn us of these types of errors when we make them.
+Don't worry our `console` will warn us of these types of errors when we make them.
 
 ---
 
 # Some CSS to help
 
-Let's use this CSS to make the app look better
+Let's use this CSS to make the app look better.
 
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
@@ -321,19 +321,19 @@ main {
 Let's create a new file in the `components` directory and name it
 `NewsArticle.tsx`
 
-> NOTE: If you don't have a `src/components` directory you should create that directory first. Since this is a common pattern you may want to chose to add this directory (and an empty `.keep` file within) to your template.
+> NOTE: If you don't have a `src/components` directory, you should create that directory first. Since this is a common pattern, you may want to choose to add this directory (and an empty `.keep` file within) to your template.
 
 ---
 
 # Import React
 
-We'll add this as the first line to tell JavaScript we are going to use `React` and it activates the `JSX` template process.
+We'll add this as the first line to tell JavaScript we are going to use `React`, and it activates the `JSX` template process.
 
 ```javascript
 import React from 'react'
 ```
 
-> NOTE: With the latest version of `React` and some tools we don't need this import. You may see some tutorials and examples omit this line. For `vite`, at the time of writing, we still need this import.
+> NOTE: With the latest version of `React` and some tools, we don't need this import. You may see some tutorials and examples that omit this line. For `vite`, at the time of writing, we still need this import.
 
 ---
 
@@ -345,13 +345,13 @@ export function NewsArticle() {
 }
 ```
 
-The `export` at the beginning of that line, tells JavaScript we wish to share this class outside of the file. We'll use that fact in just a moment.
+The `export` at the beginning of that line tells JavaScript we wish to share this class outside of the file. We'll use that fact in just a moment.
 
 ---
 
 # Add a return
 
-For now, as a test, we'll have it just make a `<div>` with some text
+For now, as a test, we'll have it just make a `<div>` with some text.
 
 ```javascript
 export function NewsArticle() {
@@ -383,7 +383,7 @@ Add this right inside `<main>`
 
 # Composition
 
-This is the idea of `composition` -- we are now defining a component, that has its own content, that we can embed into another component, in this case the `App`.
+This is the idea of `composition` -- we are now defining a component that has its own content that we can embed into another component, in this case, the `App`.
 
 ---
 
@@ -419,7 +419,7 @@ You should notice that our app now has **THREE** articles. The first comes from 
 
 # Cleaning up
 
-Let's remove the other two hardcoded `<article>`s leaving only our `<NewsArticle/>`
+Let's remove the other two hardcoded `<article>`s, leaving only our `<NewsArticle/>`.
 
 ```javascript
 import React from 'react'
@@ -440,7 +440,7 @@ function App() {
 
 # Make many NewsArticles!
 
-We should only see one article listed. If we repeat the `<NewsArticle/>` we can have as many of the `<article>` structures as we want.
+We should only see one article listed. If we repeat the `<NewsArticle/>,` we can have as many of the `<article>` structures as we want.
 
 ```javascript
 import React from 'react'
@@ -491,27 +491,27 @@ We can add properties to our components by specifying them in a very similar way
 
 # Hooray TypeScript!
 
-Notice that we immediate get warnings and errors that some of these properties are unknown to the `<NewsArticle>` component.
+Notice that we immediately get warnings and errors that some of these properties are unknown to the `<NewsArticle>` component.
 
 ---
 
 # Using props in a component
 
-Properties added in the _USAGE_ of a component are present to us inside a component via an argument we will name `props`
+Properties added in the _USAGE_ of a component are present to us inside a component via an argument we will name `props`.
 
-So our `title` is in a variable named `props.title` and our `body` is in a variable called `props.body`
+So our `title` is in a variable named `props.title` and our `body` is in a variable called `props.body`.
 
-In the places where we have hard coded data we can replace with variables
+In the places where we have hard coded data, we can replace with variables.
 
 ---
 
 # [fit] Interpolation of variables in the middle of JSX
 
-To have values appear in our JSX we use `interpolation`
+To have values appear in our JSX, we use `interpolation`.
 
-In JSX we write our variables inbetween `{}` characters.
+In JSX we write our variables between `{}` characters.
 
-We can replace all the hardcoded text with values from `props`
+We can replace all the hardcoded text with values from `props`.
 
 ---
 
@@ -537,7 +537,7 @@ export function NewsArticle(props) {
 
 Now our `App.tsx` has no warnings or errors, but our `NewsArticle` does.
 
-We need to tell TypeScript the `shape` of the `props` variable, otherwise it will be defined as `any`. We will try to avoid "`any`" wherever we can.
+We need to tell TypeScript the `shape` of the `props` variable, otherwise, it will be defined as `any`. We will try to avoid "`any`" wherever we can.
 
 ---
 
@@ -576,7 +576,7 @@ export function NewsArticle(props: { title: string; body: string }) {
 
 # Reusable type
 
-The inline style is useful if the type isn't going to be reused. If we reuse the type we should choose the explicit type definition. We can prepend `type` with `export` so it becomes reusable.
+The inline style is useful if the type isn't going to be reused. If we reuse the type, we should choose the explicit type definition. We can prepend `type` with `export`, so it becomes reusable.
 
 ```typescript
 export type NewsArticleProps = {
@@ -587,13 +587,13 @@ export type NewsArticleProps = {
 export function NewsArticle(props: NewsArticleProps) {
 ```
 
-With this style we can reuse the `NewsArticleProps` type elsewhere in our code.
+With this style, we can reuse the `NewsArticleProps` type elsewhere in our code.
 
 ---
 
 # Reusable and Customizable
 
-Now when each of these components is rendered on the page, the unique values for `this.props` are available and we now have a component that is:
+Now when each of these components is rendered on the page, the unique values for `this.props` are available and, we now have a component that is:
 
 - **reusable**
 - **customizable**
@@ -604,7 +604,7 @@ Now when each of these components is rendered on the page, the unique values for
 
 This is great, and we have an application that can render any number of articles we want. However, we still must manually code these in our main application.
 
-It would be nice to render this from a data file, or perhaps a remote API.
+It would be nice to render this from a data file or perhaps a remote API.
 
 ---
 
@@ -657,7 +657,7 @@ import articles from './articles.json'
 
 # Transforming data into components
 
-Since we want one `<NewsArticle/>` that is related to each element of the `articles` array, we will bring out our friend `map`
+Since we want one `<NewsArticle/>` that is related to each element of the `articles` array, we will bring out our friend `map`.
 
 ```javascript
 const newsArticlesFromData = articles.map(article => (
@@ -677,9 +677,9 @@ Note that we get a warning/error.
 Missing "key" prop for element in iterator. eslint(react/jsx-key)
 ```
 
-Any time we dynamically generate JSX in an iterator (e.g. `map`) we need to give it a _unique_ identifier so React can efficiently track/change the JSX when updating.
+Any time we dynamically generate JSX in an iterator (e.g., `map`), we need to give it a _unique_ identifier so React can efficiently track/change the JSX when updating.
 
-See [this React documentation article](https://reactjs.org/docs/lists-and-keys.html) for more details
+See [this React documentation article](https://reactjs.org/docs/lists-and-keys.html) for more details.
 
 ---
 
@@ -705,7 +705,7 @@ Another good choice would be the `title` if we feel like that is unique enough.
 
 # `map` with `index`
 
-If you have no other good choice, add an `index` argument to `map` and use that as the `key`
+If you have no other good choice, add an `index` argument to `map` and use that as the `key`.
 
 ```typescript
 const newsArticlesFromData = articles.map((article, index) => (
@@ -731,7 +731,7 @@ const newsArticlesFromData = articles.map((article, index) => (
 
 # Using the mapped data
 
-Since we now have an array of the `<NewsArticle/>` we can simply place them where we want them in place of the hardcoded data.
+Since we now have an array of the `<NewsArticle/>`, we can simply place them where we want them in place of the hardcoded data.
 
 ```javascript
 import React from 'react'
@@ -758,4 +758,4 @@ export default App
 # Conclusion
 
 - We now have an application that allows us to add more articles to this listing.
-- If we add new data to our `JSON` file and reload the application it _reacts_ to the new data by rendering more information.
+- If we add new data to our `JSON` file and reload the application, it _reacts_ to the new data by rendering more information.
