@@ -6,7 +6,7 @@ See the lecture slides as this reading is under construction.
 
 # React `props`
 
-In [React Intro](/lessons/react-intro) we discussed how `props` (properties)
+In [React Intro](/lessons/react-intro), we discussed how `props` (properties)
 allow us to create generalized components that change their behavior based on
 the values supplied.
 
@@ -22,7 +22,7 @@ different _title_ and _body_ depending on the properties supplied.
 One of the "_rules_" of `props` is that the receiving component cannot change
 them. That is, `NewsArticle` cannot change the value of the property.
 
-> `props` are "read only" data
+> `props` are "read-only" data
 
 > `props` are passed from the **parent** to the **child**
 
@@ -36,9 +36,9 @@ component is visible on the page?
 
 React implements a system called `state` to allow us to modify data during the
 lifetime of a component. This is similar in concept to the idea of `state` in
-object oriented systems.
+object-oriented systems.
 
-In a functional component we use a system called `hooks` to implement features
+In a functional component, we use a system called `hooks` to implement features
 such as tracking `state`-ful information. The name `hook` comes from the idea
 that we are `hooking` into React's processing.
 
@@ -119,7 +119,7 @@ export function Counter() {
 
 We will add our first hook, known as `useState`. Here is the code to create the
 state variables and display their value. We'll then break down this code
-line-by-line
+line-by-line.
 
 ```jsx
 function Counter() {
@@ -163,7 +163,7 @@ number `0`.
 
 2. `useState` always returns an _array_ with exactly _two_ elements. The
    **first** element is the _current value of the state_ and the **second**
-   element is _a function that can change the value of this state_
+   element is _a function that can change the value of this state_.
 
 ### Using the `useState` return value
 
@@ -175,8 +175,8 @@ const setCounter = counterValueAndSetMethod[1]
 ```
 
 These lines of code make two local variables to store the **current value** of
-our state, which we call `counter` and the **method that updates the counter**
-as `setCounter`
+our state, which we call `counter`, and the **method that updates the counter**
+as `setCounter`.
 
 Then in the JSX, we can use those two local variables. The code
 `<p>The counter is {counter}</p>` will show the current value of the counter.
@@ -227,10 +227,10 @@ function component with the ability to update state!
 # Step 3 - Try manually changing the value in the state
 
 While we have removed the _static_ implementation of the `0` in our
-`The count is...` statement (another way to say this is "hardcoded") we do not
-yet have the ability to **change** the value due to user interaction.
+`The count is...` statement (another way to say this is "hardcoded"), we cannot
+yet **change** the value due to user interaction.
 
-However, if we, the programmer, were to change the initial value of `state` we
+However, if we, the programmer, were to change the initial value of `state`, we
 could see that the UI would reflect the new value.
 
 Change the state initializing code to:
@@ -242,19 +242,20 @@ const [counter, setCounter] = useState(42)
 and you will see the display update to `The count is 42`.
 
 Another way to change the state value is using the
-[React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/)
+[React Developer Tools](https://addons.mozilla.org/en-US/firefox/addon/react-devtools/).
 
 If you open your developer window with the React Developer Tools installed,
-you'll see a new tab `Components.` If you then click that tab you will see a
-component which will, when clicked, show you the current value of `state`. Here
+you'll see a new tab, `Components.` If you then click that tab, you will see a
+component that will, when clicked, show you the current value of `state`. Here
 you can double click on the value and change it to any number you like. As soon
 as you make that change, the UI will update like magic!
 
 Both of these approaches show that if there were **some** way to change the
-state the UI would automatically update to display the new value of the counter!
+state, the UI would automatically update to display the new value of the
+counter!
 
 > NOTE: This is an important step. For this example, it seems simple. Later we
-> will be dealing with much more complex state variables and changing the value
+> will be dealing with much more complex state variables, and changing the value
 > to see how our component "reacts" will be more critical.
 
 # Step 4 - Connect actions
@@ -285,7 +286,7 @@ that behavior if there were.
 For now, we will `console.log` a message. This allows us to **test** if we have
 correctly connected our function to the element. When writing code, try to write
 a small amount of code and then **validate** if that code works. Right now, we
-do this with `console.log` but later on, you'll learn about concepts like
+do this with `console.log`, but later on, you'll learn about concepts like
 `automated testing` that can do this for us. Here we add a line of `console.log`
 to see a message in the console when we click on the button.
 
@@ -316,7 +317,7 @@ that function each time it is clicked.
 <button onClick={handleClickButton}>Increment</button>
 ```
 
-In React we will use `onXXXXX` or `handleXXXXX` named methods (e.g. `onClick`,
+In React, we will use `onXXXXX` or `handleXXXXX` named methods (e.g. `onClick`,
 `onSubmit`, `onContextMenu`, `onChange`, `handleClick`, etc.) when we want to
 associate an element to an event handling function. In this case, we are telling
 React to call our `handleClickButton` function each time the button is clicked.
@@ -343,8 +344,8 @@ const newCounter = counter + 1
 setCounter(newCounter)
 ```
 
-> NOTE: After calling `setCount` you will see that `count` has **NOT** been
-> updated. the value of `count` isn't changed until React gets a chance to
+> NOTE: After calling `setCounter`, you will see that `count` has **NOT** been
+> updated. The value of `count` isn't changed until React gets a chance to
 > update state **AFTER** our `handleClickButton` method is done. This often
 > confuses new React developers.
 
@@ -397,7 +398,7 @@ specify a type:
 const [counter, setCounter] = useState(0)
 ```
 
-TypeScript knows that `counter` is a `number` and `setCounter` is a function
+TypeScript knows that `counter` is a `number`, and `setCounter` is a function
 that accepts a `number` as an argument.
 
 This is because the React developers provided type information for all of their
@@ -405,30 +406,30 @@ code. They also made their code, such as `useState` able to provide type
 inference based on the **initial state** value.
 
 If we did not provide an initial state, React would **not** be able to infer the
-type. Here is an example of that type of `useState`
+type. Here is an example of that type of `useState`.
 
 ```typescript
 const [price, setPrice] = useState()
 ```
 
-In this example TypeScript will set a type of `undefined` to `price`. When we
-try to `setPrice(42)` (or any other number) we'll receive a TypeScript error
+In this example, TypeScript will set a type of `undefined` to `price`. When we
+try to `setPrice(42)` (or any other number), we'll receive a TypeScript error
 that we cannot assign `number` to `undefined`.
 
-In the case where we do **not** provide an initial value to `useState` we
+In the case where we do **not** provide an initial value to `useState`, we
 _should_ provide a type.
 
 ```typescript
 const [price, setPrice] = useState<number>()
 ```
 
-In this case the type of `price` is actually `undefined | number`. That is,
+In this case, the type of `price` is actually `undefined | number`. That is,
 `price` can either have the value of `undefined` **OR** any `number`. This is
-very powerful but only if this is the programmers intent. If you never intend
-for `price` to be `undefined` then we should disallow this by specifying an
+very powerful, but only if this is the programmer's intent. If you never intend
+for `price` to be `undefined` then, we should disallow this by specifying an
 initial value.
 
-This is the reason that we **strongly** recommend always using an initial value
+This is the reason that we **strongly** recommend always using an initial value,
 for all of your `useState` hooks. If you _cannot_ set an initial value you must
 consider the impact that allowing an `undefined` value in a state variable will
 have.
@@ -442,10 +443,10 @@ of information.
 Separating these pieces of state has a few benefits:
 
 1. It is easier to remove one part of the state since it has its own variable
-   and state changing function.
+   and state-changing function.
 
-2. We can more easily tell where in the code a piece of state or a state
-   changing function is used.
+2. We can more easily tell where in the code a piece of state or a
+   state-changing function is used.
 
 ```tsx
 function CounterWithName() {
@@ -476,12 +477,12 @@ function CounterWithName() {
 
 # handleChangeInput
 
-In this function we need to specifically declare the `event` as a data type that
-indicates this is a `React.ChangeEvent` on an element that is a
+In this function, we need to specifically declare the `event` as a data type
+that indicates this is a `React.ChangeEvent` on an element that is a
 `HTMLInputElement`. This allows `event.target` and `event.target.value` to have
 types. Without this specific code for `event`, TypeScript cannot ensure that
 `event.target`isn't possibly`null`as well as recognize
-that`event.target.value`is a`string`
+that`event.target.value`is a`string`.
 
 # Two independent states
 
