@@ -50,7 +50,7 @@ function Counter() {
 
 ---
 
-# Let us setup some code that runs whenever the count changes!
+# Let us set up some code that runs whenever the count changes!
 
 ```js
 function theCountChanged() {
@@ -99,7 +99,7 @@ useEffect(
 
 # Simplify
 
-- Since `theCountChanged` is now an anonymous inline function we can remove the name.
+- Since `theCountChanged` is now an anonymous inline function, we can remove the name.
 
 ```js
 useEffect(
@@ -400,7 +400,7 @@ useEffect(function () {
 
 # Adding a library
 
-- From the terminal and the same place we run `npm start` we can add a library to our project with:
+- From the terminal and the same place we run `npm start`, we can add a library to our project with:
 
 ```shell
 npm install axios
@@ -436,7 +436,7 @@ useEffect(async function () {
 
 ---
 
-# TypsScript issues
+# TypeScript issues
 
 We cannot use an `async` function directly in `useEffect`
 
@@ -536,7 +536,7 @@ const [newTodoText, setNewTodoText] = useState('')
 
 # When the user presses enter!
 
-- Since this `input` is inside a `form` we will get an `onSubmit` for the form!
+- Since this `input` is inside a `form`, we will get an `onSubmit` for the form!
 
 ```js
 function handleCreateNewTodoItem() {
@@ -585,7 +585,7 @@ async function handleCreateNewTodoItem() {
 
 # Append the item
 
-Once we have the item we can build a new list of todos with that one appended.
+Once we have the item, we can build a new list of todos with that one appended.
 
 ```js
 const newTodo = response.data
@@ -625,7 +625,7 @@ setNewTodoText('')
 
 > Now we are giving the items some behavior, so it might be time to refactor those into a component!
 
-> We can reuse our TodoItemType for our `props`
+> We can reuse our TodoItemType for our `props`.
 
 ---
 
@@ -732,7 +732,7 @@ async function toggleCompleteStatus() {
 
 # Look at the similarity in the branches!
 
-The only difference is that if the `props.complete` is true, we send `false` -- and if it is `false` we send `true`
+The only difference is that if the `props.complete` is true, we send `false` -- and if it is `false`, we send `true`.
 
 Simplify:
 
@@ -794,7 +794,7 @@ Now we have a function we can share with the `TodoItem` via props
 
 # [fit] And add `reloadItems` to `TodoItemProps`
 
-This type definition says "reloadItems is a function that takes no arguments and returns nothing"
+This type definition says "reloadItems is a function that takes no arguments and returns nothing."
 
 ```ts
 type TodoItemProps = {
