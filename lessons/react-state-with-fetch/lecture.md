@@ -479,6 +479,7 @@ if (
 If the cell is not empty, set the class to `taken`
 
 [.code-highlight: 5-10]
+
 ```jsx
 <ul>
   {game.board.map((boardRow, rowIndex) => {
@@ -487,7 +488,8 @@ If the cell is not empty, set the class to `taken`
         <li
           key={columnIndex}
           className={cell === ' ' ? undefined : 'taken'}
-          onClick={() => handleClickCell(rowIndex, columnIndex)}>
+          onClick={() => handleClickCell(rowIndex, columnIndex)}
+        >
           {cell}
         </li>
       )
@@ -619,6 +621,6 @@ const newGameState = (await response.json()) as Game
 # Warning!
 
 - `TypeScript` only checks types while in development mode!
-- If the API returns something _NOT_ in the shape of a `Game` we will have no safety.
+- If the API returns something _NOT_ in the shape of a `Game`, we will have no safety.
 - We'd have to write our own validation functions (and we might want to do that if we want to be :100: sure)
 - This might be improved in future versions of TypeScript.
