@@ -10,15 +10,15 @@ We've seen the use of `useEffect` and data fetching APIs.
 
 This approach requires us to recognize that we cannot use `async` methods as the `useEffect` callback.
 
-We also need to be aware of the need to correctly specify the `dependency array`
+We also need to be aware of the need to correctly specify the `dependency array`.
 
-Given that we, and any other developer, can create a custom hook. Several libraries have been developed to make data fetching easy. We'll be looking at `React Query`
+Given that we, and any other developer, can create a custom hook. Several libraries have been developed to make data fetching easy. We'll be looking at `React Query`.
 
 ---
 
 # React Query
 
-> Fetch, cache and update data in your React applications all without touching any "global state"
+> Fetch, cache, and update data in your React applications, all without touching any "global state."
 
 Excellent! We won't have to rely on `useState + useEffect + fetch`. React Query will combine all of this for us!
 
@@ -40,7 +40,7 @@ npm install react-query
 
 # Setup
 
-Much like `React Router` we will need to wrap our `<App>` in code to configure `React Query`
+Much like `React Router`, we will need to wrap our `<App>` in code to configure `React Query`.
 
 ```jsx
 const queryClient = new QueryClient()
@@ -347,7 +347,7 @@ async function deleteTodoItem() {
 
 - Create a module: `api.ts`
 - Move all the get/load functions into that file
-- Now we have one single place where all API logic is located
+- Now, we have one single place where all API logic is located
 
 ---
 
