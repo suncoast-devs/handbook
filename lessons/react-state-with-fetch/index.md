@@ -4,7 +4,7 @@ title: React State With Fetch
 
 # A more complex example: Tic Tac Toe With an API
 
-In [React State](/lessons/react-state) we saw how to use the `useState` hook to
+In [React State](/lessons/react-state), we saw how to use the `useState` hook to
 manage data that is changing in response to a user event. We built a simple
 component that counted the number of times we clicked on a button. Managing this
 kind of data is known as `local state`. The other type of state is
@@ -26,7 +26,7 @@ We'll be using those API endpoints during this example.
 
 # Revisiting our dynamic application workflow
 
-For this implementation we'll again revisit our five phases of building a
+For this implementation, we'll again revisit our five phases of building a
 dynamic app.
 
 1. Static Implementation
@@ -170,15 +170,15 @@ the `<li>` elements and see that the board renders correctly.
 
 Take a moment and change some of these entries and see that the UI shows what we
 want. This is an important step as we want to validate that as we fill in our
-state, and use it to populate the board, we can see a game of `X` and `O`.
+state and use it to populate the board, we can see a game of `X` and `O`.
 
 When done, make sure all the entries are blank again.
 
 ## Step 2: Make a state using data
 
-When we are using an API we want to use a state with the same "shape"
-(structure) as the API uses. Looking at the API response of a new game we'll see
-it generates data like this:
+When we are using an API, we want to use a state with the same "shape"
+(structure) as the API uses. Looking at the API response of a new game, we'll
+see it generates data like this:
 
 ```json
 {
@@ -194,7 +194,7 @@ it generates data like this:
 
 We should use good default values for our initial state, so we'll make the
 `winner` and `id` values equal to `null` to indicate we don't have any values.
-We'll leave the `board' equal to the two-dimensional array of strings.
+We'll leave the `board` equal to the two-dimensional array of strings.
 
 ```js
 const [game, setGame] = useState({
@@ -246,8 +246,8 @@ We should see the game board render with the appropriate values in the squares!
 
 We will begin by defining a method that will handle clicking on a cell.
 
-In this case we'll need to know the row and column of the cell so we might write
-our `handleClickCell` method like this:
+In this case, we'll need to know the row and column of the cell so, we might
+write our `handleClickCell` method like this:
 
 ```js
 function handleClickCell(row: number, column: number) {
@@ -273,7 +273,7 @@ The way to think about `onClick={() => handleClickCell(0, 0)}` is this:
 > `() => handleClickCell(0,0)` -- When that function is called **it** will call
 > `handleClickCell` and specify `0` as the `row` and `0` as the `column`.
 
-So we might do the same with the remaining `li`
+So we might do the same with the remaining `li`.
 
 ```jsx
 <ul>
@@ -400,7 +400,7 @@ setGame(newGame)
 So as we make a move, we should see the API send us back a game state.
 
 This game state will have our recorded move, but it will also have **the
-computer's move as well**
+computer's move as well**.
 
 Make a new game and try a few moves!
 
@@ -438,8 +438,8 @@ We can improve the code to remove some duplication in the drawing of the game
 board.
 
 We can use `map` to generate the elements of the board. In this case, since we
-have an _array of arrays_ we'll have to use **two** `map` calls. The outer one
-will loop through the `rows` and the inner one will loop through the `columns`
+have an _array of arrays_, we'll have to use **two** `map` calls. The outer one
+will loop through the `rows`, and the inner one will loop through the `columns`.
 
 ```jsx
 <ul>
@@ -458,7 +458,7 @@ will loop through the `rows` and the inner one will loop through the `columns`
 </ul>
 ```
 
-Two dimensional arrays can be tricky at first so study this code. Maybe some
+Two-dimensional arrays can be tricky at first, so study this code. Maybe some
 `console.log` will help make the code more clear:
 
 ```jsx
@@ -482,10 +482,10 @@ Two dimensional arrays can be tricky at first so study this code. Maybe some
 </ul>
 ```
 
-> **IMPORTANT** -- Any time we generate JSX dynamically such as with a `map` we
-> need to include a `key` value for the outer-most element. In this case we need
-> a unique value for the `<li>`. The value only needs to be unique to it's
-> siblings. So in this case the `columnIndex` is enough to tell React "this is
+> **IMPORTANT** -- Any time we generate JSX dynamically, such as with a `map`,
+> we need to include a `key` value for the outer-most element. In this case, we
+> need a unique value for the `<li>`. The value only needs to be unique to its
+> siblings. So in this case, the `columnIndex` is enough to tell React "this is
 > the 0th element ... this is the 1st element ... this is the 2nd element" and
 > React will be satisfied.
 
@@ -510,7 +510,7 @@ checks for conditions under which we don't want the rest of the function/method
 to execute. Typically inside a `guard clause if statement`, we would see a
 `return` statement, which would end the function's execution.
 
-In our case we want to add this code to the top of our `handleClickCell`
+In our case, we want to add this code to the top of our `handleClickCell`
 function:
 
 ```js
@@ -533,7 +533,7 @@ that show any cell with a class of `taken` to have a cursor that indicates we
 cannot click. This adds a nice visual effect to align with the
 `guard clause`protection we just added.
 
-We can dynamically set the class name of an `li` again using a `ternary`
+We can dynamically set the class name of a `li` again using a `ternary`
 expression:
 
 ```jsx
@@ -552,9 +552,9 @@ This code will set the `className` to a blank string if the cell is still open
 
 ## Reviewing the Steps for an API based component
 
-Our steps for creating a dynamic user interface have updated slightly. Let's
-take a moment and re-review the list, augmenting it with new steps and detailing
-existing ones based on what we've learned about managing state.
+Our steps for creating a dynamic user interface have been updated slightly.
+Let's take a moment and re-review the list, augmenting it with new steps and
+detailing existing ones based on what we've learned about managing state.
 
 - Step 1 - Static implementation
 
@@ -598,9 +598,9 @@ type Game = {
 }
 ```
 
-Here we define `board` as a two dimensional array of three rows and three
+Here we define `board` as a two-dimensional array of three rows and three
 columns where each element is either an `'X'`, an `'O'`, or a `' '`. While this
-works we can reduce the repetition by defining a `Square` type.
+works, we can reduce the repetition by defining a `Square` type.
 
 ```typescript
 type Square = 'X' | 'O' | ' '
@@ -631,7 +631,7 @@ type Game = {
 
 This defines the board even more simply as three `Row` types. (and who doesn't
 like saying `Row, Row, Row` without thinking
-`your boat gently down the stream`). However we can take one more step:
+`your boat gently down the stream`). However, we can take one more step:
 
 ```typescript
 type Square = 'X' | 'O' | ' '
@@ -645,7 +645,7 @@ type Game = {
 }
 ```
 
-Once we have this type we can use it in a few places. First, we will set the
+Once we have this type, we can use it in a few places. First, we will set the
 `Game` type on our `useState`
 
 ```typescript
@@ -667,16 +667,16 @@ indicate it shares the shape of the `Game` type.
 const newGame = (await response.json()) as Game
 ```
 
-While this did not **remove** any errors from our code it does increaase our
+While this did not **remove** any errors from our code, it does increase our
 type safety.
 
 ## Warning!
 
-You might be thinking to yourself: "Oh this is good, if the data from
-`response.json()` isn't in the right shape of a `Game` we will find out!
+You might be thinking to yourself: "Oh, this is good if the data from
+`response.json()` isn't in the right shape of a `Game`, we will find out!
 
 Unfortunately, `TypeScript` only checks types while in development mode. When we
-**RUN** our application, all of the type information is stripped away and
+**RUN** our application, all of the type information is stripped away, and
 nothing is checked while our code is `executing`. This is a downside to
 TypeScript that might be improved in future versions. Future versions may add
-what we'd call **run-time type checking**
+what we'd call **run-time type checking**.
