@@ -64,11 +64,11 @@ Then we will update the `<input>` tag
 
 ## Update the useQuery to take the filterText into consideration
 
-- First we change the unique identifier for the query to
+- First, we change the unique identifier for the query to
   `['restaurants', filterText]`. This allows any caching that `react-query` does
   to be dependent on our filter text.
 - Then we dynamically change the URL based on the filter. If there is no
-  filterText we use the default URL, otherwise we send a query parameter with
+  filterText, we use the default URL, otherwise, we send a query parameter with
   our filter text.
 
 ```javascript
