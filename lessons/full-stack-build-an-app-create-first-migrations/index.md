@@ -66,14 +66,14 @@ migration.
 dotnet ef migrations add CreateRestaurant
 ```
 
-Once done we will see a file similar to `20200704182602_CreateRestaurant.cs` in
+Once done, we will see a file similar to `20200704182602_CreateRestaurant.cs` in
 our `Migrations` folder.
 
 **NOTE** You should take the time to review the contents of this file. A common
 developer error is to _not_ check this file and ensure that `.net` generated the
 code needed to create or update our database schema.
 
-There should be **two** methods in this file `Up`, and `Down`, and they should
+There should be **two** methods in this file `Up`, and `Down` and they should
 have `C#` statements within that refer to the model and columns we would expect
 to see given the definition in `Restaurant.cs` above.
 
