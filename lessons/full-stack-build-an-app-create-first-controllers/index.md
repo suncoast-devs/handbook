@@ -6,7 +6,7 @@ order: 6
 # Creating our initial controller to serve a list of restaurants
 
 Now that we have migrations, a database, and some sample data, let's create a
-controller to generate endpoints for: `Create`, `Read`, `Update`, and `Delete`
+controller to generate endpoints for `Create`, `Read`, `Update`, and `Delete`
 restaurants. This controller will give us the `C R U D` style interface we will
 use from our front end.
 
@@ -16,18 +16,18 @@ One of the `dotnet` tools we installed is called `aspnet-codegenerator`. This
 tool can generate a controller for us. This controller will do many, but not
 all, of the things we need our controller to do.
 
-To use this controller we will run this command line:
+To use this controller, we will run this command line:
 
 ```shell
 dotnet aspnet-codegenerator controller --model Restaurant -name RestaurantsController --useAsyncActions -api --dataContext DatabaseContext --relativeFolderPath Controllers
 ```
 
 Here we are telling the `codegenerator` to create a controller named
-`RestaurantsController`, that we wish to use `async` controller actions, that we
-are generating an `api` style controller (as opposed to one that renders HTML
-views), that the model used with this controller is `Restaurant`, our database
-context class is named `DatabaseContext` and our controller folder is
-`Controllers`
+`RestaurantsController`. We wish to use `async` controller actions, that we are
+generating an `API` style controller (as opposed to one that renders HTML
+views). The model used with this controller is `Restaurant`, our database
+context class is named `DatabaseContext`, and our controller folder is
+`Controllers`.
 
 If we were generating a controller for a different model, we would change the
 `--name` and the `--model` arguments. All the others would remain the same.
@@ -47,18 +47,18 @@ has the following routes:
 // GET: api/Restaurants/5
 //
 // Fetches and returns a specific restaurant by finding it by id. The id is specified in the
-// URL. In the sample URL above it is the `5`.  The "{id}" in the [HttpGet("{id}")] is what tells dotnet
+// URL. In the sample URL above, it is the `5`.  The "{id}" in the [HttpGet("{id}")] is what tells dotnet
 // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
 //
 [HttpGet("{id}")]
 
 // PUT: api/Restaurants/5
 //
-// Update an individual restaurant with the requested id. The id is specified in the URL
-// In the sample URL above it is the `5`. The "{id} in the [HttpPut("{id}")] is what tells dotnet
+// Update an individual restaurant with the requested id. The id is specified in the URL.
+// In the sample URL above, it is the `5`. The "{id} in the [HttpPut("{id}")] is what tells dotnet
 // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
 //
-// In addition the `body` of the request is parsed and then made available to us as a Restaurant
+// In addition, the `body` of the request is parsed and then made available to us as a Restaurant
 // variable named restaurant. The controller matches the keys of the JSON object the client
 // supplies to the names of the attributes of our Restaurant POCO class. This represents the
 // new values for the record.
@@ -79,8 +79,8 @@ has the following routes:
 
 // DELETE: api/Restaurants/5
 //
-// Deletes an individual restaurant with the requested id. The id is specified in the URL
-// In the sample URL above it is the `5`. The "{id} in the [HttpDelete("{id}")] is what tells dotnet
+// Deletes an individual restaurant with the requested id. The id is specified in the URL.
+// In the sample URL above, it is the `5`. The "{id} in the [HttpDelete("{id}")] is what tells dotnet
 // to grab the id from the URL. It is then made available to us as the `id` argument to the method.
 //
 [HttpDelete("{id}")]
@@ -88,8 +88,9 @@ has the following routes:
 
 > NOTE: The method implementations are not listed above
 
-If we are running our application we can open up `http://localhost:5000/swagger`
-in our browser and see an API documentation page:
+If we are running our application, we can open up
+`http://localhost:5000/swagger` in our browser and see an API documentation
+page:
 
 ![swagger](./assets/swagger.png)
 
@@ -103,10 +104,10 @@ you can think of some good reasons.
 
 The best reason for adding this prefix is to avoid _name collisions_. Soon we
 will start to build more and more URLs for our front end. If our front end
-**and** our API are both served from the same server we might have an overlap of
-URLs and it won't be able to tell if we mean the front end route or potentially
-a backend API endpoint. As such we prefix, and reserve, the path `/api/` for
-anything to do with our backend API resources.
+**and** our API are both served from the same server, we might have an overlap
+of URLs, and it won't be able to tell if we mean the front end route or
+potentially a backend API endpoint. As such, we prefix and reserve the path
+`/api/` for anything to do with our backend API resources.
 
 ## Files Updated
 
