@@ -25,12 +25,12 @@ read, update, and delete reviews.
 Looking at this controller and our user interface, we see that we do not need to
 get a listing of all reviews, nor do we need to access a single review, nor do
 we need to update or delete reviews. Thus we should only keep the one endpoint,
-the `POST /api/Reviews` to create a new review. Remove all the methods other
-than `PostReview`
+the `POST /api/Reviews`, to create a new review. Remove all the methods other
+than `PostReview`.
 
 ## Update the user interface
 
-In `Restaurant.tsx` we will add a state to track the fields of the review.
+In `Restaurant.tsx`, we will add a state to track the fields of the review.
 
 ```typescript
 const [newReview, setNewReview] = useState<ReviewType>({
@@ -58,7 +58,7 @@ function handleNewReviewTextFieldChange(
 }
 ```
 
-Update the `input` and `textArea` fields with the values from `newReview`, the
+Update the `input` and `textarea` fields with the values from `newReview`, the
 `onChange` event, and a correct `name` attribute.
 
 ```jsx
@@ -108,7 +108,7 @@ function handleStarRadioButton(newStars: number) {
 ```
 
 Now update the radio inputs to call this function when clicked. Do this for each
-star rating input.j
+star rating input.
 
 ```jsx
 <input
