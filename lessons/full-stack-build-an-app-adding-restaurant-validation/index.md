@@ -19,7 +19,7 @@ We can add an _annotation_ named
 to both the `Name` and `Address` field in our `Restaurant.cs` to indicate these
 attributes are mandatory.
 
-Using the optional `(ErrorMessage = "Message")` you can customize the error
+Using the optional `(ErrorMessage = "Message")`, you can customize the error
 message.
 
 ```csharp
@@ -44,8 +44,8 @@ namespace TacoTuesday.Models
 }
 ```
 
-We will generate a new migration to capture this change. Any time we add,
-remove, or change a **field** in a database-backed model we must create a new
+We will generate a new migration to capture this change. Any time we add, remove
+or change a **field** in a database-backed model, we must create a new
 migration.
 
 ```shell
@@ -140,7 +140,7 @@ async function submitNewRestaurant(restaurantToCreate: RestaurantType) {
 ```
 
 We can define a type to represent the structure of the response our API gives
-when it returns an error. This goes in `types.ts`
+when it returns an error. This goes in `types.ts`.
 
 ```typescript
 export type APIError = {
@@ -152,8 +152,8 @@ export type APIError = {
 }
 ```
 
-Then in the mutation we will setup an `onError` handler to catch this error and
-update the UI.
+Then in the mutation, we will set up an `onError` handler to catch this error
+and update the UI.
 
 ```typescript
 const createNewRestaurant = useMutation(submitNewRestaurant, {
@@ -167,7 +167,7 @@ const createNewRestaurant = useMutation(submitNewRestaurant, {
 ```
 
 Now we can use the value `errorMessage` to optionally display an alert to the
-user. We can put this above the button, or at the top of the form
+user. We can put this above the button, or at the top of the form.
 
 ```jsx
 {
