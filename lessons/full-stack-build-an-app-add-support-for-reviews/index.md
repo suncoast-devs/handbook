@@ -33,7 +33,7 @@ namespace TacoTuesday.Models
 }
 ```
 
-After adding this model we also add the review to the `DatabaseContext`
+After adding this model we also add the review to the `DatabaseContext`.
 
 ```csharp
 // Tell the context about the Review collection/table
@@ -55,7 +55,7 @@ dotnet ef database update
 ## Relationship
 
 We also need to indicate that the `Restaurant` _has many_ `Reviews`. We do this
-by adding a `List` based property to the `Restaurant`
+by adding a `List` based property to the `Restaurant`.
 
 ```csharp
 public List<Review> Reviews { get; set; }
@@ -88,9 +88,9 @@ else
 So that now each restaurant will also include an **array** of reviews.
 
 > NOTE: This is not the most efficient implementation. Imagine if our site
-> became popular and started to receive heavy traffic. To display our homepage
+> became popular and started to receive heavy traffic. To display our homepage,
 > we would be fetching all the restaurants _AND_ the complete list of reviews to
-> count them. We'll review more efficient approaches in a later step. For now
+> count them. We'll review more efficient approaches in a later step. For now,
 > we'll go with this approach. Remember to focus on working code before perfect
 > code.
 
@@ -100,7 +100,7 @@ Add the following SQL to our seeds and rerun them to populate the database with
 a few reviews.
 
 ```sql
--- Ensure we truncate the table and restart the identity so our Id column starts at 1 each time
+-- Ensure we truncate the table and restart the identity, so our Id column starts at 1 each time
 TRUNCATE TABLE "Restaurants", "Reviews" RESTART IDENTITY;
 
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone") VALUES ('Thoughtbeat', 'Inverse zero administration benchmark', '07 Meadow Vale Drive', '314-651-9791');
@@ -118,7 +118,7 @@ psql --file=Models/exampledata.sql TacoTuesdayDatabase
 
 ## Updating the interface to return the list of reviews
 
-First we need to add a type definition for a review in `types.ts`
+First, we need to add a type definition for a review in `types.ts`.
 
 ```typescript
 export type ReviewType = {
@@ -134,7 +134,7 @@ export type ReviewType = {
 > NOTE: `createdAt` is a `string` because there is no `Date` type in JSON.
 
 Then we can update the `RestaurantType` to reflect that it has an array of
-`ReviewType`
+`ReviewType`.
 
 ```typescript
 export type RestaurantType = {
@@ -147,7 +147,7 @@ export type RestaurantType = {
 }
 ```
 
-Then in the `Restaurant.tsx` we will add `reviews: []` to our `NullRestaurant`
+Then in the `Restaurant.tsx`, we will add `reviews: []` to our `NullRestaurant`
 so that our initial state will have an empty array of reviews.
 
 ```typescript
@@ -160,7 +160,7 @@ const NullRestaurant: RestaurantType = {
 }
 ```
 
-And in `NewRestaurant.tsx` we will need to update the default state:
+And in `NewRestaurant.tsx`, we will need to update the default state:
 
 ```typescript
 const [newRestaurant, setNewRestaurant] = useState<RestaurantType>({
@@ -185,7 +185,7 @@ Change the hardcoded:
 ({props.restaurant.reviews.length})
 ```
 
-Now add similar `Include` code in the controller with `GetRestaurant`
+Now add a similar `Include` code in the controller with `GetRestaurant`.
 
 ```csharp
 // Find the restaurant in the database using Include to ensure we have the associated reviews
