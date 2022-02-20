@@ -7,7 +7,7 @@ order: 11
 
 ## Setting up a route
 
-We can add a route to view a specific restaurant in `App.tsx`
+We can add a route to view a specific restaurant in `App.tsx`.
 
 ```jsx
 export function App() {
@@ -57,7 +57,7 @@ async function loadOneRestaurant(id: string) {
 ```
 
 We will also define a `NullRestaurant` that will represent the default value of
-our object when there is no data being returned from `react query`
+our object when there is no data being returned from `react query`.
 
 ```typescript
 const NullRestaurant: RestaurantType = {
@@ -68,7 +68,7 @@ const NullRestaurant: RestaurantType = {
 }
 ```
 
-With this setup we can add a `useQuery`
+With this setup, we can add a `useQuery`.
 
 ```typescript
 const { data: restaurant = NullRestaurant } = useQuery<RestaurantType>(
@@ -78,8 +78,8 @@ const { data: restaurant = NullRestaurant } = useQuery<RestaurantType>(
 ```
 
 Notice that we use the `id` in the `useQuery` name, along with a unique label of
-`one-restaurant`. This way if the `id` changes we will load a new restaurant.
-Also notice that since we need to pass the `id` to the function we'll use an
+`one-restaurant`. This way, if the `id` changes, we will load a new restaurant.
+Also, notice that since we need to pass the `id` to the function, we'll use an
 inline arrow function to call `loadOneRestaurant` and provide the `id`
 
 # Update the component to show dynamic data
