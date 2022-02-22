@@ -392,9 +392,9 @@ so the UI draws the
 [.column]
 
 - The `Cell`
-  - Draws its own UI (an `li`)
+  - Draws its own UI (a `li`)
   - Knows its row and column
-  - Knows its value, and nothing else it needs
+  - Knows its value and nothing else it needs
   - Handles a click
   - Calls the parent when clicked
 
