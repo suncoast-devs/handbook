@@ -21,7 +21,7 @@ theme: Next, 1
 
 By rewriting the problem statement in your own words and increasing the difficulty, we start making connections.
 
-Problems are frequently poorly written
+Problems are frequently poorly written.
 
     "Go to the store to get a steak, and if they have eggs, get six"
 
@@ -44,7 +44,7 @@ Often drawing diagrams helps understand the problem and the **flow** of informat
 
 # [fit] Paper, whiteboard, a software tool
 
-It does not matter; find what works best for **you**
+It does not matter; find what works best for **you**!
 
 ---
 
