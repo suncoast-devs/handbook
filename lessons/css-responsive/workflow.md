@@ -3,33 +3,34 @@ title: Workflow
 order: 3
 ---
 
-When getting started on a new application it is useful to start with a sketch of
-the site. Starting with this sketch in a narrow mobile size will help you reflect on
-the core aspects of the site as we mentioned.
+When getting started on a new application, it is useful to start with a sketch
+of the site. Starting with this sketch in a narrow mobile size will help you
+reflect on the core aspects of the site as we mentioned.
 
 ## Start with a sketch
 
-Nearly every web site or app should start with a sketch of the user interface.
+Nearly every website or app should start with a sketch of the user interface.
 These sketches are typically low resolution/fidelity and serve to show both the
 developer and the customer what the general look and flow of the application
 should be.
 
-In their most basic forms these sketches can be pencil drawings, whiteboard
-diagrams, or vector drawings in a digital tool like Visio, or another design
+In their most basic forms, these sketches can be pencil drawings, whiteboard
+diagrams, or vector drawings in a digital tool like Visio or another design
 application.
 
 A popular term for this type of sketch is called a
 [wireframe](https://en.wikipedia.org/wiki/Website_wireframe) and implies that
 the generated images are meant to be a schematic or a blueprint.
 
-Some popular user interface sketching application even generate drawings in a
-form that look hand drawn. This is to give the viewer the impression that these
+Some popular user interface sketching applications even generate drawings in a
+form that looks hand-drawn. This is to give the viewer the impression that these
 are conceptual and are not meant to reflect the actual look and feel of the
 application.
 
-Also at this stage the content is mostly empty rectangles for images, links, and
-input. For text we use squiggly lines. If you want to include images or text,
-use [Lorem Ipsum](https://loremipsum.io/) text and generic grayscale images.
+Also at this stage, the content is mostly empty rectangles for images, links,
+and input. For text, we use squiggly lines. If you want to include images or
+text, use [Lorem Ipsum](https://loremipsum.io/) text and generic grayscale
+images.
 
 ---
 
@@ -54,7 +55,7 @@ the application.
 
 ## Ready to make HTML and CSS?
 
-When we are ready to make the HTML and CSS for our application we will start
+When we are ready to make the HTML and CSS for our application, we will start
 coding with our browser in a configuration that is a mobile device size.
 
 There are a few ways to do this. The first is to configure your editor and your
@@ -62,7 +63,7 @@ browser side-by-side and give the browser a narrow but tall aspect ratio. This
 will also give your editor maximum space for you to code in.
 
 The second is to use your browser's development tools to set the view into a
-mobile size. In your browser we do this by engaging `Developer Tools` and
+mobile size. In your browser, we do this by engaging `Developer Tools` and
 clicking this icon:
 
 ![mobile view](./assets/mobile-view.png)

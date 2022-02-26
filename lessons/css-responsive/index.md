@@ -8,7 +8,7 @@ order: 1
 ---
 
 Now that we can create a semantic web page, style it with CSS, and control its
-layout with CSS layout technologies this lesson will cover how to cope with the
+layout with CSS layout technologies, this lesson will cover how to cope with the
 reality that visitors to our page/application will use many different devices
 that are different sizes, pixel densities, and perhaps even with different
 capabilities.
@@ -30,18 +30,18 @@ accessing the site to provide an optimized experience. One approach to this is
 to create different versions of your site/app for different platforms or
 browsers and serve them appropriately after detecting which browser or platform
 is looking at your site. But this is increasingly inefficient: browser sniffing
-is inherently error prone, and maintaining multiple copies of your code can turn
+is inherently error-prone, and maintaining multiple copies of your code can turn
 out to be a nightmare.
 
-It is usually much better to create a single version of your code which doesn't
+It is usually much better to create a single version of your code that doesn't
 care about what browser or platform is accessing the site. This tends to be
 termed responsive design or adaptive design, two related but different
 approaches.
 
 There are disadvantages to this approach as well. If the content, layout, and
 functionality need to change greatly for different devices, it may not be such a
-good approach. Also, taking an existing site and adding responsiveness to it, to
-make it mobile/tablet friendly, can be a lot more effort than just creating a
+good approach. Also, taking an existing site and adding responsiveness to it to
+make it mobile/tablet friendly can be a lot more effort than just creating a
 separate mobile site or app, especially if it is a sprawling enterprise site.
 
 ---
