@@ -12,7 +12,7 @@ To skip the rest of this setup and simply _duplicate_ what SDG already setup:
 
 ```shell
 cd ~/sdg
-degit suncoast-devs/react-project-template react-projet-template
+degit suncoast-devs/react-project-template react-project-template
 cd react-project-template
 git init
 git add .
@@ -272,7 +272,7 @@ checker({ typescript: true })
 
 # `src/vite.config.js`
 
-Your should look similar to:
+Yours should look similar to:
 
 ```js
 import { defineConfig } from 'vite'
@@ -399,9 +399,9 @@ node_modules/
 
 ---
 
-# [fit] Add a file to setup Netlify to work with React Router
+# [fit] Add a file to set up Netlify to work with React Router
 
-When we get to React Router we will need to configure Netlify to serve our projects `index.html` for any URL the user refreshes their browser on.
+When we get to React Router, we will need to configure Netlify to serve our projects `index.html` for any URL the user refreshes their browser on.
 
 To this:
 
@@ -448,6 +448,6 @@ Perhaps you'll develop a color palette you like to use in each project. Come bac
 
 # More templates!
 
-When we start with `React Router`, and other third party libraries, we will use the same template. At that time, you can add those libraries to your default template if you wish.
+When we start with `React Router` and other third party libraries, we will use the same template. At that time, you can add those libraries to your default template if you wish.
 
 ---
