@@ -13,7 +13,7 @@ these applications/tools open:
 - Two or more Terminal / Power Shells
 - Insomnia API tool
 
-Learning to place these apps and quickly find them will be essential
+Learning to place these apps and quickly find them will be essential.
 
 ## Navigate open applications
 
@@ -31,6 +31,6 @@ mouse and keyboard. See this
 to learn how.
 
 On the Mac, I recommend using a third party tool for snapping windows. One such
-FREE application is [Ractangle](https://rectangleapp.com/) By downloading and
+FREE application is [Rectangle](https://rectangleapp.com/) By downloading and
 installing this app you can use keyboard shortcuts to snap windows to the sides
 and tops of your screen or drag windows to the edge to snap them.
