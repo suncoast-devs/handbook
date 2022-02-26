@@ -10,9 +10,9 @@ our application.
 
 In a React application, this may mean creating individual components for each of
 the primary wireframe drawings. In this process, we will use fake but realistic
-data. For a field like a _name_ use a sensible name of about the length you'd
+data. For a field like a _name_, use a sensible name of about the length you'd
 expect. For _address_ fields, use addresses of well-known locations that look
-realistic. For _description_ fields use **lorem ipsum** data about the length
+realistic. For _description_, fields use **lorem ipsum** data about the length
 you'd expect someone to generate.
 
 By creating a pass at HTML and CSS for each of these pages, we are achieving
