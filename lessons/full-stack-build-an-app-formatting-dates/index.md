@@ -36,7 +36,7 @@ this, we need to review the
 
 - `EEEE` day of the week
 - `MMMM` month
-- `do` day of the week
+- `do` day of the month
 - `yyyy` calendar year
 - `h` hour
 - `mm` minute
@@ -49,7 +49,7 @@ const dateFormat = `EEEE, MMMM do, yyyy 'at' h:mm aaa`
 ```
 
 Then to use this, we need to convert `review.createdAt` to a `Date` object and
-pass that and the format string to the `format` function from `date-fns`
+pass that and the format string to the `format` function from `date-fns`.
 
 ```jsx
 <time>
