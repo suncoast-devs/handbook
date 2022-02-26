@@ -83,16 +83,16 @@ let index = 0
 index = (index + 1) % 5 // 0 + 1 is 1 -- 1 % 5 = 1
 console.log(`index is ${index}`)
 
-index = (index + 1) % 5 // 1 + 1 is 1 -- 1 % 5 = 1
+index = (index + 1) % 5 // 1 + 1 is 2 -- 2 % 5 = 2
 console.log(`index is ${index}`)
 
-index = (index + 1) % 5 // 2 + 1 is 3 -- 1 % 5 = 3
+index = (index + 1) % 5 // 2 + 1 is 3 -- 3 % 5 = 3
 console.log(`index is ${index}`)
 
-index = (index + 1) % 5 // 3 + 1 is 4 -- 1 % 5 = 4
+index = (index + 1) % 5 // 3 + 1 is 4 -- 4 % 5 = 4
 console.log(`index is ${index}`)
 
-// Here is where the % comes into play, adding one to 4 give 5, but we want this to "wrap around" back to 0.
+// Here is where the % comes into play, adding one to 4 gives 5, but we want this to "wrap around" back to 0.
 
 index = (index + 1) % 5 // 4 + 1 is 5 -- 5 % 5 = 0
 console.log(`index is ${index}`)
@@ -142,7 +142,7 @@ Wrapped value is 4 since index is 19
 
 ## `parseInt('42')`
 
-Attempts to convert the given string into an `int` value. It does it's _best
+Attempts to convert the given string into an `int` value. It does its _best
 effort_ to parse what it is given. If it can't figure out how to parse the
 number we get back the special value `NaN` which represents "Not A Number". This
 isn't a string, but a special value, in the same way `null` is a special value.
@@ -158,11 +158,11 @@ const notAnAnswer = parseInt('I think the answer is 42')
 // notAnAnswer is the value NaN
 ```
 
-## `Number('42')
+## `Number('42')`
 
 Another way to convert a string to a number is with the `Number` method.
-`Number` is more strict than `parseInt` in that the string must strictly
-formatted as number. Any illegal characters will result in a value of `NaN`
+`Number` is more strict than `parseInt` in that the string must be strictly
+formatted as a number. Any illegal characters will result in a value of `NaN`.
 
 ```js
 const answer = Number('42.5')
