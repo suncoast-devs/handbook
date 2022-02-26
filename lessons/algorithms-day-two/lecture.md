@@ -82,7 +82,7 @@ Who knows it?
 
 # Mathematically, you **do** arrive at your goal
 
-    Curious students can see me after class to see how
+    Curious students can see me after class to see how.
 
 ---
 
@@ -398,8 +398,8 @@ Find largest number in:
 
   - First sort
   - Then find middle number
-    - If there are an odd count of numbers, take the middle
-    - If there are even count of numbers, everage the two middle numbers.
+    - If there are an odd count of numbers, take the middle.
+    - If there are even count of numbers, average the two middle numbers.
 
 ---
 
@@ -452,16 +452,16 @@ Middle is `21` and `25`, so median is: `23`
 
 # [fit] Idea of conditions and loops in algorithms
 
-- When thinking of an algorithm, it often helps to solve a smaller version of the problem
+- When thinking of an algorithm, it often helps to solve a smaller version of the problem.
 - Then, see if applying that process to each element of the input works.
-- This is "looping."
-- We'll work with looping **often** in this class
+- This is "looping".
+- We'll work with looping **often** in this class.
 
 ---
 
 # [fit] Idea of conditions and loops in algorithms
 
-_"If something is true"_ or _"If something is false"_ help determine if or when we should do some smaller steps
+_"If something is true"_ or _"If something is false"_ help determine if or when we should do some smaller steps.
 
 ---
 
