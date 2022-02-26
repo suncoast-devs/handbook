@@ -22,9 +22,9 @@ colors.forEach(logSomeColor)
 
 # Transforming values
 
-- Instead of `console.log` let's build a _new array_
+- Instead of `console.log`, let's build a _new array_
 
-- Each element of this new array to be the equal to the **length** of the string at the corresponding index of the original array.
+- Each element of this new array to be equal to the **length** of the string at the corresponding index of the original array.
 
 ```typescript
 [               [
@@ -62,7 +62,7 @@ const lengths: number[] = []
 
 [.column]
 
-Then we will setup the `forEach` loop
+Then we will setup the `forEach` loop.
 
 ```typescript
 const colors = ['red', 'green', 'blue']
@@ -102,7 +102,7 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 # Issues
 
-- It does not allow us to use it in a generic way.
+- It does not allow us to use it generically.
 
 - Another transformation (upper-casing) would require another copy of the loop.
 
@@ -195,7 +195,7 @@ console.log(lengths) // [ 3, 5, 4 ]
 
 # Refactor
 
-We can also use `arrow functions`
+We can also use `arrow functions`.
 
 ```typescript
 const colors = ['red', 'green', 'blue']
@@ -213,13 +213,13 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 # Similar to LINQ
 
-`map` is much like `Select`
+`map` is much like `Select`.
 
 ---
 
 ### filter
 
-If we wish to create a new array but only retain _some_ of the elements from the original array we can use `filter`
+If we wish to create a new array but only retain _some_ of the elements from the original array we can use `filter`.
 
 ```typescript
 const colors = ['red', 'green', 'blue']

@@ -5,7 +5,7 @@ order: 1
 
 # `forEach`
 
-When we [learned about arrays in JavaScript](/lessons/js-intro/arrays) we saw
+When we [learned about arrays in JavaScript](/lessons/js-intro/arrays), we saw
 that the `forEach` method is very helpful for iterating through the contents of
 an array.
 
@@ -21,18 +21,18 @@ function that accepts one or more arguments. The first argument will be the
 element the loop is currently working on. The second argument is the `0`-based
 index of the current element.
 
-> _NOTE_ There are a third and fourth argument. The third argument is the array
+> _NOTE_ There is a third and fourth argument. The third argument is the array
 > itself. This can be useful if you need to access other elements of the array
 > inside the callback function. The final argument is the value to use as `this`
-> inside the method. The use of these arguments is rare, but are worth
-> mentioning here.
+> inside the method. The use of these arguments is rare but is worth mentioning
+> here.
 
 # Transforming values
 
 Let's suppose we wanted, instead of `console.log` values we wanted to build a
-new array of values from our array of colors. And suppose we wanted each
-element of this new array to be equal to the length of the string at the
-corresponding index of the original array.
+new array of values from our array of colors. And suppose we wanted each element
+of this new array to be equal to the length of the string at the corresponding
+index of the original array.
 
 That is:
 
@@ -53,7 +53,7 @@ const colors = ['red', 'green', 'blue']
 const lengths = []
 ```
 
-Then we will setup the `forEach` loop
+Then we will set up the `forEach` loop.
 
 ```typescript
 const colors = ['red', 'green', 'blue']
@@ -87,9 +87,9 @@ This is a fairly simple loop with a few steps within the loop itself.
 
 ## Introducing `map`
 
-While this transformation code is great, it does not allow us to use it in a
-generic way. If we needed to have another array except the transformation is now
-the names of the colors in _UPPERCASE_ we would need to re-implement the entire
+While this transformation code is great, it does not allow us to use it
+generically. If we needed to have another array except the transformation is now
+the names of the colors in _UPPERCASE_, we would need to re-implement the entire
 loop.
 
 ```typescript
@@ -141,7 +141,7 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 Notice only a few small changes to our code.
 
 - We no longer have to initialize an empty array and modify its contents.
-- We no longer `push` to the array, but simply **return** the new value from our
+- We no longer `push` to the array but simply **return** the new value from our
   callback function.
 
 We can simplify the code a little if we remove the temporary variables.
@@ -162,7 +162,7 @@ const uppercased = colors.map(function (color) {
 console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 ```
 
-We can also reduce the code by changing it to use `arrow functions`
+We can also reduce the code by changing it to use `arrow functions`.
 
 ```typescript
 const colors = ['red', 'green', 'blue']
@@ -180,7 +180,7 @@ const uppercased = colors.map(color => {
 console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 ```
 
-And now that we are using `arrow functions` we can apply a rule that allows us
+And now that we are using `arrow functions`, we can apply a rule that allows us
 an even more concise syntax when the arrow function **only** contains a return
 statement.
 
@@ -198,8 +198,8 @@ console.log(uppercased) // [ 'RED', 'GREEN', 'BLUE' ]
 
 ## Similarity to LINQ
 
-For those who have studied [C# LINQ](/lessons/cs-linq) you may see a strong
-resemblance of the `Select` statement. In fact `Select` from C# and `map` from
+For those who have studied [C# LINQ](/lessons/cs-linq), you may see a strong
+resemblance to the `Select` statement. `Select` from C# and `map` from
 `JavaScript` are very similar.
 
 ## Other JavaScript enumerations
@@ -207,7 +207,7 @@ resemblance of the `Select` statement. In fact `Select` from C# and `map` from
 ### filter
 
 If we wish to create a new array but only retain _some_ of the elements from the
-original array we can use `filter`
+original array, we can use `filter`.
 
 ```typescript
 const colors = ['red', 'green', 'blue']
@@ -222,10 +222,9 @@ This is very similar to `C# Where` from LINQ.
 ### reduce
 
 To use the classic example of adding up a list of numbers. Reduce takes at least
-two parameters, the first being the reducing function, and the second being the
-initial value. The reducing function takes at least two arguments itself, the
-first being the accumulator and the second being the current element from the
-array.
+two parameters, the first being the reducing function and the second being the
+initial value. The reducing function takes at least two arguments, the first
+being the accumulator and the second being the current element from the array.
 
 ```typescript
 const numbers = [100, 42, 13]
@@ -240,7 +239,7 @@ console.log(total) // [ 155 ]
 Unfortunately, objects cannot be used with `map`, `filter`, etc.
 
 Fortunately, JavaScript gives us a way. We can, for an object, get an array of
-the **keys** of the object. We can use this array to `map`, and `filter`.
+the **keys** of the object. We can use this array to `map` and `filter`.
 
 For instance, suppose we were given the following object:
 
@@ -260,7 +259,7 @@ const myHobbies = {
 ```
 
 And we needed to turn this into an array containing the name of the key followed
-by the title. That is given the object above we would want something like
+by the title. That is given the object above, we would want something like
 `['pandas - Panda Bears', 'miniatures - Miniature Painting']`
 
 We can't do `myHobbies.map` but we can do this:
@@ -269,7 +268,7 @@ We can't do `myHobbies.map` but we can do this:
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
 ```
 
-And now we can use that to map
+And now we can use that to map.
 
 ```typescript
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
@@ -284,8 +283,8 @@ const answer = keys.map(key => {
 There is a downside to this approach. The variable `hobby` will be defined as
 `any`. This is because TypeScript can't determine the type.
 
-There is another way to work with objects and that is `Object.entries` --
-`entries` gives us back an array-of-arrays. The first element of each array is
+There is another way to work with objects, and that is `Object.entries` --
+`entries` give us back an array-of-arrays. The first element of each array is
 the key, and the second is the value. This allows us to avoid the value lookup.
 
 ```typescript
@@ -296,8 +295,8 @@ const answer = entries.map(entry => {
 })
 ```
 
-Using destructuring we can avoid the `entry[0]` and `entry[1]` code and give our
-variables better names:
+Using destructuring, we can avoid the `entry[0]` and `entry[1]` code and give
+our variables better names:
 
 ```typescript
 const entries = Object.entries(myHobbies) // [['pandas', { title: ...., description: ...}], ['miniatures', { title: ..., description: ...}]
