@@ -23,7 +23,7 @@ order: 8
 
 ## Work
 
-- Does the team practice Agile? Kaban or scrum?
+- Does the team practice Agile? Kanban or scrum?
 - What tools do you use for organizing and running the team?
 - What would my day-to-day work involve?
 - What onboarding processes does the company have?

@@ -2,14 +2,14 @@
 title: Job Search Resources
 order: 4
 ---
+
 ## Videos and Other Resource
 
 - [Job Search Resources and Tips - Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/JobSearchResources_Tips.aspx)
 
-
 ## Popular Job Posting Sites
 
-- [LinkedIn](https://www.linkedin.com) 
+- [LinkedIn](https://www.linkedin.com)
 - [Glassdoor](https://www.glassdoor.com/index.htm)
 - [Google for Jobs](https://www.google.com/search?ei=TZCyXNuWH-mmggeklbDIBA&q=google+job+search&oq=google+job+search&gs_l=psy-ab.1.0.0l10.11012.12306..13562...0.0..0.74.555.8......0....1..gws-wiz.......0i71.aTBbKlq5MRE)
 - [Dice](http://dice.com)
@@ -21,42 +21,45 @@ order: 4
 - [GitHub](http://jobs.github.com)
 - [Mashable](http://jobs.mashable.com/jobs)
 - [StackOverflow](http://stackoverflow.com/jobs)
-- [Toptal](https://toptal.com )
+- [Toptal](https://toptal.com)
 - [Hired](https://hired.com)
 - [Regional Engineering Jobs](https://www.rengineeringjobs.com/)
 
 ## Local Job Boards:
+
 - [Tampa Tech Jobs](https://tampabaytechjobs.com/seeking/)
 
 ## Jr Devs Boards:
-- [JrDevJobs](http://jrdevjobs.com )
+
+- [JrDevJobs](http://jrdevjobs.com)
 - [Stackoverflow Junior jobs](https://stackoverflow.com/jobs/junior-developer-jobs)
 
 ## Women-Focused Job Boards:
+
 - [Women Who Code](http://womenwhocode.com/jobs)
 - [Tech Ladies](https://hiretechladies.com)
 
 ## Specialty Job Hunting:
+
 - [iOS](http://iosdevjobs.com)
-- [React](http://reactjobboard.com) 
+- [React](http://reactjobboard.com)
 - [Vue](http://vuejobs.com)
 - [Ember](http://jobs.emberjs.com)
 - [Python](http://python.org/jobs)
 - [JavaScript job XYZ](http://javascriptjob.xyz)
 - [Javascript remotely](http://jsremotely.com)
-- [Ruby on Rails Jobs](https://www.rubyonrails.jobs/)
 
 ## Remote Job Boards
+
 - [FlexJobs](http://flexjobs.com)
 - [WeWorkRemotely](http://weworkremotely.com)
 - [RemoteOk](http://remoteok.io/remote-dev-jobs)
-- [Stackoverflow](https://stackoverflow.com/jobs/remote-developer-jobs) 
+- [Stackoverflow](https://stackoverflow.com/jobs/remote-developer-jobs)
 - [Working Nomads](https://www.workingnomads.co/remote-development-jobs)
 - [Remote.co](https://remote.co/remote-jobs/developer/)
 - [Remoters](https://remoters.net/jobs/software-development/)
 - [JS Remotely](http://jsremotely.com)
 - [Front-end remote](http://frontendremotejobs.com)
-- [IWantRemote](http://iwantremote.com)
 - [DailyRemote](https://dailyremote.com)
 - [Remotive](https://remotive.io/remote-jobs/software-dev)
 - [Outsourcely](https://www.outsourcely.com/remote-web-development-jobs)
@@ -68,13 +71,14 @@ order: 4
 - [Sitepoint](https://sitepoint.com/jobs/)
 
 ## Startup Job Boards
+
 - [AngelList](http://angel.co/jobs)
 - [Product Hunt](http://producthunt.com/jobs)
-- [Startup Hire](http://startuphire.com)
 - [Startupers](http://startupers.com)
 - [YCombinator](http://news.ycombinator.com/jobs)
 
 ## Freelance Jobs:
+
 - [Freelancer](http://freelancer.com/jobs)
 - [Upwork](http://upwork.com)
 - [FlexJobs](http://flexjobs.com/jobs)
@@ -83,16 +87,16 @@ order: 4
 - [Guru](http://guru.com/d/jobs)
 
 ## More Job Boards
-- [Muse](http://themuse.com/jobs) 
-- [Tuts+](http://jobs.tutsplus.com) 
+
+- [Muse](http://themuse.com/jobs)
+- [Tuts+](http://jobs.tutsplus.com)
 - [Krop](http://krop.com)
-- [PowerToFly](http://powertofly.com/jobs) 
+- [PowerToFly](http://powertofly.com/jobs)
 - [Developers for Hire](http://developersforhire.com)
-- [Codepen job board](https://codepen.io/jobs)
 - [Joblist.app](http://joblist.app)
 - [Fullstack Job](http://fullstackjob.com)
 - [Authentic jobs](http://authenticjobs.com)
-- [Jobspresso](http://jobspresso.co) 
+- [Jobspresso](http://jobspresso.co)
 - [TripleByte](https://triplebyte.com)
 
 ## Internships

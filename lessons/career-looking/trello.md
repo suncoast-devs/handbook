@@ -23,7 +23,7 @@ order: 2
     - Location
     - Job Link
   - Attach wording for Cover Letter (or Google doc link)
-  - Attach copy the Resume you sent (or Google doc link)
+  - Attach a copy of the Resume you sent (or Google doc link)
   - Comment saying how you applied
   - Comment telling us who your contact is and how to reach them (If applicable)
   - Incomplete cards will cause delays in recommendations
