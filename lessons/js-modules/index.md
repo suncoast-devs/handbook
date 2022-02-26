@@ -25,14 +25,14 @@ Modules help us to:
 
 ---
 
-> Like a good author will divide a book into chapters; good programmers split a
+> Like a good author will divide a book into chapters good programmers split a
 > program into modules. -- Somebody, probably
 
 ---
 
 ## Modules in TypeScript
 
-^ Prior to a few years ago, no support for modules existed in the TypeScript
+^ Before a few years ago, no support for modules existed in the TypeScript
 language.
 
 ---
@@ -52,7 +52,7 @@ packages, but it doesn't work well in the browser.
 
 ## Asynchronous Module Definition (AMD)
 
-More complicated to use, but designed to work well in the browser with a loading
+More complicated to use but designed to work well in the browser with a loading
 library, e.g. `require.js`.
 
 ---

@@ -26,13 +26,13 @@ Modules help us to:
 
 # Modules
 
-> Like a good author will divide a book into chapters; good programmers split a program into modules. -- Somebody, probably
+> Like a good author will divide a book into chapters good programmers split a program into modules. -- Somebody, probably
 
 ---
 
 ## Modules in JavaScript
 
-^ Prior to a few years ago, no support for modules existed in the JavaScript
+^ Before a few years ago, no support for modules existed in the JavaScript
 language.
 
 ---
@@ -51,7 +51,7 @@ This is the most widely used method of defining modules, used in node and `npm` 
 
 ## Asynchronous Module Definition (AMD)
 
-More complicated to use, but designed to work well in the browser with a loading library, e.g. `require.js`.
+More complicated to use but designed to work well in the browser with a loading library, e.g. `require.js`.
 
 ---
 
@@ -139,7 +139,7 @@ console.log(pythagoreanLength(4, 3)) // -> 5
 
 ---
 
-## [fit] Importing the default *and* something by name
+## [fit] Importing the default _and_ something by name
 
 ```typescript
 import React, { useState } from 'react'
