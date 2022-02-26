@@ -37,7 +37,7 @@ We have already seen properties.
 
 # Hooks
 
-In a functional component we use a system called `hooks` to implement features such as tracking `state`-ful information.
+In a functional component, we use a system called `hooks` to implement features such as tracking `state`-ful information.
 
 The name `hook` comes from the idea that we are `hooking` into React's processing.
 
@@ -305,7 +305,7 @@ function handleClickButton(event: MouseEvent) {
 <button onClick={handleClickButton}>Increment</button>
 ```
 
-- We are associating the event, `onClick` with the function `handleClickButton`.
+- We are associating the event, `onClick`, with the function `handleClickButton`.
 - The `onClick` is actually a property of the DOM element.
 - We assign that property to the function itself.
 
@@ -396,7 +396,7 @@ export function Counter() {
 
 > NOTE: After `setCounter` does not change `counter` right away. The value isn't changed until React gets a chance to update state **AFTER** our function is done.
 
-> This often confuses new React developers. We'll see this again when we use more complex state
+> This often confuses new React developers. We'll see this again when we use more complex state.
 
 ![fit right](https://media1.tenor.com/images/fb0638add0828e1975144f3dd93e6e62/tenor.gif?itemid=11779622)
 
