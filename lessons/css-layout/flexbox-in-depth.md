@@ -5,10 +5,10 @@ order: 4
 
 ## Why Flexbox?
 
-In the Web of the past the only reliable cross browser-compatible tools
+In the Web of the past, the only reliable cross browser-compatible tools
 available for creating CSS layouts were things like floats and positioning.
-These are fine and they work, but in some ways they are also rather limiting and
-frustrating.
+These are fine and they work, but in some ways, they are also rather limiting
+and frustrating.
 
 Positioning elements on a page often induced this feeling with web developers.
 
@@ -18,9 +18,9 @@ The following simple layout requirements are either difficult or impossible to
 achieve with such tools, in any kind of convenient, flexible way:
 
 - Vertically centering a block of content inside its parent.
-- Making all the children of a container take up an equal amount of the
-  available width/height, regardless of how much width/height is available.
-- Making all columns in a multiple column layout adopt the same height even if
+- Make all the children of a container take up an equal amount of the available
+  width/height, regardless of how much width/height is available.
+- Make all columns in a multiple-column layout adopt the same height even if
   they contain a different amount of content.
 
 As you'll see in subsequent sections, flexbox makes a lot of layout tasks much
@@ -53,15 +53,15 @@ To get started, let's look at this example
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
 </section>
 `}
@@ -107,9 +107,9 @@ article {
 
 To start with, we need to select which elements are to be laid out as flexible
 boxes. To do this, we set a special value of display on the **parent** element
-of the elements you want to affect. In this case we want to lay out the
+of the elements you want to affect. In this case, we want to lay out the
 `<article>` elements, so we set this on the `<section>` (which becomes a flex
-container)
+container).
 
 > This is a key concept: we set the `display: flex` on the **parent** element of
 > the items to layout. The `display: flex` only affects the **immediate**
@@ -131,15 +131,15 @@ container)
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
 </section>
 `}
@@ -188,7 +188,7 @@ section {
 ### Tada! 🎉
 
 So, this single declaration gives us everything we need — incredible, right? We
-have our multiple column layout with equal sized columns, and the columns are
+have our multiple-column layout with equal-sized columns, and the columns are
 all the same height. This is because the default values given to flex items (the
 children of the flex container) are set up to solve common problems such as
 this. More on those later.
@@ -196,8 +196,6 @@ this. More on those later.
 ## Terminology: Understanding the flex model
 
 When elements are laid out as flexible boxes, they are laid out along two axes:
-
-![flex terms](https://developer.mozilla.org/files/3739/flex_terms.png)
 
 |            |                                                                                                                                                                                                         |
 | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -211,7 +209,7 @@ When elements are laid out as flexible boxes, they are laid out along two axes:
 
 Flexbox provides a property called `flex-direction` that specifies what
 direction the main axis runs in (what direction the flexbox children are laid
-out in) — by default this is set to row, which causes them to be laid out in a
+out in). By default, this is set to row, which causes them to be laid out in a
 row in the direction your browser's default language works in (left to right, in
 the case of an English browser).
 
@@ -227,7 +225,7 @@ example.**
 <CodePen>
 
 One issue that arises when you have a fixed amount of width or height in your
-layout is that eventually your flexbox children will overflow their container.
+layout is that eventually, your flexbox children will overflow their container.
 
 <pre data-lang='html'>
 {`
@@ -245,15 +243,15 @@ layout is that eventually your flexbox children will overflow their container.
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click-through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
   <article>
     <h2>First article</h2>
@@ -264,15 +262,15 @@ layout is that eventually your flexbox children will overflow their container.
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
 </section>
 `}
@@ -317,8 +315,8 @@ section {
 ---
 
 Here we see that the children are indeed breaking out of their container. One
-way in which you can fix this is to add the following declaration to your
-`<section>` rule.
+way you can fix this is to add the following declaration to your `<section>`
+rule.
 
 ```css
 section {
@@ -361,15 +359,15 @@ The `flex: 200px` declaration means that each will be at least 200px wide
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
   <article>
     <h2>First article</h2>
@@ -380,15 +378,15 @@ The `flex: 200px` declaration means that each will be at least 200px wide
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
     <h2>Third article</h2>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
 </section>
 `}
@@ -449,8 +447,8 @@ axis.
 |                        |                                                                                                                                                                                                                                                                                                                                   |
 | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `stretch`              | By default, the value is stretch, which stretches all flex items to fill the parent in the direction of the cross axis. If the parent hasn't got a fixed width in the cross axis direction, then all flex items will become as long as the longest flex items. This is how our first example got equal height columns by default. |
-| `center`               | The center value that we used in our above code causes the items to maintain their intrinsic dimensions, but be centered along the cross axis. This is why our current example's buttons are centered vertically.                                                                                                                 |
-| `flex-start, flex-end` | You can also have values like flex-start and flex-end, which will align all items at the start and end of the cross axis respectively. See align-items for the full details.                                                                                                                                                      |
+| `center`               | The center value that we used in our above code causes the items to maintain their intrinsic dimensions but be centered along the cross axis. This is why our current example's buttons are centered vertically.                                                                                                                  |
+| `flex-start, flex-end` | You can also have values like flex-start and flex-end, which will align all items at the start and end of the cross axis, respectively. See align-items for the full details.                                                                                                                                                     |
 |                        |                                                                                                                                                                                                                                                                                                                                   |
 
 > Try changing `align-items` in this example to `stretch`, `flex-start`, and
@@ -464,7 +462,7 @@ axis.
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `flex-start`    | The default value is flex-start, which makes all the items sit at the start of the main axis.                                                          |
 | `flex-end`      | You can use flex-end to make them sit at the end.                                                                                                      |
-| `center`        | center is also a value for justify-content, and will make the flex items sit in the center of the main axis.                                           |
+| `center`        | Center is also a value for justify-content and will make the flex items sit in the center of the main axis.                                            |
 | `space-around`  | The value we've used above, space-around, is useful — it distributes all the items evenly along the main axis, with a bit of space left at either end. |
 | `space-between` | There is another value, space-between, which is very similar to space-around except that it doesn't leave any space at either end.                     |
 |                 |                                                                                                                                                        |
@@ -522,7 +520,7 @@ div {
 
 <CodePen>
 
-Flexbox also has a feature for changing the layout order of flex items, without
+Flexbox also has a feature for changing the layout order of flex items without
 affecting the source order. This is another thing that is impossible to do with
 traditional layout methods.
 
@@ -533,10 +531,10 @@ We've added
 You'll now see that the "Smile" button has moved to the end of the main axis.
 
 - By default, all flex items have an order value of 0.
-- Flex items with higher order values set on them will appear later in the
-  display order than items with lower order values.
+- Flex items with higher-order values set on them will appear later in the
+  display order than items with lower-order values.
 - Flex items with the same order value will appear in their source order. So if
-  you have four items with order values of 2, 1, 1, and 0 set on them
+  you have four items with order values of 2, 1, 1, and 0 set on them,
   respectively, their display order would be 4th, 2nd, 3rd, then 1st.
 - The 3rd item appears after the 2nd because it has the same order value and is
   after it in the source order.
@@ -621,7 +619,7 @@ Let's take a look at this more complex layout
   <article>
     <h2>Second article</h2>
 
-    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
+    <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touch points for offshoring.</p>
   </article>
 
   <article>
@@ -633,9 +631,9 @@ Let's take a look at this more complex layout
       <button>Blush</button>
     </div>
 
-    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
+    <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional click through from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
 
-    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
+    <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximize the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
   </article>
 </section>
 `}
@@ -752,7 +750,7 @@ article:nth-of-type(3) {
 Next, we select the first `<div>`. We first use `flex:1 100px;` to effectively
 give it a minimum height of `100px`, then we set its children (the `<button>`
 elements) to also be laid out like flex items. Here we lay them out in a
-wrapping row, and align them in the center of the available space like we did in
+wrapping row and align them in the center of the available space as we did in
 the individual button example we saw earlier.
 
 ```
