@@ -8,24 +8,24 @@ theme: Next, 1
 
 ---
 
-- Let us add the ability to show a details page for each todo in our list
-- The detail page should show the ID, text, complete status, and perhaps the created/updated timestamps
-- The detail page should allow us to _DELETE_ the todo item
+- Let us add the ability to show a details page for each to-do in our list.
+- The detail page should show the ID, text, complete status, and perhaps the created/updated timestamps.
+- The detail page should allow us to _DELETE_ the to-do item.
 
 ---
 
 # We now have an app that supports different views of data
 
-- We will distinguish what we are looking at by varying the URL
-- The home page of "`/`" will always show the todo items list
-- A url like "`/items/42`" will show the details of item `42`
+- We will distinguish what we are looking at by varying the URL.
+- The home page of "`/`" will always show the todo items list.
+- A URL like "`/items/42`" will show the details of item `42`.
 
 ---
 
 # So our app has to change behavior based on what URL the user is displaying
 
-- We need a way to differentiate our user interface based on URL
-- We need a way to let the user navigate around
+- We need a way to differentiate our user interface based on URL.
+- We need a way to let the user navigate around.
 
 ---
 
@@ -37,9 +37,9 @@ theme: Next, 1
 
 # React Router
 
-- Transforms our application into a _Single Page App_ (SPA)
-- Even though our page will _respond_ to many URLs, it is still one page (index.html)
-- React Router makes it _seem_ like we support many URLs
+- Transforms our application into a _Single Page App_ (SPA).
+- Even though our page will _respond_ to many URLs, it is still one page (index.html).
+- React Router makes it _seem_ like we support many URLs.
 
 ---
 
@@ -65,7 +65,7 @@ npm install --save-dev @types/react-router @types/react-router-dom
 # Step 1 - Import the `BrowserRouter`
 
 - The purpose of the `Router` is to allow our application to handle different URLs.
-- There are several different kinds of "Routers" but the most common, and the one we will use is `BrowserRouter`
+- There are several different kinds of "Routers," but the most common, and the one we will use is `BrowserRouter`.
 
 ```js
 import { BrowserRouter as Router } from 'react-router-dom'
@@ -105,7 +105,7 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 # Our main `App` has too much in it.
 
-- Let us refactor the `ul` and the `form` out into its own component, moving all the state stuff with it
+- Let us refactor the `ul` and the `form` out into its own component, moving all the state stuff with it.
 
 ---
 
@@ -137,8 +137,8 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 # Route matching rules
 
-- The `path="/"` means "If the path **starts with** `/`"
-- If we want it to be **exact** we have to tell it
+- The `path="/"` means "If the path **starts with** `/`".
+- If we want it to be **exact**, we have to tell it
 
 ```jsx
 <main>
@@ -154,13 +154,13 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 ---
 
-# When we visit a URL that is not a match we still get our header and footer!
+# When we visit a URL that is not a match, we still get our header and footer!
 
 [.column]
 
 - This is because the only part of the page that swaps out is what is inside of our `Switch`
 
-- Let us add a "not found!" with `path="*"`
+- Let us add a "not found!" with `path="*"`.
 
 [.column]
 
@@ -229,7 +229,7 @@ Notice we have **surrounded** our `App` in a `Router`. This allows us to use rea
 
 ---
 
-# Now, rather than putting the JSX right in here, make a component
+# Now, rather than putting the JSX right in here, make a component.
 
 ```javascript
 function TodoItemPage() {
@@ -261,7 +261,7 @@ function TodoItemPage() {
 
 ---
 
-# The `params` is similar to `props.` However, the values come from our `Route`
+# The `params` is similar to `props.` However, the values come from our `Route`.
 
 ```
 <Route path="/items/:id">
@@ -409,7 +409,7 @@ async function deleteTodoItem() {
 # Handle the redirect
 
 - Another hook: `useHistory`
-- This allows us to manipulate the history/browser location
+- This allows us to manipulate the history/browser location.
 
 ```js
 const history = useHistory()
@@ -483,7 +483,7 @@ return (
 
 # Navigate around the app
 
-- Some UI/UX aspects we could improve
+- Some UI/UX aspects we could improve.
 - However, we have a working app!
 
 ---
