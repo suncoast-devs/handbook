@@ -20,7 +20,7 @@ To give the robot instructions, you may use the following sentences. We'll add
 more sentences as we take on more challenges.
 
 ```
-Go forward N steps
+Go forward N steps.
 ```
 
 ```
@@ -37,21 +37,21 @@ In this task, your goal is to have your `robot` walk a path in the shape of a
 square. A path with four sides, each an equal length and ending where the robot
 began.
 
-1. Discuss a plan for how to break the problem down
-1. Discuss options for different ways to solve the problem
+1. Discuss a plan for how to break the problem down.
+1. Discuss options for different ways to solve the problem.
 1. Make an _algorithm_ for the problem and then express it in the _language_
    above.
-1. Test it out by discussing it, or map it out on paper
+1. Test it out by discussing it, or map it out on paper.
 1. Give the algorithm to your _robot_ and have them test it out for real.
 
 ### Robot Challenge Number Two: Rectangles
 
 In this task, your goal is to have your `robot` walk a path in the shape of a
 rectangle. The path should have four sides, but the shape should be twice as
-"tall" as it is "wide." The robot, as in the Squares challenge, ends up back at
-the starting position.
+"tall" as it is "wide." The robot should end up back at the starting position,
+same as in the Squares challenge.
 
-Repeat the work steps noted above
+Repeat the work steps noted above.
 
 ### Expanding Our Language
 
