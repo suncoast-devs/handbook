@@ -42,7 +42,7 @@ document.querySelector('button').addEventListener('click', function (event) {
 
 # Turn state into user interface
 
-In the example we are using a _local_ variable to track the _state_ of the count and then _manually_ updating the user interface.
+In the example, we are using a _local_ variable to track the _state_ of the count and then _manually_ updating the user interface.
 
 ## What if the user interface was simply a representation of state?
 
@@ -79,7 +79,7 @@ render()
 
 # State change => HTML refresh
 
-_Every_ time we update `counter` we _repaint_ the entire user interface.
+_Every_ time we update `counter`, we _repaint_ the entire user interface.
 
 ---
 
@@ -174,7 +174,7 @@ to
 
 # Create event listeners
 
-The event listening functions should update the appropriate variable and call `render`
+The event listening functions should update the appropriate variable and call `render`.
 
 ```typescript
 document.querySelector('.team1 .add')?.addEventListener('click', function () {
