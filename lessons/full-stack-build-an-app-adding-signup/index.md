@@ -37,7 +37,7 @@ We can add a `<p>` tag to show the error message:
 }
 ```
 
-then add `useHistory` so we can redirect the user after signing up:
+Then add `useHistory` so we can redirect the user after signing up:
 
 ```javascript
 const history = useHistory()
@@ -45,7 +45,7 @@ const history = useHistory()
 
 ## Define handlers for the fields
 
-then we will add a function to handle the user's input in the fields:
+Then we will add a function to handle the user's input in the fields:
 
 ```javascript
 function handleStringFieldChange(event) {
@@ -59,10 +59,10 @@ function handleStringFieldChange(event) {
 ```
 
 Now use our two handling functions for the various `<input>` fields and the
-`<form>`
+`<form>`.
 
 Update each `<input>` field to use this function as the `onChange` and add a
-`value` property to equal the appropriate attribute from `newUser`
+`value` property to equal the appropriate attribute from `newUser`.
 
 ## Mutation
 
@@ -114,7 +114,7 @@ Change the `<form>` element to use our new mutation:
 >
 ```
 
-We will also add a route in `App.tsx`
+We will also add a route in `App.tsx`.
 
 ```jsx
 <Route path="/signup">
