@@ -3,21 +3,21 @@ title: Variables
 order: 3
 ---
 
-Like in most modern programming languages, in TypeScript we store information in
-`variables.` Variables are placeholders with meaningful names that we use to
+Like in most modern programming languages, in TypeScript, we store information
+in `variables.` Variables are placeholders with meaningful names that we use to
 store a value so that we can refer to it later.
 
 # Variable Naming Rules
 
 The names of variables, called identifiers, conform to certain rules.
 
-A TypeScript identifier must start with a letter, underscore (`_`), or dollar
+A TypeScript identifier must start with a letter, underscore (`_`), or a dollar
 sign (`$`); subsequent characters can also be digits (`0-9`). Because TypeScript
 is case sensitive, letters include the characters "`A`" through "`Z`"
-(uppercase) and the characters "`a`" through "`z`" (lowercase). Some examples of
+(uppercase) and the characters "`a`" through "`z`" (lowercase). Examples of
 legal names are `Number_hits`, `temp99`, `$credit`, and `_name`.
 
-There are four ways we can assign a variable in TypeScript
+There are four ways we can assign a variable in TypeScript.
 
 |                   |                                                                                 |
 | ----------------- | ------------------------------------------------------------------------------- |
@@ -28,14 +28,14 @@ There are four ways we can assign a variable in TypeScript
 |                   |                                                                                 |
 
 `undeclared global` variables are highly discouraged as they can often lead to
-unexpected behavior. In our coding we will always use `var`, `let`, or `const.`
-In fact, in modern TypeScript we will restrict our usage to `let` and `const.`
+unexpected behavior. In our coding, we will always use `var`, `let`, or `const.`
+In fact, in modern TypeScript, we will restrict our usage to `let` and `const.`
 
 `const` variables are assigned a value on the same statement where they are
 declared. They can also not be re-assigned at a later date.
 
 > You should default to using const when creating variables. This will help you
-> keep your variables, values and data more organized and reliable.
+> keep your variables, values, and data more organized and reliable.
 
 ```typescript
 const answer = 42
@@ -43,9 +43,9 @@ const answer = 42
 
 The value of this variable cannot be changed.
 
-`let` versus `var` -- These are both ways to declare variables which can be
-changed. The difference between these two ways of declaring a variable have to
-do with `scope.` We haven't discussed `scope` yet, so for now we will limit
+`let` versus `var` -- These are both ways to declare variables that can be
+changed. The difference between these two ways of declaring a variable has to do
+with `scope.` We haven't discussed `scope` yet, so for now, we will limit
 ourselves to using the `let` style of declaring variables.
 
 ```typescript
@@ -57,8 +57,8 @@ can increment it, decrement it, or change it to any other value we like.
 
 # Wait, what about `types` in `TypeScript`
 
-We are programming in a language named `TypeScript` so shouldn't we be declaring
-variable types?
+We are programming in a language named `TypeScript`, so shouldn't we be
+declaring variable types?
 
 Luckily for us, TypeScript, like C#, has
 [type inference](https://www.typescriptlang.org/docs/handbook/type-inference.html).
@@ -89,12 +89,12 @@ const scores = [98, 100, 55, 100]
 The variable `name` will have a type of `string` while `students` will have the
 type `string[]` and `scores` the type `number[]`.
 
-The type `string[]` indicates that the variable is an array with every element
-being a `string`. Similarly, `number[]` indicates the variable is an array with
+The type `string[]` indicates that the variable is an array, with every element
+being a `string`. Similarly, `number[]` indicates the variable is an array, with
 every element being a `number`.
 
 What about an array that has different types of elements? Unlike `C#`,
-TypeScript can handle that just fine, and in a very nice way.
+TypeScript can handle that just fine and in a very nice way.
 
 ```typescript
 const differentKindsOfThings = [42, 'Ice Cream', 100, 'Tacos']
@@ -108,13 +108,13 @@ array of elements that can be **either** a `string` or a `number`.
 
 Type inference is powerful and frees us from having to type additional syntax.
 However, we cannot use type inference everywhere in our code. For instance, when
-declaring functions we'll need to provide types for our arguments.
+declaring functions, we'll need to provide types for our arguments.
 
 Also, some developers do not prefer to rely on their editor's features to show
-them the type of a variable and prefer to be `explicit` instead of `implict`
+them the type of a variable and prefer to be `explicit` instead of `implicit`
 with typing.
 
-To declare the variables again we can use a syntax that includes the variable
+To declare the variables again, we can use a syntax that includes the variable
 types explicitly.
 
 ```typescript
@@ -136,12 +136,12 @@ This syntax isn't significantly different as it only uses `: TYPE` after the
 variable name declaration. We'll use type inference most of the time when
 writing code in the handbook and our projects.
 
-Once we introduce the idea of TypeScript objects we'll discuss why specifying an
-explict type is useful.
+Once we introduce the idea of TypeScript objects, we'll discuss why specifying
+an explicit type is useful.
 
 # Without assigned values
 
-When declaring a variable with `let` we do not have to specify a value. After
+When declaring a variable with `let`, we do not have to specify a value. After
 declaring a variable but before assigning it a value, the variable will contain
 a special value known as `undefined`.
 
@@ -150,14 +150,14 @@ implies that the variable has **no value**, `undefined` implies that we have
 never defined a value at all. Generally, `undefined` should be avoided in our
 code as it leads to bugs.
 
-Also since we did not provide a type for this variable, TypeScript will assign
+Also, since we did not provide a type for this variable, TypeScript will assign
 the special type `any`. This variable will now accept **any** type of value. The
 `any` type can lead to bugs in our software that would be avoided if we applied
 a type.
 
 ## `undefined` and `any` should be avoided in our code
 
-Since we are just starting with learning TypeScript we'll focus on a code style
+Since we are just starting with learning TypeScript, we'll focus on a code style
 that prevents the need for the `undefined` value and the `any` type.
 
 In fact, we can turn on code checking tools to make sure we avoid them!
@@ -188,10 +188,9 @@ name = 'Jane'
 const name = 'Jane' // name contains the value 'Jane' and we avoid any issue with `undefined`
 ```
 
-Most of the time we are able to declare a variable and assign a value at the
-same time. However, it is sometimes useful to declare the variable and assign
-its value later. Once we introduce conditions and functions we will see cases of
-this.
+Most of the time, we can declare a variable and assign a value at the same time.
+However, it is sometimes useful to declare the variable and assign its value
+later. Once we introduce conditions and functions, we will see cases of this.
 
 # More Types
 
@@ -200,7 +199,8 @@ this.
 As you saw when declaring variables, there are different types of values in
 TypeScript.
 
-Here are our first few types that are in TypeScript, we will build on this later
+Here are our first few types that are in TypeScript, we will build on this
+later.
 
 |             |                                                                                                                                                                             |     |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
@@ -209,7 +209,7 @@ Here are our first few types that are in TypeScript, we will build on this later
 | `null`      | A special keyword denoting a null value.                                                                                                                                    |
 | `undefined` | A top-level property whose value is not defined.                                                                                                                            |
 
-Looking at this list you might think that having `null` and `undefined` is
+Looking at this list, you might think that having `null` and `undefined` is
 redundant. Here is an example of the difference between the two:
 
 ![zero versus null versus undefined](./assets/zero-null-undefined.jpg)
@@ -242,7 +242,7 @@ execute!
 
 Because TypeScript is
 [transpiled](https://en.wikipedia.org/wiki/Source-to-source_compiler) to the
-JavaScript language our browsers (and other tools) know how to execute, it will
+JavaScript language, our browsers (and other tools) know how to execute it will
 not _prevent_ this code from executing when we reach the JavaScript execution
 stage.
 
@@ -275,7 +275,7 @@ x = '37' + 7 // "377" and no error since we are converting the `7` to a string f
 ## Literals
 
 You use literals to represent values in TypeScript. These are fixed values, not
-variables, that you _literally_ provide in your script. This section describes
+variables that you _literally_ provide in your script. This section describes
 the following types of literals:
 
 _Integers_ _Floating-point literals_ _String literals_ _Boolean literals_
@@ -283,15 +283,15 @@ _Integers_ _Floating-point literals_ _String literals_ _Boolean literals_
 ### Integers
 
 Integers can be expressed in decimal (base 10), hexadecimal (base 16), octal
-(base 8) and binary (base 2).
+(base 8), and binary (base 2).
 
 A decimal integer literal consists of a sequence of digits without a leading 0
-(zero). A leading 0 (zero) on an integer literal, or a leading 0o (or 0O)
-indicates it is in octal. Octal integers can include only the digits 0-7. A
-leading 0x (or 0X) indicates a hexadecimal integer literal. Hexadecimal integers
-can include digits (0-9) and the letters a-f and A-F. (The case of a character
-does not change its value, e.g. 0xa = 0xA = 10 and 0xf = 0xF = 15.) A leading 0b
-(or 0B) indicates a binary integer literal. Binary integers can only include the
+(zero). A leading 0 (zero) on an integer literal or a leading 0o (or 0O)
+indicates it is octal. Octal integers can include only the digits 0-7. A leading
+0x (or 0X) indicates a hexadecimal integer literal. Hexadecimal integers can
+include digits (0-9) and the letters a-f and A-F. (The case of a character does
+not change its value, e.g. 0xa = 0xA = 10 and 0xf = 0xF = 15.) A leading 0b (or
+0B) indicates a binary integer literal. Binary integers can only include the
 digits 0 and 1.
 
 Some examples of integer literals are:
@@ -341,7 +341,7 @@ following are examples of string literals:
 
 Template literals are also available. Template literals are enclosed by the
 back-tick (\`) (grave accent) character instead of double or single quotes.
-Inside the backticks we can use `${}` to evaluate statements
+Inside the backticks, we can use `${}` to evaluate statements.
 
 ```typescript
 const score = 56
@@ -362,4 +362,4 @@ const learningTypeScriptIsHard = false
 
 ---
 
-Now that we have data, we need ways to manipulate the variables
+Now that we have data, we need ways to manipulate the variables.

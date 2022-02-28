@@ -16,10 +16,10 @@ for (let step = 0; step < 5; step++) {
 ```
 
 There are many different kinds of loops, but they all essentially do the same
-thing: they repeat an action some number of times (and it's actually possible
-that number could be zero). The various loop mechanisms offer different ways to
-determine the start and end points of the loop. There are various situations
-that are more easily served by one type of loop over the others.
+thing: they repeat an action some number of times (and it's possible that number
+could be zero). The various loop mechanisms offer different ways to determine
+the start and end points of the loop. Various situations are more easily served
+by one type of loop over the others.
 
 The statements for loops provided in TypeScript are:
 
@@ -71,7 +71,7 @@ again until the while `condition` returns `false`). To execute multiple
 statements, use a block statement (`{ ... }`) to group those statements. If
 `condition` is `true`, the `statement` executes again. At the end of every
 execution, the `condition` is checked. When the `condition` is `false`,
-execution stops and control passes to the statement following `do...while`.
+execution stops, and control passes to the statement following `do...while`.
 
 # while statement
 
@@ -84,13 +84,13 @@ while (condition) {
 }
 ```
 
-If the `condition` becomes `false`, `statement` within the loop stops executing
-and control passes to the statement following the loop.
+If the `condition` becomes `false`, the `statement` within the loop stops
+executing, and control passes to the statement following the loop.
 
-The `condition` test occurs before `statement` in the loop is executed. If the
-`condition` returns `true`, `statement` is executed and the `condition` is
-tested again. If the `condition` returns `false`, execution stops and control is
-passed to the statement following while.
+The `condition` test occurs before the `statement` in the loop is executed. If
+the `condition` returns `true`, `statement` is executed, and the `condition` is
+tested again. If the `condition` returns `false`, execution stops, and control
+is passed to the statement following while.
 
 To execute multiple statements, use a block statement (`{ ... }`) to group those
 statements.
@@ -118,7 +118,7 @@ for (variable in object) {
 }
 ```
 
-The following function takes as its argument an object and the object's name. It
+The following function takes an object and the object's name as its argument. It
 then iterates over all the object's properties and returns a string that lists
 the property names and their values.
 
@@ -141,7 +141,7 @@ for (const property in car) {
 ## for...of statement
 
 The `for...of` statement creates a loop iterating over iterable objects
-(including `Array`, `Map`, `Set`, arguments object and so on), invoking a block
+(including `Array`, `Map`, `Set`, arguments object, and so on), invoking a block
 with statements to be executed for the value of each distinct property.
 
 ```typescript

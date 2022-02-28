@@ -66,7 +66,7 @@ Here the condition can be any expression that evaluates to `true` or `false`.
 > NOTE: In TypeScript all of these are considered `false`: `0`, `-0`, `null`,
 > `false`, `NaN`, `undefined`, and the empty string `""`
 
-If condition evaluates to `true`, `statement_1` is executed; otherwise,
+If the condition evaluates to `true`, `statement_1` is executed; otherwise,
 `statement_2` is executed. `statement_1` and `statement_2` can be any statement,
 including further nested if statements.
 
@@ -85,9 +85,9 @@ if (condition_1) {
 }
 ```
 
-In the case of multiple conditions only the first logical condition which
+In the case of multiple conditions, only the first logical condition which
 evaluates to true will be executed. To execute multiple statements, group them
-within a block statement (`{ ... }`) . In general, it's good practice to always
+within a block statement (`{ ... }`). In general, it's good practice to always
 use block statements, especially when nesting if statements:
 
 ```typescript
@@ -122,22 +122,24 @@ switch (expression) {
 ```
 
 The program first looks for a `case` clause with a label matching the value of
-expression and then transfers control to that clause, executing the associated
-statements. If no matching label is found, the program looks for the optional
-`default` clause, and if found, transfers control to that clause, executing the
-associated statements. If no `default` clause is found, the program continues
-execution at the statement following the end of switch. By convention, the
-default clause is the last clause, but it does not need to be so.
+the expression and then transfers control to that clause, executing the
+associated statements. If no matching label is found, the program looks for the
+optional `default` clause, and if found, transfers control to that clause,
+executing the associated statements. If no `default` clause is found, the
+program continues execution at the statement following the end of the switch. By
+convention, the default clause is the last clause, but it does not need to be
+so.
 
 The optional `break` statement associated with each case clause ensures that the
-program breaks out of switch once the matched statement is executed and
-continues execution at the statement following switch. If `break` is omitted,
-the program continues execution at the next statement in the switch statement.
+program breaks out of the switch once the matched statement is executed and
+continues execution at the statement following the switch. If `break` is
+omitted, the program continues execution at the next statement in the switch
+statement.
 
-Example In the following example, if fruittype evaluates to "Bananas", the
-program matches the value with case "Bananas" and executes the associated
-statement. When break is encountered, the program terminates switch and executes
-the statement following switch. If break were omitted, the statement for case
+In the following example, if fruittype evaluates to "Bananas", the program
+matches the value with case "Bananas" and executes the associated statement.
+When break is encountered, the program terminates the switch and executes the
+statement following the switch. If break were omitted, the statement for case
 "Cherries" would also be executed.
 
 ```typescript

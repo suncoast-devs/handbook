@@ -50,7 +50,7 @@ do "remember" their values.
 First, we will create an array of people. Each person will have a name, a
 birthday, and a number of milliseconds we should wait before showing their
 information. We'll use TypeScript's `setTimeout` to do the waiting. Since
-`setTimeout` calls a function **later** this will help prove that the function
+`setTimeout` calls a function **later**, this will help prove that the function
 is really "remembering" its values.
 
 ```typescript
@@ -100,7 +100,7 @@ the supplied function later.
 
 ```typescript
 people.forEach(function (person) {
-  // Inside here we have access to the `person` variable here. The `person` variable is
+  // Inside here, we have access to the `person` variable here. The `person` variable is
   // recreated each time through the forEach loop. Since it is an argument to the
   // function, it is a new creation of that variable.
 
@@ -109,7 +109,7 @@ people.forEach(function (person) {
     // will remember all the variables that existed that it could see. This includes
     // the `person` variable from the forEach loop.
 
-    // When the function executes **later** (via the `setTimeout`) the
+    // When the function executes **later** (via the `setTimeout`), the
     // fact that this is a "closure" (remembers variables from the outer scope) ensures
     // that each time we call printPersonInfo, the variable `person` will be correct.
     debugger
@@ -132,12 +132,12 @@ created by the `forEach` loop.
 
 Thus when the code calls `printPersonInfo` for the first time, `person` is
 `Alan Turing`, the second time the closure captured `person` being equal to
-`Ada Lovelace`, then `Grace Hooper` and finally `Donald Knuth`.
+`Ada Lovelace`, then `Grace Hooper`, and finally `Donald Knuth`.
 
 # Closures are both complex, powerful, and simple to use.
 
 Remember that a closure is nothing more than the fact that a function grabs hold
-of the definition of the variables, it can see when defined.
+of the definition of the variables it can see when defined.
 
 We'll be using closures, but we won't be calling it out as a special technique.
 It will just be a common technique.

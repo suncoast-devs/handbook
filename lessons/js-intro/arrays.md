@@ -19,7 +19,7 @@ const array = [element0, element1, ..., elementN];
 ```
 
 The first two cases are challenging for TypeScript unless we define a type for
-the array. For instance `const array = new Array('hello', 42)` will define an
+the array. For instance, `const array = new Array('hello', 42)` will define an
 array of `string` and convert the `42` to a string. However,
 `const array = new Array(42, 'hello')` will be a TypeScript error. These are not
 recommended approaches for creating arrays.
@@ -30,10 +30,10 @@ the array's elements. The array's length property is set to the number of
 arguments.
 
 The bracket syntax is called an "array literal" or "array initializer." It's
-shorter than other forms of array creation, and so is generally preferred.
+shorter than other forms of array creation and so is generally preferred.
 
-To create an array with non-zero length, but without any items, the following
-can be used. Note we need to give the `array` variable a type since we have no
+To create an array with non-zero length but without any items, the following can
+be used. Note we need to give the `array` variable a type since we have no
 initial values.
 
 ```typescript
@@ -43,7 +43,7 @@ array.length = arrayLength
 
 ## Populating an array
 
-You can populate an array by assigning values to its elements. For example,
+You can populate an array by assigning values to its elements. For example:
 
 ```typescript
 const employees: string[] = []
@@ -56,10 +56,10 @@ You might be surprised that we can change the values of the entries of an array
 that is defined `const employees: string[] = []`. This is because the `const`
 refers to the variable name `employees`, **not** to the _values_ inside the
 array. What `const` prevents here is a statement such as
-`employees = ['Peter', 'Paul', 'Mary']`
+`employees = ['Peter', 'Paul', 'Mary']`.
 
-You **can** have an array variable that you can neither assign a new value,
-**or** change the contents of:
+You **can** have an array variable that you can neither assign a new value
+**nor** change the contents of:
 
 ```typescript
 const cantChangeTheseValues: ReadonlyArray<number> = [42, 100, 52]
@@ -117,8 +117,8 @@ colors.forEach(color => console.log(color))
 > very much like syntax we will use when discussing front-end frameworks. Thus,
 > at SDG, we will prefer this way to iterate over arrays.
 
-Notice that we do not have an index. If we **do** want an index we can add that
-as a second argument in our arrow function.
+Notice that we do not have an index. If we **do** want an index, we can add that
+as the second argument in our arrow function.
 
 Note that we do not need to apply a type to `color` or to `index`. TypeScript
 will determine that they must be of types `string` and `number` respectively.

@@ -6,11 +6,11 @@ order: 6
 import AdvancedTopic from '@handbook/AdvancedTopic'
 
 This section describes TypeScript's expressions and operators, including
-assignment, comparison, arithmetic, bitwise, logical, string, ternary and more.
+assignment, comparison, arithmetic, bitwise, logical, string, ternary, and more.
 
 A complete and detailed list of operators and expressions is also available in
 the
-[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators)
+[ MDN reference](https://developer.mozilla.org/en-US/docs/Web/TypeScript/Reference/Operators).
 
 TypeScript has the following types of operators. This section describes the
 operators and contains information about operator precedence.
@@ -124,7 +124,7 @@ provides the arithmetic operators listed in the following table:
 | Remainder (`%`)                | Binary operator. Returns the integer remainder of dividing the two operands.                                                                                                                                                 | `12 % 5` returns `2`.                                                                                                 |
 | Increment (++)                 | Unary operator. Adds one to its operand. If used as a prefix operator (`++x`), returns the value of its operand after adding one; if used as a postfix operator (`x++`), returns the value of its operand before adding one. | If `x` is `3`, then `++x` sets `x` to `4` and returns `4`, whereas `x++` returns `3` and, only then, sets `x` to `4`. |
 | Decrement (`--`)               | Unary operator. Subtracts one from its operand. The return value is analogous to that for the increment operator.                                                                                                            | If `x` is `3, then`--x`sets`x`to`2`and returns`2`, whereas`x--`returns`3`and, only then, sets`x`to`2`.                |
-| Unary negation (`-`)           | Unary operator. Returns the negation of its operand.                                                                                                                                                                         | If `x` is `3`, then `-x` returns `-3`.                                                                              |
+| Unary negation (`-`)           | Unary operator. Returns the negation of its operand.                                                                                                                                                                         | If `x` is `3`, then `-x` returns `-3`.                                                                                |
 | Unary plus (`+`)               | Unary operator. Attempts to convert the operand to a number, if it is not already.                                                                                                                                           | `+"3"` returns `3`.<br/> `+true` returns `1`.                                                                         |
 | Exponentiation operator (`**`) | Calculates the base to the exponent power, that is, baseexponent                                                                                                                                                             | `2 ** 3` returns `8`.<br/> `10 ** -1` returns `0.1`.                                                                  |
 |                                |                                                                                                                                                                                                                              |                                                                                                                       |
@@ -177,10 +177,10 @@ Bitwise shift operators
 ## Logical operators
 
 Logical operators are typically used with Boolean (logical) values; when they
-are, they return a Boolean value. However, the && and || operators actually
-return the value of one of the specified operands, so if these operators are
-used with non-Boolean values, they may return a non-Boolean value. The logical
-operators are described in the following table.
+are, they return a Boolean value. However, the && and || operators return the
+value of one of the specified operands, so if these operators are used with
+non-Boolean values, they may return a non-Boolean value. The logical operators
+are described in the following table.
 
 | Operator                   | Usage                       | Description                                                                                                                                                                                      |
 | -------------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- | ------------------------------------------------------------------------- |
