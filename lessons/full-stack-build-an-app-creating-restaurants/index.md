@@ -17,7 +17,7 @@ between them.
 ## Track state for each input field
 
 For each input field, we will need to track the data in the input form. Since
-there are fields for `Name`, `Description`, `Address`, and `Telephone` we will
+there are fields for `Name`, `Description`, `Address`, and `Telephone`, we will
 need a `state` for all of these.
 
 Typically we would create separate state variables for each of the input fields.
@@ -79,7 +79,7 @@ a key/value pair in the object we are creating. In essence, this "copies" the
 values to the new object. Then we add in the `address` field with its new value.
 Adding the new value afterward, we **override** any `address` key/value pair
 already spread into the new object. In the end, we have a **copy** of the
-existing `newRestaurant` object but with a new value for the `address`
+existing `newRestaurant` object but with a new value for the `address`.
 
 This pattern will repeat for the other form fields:
 
@@ -119,18 +119,18 @@ function handleStringFieldChange(
 
 Finally, let's handle the case of submitting the form. Instead of adding an
 `onClick` method to the button, we will add an `onSubmit` for the `<form>`. This
-event handles all the ways a form may be submitted (e.g., pressing enter in an
-input field)
+event handles the different ways a form may be submitted (e.g., pressing enter
+in an input field).
 
 ```jsx
-<form onsubmit={handleformsubmit}></form>
+<form onSubmit={handleFormSubmit}></form>
 ```
 
 The implementation of `handleFormSubmit` will use a `react-query` `mutation` to
 create the new restaurant.
 
-First, setup a method to submit the new restaurant. Since this method will
-receive the restaurant to create it can exist outside of the component
+First, set up a method to submit the new restaurant. Since this method will
+receive the restaurant to create, it can exist outside of the component
 definition
 
 ```typescript
@@ -145,7 +145,7 @@ async function submitNewRestaurant(restaurantToCreate: RestaurantType) {
 }
 ```
 
-Then we can setup the `mutation`
+Then we can set up the `mutation`
 
 ```typescript
 const createNewRestaurant = useMutation(submitNewRestaurant)
@@ -233,11 +233,11 @@ link.
 Returning to our `NewRestaurant` component, we can now have the user redirected
 to the home page after submitting their new restaurant.
 
-To do this we change our mutation to call `history.push('/')` after submitting
+To do this, we change our mutation to call `history.push('/')` after submitting
 the API request.
 
 We also add `const history = useHistory()` to use the `history` object from
-`react-router`
+`react-router`.
 
 ```javascript
 const history = useHistory()
@@ -248,9 +248,9 @@ const createNewRestaurant = useMutation(submitNewRestaurant, {
 })
 ```
 
-Now, if you click on `+ Restaurant`, type in details for a restaurant and click
-the submit you will redirect to the home page and see your new restaurant
-populated
+Now, if you click on `+ Restaurant`, type in details for a restaurant, and click
+the submit button, you will redirect to the home page and see your new
+restaurant populated.
 
 ## Files Updated
 
