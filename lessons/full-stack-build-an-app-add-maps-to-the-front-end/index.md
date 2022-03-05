@@ -5,7 +5,7 @@ order: 27
 
 # Add Maps to the Front End
 
-To render a map within our front end, we will be using another third party
+To render a map within our front end, we will be using another third-party
 library, `react-map-gl`.
 
 ```shell
@@ -29,7 +29,7 @@ well as our running applications. Since these are a per-app configuration, they
 also serve as a location for values such as API keys.
 
 > NOTE: This is a different approach than dotnet takes for its local
-> configuration data. Both are good solutions, each with their issues and
+> configuration data. Both are good solutions, each with its issues and
 > benefits. We are using an environment variable since this is the approach that
 > our front-end app setup prefers.
 
@@ -38,10 +38,10 @@ VITE_APP_MAPBOX_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 > NOTE: Replace xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx with your token assigned to your
-> mapbox.com account
+> mapbox.com account.
 
 > NOTE: After changing this file, you should stop and restart your
-> `dotnet watch run`
+> `dotnet watch run`.
 
 Once we have installed the library, signed up for a key, and set our API key in
 configuration, we will update our `Restaurants.tsx` component to show a map.
@@ -67,7 +67,7 @@ const [viewport, setViewport] = useState({
 ```
 
 With this state, we can replace the static map image with our dynamic map.
-Inside the `ReactMapGL` we include a `NavigationalControl` component, also from
+Inside the `ReactMapGL`, we include a `NavigationalControl` component, also from
 mapbox-gl, that shows a small zoom control interface. We also set the map's
 style to be absolutely positioned to work with our CSS.
 
@@ -106,7 +106,7 @@ correctly to allow us to handle this.
 
 The `ReactMapGL` expects a property for `onViewportChange` that is a method that
 takes new values for a viewport change. And since our `setViewport` is exactly
-such a function we can use it by adding this to `ReactMapGL`
+such a function, we can use it by adding this to `ReactMapGL`.
 
 ```jsx
 onViewportChange = { setViewport }
@@ -119,7 +119,7 @@ Try dragging, pinching, and zooming the map!
 If we wish to add pins to the map, we must render an array of `<Marker>`
 components inside our `ReactMapGL` component. A `<Marker>` is another map-gl
 component. It requires a `latitude` and `longitude` property. Luckily for us,
-our `restaurants` state now has that information from our api!
+our `restaurants` state now has that information from our API!
 
 We can use our old friend the JavaScript `map()` function to generate these
 markers.
@@ -173,7 +173,7 @@ export type RestaurantType = {
 ```
 
 Update other components that now use this type and give a default value for the
-latitude and longitude
+latitude and longitude.
 
 ## Adding interaction to the map
 
@@ -217,8 +217,8 @@ rendered at the coordinates of the selected restaurant. We also define an
 the `selectedMapRestaurant` to `null`. Inside the popup, we will render a few
 details of the restaurant.
 
-Lastly, we need to add an `onClick` for our `<Marker>` so we can set the value
-of `selectedMapRestaurant`
+Lastly, we need to add an `onClick` for our `<Marker>`, so we can set the value
+of `selectedMapRestaurant`.
 
 ```jsx
 <span
