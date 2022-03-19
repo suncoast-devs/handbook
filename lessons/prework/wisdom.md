@@ -6,7 +6,7 @@ order: 55
 # Wisdom
 
 SDG has collected wisdom from staff and former alumni that we feel you should
-review prior to the start of your cohort.
+review before the start of your cohort.
 
 ## ... of the Staff
 
@@ -16,7 +16,7 @@ to understand our advice for you.
 
 ## ... of the Alumni
 
-Then follow up by reading
+Then follow up by reading the
 [wisdom of the alumni](/lessons/misc-keys-to-student-success/wisdom-of-the-alumni)
 to read amazing advice from alumni who were once where you are today, reading
 this pre-work before their first day of class!
