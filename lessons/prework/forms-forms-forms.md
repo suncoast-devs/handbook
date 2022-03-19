@@ -12,7 +12,7 @@ Here are a series of forms to complete prior to your first day:
 
 Self check list:
 
-- Did you read the [catalog](/lessons/pre-work/catalog)?
+- Did you read the [catalog](https://suncoast.io/catalog.pdf)?
 - Did you _prepare your support team_?
 - Did you read
   [What is Code](https://www.bloomberg.com/graphics/2015-paul-ford-what-is-code/)?
