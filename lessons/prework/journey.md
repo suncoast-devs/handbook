@@ -18,7 +18,7 @@ These
 will help you organize your time, body, and schedule to be ready for the pace of
 this class.
 
-## Everyone Has Something to Teach (Also Known as: "There Are No Silly Questions")
+## Everyone Has Something to Teach (Also Known As: "There Are No Silly Questions")
 
 Even if someone participates with "just a question," it benefits the classroom
 and yourself. The chances are that someone else has that question. Great
@@ -27,16 +27,16 @@ learners ask great questions – never forget that!
 Lectures and lab time are interactive with the instructors, mentors, staff,
 community, and peers. We encourage you to take advantage of this time to work
 together, interact, ask and answer questions. Their experience, knowledge, and
-guidance are a prime aspect of what you are paying for in this process.
+guidance are prime aspects of what you are paying for in this process.
 
 ## Automating, Scheduling, and Decision Fatigue
 
 We are hardwired to need breaks every 90-120 minutes. We've considered this in
 the schedule for each day. During your open lab time, focus on scheduling your
-energy, not your time. Block out parts of your day for exercise, for reading
-\(fiction\), for cooking, for family, for anything not coding related.
+energy, not your time. Block out parts of your day for anything not
+coding-related, such as exercise, reading \(fiction\), cooking, or family time.
 
-Group similar activities; if you need to respond to email, read and respond in
+Group similar activities if you need to respond to email, read and respond in
 batches. If you need to work on an assignment, do it without looking around at
 non-coding websites, checking social media, or reading emails.
 
@@ -60,13 +60,13 @@ work on next.
 
 ## Preparing Your Support Team
 
-Your family members, partners, spouses, friends, and loved-ones are all part of
-your team while you are in this program. They too need to be prepared for the
+Your family members, partners, spouses, friends, and loved ones are all part of
+your team while you are in this program. They, too, need to be prepared for the
 level of effort you are about to put into this course.
 
-Spend some time discussing how every-day life requirements such as meal
+Spend some time discussing how everyday life requirements such as meal
 preparation, cooking, cleaning, paying bills, taking care of young ones, grocery
 shopping, and all the events that take place in life _outside_ of your time at
-SDG will be handled. Your days, evenings, and weekends will be preoccupied by
+SDG will be handled. Your days, evenings, and weekends will be preoccupied with
 your study and homework at SDG. Having your support team ready can be a critical
 step in your success!
