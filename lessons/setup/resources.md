@@ -12,13 +12,14 @@ documentation to have searchable, offline docs.
 
 For the Mac, check out [Dash](https://kapeli.com/dash) and
 [DevDocs](https://github.com/egoist/devdocs-desktop). DevDocs can be installed
-via: `brew install --cask devdocs`
+via `brew install --cask devdocs`
 
 For Windows, try [Velocity](https://velocity.silverlakesoftware.com/)
 
 For Linux, try [Zeal](https://zealdocs.org/)
 
-DevDocs is available offline in your browser at [devdocs.io](https://devdocs.io)
+DevDocs is available offline in your browser at
+[devdocs.io](https://devdocs.io).
 
 ## VS Code
 
