@@ -5,10 +5,10 @@ order: 50
 
 # RunJS
 
-RunJS is an application that allows us to run, and inspect,
-JavaScript/TypeScript code. It is useful for trying out new features, working
-through parts of an algorithm for a project or a codewar, or just analyzing why
-some JavaScript/TypeScript code doesn't work.
+RunJS is an application that allows us to run and inspect JavaScript/TypeScript
+code. It is useful for trying out new features, working through parts of an
+algorithm for a project or a codewar, or just analyzing why some
+JavaScript/TypeScript code doesn't work.
 
 ## Installation
 
@@ -52,7 +52,7 @@ your websites so they are on the web!
 ## Pre-Installation Step
 
 Before continuing, you **MUST** sign up for a _FREE_ account with
-[Netlify](https://www.netlify.com/)
+[Netlify](https://www.netlify.com/).
 
 ## Installation
 
@@ -94,8 +94,8 @@ npm install --global prettier
 
 # vite
 
-Check [this](https://www.dictionary.com/browse/vite) for the pronuciation. It is
-pronounced to rhyme with _meat_.
+Check [this](https://www.dictionary.com/browse/vite) for the pronunciation. It
+is pronounced to rhyme with _meat_.
 
 This is a tool we use to generate our web projects, run our code, and generate a
 production version that we will deploy to `Netlify`.
