@@ -8,7 +8,7 @@ order: 20
 # .NET
 
 In order to create and run applications written in the `C#` language and the
-`.NET Core` environment we need to install some tools on our computer. The tool
+`.NET Core` environment, we need to install some tools on our computer. The tool
 we need to download is called a `Software Development Kit`, or `SDK` for short.
 Microsoft provides a download to install and configure the `.NET Core` `SDK` for
 us.
