@@ -78,7 +78,7 @@ In this task, your goal is to have your `robot` walk a path in the shape of a
 star. Determine what a "star" pattern means to you and if the robot needs to end
 at the starting spot.
 
-### Robot Challenge Number Five: To Jason's Office!
+<!-- ### Robot Challenge Number Five: To Jason's Office!
 
 Walk the robot from their seat to Jason's office door and back (take a different
 route on the way back).
@@ -92,4 +92,4 @@ would you need?
 Update your algorithm to work from the kitchen. Or take the more considerable
 challenge and have your algorithm work from any point on campus. Add new
 language as you need, but keep it narrow and straightforward like our existing
-steps.
+steps. -->
