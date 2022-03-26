@@ -18,7 +18,7 @@ The more details, the better!
 
 New developers/algorithm-creators don't specify enough detail.
 
-Typical new SDG student generates about a **third** to a **fourth** the amount of detail required in an algorithm.
+Typical new SDG student generates about a **third** to a **fourth** in the amount of detail required in an algorithm.
 
 ![fit right](./assets/owl.jpg)
 
@@ -26,15 +26,15 @@ Typical new SDG student generates about a **third** to a **fourth** the amount o
 
 # [fit] So, how do we learn and practice?
 
-    Use precise language
+    Use precise language.
 
-    Break problems into smaller pieces
+    Break problems into smaller pieces.
 
-    Learn common problem-solving approaches
+    Learn common problem-solving approaches.
 
     Practice, practice, practice ... and more practice.
 
-It takes **time**
+It takes **time**.
 
 ---
 
@@ -397,9 +397,9 @@ Find largest number in:
 - Median number in a list
 
   - First sort
-  - Then find middle number
+  - Then find the middle number
     - If there are an odd count of numbers, take the middle.
-    - If there are even count of numbers, average the two middle numbers.
+    - If there are an even count of numbers, average the two middle numbers.
 
 ---
 
