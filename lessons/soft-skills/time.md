@@ -24,7 +24,7 @@ reduces anxiety.
 #### 2. More time
 
 Good time management gives you extra time to spend in your daily life. People
-who can time manage effectively enjoy more time to spend on hobbies or other
+who can time-manage effectively enjoy more time to spend on hobbies or other
 personal pursuits.
 
 #### 3. More opportunities
@@ -36,8 +36,8 @@ organization.
 
 #### 4. Ability to realize goals
 
-Individuals who practice good time management are able to better achieve their
-goals and objectives, and do so in a shorter length of time.
+Individuals who practice good time management can better achieve their goals and
+objectives and do so in a shorter length of time.
 
 ### List of Tips for Effective Time Management
 
@@ -99,7 +99,7 @@ skills.
 
 The inability to plan ahead and stick to goals means poor efficiency. For
 example, if there are several important tasks to complete, an effective plan
-would be to complete similar tasks first. If you do not plan ahead, instead
+would be to complete similar tasks first. If you do not plan ahead, instead of
 jumping from one task to another, it can lead to low productivity and workflow.
 
 #### 2. Wasted time
@@ -122,7 +122,7 @@ complete tasks at the last minute compromises quality.
 #### 5. Poor reputation
 
 If clients or your employer cannot rely on you to manage your time to complete
-tasks, their expectation and perception of you is adversely affected. If a
+tasks, their expectations and perception of you are adversely affected. If a
 client cannot rely on you to get something done on time, they will take their
 business elsewhere.
 
