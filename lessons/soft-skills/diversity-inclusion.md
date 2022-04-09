@@ -11,7 +11,7 @@ barriers in the tech community, including women, people of color, and the
 LGBTQIA community.
 
 We offer free code education for kids because we believe in investing in the
-local tech economy for the long-run, and that means impacting the next
+local tech economy for the long run, and that means impacting the next
 generation.
 
 ## Defining Diversity
@@ -26,7 +26,7 @@ cultures) in a group or organization.
 In 2014, the technology companies in Silicon Valley started sharing their
 diversity numbers. Sharing this information brought on promises of better
 interviewing and hiring practices, but the problem proved more difficult to fix.
-Take a look at this article,
+Take a look at this article:
 [Five Years of Tech Diversity Reports—and Little Progress](https://www.wired.com/story/five-years-tech-diversity-reports-little-progress/)
 to get a better idea of the statistics between then and now.
 
@@ -41,7 +41,7 @@ supporting initiatives to create diverse teams.
 > Diversity of demography, culture, life experiences, and interests that makes
 > our community so vibrant. - Tracy Chou, Former Software Engineer @Pinterest
 
-Diverse teams outperform homogeneous groups on creative problem-solving
+Diverse teams outperform homogeneous groups in creative problem-solving
 exercises. They are more creative because creativity is usually a reflection of
 people's backgrounds, and diverse groups bring faster/better ways of solving
 problems. Diverse companies perform better; they help companies serve a diverse
