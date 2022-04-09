@@ -25,16 +25,16 @@ Why is there a need for multiple resumes, and how should they be different?
 
 Start with having a simple .docx document without significant formatting such as
 Headers, Footers, or Tables. The reason for this is you need a copy of your
-resume that you can upload into a hiring website such as Indeed, Monster.com,
+resume that you can upload to a hiring website such as Indeed, Monster.com,
 LinkedIn, and employer application websites.
 
 Sites like these and employers often use an applicant tracking system (ATS)
 software. Companies use ATS to not only track applicants but also as a filter
-method. The ATS searches each resume for keywords specific to the position, and
-forwards the applicants that it determines have the most relevant resumes based
-on what it finds. If your resume can not scan properly, you might miss out on an
-opportunity without your resume having a chance to get into a hiring manager or
-recruiter's hands.
+method. The ATS searches each resume for keywords specific to the position and
+forwards the applicants that it determines to have the most relevant resumes
+based on what it finds. If your resume can not scan properly, you might miss out
+on an opportunity without your resume having a chance to get into a hiring
+manager or recruiter's hands.
 
 Need more help on how to make sure your resume gets past the ATS software?
 
