@@ -40,7 +40,7 @@ Do:
 
 Don't:
 
-- Use an email address such as "soccerdude98@hotmail.com", while it is personal
+- Use an email address such as "soccerdude98@hotmail.com" while it is personal
   to you, it doesn't appear professional. It also doesn't let your recipient
   know who is sending it, and it could end up in a spam folder.
 
@@ -75,8 +75,8 @@ dream job.
 When it comes to listing your phone number on your resume, several different
 formats are considered acceptable: 727-867-5309 | (727) 867-5309 | 727.867.5309
 
-You can also choose to put a label in front of your phone number such as "Tel:",
-"Ph:", "Phone:", or "M:" (for mobile).
+You can also choose to put a label in front of your phone number, such as
+"Tel:", "Ph:", "Phone:", or "M:" (for mobile).
 
 **_Note:_** Google numbers are easy to create and useful if you want to protect
 your number
@@ -84,14 +84,14 @@ your number
 ### Github Link
 
 Adding your GitHub link to your contact information not only shows you know how
-to use GitHub, but it also gives employers and interviewers quick access to
-examples of your work. Listing it as _github.com/username_ and making it a
-clickable link is acceptable and understood by other developers.
+to use GitHub but also gives employers and interviewers quick access to examples
+of your work. Listing it as _github.com/username_ and making it a clickable link
+is acceptable and understood by other developers.
 
 ### Portfolio link
 
 Similar to having your GitHub link on your resume, having a link to your
-portfolio gives employers, and interviewers access to your work. If your
+portfolio gives employers and interviewers access to your work. If your
 portfolio URL is too long for the space available, it is ok to use a
 [Bit.ly link](https://bitly.com/) for a better visual flow.
 
@@ -104,7 +104,7 @@ Here are some things to think about when writing your Career Summary:
 
 - Grab a hiring manager's attention right from the beginning, remembering you
   have only 25 seconds to make a good impression.
-- Spend time developing a summary that immediately gets their attention, and
+- Spend time developing a summary that immediately gets their attention and
   accurately and powerfully describes you as a solution to their problems.
 
 ## Skills
@@ -124,7 +124,7 @@ don't have to list every minute skill you may have. Stick to skills that benefit
 the position or organization.
 
 Need more help with finding what skills to add:
-[Resume Skills Section: How to List Skills on Your Resume](https://resumegenius.com/blog/resume-help/skills-section-of-resume)
+[Resume Skills Section: How to List Skills on Your Resume](https://resumegenius.com/blog/resume-help/skills-section-of-resume).
 
 ## Projects
 
@@ -183,11 +183,11 @@ So what information should you include:
 - Field of study
 - Graduation year (if applicable)
 - GPA (Note: You may not want to include this if it's not above 3.4)
-- Relevant honors or academic recognition, coursework, activities or other
+- Relevant honors or academic recognition, coursework, activities, or other
   achievements obtained during your education
 
 Need more examples on how to list your Education:
-[How to List Education on a Resume ](https://www.indeed.com/career-advice/resumes-cover-letters/how-to-list-education-on-a-resume)
+[How to List Education on a Resume ](https://www.indeed.com/career-advice/resumes-cover-letters/how-to-list-education-on-a-resume).
 
 ## Bonus - Volunteering
 
@@ -197,7 +197,7 @@ volunteering is not mandatory, so if you are running out of space, leave it off
 but be sure to talk about them during each interview.
 
 Need more examples on how to list Volunteering on your Resume:
-[How to List Volunteer Work on Your Resume](https://www.indeed.com/career-advice/resumes-cover-letters/listing-volunteer-work-on-a-resume-with-example)
+[How to List Volunteer Work on Your Resume](https://www.indeed.com/career-advice/resumes-cover-letters/listing-volunteer-work-on-a-resume-with-example).
 
 ## Resume Length: One-page vs. Two page
 
@@ -212,7 +212,7 @@ of information you need to share.
 
 ### One page
 
-One page resumes are easier to read, which is why so many people think resumes
+One-page resumes are easier to read, which is why so many people think resumes
 should be limited to one page. When you think about it, resume readers have to
 look at a large number of resumes daily, so having less information to scan
 makes sense. So how do you know if a one-page resume is right for you?
@@ -246,13 +246,9 @@ Need more information to help you decide the right length for your resume:
 ## Alum Resume Examples
 
 Need more examples on how to list your Professional Experience:
-[How to write your professional experience section](https://www.indeed.com/career-advice/resumes-cover-letters/listing-professional-experience-on-your-resume)
+[How to write your professional experience section](https://www.indeed.com/career-advice/resumes-cover-letters/listing-professional-experience-on-your-resume).
 
 - [Example Resume 1](https://drive.google.com/file/d/1hfkcv64Pv-k4QkZe2DrgvtY2rE_tQcS8/view?usp=sharing)
 - [Example Resume 2](https://drive.google.com/file/d/1hul1Ps_Yl21qHGlIbwdxtXXpiVsL5nyN/view?usp=sharing)
 - [Example Resume 3](https://drive.google.com/file/d/1FKU63YX5qc1G9KSuBE4s-NEgeZA3gtwb/view?usp=sharing)
 - [Example Resume 4](https://drive.google.com/file/d/1Zg9KwEK2HoM6w1UbzpEw9c44m2BcUzn6/view?usp=sharing)
-
-## Additional Resources
-
-- [Resumes Videos from Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/Resumes_CoverLetters.aspx)
