@@ -30,7 +30,7 @@ first or next position.
         <li>Reach out to Classmates</li>
       </ul>
     </li>
-    <li>Have you added Interests?
+    <li>Have you added Interest?
     <ul>
         <li>Add some of the companies you are interested in.</li>
       </ul></li>
@@ -115,7 +115,6 @@ first or next position.
     <li><a href="https://itcareers.apexsystems.com/"> Apex Systems</a></li>
     <li><a href="https://www.tential.com/"> Tential</a></li>
     <li><a href="https://www.hays.com/"> Hays</a></li>
-    <li><a href="https://www.fullstacktalent.com/"> FullStack Talent</a></li>
     <li><a href="https://www.roberthalf.com/"> Robert Half</a></li>
     <li><a href="https://www.kforce.com/"> KForce</a></li>
   </ul>
@@ -135,10 +134,10 @@ first or next position.
 </details>
 
 <details>
-  <summary>Step 10: Push to Github 3-5 days a week, stay active!</summary>
+  <summary>Step 10: Push to Github 3-5 days a week and stay active!</summary>
   <ul>
-    <li>Employers, especially developers that interview you will want to see that you
-  are actively building, learning, and developing</li>
+    <li>Employers, especially developers that interview, will want to see that you
+  are actively building, learning, and developing.</li>
   </ul>
 </details>
 
@@ -146,11 +145,11 @@ first or next position.
   <summary>Step 11: Apply for 5 - 10 jobs per week</summary>
   <ul>
     <li>Research each company - find their narrative</li>
-    <li>Update Resume to highlight what you need for the position, if applicable</li>
+    <li>Update your resume to highlight what you need for the position, if applicable</li>
     <li>Write a <a href="../career-prep/cover-letters">Cover Letter</a>
       <ul>
         <li>Include company narrative</li>
-        <li>Speak to why you would be an asset to them/the position</li>
+        <li>Speak about why you would be an asset to them/the position</li>
         <li>Include a link to your portfolio</li>
         <li>Close with what you hope the next step might be</li>
         <li>Keep it relevant to the position/company</li>
@@ -174,10 +173,10 @@ first or next position.
     </li>
     <li>1st Interview
       <ul>
-        <li>Gather information on next steps:
+        <li>Gather information on the next steps:
           <ul>
             <li>Find out email and contact for when you want a rec sent</li>
-            <li>Find out hiring timeline
+            <li>Find out the hiring timeline
               <ul>
                 <li>If the company is moving fast to hire:
                   <ul>
@@ -193,7 +192,7 @@ first or next position.
             </li>
           </ul>
         </li>
-        <li>After you Interview send a Thank You Email
+        <li>After your Interview send a Thank You Email
           <ul>
             <li><a href="https://www.indeed.com/career-advice/interviewing/sample-thank-you-letter-after-interview">4 Sample Thank-You Letter After Interview Examples</a></li>
             <li><a href="https://zety.com/blog/thank-you-email-after-an-interview">Thank You Email After an Interview: 6 Sample Notes for All Jobs</a></li>
@@ -204,7 +203,7 @@ first or next position.
     </li>
     <li>One Month after applying/interviewing
       <ul>
-        <li>Email to check in to see if the position is still open</li>
+        <li>Email to check-in to see if the position is still open</li>
         <li>Relate back to why you would be a great fit for the position/company</li>
         <li>Relate back to something that you learned or were impressed by in the
   interview</li>
