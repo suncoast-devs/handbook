@@ -29,7 +29,7 @@ listed merely as “Developer”.
 The summary/description should provide an overview of the company and set
 expectations for the position. It is an introduction to the company and its
 brand and should delve into the essential responsibilities, activities,
-qualifications, and skills for a role. It will also provide details around the
+qualifications, and skills for a role. It will also provide details about the
 company’s mission, culture, and benefits the employee can expect.
 
 ## Responsibilities/Duties
@@ -40,12 +40,12 @@ should help applicants understand the work environment and the activities they
 should expect daily. The responsibilities/duties are usually listed in order
 from most important to least important.
 
-As you read through responsibilities/duties, make a list of the one you’ve done
+As you read through responsibilities/duties, make a list of the ones you’ve done
 in your previous jobs.
 
 ## Qualifications and Skills
 
-The job description should specify education, previous job experience,
+The job description should specify the education, previous job experience,
 certifications, and technical skills required for the role. It may also include
 soft skills, like communication, problem-solving, and personality traits that
 would enhance the applicant’s fulfillment of the position.
@@ -68,7 +68,7 @@ work independently, detail-oriented, and analytical skills.
 There are times when the information provided in a job description can feel like
 they are telling you about the company when they are just using exciting things
 to draw you in. It takes practice to decide what the description is telling you
-the company’s “Narrative” vs. just selling you neat “Characteristics.”
+about the company’s “Narrative” vs. just selling you neat “Characteristics.”
 
 So what exactly is the difference between a narrative and characteristics?
 
@@ -90,7 +90,7 @@ meaning when learning about the company or the job.
 Avoid postings that sound too good to be true.
 
 - Overly high salary for low skills level
-- Job posts that state no skills or experience required
+- Job posts that state no skills or experience are required
 - Promise perfect hours and benefits
 
 If it is truly an ideal job, they would not need to advertise.
