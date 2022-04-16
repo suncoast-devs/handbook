@@ -24,7 +24,7 @@ class Cat
 var kitty = new Cat();
 ```
 
-In this case `kitty.Name` will be `null`, `kitty.Age` will be `0`, and
+In this case, `kitty.Name` will be `null`, `kitty.Age` will be `0`, and
 `kitty.HungerLevel` will be `0`. Since we did not provide any values for these
 properties when we made a `new Cat`.
 
@@ -58,13 +58,13 @@ class Cat
 var kitty = new Cat();
 ```
 
-In this case `kitty.Name` will be `"Unknown Cat"`, `kitty.Age` will be `0`, and
+In this case, `kitty.Name` will be `"Unknown Cat"`, `kitty.Age` will be `0`, and
 `kitty.HungerLevel` will be `3`.
 
 ### Declaring a class with properties and methods
 
 If all cats have the behavior that every time they play, their hunger increases
-by 3 we can implement that as a method on the class.
+by 3, we can implement that as a method on the class.
 
 ```csharp
 class Cat
@@ -91,13 +91,13 @@ kitty.Play();
 kitty.Play();
 ```
 
-At this point `kitty.HungerLevel` would be `11` (`5 + 3 + 3`).
+At this point, `kitty.HungerLevel` would be `11` (`5 + 3 + 3`).
 
 ### Declaring a property that can be null
 
-As we saw above the default value for a `string` is `null` but for an `int` it
-is `0`. We can indicate that we allow `null` values for the `int` by appending
-it with a `?`.
+As we saw above, the default value for a `string` is `null`, but for an `int`,
+it is `0`. We can indicate that we allow `null` values for the `int` by
+appending it with a `?`.
 
 > NOTE: This is often useful when declaring classes that will be populated from
 > a database or JSON where a column or field is `null` in the input.
@@ -115,7 +115,7 @@ class Cat
 var kitty = new Cat()
 ```
 
-In this case `kitty.Age` would be `null`, not `0`.
+In this case, `kitty.Age` would be `null`, not `0`.
 
 ### Constructors
 
