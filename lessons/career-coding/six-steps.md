@@ -20,7 +20,7 @@ Check out her suggestions and some resources I pulled from it in the thread:
    give up when you feel lost and unsure of what to do next. With a friend or
    group, you can figure it out & help each other get unstuck. We're working on
    creating groups to do this in the
-   [@codebookclub](https://twitter.com/CodeBookClub)
+   [@codebookclub](https://twitter.com/CodeBookClub).
 
 3. Build small projects first, then bigger ones later. Start off by building a
    small idea. Your MVP. Then continue to add little features to your project.
@@ -35,10 +35,10 @@ Check out her suggestions and some resources I pulled from it in the thread:
 5. Use [@codepen](https://twitter.com/CodePen) or
    [@codesandbox](https://twitter.com/codesandbox) to start off. Starting your
    own project can be overwhelming because of so many tasks you have to do to
-   even get it live. Using one or both is a good way to quickly get your
-   project up and running and sharable.
+   even get it live. Using one or both is a good way to quickly get your project
+   up and running and sharable.
 
 6. Starting a coding project can be like standing at the foot of a mountain,
    paralyzed as you look up at how far you have to go to reach the summit. You
-   give up before you start. So don't focus on the summit, focus on your next
+   give up before you start. So don't focus on the summit focus on your next
    step. The next small bit of code.
