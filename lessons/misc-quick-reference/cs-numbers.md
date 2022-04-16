@@ -71,14 +71,14 @@ int secondNumber = 4;
 var result = firstNumber / secondNumber;
 ```
 
-In this case `result` is `10`.
+In this case, `result` is `10`.
 
 The result of adding, subtracting, or dividing where at least one of the values
-is not an integer, but an `double` or `float` will result in a `double` or
+is not an integer but a `double` or `float` will result in a `double` or
 `float`.
 
-Thus if we wanted the above to include a decimal part we could make one of the
-two numbers a non-`int`
+Thus if we wanted the above to include a decimal part, we could make one of the
+two numbers a non-`int`.
 
 ```csharp
 double firstNumber = 42;
@@ -87,7 +87,7 @@ int secondNumber = 4;
 var result = firstNumber / secondNumber;
 ```
 
-In this case `result` is `10.5`.
+In this case, `result` is `10.5`.
 
 ## `%`
 
@@ -105,8 +105,9 @@ var result    = firstNumber / secondNumber;
 var remainder = firstNumber % secondNumber;
 ```
 
-In this case `result` is `10` and `remainder` is `2`. The remainder is `2`
-because as we divide 4 into `42` we can only do so `10` times, leaving `2` over.
+In this case, `result` is `10`, and the `remainder` is `2`. The remainder is `2`
+because as we divide 4 into `42`, we can only do so `10` times, leaving `2`
+over.
 
 ### Modulo is useful for things like determining if a number is even or odd.
 
@@ -119,7 +120,7 @@ It is also good for ensuring that a value is _bounded_ by some value, causing it
 to wrap around.
 
 ```csharp
-// We don't want index to be 5 or more (stops at 4), and if it does it should wrap around to 0
+// We don't want index to be 5 or more (stops at 4), and if it does, it should wrap around to 0
 var index = 0;
 
 index = (index + 1) % 5;  // 0 + 1 is 1 -- 1 % 5 = 1
@@ -134,7 +135,7 @@ Console.WriteLine($"index is {index}");
 index = (index + 1) % 5;  // 3 + 1 is 4 -- 4 % 5 = 4
 Console.WriteLine($"index is {index}");
 
-// Here is where the % comes into play, adding one to 4 give 5, but we want this to "wrap around" back to 0.
+// Here is where the % comes into play adding one to 4 gives 5, but we want this to "wrap around" back to 0.
 
 index = (index + 1) % 5;  // 4 + 1 is 5 -- 5 % 5 = 0
 Console.WriteLine($"index is {index}");
@@ -189,7 +190,7 @@ Attempts to convert the given string into an `int` value. The method also takes
 additional arguments that allow for different formats of the string, e.g.
 allowing it to parse numbers with currency symbols like "$42".
 
-If the string _cannot_ be parsed into an integer then an **exception** is
+If the string _cannot_ be parsed into an integer, then an **exception** is
 thrown, FormatException.
 
 Example:
@@ -204,10 +205,10 @@ int parsedNumber = int.Parse(someStringVariable);
 
 `bool success = int.TryParse("42", out result)`
 
-Much like the `int.Parse` method except this will return a boolean (true/false)
-if the number is parsable. If the number is parsable, and the method returns
-true, then the variable in the second argument, and after the keyword `out` will
-be updated with the new value.
+Much like the `int.Parse` method, except this, will return a boolean
+(true/false) if the number is parsable. If the number is parsable, and the
+method returns true, then the variable in the second argument and after the
+keyword `out` will be updated with the new value.
 
 Example:
 
@@ -231,7 +232,7 @@ else
 
 `double.Parse` and `double.TryParse`
 
-These work exactly like their `int` counterparts yet they work with doubles.
+These work exactly like their `int` counterparts, yet they work with doubles.
 
 Example:
 
@@ -270,14 +271,14 @@ char digitAsCharacter = System.Convert.ToChar(stringNumber[0]);
 
 The `Convert` class has many variations and can convert between many types. To
 see other examples, check the
-[MSDN Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netcore-3.1)
+[MSDN Documentation](https://docs.microsoft.com/en-us/dotnet/api/system.convert?view=netcore-3.1).
 
 ## `Casting`
 
-Much like the `Convert` we can use the idea of _casting_ to attempt a conversion
-of one data type to another.
+Much like the `Convert`, we can use the idea of _casting_ to attempt a
+conversion of one data type to another.
 
-To use casting you place the name of the type you are converting to in
+To use casting, you place the name of the type you are converting to in
 parentheses and place this before the variable you are casting.
 
 For instance:
@@ -293,7 +294,7 @@ int integerNumber = (int)doubleNumber;
 
 ## `ToString`
 
-For both `int` and `double` types we can convert to a string as follows:
+For both `int` and `double` types, we can convert to a string as follows:
 
 Example
 
@@ -312,7 +313,7 @@ string valueAsString = value.ToString();
 
 ### `Floor`
 
-The `Floor` method, `Math.Floor`, accepts a `double` and returns the number
+The `Floor` method, `Math.Floor` accepts a `double` and returns the number
 without any of the digits after the decimal part. The technical description is
 _Returns the largest integral value less than or equal to the specified number._
 
@@ -325,10 +326,10 @@ double priceFloored = Math.Floor(price);
 
 ### `Ceiling`
 
-The `Ceiling` method, `Math.Ceiling`, accepts a `double` and returns the
+The `Ceiling` method, `Math.Ceiling` accepts a `double` and returns the
 _smallest_ whole number that is greater than or equal to the number. For
-instance if we asked for the `Ceiling` of `42` we would get `42` back since it
-`42` a whole number that is equal to the number we gave it. However, if we
+instance, if we asked for the `Ceiling` of `42`, we would get `42` back since
+`42` is a whole number that is equal to the number we gave it. However, if we
 supplied `42.01`, the next smallest whole number would be `43`.
 
 > NOTE: The resulting type is still `double` -- if you want an integer, you'll
@@ -358,5 +359,5 @@ double roundedPiWithThreeDigits = Math.Round(pi,3);
 // roundedPiWithThreeDigits will be 3.142 since we are rounding UP because the *fourth* digit is a 5
 ```
 
-> NOTE: there are also different ways to round numbers. If interested, check the
-> [C# documentation on rounding](https://docs.microsoft.com/en-us/dotnet/api/system.midpointrounding?view=net-5.0#System_MidpointRounding_ToEven)
+> NOTE: There are also different ways to round numbers. If interested, check the
+> [C# documentation on rounding](https://docs.microsoft.com/en-us/dotnet/api/system.midpointrounding?view=net-5.0#System_MidpointRounding_ToEven).
