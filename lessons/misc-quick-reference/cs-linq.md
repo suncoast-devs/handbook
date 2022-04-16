@@ -70,7 +70,7 @@ var popularMovies = movies.Where(movie => movie.Screenings >= 100);
 
 ### Aggregate
 
-The `Aggregate` method, often called `reduce` in other languages, takes the list
+The `Aggregate` method often called `reduce` in other languages, takes the list
 and processes it down into a single value. Thus why it is often called `reduce`.
 
 > Returns a single value. It starts with a value we will call the
@@ -136,28 +136,28 @@ var moviesThatCostMoreThanTenDollars = movies.Count(movie => movie.PricePerTicke
 > Returns _an integer_ by adding up the value of the expression for each item.
 
 ```csharp
-// Get the total price of all movie's PricePerTicket. This goes through every movie, adding to a running total of PricePerTicket, placing the grand total in the variable totalPriceOfAllTickets
+// Get the total price of all movies' PricePerTicket. This goes through every movie, adding to a running total of PricePerTicket, placing the grand total in the variable totalPriceOfAllTickets
 var totalPriceOfAllTickets = movies.Sum(movie => movie.PricePerTicket);
 ```
 
 ### First
 
-> Returns _a single element of the list_ which is the first item for which the
+> Returns _a single element of the list_, which is the first item for which the
 > expression returns `true`. If no item is found, an _exception_ is thrown.
 
 ```csharp
-// Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't we'll get an exception/error
+// Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't, we'll get an exception/error
 var favoriteMovie = movies.First(movie => movie.Name == "Jaws");
 ```
 
 ### FirstOrDefault
 
-> Returns _a single element of the list_ which is the first item for which the
+> Returns _a single element of the list_, which is the first item for which the
 > expression returns `true`. If no item is found, the default value for that
 > type is returned.
 
 ```csharp
-// Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't we'll get a value of `null` for `favoriteMovie`
+// Our favorite movie is Jaws, let's get it from the list if it is there. If it isn't, we'll get a value of `null` for `favoriteMovie`
 var favoriteMovie = movies.FirstOrDefault(movie => movie.Name == "Jaws");
 ```
 
@@ -183,7 +183,7 @@ var lastMovieCostingMoreThanTenDollars = movies.LastOrDefault(movie => movie.Pri
 
 ### Distinct
 
-> Returns all the distinct items in a list. This is commonly use in conjunction
+> Returns all the distinct items in a list. This is commonly used in conjunction
 > with a `Select`.
 
 ```csharp
@@ -193,8 +193,8 @@ var titles = movies.Select(movie => movie.Name).Distinct();
 
 ### Max
 
-> Returns the highest value in the collection, but not the actual item. Useful
-> for getting the largest value of a list of numbers, or the largest value of
+> Returns the highest value in the collection but not the actual item. Useful
+> for getting the largest value of a list of numbers or the largest value of
 > some property of a list of objects.
 
 ```csharp
@@ -204,7 +204,7 @@ var biggestBudget = movies.Max(movie => movie.Budget);
 
 ### Min
 
-> Returns the smallest value in the collection, but not the actual item. Useful
+> Returns the smallest value in the collection but not the actual item. Useful
 > for getting numbers.
 
 ```csharp
