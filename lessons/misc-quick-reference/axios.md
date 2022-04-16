@@ -4,10 +4,10 @@ title: AXIOS, an alternative to JavaScript fetch
 
 # axios
 
-[`axios`](https://github.com/axios/axios) is a third party `npm` library for
+[`axios`](https://github.com/axios/axios) is a third-party `npm` library for
 accessing remote resources in a JavaScript application. It serves as an
 alternative to the `fetch` API. The benefit to using something like `axios` is
-that it has a more friendly interface than `fetch` but it does add more
+that it has a more friendly interface than `fetch`, but it does add more
 dependencies to your project.
 
 ## Adding it to a project
@@ -20,7 +20,7 @@ npm install --save axios
 
 ## Simple `get` interface.
 
-After adding `axios` to your project you can get a response for a `get` request
+After adding `axios` to your project, you can get a response for a `get` request
 via:
 
 ```javascript
@@ -44,7 +44,7 @@ The response for a request contains the following information.
   // `statusText` is the HTTP status message from the server response
   statusText: 'OK',
 
-  // `headers` the HTTP headers that the server responded with
+  // `headers` are the HTTP headers that the server responded with
   // All header names are lower cased and can be accessed using the bracket notation.
   // Example: `response.headers['content-type']`
   headers: {},
@@ -59,11 +59,11 @@ The response for a request contains the following information.
 }
 ```
 
-The `data` will automatically be parsed based on the server's content type
+The `data` will automatically be parsed based on the server's content-type
 header. This means we do **not** have to parse the data if we are dealing with a
-typical JSON based api.
+typical JSON-based API.
 
-If we are trying to use the data from the response we simply access the `data`
+If we are trying to use the data from the response, we simply access the `data`
 property of the object.
 
 ```javascript
@@ -80,7 +80,7 @@ if (response.status === 200) {
 
 ## Sending a non-GET request, with data.
 
-We can also specify request parameters easily. For instance to send a JSON API
+We can also specify request parameters easily. For instance, to send a JSON API
 request:
 
 ```javascript
@@ -100,12 +100,12 @@ if (response.status === 201) {
 ```
 
 Notice that we do not have to do any `JSON.stringify` as `axios` knows how to
-parse our request and specify the content type headers.
+parse our request and specify the content-type headers.
 
 ## Setting options such as headers
 
-If you need to specify headers there are
-[many things we can set on a request](https://github.com/axios/axios#request-config)
+If you need to specify headers, there are
+[many things we can set on a request](https://github.com/axios/axios#request-config),
 but the most direct ones are:
 
 ```javascript
@@ -126,7 +126,7 @@ but the most direct ones are:
   },
 
   // `data` is the data to be sent as the request body
-  // Only applicable for request methods 'PUT', 'POST', 'DELETE , and 'PATCH'
+  // Only applicable for request methods 'PUT', 'POST', 'DELETE', and 'PATCH'
   // When no `transformRequest` is set, must be one of the following types:
   // - string, plain object, ArrayBuffer, ArrayBufferView, URLSearchParams
   // - Browser only: FormData, File, Blob
@@ -166,7 +166,7 @@ if (status === 200) {
 ```
 
 We can even **rename** a destructured variable to avoid having to do
-`const items = data`
+`const items = data`.
 
 ```javascript
 const { status, data: items } = await axios({
