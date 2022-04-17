@@ -5,7 +5,7 @@ title: Enumerating objects
 Unfortunately, objects cannot be used with `map`, `filter`, etc.
 
 Fortunately, JavaScript gives us a way. We can, for an object, get an array of
-the **keys** of the object. We can use this array to `map`, and `filter`.
+the **keys** of the object. We can use this array to `map` and `filter`.
 
 For instance, suppose we were given the following object:
 
@@ -25,16 +25,16 @@ const myHobbies = {
 ```
 
 And we need to turn this into an array containing the name of the key followed
-by the title. Given the object above we would want something like
+by the title. Given the object above, we would want something like
 `['pandas - Panda Bears', 'miniatures - Miniature Painting']`.
 
-We can't do `myHobbies.map` but we can do this:
+We can't do `myHobbies.map`, but we can do this:
 
 ```javascript
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
 ```
 
-And now we can use that to map
+And now we can use that to map.
 
 ```javascript
 const keys = Object.keys(myHobbies) // ['pandas', 'miniatures']
@@ -46,8 +46,8 @@ const answer = keys.map(key => {
 })
 ```
 
-There is another way to work with objects and that is `Object.entries` --
-`entries` gives us back an array-of-arrays. The first element of each array is
+There is another way to work with objects, and that is `Object.entries` --
+`entries` give us back an array of arrays. The first element of each array is
 the key, and the second is the value. This allows us to avoid the value lookup.
 
 ```javascript
