@@ -8,9 +8,9 @@ write clean, well-formatted code.
 
 # Rule 1 - Follow your team's rules
 
-Follow whatever formatting rules your team has implemented. For instance, at SDG
-we do not use `;` at the end of lines in JavaScript. If your team does put `;`
-at the end of lines, then you will too.
+Follow whatever formatting rules your team has implemented. For instance, at
+SDG, we do not use `;` at the end of lines in JavaScript. If your team does put
+`;` at the end of lines, then you will too.
 
 # Use an automated code formatting tool
 
@@ -18,17 +18,17 @@ Keeping Rule 1 in mind, hopefully, your team has configured automated code
 formatting for your projects. If so, you should use these. It will keep your
 code in the same style as all the other code in the project.
 
-At SDG we use these formatters to generate consistent code format:
+At SDG, we use these formatters to generate consistent code format:
 
 - [`Prettier`](https://prettier.io/)
 - [`Omnisharper`](https://www.omnisharp.net/)
 
-However, these formatters can only do so much to format code
+However, these formatters can only do so much to format code.
 
 # Rule 2 - Don't leave commented out code in your commits
 
 We all comment out code while working on a feature. However, leaving behind
-commented out code is a bad habit and leads to confusion by your fellow
+commented out code is a bad habit and leads to confusion among your fellow
 developers, or yourself, in the future.
 
 Review all your commits before submitting them to ensure that the comments you
@@ -70,7 +70,7 @@ example. The four sections are:
 - Analyze the response to set state
 - Render UI
 
-Let's improve the code by adding some visual space
+Let's improve the code by adding some visual space.
 
 ```jsx
 const url = 'http://handbook.suncoast.io/api'
@@ -101,7 +101,7 @@ the parameters for an API call, whereas the last is the API call itself.
 
 # Use good variable names
 
-Let's look at that last example again, but this time with poor variable names
+Let's look at that last example again, but this time with poor variable names.
 
 ```jsx
 const u = 'http://handbook.suncoast.io/api'
@@ -130,14 +130,14 @@ used different variables than the expected property names. Also, `r`, while
 shorter, doesn't represent the contents and purpose of the variable, a
 `response`.
 
-Generally try to be as verbose as possible to explain the content and purpose of
-a variable, but no further. We don't need the variable to be
+Generally, try to be as verbose as possible to explain the content and purpose
+of a variable, but no further. We don't need the variable to be
 `urlToTheAPIWeGetOurInformationFrom`, but `url` is enough in this context.
 
-There are cases where common shorter names are acceptable and you are free to
+There are cases where common shorter names are acceptable, and you are free to
 use short, less context-providing, variable names in those cases. For instance,
 it is common in a `sort` function to use `a` and `b` like so:
-`scores.sort((a,b) => a - b))`
+`scores.sort((a,b) => a - b))`.
 
 # Keep your code organized in files
 
@@ -145,10 +145,10 @@ When writing code, such as a React component, it is common to extract a smaller
 component from a larger one as the code size grows. Once you have, consider if
 this component deserves to be its own file. If the component is of significant
 size, it should be its own file just for clarity's sake. If the component is
-going to be used by more than one component than it should be it's own file.
+going to be used by more than one component, then it should be its own file.
 
-These same rules apply to `C#` classes, to JavaScript modules, and any other
-style code.
+These same rules apply to `C#` classes, JavaScript modules, and any other style
+code.
 
 # Working but long code > short and slick non-working code
 
