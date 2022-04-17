@@ -38,14 +38,15 @@ git init
 
 ## Add files to be committed
 
-This command tells git to add all the files in the directory to a commit. NOTE,
-you will have to do a `git commit` later to actually make the commit.
+This command tells git to add all the files in the directory to a commit.
+
+NOTE: You will have to do a `git commit` later to actually make the commit.
 
 ```shell
 git add .
 ```
 
-Alternatively you can add specific files
+Alternatively, you can add specific files.
 
 ```shell
 git add public/new.css
@@ -98,7 +99,7 @@ git commit -m "Your descriptive commit message"
 
 ## Amend a previous commit
 
-As long as the commit has not been `git push` yet you may change the message
+As long as the commit has not been `git push` yet, you may change the message
 (and the contents).
 
 ```shell
@@ -107,7 +108,7 @@ git commit -amend -m "Your corrected descriptive commit message"
 
 ## Push the commit upstream
 
-This will push to whatever the `origin` is, in most case this is github.
+This will push to whatever the `origin` is, in most cases, this is GitHub.
 
 ```shell
 git push
@@ -115,8 +116,8 @@ git push
 
 ## Pull down code from upstream
 
-This will pull down new code from whatever the `origin` is, in most case this is
-github.
+This will pull down new code from whatever the `origin` is, in most cases, this
+is GitHub.
 
 ```shell
 git pull
@@ -143,7 +144,7 @@ git clone <url to repository>
 
 ## Stop a merge and revert the merge
 
-If you get conflicts when merging code you can undo the merge and revert to the
+If you get conflicts when merging code, you can undo the merge and revert to the
 code before the merge started.
 
 ```shell
@@ -190,7 +191,7 @@ git reset HEAD~1
 ## Go back to any commit and lose changes
 
 Takes you back to that specific commit, losing all the commits since then. You
-can use `HEAD~1` to mean "Back one commit from the current commit".
+can use `HEAD~1` to mean "Back one commit from the current commit."
 
 ```shell
 git reset --hard specificCommitName
@@ -213,7 +214,7 @@ do the following steps:
 
 ## Fork an existing repo
 
-- Click Fork in upper right of repo on Github
+- Click Fork in the upper right of the repo on GitHub
 - Clone your fork onto your computer (see above)
 - Checkout a branch to contain your changes
   - `git checkout -b <branch-name>`
@@ -232,10 +233,10 @@ git merge upstream/master
 git push
 ```
 
-If this repository is a fork, the message from github may include a link to
+If this repository is a fork, the message from GitHub may include a link to
 create a pull request.
 
 If not:
 
-- Open your forked repo on github
-- Create PR from your forked repo on github
+- Open your forked repo on GitHub
+- Create PR from your forked repo on GitHub
