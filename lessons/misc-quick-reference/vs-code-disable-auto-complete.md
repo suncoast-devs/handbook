@@ -4,11 +4,11 @@ title: Disable Auto Complete in Visual Studio Code
 
 # Turn off all auto suggests in VS Code
 
-Some students do not like the auto complete nature of VS Code. I recommend
-waiting to see if you find these auto complete suggestions helpful. Later, if
-you want you can turn these features off.
+Some students do not like the auto-complete nature of VS Code. I recommend
+waiting to see if you find these auto-complete suggestions helpful. Later, if
+you want, you can turn these features off.
 
-Use the `View / Command Pallette` menu option and type in 'Open Settings (JSON)"
+Use the `View / Command Palette` menu option and type in 'Open Settings (JSON)"
 to open your settings file. Just _INSIDE_ the opening `{` of the file, paste the
 following:
 
