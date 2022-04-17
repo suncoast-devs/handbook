@@ -103,11 +103,11 @@ for (var index = 0; index < name.Length; index++)
 
 #### Using `LINQ`
 
-If you add `using System.Linq` to your code you may use LINQ to iterate through
-a string. All of the methods for LINQ are available to you and it treats the
-string as a sequence of characters. In this example we use the ability for LINQ
-to `Select` (transform) a sequence (in this case characters) into a new list. We
-also use the ability to have the index provided as well.
+If you add `using System.Linq` to your code, you may use LINQ to iterate through
+a string. All of the methods for LINQ are available to you, and it treats the
+string as a sequence of characters. In this example, we use the ability for LINQ
+to `Select` (transform) a sequence (in this case, characters) into a new list.
+We also use the ability to have the index provided as well.
 
 ```csharp
 var name = "Mary";
@@ -184,8 +184,8 @@ var lowerName = name.ToLower();
 
 We can get part of a string by using the substring method.
 
-NOTE: The first number in the method is the starting index, the second number is
-how many characters to return.
+NOTE: The first number in the method is the starting index, and the second
+number is how many characters to return.
 
 ```csharp
 var movie = "The Avengers: Endgame";
@@ -229,7 +229,7 @@ var endsWithExclamation = headline.EndsWith("!");
 
 ### StartsWith
 
-We can also check if a string starts with a certain substring by using
+We can also check if a string starts with a certain substring by using the
 StartsWith method.
 
 ```csharp
@@ -257,7 +257,7 @@ var studentString = String.Join(", ", studentNames);
 ### Pad + Trim
 
 You can add and remove characters to the beginning and end of strings with
-PadLeft, PadRight and Trim methods.
+PadLeft, PadRight, and Trim methods.
 
 NOTE: Trim will automatically trim the left and right sides of a string.
 
