@@ -5,7 +5,7 @@ title: JavaScript Arrays
 ## Spread Operator and Arrays
 
 We can make a new array from the elements of an existing array using the
-`spread` operator (`...`)
+`spread` operator (`...`).
 
 ```javascript
 const words = ['Wind', 'Rain', 'Fire']
@@ -36,12 +36,12 @@ const otherWords = ['Before', ...words, 'After']
 
 This is often useful to make a _copy_ of an array:
 `const copyOfArray = [...array]` or append to an array:
-`const newArrayWithWordAppended = [...array, newWord]`
+`const newArrayWithWordAppended = [...array, newWord]`.
 
 ## `join(delimiter = ',')`
 
-Joins all elements of an array into a string. Without any argument the list will
-be joined with a `,`
+Joins all elements of an array into a string. Without any argument, the list
+will be joined with a `,`
 
 ```javascript
 const words = new Array('Wind', 'Rain', 'Fire')
@@ -135,9 +135,9 @@ myArray.sort() // sorts the array so that myArray = ["Fire", "Rain", "Wind"]
 ## Advanced Sorting
 
 The sort method and other methods below that take a callback are known as
-iterative methods, because they iterate over the entire array in some fashion.
+iterative methods because they iterate over the entire array in some fashion.
 
-The callback function is called with two arguments, that are array's elements.
+The callback function, is called with two arguments, which are array's elements.
 
 The function below compares two values and returns one of three values:
 
@@ -155,8 +155,8 @@ const sortedArray = myArray.sort(sortFunction)
 // sortedArray now has [ 'one', 'four', 'three' ]
 ```
 
-> NOTE, we could use this more brief code: for `sortFunction` :
-> `return a.length - b.length`
+> NOTE, We could use this more brief code: for `sortFunction` :
+> `return a.length - b.length`.
 
 > NOTE: We could also write this:
 
@@ -168,9 +168,9 @@ const sortedArray = myArray.sort((a, b) => a.length - b.length)
 
 **Rules for the return value of our sorting function**
 
-if `a` is to come before `b` by the sorting system, return `-1` (or any negative
-number) if `a` is to come after `b` by the sorting system, return `1` (or any
-positive number) if `a` and `b` are considered equivalent, return `0`.
+If `a` is to come before `b` by the sorting system, return `-1` (or any negative
+number). If `a` is to come after `b` by the sorting system, return `1` (or any
+positive number). If `a` and `b` are considered equivalent, return `0`.
 
 ## `indexOf(searchElement[, fromIndex])`
 
@@ -187,7 +187,7 @@ console.log(letters.indexOf('z')) // logs -1, because 'z' was not found
 
 ## `lastIndexOf(searchElement[, fromIndex])`
 
-Works like indexOf, but starts at the end and searches backwards.
+Works like indexOf, but starts at the end and searches backward.
 
 ```javascript
 const letters = ['a', 'b', 'c', 'd', 'a', 'b']
@@ -296,15 +296,15 @@ console.log(otherNumbers.some(isMoreThan50)) // logs false
 ## `reduce(callback[, initialValue])`
 
 Applies `callback(accumulator, currentValue[, currentIndex, array])` for each
-value in the array for the purpose of reducing the list of items down to a
-single value. The reduce function returns the final value returned by the
-callback function. If an initialValue is specified the callback is called with
-the initial value as the first parameter value and the value of the first item
-in the array as the second parameter value. On the initial call if no
-initialValue is specified then the first two parameter values will be the first
-and second elements of the array. On every subsequent call the first parameter's
-value will be whatever the callback returned on the previous call and the second
-parameter's value will be the next value in the array.
+value in the array to reduce the list of items down to a single value. The
+reduce function returns the final value returned by the callback function. If an
+initialValue is specified, the callback is called with the initial value as the
+first parameter value and the value of the first item in the array as the second
+parameter value. On the initial call, if no initialValue is specified, then the
+first two parameter values will be the first and second elements of the array.
+On every subsequent call, the first parameter's value will be whatever the
+callback returned on the previous call, and the second parameter's value will be
+the next value in the array.
 
 If the callback function needs access to the index of the item being operated on
 or the entire array they are available as optional parameters.
@@ -352,7 +352,7 @@ Array.isArray(undefined) // false
 ## `of`
 
 The Array.of() method creates a new Array instance from a variable number of
-arguments, regardless of number or type of the arguments.
+arguments, regardless of the number or type of the arguments.
 
 ```js
 Array.of(7) // [7]
