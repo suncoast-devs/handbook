@@ -2,13 +2,13 @@
 title: JavaScript on the Command Line
 ---
 
-You can run non-browser specific JavaScript code from the command-line using the
+You can run non-browser-specific JavaScript code from the command line using the
 `node` runtime.
 
 ## Running `node` to interactively run JavaScript
 
-If you simply run `node` at the command line you will be in a REPL
-(`Read Evaluate Print Loop`) and you can type JavaScript code that is evaluated
+If you simply run `node` at the command line, you will be in a REPL
+(`Read Evaluate Print Loop`), and you can type JavaScript code that is evaluated
 as you type. This is much like the `Console` tab in your browser's developers
 tools.
 
@@ -16,11 +16,11 @@ tools.
 node
 ```
 
-To **exit** this mode, press `Control-D`
+To **exit** this mode, press `Control-D`.
 
 ## Running an existing script
 
-If you have a script such as `program.js` you can run it via:
+If you have a script such as `program.js`, you can run it via:
 
 ```shell
 node program.js
@@ -31,17 +31,17 @@ experiences an unhandled exception or the script terminates.
 
 ## Passing arguments to the script
 
-If your script needs information from the user they can specify it on the
+If your script needs information from the user, they can specify it on the
 command line.
 
-Let's say your program intends to add two numbers together and you'd like them
+Let's say your program intends to add two numbers together, and you'd like them
 to input those on the command line:
 
 ```shell
 node program.js 999 42
 ```
 
-When your program runs each space-separated option from the command line are
+When your program runs, each space-separated option from the command line is
 available as an array: `process.argv`
 
 ```javascript
