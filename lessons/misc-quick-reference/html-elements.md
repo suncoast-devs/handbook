@@ -4,7 +4,7 @@ title: HTML Elements
 
 There are many
 [elements available](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-in the HTML specification and it is a good idea to become familiar with as many
+in the HTML specification, and it is a good idea to become familiar with as many
 of them as you can. However, there are a core set of elements that we will see
 used more often. We have gathered the list of these elements here with a
 description of where and how to use them.
@@ -21,8 +21,8 @@ These elements convey a
 [semantic](https://developer.mozilla.org/en-US/docs/Glossary/Semantics) meaning.
 These
 [semantic elements](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantic_elements)
-allow us to convey meaning to search engines, screen readers, and to our fellow
-developers. When possible use the best semantic element to represent the _idea_
+allow us to convey meaning to search engines, screen readers, and our fellow
+developers. When possible, use the best semantic element to represent the _idea_
 of the enclosed content.
 
 ---
@@ -170,8 +170,8 @@ of the enclosed content.
 
 These elements don't convey any specific semantic meaning and can be used for
 multiple meanings. When there is not a more meaningful semantic element to
-choose, use these. For instance, a `<div>` can be used if an element such as
-`<section>`, `<aside>`, `<header>`, `<footer>`, or other element would not be
+choose from, use these. For instance, a `<div>` can be used if an element such
+as `<section>`, `<aside>`, `<header>`, `<footer>`, or other element would not be
 appropriate.
 
 ### [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
