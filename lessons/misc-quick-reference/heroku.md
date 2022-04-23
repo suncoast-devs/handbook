@@ -25,9 +25,9 @@ heroku ps:restart
 ## Live view the server logs
 
 When you receive a `500` error, this means something went wrong on the server
-side. Just like when you run `dotnet watch run` you can see the server's log
-file. On Heroku this log file is stored by the server and we can view it with a
-Heroku CLI command.
+side. Just like when you run `dotnet watch run`, you can see the server's log
+file. On Heroku, this log file is stored by the server, and we can view it with
+a Heroku CLI command.
 
 To view the server logs:
 
@@ -35,7 +35,7 @@ To view the server logs:
 heroku logs --tail
 ```
 
-This will keep updating until you stop it with `control-c`
+This will keep updating until you stop it with `control-c`.
 
 ## Directly interact with your production database
 
@@ -55,14 +55,14 @@ You can end your session with the `exit` command.
 ## Pull a copy of your Heroku database to your local database
 
 Your app has its **own** distinct database on Heroku. If you want a copy of that
-database, its tables and rows, you can pull **DOWN** the database from Heroku to
-your local database by using `pg:pull`.
+database, its tables, and rows, you can pull **DOWN** the database from Heroku
+to your local database by using `pg:pull`.
 
 ```shell
 heroku pg:pull DATABASE_URL my-database-name-goes-here-instead-of-this
 ```
 
-> NOTE: replace `my-database-name-goes-here-instead-of-this` with the name of
+> NOTE: Replace `my-database-name-goes-here-instead-of-this` with the name of
 > your local database. This would be the name you give to `pgcli` or `psql`
 > locally.
 
@@ -91,7 +91,7 @@ heroku pg:reset
 heroku pg:push my-database-name-goes-here-instead-of-this DATABASE_URL
 ```
 
-> NOTE: replace `my-database-name-goes-here-instead-of-this` with the name of
+> NOTE: Replace `my-database-name-goes-here-instead-of-this` with the name of
 > your local database. This would be the name you give to `pgcli` or `psql`
 > locally.
 
@@ -105,9 +105,9 @@ heroku pg:push SuperAwesomeAppDatabase DATABASE_URL
 
 ## See all the configuration values on Heroku
 
-Locally in development we use `dotnet user-secrets` and the
-`.env.development.local` files to configure values for `dotnet` and `react`
-respectively. For heroku we use `heroku config`. To see all the values defined
+Locally in development, we use `dotnet user-secrets` and the
+`.env.development.local` files to configure values for `dotnet` and `react`,
+respectively. For Heroku, we use `heroku config`. To see all the values defined,
 you can run:
 
 ```shell
@@ -131,14 +131,14 @@ JWT_KEY:                     134523475389457238941234567572394857239485723495872
 
 ## Set a configuration value on Heroku
 
-To set a specific configuration you will use `heroku config:set`. Let's say you
-want to set the configuration value `AWS_KEY` to `123456789` you would run:
+To set a specific configuration, you will use `heroku config:set`. Let's say you
+want to set the configuration value `AWS_KEY` to `123456789`, you would run:
 
 ```shell
 heroku config:set AWS_KEY=123456789
 ```
 
-> NOTE: Your application will automatically reload when you run this command so
+> NOTE: Your application will automatically reload when you run this command, so
 > it will see the new values.
 
 ## Open my production application in the browser
