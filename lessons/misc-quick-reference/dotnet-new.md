@@ -34,15 +34,15 @@ dotnet new sdg-react -o NameOfProject
 ```
 
 Replace `sdg-react` with the specific template name you wish to use and
-`NameOfProject` with a _camel cased_ project name preferably with a letter as
+`NameOfProject` with a _camel-cased_ project name, preferably with a letter as
 the first character of the project name.
 
-During setup it will ask if you wish to create a GitHub repository. You should
-say `YES` if you intend to push to github.
+During setup, it will ask if you wish to create a GitHub repository. You should
+say `YES` if you intend to push to GitHub.
 
 ## Recreating a project
 
 If you **recreate** a project with the same name, it will link to the existing
-github repository. So if you have to **recreate** a project we recommend **using
-a new unique name** or **deleting the old github project** before creating a new
-local project
+GitHub repository. So if you have to **recreate** a project, we recommend
+**using a new unique name** or **deleting the old GitHub project** before
+creating a new local project
