@@ -29,9 +29,9 @@ start learning now and making necessary connections.
 and engage with your professional network: access knowledge, insights, and
 opportunities.
 
-LinkedIn contains some key sections that you need to complete. Each section
-serves a purpose to help you build the online representation of your experience
-and achievements.
+LinkedIn contains some key sections that you need to complete. Each section has
+a purpose that helps you build the online representation of your experience and
+achievements.
 
 ### Background Photo
 
@@ -55,8 +55,8 @@ foremost.
 
 The headline is a section at the top of each user's profile where they can
 create a short description (120 characters max). This description appears next
-to the user's name in search results and written in a way to entice readers to
-learn more about the user's experience and background.
+to the user's name in search results and is written in a way to entice readers
+to learn more about the user's experience and background.
 
 ### About
 
@@ -80,14 +80,14 @@ career once you have built up your accomplishments.
 ### Education
 
 Your education section says a lot about you, but you don't have to list every
-level of education you received. Remember to keep it professional listing the
-schools/colleges/universities which matter and relate to your profession.
+level of education you received. Remember to keep it professional by listing the
+schools/colleges/universities that matter and relate to your profession.
 
 While adding a school in your education section, consider supplying any
 additional information that may be useful, such as:
 
-- Extracurricular activities you participated while attending that
-  school/college in Activities and Societies text box.
+- Extracurricular activities you participated in while attending that
+  school/college in the Activities and Societies text box.
 - Awards or honors you received from the school/college in Description
 - Add media such as photos, videos, links, or documents to showcase your
   accomplishments.
@@ -95,13 +95,13 @@ additional information that may be useful, such as:
 ### Volunteer Experience
 
 Companies like to see if you are about more than just the work. Showcasing how
-you support the community, environment, and other causes show that you give
+you support the community, environment, and other causes shows that you give
 back, which your profile visitors may find interesting and impressive.
 
 ### Skills & Endorsements
 
 The Skills and Endorsements section not only allows you to showcase your skills
-but also receive endorsements by others who loved your work related to the
+but also receive endorsements from others who loved your work related to the
 skills you added. You want your skill section to tell others who you are and
 what you can do while including keywords that make you more searchable.
 
@@ -135,7 +135,7 @@ There are 9 different types of accomplishments you can list:
 - Organizations
 
 It is an excellent opportunity to showcase all the hard-earned accomplishments
-you have achieved to the potential professionals and visitors. Remember to be
+you have achieved to potential professionals and visitors. Remember to be
 truthful and don't over exaggerate.
 
 ### Interests
@@ -155,10 +155,6 @@ customizing the URL, you can remove the random numbers assigned and make your
 LinkedIn profile look professional while making it easier to find. Let's be
 honest; **linkedin.com/in/their-name** looks better than
 **linkedin.com/pub/yourname-298903g8**.
-
-### Resources for getting attention using LinkedIn
-
-- [Video Resources from Apex Systems](https://www.apexsystems.com/CE/CareerReadiness/Pages/LinkedIn_Profiles.aspx)
 
 ## Social Media Platforms
 

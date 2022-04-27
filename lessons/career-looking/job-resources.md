@@ -20,7 +20,6 @@ order: 4
 - [Indeed](https://www.indeed.com/)
 - [GitHub](http://jobs.github.com)
 - [Mashable](http://jobs.mashable.com/jobs)
-- [StackOverflow](http://stackoverflow.com/jobs)
 - [Toptal](https://toptal.com)
 - [Hired](https://hired.com)
 - [Regional Engineering Jobs](https://www.rengineeringjobs.com/)
@@ -32,7 +31,6 @@ order: 4
 ## Jr Devs Boards:
 
 - [JrDevJobs](http://jrdevjobs.com)
-- [Stackoverflow Junior jobs](https://stackoverflow.com/jobs/junior-developer-jobs)
 
 ## Women-Focused Job Boards:
 
@@ -44,7 +42,6 @@ order: 4
 - [iOS](http://iosdevjobs.com)
 - [React](http://reactjobboard.com)
 - [Vue](http://vuejobs.com)
-- [Ember](http://jobs.emberjs.com)
 - [Python](http://python.org/jobs)
 - [JavaScript job XYZ](http://javascriptjob.xyz)
 - [Javascript remotely](http://jsremotely.com)
@@ -54,7 +51,6 @@ order: 4
 - [FlexJobs](http://flexjobs.com)
 - [WeWorkRemotely](http://weworkremotely.com)
 - [RemoteOk](http://remoteok.io/remote-dev-jobs)
-- [Stackoverflow](https://stackoverflow.com/jobs/remote-developer-jobs)
 - [Working Nomads](https://www.workingnomads.co/remote-development-jobs)
 - [Remote.co](https://remote.co/remote-jobs/developer/)
 - [Remoters](https://remoters.net/jobs/software-development/)
@@ -104,7 +100,7 @@ order: 4
 Some local companies may have Internship opportunities available.
 
 Here is an example list of companies that have advertised development/ tech
-internships in the past through their own websites, job search sites or
+internships in the past through their own websites, job search sites, or
 [Internships.com](https://www.internships.com/)\*:
 
 - [VASTEC](https://www.vastec.com/)
@@ -117,7 +113,6 @@ internships in the past through their own websites, job search sites or
 - [Fat Dog Spirits](http://www.fatdogspirits.com/)
 - [Tampa's Lowry Park Zoo](https://zootampa.org/)
 - [180bytwo](https://180bytwo.com/)
-- [Cyber Ninjas](https://www.cyberninjas.com/)
 - [Novetta](https://www.novetta.com/)
 - [Gallagher Website Design](https://www.gallagherwebsitedesign.com/)
 - [Manpower Group](https://www.manpowergroup.com/)

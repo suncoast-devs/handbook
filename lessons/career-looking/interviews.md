@@ -44,7 +44,7 @@ So what are some of the Dos and Don'ts during the Job Search Process?
     </li>
     <li>Be honest and be exhaustive for bots/scrapers (keywords)
       <ul>
-        <li>Use various ways to list your skills experience, such as JavaScript, React.js, and Node.js, if you have experience in various related areas. If you list one, you might miss out on opportunities that relate to positions.</li>
+        <li>Use various ways to list your skills and experience, such as JavaScript, React.js, and Node.js, if you have experience in various related areas. If you list one, you might miss out on opportunities that relate to positions.</li>
       </ul>
     </li>
     <li>Put contact info on your resume
@@ -60,7 +60,7 @@ So what are some of the Dos and Don'ts during the Job Search Process?
     <li>Make sure you have a clear hierarchy and use whitespace wisely 
       <ul>
         <li>Use bullet points over paragraphs.</li>
-        <li>Have a resume that is easy to read, identify areas of importance, and easy to scan.</li>
+        <li>Have a resume that is easy to read, identifies areas of importance, and is easy to scan.</li>
       </ul>
     </li>
   </ul>
@@ -72,14 +72,14 @@ So what are some of the Dos and Don'ts during the Job Search Process?
     <li>Use cliches, gimmicks, or objectives:
       <ul>
         <li>Avoid overused phrases such as "passionate", "go-getter", "ninja", "warrior", and "unicorn".</li>
-        <li>Stay away from resumes printed on unusual objects or delivered in a theatrical way.</li>
+        <li>Stay away from resumes printed on unusual objects or delivered theatrically.</li>
         <li>Avoid objectives that don't show your skills, such as "To secure a challenging position in a reputable organization to expand my learnings, knowledge, and skills."</li>
       </ul>
     </li>
     <li>Use a lot of space/words
       <ul>
-        <li>Make sure you have a clear hierarchy and use whitespace wisely</li>
-        <li>Use bullet points over paragraphs</li>
+        <li>Make sure you have a clear hierarchy and use whitespace wisely.</li>
+        <li>Use bullet points over paragraphs.</li>
       </ul>
     </li>
   </ul>
@@ -89,7 +89,7 @@ So what are some of the Dos and Don'ts during the Job Search Process?
 
 The phone interview is often the first step after selecting you as a candidate
 for the position. An internal recruiter or a member of the development team
-usually conducts the phone interview. In many cases, this call helps screen your
+usually conducts phone interviews. In many cases, this call helps screen your
 soft skills and get a foundation of who you are.
 
 So what are some of the Dos and Don'ts during the Phone Interview?
@@ -110,12 +110,12 @@ So what are some of the Dos and Don'ts during the Phone Interview?
     </li>
     <li>Use a professional, but casual/interested tone
       <ul>
-        <li>Show you interest in the position and company</li>
+        <li>Show your interest in the position and the company</li>
       </ul>
     </li>
     <li>Tell a (short) story
       <ul>
-        <li>Describe experiences and learning opportunities that helps the interview team learn more about you.</li>
+        <li>Describe experiences and learning opportunities that help the interview team learn more about you.</li>
       </ul>
     </li>
   </ul>
@@ -132,12 +132,12 @@ So what are some of the Dos and Don'ts during the Phone Interview?
     </li>
     <li>Talk too much/too little
       <ul>
-        <li>Having too many moments of silence, or someone who doesn't let anyone else talk can lead to an awkward and very uncomfortable interview.</li>
+        <li>Having too many moments of silence or someone who doesn't let anyone else talk can lead to an awkward and very uncomfortable interview.</li>
       </ul>
     </li>
     <li>Hold out for one company, interview as many as you can
       <ul>
-        <li>You are not the only applicant they are interviewing so don't let them be the only company you are pursuing.</li>
+        <li>You are not the only applicant they are interviewing, so don't let them be the only company you are pursuing.</li>
       </ul>
     </li>
   </ul>
@@ -172,7 +172,7 @@ What are the Dos and Don'ts for Technical Interviews?
       <ul>
         <li>No matter what the issue or what answer you choose, make sure to think out loud! If you have different ways of solving the problem, talk through the options before deciding which to use.</li>
         <li>Talking out the problem helps the interviewer see and understand your thought process.</li>
-        <li>Also, the interviewer may recommend one solution over the others because he or she knows that the others may have certain pitfalls or may be outside of the scope of the interview.</li>
+        <li>Also, the interviewer may recommend one solution over the others because he or she knows that the others may have certain pitfalls or maybe outside of the scope of the interview.</li>
       </ul>
     </li>
     <li>Ask for help as needed, and accept it as given.</li>
@@ -190,7 +190,7 @@ What are the Dos and Don'ts for Technical Interviews?
     <li>Try to impress the interviewer(s) with your skills
       <ul>
         <li>Trying to use every trick in the book can come to give a wrong impression.</li>
-        <li>Often times it can highlight things you don't 100% understand how to use properly.</li>
+        <li>Often it can highlight things you don't 100% understand how to use properly.</li>
       </ul>
     </li>
     <li>Stay silent or talk over the interviewer(s)
@@ -229,7 +229,7 @@ What are the Dos and Don'ts for Face-to-Face Interviews?
     <li>Dress one notch above the culture but be sure to feel confident
       <ul>
         <li>Ask what the team might wear on a day-to-day basis and take it up a notch.</li>
-        <li>If they wear shorts and flip flops, don't show up in a suit and tie, try simple slacks with a button-up shirt or t-shirt with a jacket.</li>
+        <li>If they wear shorts and flip-flops, don't show up in a suit and tie, try simple slacks with a button-up shirt or a t-shirt with a jacket.</li>
       </ul>
     </li>
     <li>Ask about their culture and hobbies to show interest and learn about the company/team at the same time.</li>
@@ -246,10 +246,10 @@ What are the Dos and Don'ts for Face-to-Face Interviews?
     </li>
     <li>Don't undersell your value and knowledge but be truthful.
       <ul>
-        <li>If you have read an article or watched a video but don't have experience try saying <i>"I've heard of it"</i></li>
-        <li>If you have followed a tutorial or tried creating a project on your own try saying <i>"I've played around with it" or "I've built things with it, but not production level"</i></li>
-        <li>If you have used it for a few times try saying <i>"I've used it on a few projects and had a _____ experience because _____ ."</i></li>
-        <li>If you have contributed to an open-source project say <i>"I've actually contributed to ______ projects"</i> and then watch the excitement in their eyes!</li>
+        <li>If you have read an article or watched a video but don't have experience try saying, <i>"I've heard of it."</i></li>
+        <li>If you have followed a tutorial or tried creating a project on your own try saying, <i>"I've played around with it" or "I've built things with it, but not production level."</i></li>
+        <li>If you have used it a few times try saying, <i>"I've used it on a few projects and had a _____ experience because _____ ."</i></li>
+        <li>If you have contributed to an open-source project say, <i>"I've actually contributed to ______ project,"</i> and then watch the excitement in their eyes!</li>
       </ul>
     </li>
   </ul>
@@ -317,22 +317,22 @@ news or during negotiations.
 <details>
   <summary>Don't</summary>
   <ul>
-    <li>Play hard-ball or be evasive with your pay
+    <li>Play hardball or be evasive with your pay
       <ul>
         <li>You don't have to give an exact salary, but have a range that you can accept and keep your number in the middle.</li>
-        <li>Understand not all companies are able to negotiate salaries for every position.</li>
+        <li>Understand not all companies can negotiate salaries for every position.</li>
         <li>Be ready for a company to walk away if you come off stubborn or unwilling to work with them.</li>
       </ul>
     </li>
     <li>Take it personally
       <ul>
         <li>There's nothing worse than a job candidate who tries to justify a salary negotiation due to their personal situation.</li>
-        <li>Companies must keep it about the industry standards, the responsibility level and your qualifications.</li>
+        <li>Companies must keep it about the industry standards, the responsibility level, and qualifications.</li>
       </ul>
     </li>
     <li>Beg for a second chance
       <ul>
-        <li>Accept the rejection graciously, they said no for this position, but if you made a good impression there could be an opportunity if you apply again in the future.</li>
+        <li>Accept the rejection graciously, they said no to this position, but if you made a good impression, there could be an opportunity if you apply again in the future.</li>
       </ul>
     </li>
   </ul>

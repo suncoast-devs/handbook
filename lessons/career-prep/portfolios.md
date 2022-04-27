@@ -4,9 +4,8 @@ order: 6
 ---
 
 As a Developer, your portfolio is more than an online resume. Your portfolio
-allows you to showcase your projects, your personality, and highlight other
-skills you have. It is a way of enhancing what your resume tells someone about
-you.
+allows you to showcase your projects and personality and highlight other skills
+you have. It is a way of enhancing what your resume tells someone about you.
 
 ## First Impression
 
@@ -58,11 +57,11 @@ If a project isn't working 100% because you are still working on it, add a note
 that it is a work in progress. Even go as far as to add wording around what the
 end goal is or what features you plan to add.
 
-After graduation or when looking for new positions, start working on freelance
+After graduation or when looking for new positions, start working on a freelance
 or real-world projects that you can add to your portfolio. Your work should be a
 mix of what you have done and what you want to do.
 
-The most import things to remember about your projects are:
+The most important things to remember about your projects are:
 
 - Don't present anything you aren't proud of
 - Own it or don't show it, even mistakes can bring growth
@@ -84,8 +83,8 @@ user should interact with their portfolio.
 If you have a background in design, creating your customer portfolio might seem
 easy enough. Here are some things to keep in mind before you get started: Start
 with a minimum viable product. Think about the information you need vs. the
-extras you want to add. When styling, start with mobile-first then check how it
-looks on tablet and desktop
+extras you want to add. When styling, start with mobile-first, then check how it
+looks on tablets and desktop.
 
 If you are not a designer, the best option is to find a template that works for
 you.
@@ -141,7 +140,7 @@ template.
 - [Surge](https://surge.sh/)
 
 **_Note:_** You cannot use PDFs with Surge, so be sure to link to Drive,
-Dropbox, or another way of sharing a link to a file
+Dropbox, or another way of sharing a link to a file.
 
 ## Resources
 

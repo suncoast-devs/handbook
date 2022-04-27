@@ -28,12 +28,12 @@ you can add value.
 
 It is easy to create a template for your cover letters to save time, but there
 is nothing worse than sending a letter that shows you know nothing about the
-company or worse, you forget to change the company name you list.
+company, or worse, you forget to change the company name you list.
 
 ## Start Strong
 
 Use your first sentence to grab the attention of the person reading it.
-Communicate how you can help to solve the problems, identify your skills,
+Communicate how you can help to solve the problems and identify your skills,
 experience, and achievements. Whatever you do, avoid saying, “I’m applying for
 the role of XXX.”
 

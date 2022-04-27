@@ -53,14 +53,14 @@ The prevention of the progress, success, or fulfillment of something
 
 ### Customer Service is Essential
 
-- Send a proposal that is fair to the client and you
+- Send a proposal that is fair to the client, and you
   - [Sample proposals](https://www.pandadoc.com/it-development-proposal-templates/)
   - Determine your hourly rate
   - How long will the project take
 - Send thank yous
 - Send weekly updates
 - Notifications of deployments or features
-- Check your email everyday
+- Check your email every day
 - Send invoices
 
 ### Satisfied Clients
@@ -88,7 +88,7 @@ Freelance & full-time
 - Are you excited to get started?
 - How will you bring value to their narrative?
 - Do you align with their values?
-- Do you have the skills they are looking for or can you learn them?
+- Do you have the skills they are looking for, or can you learn them?
 - Would you be comfortable or thrive in this environment?
 - Is this the direction you want to take with your skills?
 - Have you asked all the questions that would set you up for success?
@@ -101,7 +101,7 @@ industry, and the corporate culture of a potential future workplace
 ### Preparation for the Interview
 
 - Update your resume & portfolio
-- Clean up your GitHub and show activity
+- Clean up your GitHub and show the activity
 - Proof any email communication
 - Do a dry run of where you are interviewing
 - Prepare questions both about the work and job

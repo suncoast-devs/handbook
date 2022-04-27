@@ -2,15 +2,15 @@
 title: Sample Questions
 ---
 
-Technical interviews is a skill that requires practice. We have gathered some
+Technical interviews are a skill that requires practice. We have gathered some
 sample questions that we have heard are used or have been used by community
 members in hiring. These are not the only questions out there, but these are the
 types of questions that might be.
 
-When using these questions try to avoid using `canned answers`. Also, it's
-usually not about giving the correct answer, but more along the lines of giving
-a `good` answer. A `good` answer is an answer that shows the employers what you
-know, no more no less, and you can talk about technology and tech ideas. It's
+When using these questions, try to avoid using `canned answers`. Also, it's
+usually not about giving the correct answer but more along the lines of giving a
+`good` answer. A `good` answer is an answer that shows the employers what you
+know, no more, no less, and you can talk about technology and tech ideas. It's
 all about finding out what you know, what you don't know, and how you work.
 
 ## General Questions
@@ -29,7 +29,7 @@ Workflow:
 - How do you solve a problem that you have already tried and failed to solve?
 - What is your source control strategy?
 - How would you validate your solution?
-- How would you rapid prototype an idea?
+- How would you rapidly prototype an idea?
 - Someone found a bug in your code. How would you fix a bug in your code?
 
 What are your thoughts on:
@@ -55,23 +55,23 @@ Soft Skills:
 
 ## Tech Specific Questions
 
-These are a healthy mix of technical level questions, spanning from entry to
+These are a healthy mix of technical-level questions, spanning from entry to
 senior. So you probably won't know all the answers. Moreover, that is okay. Use
 these as a guide to see what kinds of things software developers should expect
 to hear during interviews. When learning the answers, it's essential to not only
-know what is going on but also to create some code sample to explore the
+know what is going on but also to create some code samples to explore the
 concepts.
 
 For example, for `javascript` => `- Explain == vs. ===`, create a small script
-that demonstrates to yourself, that you know what they mean, and not just
-pulling up textbook answers.
+that demonstrates to yourself that you know what they mean and not just pulling
+up textbook answers.
 
 General Technical Knowledge
 
 - What is your least/most favorite language that you use? Why?
 - How would you improve (a technology you have used a lot)?
 - Describe or give an example of asynchronous programming?
-- What is your best definition of Object Oriented Programming? of Functional
+- What is your best definition of Object Oriented Programming? Of Functional
   programming? Of Procedural Programming?
 - What is a RESTful API?
 - What is an idempotent operation?
@@ -104,18 +104,18 @@ CSS
 
 - What is your working definition of the box model?
 - What is Flexbox? Contrast that to CSS Grid.
-- What is your CSS framework of choice and why?
+- What is your CSS framework of choice, and why?
 - Have you ever used a grid system, and if so, what do you prefer?
-- What does specificity mean in the regards to CSS?
-- What is the box model and what are its elements?
-- When would you use a class selector and when would you use an id selector?
-- How is z-index used?
+- What does specificity mean in regards to CSS?
+- What is the box model, and what are its elements?
+- When would you use a class selector, and when would you use an id selector?
+- How is the z-index used?
 - What is a pseudo-element?
 - What is a pseudo-class?
 - What are the three ways to add styles to an HTML file? Why would you use each
   of the three methods?
 - Have you ever worked with a CSS library for styles or grids? How did you
-  implement it and why did you use it? (Bootstrap, FontAwesome, Animate.css,
+  implement it, and why did you use it? (Bootstrap, FontAwesome, Animate.css,
   Semantic UI, etc.)
 - What are some default styles that come along with HTML? (Pick a tag and
   explain.)
@@ -125,20 +125,20 @@ CSS
 
 JavaScript
 
-- Explain == vs. ===, which one should you use?
-- What is the difference between `let`, `const` and `var`? Which one should you
+- Explain == vs. === which one should you use?
+- What is the difference between `let`, `const`, and `var`? Which one should you
   use?
 - What is a ternary? What is short-circuiting?
-- What is your JS Framework of choice and why?
+- What is your JS Framework of choice, and why?
 - Explain the arrow function vs. the function declaration.
 - Explain “this” in javascript.
 - Explain async/await.
-- What is an event? What events have you used, that is not `onClick`.
+- What is an event? What events have you used that are not `onClick`.
 - Explain event delegation.
 - What is a closure, and how/why would you use one?
 - What is the event loop?
 - What are some of the advantages/disadvantages of writing JavaScript code in a
-  language that compiles to JavaScript?
+  language that compiles JavaScript?
 
 React
 
@@ -146,7 +146,7 @@ React
 - How would you set up a React app? (basic structure and boilerplate)
 - What are the two types of components you can create in React? Why would you
   choose one over the other?
-- What is the virtual DOM? Is it a good thing?
+- What is virtual DOM? Is it a good thing?
 - What are hooks?
 - What is JSX? Why can't the browser read JSX? How do you get it to read it?
 - Explain props.
@@ -154,9 +154,9 @@ React
 - Compare and contrast a stateless component and a stateful component.
 - Explain the component lifecycle.
 - What is an event in React?
-- What is redux and why would you use it?
+- What is redux, and why would you use it?
 - What are the four components of redux?
-- What is React Router and when would you use it?
+- What is React Router, and when would you use it?
 
 Design
 
@@ -187,16 +187,16 @@ Database
 
 - Explain Foreign Keys.
 - What are Joins?
-- What is a transactional query and when would I use it?
+- What is a transactional query, and when would I use it?
 - Compare and contrast Relational and NoSQL and give use cases for both.
-- Ever used NoSQL database?
+- Ever used a NoSQL database?
 - Any sharding experience?
 
 DevOps
 
 - What exposure have you had with PaaS (Azure, AWS, Google Apps)?
 - What is docker?
-- What is kubernetes?
+- What are kubernetes?
 - Have you ever used a CI server?
 - Talk to me about Horizontal vs. Vertical Scaling solutions.
 - What is Blue-green deployment?
