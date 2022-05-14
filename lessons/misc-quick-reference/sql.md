@@ -38,12 +38,12 @@ These are the most common column types, but they certainly aren't the only ones.
 | NUMERIC    | Stores a number with values of any precision and scale that can be stored.                               |
 | BOOLEAN    | Stores a `true` or `false` value.                                                                        |
 | DATE       | Stores a year, month, and day together. Use `YYYY-MM-DD` format such as `'2020-07-04'` when adding data. |
-| TIMESTAMP  | Stores a precise time, Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data. |
+| TIMESTAMP  | Stores a precise time Use `YYYY-MM-DD HH:MM:DD` format such as `'2020-07-04 15:45:12` when adding data.  |
 
 ### NULL versus NOT NULL
 
-By default all the column types above are `NULLable` meaning that you do not
-have to specify a value and thus can be the special value `NULL` that means
+By default, all the column types above are `NULLable`, meaning that you do not
+have to specify a value and thus can be the special value `NULL`, that means
 _"lacks a value_".
 
 If you want a column that must be supplied, add `NOT NULL` to its specification.
@@ -60,8 +60,8 @@ CREATE TABLE "Books" (
 
 ### PRIMARY KEY
 
-To create a primary key column we add the qualifier `PRIMARY KEY`. It is also
-useful to use the `SERIAL` type which creates an automatically increasing
+To create a primary key column, we add the qualifier `PRIMARY KEY`. It is also
+useful to use the `SERIAL` type, which creates an automatically increasing
 integer for each row inserted. This allows us to **omit** that column and allow
 the database to supply it and automatically keep track of it.
 
@@ -76,7 +76,7 @@ CREATE TABLE "Books" (
 
 ## INSERT data
 
-To insert data we can use the `INSERT INTO` command.
+To insert data, we can use the `INSERT INTO` command.
 
 > NOTE: Notice textual values are surrounded by **SINGLE** quotes.
 
@@ -129,7 +129,7 @@ SELECT COUNT(*)
 FROM "Books";
 ```
 
-To see the average, largest, and smallest year of publication
+To see the average, largest, and smallest year of publication.
 
 ```sql
 SELECT AVG("YearPublished"), MAX("YearPublished"), MIN("YearPublished")
@@ -138,9 +138,9 @@ FROM "Books";
 
 ## SELECT data but limit the rows to return
 
-Using a `WHERE` clause we can limit which rows are selected.
+Using a `WHERE` clause, we can limit which rows are selected.
 
-For example, to see all the books published before `1990` we use:
+For example, to see all the books published before `1990`, we use:
 
 ```sql
 SELECT *
@@ -182,9 +182,9 @@ The `ORDER BY` can also order numeric types.
 
 ## UPDATE existing data
 
-To **change** a value in existing rows we use the `UPDATE` command. The UPDATE
+To **change** a value in existing rows, we use the `UPDATE` command. The UPDATE
 command will make the changes specified in the `SET` statements for **ALL** rows
-that match the `WHERE`
+that match the `WHERE`.
 
 Format:
 
@@ -194,19 +194,19 @@ SET "ColumnA" = 'new value'
 WHERE "ColumnB" = 'some value'
 ```
 
-Example:
-
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be
 > updated.
 
-Example, change the `Genre` into `children horror` for all the books where the
-`PrimaryAuthor` is `R. L. Stine`
+Example:
+
+Change the `Genre` into `children horror` for all the books where the
+`PrimaryAuthor` is `R. L. Stine`.
 
 ```sql
 UPDATE "Books" SET "Genre" = 'children horror' WHERE "PrimaryAuthor" = 'R. L. Stine';
 ```
 
-> NOTE: You can apply multiple changes with the SET command
+> NOTE: You can apply multiple changes with the SET command.
 
 ```sql
 UPDATE "Books" SET "Genre" = 'children horror', "YearPublished" = 1995 WHERE "PrimaryAuthor" = 'R. L. Stine';
@@ -224,12 +224,12 @@ FROM "TableName"
 WHERE "ColumnB" = 'some value'
 ```
 
-Example:
-
 > Word of warning, if the `WHERE` clause is left off, then **all** rows will be
 > deleted.
 
-Example, to delete all the rows where the `PrimaryAuthor` is `R. L. Stine`
+Example:
+
+To delete all the rows where the `PrimaryAuthor` is `R. L. Stine`.
 
 ```sql
 DELETE FROM "Books"  WHERE "PrimaryAuthor" = 'R. L. Stine';
