@@ -9,7 +9,7 @@ guide covers some of our favorite Slack tips and tricks.
 
 When you want to post a small code block to Slack it helps to format it!
 
-If you are simply showing a one line bit of code and want to do it _inline_ you
+If you are simply showing a one-line bit of code and want to do it _inline_ you
 can format it like so:
 
 ```
@@ -34,7 +34,7 @@ I'm not sure if this is what we were supposed to do. Thanks!
 
 ````
 
-And the code inside the backticks will be formatted as block of code!
+And the code inside the backticks will be formatted as a block of code!
 
 # Posting snippets for LONG blocks of code
 
