@@ -25,7 +25,7 @@ title: Podcasts
 - If you are into computer security, check out
   [Security Now](https://twit.tv/shows/security-now)
 - [Computerphile](https://www.youtube.com/user/Computerphile) is a great channel
-  on all levels of information about computing (and security, encryption, etc)
+  for all levels of information about computing (and security, encryption, etc)
 - [Numberphile](https://www.youtube.com/user/numberphile) is a great youtube
   channel on all levels of information about mathematics
 - [Smarter Every Day](https://www.smartereveryday.com/) is a great resource on
@@ -39,7 +39,6 @@ title: Podcasts
 ## JavaScript Focused
 
 - [syntax.fm](https://syntax.fm/)
-- Anything by [Devchat.tv](https://devchat.tv/)
 
 ## .NET Focused
 
