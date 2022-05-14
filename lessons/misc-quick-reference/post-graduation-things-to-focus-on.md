@@ -52,7 +52,7 @@ We recommend:
 - [Algo Expert](https://algoexpert.io)
 
 Also, to help you prepare, you can use
-[this as a guide](https://suncoast.io/handbook/lessons/career-looking/sample-questions)
+[this as a guide](https://handbook.suncoast.io/lessons/career-looking/sample-questions)
 to what kind of questions you might see.
 
 ## Continue learning and growing
@@ -62,7 +62,7 @@ graduation.
 
 ### Learn a little bit of Computer Science
 
-If you want to learn some of the academic view of the software world, check out
+If you want to learn some of the academic views of the software world, check out
 the resources at
 [Teach Yourself Computer Science](https://teachyourselfcs.com/).
 
@@ -113,9 +113,9 @@ it's better to be consistent than to go in spurts.
 | Update your portfolio                                                                                                                     |
 | Go back and rebuild a few homework assignments (or your capstone!) that you want to revisit now that you have more knowledge than before. |
 | Go back and do epic mode for a couple of homework.                                                                                        |
-| Build a second [capstone sized project](https://suncoast.io/handbook/curriculum/final-project/project-ideas/)                             |
+| Build a second [capstone sized project](https://handbook.suncoast.io/assignments/capstone-ideas)                                          |
 
-You have a foundation of web programming. To grow those skills, start taking a
+You have a foundation in web programming. To grow those skills, start taking a
 look at these topics. To learn new topics, always build small sample projects
 demonstrating the idea and then apply them to a past project.
 
@@ -174,7 +174,7 @@ project using the new ideas.
 During this time, you might try to learn all the things after graduation, **but
 that might not be the best path to success**.
 
-We would recommend only start to learn a new technology if:
+We would recommend only starting to learn a new technology if:
 
 - The technology solves a problem you have in a project
 - You are going after a job that has that as a "nice to have" or "requirement."
@@ -198,7 +198,7 @@ speed up the process and keep you occupied during your search.
 This process takes time. That is an unfortunate reality of the hunt. During the
 job hunt, patience is your best friend. Realize this is a process, and companies
 are on a different timetable than you. You want a job today; they need to fill
-the position in the next four weeks. Be patient, and persistent and good things
+the position in the next four weeks. Be patient and persistent, and good things
 will happen.
 
 ### Daily cadence
@@ -208,5 +208,5 @@ Schedules and planning help you only if you keep at it.
 
 <hr/>
 
-Again, congratulations for getting this far, be confident in what you know and
+Again, congratulations on getting this far, be confident in what you know and
 what you can do.
