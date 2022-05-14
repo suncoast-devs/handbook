@@ -4,4 +4,4 @@ notes:
   How to use `dotnet new` for each of the types of templates (dotnet and SDG)
 ---
 
-TODO. Looking for volunteers!
+### This guide is looking for an author!
