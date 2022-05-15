@@ -20,9 +20,9 @@ commands together and run scripts that help automate the boring, repetitive
 tasks.
 
 Interacting with our operating system comes in two parts. The first is the
-`shell`, the actual `REPL` we will interact with, the second being the
-`terminal program` we use to run that shell. You can think of the `terminal`
-like your browser and the `shell` like the web page it contains.
+`shell`, the actual `REPL` we will interact with, and the second being the
+`terminal program` we use to run that shell. You can think of the `terminal` as
+your browser and the `shell` as the web page it contains.
 
 Different operating systems use different tools for both the `terminal` and the
 `shell`. For instance, on Mac OS we use the `Terminal` application to interact
@@ -62,8 +62,8 @@ Use `pwd` to help you see where you currently are in your terminal.
 - What does it do?
 
 This command allows us to create a new directory (_folder_) from the terminal.
-The directory is created within whatever directory is currently active. (use
-`pwd` to check if you need to)
+The directory is created within whatever directory is currently active (use
+`pwd` to check if you need to).
 
 - When to use `mkdir`?
 
@@ -110,7 +110,7 @@ For example, consider the following folder structure.
     - `clearwater-beach-2019`
     - `disney-world-2018`
 
-`Home` is the parent directory of `football rosters`, `budget` and
+`Home` is the parent directory of `football rosters`, `budget`, and
 `family-pictures`; and `family-pictures` is the parent of
 `clearwater-beach-2019` and `disney-world-2018`.
 
@@ -156,7 +156,7 @@ If you want to move back up one directory, you run:
 cd ..
 ```
 
-And you will again be in the `family-pictures` directory again.
+And you will be in the `family-pictures` directory again.
 
 - When to use cd?
 
@@ -226,8 +226,8 @@ tools and packages.
 
 You use npm to install new tools in the command line from time to time.
 
-Generally, you need to run this command when dealing with project setups or to
-use new tools.
+Generally, you need to run this command when dealing with project setups or
+using new tools.
 
 ### git
 
@@ -263,7 +263,7 @@ To send your changes to GitHub, you run:
 git push
 ```
 
-To learn more about git [check this out](http://try.github.io/)
+To learn more about git [check this out](http://try.github.io/).
 
 ### hub
 
