@@ -92,6 +92,8 @@ database, though we could, we still think of this as its own resource with a
 
 As such, we will create a `Sessions` controller to store this `POST` action.
 
+dotnet aspnet-codegenerator controller  -name SessionController --useAsyncActions -api --relativeFolderPath Controllers 
+
 ```csharp
 using System.Collections.Generic;
 using System.Threading.Tasks;
