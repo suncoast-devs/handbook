@@ -269,7 +269,7 @@ ALTER TABLE "Books" RENAME COLUMN "Genre" TO "SpecificGenre";
 Example of changing a column data type:
 
 ```sql
-ALTER TABLE table_name ALTER COLUMN column_name [SET DATA] TYPE new_data_type;
+ALTER TABLE table_name ALTER COLUMN column_name TYPE new_data_type;
 ```
 
 To change our YearPublished to a TEXT column:
