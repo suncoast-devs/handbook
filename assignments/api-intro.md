@@ -23,7 +23,6 @@ In this project, you will practice accessing an API. You'll see how an API reque
 | Recipes                                                                          | http://www.recipepuppy.com/about/api/             |
 | Deck of Cards!                                                                   | http://deckofcardsapi.com/                        |
 | Geocode                                                                          | https://geocode.xyz/api                           |
-| Jobs                                                                             | https://jobs.github.com/api                       |
 | Lyrics                                                                           | https://lyricsovh.docs.apiary.io/#reference       |
 | Quotes                                                                           | https://pprathameshmore.github.io/QuoteGarden/    |
 | SpaceX                                                                           | https://docs.spacexdata.com/?version=latest       |
