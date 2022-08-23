@@ -20,7 +20,7 @@ dotnet new sdg-api -o TamagotchiAPI
 ### Resources
 
 - [Web API Tutorial](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-5.0)
-- [Web API docs](https://dotnet.microsoft.com/apps/aspnets)
+- [Web API docs](https://dotnet.microsoft.com/apps/aspnet)
 
 ### Explorer Mode
 
