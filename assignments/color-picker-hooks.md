@@ -1,5 +1,5 @@
 ---
-title: Hook, line and sinker!
+title: Color Picker (Hook, line and sinker!)
 tags: ['javascript', 'react']
 ---
 
@@ -37,7 +37,7 @@ Use `range` type `input` elements to drive a color display. You'll end up with s
 
 ```
 // HINT: Instead of hard coded values here, use your
-// this.state attributes to dynamically create this color
+// state attributes to dynamically create this color
 const newBackgroundColor = `hsl(50,8%,20%)`
 const newStyle = { backgroundColor: newBackgroundColor  }
 ```
