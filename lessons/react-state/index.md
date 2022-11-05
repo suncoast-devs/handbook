@@ -270,12 +270,15 @@ In React, the event handling function is still proper. However, we will connect
 it to the event in a different way.
 
 ```typescript
-function handleClickButton(event: MouseEvent) {
+function handleClickButton(event: React.MouseEvent) {
   event.preventDefault()
 
   console.log('Clicked!')
 }
 ```
+> NOTE: We include `event: React.MouseEvent` ONLY if using the event;
+> in this case, `event.preventDefault()`. Removing `event.preventDefault()` 
+> removes our need to use `event: React.MouseEvent`.
 
 Notice that we still receive an `event` variable as the first argument. We'll
 use that `event` variable to prevent any default behavior based on clicking on
