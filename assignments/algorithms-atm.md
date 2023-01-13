@@ -7,15 +7,15 @@ Congratulations, the First Bank of Suncoast hired you to create a new ATM system
 
 ## Objectives
 
-- Continue working with algorithmic thinking
+- Continue working with algorithmic thinking.
 
 ## Requirements
 
-Write your answers in a _text_ file on your computer. If you have `Visual Studio Code` installed, feel free to use it. Otherwise use `Notepad` or `TextEdit`.
+Write your answers in a _text_ file on your computer. If you have `Visual Studio Code` installed, feel free to use it. Otherwise, use `Notepad` or `TextEdit`.
 
 ### ATM Features and Questions
 
-- If the machine is inactive, display a sequence of three images in sequence.
+- If the machine is inactive, display a sequence of three images.
 - If the machine is inactive, allow a user touch to stop showing the images and begin the logic below.
 - Users must insert their card at some point. When to insert the card? When to give back the card?
 - What should the ATM do if the account doesn't exist or the card is invalid?
@@ -28,13 +28,13 @@ Write your answers in a _text_ file on your computer. If you have `Visual Studio
   - Print balance
 - When withdrawing cash, the ATM needs to handle these cases:
   - Insufficient funds
-  - Not enough cash to complete the request
+  - Not enough funds to complete the request
 - When complete, ask the user if they want a receipt or not
   - If the user wants a receipt, print including new balances
 
 ### Explorer Mode
 
-Write an algorithmic description of the above features. Be as specific and detailed as you can. For instance, for the requirement `If the machine is inactive, display a sequence of three images in sequence.` and `allow a user touch to stop showing the images...` you might write something like:
+Write an algorithmic description of the above features. Be as specific and detailed as you can. For instance, for the requirement `If the machine is inactive, display a sequence of three images.` and `allow a user touch to stop showing the images...` you might write something like:
 
 ```
 Step 1: Display Image 1
