@@ -25,19 +25,19 @@ determine that new code is ready for deployment to "production."
 
 ## Getting setup
 
-You should have a heroku account setup from the installation instructions. If
-not, create a heroku account now.
+You should have a heroku account set up from the installation instructions. If
+not, create a Heroku account now.
 
 In your project, you will have a `STUDENT.md` file that includes instructions on
 deployment. We'll repeat these steps here.
 
 ## Deploying
 
-These steps are run _ONLY ONCE_ before you can deploy to heroku
+These steps are run _ONLY ONCE_ before you can deploy to Heroku
 
-> NOTE: You must choose an app name that is unique across all of heroku. If you
-> want to use a name that isn't available, try appending unique like `-sdg` or
-> `-janedoe` replacing `janedoe` with your name.
+> NOTE: You must choose an app name that is unique across all of Heroku. If you
+> want to use a name that isn't available, try appending something unique like
+> `-sdg` or `-janedoe` replacing `janedoe` with your name.
 
 - `heroku apps:create NAMEOFAPP` - NOTE: replace `NAMEOFAPP` with something that
   is unique to your project.
@@ -52,7 +52,7 @@ If you are using JWT tokens, you need to do the following:
 
 - `heroku config:set JWT_KEY="MY RANDOM STRING OF LETTERS AND NUMBERS TO USE FOR A KEY"`
 
-If you are using a third-party API you can set any configuration as such:
+If you are using a third-party API, you can set any configuration as such:
 
 - `heroku config:set THIRD_PARTY_KEY_NAME="THIRD PARTY KEY VALUE"`
 
@@ -71,8 +71,8 @@ heroku config:set VITE_APP_MAPBOX_TOKEN=REPLACE-THIS
 ## `git push heroku HEAD:main`
 
 This command will push your code **JUST** to Heroku for hosting. This means when
-you make a change, you should push to GitHub as normal (e.g. `git push`)
-and also to Heroku (e.g. `git push heroku HEAD:main`).
+you make a change, you should push to GitHub as normal (e.g. `git push`) and
+also to Heroku (e.g. `git push heroku HEAD:main`).
 
 You will notice that after the typical messages you get from a `git push`, your
 terminal will show more messages from Heroku. A typical
@@ -128,7 +128,7 @@ means that all of the local data you have _won't_ be live on your site. You can
 take all the data in your local database and upload that to your Heroku copy of
 the database. See the instructions in the
 [Heroku Quick Reference Guide](/lessons/misc-quick-reference/heroku) to learn
-how to `Push a copy of your local database to Heroku`
+how to `Push a copy of your local database to Heroku`.
 
 ## To Deploy Updates to Heroku
 
