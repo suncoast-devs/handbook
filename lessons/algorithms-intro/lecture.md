@@ -778,12 +778,12 @@ Start by using a specific example...
 
     1. Write “Zebra” down.
     2. Create a new empty word.
-    2. Start at the last letter in the word (the "a" from Zebra)
-    3. Put the current letter at the end of the new word
-    4. If there is a previous letter,
+    3. Start at the last letter in the word (the "a" from Zebra)
+    4. Put the current letter at the end of the new word
+    5. If there is a previous letter,
        make the previous letter the current letter
-       and start back at 3.
-    5. When there are no more letters in the word, our
+       and start back at 4.
+    6. When there are no more letters in the word, our
        new word is the answer.
 
 ---

@@ -28,4 +28,4 @@ help anyone be better developers and problem solvers.
 
 - [Discovering Computer Science](https://www.amazon.com/Discovering-Computer-Science-Interdisciplinary-Programming-ebook/dp/B010ACY1QG/ref=mt_kindle?_encoding=UTF8&me=&dpID=614f7vV6UGL&preST=_SY445_QL70_&dpSrc=detail)
 
-- [Introduction to Algorithms (MIT Press)](https://www.amazon.com/Introduction-Algorithms-Eastern-Economy-Thomas/dp/8120340078/ref=asc_df_8120340078/?tag=hyprod-20&linkCode=df0&hvadid=312176709100&hvpos=&hvnetw=g&hvrand=2536717652300069033&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9012108&hvtargid=pla-385636858931&psc=1&tag=&ref=&adgrpid=60258872537&hvpone=&hvptwo=&hvadid=312176709100&hvpos=&hvnetw=g&hvrand=2536717652300069033&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9012108&hvtargid=pla-385636858931)
+- [Introduction to Algorithms (MIT Press)](https://www.amazon.com/Introduction-Algorithms-third-Thomas-Cormen-ebook/dp/B08FH8N996/ref=sr_1_1?crid=10XUUT0H65WTA&keywords=introduction+to+algorithms+%28MIT+Press%29&qid=1648388332&s=digital-text&sprefix=introduction+to+algorithms+mit+press+%2Cdigital-text%2C83&sr=1-1#)

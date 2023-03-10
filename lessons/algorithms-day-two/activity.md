@@ -28,7 +28,7 @@ others act as the algorithm authors.
 - Find the lowest of ten numbers (not necessarily numbers in order)
 - Find the lowest of one hundred numbers (not necessarily numbers in order)
 
-## Number Challenge: Ordering
+### Number Challenge: Ordering
 
 - Put two numbers in order
 - Put ten numbers in order
@@ -37,7 +37,7 @@ others act as the algorithm authors.
 ## Scrabble Tiles
 
 In the following problems, you are allowed to use the following sentences as
-your _language_
+your _language_.
 
 We will have "memory spots" in this exercise. The best way to represent this is
 to get out a sheet of paper and make several squares to label each one. These
@@ -50,11 +50,11 @@ Turn over the scrabble tile at the position determined by the value in label ___
 
 Put the number ____ in the memory spot labeled ____.
 
-Add `1` to the value of the number at memory spot labeled ____.
+Add `1` to the value of the number at the memory spot labeled ____.
 
-Change the letter at memory spot labeled ____ to the next letter in the alphabet (if you want consider wrapping around, then consider "A" the next letter after "Z").
+Change the letter at memory spot labeled ____ to the next letter in the alphabet (if you want to consider wrapping around, then consider "A" the next letter after "Z").
 
-If the tile in memory spot with the label ____ is equal to ____ then go to step number ____.
+If the tile in the memory spot with the label ____ is equal to ____, then go to step number ____.
 
 STOP with the answer YES
 

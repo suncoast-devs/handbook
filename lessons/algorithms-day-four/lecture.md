@@ -23,7 +23,7 @@ By rewriting the problem statement in your own words and increasing the difficul
 
 Problems are frequently poorly written.
 
-    "Go to the store to get a steak, and if they have eggs, get six"
+    "Go to the store to get a steak, and if they have eggs, get six."
 
     Sends person to the store and they come back with six steaks.
     Why? Because they had eggs.

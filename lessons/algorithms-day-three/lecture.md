@@ -4,7 +4,7 @@ theme: Next, 1
 
 ---
 
-# Real world examples: Transforming data, codes, and ciphers
+# Real-world examples: Transforming data, codes, and ciphers
 
 ---
 
@@ -108,11 +108,11 @@ theme: Next, 1
 1. Start at the first letter of our plaintext
 1. If the letter is "S" put a "Z" in the ciphertext
 1. If the letter is "D" put a "D" in the ciphertext
-1. If the letter is "G" put a "R" in the ciphertext
+1. If the letter is "G" put an "R" in the ciphertext
 1. If the letter is "L" put a "T" in the ciphertext
 1. ...
-1. If the letter is "X" put a "I" in the ciphertext
-1. If the letter is "Y" put a "M" in the ciphertext
+1. If the letter is "X" put an "I" in the ciphertext
+1. If the letter is "Y" put an "M" in the ciphertext
 1. If the letter is "Z" put a "J" in the ciphertext
 1. If that was the last letter in the plaintext: STOP
 1. Go to the next letter of our plaintext
@@ -213,7 +213,7 @@ What if there was a shift of 0?
 
 # [fit] Let's encode `SDGDAY`
 
-Walk through each step of the algorithm to get the encoded text (... which is the not very secure text of `SDGDAY`)
+Walkthrough each step of the algorithm to get the encoded text (... which is the not very secure text of `SDGDAY`)
 
 ---
 
@@ -238,7 +238,7 @@ First attempt, consider a shift of 3
 
 # [fit] Let's encode `SDGDAY`
 
-Walk through each step of the algorithm to get the encoded text (what do you get?)
+Walkthrough each step of the algorithm to get the encoded text (what do you get?)
 
 ---
 
@@ -370,7 +370,7 @@ Consider the index divided by 26, but only the remainder.
 
 ---
 
-# How would you work with _DECODING_ ?
+# How would you work with _DECODING_?
 
 ---
 
