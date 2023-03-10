@@ -9,7 +9,7 @@ to help you get ready to be successful in the program.
 
 ## What is Pre-work?
 
-Pre-work is a series of articles, videos, blogs and other useful information
+Pre-work is a series of articles, videos, blogs, and other useful information
 designed to set you up for success at Suncoast Developers Guild. In addition to
 setting context, this will help start your journey on the right path and help
 frame what and how you will be learning.
@@ -19,7 +19,7 @@ frame what and how you will be learning.
 You are about to begin a demanding and fast-paced program. The pre-work is
 designed to help you understand the challenge you are about to undertake and to
 help you consider "how" you learn. You have chosen to enter a program where you
-will be guided by a curriculum, instructors and teaching assistants.
+will be guided by a curriculum, instructors, and teaching assistants.
 
 We have designed this curriculum so that even students who have never done any
 programming or even have skipped this pre-work you are reading now will be
