@@ -27,7 +27,7 @@ git add .
 git commit -m "Done with explorer mode."
 ```
 
-** NOTE **: Please replace _"Done with explorer mode."_ with a more meaningful
+**NOTE**: Please replace _"Done with explorer mode."_ with a more meaningful
 message. It should try to capture what work you did.
 
 Push our local commits to GitHub:
@@ -42,9 +42,9 @@ git push
 npm run deploy
 ```
 
-### Step 3: Add the deployed URL to your github project.
+### Step 3: Add the deployed URL to your GitHub project.
 
-Open your github project. Click the _gear_ icon next to "About". Edit the
+Open your GitHub project. Click the _gear_ icon next to "About". Edit the
 `website` field and paste the URL you received from the deployment step.
 
 ### Step 4: Turning your code in.
@@ -52,10 +52,10 @@ Open your github project. Click the _gear_ icon next to "About". Edit the
 Once you have your code deployed and pushed to GitHub, visit Nexus and bring up
 the assignment. Click the `Turn In` button. Select the GitHub repository you
 created. Add a comment to let your instructor know anything specific about the
-state of your work. For example if you had any issues or challenges, this is
+state of your work. For example, if you had any issues or challenges, this is
 where you would document those.
 
-After you have turned in your code, your instructor evaluates your work, and
-will leave any comments. If deemed incomplete or unaccepted the instructor
-re-opens the issue with a list of items to complete before turning in the
-assignment again.
+After you have turned in your code, your instructor evaluates your work and will
+leave any comments. If deemed incomplete or unaccepted the instructor re-opens
+the issue with a list of items to complete before turning in the assignment
+again.

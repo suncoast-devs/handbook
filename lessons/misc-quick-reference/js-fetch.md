@@ -50,7 +50,7 @@ async function createOneListItem() {
       // We are sending JSON
       headers: { 'content-type': 'application/json' },
 
-      // The body of the message is the object, but turned into a string in JSON format
+      // The body of the message is the object but turned into a string in JSON format
       body: JSON.stringify({
         item: { text: 'Learn about Regular Expressions!' },
       }),

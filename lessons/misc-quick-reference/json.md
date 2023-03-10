@@ -5,3 +5,5 @@ note:
   and examples of JSON and explain them. Find a few good APIs that return JSON
   and show how things nest
 ---
+
+This guide is looking for an author!

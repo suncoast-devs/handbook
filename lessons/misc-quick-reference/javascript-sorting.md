@@ -2,12 +2,12 @@
 title: Sorting in JavaScript
 ---
 
-JavaScript comes with a built in `sort` method on `Array` which is very handy.
+JavaScript comes with a built-in `sort` method on `Array` which is very handy.
 However, its behavior is a little unexpected.
 
 # Sorts in-place
 
-The first thing we will notice is that it sorts the array in-place **and**
+The first thing we will notice is that it sorts the array in place **and**
 returns a copy. Imagine we start with this array:
 
 ```javascript
@@ -64,7 +64,7 @@ console.log(sortedNumbers) //    this would log: [ 0, 1, 10, 11, 12, 2, 3, 4, 5,
 
 This is **NOT** what we want, or expect.
 
-> The issue is that JavaScript coverts our elements to _strings_ first and then
+> The issue is that JavaScript converts our elements to _strings_ first and then
 > sorts. So the array `[9, 5, 3, 10, 7, 6, 11, 2, 0, 12, 4, 1]` is first
 > considered to be
 > `['9', '5', '3', '10', '7', '6', '11', '2', '0', '12', '4', '1']` for the
@@ -122,7 +122,7 @@ console.log(numbers) //          this would log: [ 9, 5, 3, 10, 7, 6, 11, 2, 0, 
 console.log(sortedNumbers) //    this would log: [ 0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12 ]
 ```
 
-and we can even make this an inline arrow style function:
+And we can even make this an inline arrow style function:
 
 ```javascript
 let numbers = [9, 5, 3, 10, 7, 6, 11, 2, 0, 12, 4, 1]
@@ -202,7 +202,7 @@ console.log(sortedPlayers)
 We need to come up with a slightly more complex comparison function to sort by
 the scores. We can use the `localeCompare` function which does a locale/language
 specific comparison between two strings. It returns a sort-compatible, `-1`,
-`0`, or `1`
+`0`, or `1`.
 
 ```javascript
 let players = [
@@ -242,4 +242,4 @@ console.log(sortedPlayers)
 
 This
 [article on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
-is a good review of how the sorting function works in JavaScript
+is a good review of how the sorting function works in JavaScript.

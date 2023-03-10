@@ -4,10 +4,10 @@ title: PGCLI
 
 # pgcli
 
-`pgcli` is a third party command line utility for interacting with PostgreSQL
-databases. `pgcli` is a more capable verison of the built in `psql` command.
+`pgcli` is a third-party command line utility for interacting with PostgreSQL
+databases. `pgcli` is a more capable version of the built-in `psql` command.
 
-To use `pgcli` you must specify the database to connect to:
+To use `pgcli`, you must specify the database to connect to:
 
 ```shell
 pgcli MyDatabaseNameHere
@@ -29,12 +29,12 @@ MyDatabaseNameHere>
 
 ## Multiline
 
-When typing long SQL statements it is often preferred to type them on multiple
-lines. To turn on `Multiline` support press the `F3` key on your keyboard.
+When typing long SQL statements, it is often preferred to type them on multiple
+lines. To turn on `Multiline` support, press the `F3` key on your keyboard.
 
-Notice in the example above I can enter each part of my SQL on it's own line.
-This is helpful because when you need to edit you can use the arrow key to move
-up/down lines easily.
+Notice in the example above that I can enter each part of my SQL on its own
+line. This is helpful because when you need to edit, you can use the arrow key
+to move up/down lines easily.
 
 Also, after running this command once, you can use the UP ARROW of your keyboard
 to recall this command and then use your left/right as well as up/down arrows to
@@ -52,15 +52,15 @@ TacoTuesdayDatabase> SELECT *
 
 ## Pager
 
-If your select statement returns multiple lines of data you may find yourself
+If your select statement returns multiple lines of data, you may find yourself
 stuck in what is known as a "page".
 
 A "pager" is a utility meant to provide pagination to a command line tool, much
 like how a "Page: 1, 2, 3, ..." set of links do on a web application.
 
-In the command line we can see we are in a pager when we see the text `(END)` or
-`(MORE)` or `(PAGE)`. In the following example the "pager" is telling us we are
-at the end of the data results:
+In the command line, we can see we are in a pager when we see the text `(END)`
+or `(MORE)` or `(PAGE)`. In the following example, the "pager" is telling us we
+are at the end of the data results:
 
 ```
 TacoTuesdayDatabase> SELECT *
@@ -87,7 +87,7 @@ SELECT 10
 ### Navigating forward and backward
 
 Press the `spacebar` to move to the next page of results. Press the `b` key to
-go back one page of results.
+go back to one page of results.
 
 ### Exiting the pager
 

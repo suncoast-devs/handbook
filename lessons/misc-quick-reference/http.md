@@ -7,3 +7,5 @@ notes:
 ---
 
 How to use the `httpie` command line tool to work with web sites and APIs.
+
+This guide is looking for an author!

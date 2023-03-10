@@ -5,7 +5,7 @@ title: Interview Questions
 # Collections of General Interview Questions
 
 Below are some general interview questions we've heard from alumni. You may not
-get all, or any, of these questions in an interview and you may not have been
+get all or any of these questions in an interview, and you may not have been
 exposed to all these terms and ideas. If there is something here you do not
 know, take some time to research the subject.
 
@@ -25,7 +25,7 @@ know, take some time to research the subject.
 - What are your problem-solving steps?
 - What is your source control strategy?
 - How would you test your code? How would you test your design?
-- How would you rapid prototype an idea?
+- How would you rapidly prototype an idea?
 - Someone found a bug in your code. How would you fix a bug in your code?
 
 ## Opinions
@@ -60,7 +60,7 @@ know, take some time to research the subject.
 
 ### Technical Knowledge
 
-- What is your least/most favorite language that you use and why?
+- What is your least/most favorite language that you use, and why?
 - How would you improve (a technology you have used a lot)?
 - Explain `this` in javascript.
 - Describe or give an example of asynchronous programming.
@@ -71,13 +71,13 @@ know, take some time to research the subject.
 - Explain event delegation.
 - What is a closure, and how/why would you use one?
 - What is the event loop?
-- Material vs Flat design.
+- Material vs. Flat design.
 
 ### Web/Design
 
-- What is your CSS framework of choice and why?
+- What is your CSS framework of choice, and why?
 - Have you ever used a grid system, and if so, what do you prefer?
-- What is your JS Framework of choice and why?
+- What is your JS Framework of choice, and why?
 - What is a RESTful endpoint?
 - What exposure have you had with PaaS (Azure, AWS, Google Apps)?
 - What is A/B testing?
@@ -101,7 +101,7 @@ know, take some time to research the subject.
 - Compare and contrast Relational and NoSQL and give use cases for both.
 - Have you ever used Graph databases?
 - Do you have any sharding experience?
-- What is a transactional query and when would I use it?
+- What is a transactional query, and when would I use it?
 
 #### Javascript
 
@@ -112,17 +112,17 @@ know, take some time to research the subject.
 
 #### General Back End
 
-- What is your least/most favorite language that you use and why?
+- What is your least/most favorite language that you use, and why?
 - How would you improve (a technology you have used a lot)?
-- Explain MVC vs MVVM vs MVP.
+- Explain MVC vs. MVVM vs. MVP.
 - How much do you know about concurrency and programming?
 - Describe or give an example of asynchronous programming.
 - Have you ever encountered a scalability issue? How did you solve that?
 - Describe one instance that you used a caching solution before.
 - Compare and contrast FP and OOP.
-- Inheritance vs Composition.
+- Inheritance vs. Composition.
 - What is tail recursion?
-- Horizontal vs Vertical Scaling solutions.
+- Horizontal vs. Vertical Scaling solutions.
 - What is an idempotent operation?
 - What is Blue-green deployment?
 - Have you used a CI server?

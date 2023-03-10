@@ -25,30 +25,30 @@ must style `<a>` elements specifically.
 
 A link can be:
 
-|           |                                                                                                          |
-| --------- | -------------------------------------------------------------------------------------------------------- |
-| Unvisited | The `href` has never been visited by this browser.                                                       |
-| Visited   | The `href` has been visited by this browser.                                                             |
-| Focus     | The user has focused the element, typically by using the `TAB` key to navigate the page to that element. |
-| Hover     | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.        |
-| Active    | The link is clicked, but hasn't transitioned the user to the `href`.                                     |
+|           |                                                                                                             |
+| --------- | ----------------------------------------------------------------------------------------------------------- |
+| Unvisited | The `href` has never been visited by this browser.                                                          |
+| Visited   | The `href` has been visited by this browser.                                                                |
+| Focus     | The user has focused on the element, typically by using the `TAB` key to navigate the page to that element. |
+| Hover     | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.           |
+| Active    | The link is clicked but hasn't transitioned the user to the `href`.                                         |
 
 ## Pseudo Selectors
 
-| Selector | Description                                                                                              |
-| -------- | -------------------------------------------------------------------------------------------------------- |
-| :link    | The `href` has never been visited by this browser.                                                       |
-| :visited | The `href` has been visited by this browser.                                                             |
-| :focus   | The user has focused the element, typically by using the `TAB` key to navigate the page to that element. |
-| :hover   | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.        |
-| :active  | The link is clicked, but hasn't transitioned the user to the `href`.                                     |
+| Selector | Description                                                                                                 |
+| -------- | ----------------------------------------------------------------------------------------------------------- |
+| :link    | The `href` has never been visited by this browser.                                                          |
+| :visited | The `href` has been visited by this browser.                                                                |
+| :focus   | The user has focused on the element, typically by using the `TAB` key to navigate the page to that element. |
+| :hover   | The user's pointer is over that link (hovering). Mobile browsers do not necessarily support this.           |
+| :active  | The link is clicked but hasn't transitioned the user to the `href`.                                         |
 
 ## Mnemonic to remember
 
 When we style these in CSS we _must_ place them in this order in our CSS. If we
 do not use this order we can see some unexpected results.
 
-So how do we remember this order? Here are two phrases to help
+So how do we remember this order? Here are two phrases to help.
 
 ### Lord Vader Former Handle Anakin
 

@@ -3,12 +3,12 @@ title: C# List
 ---
 
 A `C#` list is a flexible way to store a series of similar data types in one
-variable. Whenever we need to store a sequence, of say `int` or `string`, or
+variable. Whenever we need to store a sequence, of say, `int` or `string`, or
 even a more complex data type like a `class Movie`, we can use a `List`.
 
 # List is a _generic_ type
 
-Every time we declare a `List` we will put the data type for the kinds of data
+Every time we declare a `List`, we will put the data type for the kinds of data
 to be stored in the list within a set of `<>` after the `List` keyword.
 
 # Declaring a List
@@ -70,7 +70,7 @@ people.Add(0, "Bamm Bamm"); // Adds Bamm Bamm at the beginning of the list (inde
 If we know the value of an element in the list we can remove it. The method
 returns `true` if it removed the element and `false` otherwise.
 
-> NOTE: This will remove _all_ the values that match. So in the following code
+> NOTE: This will remove _all_ the values that match. So in the following code,
 > if we had multiple "Bamm Bamm" strings, all of them would be removed.
 
 ```C#
@@ -85,7 +85,7 @@ people.RemoveAt(0); // Remove the first element of the list
 
 # Getting the element at a specific index
 
-Using the `[]` syntax we can get an element at a specific index.
+Using the `[]` syntax, we can get an element at a specific index.
 
 ```C#
 var numbers = new List<int>() { 42, 100, 50, -12, 98 };
@@ -99,7 +99,7 @@ var lastNumber = numbers[4]; // Will be 98
 
 # Removing all the elements
 
-Calling `Clear` will remove all the elements
+Calling `Clear` will remove all the elements.
 
 ```C#
 var numbers = new List<int>() { 42, 100, 50, -12, 98 };
@@ -122,8 +122,8 @@ people.Reverse();
 // people will be "Barney", "Wilma", "Fred"
 ```
 
-We could combine this with `foreach` loop (see below) to loop through a list in
-reverse order:
+We could combine this with a `foreach` loop (see below) to loop through a list
+in reverse order:
 
 ```C#
 List<string> people = new List<string> { "Fred", "Wilma", "Barney" };
@@ -141,11 +141,11 @@ foreach(string person in people)
 
 # Sorting a List
 
-If the elements in the list have a _natural ordering_, that is they can be
+If the elements in the list have a _natural ordering_, that is, they can be
 compared in a consistent order, we can use the `Sort()` method to put them in
 order. This works very well for types like `string`, `int`, `decimal`, etc. For
-more complex types like classes (e.g. `class Movie`) we need to provide a method
-to `Sort` or move to `LINQ` to preform sorting.
+more complex types like classes (e.g. `class Movie`), we need to provide a
+method to `Sort` or move to `LINQ` to perform sorting.
 
 ```C#
 var numbers = new List<int>() { 42, 100, 50, -12, 98 };

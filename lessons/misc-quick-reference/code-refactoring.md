@@ -117,7 +117,7 @@ the case that the condition is true.
 
 This style of coding is called implementing a
 [`guard clause`](https://en.wikipedia.org/wiki/Guard_%28computer_science%29)
-since it protects the code below and provides an `early return`
+since it protects the code below and provides an `early return`.
 
 ## Returning a boolean
 
@@ -142,8 +142,8 @@ return variable;
 
 ## Use a ternary
 
-We can simplify code like the following where we are making a condition and then
-assigning different values to the same variable.
+We can simplify code like the following, where we are making a condition and
+then assigning different values to the same variable.
 
 ```csharp
 if (otherVariable == 42)
@@ -157,7 +157,7 @@ else
 ```
 
 This can be reduced using a
-[`ternary`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator)
+[`ternary`](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/conditional-operator).
 
 ```csharp
 firstVariable = otherVariable == 42 ? 17 : 88;
@@ -165,11 +165,11 @@ firstVariable = otherVariable == 42 ? 17 : 88;
 
 ## Creating a variable and only using it once.
 
-In many cases we make a variable to store the result of a computation and then
-just use it once. In such cases we may want to consider just doing the
+In many cases, we make a variable to store the result of a computation and then
+just use it once. In such cases, we may want to consider just doing the
 computation in the place of the variable usage. Other times the presence of the
 variable makes it easier to read the code by providing context to the value the
-computation returns. In such cases we should leave the variable.
+computation returns. In such cases, we should leave the variable.
 
 Example:
 

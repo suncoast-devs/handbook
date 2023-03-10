@@ -5,7 +5,7 @@ title: JavaScript Numbers
 ### Numbers
 
 JavaScript has one `number` type. This stores both integers and floating point
-numbers (numbers with digits after the decimal point)
+numbers (numbers with digits after the decimal point).
 
 ```js
 let score = 42
@@ -50,8 +50,9 @@ const result = firstNumber / secondNumber
 const remainder = firstNumber % secondNumber
 ```
 
-In this case `result` is `10.5` and `remainder` is `2`. The remainder is `2`
-because as we divide 4 into `42` we can only do so `10` times, leaving `2` over.
+In this case, `result` is `10.5`, and the `remainder` is `2`. The remainder is
+`2` because as we divide 4 into `42`, we can only do so `10` times, leaving `2`
+over.
 
 ### CAUTION: Remainder with negative numbers!
 
@@ -63,8 +64,8 @@ const result = firstNumber / secondNumber
 const remainder = firstNumber % secondNumber
 ```
 
-In this case, `result` is `-10.5` and `remainder` is `-2`! NOTE, in some
-languages the `%` means a `modulus` and will always be _positive_
+In this case, `result` is `-10.5`, and `remainder` is `-2`! NOTE: in some
+languages, the `%` means a `modulus` and will always be _positive_.
 
 ### Remainder/% is useful for things like determining if a number is even or odd.
 
@@ -144,8 +145,9 @@ Wrapped value is 4 since index is 19
 
 Attempts to convert the given string into an `int` value. It does its _best
 effort_ to parse what it is given. If it can't figure out how to parse the
-number we get back the special value `NaN` which represents "Not A Number". This
-isn't a string, but a special value, in the same way `null` is a special value.
+number, we get back the special value `NaN`, which represents "Not A Number."
+This isn't a string, but a special value, in the same way, `null` is a special
+value.
 
 Example:
 
@@ -212,8 +214,8 @@ const priceFloored = Math.floor(price)
 ### `Ceiling`
 
 The `ceiling` method, `Math.ceil`, accepts a `number` and returns the _smallest_
-whole number that is greater than or equal to the number. For instance if we
-asked for the `ceiling` of `42` we would get `42` back since it `42` a whole
+whole number that is greater than or equal to the number. For instance, if we
+asked for the `ceiling` of `42`, we would get `42` back since `42` is a whole
 number that is equal to the number we gave it. However, if we supplied `42.01`,
 the next smallest whole number would be `43`.
 
