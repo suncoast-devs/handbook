@@ -11,7 +11,7 @@ the information about a restaurant into the state before showing the form
 itself.
 
 We will begin by creating the basic structure of the restaurant edit in
-`EditRestaurant.tsx`
+`EditRestaurant.tsx`.
 
 ## Creating `EditRestaurant.tsx`
 
@@ -73,7 +73,7 @@ export function EditRestaurant() {
   }
 
   async function onDropFile(acceptedFiles) {
-    // Do something with the files
+    // Do something with the files.
     const fileToUpload = acceptedFiles[0]
     console.log(fileToUpload)
 
@@ -81,14 +81,14 @@ export function EditRestaurant() {
     // to the API that is expecting some form data.
     const formData = new FormData()
 
-    // Append a field that is the form upload itself
+    // Append a field that is the form upload itself,
     formData.append('file', fileToUpload)
 
     try {
       setIsUploading(true)
 
       // Use fetch to send an authorization header and
-      // a body containing the form data with the file
+      // a body containing the form data with the file.
       const response = await fetch('/api/Uploads', {
         method: 'POST',
         headers: {
@@ -102,7 +102,7 @@ export function EditRestaurant() {
       // If we receive a 200 OK response, set the
       // URL of the photo in our state so that it is
       // sent along when creating the restaurant,
-      // otherwise show an error
+      // otherwise, show an error.
       if (response.status === 200) {
         const apiResponse = await response.json()
 
@@ -113,7 +113,7 @@ export function EditRestaurant() {
         setErrorMessage('Unable to upload image')
       }
     } catch (error) {
-      // Catch any network errors and show the user we could not process their upload
+      // Catch any network errors and show the user we could not process their upload.
       console.debug(error)
       setErrorMessage('Unable to upload image')
       setIsUploading(false)
@@ -201,8 +201,8 @@ export function EditRestaurant() {
 ```
 
 This is essentially a duplication of the `NewRestaurant` with a few variables
-changed. For example `newRestaurant` becomes `restaurant`. We also change the
-API's use of `POST` to `PUT` so we are no longer creating a restaurant but
+changed. For example, `newRestaurant` becomes `restaurant`. We also change the
+API's use of `POST` to `PUT`, so we are no longer creating a restaurant but
 _updating_ the existing one. We also change the URL to `/api/Restaurants/${id}`
 
 To fetch the editing restaurant, we'll add this code at the top of the
@@ -214,10 +214,10 @@ const id = params.id
 ```
 
 This will get the `id` from the route parameters. Even though we haven't written
-the `<Route>` we know it will have an `:id` in the parameters.
+the `<Route>`, we know it will have an `:id` in the parameters.
 
 Next, we add a `useEffect` to find and load this restaurant. This implementation
-is in `Restaurant.tsx`, so we can essentially copy it from there
+is in `Restaurant.tsx`, so we can essentially copy it from there.
 
 ```javascript
 useEffect(() => {
@@ -239,7 +239,7 @@ Just before the `return` of the main page, we can add logic to show the form
 only when the restaurant is loaded:
 
 ```jsx
-// If we don't have any restaurant ID, return an empty component
+// If we don't have any restaurant ID, return an empty component.
 if (!restaurant.id) {
   return <></>
 }
@@ -288,18 +288,18 @@ restaurant in the database and check its user id. If these do not match, we'll
 return a custom unauthorized message.
 
 ```csharp
-// Find this restaurant by looking for the specific id
+// Find this restaurant by looking for the specific id.
 var restaurantBelongsToUser = await _context.Restaurants.AnyAsync(restaurant => restaurant.Id == id && restaurant.UserId == GetCurrentUserId());
 if (!restaurantBelongsToUser)
 {
-    // Make a custom error response
+    // Make a custom error response.
     var response = new
     {
         status = 401,
         errors = new List<string>() { "Not Authorized" }
     };
 
-    // Return our error with the custom response
+    // Return our error with the custom response.
     return Unauthorized(response);
 }
 ```
