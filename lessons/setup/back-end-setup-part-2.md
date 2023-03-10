@@ -5,7 +5,7 @@ order: 30
 
 # Insomnia
 
-Insomnia is a graphical tool that allows us to work with web based APIs.
+Insomnia is a graphical tool that allows us to work with web-based APIs.
 
 ## Installation
 

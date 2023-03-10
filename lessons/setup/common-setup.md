@@ -5,8 +5,8 @@ order: 10
 
 # Common Setup
 
-The tools in this section are required to be setup for any of the units in the
-program. These will be setup on your first day of class.
+The tools in this section are required to be set up for any of the units in the
+program. These will be set up on your first day of class.
 
 <SectionSeparator />
 
@@ -16,7 +16,7 @@ Slack will be our main form of communication. You will communicate with your
 instructors and SDG staff via Slack. You will get notifications of homework,
 links to resources, and be able to ask for help from peers and staff via Slack.
 
-Download it to you computer; if you have a smart phone, I _highly_ recommend
+Download it to your computer; if you have a smartphone, I _highly_ recommend
 installing the app.
 
 ## Installation
@@ -39,50 +39,50 @@ SDG maintains two main Slack Teams:
 
 <SectionSeparator />
 
-# Github
+# GitHub
 
-Your github account is where you will be storing all of the work you do in these
+Your GitHub account is where you will be storing all of the work you do in these
 lessons and assignments. It will become part of your _portfolio_ or work and
 document your journey of learning.
 
 It is also how you will be tracking your assignments and turning in your
 homework.
 
-## Creating a github account
+## Creating a GitHub account
 
-Start by following the `Sign Up` link on
-[github's home page](https://github.com).
+Start by following the `Sign-Up` link on
+[GitHub's home page](https://github.com).
 
 **Choosing a username** - We recommend using a version of your given name. This
 would be a version of the name you would put at the top of the resume you'd send
 a prospective employer. You might be tempted to select a username like
-`kewldev98` but remember that a hiring manager **WILL** seek out your github
-page and you want it to have a professional feel.
+`kewldev98` but remember that a hiring manager **WILL** seek out your GitHub
+page, and you want it to have a professional feel.
 
 ## Uploading a profile photo
 
-**Use a good headshot photo** - Use the best photo you have of you that shows
-your face. We recommend this because you want other developers, hiring managers,
-and companies to start recognizing you. Use your best photo. If you need a
-professional photo let us know and we can help.
+**Use a good headshot photo** - Use the best photo you have of yourself that
+shows your face. We recommend this because you want other developers, hiring
+managers, and companies to start recognizing you. Use your best photo. If you
+need a professional photo, let us know, and we can help.
 
 ## Setup Your GitHub Token
 
 > THIS IS A CRITICAL STEP
 
-To setup `hub` we will need an API token from GitHub.
+To setup `hub`, we will need an API token from GitHub.
 
 Follow the
 [Creating a personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
 guide to generate a new token. Give your token a helpful name such as "Token for
-using my laptop". Select the `repo` checkbox before creating the token.
+using my laptop." Select the `repo` checkbox before creating the token.
 
 Copy the token you create.
 
-We'll use this the _first_ time we have to login to github
+We'll use this the _first_ time we have to log in to GitHub.
 
 > NOTE: This is the _ONLY_ time this token will be displayed. To ensure its
-> safety copy it to a secure location such as a password manager.
+> safety, copy it to a secure location such as a password manager.
 
 <SectionSeparator />
 
@@ -92,12 +92,12 @@ We use [nexus](https://nexus.suncoast.io) as our student information site. You
 will see your attendance record, homework assignments, lecture videos, as well
 as homework completion status.
 
-To sign up, visit, [https://nexus.suncoast.io](https://nexus.suncoast.io) and
-connect with your github login.
+To sign up, visit [https://nexus.suncoast.io](https://nexus.suncoast.io) and
+connect with your GitHub login.
 
-You will also see instructions to connect `Slack` with `Nexus`. If you choose to
-you will receive notifications when homework is assigned as well as when your
-assignments have been checked by your instructors.
+You will also see instructions to connect `Slack` with `Nexus`. If you choose
+to, you will receive notifications when homework is assigned as well as when
+your assignments have been checked by your instructors.
 
 <SectionSeparator />
 
@@ -105,12 +105,12 @@ assignments have been checked by your instructors.
 
 <OperatingSystemSwitch allowedOperatingSystems={['Mac']}>
 
-If your Mac is setup for `Light Mode` then the default color scheme for
+If your Mac is set up for `Light Mode`, then the default color scheme for
 `Terminal` is black text on a white background. This can be difficult to use for
-long periods of time. If your Mac is setup for `Dark Mode` then the default
+long periods of time. If your Mac is set up for `Dark Mode`, then the default
 color scheme for `Terminal` is light text on a grey background.
 
-If you are using `Light Mode`, consider changing your default profile to `Pro`
+If you are using `Light Mode`, consider changing your default profile to `Pro`,
 which will give you light text on a dark background. Your instructors, and your
 eyes, will thank you.
 
@@ -121,12 +121,12 @@ These are our recommended profiles for Terminal:
 - TheOne
 
 To change your default profile, start `Terminal` and select `Preferences` from
-the _Terminal_ menu. Click on `Profiles` then on `Pro` (or any other profile you
-want) and then click the `Default` button.
+the _Terminal_ menu. Click on `Profiles`, then on `Pro` (or any other profile
+you want), and then click the `Default` button.
 
 ![](./assets/terminal-setup.gif)
 
-> NOTE: if you choose a profile that is bright and colorful, but difficult for
+> NOTE: If you choose a profile that is bright and colorful but difficult for
 > your instructor or fellow classmates to read, you will be making it more
 > challenging to receive assistance.
 
@@ -135,7 +135,7 @@ want) and then click the `Default` button.
 <OperatingSystemSwitch allowedOperatingSystems={['Windows']}>
 
 As a developer on the Windows platform, one of our main tools is `Powershell`.
-`Powershell` is the command line interface (or shell) we use to run commands and
+`Powershell` is the command-line interface (or shell) we use to run commands and
 interact with our computer. Using the shell seems difficult at first, but with
 practice, this becomes a much more efficient way of using our computers.
 
@@ -148,7 +148,7 @@ just like any other program.
 ## PRO TIP
 
 Since we are going to run this often you may consider pinning it to your screen
-by right-clicking the icon in the Task Bar and selecting "Pin to taskbar"
+by right-clicking the icon in the Task Bar and selecting "Pin to taskbar."
 
 </OperatingSystemSwitch>
 
@@ -157,21 +157,20 @@ by right-clicking the icon in the Task Bar and selecting "Pin to taskbar"
 # Code Folder
 
 During this course we are going to be creating many projects. Each of these will
-have their own directory. Thus we should attempt to organize these in some
-manner.
+have its own directory. Thus we should attempt to organize these in some manner.
 
 ## Choosing a place to keep your projects.
 
-We feel there are a few choices on where to keep your projects
+We feel there are a few choices on where to keep your projects:
 
 1. In a folder named `sdg` or `code` or `projects` in your _home directory_.
    Your _home directory_ is where your PowerShell or terminal will start from.
    This makes your code directory just a step away.
 2. In a folder named `sdg` or `code` or `projects` in your `Documents`
-   directory. This is one directory below your _home folder_ so it is still
+   directory. This is one directory below your _home folder_, so it is still
    nearby.
 3. In a folder named `sdg` or `code` or `projects` on your `Desktop`. This too
-   is only one directory below your _home folder_ so it is still nearby.
+   is only one directory below your _home folder_, so it is still nearby.
 
 Skip to the section below matching your desired structure.
 
@@ -180,7 +179,7 @@ Skip to the section below matching your desired structure.
 Choose what you want to call this directory and use the following commands to
 create it.
 
-> NOTE: In this example I'm choosing to call my project directory `sdg`
+> NOTE: In this example, I'm choosing to call my project directory `sdg`
 
 ```shell
 cd ~
@@ -193,7 +192,7 @@ mkdir sdg
 Choose what you want to call this directory and use the following commands to
 create it.
 
-> NOTE: In this example I'm choosing to call my project directory `sdg`
+> NOTE: In this example, I'm choosing to call my project directory `sdg`
 
 ```shell
 cd ~
@@ -208,7 +207,7 @@ mkdir sdg
 Choose what you want to call this directory and use the following commands to
 create it.
 
-> NOTE: In this example I'm choosing to call my project directory `sdg`
+> NOTE: In this example, I'm choosing to call my project directory `sdg`
 
 ```shell
 cd ~
@@ -248,12 +247,12 @@ Open a Terminal and run:
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 ```
 
-When this command runs it may ask for a _password_. This is the same password
-you use to login to your Mac, or unlock the screen.
+When this command runs, it may ask for a _password_. This is the same password
+you use to login to your Mac or unlock the screen.
 
-> NOTE: When you type your password it won't output anything, you'll be typing
-> without any feedback. If you get the password wrong the installation process
-> will let you know and you can try again.
+> NOTE: When you type your password, it won't output anything you'll be typing
+> without any feedback. If you get the password wrong, the installation process
+> will let you know, and you can try again.
 
 ## Follow up
 
@@ -281,7 +280,7 @@ done
 
 Scoop is a tool to automatically install programs via the command line. This
 simplifies the process of installing many of the tools we need by avoiding the
-steps of visiting the website, downloading the installer and then running the
+steps of visiting the website, downloading the installer, and then running the
 installer.
 
 ## Set Execution Policy
@@ -328,11 +327,11 @@ scheme for text and errors. It also supports multiple tabbed windows. We
 recommend this in place of running PowerShell directly.
 
 If you do choose to use Windows Terminal, any place that says to start a
-PowerShell you may start a new Windows Terminal tab. You may also want to _pin_
-this to your task bar.
+PowerShell, you may start a new Windows Terminal tab. You may also want to _pin_
+this to your taskbar.
 
 > NOTE: We _highly_ recommend you use Windows Terminal instead of PowerShell. It
-> is much more user friendly.
+> is much more user-friendly.
 
 #### Installation
 
@@ -349,7 +348,7 @@ scoop install windows-terminal
 Node is a runtime for JavaScript. This means that with node, we can run
 JavaScript on our machines without having to be in a browser.
 
-When working with HTML, CSS, and JavaScript we will find many of the tools
+When working with HTML, CSS, and JavaScript, we will find many of the tools
 require, or are written in, JavaScript with node.
 
 ## Installation
@@ -370,7 +369,7 @@ scoop install nodejs
 
 ## Build tools
 
-Start a **PowerShell As Administrator**
+Start a **PowerShell As Administrator**.
 
 ```shell
 npm install --global windows-build-tools
@@ -378,7 +377,7 @@ npm install --global windows-build-tools
 
 > NOTE: This may take a long time to complete.
 
-**CLOSE THIS POWERSHELL WHEN COMPLETE**
+**CLOSE THIS POWERSHELL WHEN COMPLETE**.
 
 </OperatingSystemSwitch>
 
@@ -396,7 +395,7 @@ npm install --global suncoast-devs/cli
 # Visual Studio Code
 
 Developers debate about which code editing environment is better. Here at SDG,
-we require using Visual Studio Code. VS Code is a extendable lightweight editor
+we require using Visual Studio Code. VS Code is an extendable lightweight editor
 that is still full featured and supports useful plugins.
 
 ## Installation
@@ -429,7 +428,7 @@ option titled `Shell Command: Install code command in PATH`
 Visit [https://code.visualstudio.com/](https://code.visualstudio.com/) and
 download the installer.
 
-- This will download a `EXE` file.
+- This will download an `EXE` file.
 - Find the download (did you download it to your desktop or your download
   folder?)
 - Double click the exe file
@@ -453,7 +452,7 @@ into your Visual Studio Code.
 
 ### General Extensions:
 
-In any terminal (and any directory) run the following:
+In any terminal (and any directory), run the following:
 
 ```shell
 code --install-extension 2gua.rainbow-brackets
@@ -469,7 +468,7 @@ To read about these extensions:
 
 ### C#/.NET Extensions:
 
-In any terminal (and any directory) run the following:
+In any terminal (and any directory), run the following:
 
 ```shell
 code --install-extension ms-dotnettools.csharp
@@ -485,7 +484,7 @@ To read about these extensions:
 
 ### Front End Extensions:
 
-In any terminal (and any directory) run the following:
+In any terminal (and any directory), run the following:
 
 ```shell
 code --install-extension dbaeumer.vscode-eslint
@@ -505,16 +504,16 @@ To read about these extensions:
 
 ## Configure Visual Studio Code
 
-In VS Code go to the "View" menu and select the menu item "Command Pallete".
+In VS Code, go to the "View" menu and select the menu item "Command Pallete."
 Then type `Open Settings JSON` and select option that does _NOT_ mention
-"Default" or "Workspace"
+"Default" or "Workspace."
 
 ![](./assets/open-settings.png)
 
 This will open an editor window.
 
-If this file contains `{}` (it may be on two lines) you may proceed with the
-next step. If it contains anything else **STOP and ask for assistance**.
+If this file contains `{}` (it may be on two lines), you may proceed with the
+next step. If it contains anything else, **STOP and ask for assistance**.
 
 **Replace** the contents of this file with:
 
@@ -543,10 +542,10 @@ Then save the file and close the tab.
 # Git
 
 Git is a distributed source control system. This allows us to easily work and
-collaborate, on many different projects.
+collaborate on many different projects.
 
 Git is how we will be managing our files and sharing code with each other. Git
-is a complex tool and it will seem rough at first. However, with practice, you
+is a complex tool, and it will seem rough at first. However, with practice, you
 will become familiar with the commands and options.
 
 ## Pre Installation
@@ -573,10 +572,10 @@ scoop install git
 
 ## Default branch name
 
-When working in `git` as a source control resource we work in `branches` of
+When working in `git` as a source control resource, we work in `branches` of
 code. Branches are a series of changes to code for a particular purpose. The
 default branch for a new git project has been `master`. SDG believes
-master-slave is an oppressive metaphor and we empathize with those hurt by the
+master-slave is an oppressive metaphor, and we empathize with those hurt by the
 use of that term.
 
 Git allows for a mechanism to change the default name of this branch. We suggest
@@ -627,17 +626,17 @@ git config --global user.name "Example: Ada Lovelace"
 > -- IMPORTANT NOTE -- STOP AND READ --
 >
 > In the following command, instead of
-> `email-address-you-used-at-github@example.com` use the **same email address
+> `email-address-you-used-at-github@example.com`, use the **same email address
 > you gave to GitHub**. Github uses this to make sure it can generate this
-> awesome "activity" chart for you. ![github-activity](./github-activity.png)
+> awesome "activity" chart for you.
 
-To find the email address you used at github, go to this menu and choose "Your
-Profile"
+To find the email address you used at GitHub, go to this menu and choose "Your
+Profile."
 
 ![Profile Menu](./assets/profile-menu.png)
 
 Once you do, you'll see your profile page that includes the email address you
-used for registration on github. (highlighted in RED)
+used for registration on GitHub. (highlighted in RED)
 
 ![Profile Page ](./assets/profile-page.png)
 
@@ -657,17 +656,17 @@ git config --global user.email "grace-hopper@example.com"
 git config --global user.email "ada-lovelace@example.com"
 ```
 
-## Tell Git your Github username
+## Tell Git your GitHub username
 
 Replace GITHUBNAME here with your github _LOGIN / USER_ name. You can get this
-from the Github API by clicking on your user icon in the upper right hand
-corner. It will say "Signed in as GITHUBUSERNAME"
+from the Github API by clicking on your user icon in the upper right-hand
+corner. It will say, "Signed in as GITHUBUSERNAME."
 
 ```shell
 git config --global github.user GITHUBNAME
 ```
 
-## Ensure git uses VS Code for it's editor
+## Ensure git uses VS Code for its editor
 
 ```shell
 git config --global core.editor "code --wait"
@@ -686,7 +685,8 @@ git config --global hub.protocol https
 
 ## Tell git to automatically push the current branch by default
 
-This configuration tells git to push the current branch when we do `git push` without any branch name.
+This configuration tells git to push the current branch when we do `git push`
+without any branch name.
 
 ```shell
 git config --global push.default current
@@ -694,7 +694,7 @@ git config --global push.default current
 
 ## Tell git how to handle line endings
 
-The way Windows and Mac handle the end of a line of code differ. The following
+The way Windows and Mac handle the end of a line of code differs. The following
 setup will help configure git to handle this difference.
 
 ```shell
@@ -707,7 +707,7 @@ git config --global core.autocrlf true
 
 # hub
 
-Hub is a command line helper for github. It allows for easy github manipulation
+Hub is a command-line helper for GitHub. It allows for easy GitHub manipulation
 from our terminal.
 
 From your terminal, run the following commands (current directory does not
@@ -739,12 +739,12 @@ Start a new Powershell and enter the command:
 hub api user --flat
 ```
 
-This will ask for your `github.com username`, supply your username or email
+This will ask for your `github.com username` supply your username or email
 address. Enter your github token as your password. **NOTE** You will _NOT_ see
 your password displayed back to you.
 
 hub outputs a lot of text. If you get a "wall of text" similar to the output
-below, then you have setup `hub` correctly. Otherwise you may see an error
+below, then you have set up `hub` correctly. Otherwise, you may see an error
 message.
 
 ```shell
