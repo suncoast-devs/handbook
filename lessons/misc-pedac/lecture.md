@@ -13,7 +13,7 @@ Documented in a blog post `Solving Coding Problems With PEDAC`
 
 ---
 
-Breaks down problem solving into five phases.
+Breaks down problem-solving into five phases.
 
 - **`P`** - Problem
 - **`E`** - Examples
@@ -161,13 +161,13 @@ Will need to try out your algorithm steps on your example data.
 ---
 
 1. If the list is empty, the answer is 0, stop.
-2. Start at the first element of the list
-3. That number is your largest so far
-4. Move to the next number 
-5. If we are at the end of the list stop and return our answer
-6. If the current number in the list is larger than `largest so far`, replace `largest so far` with this number.
-7. Move to the next number in the list
-8. Go back to step 5
+2. Start at the first element of the list.
+3. That number is your largest so far.
+4. Move to the next number.
+5. If we are at the end of the list, stop and return our answer.
+6. If the current number in the list is larger than the `largest so far`, replace the `largest so far` with this number.
+7. Move to the next number in the list.
+8. Go back to step 5.
 
 ---
 
@@ -189,9 +189,9 @@ Will need to try out your algorithm steps on your example data.
 
 # Suggestions
 
-- Start to look at *everything* as a PEDAC: Homework, things from your daily life, real world problems.
+- Start to look at *everything* as a PEDAC: Homework, things from your daily life, real-world problems.
  - Example: watch this video about making PB&J sandwiches (https://www.youtube.com/watch?v=cDA3_5982h8) and see if you could do better.
-- When working on code challenges don't take shortcuts with google searches.
+- When working on code challenges, don't take shortcuts with google searches.
 - Give yourself permission to **FAIL**.
 
 ---
@@ -200,7 +200,7 @@ Will need to try out your algorithm steps on your example data.
 
 - Given a list of numbers, perhaps very long, sort the number in increasing order.
 - You can only look at two numbers from the list at a time.
-- You can ony swap two numbers from the list at any time.
+- You can only swap two numbers from the list at any time.
 
 ---
 
