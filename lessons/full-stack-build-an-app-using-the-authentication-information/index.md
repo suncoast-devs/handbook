@@ -7,8 +7,8 @@ order: 22
 
 # Navigation Buttons
 
-Let's update the sign in and sign up buttons/links to only display if the user
-is **not logged in**
+Let's update the sign-in and sign-up buttons/links to only display if the user
+is **not logged in**.
 
 ```jsx
 {
@@ -19,10 +19,10 @@ is **not logged in**
 }
 ```
 
-Here we test if the user is logged in, and if they are **not** then we show the
+Here we test if the user is logged in, and if they are **not**, then we show the
 `<Link>`. This works since `isLoggedIn()` returns either `true` or `false` -- If
 the value is `false`, JavaScript will interpret and return the second part of
-the boolean logic, which is the `<Link>` -- If the value is `true` JavaScript
+the boolean logic, which is the `<Link>` -- If the value is `true`, JavaScript
 renders that. React renders a value of `true` as nothing. This code effectively
 only shows the links if the user is **not** logged in.
 
@@ -57,16 +57,16 @@ function handleLogout() {
 }
 ```
 
-Now let's only show the avatar, welcome message, and create new restaurant if
+Now let's only show the avatar, welcome message, and create a new restaurant if
 the user is logged in.
 
-To determine the user, we'll add a call to `getUser` from `auth.js`
+To determine the user, we'll add a call to `getUser` from `auth.js`.
 
 ```javascript
 const user = getUser()
 ```
 
-and then we can use that in place of the user's hardcoded name:
+And then we can use that in place of the user's hardcoded name:
 
 ```jsx
 {
@@ -74,8 +74,8 @@ and then we can use that in place of the user's hardcoded name:
 }
 ```
 
-We haven't added an avatar image upload for the user, so we'll leave this hard
-coded for the moment.
+We haven't added an avatar image upload for the user, so we'll leave this
+hardcoded for the moment.
 
 ```jsx
 {
@@ -102,8 +102,8 @@ And to update the add new restaurant button:
 # Hide the "New Review" form unless logged in
 
 We will wrap the `<h3>` and the `<form>` in a fragment tag to place them in a
-group. We then use a ternary operator with `isLoggedIn()` that will show that
-JSX for logged-in users.
+group. We then use a ternary operator with `isLoggedIn()` that will show JSX for
+logged-in users.
 
 ```jsx
 {
