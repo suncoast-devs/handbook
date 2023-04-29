@@ -6,9 +6,9 @@ order: 21
 # Adding Login to the User Interface
 
 Turning to the `SignIn.tsx` component, we will make similar changes to the work
-we did to `SignUp.tsx`
+we did to `SignUp.tsx`.
 
-The first step is to add types. We'll need a type to hold the form information
+The first step is to add types. We'll need a type to hold the form information,
 and we'll also need a type for the data that is returned from the login API.
 Then state to store the user and an error message:
 
@@ -45,7 +45,7 @@ We can add a `<p>` tag to show the error message:
 }
 ```
 
-then we will add a function to handle the user's input in the fields:
+Then we will add a function to handle the user's input in the fields:
 
 ```typescript
 function handleStringFieldChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -58,7 +58,7 @@ function handleStringFieldChange(event: React.ChangeEvent<HTMLInputElement>) {
 }
 ```
 
-then add a function to submit the form:
+Then add a function to submit the form:
 
 ```typescript
 async function loginUser(user: LoginUserType): Promise<LoginSuccess> {
@@ -109,12 +109,12 @@ const loginUserMutation = useMutation(loginUser, {
 
 Notice we use `window.location` to redirect the user instead of `history.push`.
 This is so the browser forces a reload and detects that the user is logged in.
-The information about the logged in user is captured by the recordAuthentication
+The information about the logged-in user is captured by the recordAuthentication
 function we are about to introduce.
 
 The `recordAuthentication` method and many other useful authentication methods
 exist in the file `auth.js`. The purpose of `recordAuthentication` is to store
-the api response from the login in _local storage_ so we can access it later.
+the API response from the login in _local storage_ so we can access it later.
 
 ## Local Storage
 
@@ -128,7 +128,7 @@ that runs on the page that **originates** from that domain. This security should
 protect the data from JavaScript running in an injected ad, but if some
 malicious software can inject JavaScript into the page itself, it will be able
 to read these values. While local storage is convenient, it may not be the most
-secure way to store the authentication information.
+secure way to store authentication information.
 
 An alternative is to send the authentication data as a `cookie` value. However,
 cookies have security implications and concerns.
@@ -140,7 +140,7 @@ storage.
 
 Since we want the user to redirect to the main page, we also want it to reload
 any authentication data. For this reason, we will use `window.location` to force
-a page reload rather than `history.push`, which would do a local, non-reload
+a page to reload rather than `history.push`, which would do a local, non-reload
 navigation.
 
 ## `auth.ts`
@@ -159,7 +159,7 @@ The contents of the `auth.ts` are:
 ```typescript
 // Returns an object that can be included in `fetch`
 // headers to include the required bearer token
-// for authentication
+// for authentication.
 //
 // Example usage:
 //
@@ -171,21 +171,21 @@ The contents of the `auth.ts` are:
 
 import { LoginSuccess } from './types'
 
-// Returns the Authorization header for the the currently logged in in user.
-// If there is no authorization data, we'll return an empty object
+// Returns the Authorization header for the currently logged in user.
+// If there is no authorization data, we'll return an empty object.
 export function authHeader() {
   const auth = authFromStorage()
 
   return auth.token ? `Bearer ${auth.token}` : ''
 }
 
-// Save the authentication received from the API
+// Save the authentication received from the API.
 //
 // This method stores the authentication data as
 // a JSON string in local storage. Local storage
 // requires everything to be in a string.
 //
-// This is typically called from a login component
+// This is typically called from a login component.
 //
 export function recordAuthentication(auth: LoginSuccess) {
   localStorage.setItem('auth', JSON.stringify(auth))
@@ -193,20 +193,20 @@ export function recordAuthentication(auth: LoginSuccess) {
 
 // Returns a boolean if the user is logged in.
 //
-// Returns TRUE if there is an active user id, FALSE otherwise
+// Returns TRUE if there is an active user id, FALSE otherwise.
 //
 export function isLoggedIn() {
   return getUserId() !== undefined
 }
 
-// Returns the user id if the logged in user, null otherwise
+// Returns the user id if the logged-in user, null otherwise.
 export function getUserId() {
   const auth = authFromStorage()
 
   return auth.user && auth.user.id
 }
 
-// Returns the user details retrieved from the authentication data
+// Returns the user details retrieved from the authentication data.
 //
 // Example:
 //
@@ -225,8 +225,8 @@ export function logout() {
   localStorage.removeItem('auth')
 }
 
-// Local method to fetch and decode the auth data from local storage
-// If there is no local storage value, returns an empty object
+// Local method to fetch and decode the auth data from local storage.
+// If there is no local storage value returns an empty object.
 function authFromStorage(): LoginSuccess {
   const auth = localStorage.getItem('auth')
 
@@ -234,10 +234,10 @@ function authFromStorage(): LoginSuccess {
 }
 ```
 
-Now in the `SignIn.tsx` we can uncomment the `recordAuthentication(apiResponse)`
-and add the corresponding import.
+Now in the `SignIn.tsx`, we can uncomment the
+`recordAuthentication(apiResponse)` and add the corresponding import.
 
-Add a route to the `SignIn` component in our `App.tsx`
+Add a route to the `SignIn` component in our `App.tsx`.
 
 ```jsx
 <Route exact path="/signin">
@@ -245,7 +245,7 @@ Add a route to the `SignIn` component in our `App.tsx`
 </Route>
 ```
 
-and a link in the navigation
+And add a link in the navigation.
 
 ```jsx
 <Link to="/signin">Sign In</Link>
