@@ -9,12 +9,12 @@ Another nice feature would be to show the list of restaurants on a map. To map
 these restaurants, we need to know precisely where the restaurants are. The
 process of turning an address into a position, as well as turning a position
 into an address, is known as
-[`Geocoding`](https://en.wikipedia.org/wiki/Geocoding)
+[`Geocoding`](https://en.wikipedia.org/wiki/Geocoding).
 
 When _geocoding_ an address, we are often turning the address's text, its street
 number, and name, along with the city, state, and zip/postal code, into a pair
 of numbers. These decimal numbers,
-[`latitude` and `longitude`](https://www.timeanddate.com/geography/longitude-latitude.html)
+[`latitude`, and `longitude`](https://www.timeanddate.com/geography/longitude-latitude.html)
 describe a single position on the surface of the planet.
 
 ## Adding columns to store a coordinate
@@ -28,7 +28,7 @@ public double Latitude { get; set; }
 public double Longitude { get; set; }
 ```
 
-Then we will generate a migration for these columns and update the database
+Then we will generate a migration for these columns and update the database.
 
 ```shell
 dotnet ef migrations add AddLatitudeAndLongitudeToRestaurant
@@ -53,11 +53,11 @@ dotnet add package Geocoding.Microsoft
 
 The `Geocoding` package comes with support for other services other than
 Microsoft, but this is the one we will use in this lesson. Each of the geocoding
-systems requires an account and an API key. Microsoft's sign up process is one
-of the easiest, and we'll choose that to proceed. To sign up for a key, follow
+systems requires an account and an API key. Microsoft's sign-up process is one
+of the easiest, and we'll choose that to proceed. To sign-up for a key, follow
 [these procedures](https://docs.microsoft.com/en-us/bingmaps/getting-started/bing-maps-dev-center-help/getting-a-bing-maps-key)
 
-Similar to our `JWT_KEY` we will have to add a secret for this API. We'll call
+Similar to our `JWT_KEY`, we will have to add a secret for this API. We'll call
 the secret `BING_MAPS_KEY` and access it in our `RestaurantsController`:
 
 To save the key in secrets:
@@ -87,8 +87,8 @@ public RestaurantsController(DatabaseContext context, IConfiguration config)
 }
 ```
 
-Now that we have added this library and setup an API key, let's add some code to
-`PostRestaurant` just before `restaurant.UserId = GetCurrentUserId();`
+Now that we have added this library and set up an API key, let's add some code
+to `PostRestaurant` just before `restaurant.UserId = GetCurrentUserId();`
 
 ```csharp
 // Create a new geocoder
@@ -100,7 +100,7 @@ var geocodedAddresses = await geocoder.GeocodeAsync(restaurant.Address);
 // ... and pick out the best address sorted by the confidence level
 var bestGeocodedAddress = geocodedAddresses.OrderBy(address => address.Confidence).LastOrDefault();
 
-// If we have a best geocoded address, use the latitude and longitude from that result
+// If we have the best geocoded address, use the latitude and longitude from that result
 if (bestGeocodedAddress != null)
 {
     restaurant.Latitude = bestGeocodedAddress.Coordinates.Latitude;
@@ -110,10 +110,10 @@ if (bestGeocodedAddress != null)
 
 Let's add some restaurants to our database and see what results we get for
 geocoded addresses. Enter some restaurants along with addresses you know and
-then check, using `pgcli` that there are values for `latitude` and `longitude`
+then check, using `pgcli`, that there are values for `latitude` and `longitude`.
 
 Let's also update our `exampledata.sql` to add geocoded locations for our
-example restaurants
+example restaurants.
 
 ```sql
 INSERT INTO "Restaurants" ("Name", "Description", "Address", "Telephone", "Latitude", "Longitude", "UserId") VALUES ('Thoughtbeat', 'Inverse zero administration benchmark', '07 Meadow Vale Drive', '314-651-9791', 27.7970127, -82.6403897, 1);
