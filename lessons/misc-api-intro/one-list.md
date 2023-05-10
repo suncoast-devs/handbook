@@ -241,6 +241,6 @@ Here are some common HTTP response codes you are likely to see
 
 ## Sites to look up response codes
 
-- [HTTP Status Dogs](https://httpstatusdogs.com/)
-- [Text HTTP Status](https://httpstatuses.com/)
-- [HTTP Status Cats](https://www.flickr.com/photos/girliemac/albums/72157628409467125/)
+- [HTTP Status Dogs](https://http.dog/)
+- [Text HTTP Status](https://http.dev/status)
+- [HTTP Status Cats](https://httpcats.com/)
