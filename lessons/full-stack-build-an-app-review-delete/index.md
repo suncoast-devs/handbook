@@ -5,8 +5,8 @@ order: 32
 
 # Review Delete
 
-To delete a review, we will first add a button to each review where the user id
-equals the current user id.
+To delete a review, we will first add a button to each review to check the user
+id equals the current user id.
 
 ```jsx
 {
