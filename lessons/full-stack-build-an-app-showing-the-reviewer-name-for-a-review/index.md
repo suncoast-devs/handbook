@@ -8,7 +8,7 @@ order: 24
 Our design shows the name of the reviewer along with the review. Let's add
 support for that.
 
-In the `RestaurantController` we will modify the `HttpGet` for a _single_
+In the `RestaurantController`, we will modify the `HttpGet` for a _single_
 restaurant to include the `User` in the list of associated models we fetch.
 
 ```csharp
@@ -23,7 +23,7 @@ reviews. We'll give it a value of `1` even though we don't have any `Users` --
 whatever user we create first will get those reviews.
 
 ```sql
--- Ensure we truncate the table and restart the identity so our Id column starts at 1 each time
+-- Ensure we truncate the table and restart the identity, so our Id column starts at 1 each time
 TRUNCATE TABLE "Restaurants", "Reviews", "Users" RESTART IDENTITY;
 
 -- Ensure we have a user to associate to the reviews below
@@ -57,8 +57,8 @@ export type ReviewType = {
 }
 ```
 
-This will cause an issue with our existing use for creating a state. For now
-we'll create a new type `NewReviewType` to handle this:
+This will cause an issue with our existing use for creating a state. For now,
+we'll create a new type `NewReviewType`, to handle this:
 
 ```typescript
 export type NewReviewType = {
@@ -90,7 +90,7 @@ also
 async function submitNewReview(review: NewReviewType) {
 ```
 
-Then in the `Restaurant.tsx` we can access the `user` information.
+Then in the `Restaurant.tsx`, we can access the `user` information.
 
 ```jsx
 <div className="author">
