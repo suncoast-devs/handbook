@@ -21,13 +21,13 @@ will have the following attributes:
 - Email Address
 - Password
 
-It is unwise to store **unencrypted** passwords in our database. Thus we will
-not keep the raw password, but a **hashed** password.
+It is unwise to store **un-encrypted** passwords in our database. Thus we will
+not keep the raw password but a **hashed** password.
 
 ### Hashing Passwords
 
 The idea of a hashed password relies on the concept of a "one-way function",
-that is a function that is fast and easy to compute in one direction but
+which is a function that is fast and easy to compute in one direction but
 difficult to calculate in the other.
 
 Let us take a look at the idea of a "two-way function". A simple example would
@@ -42,9 +42,9 @@ A classic example of a one-way function is the prime factorization function.
 Given two prime numbers, say `17` and `5`, it is easy to multiply them together
 and get `85`. Given a number like `85`, it isn't too hard to figure out which
 two prime numbers multiply together to get that number. This isn't true as the
-number gets larger. If I give you the number `682654107378822049` it isn't so
+number gets larger. If I give you the number `682654107378822049`, it isn't so
 trivial to compute the two numbers that are its prime factors (the answer is
-`982451653` and `694847533`)
+`982451653` and `694847533`).
 
 For something like a password, we will use the idea of a `hashing function`. A
 `hashing function` attempts to take an input value and compute a fixed size and
@@ -55,7 +55,7 @@ A popular hashing function is `SHA256`. If we take the text `dotnet` and process
 it with this algorithm we get back out the result:
 `3831fff4af76125e90081ac7eb855a1bcce0733045f9d26cd620466e0d4acf97`. If we take
 the text `ditnet`, just one letter different we get
-`fb89fe75f8be03f17435f563121e940360cd9fcfcbd3f8978b59c160fdaca711`
+`fb89fe75f8be03f17435f563121e940360cd9fcfcbd3f8978b59c160fdaca711`.
 
 Given a result of a `SHA256` hash, it is _very_ difficult to work out what text
 generated it.
@@ -68,8 +68,8 @@ algorithm.
 
 We will want to treat the `Id`, `FullName`, and `Email` as we have other fields
 for our model. For the password, we will be creating and storing a
-`HashedPassword` in the database. Mark this field as `JsonIgnore` so it skipped
-by serialization and not exposed in any API results.
+`HashedPassword` in the database. Mark this field as `JsonIgnore`, so it is
+skipped by serialization and not exposed in any API results.
 
 We also wish to be able to _assign_ a plain text password to a user. The setting
 of this plain text password should have the effect of hashing that value and
@@ -111,7 +111,7 @@ namespace TacoTuesday.Models
         // Add a method that can validate this user's password
         public bool IsValidPassword(string password)
         {
-            // Look to see if this password, and the user's hashed password can match
+            // Look to see if this password and the user's hashed password can match
             var passwordVerification = new PasswordHasher<User>().VerifyHashedPassword(this, this.HashedPassword, password);
 
             // Return True if the verification was a success
@@ -126,7 +126,7 @@ email as the login, and we want to be able to address the user by name.
 
 This class uses a custom `setter` for the `Password`, allowing us to set it from
 the API. That setter hashes the password and assigns the user's `HashedPassword`
-property (stored in the database)
+property (stored in the database).
 
 We also have a method `IsValidPassword` that can identify if we have a valid
 password.
