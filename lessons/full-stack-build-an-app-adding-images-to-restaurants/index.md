@@ -5,10 +5,10 @@ order: 28
 
 # Adding Images To Restaurants
 
-It would be nice to add an image for the restaurant so we know what the place
+It would be nice to add an image for the restaurant, so we know what the place
 looks like.
 
-When storing user-provided assets we can choose between hosting these assets
+When storing user-provided assets, we can choose between hosting these assets
 ourselves or using an external service. Storing them ourselves gives us more
 control. However, external services are often optimized for this process,
 provide lower-cost storage options, faster networking, and more geographically
@@ -22,7 +22,7 @@ The following are some of the popular choices for asset storage.
 - Google Cloud
 - Cloudinary
 
-This lesson will be using Cloudinary since the integration is more
+In this lesson, we will be using Cloudinary since the integration is more
 straightforward and does not require a paid plan to get started. If you are
 interested in replacing Cloudinary with one of the other services, you may
 research existing dotnet libraries for those platforms.
@@ -30,7 +30,7 @@ research existing dotnet libraries for those platforms.
 ## Adding Cloudinary
 
 First, we will sign up at Cloudinary for an API KEY. When you have your account
-created you'll need three values:
+created, you'll need three values:
 
 - `CLOUDINARY_CLOUD_NAME`
 - `CLOUDINARY_API_KEY`
@@ -134,7 +134,7 @@ Next, we will ensure that we limit our uploads to supported image types.
 
 To do so, we'll make a class property to hold a _set_ of strings of the content
 types allowed. We will use the `HashSet` collection type since it is efficient
-for fast lookups and does not allow for duplicates (unlike a `List`)
+for fast lookups and does not allow for duplicates (unlike a `List`).
 
 ```csharp
 private readonly HashSet<string> VALID_CONTENT_TYPES = new HashSet<string> {
@@ -150,20 +150,20 @@ private readonly HashSet<string> VALID_CONTENT_TYPES = new HashSet<string> {
 Then we can add the following code at the beginning of our `Upload` method:
 
 ```csharp
-// Check this content type against a set of allowed content types
+// Check this content type against a set of allowed content types.
 var contentType = file.ContentType.ToLower();
 if (!VALID_CONTENT_TYPES.Contains(contentType))
 {
-    // Return a 400 Bad Request when the content type is not allowed
+    // Return a 400 Bad Request when the content type is not allowed.
     return BadRequest("Not Valid Image");
 }
 ```
 
 After validating the content type we can proceed to send the content to
-_Cloudinary_
+_Cloudinary_.
 
 ```csharp
-// Create and configure a client object to be able to upload to Cloudinary
+// Create and configure a client object to be able to upload to Cloudinary.
 var cloudinaryClient = new Cloudinary(new Account(CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET));
 
 // Create an object describing the upload we are going to process.
@@ -173,11 +173,11 @@ var uploadParams = new ImageUploadParams()
     File = new FileDescription(file.FileName, file.OpenReadStream())
 };
 
-// Upload the file to the server
+// Upload the file to the server.
 ImageUploadResult result = await cloudinaryClient.UploadLargeAsync(uploadParams);
 
 // If the status code is an "OK" then the upload was accepted so we will return
-// the URL to the client
+// the URL to the client.
 if (result.StatusCode == HttpStatusCode.OK)
 {
     var urlOfUploadedFile = result.SecureUrl.AbsoluteUri;
@@ -186,7 +186,7 @@ if (result.StatusCode == HttpStatusCode.OK)
 }
 else
 {
-    // Otherwise there was some failure in uploading
+    // Otherwise, there was some failure in uploading.
     return BadRequest("Upload failed");
 }
 ```
@@ -227,7 +227,7 @@ export type RestaurantType = {
 }
 ```
 
-We'll also need a type for handining API results:
+We'll also need a type for handling API results:
 
 ```typescript
 export type UploadResponse = {
@@ -269,7 +269,7 @@ function onDropFile(acceptedFiles: File[]) {
 For now, we will have this log the details of the files dropped and get details
 of the first one. We are only going to allow single file drops for now.
 
-Next we will get some configuration information from the dropzone library:
+Next, we will get some configuration information from the dropzone library:
 
 ```javascript
 const { getRootProps, getInputProps, isDragActive } = useDropzone({
@@ -290,10 +290,10 @@ Replace the existing form input field for a photo with the following:
 </div>
 ```
 
-Try dragging and dropping a file on that part of the UI. When you drop a file
+Try dragging and dropping a file on that part of the UI. When you drop a file,
 you will see the details of your dropped file logged by the `onDropFile` method.
 
-Next we will create a function to handle uploading of our file:
+Next, we will create a function to handle uploading of our file:
 
 ```typescript
 async function uploadFile(fileToUpload: File) {
@@ -301,11 +301,11 @@ async function uploadFile(fileToUpload: File) {
   // to the API that is expecting some form data.
   const formData = new FormData()
 
-  // Append a field that is the form upload itself
+  // Append a field that is the form upload itself.
   formData.append('file', fileToUpload)
 
   // Use fetch to send an authorization header and
-  // a body containing the form data with the file
+  // a body containing the form data with the file.
   const response = await fetch('/api/Uploads', {
     method: 'POST',
     headers: {
