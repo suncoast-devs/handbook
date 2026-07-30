@@ -9,7 +9,7 @@ If we want to store the user that created a restaurant or a review, we need to
 add some details to the models. Specifically, we will need to store the `UserId`
 value in both of these models.
 
-Add the following to both `Restaurant` and `Review`
+Add the following to both `Restaurant` and `Review`:
 
 ```csharp
 public int UserId { get; set; }
@@ -22,7 +22,7 @@ Once added, we can run a single migration that will update both of these tables.
 dotnet ef migrations add AddUserIdToRestaurantAndReview
 ```
 
-and run the migrations
+And run the migrations.
 
 ```shell
 dotnet ef database update
@@ -32,15 +32,15 @@ dotnet ef database update
 
 We _could_ have the client send their `Id` along with the request to create a
 restaurant and review. However, the current user id is not data we want to trust
-to the API. Since anyone could change that value when sending a request we want
+to the API. Since anyone could change that value when sending a request, we want
 the **server** to control associating that data. Thus, we want to provide the
 two controllers with a way to determine the current user's id.
 
 We can add a helper to our controller just after the last method of the
-controller in `RestaurantsController.cs`
+controller in `RestaurantsController.cs`.
 
 ```csharp
-// Private helper method to get the JWT claim related to the user ID
+// Private helper method to get the JWT claim related to the user ID.
 private int GetCurrentUserId()
 {
     // Get the User Id from the claim and then parse it as an integer.
@@ -51,7 +51,7 @@ private int GetCurrentUserId()
 We can then use this in our PostRestaurant method to help ensure we have user
 IDs assigned.
 
-To require a user to be logged in (have a valid JWT) add this line before the
+To require a user to be logged in (have a valid JWT), add this line before the
 `PostRestaurant` method:
 
 ```csharp
@@ -66,7 +66,7 @@ the `PostRestaurant` implementation:
 restaurant.UserId = GetCurrentUserId();
 ```
 
-Finally, lets send our authorization header token when making the request in
+Finally, let's send our authorization header token when making the request in
 `NewRestaurant.tsx`. The `...authHeader()` means to take all the information
 that `authHeader` returns and add those keys and corresponding values to the
 collection of headers.
