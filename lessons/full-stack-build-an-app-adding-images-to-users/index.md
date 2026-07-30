@@ -35,7 +35,7 @@ dotnet ef database update
 
 ## Update our `types.ts`
 
-Add `photoURL` to our types
+Add `photoURL` to our types.
 
 ```typescript
 export type NewUserType = {
@@ -86,10 +86,10 @@ We'll add a state to track if we are uploading:
 const [isUploading, setIsUploading] = useState(false)
 ```
 
-Also copy over the `uploadFile` code from `NewRestaurant.tsx` - Copying the code
-is ok for now. We can clean this up later.
+Also, copy over the `uploadFile` code from `NewRestaurant.tsx` - Copying the
+code is ok for now. We can clean this up later.
 
-Also add a mutation:
+Also, add a mutation:
 
 ```typescript
 const uploadFileMutation = useMutation(uploadFile, {
