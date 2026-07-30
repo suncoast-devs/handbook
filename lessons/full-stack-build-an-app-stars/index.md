@@ -38,11 +38,11 @@ Then we update the display of stars:
 
 However, if we visit a restaurant without any reviews, we will notice that we
 don't see any stars! We don't see this because `restaurant.reviews.length` is
-`0` and thus `averageStars` becomes `NaN`
+`0`, and thus `averageStars` becomes `NaN`.
 
 We can solve this one of two ways.
 
-The first is to realize that `NaN` is a _false-like_ value and thus we can
+The first is to realize that `NaN` is a _false-like_ value, and thus we can
 rewrite the line as:
 
 ```javascript
@@ -59,7 +59,7 @@ const averageStars =
 In this style, we compare the length of the review array, and if it is zero, we
 set the `averageStars` to `0`, otherwise setting it equal to the average.
 
-We can do this same change in `SingleRestaurantFromList.tsx`
+We can do this same change in `SingleRestaurantFromList.tsx`.
 
 ```javascript
 const totalStars = restaurant.reviews.reduce(
