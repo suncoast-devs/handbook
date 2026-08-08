@@ -41,6 +41,7 @@ Need more help on how to make sure your resume gets past the ATS software?
 - [Beat the Robots: How to Get Your Resume Past the System & Into Human Hands](https://www.themuse.com/advice/beat-the-robots-how-to-get-your-resume-past-the-system-into-human-hands)
 - [8 Things You Need To Know About Applicant Tracking Systems ](https://www.jobscan.co/blog/8-things-you-need-to-know-about-applicant-tracking-systems/)
 - [Can Your Resume Beat The Bots? How to Make It ATS-friendly ](https://www.glassdoor.com/blog/ats-friendly-resume/)
+- [Compare your resume with a job description using CVExpert's free keyword match checker](https://cvexpert.com/tools/cv-job-match)
 
 ### Use a PDF document
 
