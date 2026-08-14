@@ -43,8 +43,8 @@ order: 4
 - [React](http://reactjobboard.com)
 - [Vue](http://vuejobs.com)
 - [Python](http://python.org/jobs)
-- [JavaScript job XYZ](http://javascriptjob.xyz)
 - [Javascript remotely](http://jsremotely.com)
+- [Jobs in JavaScript](https://jobsinjs.com)
 
 ## Remote Job Boards
 
