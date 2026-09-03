@@ -50,6 +50,7 @@ We recommend:
 - [https://codewars.com](https://codewars.com)
 - [https://hackerrank.com](https://hackerrank.com)
 - [Algo Expert](https://algoexpert.io)
+- [PracHub Coding Interview Practice Plan](https://prachub.com/resources/coding-interview-practice-the-ultimate-2026-plan)
 
 Also, to help you prepare, you can use
 [this as a guide](https://handbook.suncoast.io/lessons/career-looking/sample-questions)
